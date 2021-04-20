@@ -1,0 +1,351 @@
+$modelname "weapons\arccw\c_ud_m16.mdl"
+ 
+$bodygroup "studio" {
+	studio "m16.smd"
+}
+
+$bodygroup "1" {
+	studio "m16_upper_ch.smd"
+}
+
+$bodygroup "2" {
+	studio "m16_mag_30.smd"
+	studio "m16_mag_20.smd"
+	studio "m16_mag_40.smd"
+	studio "m16_mag_60.smd"
+	studio "m16_mag_100.smd"
+}
+
+$bodygroup "3" {
+	blank
+	studio "m16_rail_optic.smd"
+}
+
+$bodygroup "4" {
+	studio "m16_barrel.smd"
+	studio "m16_barrel_m4.smd"
+	studio "m16_barrel_cqbr.smd"
+	studio "m16_barrel_fpw.smd"
+	studio "m16_barrel_wood.smd"
+	studio "m16_barrel_wood_short.smd"
+	studio "m16_barrel_stub.smd"
+}
+
+$bodygroup "5" {
+	studio "m16_stock.smd"
+	studio "m16_stock_m4.smd"
+	studio "m16_stock_wood.smd"
+	blank
+}
+
+$bodygroup "6" {
+	studio "m16_grip.smd"
+	studio "m16_grip_ergo.smd"
+	studio "m16_grip_skel.smd"
+	studio "m16_grip_wood.smd"
+}
+
+$bodygroup "7" {
+	studio "m16_grip.smd"
+	studio "m16_grip_ergo.smd"
+	studio "m16_grip_skel.smd"
+	studio "m16_grip_wood.smd"
+}
+
+$bodygroup "8" {
+	blank
+	studio "m16_rail_fg.smd"
+	studio "m16_rail_fg_stub.smd"
+	studio "m16_rail_fg_wood.smd"
+	studio "m16_rail_fg_wood_short.smd"
+}
+
+$bodygroup "9" {
+	blank
+	studio "m16_clamp_fullsize.smd"
+	studio "m16_clamp_stub.smd"
+	studio "m16_clamp_short.smd"
+	studio "m16_barrel_wood_short.smd"
+}
+
+$cdmaterials "models\weapons\arccw\ud_m16"
+
+$attachment "1" "m16_flash" 0 0 0 rotate -90 0 0
+$attachment "2" "brass" 0 0 0 rotate -10 140 180
+$attachment "3" "camera" 0 0 0 rotate 0 0 0
+ 
+$surfaceprop "default"
+ 
+$contents "solid"
+ 
+$illumposition 0 0 0
+
+$bbox 0 0 0 0 0 0
+ 
+$cbox 0 0 0 0 0 0
+
+$poseparameter "sights" 0 1 loop 0
+
+$sequence "idle" "anims\idle.smd" {
+	fps 30
+	"ACT_VM_IDLE" 1
+	loop
+	snap
+	node "Ready"
+}
+
+$sequence "idle_empty" "anims\idle_empty.smd" {
+	fps 30
+	"ACT_VM_IDLE" 1
+	loop
+	snap
+	node "Ready"
+}
+
+$sequence "fire" {
+	"anims\fire.smd"
+	"anims\fire_iron.smd"
+	blend "sights" 0 1
+	fps 30
+	"ACT_VM_PRIMARYATTACK" 1
+	fadein 0.03
+	fadeout 0.03
+}
+
+$sequence "fire_empty" {
+	"anims\fire_empty.smd"
+	"anims\fire_iron_empty.smd"
+	blend "sights" 0 1
+	fps 30
+	"ACT_VM_PRIMARYATTACK" 1
+	fadein 0.03
+	fadeout 0.03
+}
+
+$sequence "draw" "anims\draw.smd" {
+	fps 30
+	"ACT_VM_DRAW" 1
+	snap
+	{ event 5004 0 "Starts" }
+	{ event 5004 14 "StockHitsShoulder" }
+}
+
+$sequence "draw_empty" "anims\draw_empty.smd" {
+	fps 30
+	"ACT_VM_DRAW" 1
+	snap
+	{ event 5004 0 "Starts" }
+	{ event 5004 14 "StockHitsShoulder" }
+}
+
+$sequence "holster" "anims\holster.smd" {
+	fps 30
+	"ACT_VM_DRAW" 1
+	snap
+}
+
+$sequence "holster_empty" "anims\holster_empty.smd" {
+	fps 30
+	"ACT_VM_DRAW" 1
+	snap
+}
+
+$sequence "reload" {
+	"anims\reload.smd"
+	"anims\reload_iron.smd"
+	fps 30
+	"ACT_VM_RELOAD" 1
+	blend "sights" 0 1
+	snap
+	{ event 5004 0 "Starts" }
+	{ event 5004 13 "MagOut" }
+	{ event 5004 29 "GunRaises" }
+	{ event 5004 39 "MagInFail" }
+	{ event 5004 47 "MagIn" }
+	{ event 5004 65 "StockHitsShoulder" }
+}
+
+$sequence "reload_empty" {
+	"anims\reload_empty.smd"
+	"anims\reload_empty_iron.smd"
+	fps 30
+	"ACT_VM_RELOAD" 1
+	blend "sights" 0 1
+	snap
+	{ event 5004 0 "Starts" }
+	{ event 5004 12 "MagOut" }
+	{ event 5004 35 "GunRaises" }
+	{ event 5004 39 "MagInFail" }
+	{ event 5004 47 "MagIn" }
+	{ event 5004 59 "BoltCloses" }
+	{ event 5004 73 "StockHitsShoulder" }
+}
+
+$sequence "reload_20" {
+	"anims\reload_20.smd"
+	"anims\reload_iron_20.smd"
+	fps 30
+	"ACT_VM_RELOAD" 1
+	blend "sights" 0 1
+	snap
+	{ event 5004 0 "Starts" }
+	{ event 5004 13 "MagOut" }
+	{ event 5004 31 "GunRaises" }
+	{ event 5004 39 "MagInFail" }
+	{ event 5004 47 "MagIn" }
+	{ event 5004 64 "StockHitsShoulder" }
+}
+
+$sequence "reload_empty_20" {
+	"anims\reload_empty_20.smd"
+	"anims\reload_empty_iron_20.smd"
+	fps 30
+	"ACT_VM_RELOAD" 1
+	blend "sights" 0 1
+	snap
+	{ event 5004 0 "Starts" }
+	{ event 5004 12 "MagOut" }
+	{ event 5004 28 "GunRaises" }
+	{ event 5004 39 "MagInFail" }
+	{ event 5004 47 "MagIn" }
+	{ event 5004 59 "BoltCloses" }
+	{ event 5004 73 "StockHitsShoulder" }
+}
+
+$sequence "reload_40" {
+	"anims\reload_40.smd"
+	"anims\reload_iron_40.smd"
+	fps 30
+	"ACT_VM_RELOAD" 1
+	blend "sights" 0 1
+	snap
+	{ event 5004 0 "Starts" }
+	{ event 5004 13 "MagOut" }
+	{ event 5004 31 "GunRaises" }
+	{ event 5004 40 "MagInFail" }
+	{ event 5004 50 "MagIn" }
+	{ event 5004 68 "StockHitsShoulder" }
+}
+
+$sequence "reload_empty_40" {
+	"anims\reload_empty_40.smd"
+	"anims\reload_empty_iron_40.smd"
+	fps 30
+	"ACT_VM_RELOAD" 1
+	blend "sights" 0 1
+	snap
+	{ event 5004 0 "Starts" }
+	{ event 5004 12 "MagOut" }
+	{ event 5004 30 "GunRaises" }
+	{ event 5004 39 "MagInFail" }
+	{ event 5004 49 "MagIn" }
+	{ event 5004 60 "BoltCloses" }
+	{ event 5004 76 "StockHitsShoulder" }
+}
+
+$sequence "reload_60" {
+	"anims\reload_60.smd"
+	"anims\reload_iron_60.smd"
+	fps 30
+	"ACT_VM_RELOAD" 1
+	blend "sights" 0 1
+	snap
+	{ event 5004 0 "Starts" }
+	{ event 5004 13 "MagOut" }
+	{ event 5004 35 "GunRaises" }
+	{ event 5004 43 "MagInFail" }
+	{ event 5004 54 "MagIn" }
+	{ event 5004 72 "StockHitsShoulder" }
+}
+
+$sequence "reload_empty_60" {
+	"anims\reload_empty_60.smd"
+	"anims\reload_empty_iron_60.smd"
+	fps 30
+	"ACT_VM_RELOAD" 1
+	blend "sights" 0 1
+	snap
+	{ event 5004 0 "Starts" }
+	{ event 5004 14 "MagOut" }
+	{ event 5004 33 "GunRaises" }
+	{ event 5004 43 "MagInFail" }
+	{ event 5004 54 "MagIn" }
+	{ event 5004 64 "BoltCloses" }
+	{ event 5004 80 "StockHitsShoulder" }
+}
+
+$sequence "reload_100" {
+	"anims\reload_100.smd"
+	"anims\reload_iron_100.smd"
+	fps 30
+	"ACT_VM_RELOAD" 1
+	blend "sights" 0 1
+	snap
+	{ event 5004 0 "Starts" }
+	{ event 5004 13 "MagOut" }
+	{ event 5004 35 "GunRaises" }
+	{ event 5004 44 "MagInFail" }
+	{ event 5004 54 "MagIn" }
+	{ event 5004 64 "MagHit" }
+	{ event 5004 84 "StockHitsShoulder" }
+}
+
+$sequence "reload_empty_100" {
+	"anims\reload_empty_100.smd"
+	"anims\reload_empty_iron_100.smd"
+	fps 30
+	"ACT_VM_RELOAD" 1
+	blend "sights" 0 1
+	snap
+	{ event 5004 0 "Starts" }
+	{ event 5004 13 "MagOut" }
+	{ event 5004 36 "GunRaises" }
+	{ event 5004 44 "MagInFail" }
+	{ event 5004 56 "MagIn" }
+	{ event 5004 64 "MagHit" }
+	{ event 5004 79 "ChargingHandleBack" }
+	{ event 5004 90 "ChargingHandleForward" }
+	{ event 5004 105 "StockHitsShoulder" }
+}
+
+
+$bonemerge "ValveBiped.Bip01_Spine4"
+$bonemerge "ValveBiped.Bip01_L_Clavicle"
+$bonemerge "ValveBiped.Bip01_L_UpperArm"
+$bonemerge "ValveBiped.Bip01_L_Forearm"
+$bonemerge "ValveBiped.Bip01_L_Hand"
+$bonemerge "ValveBiped.Bip01_L_Finger4"
+$bonemerge "ValveBiped.Bip01_L_Finger41"
+$bonemerge "ValveBiped.Bip01_L_Finger42"
+$bonemerge "ValveBiped.Bip01_L_Finger3"
+$bonemerge "ValveBiped.Bip01_L_Finger31"
+$bonemerge "ValveBiped.Bip01_L_Finger32"
+$bonemerge "ValveBiped.Bip01_L_Finger2"
+$bonemerge "ValveBiped.Bip01_L_Finger21"
+$bonemerge "ValveBiped.Bip01_L_Finger22"
+$bonemerge "ValveBiped.Bip01_L_Finger1"
+$bonemerge "ValveBiped.Bip01_L_Finger11"
+$bonemerge "ValveBiped.Bip01_L_Finger12"
+$bonemerge "ValveBiped.Bip01_L_Finger0"
+$bonemerge "ValveBiped.Bip01_L_Finger01"
+$bonemerge "ValveBiped.Bip01_L_Finger02"
+$bonemerge "ValveBiped.Bip01_R_Clavicle"
+$bonemerge "ValveBiped.Bip01_R_UpperArm"
+$bonemerge "ValveBiped.Bip01_R_Forearm"
+$bonemerge "ValveBiped.Bip01_R_Hand"
+$bonemerge "ValveBiped.Bip01_R_Wrist"
+$bonemerge "ValveBiped.Bip01_R_Finger4"
+$bonemerge "ValveBiped.Bip01_R_Finger41"
+$bonemerge "ValveBiped.Bip01_R_Finger42"
+$bonemerge "ValveBiped.Bip01_R_Finger3"
+$bonemerge "ValveBiped.Bip01_R_Finger31"
+$bonemerge "ValveBiped.Bip01_R_Finger32"
+$bonemerge "ValveBiped.Bip01_R_Finger2"
+$bonemerge "ValveBiped.Bip01_R_Finger21"
+$bonemerge "ValveBiped.Bip01_R_Finger22"
+$bonemerge "ValveBiped.Bip01_R_Finger1"
+$bonemerge "ValveBiped.Bip01_R_Finger11"
+$bonemerge "ValveBiped.Bip01_R_Finger12"
+$bonemerge "ValveBiped.Bip01_R_Finger0"
+$bonemerge "ValveBiped.Bip01_R_Finger01"
+$bonemerge "ValveBiped.Bip01_R_Finger02"

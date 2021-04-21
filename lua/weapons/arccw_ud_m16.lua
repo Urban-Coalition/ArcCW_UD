@@ -104,6 +104,7 @@ SWEP.Firemodes = {
 
 SWEP.ShootPitch = 100
 SWEP.ShootVol = 120
+SWEP.ShootPitchVariation = 0
 
 SWEP.ProceduralRegularFire = false
 SWEP.ProceduralIronFire = false
@@ -179,9 +180,9 @@ SWEP.ShootSoundSilenced = "weapons/arccw/czbren/lowpolyczbren_supp.ogg"
 SWEP.DistantShootSound = path .. "fire_dist.ogg"
 
 SWEP.Hook_GetShootSound = function( wep, snd )
-    if wep:GetCurrentFiremode().Mode == 1 then
-    --if wep:GetBurstCount() == 1 then
-        return path .. "fire_semi.ogg"
+    --if wep:GetCurrentFiremode().Mode == 1 then
+    if wep:GetBurstCount() == 1 then
+        return path .. "fire_first.ogg"
     end
 end
 

@@ -21,7 +21,7 @@ SWEP.TracerWidth = 2
 
 -- Fake name --
 
-SWEP.PrintName = "Marksman Four"
+SWEP.PrintName = "Patriot 809"
 
 -- True name --
 
@@ -30,8 +30,8 @@ SWEP.TrueName = "Mini-14"
 -- Trivia --
 
 SWEP.Trivia_Class = "Semi-Automatic Rifle"
-SWEP.Trivia_Desc = "Lightweight, highly precise rifle with support for a variety of calibers. While it has a major advantage in long distance combat, it can still perform acceptably at closer ranges."
-SWEP.Trivia_Manufacturer = "Literally no idea"
+SWEP.Trivia_Desc = "Autoloading rifle designed for better accuracy than competing models. Possesses a more classical operation compared to its contemporaries. Due to its appearance, it is sometimes exempted from gun control laws targeting \"Assault Weapons\" despite its identical ability to kill. This has helped it find success despite its higher cost and non-standard magazine well."
+SWEP.Trivia_Manufacturer = "Rifles International"
 SWEP.Trivia_Calibre = "5.56x45mm NATO"
 SWEP.Trivia_Mechanism = "Rotating Bolt"
 SWEP.Trivia_Country = "USA"
@@ -56,14 +56,16 @@ SWEP.ViewModelFOV = 70
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage --
+-- does the same damage as the M16; it's all 5.56! Range is improved, however, due to a longer barrel
 
-SWEP.Damage = 28
-SWEP.DamageMin = 11
-SWEP.Range = 70
-SWEP.Penetration = 6
+SWEP.Damage = 34 -- 3 shot kill
+SWEP.DamageMin = 20 -- 5 shot kill
+SWEP.RangeMin = 20
+SWEP.Range = 250
+SWEP.Penetration = 8
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
-SWEP.MuzzleVelocity = 400 
+SWEP.MuzzleVelocity = 500 
 
 -- Mag size --
 
@@ -74,13 +76,14 @@ SWEP.ReducedClipSize = 10
 
 -- Recoil --
 
-SWEP.Recoil = 0.5
+SWEP.Recoil = 0.4
 SWEP.RecoilSide = 0.2
 
-SWEP.RecoilRise = 0.24
+SWEP.RecoilRise = 1
 SWEP.VisualRecoilMult = 1
-SWEP.MaxRecoilBlowback = 0.5
-SWEP.MaxRecoilPunch = 0.6
+SWEP.RecoilPunch = 2
+SWEP.MaxRecoilBlowback = 2
+SWEP.MaxRecoilPunch = 2
 
 -- Firerate / Firemodes --
 
@@ -111,8 +114,8 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 0
-SWEP.HipDispersion = 200
-SWEP.MoveDispersion = 200
+SWEP.HipDispersion = 400
+SWEP.MoveDispersion = 800
 
 SWEP.Primary.Ammo = "smg1"
 SWEP.MagID = "mini14"
@@ -138,10 +141,11 @@ SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-4.28, 2, 2.05),
-     Ang = Angle(0.1, 0, 0),
-     Magnification = 1,
-     SwitchToSound = "",
+    Pos = Vector(-4.28, 2, 2.05),
+    Ang = Angle(0, 0.03, 0),
+    Magnification = 1,
+    SwitchToSound = "",
+    CrosshairInSights = false
 }
 
 SWEP.ActivePos = Vector(0, -2, 0)
@@ -162,9 +166,10 @@ SWEP.WorldModelOffset = {
 
 -- Firing sounds --
 
-SWEP.ShootSound = "mini14/fire.wav"
+local path = "weapons/arccw_ud/mini14/"
+SWEP.ShootSound = path.."fire.wav"
 SWEP.ShootSoundSilenced = "weapons/arccw/czbren/lowpolyczbren_supp.ogg"
-SWEP.ShootSound = "mini14/fire_dist.wav"
+SWEP.DistantShootSound = path.."fire_dist.wav"
 
 -- Bodygroups --
 
@@ -186,27 +191,26 @@ SWEP.AttachmentElements = {
 
 -- Animations --
 
+SWEP.Hook_Think = function(wep)
+	wep:GetOwner():GetViewModel():SetPoseParameter( "sights", Lerp(wep:GetSightDelta(), 1, 0) ) -- thanks fesiug
+end
+
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
-        Framerate = 30,
     },
     ["idle_empty"] = {
         Source = "idle_empty",
-        Framerate = 30,
     },
     ["draw"] = {
         Source = "draw",
-        Framerate = 30,
     },
     ["draw_empty"] = {
         Source = "draw_empty",
         Time = 12 / 30,
-        Framerate = 30,
     },
     ["holster"] = {
         Source = "holster",
-        Framerate = 30,
         LHIK = true,
         LHIKIn = 0.4,
         LHIKEaseIn = 0.4,
@@ -216,7 +220,6 @@ SWEP.Animations = {
     ["holster_empty"] = {
         Source = "holster_empty",
         Time = 12 / 30,
-        Framerate = 30,
         LHIK = true,
         LHIKIn = 0.4,
         LHIKEaseIn = 0.4,
@@ -225,13 +228,11 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = "fire",
-        Framerate = 30,
         Time = 18 / 30,
         ShellEjectAt = 0.03,
     },
     ["fire_empty"] = {
         Source = "fire_empty",
-        Framerate = 30,
         Time = 18 / 30,
         ShellEjectAt = 0.03,
     },
@@ -242,7 +243,6 @@ SWEP.Animations = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Time = 65 / 30,
-        Framerate = 30,
         LastClip1OutTime = 0.9,
         LHIK = true,
         LHIKIn = 0.4,
@@ -253,7 +253,6 @@ SWEP.Animations = {
     ["reload_empty"] = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 30,
         Time = 80 / 30,
         LastClip1OutTime = 0.7,
         LHIK = true,
@@ -269,7 +268,6 @@ SWEP.Animations = {
         Source = "reload_10",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Time = 67 / 30,
-        Framerate = 30,
         LastClip1OutTime = 0.9,
         LHIK = true,
         LHIKIn = 0.4,
@@ -280,7 +278,6 @@ SWEP.Animations = {
     ["reload_empty_10"] = {
         Source = "reload_empty_10",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 30,
         Time = 90 / 30,
         LastClip1OutTime = 0.7,
         LHIK = true,
@@ -296,7 +293,6 @@ SWEP.Animations = {
         Source = "reload_30",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Time = 67 / 30,
-        Framerate = 30,
         LastClip1OutTime = 0.9,
         LHIK = true,
         LHIKIn = 0.4,
@@ -307,7 +303,6 @@ SWEP.Animations = {
     ["reload_empty_30"] = {
         Source = "reload_empty_30",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 30,
         Time = 90 / 30,
         LastClip1OutTime = 0.7,
         LHIK = true,
@@ -323,7 +318,6 @@ SWEP.Animations = {
         Source = "reload_15_22lr",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Time = 67 / 30,
-        Framerate = 30,
         LastClip1OutTime = 0.9,
         LHIK = true,
         LHIKIn = 0.4,
@@ -334,7 +328,6 @@ SWEP.Animations = {
     ["reload_empty_15_22lr"] = {
         Source = "reload_empty_15_22lr",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 30,
         Time = 90 / 30,
         LastClip1OutTime = 0.7,
         LHIK = true,
@@ -344,10 +337,6 @@ SWEP.Animations = {
         LHIKOut = 0.4,
     },
 }
-
-SWEP.Hook_Think = function(wep)
-	wep:GetOwner():GetViewModel():SetPoseParameter( "sights", 1 - wep:GetSightDelta() ) -- thanks fesiug
-end
 
 SWEP.Attachments = {
     {

@@ -18,21 +18,21 @@ SWEP.CamAttachment = 3
 
 -- Fake name --
 
-SWEP.PrintName = "Modello 14"
+SWEP.PrintName = "Skeletonkey"
 
 -- True name --
 
-SWEP.TrueName = "M1014" 
+SWEP.TrueName = "M4 Super 90" 
 
 -- Trivia --
 
 SWEP.Trivia_Class = "Shotgun"
-SWEP.Trivia_Desc = "Semi-automatic shotgun produced as part as Benelli's \"Super 90\" series. While back-to-back 12 gauge is devastating, good trigger discipline is a necessity, lest you spend more time reloading than fighting."
-SWEP.Trivia_Manufacturer = "FakeName"
+SWEP.Trivia_Desc = "Semi-automatic shotgun designed for close-quarters urban warfare. Uses an innovative short-stroke gas system that eliminates complex mechanisms found on most gas-operated automatic weapons. Its main use is in destroying locked doors."
+SWEP.Trivia_Manufacturer = "Mauer Armaments"
 SWEP.Trivia_Calibre = "12 Gauge"
-SWEP.Trivia_Mechanism = "Rotating Bolt"
+SWEP.Trivia_Mechanism = "Gas-Operated Rotating Bolt"
 SWEP.Trivia_Country = "Italy"
-SWEP.Trivia_Year = 1980
+SWEP.Trivia_Year = 1998
 
 -- Weapon slot --
 
@@ -42,7 +42,7 @@ SWEP.Slot = 2
 
 if GetConVar("arccw_truenames"):GetBool() then
     SWEP.PrintName = SWEP.TrueName
-    SWEP.Trivia_Manufacturer = "Benelli"
+    SWEP.Trivia_Manufacturer = "Benelli Armi SPA"
 end
 
 -- Viewmodel / Worldmodel / FOV --
@@ -61,18 +61,20 @@ SWEP.WorldModelOffset = {
 
 -- Damage parameters --
 
-SWEP.Damage = 23
-SWEP.DamageMin = 11
-SWEP.Range = 35
+SWEP.Damage = 20 -- 5 pellets to kill
+SWEP.DamageMin = 10 -- land 10 pellets to kill
+SWEP.Range = 30
+SWEP.RangeMin = 3.5
+SWEP.Num = 8
 SWEP.Penetration = 1
 SWEP.DamageType = DMG_BUCKSHOT
 SWEP.ShootEntity = nil
-SWEP.MuzzleVelocity = 150
+SWEP.MuzzleVelocity = 200
 
 -- Mag size --
 
 SWEP.ChamberSize = 1
-SWEP.Primary.ClipSize = 6
+SWEP.Primary.ClipSize = 4
 SWEP.ExtendedClipSize = 8
 SWEP.ReducedClipSize = 6
 
@@ -83,16 +85,14 @@ SWEP.RecoilSide = 1
 
 SWEP.RecoilRise = 0.24
 SWEP.VisualRecoilMult = 1
-SWEP.MaxRecoilBlowback = 0.3
+SWEP.MaxRecoilBlowback = 1
 SWEP.MaxRecoilPunch = 1
 
 -- Firerate / Firemodes --
 
 SWEP.Delay = 60 / 220
-SWEP.Num = 8
 SWEP.Firemodes = {
     {
-        PrintName = "SEMI",
         Mode = 1,
     },
     {
@@ -119,7 +119,7 @@ SWEP.NPCWeight = 210
 
 SWEP.AccuracyMOA = 30
 SWEP.HipDispersion = 100
-SWEP.MoveDispersion = 100
+SWEP.MoveDispersion = 400
 
 SWEP.Primary.Ammo = "buckshot"
 
@@ -161,53 +161,48 @@ SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 
 -- Firing sounds --
 
-SWEP.ShootSound = "r870/fire.wav"
+local path = "weapons/arccw_ud/870/"
+SWEP.ShootSound = path.."fire.ogg"
 SWEP.ShootSoundSilenced = "weapons/arccw/m870/lowpolym870_supp.ogg"
-SWEP.DistantShootSound = "r870/fire_dist.wav"
+SWEP.DistantShootSound = path.."fire_dist.ogg"
+
+-- Animations --
 
 SWEP.Hook_Think = function(wep)
-	wep:GetOwner():GetViewModel():SetPoseParameter( "sights", 1 - wep:GetSightDelta() ) -- thanks fesiug
+	wep:GetOwner():GetViewModel():SetPoseParameter( "sights", Lerp(wep:GetSightDelta(), 1, 0) ) -- thanks fesiug
 end
 
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
-        Framerate = 30,
     },
     ["idle_empty"] = {
         Source = "idle_empty",
-        Framerate = 30,
     },
     ["draw"] = {
         Source = "draw",
         Time = 20 / 30,
-        Framerate = 30,
     },
     ["draw_empty"] = {
         Source = "draw_empty",
         Time = 20 / 30,
-        Framerate = 30,
     },
     ["holster"] = {
         Source = "holster",
         Time = 20 / 30,
-        Framerate = 30,
     },
     ["holster_empty"] = {
         Source = "holster_empty",
         Time = 20 / 30,
-        Framerate = 30,
     },
     ["fire"] = {
         Source = "fire",
         Time = 23 / 30,
-        Framerate = 30,
         ShellEjectAt = 0.01,
     },
     ["fire_empty"] = {
         Source = "fire_empty",
         Time = 23 / 30,
-        Framerate = 30,
         ShellEjectAt = 0.01,
     },
     ["sgreload_start"] = {
@@ -228,7 +223,7 @@ SWEP.Animations = {
     },
     ["sgreload_insert"] = {
         Source = "sgreload_insert",
-        Time = 22 / 30,
+        Time = 20 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         TPAnimStartTime = 0.3,
         LHIK = true,
@@ -237,7 +232,7 @@ SWEP.Animations = {
     },
     ["sgreload_finish"] = {
         Source = "sgreload_finish",
-        Time = 24 / 30,
+        Time = 22 / 30,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.4,

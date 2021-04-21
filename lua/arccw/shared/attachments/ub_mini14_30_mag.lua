@@ -20,6 +20,6 @@ att.Override_ClipSize = 30
 
 att.ActivateElements = {"ud_mini14_30_mag"}
 
-att.Hook_TranslateAnimation = function(wep, anim)
+att.Hook_SelectReloadAnimation = function(wep, anim)
     return anim .. "_30"
 end

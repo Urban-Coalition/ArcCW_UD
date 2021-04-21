@@ -14,12 +14,12 @@ att.AutoStats = true
 
 att.Mult_SightTime = 0.9
 --att.Mult_Recoil = 0.9
-att.Mult_ReloadTime = 0.97
+att.Mult_ReloadTime = 0.9
 --att.Mult_SpeedMult = 0.9
 att.Override_ClipSize = 10
 
 att.ActivateElements = {"ud_glock_10_mag"}
 
-att.Hook_TranslateAnimation = function(wep, anim)
+att.Hook_SelectReloadAnimation = function(wep, anim)
     return anim .. "_10"
 end

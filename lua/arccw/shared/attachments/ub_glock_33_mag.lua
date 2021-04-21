@@ -20,6 +20,6 @@ att.Override_ClipSize = 33
 
 att.ActivateElements = {"ud_glock_33_mag"}
 
-att.Hook_TranslateAnimation = function(wep, anim)
+att.Hook_SelectReloadAnimation = function(wep, anim)
     return anim .. "_33"
 end

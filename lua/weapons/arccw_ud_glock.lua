@@ -164,9 +164,10 @@ SWEP.WorldModelOffset = {
 
 -- Firing sounds --
 
-SWEP.ShootSound = "glock/fire.wav"
-SWEP.ShootSoundSilenced = "glock/fire_supp.wav"
-SWEP.DistantShootSound = "glock/fire_dist.wav"
+local path = "weapons/arccw_ud/glock/"
+SWEP.ShootSound = path.."fire.ogg"
+SWEP.ShootSoundSilenced = path.."fire_supp.ogg"
+SWEP.DistantShootSound = path.."fire_dist.ogg"
 
 -- Bodygroups --
 
@@ -176,7 +177,7 @@ SWEP.BulletBones = {
 SWEP.AttachmentElements = {
 
     ["ud_glock_10_mag"] = {
-        VMBodygroups = {{ind = 2, bg = 1}},
+        VMBodygroups = {{ind = 2, bg = 1}, {ind = 1, bg = 2}},
     },
     ["ud_glock_33_mag"] = {
         VMBodygroups = {{ind = 2, bg = 2}},
@@ -188,27 +189,29 @@ SWEP.AttachmentElements = {
 
 -- Animations --
 
+SWEP.Hook_Think = function(wep)
+	wep:GetOwner():GetViewModel():SetPoseParameter( "sights", Lerp(wep:GetSightDelta(), 1, 0) ) -- thanks fesiug
+end
+
+-- CHAN_ITEM doesn't sound too right
+local ci = CHAN_AUTO
+
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
-        Framerate = 30,
     },
     ["idle_empty"] = {
         Source = "idle_empty",
-        Framerate = 30,
     },
     ["draw"] = {
         Source = "draw",
-        Framerate = 30,
     },
     ["draw_empty"] = {
         Source = "draw_empty",
         Time = 12 / 30,
-        Framerate = 30,
     },
     ["holster"] = {
         Source = "holster",
-        Framerate = 30,
         LHIK = true,
         LHIKIn = 0.4,
         LHIKEaseIn = 0.4,
@@ -218,7 +221,6 @@ SWEP.Animations = {
     ["holster_empty"] = {
         Source = "holster_empty",
         Time = 12 / 30,
-        Framerate = 30,
         LHIK = true,
         LHIKIn = 0.4,
         LHIKEaseIn = 0.4,
@@ -227,25 +229,21 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = "fire",
-        Framerate = 30,
         Time = 16 / 30,
         ShellEjectAt = 0.01,
     },
     ["fire_empty"] = {
         Source = "fire_empty",
-        Framerate = 30,
         Time = 16 / 30,
         ShellEjectAt = 0.01,
     },
     ["fire_18"] = {
         Source = "fire",
-        Framerate = 30,
         Time = 16 / 30,
         ShellEjectAt = 0.01,
     },
     ["fire_empty_18"] = {
         Source = "fire_empty",
-        Framerate = 30,
         Time = 16 / 30,
         ShellEjectAt = 0.01,
     },
@@ -256,7 +254,7 @@ SWEP.Animations = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Time = 56 / 30,
-        Framerate = 30,
+        MinProgress = 1.1,
         LastClip1OutTime = 0.9,
         LHIK = true,
         LHIKIn = 0.4,
@@ -264,16 +262,16 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.6,
         SoundTable = {
-            {s = "glock/magrelease.wav", 	 t = 0.3},
-            {s = "glock/magout.wav", 	 t = 0.3},
-            {s = "glock/magin.wav",    t = 0.4},
+            {s = path.."magrelease.ogg",    t = 0.3, c = ci},
+            {s = path.."magout.ogg",        t = 0.3, c = ci},
+            {s = path.."magin.ogg",         t = 0.4, c = ci},
         },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 30,
         Time = 66 / 30,
+        MinProgress = 1.5,
         LastClip1OutTime = 0.7,
         LHIK = true,
         LHIKIn = 0.4,
@@ -281,10 +279,10 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = "glock/magrelease.wav", 	 t = 0.15},
-            {s = "glock/magout.wav", 	 t = 0.15},
-            {s = "glock/magin.wav",    t = 0.45},
-            {s = "glock/sliderel.wav",    t = 1.45},
+            {s = path.."magrelease.ogg",    t = 0.15, c = ci},
+            {s = path.."magout.ogg",        t = 0.15, c = ci},
+            {s = path.."magin.ogg",         t = 0.45, c = ci},
+            {s = path.."sliderel.ogg",      t = 1.45, c = ci},
         },
     },
 
@@ -294,7 +292,7 @@ SWEP.Animations = {
         Source = "reload_10",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Time = 56 / 30,
-        Framerate = 30,
+        MinProgress = 1.1,
         LastClip1OutTime = 0.9,
         LHIK = true,
         LHIKIn = 0.4,
@@ -302,16 +300,16 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.6,
         SoundTable = {
-            {s = "glock/magrelease.wav", 	 t = 0.3},
-            {s = "glock/magout.wav", 	 t = 0.3},
-            {s = "glock/magin.wav",    t = 0.4},
+            {s = path.."magrelease.ogg",    t = 0.3, c = ci},
+            {s = path.."magout.ogg",        t = 0.3, c = ci},
+            {s = path.."magin.ogg",         t = 0.4, c = ci},
         },
     },
     ["reload_empty_10"] = {
         Source = "reload_empty_10",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 30,
         Time = 66 / 30,
+        MinProgress = 1.5,
         LastClip1OutTime = 0.7,
         LHIK = true,
         LHIKIn = 0.4,
@@ -319,10 +317,10 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = "glock/magrelease.wav", 	 t = 0.15},
-            {s = "glock/magout.wav", 	 t = 0.15},
-            {s = "glock/magin.wav",    t = 0.45},
-            {s = "glock/sliderel.wav",    t = 1.45},
+            {s = path.."magrelease.ogg",    t = 0.15, c = ci},
+            {s = path.."magout.ogg",        t = 0.15, c = ci},
+            {s = path.."magin.ogg",         t = 0.45, c = ci},
+            {s = path.."sliderel.ogg",      t = 1.45, c = ci},
         },
     },
 
@@ -332,7 +330,7 @@ SWEP.Animations = {
         Source = "reload_33",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Time = 56 / 30,
-        Framerate = 30,
+        MinProgress = 1.1,
         LastClip1OutTime = 0.9,
         LHIK = true,
         LHIKIn = 0.4,
@@ -340,16 +338,16 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.6,
         SoundTable = {
-            {s = "glock/magrelease.wav", 	 t = 0.4},
-            {s = "glock/magout.wav", 	 t = 0.4},
-            {s = "glock/magin.wav",    t = 0.5},
+            {s = path.."magrelease.ogg",    t = 0.4, c = ci},
+            {s = path.."magout.ogg",        t = 0.4, c = ci},
+            {s = path.."magin.ogg",         t = 0.5, c = ci},
         },
     },
     ["reload_empty_33"] = {
         Source = "reload_empty_33",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 30,
         Time = 66 / 30,
+        MinProgress = 1.5,
         LastClip1OutTime = 0.7,
         LHIK = true,
         LHIKIn = 0.4,
@@ -357,10 +355,10 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = "glock/magrelease.wav", 	 t = 0.16},
-            {s = "glock/magout.wav", 	 t = 0.16},
-            {s = "glock/magin.wav",    t = 0.46},
-            {s = "glock/sliderel.wav",    t = 1.46},
+            {s = path.."magrelease.ogg",    t = 0.16, c = ci},
+            {s = path.."magout.ogg",        t = 0.16, c = ci},
+            {s = path.."magin.ogg",         t = 0.46, c = ci},
+            {s = path.."sliderel.ogg",      t = 1.46, c = ci},
         },
     },
 
@@ -370,7 +368,7 @@ SWEP.Animations = {
         Source = "reload_100",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Time = 56 / 30,
-        Framerate = 30,
+        MinProgress = 1.3,
         LastClip1OutTime = 0.9,
         LHIK = true,
         LHIKIn = 0.4,
@@ -378,16 +376,16 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.6,
         SoundTable = {
-            {s = "glock/magrelease.wav", 	 t = 0.3},
-            {s = "glock/magout.wav", 	 t = 0.3},
-            {s = "glock/magin.wav",    t = 0.4},
+            {s = path.."magrelease.ogg",    t = 0.3, c = ci},
+            {s = path.."magout.ogg",        t = 0.3, c = ci},
+            {s = path.."magin.ogg",         t = 0.4, c = ci},
         },
     },
     ["reload_empty_100"] = {
         Source = "reload_empty_100",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 30,
         Time = 66 / 30,
+        MinProgress = 1.75,
         LastClip1OutTime = 0.7,
         LHIK = true,
         LHIKIn = 0.4,
@@ -395,101 +393,13 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = "glock/magrelease.wav", 	 t = 0.12},
-            {s = "glock/magout.wav", 	 t = 0.12},
-            {s = "glock/magin.wav",    t = 0.43},
-            {s = "glock/sliderel.wav",    t = 1.43},
+            {s = path.."magrelease.ogg",    t = 0.12, c = ci},
+            {s = path.."magout.ogg",        t = 0.12, c = ci},
+            {s = path.."magin.ogg",         t = 0.43, c = ci},
+            {s = path.."sliderel.ogg",      t = 1.43, c = ci},
         },
     },
 }
-
-SWEP.Hook_Think = function(wep)
-	wep:GetOwner():GetViewModel():SetPoseParameter( "sights", 1 - wep:GetSightDelta() ) -- thanks fesiug
-end
-
-SWEP.Attachments = {
-    {
-        PrintName = "Optic",
-        DefaultAttName = "Iron Sights",
-        Slot = {"optic_lp","optic"},
-        Bone = "glock_parent",
-        Offset = {
-            vpos = Vector(0, -3.3, 1),
-            vang = Angle(90, 2, -90),
-            wpos = Vector(8, 0.4, -5.1),
-            wang = Angle(-10, 0, 180),
-        },
-        ExtraSightDist = 4
-    },
-    {
-        PrintName = "Barrel",
-        DefaultAttName = "Standard Barrel",
-        Slot = "ud_glock_barrel",
-    },
-    {
-        PrintName = "Muzzle",
-        DefaultAttName = "Standard Muzzle",
-        Slot = {"muzzle"},
-        Bone = "glock_flash",
-        Offset = {
-            vpos = Vector(0, 0, 0),
-            vang = Angle(90, 0, -90),
-            wpos = Vector(30, 1, -8),
-            wang = Angle(-10, -2, 180),
-        },
-    },
-    { 
-        PrintName = "Underbarrel",
-        Slot = {"foregrip"},
-        Bone = "glock_parent",
-        Offset = {
-            vpos = Vector(0, 1.7, 12),
-            vang = Angle(90, 0, -90),
-            wpos = Vector(18, 0.9, -4.5),
-            wang = Angle(-10, 0, 180),
-        },
-    },
-    {
-        PrintName = "Tactical",
-        Slot = {"tac_pistol"},
-        Bone = "glock_parent",
-        Offset = {
-            vpos = Vector(0, 1.7, 9.5),
-            vang = Angle(90, 0, -90),
-            wpos = Vector(22, 0.9, -4.5),
-            wang = Angle(-10, 0, 180),
-        },
-    },
-    {
-        PrintName = "Mag Type",
-        Slot = {"ud_glock_mag"},
-        DefaultAttName = "17 Round Mag",
-    },
-    {
-        PrintName = "Ammo Type",
-        Slot = {"go_ammo"},
-    },
-    {
-        PrintName = "Perk",
-        Slot = "go_perk"
-    },
-    {
-        PrintName = "Charm",
-        Slot = {"charm", "fml_charm"},
-        FreeSlot = true,
-        Bone = "Body", 
-        Offset = {
-            vpos = Vector(0.6, -4, 4),
-            vang = Angle(90, 0, -90),
-            wpos = Vector(9, 2.3, -4.6),
-            wang = Angle(-14, -2, 180),
-        },
-    },
-}
-
-SWEP.Hook_Think = function(wep)
-	wep:GetOwner():GetViewModel():SetPoseParameter( "sights", 1 - wep:GetSightDelta() ) -- thanks fesiug
-end
 
 SWEP.Attachments = {
     {

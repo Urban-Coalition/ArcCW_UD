@@ -58,8 +58,9 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 -- Damage --
 
 SWEP.Damage = 34 -- 3 shot close range kill
-SWEP.DamageMin = 20 -- 6 shot long range kill
-SWEP.Range = 35
+SWEP.DamageMin = 17 -- 6 shot long range kill
+SWEP.RangeMin = 5
+SWEP.Range = 75
 SWEP.Penetration = 3
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil

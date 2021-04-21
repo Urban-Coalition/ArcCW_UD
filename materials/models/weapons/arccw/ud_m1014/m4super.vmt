@@ -1,6 +1,6 @@
 VertexLitGeneric
 {
-$baseTexture "models\v_models\Weapons\autoshot/m4Super"
+$baseTexture "models\weapons\arccw\ud_m1014\m4super"
 $bumpmap "effects/flat_normal"
 
 $phongboost 1

@@ -1,12 +1,12 @@
 "VertexLitGeneric"
 {
-	"$baseTexture" "models\weapons\v_models\pist_glock18\pist_glock18"
+	"$baseTexture" "models\weapons\arccw\ud_glock\pist_glock18"
 
 	"$phong" "1"
 	"$phongboost" "1"
 	"$phongalbedoboost" "35"
 	"$phongfresnelranges" "[.83 .83 1]"
-	"$phongexponenttexture" "models\weapons\v_models\pist_glock18\pist_glock18_exponent"
+	"$phongexponenttexture" "models\weapons\arccw\ud_glock\pist_glock18_exponent"
 
 	"$basemapalphaphongmask" "1"
 

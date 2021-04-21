@@ -1,4 +1,4 @@
-att.PrintName = "40 Round Mag"
+att.PrintName = "40-Round STANAG Extended Mag"
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "Extended magazine for the M16. Enables slightly longer mag dumps, which may save your life, but the longer mag is more awkward to load."
 att.Desc_Pros = {

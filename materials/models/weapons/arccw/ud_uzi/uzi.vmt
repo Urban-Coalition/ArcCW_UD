@@ -4,11 +4,11 @@ VertexLitGeneric
 		$bumpmap 				"effects/flat_normal"
 		
 		$envmap					"env_cubemap"
-		$envmaptint				"[0.01 0.01 0.02]"
+		$envmaptint				"[0.01 0.01 0.01]"
 
 		$phong					1
         $phongboost				20
         $phongexponent			900
         $phongfresnelranges		"[1 0.1 0.1]"
-		$color2					"[1.5 1.5 1.5]"
+		$color2					"[1.5 1.5 1.8]"
 }

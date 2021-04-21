@@ -1,6 +1,6 @@
 att.PrintName = "16 Round Uzi Compact Mag"
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "Reduced-size flush magazine. The lighter load makes the weapon even more ergonomic."
+att.Description = "Low-capacity flush magazine. The lighter load makes the weapon even more ergonomic."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

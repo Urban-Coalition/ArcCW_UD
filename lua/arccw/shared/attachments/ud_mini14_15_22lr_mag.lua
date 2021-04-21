@@ -10,12 +10,21 @@ att.Desc_Neutrals = {
 }
 att.Slot = "ud_mini14_mag"
 
+att.Override_Ammo = "pistol"
+
 att.AutoStats = true
 
 --att.Mult_SightTime = 1.4
---att.Mult_Recoil = 0.9
 att.Mult_ReloadTime = 0.94
---att.Mult_SpeedMult = 0.9
+att.Mult_SpeedMult = 0.9
+
+att.Mult_Damage = 0.25
+att.Mult_Range = 0.5
+att.Mult_Recoil = 0.4
+att.Mult_VisualRecoilMult = 0.25
+att.Mult_RPM = 2
+att.Mult_Penetration = 0.1
+
 att.Override_ClipSize = 15
 
 att.ActivateElements = {"ud_mini14_15_22lr_mag"}

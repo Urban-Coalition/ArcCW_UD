@@ -1,6 +1,6 @@
 att.PrintName = "20-Round STANAG Compact Mag"
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "Original, reduced magazine for the M16. The lighter load reduces the weapon's weight and brings back memories of the rice fields."
+att.Description = "Original, low-capacity magazine for the M16. The lighter load reduces the weapon's weight and brings back memories of the rice fields."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

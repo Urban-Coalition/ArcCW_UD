@@ -77,9 +77,10 @@ SWEP.ReducedClipSize = 20
 SWEP.Recoil = 0.5
 SWEP.RecoilSide = 0.14
 
-SWEP.RecoilRise = 0.24
-SWEP.VisualRecoilMult = 1
-SWEP.MaxRecoilBlowback = 0.5
+SWEP.RecoilRise = 1
+SWEP.RecoilPunch = 1
+SWEP.VisualRecoilMult = 3
+SWEP.MaxRecoilBlowback = 3
 SWEP.MaxRecoilPunch = 0.6
 
 -- Firerate / Firemodes --
@@ -143,7 +144,7 @@ SWEP.HoldtypeSights = "rpg"
 SWEP.IronSightStruct = {
      Pos = Vector(-2.81, 1, 0.8),
      Ang = Angle(0.1, 0, 0),
-     Magnification = 1,
+     Magnification = 1.1,
      SwitchToSound = "",
 }
 
@@ -165,9 +166,17 @@ SWEP.WorldModelOffset = {
 
 -- Firing sounds --
 
-SWEP.ShootSound = "ar15/fire_semi.wav"
-SWEP.ShootSoundSilenced = "weapons/arccw/czbren/lowpolyczbren_supp.wav"
-SWEP.DistantShootSound = "ar15/fire_dist.wav"
+local path = "weapons/arccw_ud/m16/"
+SWEP.ShootSound = {path.."fire_auto_1.ogg", path.."fire_auto_2.ogg", path.."fire_auto_3.ogg"}
+SWEP.ShootSoundSilenced = "weapons/arccw/czbren/lowpolyczbren_supp.ogg"
+SWEP.DistantShootSound = path.."fire_dist.ogg"
+
+SWEP.Hook_GetShootSound = function( wep, snd )
+    if wep:GetCurrentFiremode().Mode == 1 then
+    --if wep:GetBurstCount() == 1 then
+        return path.."fire_semi.ogg"
+    end
+end
 
 -- Bodygroups --
 
@@ -194,42 +203,38 @@ SWEP.AttachmentElements = {
 
 -- Animations --
 
+SWEP.Hook_Think = function(wep)
+	wep:GetOwner():GetViewModel():SetPoseParameter( "sights", Lerp(wep:GetSightDelta(), 1, 0) ) -- thanks fesiug
+end
+
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
-        Framerate = 30,
     },
     ["idle_empty"] = {
         Source = "idle_empty",
-        Framerate = 30,
     },
     ["draw"] = {
         Source = "draw",
-        Framerate = 30,
     },
     ["draw_empty"] = {
         Source = "draw_empty",
         Time = 20 / 30,
-        Framerate = 30,
     },
     ["holster"] = {
         Source = "holster",
-        Framerate = 30,
     },
     ["holster_empty"] = {
         Source = "holster_empty",
         Time = 20 / 30,
-        Framerate = 30,
     },
     ["fire"] = {
         Source = "fire",
-        Framerate = 30,
         Time = 13 / 30,
         ShellEjectAt = 0.01,
     },
     ["fire_empty"] = {
         Source = "fire_empty",
-        Framerate = 30,
         Time = 13 / 30,
         ShellEjectAt = 0.01,
     },
@@ -240,7 +245,7 @@ SWEP.Animations = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Time = 71 / 30,
-        Framerate = 30,
+        MinProgress = 1.5,
         LastClip1OutTime = 0.9,
         LHIK = true,
         LHIKIn = 0.4,
@@ -248,15 +253,15 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.6,
         SoundTable = {
-            {s = "ar15/magout.wav", 	t = 0.2},
-            {s = "ar15/magin.wav",   t = 1.05},
+            {s = path.."magout.ogg", 	t = 0.2},
+            {s = path.."magin.ogg",   t = 1.05},
         },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 30,
         Time = 79 / 30,
+        MinProgress = 2,
         LastClip1OutTime = 0.7,
         LHIK = true,
         LHIKIn = 0.4,
@@ -264,9 +269,9 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = "ar15/magout.wav", 	 t = 0.2},
-            {s = "ar15/magin.wav",    t = 1.05},
-            {s = "ar15/boltdropold.wav", t = 1.77},
+            {s = path.."magout.ogg", 	 t = 0.2},
+            {s = path.."magin.ogg",    t = 1.05},
+            {s = path.."boltdrop.ogg", t = 1.77},
         },
     },
 
@@ -276,7 +281,7 @@ SWEP.Animations = {
         Source = "reload_20",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Time = 71 / 30,
-        Framerate = 30,
+        MinProgress = 1.5,
         LastClip1OutTime = 0.9,
         LHIK = true,
         LHIKIn = 0.4,
@@ -284,15 +289,15 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.6,
         SoundTable = {
-            {s = "ar15/magout.wav", 	 t = 0.2},
-            {s = "ar15/magin.wav",    t = 1.05},
+            {s = path.."magout.ogg", 	 t = 0.2},
+            {s = path.."magin.ogg",    t = 1.05},
         },
     },
     ["reload_empty_20"] = {
         Source = "reload_empty_20",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 30,
         Time = 79 / 30,
+        MinProgress = 2,
         LastClip1OutTime = 0.7,
         LHIK = true,
         LHIKIn = 0.4,
@@ -300,9 +305,9 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = "ar15/magout.wav", 	 t = 0.2},
-            {s = "ar15/magin.wav",    t = 1.05},
-            {s = "ar15/boltdrop.wav", t = 1.77},
+            {s = path.."magout.ogg", 	 t = 0.2},
+            {s = path.."magin.ogg",    t = 1.05},
+            {s = path.."boltdrop.ogg", t = 1.77},
         },
     },
 
@@ -312,7 +317,7 @@ SWEP.Animations = {
         Source = "reload_40",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Time = 71 / 30,
-        Framerate = 30,
+        MinProgress = 1.5,
         LastClip1OutTime = 0.9,
         LHIK = true,
         LHIKIn = 0.4,
@@ -320,15 +325,15 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.6,
         SoundTable = {
-            {s = "ar15/magout.wav", 	 t = 0.2},
-            {s = "ar15/magin.wav",    t = 1.05},
+            {s = path.."magout.ogg", 	 t = 0.2},
+            {s = path.."magin.ogg",    t = 1.05},
         },
     },
     ["reload_empty_40"] = {
         Source = "reload_empty_40",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 30,
         Time = 79 / 30,
+        MinProgress = 2,
         LastClip1OutTime = 0.7,
         LHIK = true,
         LHIKIn = 0.4,
@@ -336,9 +341,9 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = "ar15/magout.wav", 	 t = 0.2},
-            {s = "ar15/magin.wav",    t = 1.05},
-            {s = "ar15/boltdrop.wav", t = 1.77},
+            {s = path.."magout.ogg", 	 t = 0.2},
+            {s = path.."magin.ogg",    t = 1.05},
+            {s = path.."boltdrop.ogg", t = 1.77},
         },
     },
 
@@ -348,7 +353,7 @@ SWEP.Animations = {
         Source = "reload_60",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Time = 71 / 30,
-        Framerate = 30,
+        MinProgress = 1.5,
         LastClip1OutTime = 0.9,
         LHIK = true,
         LHIKIn = 0.4,
@@ -356,15 +361,15 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = "ar15/magout.wav", 	 t = 0.2},
-            {s = "ar15/magin.wav",    t = 1.05},
+            {s = path.."magout.ogg", 	 t = 0.2},
+            {s = path.."magin.ogg",    t = 1.05},
         },
     },
     ["reload_empty_60"] = {
         Source = "reload_empty_60",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 30,
         Time = 79 / 30,
+        MinProgress = 2,
         LastClip1OutTime = 0.7,
         LHIK = true,
         LHIKIn = 0.4,
@@ -372,9 +377,9 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = "ar15/magout.wav", 	 t = 0.2},
-            {s = "ar15/magin.wav",    t = 1.05},
-            {s = "ar15/boltdrop.wav", t = 1.77},
+            {s = path.."magout.ogg", 	 t = 0.2},
+            {s = path.."magin.ogg",    t = 1.05},
+            {s = path.."boltdrop.ogg", t = 1.77},
         },
     },
 
@@ -384,7 +389,7 @@ SWEP.Animations = {
         Source = "reload_100",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Time = 71 / 30,
-        Framerate = 30,
+        MinProgress = 1.75,
         LastClip1OutTime = 0.9,
         LHIK = true,
         LHIKIn = 0.4,
@@ -392,16 +397,16 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = "ar15/magout.wav", 	 t = 0.2},
-            {s = "ar15/magin.wav",    t = 1.05},
-            {s = "ar15/magtap.wav",   t = 1.59},
+            {s = path.."magout.ogg", 	 t = 0.2},
+            {s = path.."magin.ogg",    t = 1.05},
+            {s = path.."magtap.ogg",   t = 1.59},
         },
     },
     ["reload_empty_100"] = {
         Source = "reload_empty_100",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 30,
         Time = 90 / 30,
+        MinProgress = 2.5,
         LastClip1OutTime = 0.7,
         LHIK = true,
         LHIKIn = 0.4,
@@ -409,18 +414,14 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = "ar15/magout.wav", 	 t = 0.2},
-            {s = "ar15/magin.wav",    t = 1.05},
-            {s = "ar15/magtap.wav",   t = 1.59},
-            {s = "ar15/chback.wav",   t = 1.9},
-            {s = "ar15/chamber.wav",  t = 2.2},
+            {s = path.."magout.ogg", 	 t = 0.2},
+            {s = path.."magin.ogg",    t = 1.05},
+            {s = path.."magtap.ogg",   t = 1.59},
+            {s = path.."chback.ogg",   t = 1.9},
+            {s = path.."chamber.ogg",  t = 2.2},
         },
     },
 }
-
-SWEP.Hook_Think = function(wep)
-	wep:GetOwner():GetViewModel():SetPoseParameter( "sights", 1 - wep:GetSightDelta() ) -- thanks fesiug
-end
 
 SWEP.Attachments = {
     {

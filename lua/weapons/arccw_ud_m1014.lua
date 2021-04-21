@@ -161,53 +161,48 @@ SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 
 -- Firing sounds --
 
-SWEP.ShootSound = "r870/fire.wav"
+local path = "weapons/arccw_ud/870/"
+SWEP.ShootSound = path.."fire.ogg"
 SWEP.ShootSoundSilenced = "weapons/arccw/m870/lowpolym870_supp.ogg"
-SWEP.DistantShootSound = "r870/fire_dist.wav"
+SWEP.DistantShootSound = path.."fire_dist.ogg"
+
+-- Animations --
 
 SWEP.Hook_Think = function(wep)
-	wep:GetOwner():GetViewModel():SetPoseParameter( "sights", 1 - wep:GetSightDelta() ) -- thanks fesiug
+	wep:GetOwner():GetViewModel():SetPoseParameter( "sights", Lerp(wep:GetSightDelta(), 1, 0) ) -- thanks fesiug
 end
 
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
-        Framerate = 30,
     },
     ["idle_empty"] = {
         Source = "idle_empty",
-        Framerate = 30,
     },
     ["draw"] = {
         Source = "draw",
         Time = 20 / 30,
-        Framerate = 30,
     },
     ["draw_empty"] = {
         Source = "draw_empty",
         Time = 20 / 30,
-        Framerate = 30,
     },
     ["holster"] = {
         Source = "holster",
         Time = 20 / 30,
-        Framerate = 30,
     },
     ["holster_empty"] = {
         Source = "holster_empty",
         Time = 20 / 30,
-        Framerate = 30,
     },
     ["fire"] = {
         Source = "fire",
         Time = 23 / 30,
-        Framerate = 30,
         ShellEjectAt = 0.01,
     },
     ["fire_empty"] = {
         Source = "fire_empty",
         Time = 23 / 30,
-        Framerate = 30,
         ShellEjectAt = 0.01,
     },
     ["sgreload_start"] = {

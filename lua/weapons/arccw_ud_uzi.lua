@@ -189,27 +189,26 @@ SWEP.AttachmentElements = {
 
 -- Animations --
 
+SWEP.Hook_Think = function(wep)
+	wep:GetOwner():GetViewModel():SetPoseParameter( "sights", Lerp(wep:GetSightDelta(), 1, 0) ) -- thanks fesiug
+end
+
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
-        Framerate = 30,
     },
     ["idle_empty"] = {
         Source = "idle_empty",
-        Framerate = 30,
     },
     ["draw"] = {
         Source = "draw",
-        Framerate = 30,
     },
     ["draw_empty"] = {
         Source = "draw_empty",
         Time = 12 / 30,
-        Framerate = 30,
     },
     ["holster"] = {
         Source = "holster",
-        Framerate = 30,
         LHIK = true,
         LHIKIn = 0.4,
         LHIKEaseIn = 0.4,
@@ -219,7 +218,6 @@ SWEP.Animations = {
     ["holster_empty"] = {
         Source = "holster_empty",
         Time = 12 / 30,
-        Framerate = 30,
         LHIK = true,
         LHIKIn = 0.4,
         LHIKEaseIn = 0.4,
@@ -228,13 +226,11 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = "fire",
-        Framerate = 30,
         Time = 8 / 30,
         ShellEjectAt = 0.03,
     },
     ["fire_empty"] = {
         Source = "fire_empty",
-        Framerate = 30,
         Time = 8 / 30,
         ShellEjectAt = 0.03,
     },
@@ -245,7 +241,6 @@ SWEP.Animations = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Time = 67 / 30,
-        Framerate = 30,
         LastClip1OutTime = 0.9,
         LHIK = true,
         LHIKIn = 0.4,
@@ -256,7 +251,6 @@ SWEP.Animations = {
     ["reload_empty"] = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 30,
         Time = 90 / 30,
         LastClip1OutTime = 0.7,
         LHIK = true,
@@ -272,7 +266,6 @@ SWEP.Animations = {
         Source = "reload_16",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Time = 67 / 30,
-        Framerate = 30,
         LastClip1OutTime = 0.9,
         LHIK = true,
         LHIKIn = 0.4,
@@ -283,7 +276,6 @@ SWEP.Animations = {
     ["reload_empty_16"] = {
         Source = "reload_empty_16",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 30,
         Time = 90 / 30,
         LastClip1OutTime = 0.7,
         LHIK = true,
@@ -299,7 +291,6 @@ SWEP.Animations = {
         Source = "reload_41",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Time = 67 / 30,
-        Framerate = 30,
         LastClip1OutTime = 0.9,
         LHIK = true,
         LHIKIn = 0.4,
@@ -310,7 +301,6 @@ SWEP.Animations = {
     ["reload_empty_41"] = {
         Source = "reload_empty_41",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 30,
         Time = 90 / 30,
         LastClip1OutTime = 0.7,
         LHIK = true,
@@ -326,7 +316,6 @@ SWEP.Animations = {
         Source = "reload_100",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Time = 67 / 30,
-        Framerate = 30,
         LastClip1OutTime = 0.9,
         LHIK = true,
         LHIKIn = 0.4,
@@ -337,7 +326,6 @@ SWEP.Animations = {
     ["reload_empty_100"] = {
         Source = "reload_empty_100",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Framerate = 30,
         Time = 90 / 30,
         LastClip1OutTime = 0.7,
         LHIK = true,
@@ -347,10 +335,6 @@ SWEP.Animations = {
         LHIKOut = 0.4,
     },
 }
-
-SWEP.Hook_Think = function(wep)
-	wep:GetOwner():GetViewModel():SetPoseParameter( "sights", 1 - wep:GetSightDelta() ) -- thanks fesiug
-end
 
 SWEP.Attachments = {
     {

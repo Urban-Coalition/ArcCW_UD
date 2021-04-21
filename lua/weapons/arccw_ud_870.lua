@@ -163,9 +163,9 @@ SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 
 -- Firing sounds --
 
-SWEP.ShootSound = "weapons/arccw_ud/r870/fire.wav"
+SWEP.ShootSound = "r870/fire.wav"
 SWEP.ShootSoundSilenced = "weapons/arccw/m870/lowpolym870_supp.ogg"
-SWEP.DistantShootSound = "weapons/arccw_ud/r870/fire_dist.wav"
+SWEP.DistantShootSound = "r870/fire_dist.wav"
 
 SWEP.Hook_Think = function(wep)
 	wep:GetOwner():GetViewModel():SetPoseParameter( "sights", 1 - wep:GetSightDelta() ) -- thanks fesiug
@@ -246,6 +246,7 @@ SWEP.Animations = {
         ShellEjectAt = 0.5,
     },
 }
+
 
 SWEP.BulletBones = {
     [1] = "870_shell1",

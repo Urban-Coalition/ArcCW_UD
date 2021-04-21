@@ -159,9 +159,9 @@ SWEP.WorldModelOffset = {
 
 -- Firing sounds --
 
-SWEP.ShootSound = "weapons/arccw_ud/glock/fire.wav"
-SWEP.ShootSoundSilenced = "weapons/arccw_ud/glock/fire_supp.wav"
-SWEP.DistantShootSound = "weapons/arccw_ud/glock/fire_dist.wav"
+SWEP.ShootSound = "glock/fire.wav"
+SWEP.ShootSoundSilenced = "glock/fire_supp.wav"
+SWEP.DistantShootSound = "glock/fire_dist.wav"
 
 -- Bodygroups --
 
@@ -258,6 +258,11 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.6,
+        SoundTable = {
+            {s = "glock/magrelease.wav", 	 t = 0.3},
+            {s = "glock/magout.wav", 	 t = 0.3},
+            {s = "glock/magin.wav",    t = 0.4},
+        },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
@@ -270,6 +275,12 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
+        SoundTable = {
+            {s = "glock/magrelease.wav", 	 t = 0.15},
+            {s = "glock/magout.wav", 	 t = 0.15},
+            {s = "glock/magin.wav",    t = 0.45},
+            {s = "glock/sliderel.wav",    t = 1.45},
+        },
     },
 
     -- 10 Round Reloads --
@@ -285,6 +296,11 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.6,
+        SoundTable = {
+            {s = "glock/magrelease.wav", 	 t = 0.3},
+            {s = "glock/magout.wav", 	 t = 0.3},
+            {s = "glock/magin.wav",    t = 0.4},
+        },
     },
     ["reload_empty_10"] = {
         Source = "reload_empty_10",
@@ -297,6 +313,12 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
+        SoundTable = {
+            {s = "glock/magrelease.wav", 	 t = 0.15},
+            {s = "glock/magout.wav", 	 t = 0.15},
+            {s = "glock/magin.wav",    t = 0.45},
+            {s = "glock/sliderel.wav",    t = 1.45},
+        },
     },
 
     -- 33 Round Reloads --
@@ -312,6 +334,11 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.6,
+        SoundTable = {
+            {s = "glock/magrelease.wav", 	 t = 0.4},
+            {s = "glock/magout.wav", 	 t = 0.4},
+            {s = "glock/magin.wav",    t = 0.5},
+        },
     },
     ["reload_empty_33"] = {
         Source = "reload_empty_33",
@@ -324,6 +351,12 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
+        SoundTable = {
+            {s = "glock/magrelease.wav", 	 t = 0.16},
+            {s = "glock/magout.wav", 	 t = 0.16},
+            {s = "glock/magin.wav",    t = 0.46},
+            {s = "glock/sliderel.wav",    t = 1.46},
+        },
     },
 
     -- 100 Round Reloads --
@@ -339,6 +372,11 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.6,
+        SoundTable = {
+            {s = "glock/magrelease.wav", 	 t = 0.3},
+            {s = "glock/magout.wav", 	 t = 0.3},
+            {s = "glock/magin.wav",    t = 0.4},
+        },
     },
     ["reload_empty_100"] = {
         Source = "reload_empty_100",
@@ -351,6 +389,96 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
+        SoundTable = {
+            {s = "glock/magrelease.wav", 	 t = 0.12},
+            {s = "glock/magout.wav", 	 t = 0.12},
+            {s = "glock/magin.wav",    t = 0.43},
+            {s = "glock/sliderel.wav",    t = 1.43},
+        },
+    },
+}
+
+SWEP.Hook_Think = function(wep)
+	wep:GetOwner():GetViewModel():SetPoseParameter( "sights", 1 - wep:GetSightDelta() ) -- thanks fesiug
+end
+
+SWEP.Attachments = {
+    {
+        PrintName = "Optic",
+        DefaultAttName = "Iron Sights",
+        Slot = {"optic_lp","optic"},
+        Bone = "glock_parent",
+        Offset = {
+            vpos = Vector(0, -3.3, 1),
+            vang = Angle(90, 2, -90),
+            wpos = Vector(8, 0.4, -5.1),
+            wang = Angle(-10, 0, 180),
+        },
+        ExtraSightDist = 4
+    },
+    {
+        PrintName = "Barrel",
+        DefaultAttName = "Standard Barrel",
+        Slot = "ud_glock_barrel",
+    },
+    {
+        PrintName = "Muzzle",
+        DefaultAttName = "Standard Muzzle",
+        Slot = {"muzzle"},
+        Bone = "glock_flash",
+        Offset = {
+            vpos = Vector(0, 0, 0),
+            vang = Angle(90, 0, -90),
+            wpos = Vector(30, 1, -8),
+            wang = Angle(-10, -2, 180),
+        },
+    },
+    { 
+        PrintName = "Underbarrel",
+        Slot = {"foregrip"},
+        Bone = "glock_parent",
+        Offset = {
+            vpos = Vector(0, 1.7, 12),
+            vang = Angle(90, 0, -90),
+            wpos = Vector(18, 0.9, -4.5),
+            wang = Angle(-10, 0, 180),
+        },
+    },
+    {
+        PrintName = "Tactical",
+        Slot = {"tac_pistol"},
+        Bone = "glock_parent",
+        Offset = {
+            vpos = Vector(0, 1.7, 9.5),
+            vang = Angle(90, 0, -90),
+            wpos = Vector(22, 0.9, -4.5),
+            wang = Angle(-10, 0, 180),
+        },
+    },
+    {
+        PrintName = "Mag Type",
+        Slot = {"ud_glock_mag"},
+        DefaultAttName = "17 Round Mag",
+    },
+    {
+        PrintName = "Ammo Type",
+        Slot = {"go_ammo"},
+    },
+    {
+        PrintName = "Perk",
+        Slot = "go_perk"
+    },
+    {
+        PrintName = "Charm",
+        Slot = {"charm", "fml_charm"},
+        FreeSlot = true,
+        Bone = "Body", 
+        Offset = {
+            vpos = Vector(0.6, -4, 4),
+            vang = Angle(90, 0, -90),
+            wpos = Vector(9, 2.3, -4.6),
+            wang = Angle(-14, -2, 180),
+        },
     },
 }
 

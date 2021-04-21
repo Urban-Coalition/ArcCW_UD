@@ -166,7 +166,7 @@ SWEP.WorldModelOffset = {
 -- Firing sounds --
 
 SWEP.ShootSound = "ar15/fire_semi.wav"
-SWEP.ShootSoundSilenced = "weapons/arccw/czbren/lowpolyczbren_supp.ogg"
+SWEP.ShootSoundSilenced = "weapons/arccw/czbren/lowpolyczbren_supp.wav"
 SWEP.DistantShootSound = "ar15/fire_dist.wav"
 
 -- Bodygroups --
@@ -247,6 +247,10 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.6,
+        SoundTable = {
+            {s = "ar15/magout.wav", 	t = 0.2},
+            {s = "ar15/magin.wav",   t = 1.05},
+        },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
@@ -259,6 +263,11 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
+        SoundTable = {
+            {s = "ar15/magout.wav", 	 t = 0.2},
+            {s = "ar15/magin.wav",    t = 1.05},
+            {s = "ar15/boltdropold.wav", t = 1.77},
+        },
     },
 
     -- 20 Round Reloads --
@@ -274,6 +283,10 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.6,
+        SoundTable = {
+            {s = "ar15/magout.wav", 	 t = 0.2},
+            {s = "ar15/magin.wav",    t = 1.05},
+        },
     },
     ["reload_empty_20"] = {
         Source = "reload_empty_20",
@@ -286,6 +299,11 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
+        SoundTable = {
+            {s = "ar15/magout.wav", 	 t = 0.2},
+            {s = "ar15/magin.wav",    t = 1.05},
+            {s = "ar15/boltdrop.wav", t = 1.77},
+        },
     },
 
     -- 40 Round Reloads --
@@ -301,6 +319,10 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.6,
+        SoundTable = {
+            {s = "ar15/magout.wav", 	 t = 0.2},
+            {s = "ar15/magin.wav",    t = 1.05},
+        },
     },
     ["reload_empty_40"] = {
         Source = "reload_empty_40",
@@ -313,6 +335,11 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
+        SoundTable = {
+            {s = "ar15/magout.wav", 	 t = 0.2},
+            {s = "ar15/magin.wav",    t = 1.05},
+            {s = "ar15/boltdrop.wav", t = 1.77},
+        },
     },
 
     -- 60 Round Reloads --
@@ -328,6 +355,10 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
+        SoundTable = {
+            {s = "ar15/magout.wav", 	 t = 0.2},
+            {s = "ar15/magin.wav",    t = 1.05},
+        },
     },
     ["reload_empty_60"] = {
         Source = "reload_empty_60",
@@ -340,6 +371,11 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
+        SoundTable = {
+            {s = "ar15/magout.wav", 	 t = 0.2},
+            {s = "ar15/magin.wav",    t = 1.05},
+            {s = "ar15/boltdrop.wav", t = 1.77},
+        },
     },
 
     -- 100 Round Reloads --
@@ -355,6 +391,11 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
+        SoundTable = {
+            {s = "ar15/magout.wav", 	 t = 0.2},
+            {s = "ar15/magin.wav",    t = 1.05},
+            {s = "ar15/magtap.wav",   t = 1.59},
+        },
     },
     ["reload_empty_100"] = {
         Source = "reload_empty_100",
@@ -367,6 +408,13 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
+        SoundTable = {
+            {s = "ar15/magout.wav", 	 t = 0.2},
+            {s = "ar15/magin.wav",    t = 1.05},
+            {s = "ar15/magtap.wav",   t = 1.59},
+            {s = "ar15/chback.wav",   t = 1.9},
+            {s = "ar15/chamber.wav",  t = 2.2},
+        },
     },
 }
 

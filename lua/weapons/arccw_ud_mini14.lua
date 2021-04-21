@@ -134,8 +134,8 @@ SWEP.HolsterPos = Vector(4.623, -2.211, 1.004)
 SWEP.HolsterAng = Angle(-8.443, 28.843, 0)
 
 SWEP.HoldtypeHolstered = "passive"
-SWEP.HoldtypeActive = "pistol"
-SWEP.HoldtypeSights = "revolver"
+SWEP.HoldtypeActive = "ar2"
+SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
      Pos = Vector(-4.28, 2, 2.05),
@@ -155,16 +155,16 @@ SWEP.CrouchAng = Angle(0, 0, -8)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-9.8, 4, -6),
+    pos        =    Vector(-8.8, 5.5, -7),
     ang        =    Angle(-6, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
 
 -- Firing sounds --
 
-SWEP.ShootSound = "weapons/arccw_ud/mini14/fire.wav"
+SWEP.ShootSound = "mini14/fire.wav"
 SWEP.ShootSoundSilenced = "weapons/arccw/czbren/lowpolyczbren_supp.ogg"
-SWEP.ShootSound = "weapons/arccw_ud/mini14/fire_dist.wav"
+SWEP.ShootSound = "mini14/fire_dist.wav"
 
 -- Bodygroups --
 

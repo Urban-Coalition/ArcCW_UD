@@ -75,13 +75,15 @@ SWEP.ReducedClipSize = 10
 
 -- Recoil --
 
-SWEP.Recoil = 0.5
-SWEP.RecoilSide = 0.2
+SWEP.Recoil = 1.5
+SWEP.RecoilSide = 0.5
 
 SWEP.RecoilRise = 0.24
 SWEP.VisualRecoilMult = 1
 SWEP.MaxRecoilBlowback = 0.5
 SWEP.MaxRecoilPunch = 0.6
+
+SWEP.Sway = 1.5
 
 -- Firerate / Firemodes --
 
@@ -115,6 +117,7 @@ SWEP.NPCWeight = 60
 SWEP.AccuracyMOA = 7
 SWEP.HipDispersion = 400
 SWEP.MoveDispersion = 800
+SWEP.JumpDispersion = 500
 
 SWEP.Primary.Ammo = "pistol"
 SWEP.MagID = "glock"
@@ -124,6 +127,7 @@ SWEP.MagID = "glock"
 SWEP.SpeedMult = 0.9
 SWEP.SightedSpeedMult = 0.9
 SWEP.SightTime = 0.18
+SWEP.ShootSpeedMult = 1
 
 -- Length --
 
@@ -154,6 +158,8 @@ SWEP.CustomizeAng = Angle(15, 25, 0)
 
 SWEP.CrouchPos = Vector(-5, 2, 1)
 SWEP.CrouchAng = Angle(0, 0, -45)
+
+SWEP.BarrelOffsetHip = Vector(0, 0, -3)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {

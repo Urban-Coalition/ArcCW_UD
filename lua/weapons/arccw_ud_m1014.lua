@@ -80,13 +80,15 @@ SWEP.ReducedClipSize = 6
 
 -- Recoil --
 
-SWEP.Recoil = 2
+SWEP.Recoil = 1.75
 SWEP.RecoilSide = 1
 
 SWEP.RecoilRise = 0.24
 SWEP.VisualRecoilMult = 1
 SWEP.MaxRecoilBlowback = 1
 SWEP.MaxRecoilPunch = 1
+
+SWEP.Sway = 0.5
 
 -- Firerate / Firemodes --
 
@@ -120,6 +122,7 @@ SWEP.NPCWeight = 210
 SWEP.AccuracyMOA = 30
 SWEP.HipDispersion = 100
 SWEP.MoveDispersion = 400
+SWEP.JumpDispersion = 1000
 
 SWEP.Primary.Ammo = "buckshot"
 
@@ -128,6 +131,7 @@ SWEP.Primary.Ammo = "buckshot"
 SWEP.SpeedMult = 0.7
 SWEP.SightedSpeedMult = 0.7
 SWEP.SightTime = 0.3
+SWEP.ShootSpeedMult = 0.9
 
 -- Length --
 
@@ -155,6 +159,8 @@ SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.CrouchPos = Vector(-6.5, 2, 0)
 SWEP.CrouchAng = Angle(0, 0, -40)
+
+SWEP.BarrelOffsetHip = Vector(0, 0, -3)
 
 SWEP.BarrelOffsetSighted = Vector(0, 0, -1)
 SWEP.BarrelOffsetHip = Vector(2, 0, -2)

@@ -76,14 +76,16 @@ SWEP.ReducedClipSize = 10
 
 -- Recoil --
 
-SWEP.Recoil = 0.4
-SWEP.RecoilSide = 0.2
+SWEP.Recoil = 0.75
+SWEP.RecoilSide = 0.1
 
 SWEP.RecoilRise = 1
 SWEP.VisualRecoilMult = 1
 SWEP.RecoilPunch = 2
 SWEP.MaxRecoilBlowback = 2
 SWEP.MaxRecoilPunch = 2
+
+SWEP.Sway = 0.25
 
 -- Firerate / Firemodes --
 
@@ -116,6 +118,7 @@ SWEP.NPCWeight = 60
 SWEP.AccuracyMOA = 0
 SWEP.HipDispersion = 400
 SWEP.MoveDispersion = 800
+SWEP.JumpDispersion = 1200
 
 SWEP.Primary.Ammo = "smg1"
 SWEP.MagID = "mini14"
@@ -125,6 +128,7 @@ SWEP.MagID = "mini14"
 SWEP.SpeedMult = 0.9
 SWEP.SightedSpeedMult = 0.9
 SWEP.SightTime = 0.18
+SWEP.ShootSpeedMult = 0.95
 
 -- Length --
 
@@ -156,6 +160,8 @@ SWEP.CustomizeAng = Angle(15, 25, 0)
 
 SWEP.CrouchPos = Vector(-8.5, 2, -1)
 SWEP.CrouchAng = Angle(0, 0, -40)
+
+SWEP.BarrelOffsetHip = Vector(0, 0, -3)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {

@@ -109,14 +109,14 @@ SWEP.ReloadInSights = true
 
 -- NPC -- 
 
-SWEP.NPCWeaponType = "weapon_pistol"
+SWEP.NPCWeaponType = "weapon_smg"
 SWEP.NPCWeight = 60
 
 -- Accuracy --
 
 SWEP.AccuracyMOA = 6
-SWEP.HipDispersion = 200
-SWEP.MoveDispersion = 200
+SWEP.HipDispersion = 300
+SWEP.MoveDispersion = 400
 
 SWEP.Primary.Ammo = "pistol"
 SWEP.MagID = "glock"

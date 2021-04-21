@@ -108,9 +108,9 @@ SWEP.NPCWeight = 60
 
 -- Accuracy --
 
-SWEP.AccuracyMOA = 4
-SWEP.HipDispersion = 200
-SWEP.MoveDispersion = 200
+SWEP.AccuracyMOA = 7
+SWEP.HipDispersion = 400
+SWEP.MoveDispersion = 800
 
 SWEP.Primary.Ammo = "pistol"
 SWEP.MagID = "glock"

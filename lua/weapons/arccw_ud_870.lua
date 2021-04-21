@@ -122,7 +122,7 @@ SWEP.NPCWeight = 210
 
 SWEP.AccuracyMOA = 30
 SWEP.HipDispersion = 100
-SWEP.MoveDispersion = 100
+SWEP.MoveDispersion = 400
 
 SWEP.Primary.Ammo = "buckshot"
 

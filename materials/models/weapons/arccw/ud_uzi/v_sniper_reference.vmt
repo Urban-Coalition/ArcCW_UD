@@ -1,6 +1,6 @@
 VertexLitGeneric
 {
-$baseTexture "models\weapons\arccw\ud_zui\v_sniper_reference"
+$baseTexture "models\weapons\arccw\ud_uzi\v_sniper_reference"
 $bumpmap "effects/flat_normal"
 
 $phongboost 1

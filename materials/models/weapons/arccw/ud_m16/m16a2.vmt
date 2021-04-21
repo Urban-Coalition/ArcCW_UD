@@ -1,8 +1,8 @@
 VertexLitGeneric
 {
-		$basetexture			"models\v_models\Weapons\rifle/m16a2"
-		$bumpmap				"effects/flat_normal"
-		
+        $baseTexture "models\weapons\arccw\ud_m16\m16a2"
+        $bumpmap "effects/flat_normal"
+
 		$envmap					"env_cubemap"
 		$envmaptint				"[0.01 0.01 0.015]"
 

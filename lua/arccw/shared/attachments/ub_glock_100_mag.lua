@@ -1,6 +1,6 @@
 att.PrintName = "100 Round Mag"
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "Placeholder"
+att.Description = "Twin-drum magazine for the Glock. Defeats the purpose of a handgun, but it does allow a very long time between reloads."
 att.Desc_Pros = {
     "Increased magazine capacity"
 }

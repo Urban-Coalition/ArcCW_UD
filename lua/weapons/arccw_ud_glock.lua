@@ -25,16 +25,16 @@ SWEP.PrintName = "Glawk"
 
 -- True name --
 
-SWEP.TrueName = "Glock"
+SWEP.TrueName = "Glock 17"
 
 -- Trivia --
 
 SWEP.Trivia_Class = "Rifle"
-SWEP.Trivia_Desc = ">When you lose to this gun in CSGO"
-SWEP.Trivia_Manufacturer = "Glock"
-SWEP.Trivia_Calibre = "9x19mm Para"
-SWEP.Trivia_Mechanism = "Some mechanism"
-SWEP.Trivia_Country = "Belgium"
+SWEP.Trivia_Desc = "Plastic \"wonder nine\" associated with the very idea of a gun. With its low weight and user-focused safety features, it makes an impeccable backup weapon."
+SWEP.Trivia_Manufacturer = "Glawk Ges.m.b.H."
+SWEP.Trivia_Calibre = "9x19mm Parabellum"
+SWEP.Trivia_Mechanism = "Short Recoil"
+SWEP.Trivia_Country = "Austria"
 SWEP.Trivia_Year = 1980
 
 -- Weapon slot --
@@ -45,7 +45,7 @@ SWEP.Slot = 2
 
 if GetConVar("arccw_truenames"):GetBool() then
     SWEP.PrintName = SWEP.TrueName
-    SWEP.Trivia_Manufacturer = "Glock"
+    SWEP.Trivia_Manufacturer = "Glock Ges.m.b.H."
 end
 
 -- Viewmodel / Worldmodel / FOV --
@@ -152,16 +152,16 @@ SWEP.CrouchAng = Angle(0, 0, -8)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-9.8, 4, -6),
+    pos        =    Vector(-14.5, 4, -4.8),
     ang        =    Angle(-6, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
 
 -- Firing sounds --
 
-SWEP.ShootSound = "weapons/arccw/hk416/lowpolyhk416_fire.ogg"
-SWEP.ShootSoundSilenced = "weapons/arccw/czbren/lowpolyczbren_supp.ogg"
-SWEP.DistantShootSound = "weapons/arccw/czbren/lowpolyczbren_dist.ogg"
+SWEP.ShootSound = "weapons/arccw_ud/glock/fire.wav"
+SWEP.ShootSoundSilenced = "weapons/arccw_ud/glock/fire_supp.wav"
+SWEP.DistantShootSound = "weapons/arccw_ud/glock/fire_dist.wav"
 
 -- Bodygroups --
 

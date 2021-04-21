@@ -1,6 +1,6 @@
 att.PrintName = "10 Round Mag"
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "Placeholder"
+att.Description = "Reduced magazine for the Mini-14. The lighter load makes the weapon even more ergonomic."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

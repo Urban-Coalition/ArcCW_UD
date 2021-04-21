@@ -1,6 +1,6 @@
 att.PrintName = "30 Round Mag"
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "Placeholder"
+att.Description = "Extended magazine for the Mini-14. Allows more shots to be taken before reloading."
 att.Desc_Pros = {
     "Increased magazine capacity"
 }

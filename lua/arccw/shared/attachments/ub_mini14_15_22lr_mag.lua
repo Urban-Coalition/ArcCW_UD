@@ -1,6 +1,6 @@
-att.PrintName = "15 22lr Round Mag"
+att.PrintName = "15 Round .22 LR Mag"
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "Placeholder"
+att.Description = ".22 Long Rifle conversion for the Mini-14. While the light, weak cartridge has poor stopping power, its recoil is extremely manageable, making it a cinch to follow up shots."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

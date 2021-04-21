@@ -21,21 +21,21 @@ SWEP.TracerWidth = 2
 
 -- Fake name --
 
-SWEP.PrintName = "UZI"
+SWEP.PrintName = "IA Gal"
 
 -- True name --
 
-SWEP.TrueName = "UZI"
+SWEP.TrueName = "Uzi"
 
 -- Trivia --
 
 SWEP.Trivia_Class = "SMG"
-SWEP.Trivia_Desc = "no dollars"
-SWEP.Trivia_Manufacturer = "IMI"
-SWEP.Trivia_Calibre = "9x19mm Para"
-SWEP.Trivia_Mechanism = "Open bolt"
+SWEP.Trivia_Desc = "Cost-efficient submachine gun named after its designer against his own wishes. Its compact frame renders it an invaluable weapon in claustrophobic spaces, such as inside buildings."
+SWEP.Trivia_Manufacturer = "IA"
+SWEP.Trivia_Calibre = "9x19mm Parabellum"
+SWEP.Trivia_Mechanism = "Open Bolt"
 SWEP.Trivia_Country = "Israel"
-SWEP.Trivia_Year = 1980
+SWEP.Trivia_Year = 1950
 
 -- Weapon slot --
 

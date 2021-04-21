@@ -27,10 +27,10 @@ SWEP.TrueName = "M1014"
 -- Trivia --
 
 SWEP.Trivia_Class = "Shotgun"
-SWEP.Trivia_Desc = "Description :tr:"
+SWEP.Trivia_Desc = "Semi-automatic shotgun produced as part as Benelli's \"Super 90\" series. While back-to-back 12 gauge is devastating, good trigger discipline is a necessity, lest you spend more time reloading than fighting."
 SWEP.Trivia_Manufacturer = "FakeName"
 SWEP.Trivia_Calibre = "12 Gauge"
-SWEP.Trivia_Mechanism = "Semi-auto"
+SWEP.Trivia_Mechanism = "Rotating Bolt"
 SWEP.Trivia_Country = "Italy"
 SWEP.Trivia_Year = 1980
 

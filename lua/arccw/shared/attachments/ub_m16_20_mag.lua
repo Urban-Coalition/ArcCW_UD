@@ -1,6 +1,6 @@
 att.PrintName = "20 Round Mag"
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "Placeholder"
+att.Description = "Original, reduced magazine for the M16. The lighter load reduces the weapon's weight and brings back memories of the rice fields."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
@@ -12,10 +12,10 @@ att.Slot = "ud_m16_mag"
 
 att.AutoStats = true
 
---att.Mult_SightTime = 1.4
+att.Mult_SightTime = 0.85
 --att.Mult_Recoil = 0.9
-att.Mult_ReloadTime = 0.95
---att.Mult_SpeedMult = 0.9
+att.Mult_ReloadTime = 0.9
+att.Mult_SpeedMult = 1.05
 att.Override_ClipSize = 20
 
 att.ActivateElements = {"ud_m16_20_mag"}

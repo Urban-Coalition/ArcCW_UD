@@ -30,12 +30,12 @@ SWEP.TrueName = "M16"
 -- Trivia --
 
 SWEP.Trivia_Class = "Rifle"
-SWEP.Trivia_Desc = "Desc"
-SWEP.Trivia_Manufacturer = "Colt"
+SWEP.Trivia_Desc = "Iconic American military rifle, fielded as standard issue across multiple iterations. Well rounded and highly modular, with no major downsides for maximum versatility."
+SWEP.Trivia_Manufacturer = "Cult"
 SWEP.Trivia_Calibre = "5.56x45mm NATO"
-SWEP.Trivia_Mechanism = "Short recoil, locking rotating barrel"
+SWEP.Trivia_Mechanism = "Rotating Bolt"
 SWEP.Trivia_Country = "USA"
-SWEP.Trivia_Year = 1980
+SWEP.Trivia_Year = 1959
 
 -- Weapon slot --
 
@@ -57,8 +57,8 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage --
 
-SWEP.Damage = 28
-SWEP.DamageMin = 11
+SWEP.Damage = 29
+SWEP.DamageMin = 22
 SWEP.Range = 70
 SWEP.Penetration = 6
 SWEP.DamageType = DMG_BULLET
@@ -114,7 +114,7 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 4
-SWEP.HipDispersion = 200
+SWEP.HipDispersion = 350
 SWEP.MoveDispersion = 200
 
 SWEP.Primary.Ammo = "smg1"
@@ -122,9 +122,9 @@ SWEP.MagID = "m16"
 
 -- Speed multipliers --
 
-SWEP.SpeedMult = 0.9
+SWEP.SpeedMult = 0.8
 SWEP.SightedSpeedMult = 0.9
-SWEP.SightTime = 0.4
+SWEP.SightTime = 0.3
 
 -- Length --
 
@@ -138,7 +138,7 @@ SWEP.HolsterAng = Angle(-8.443, 28.843, 0)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"
-SWEP.HoldtypeSights = "ar2"
+SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
      Pos = Vector(-2.81, 1, 0.8),
@@ -158,16 +158,16 @@ SWEP.CrouchAng = Angle(0, 0, -8)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-9.8, 4, -6),
+    pos        =    Vector(-7.8, 3.7, -7),
     ang        =    Angle(-6, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
 
 -- Firing sounds --
 
-SWEP.ShootSound = "weapons/arccw/hk416/lowpolyhk416_fire.ogg"
+SWEP.ShootSound = "ar15/fire_semi.wav"
 SWEP.ShootSoundSilenced = "weapons/arccw/czbren/lowpolyczbren_supp.ogg"
-SWEP.DistantShootSound = "weapons/arccw/czbren/lowpolyczbren_dist.ogg"
+SWEP.DistantShootSound = "ar15/fire_dist.wav"
 
 -- Bodygroups --
 
@@ -430,7 +430,7 @@ SWEP.Attachments = {
     {
         PrintName = "Stock",
         Slot = {"ud_m16_stock"},
-        DefaultAttName = "Stock",
+        DefaultAttName = "Standard Stock",
     },
     {
         PrintName = "Mag Type",
@@ -441,9 +441,19 @@ SWEP.Attachments = {
         PrintName = "Ammo Type",
         Slot = {"go_ammo"},
     },
+    -- {
+    --     PrintName = "Perk",
+    --     Slot = "go_perk"
+    -- },
     {
-        PrintName = "Perk",
-        Slot = "go_perk"
+        PrintName = "Training Package",
+        Slot = "ud_training",
+        DefaultAttName = "Basic Training"
+    },
+    {
+        PrintName = "Internals",
+        Slot = "ud_fg", -- Fire group
+        DefaultAttName = "Standard Internals"
     },
     {
         PrintName = "Charm",

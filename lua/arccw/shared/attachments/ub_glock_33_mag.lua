@@ -1,6 +1,6 @@
 att.PrintName = "33 Round Mag"
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "Placeholder"
+att.Description = "Extended magazine for the Glock. Allows many more rounds to be fired before reloading."
 att.Desc_Pros = {
     "Increased magazine capacity"
 }

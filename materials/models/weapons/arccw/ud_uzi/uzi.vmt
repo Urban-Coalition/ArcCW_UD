@@ -1,0 +1,15 @@
+VertexLitGeneric
+{
+$baseTexture "models\v_models\Weapons\smg/uzi"
+$bumpmap "effects/flat_normal"
+
+$phongboost 1
+$phongexponent 10
+$phongfresnelranges "[10 10 30]"
+$BASEMAPLUMINANCEPHONGMASK 1
+$color2 "[1.5 1.5 1.5]"
+$ambientocclusion 1
+$halflambert 1
+$phong 0
+"GPU>=2?$phong" 1
+}

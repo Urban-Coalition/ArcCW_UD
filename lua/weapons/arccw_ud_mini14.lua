@@ -21,21 +21,21 @@ SWEP.TracerWidth = 2
 
 -- Fake name --
 
-SWEP.PrintName = "Mini 14"
+SWEP.PrintName = "Marksman Four"
 
 -- True name --
 
-SWEP.TrueName = "Mini 14"
+SWEP.TrueName = "Mini-14"
 
 -- Trivia --
 
-SWEP.Trivia_Class = "Battle Rifle"
-SWEP.Trivia_Desc = "semi m14"
+SWEP.Trivia_Class = "Semi-Automatic Rifle"
+SWEP.Trivia_Desc = "Lightweight, highly precise rifle with support for a variety of calibers. While it has a major advantage in long distance combat, it can still perform acceptably at closer ranges."
 SWEP.Trivia_Manufacturer = "Literally no idea"
 SWEP.Trivia_Calibre = "5.56x45mm NATO"
-SWEP.Trivia_Mechanism = "Open bolt"
+SWEP.Trivia_Mechanism = "Rotating Bolt"
 SWEP.Trivia_Country = "USA"
-SWEP.Trivia_Year = 1980
+SWEP.Trivia_Year = 1973
 
 -- Weapon slot --
 
@@ -45,7 +45,7 @@ SWEP.Slot = 2
 
 if GetConVar("arccw_truenames"):GetBool() then
     SWEP.PrintName = SWEP.TrueName
-    SWEP.Trivia_Manufacturer = "IMI"
+    SWEP.Trivia_Manufacturer = "Sturm, Ruger & Company"
 end
 
 -- Viewmodel / Worldmodel / FOV --
@@ -162,9 +162,9 @@ SWEP.WorldModelOffset = {
 
 -- Firing sounds --
 
-SWEP.ShootSound = "weapons/arccw/hk416/lowpolyhk416_fire.ogg"
+SWEP.ShootSound = "weapons/arccw_ud/mini14/fire.wav"
 SWEP.ShootSoundSilenced = "weapons/arccw/czbren/lowpolyczbren_supp.ogg"
-SWEP.DistantShootSound = "weapons/arccw/czbren/lowpolyczbren_dist.ogg"
+SWEP.ShootSound = "weapons/arccw_ud/mini14/fire_dist.wav"
 
 -- Bodygroups --
 

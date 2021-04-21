@@ -1,6 +1,6 @@
 att.PrintName = "40 Round Mag"
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "Placeholder"
+att.Description = "Extended magazine for the M16. Enables slightly longer mag dumps, which may save your life, but the longer mag is more awkward to load."
 att.Desc_Pros = {
     "Increased magazine capacity"
 }
@@ -12,9 +12,9 @@ att.Slot = "ud_m16_mag"
 
 att.AutoStats = true
 
---att.Mult_SightTime = 1.4
+att.Mult_SightTime = 1.1
 --att.Mult_Recoil = 0.9
-att.Mult_ReloadTime = 1.03
+att.Mult_ReloadTime = 1.15
 --att.Mult_SpeedMult = 0.9
 att.Override_ClipSize = 40
 

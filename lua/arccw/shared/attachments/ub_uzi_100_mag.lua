@@ -1,6 +1,6 @@
 att.PrintName = "100 Round Drum"
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "Placeholder"
+att.Description = "Twin-drum magazine for the Uzi. Allows for a long period between reloads, but harms the weapon's ergonomics significantly."
 att.Desc_Pros = {
     "Increased magazine capacity"
 }

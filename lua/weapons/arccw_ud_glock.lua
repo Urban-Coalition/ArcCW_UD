@@ -159,9 +159,9 @@ SWEP.WorldModelOffset = {
 
 -- Firing sounds --
 
-SWEP.ShootSound = "weapons/arccw/hk416/lowpolyhk416_fire.ogg"
+SWEP.ShootSound = "glock/fire.ogg"
 SWEP.ShootSoundSilenced = "weapons/arccw/czbren/lowpolyczbren_supp.ogg"
-SWEP.DistantShootSound = "weapons/arccw/czbren/lowpolyczbren_dist.ogg"
+SWEP.DistantShootSound = "glock/fire_dist.ogg"
 
 -- Bodygroups --
 
@@ -258,6 +258,11 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.6,
+        SoundTable = {
+            {s = "glock/magrelease.ogg", 	 t = 0.3},
+            {s = "glock/magout.ogg", 	 t = 0.3},
+            {s = "glock/magin.ogg",    t = 0.4},
+        },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
@@ -270,6 +275,12 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
+        SoundTable = {
+            {s = "glock/magrelease.ogg", 	 t = 0.15},
+            {s = "glock/magout.ogg", 	 t = 0.15},
+            {s = "glock/magin.ogg",    t = 0.45},
+            {s = "glock/sliderel.ogg",    t = 1.45},
+        },
     },
 
     -- 10 Round Reloads --
@@ -285,6 +296,11 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.6,
+        SoundTable = {
+            {s = "glock/magrelease.ogg", 	 t = 0.3},
+            {s = "glock/magout.ogg", 	 t = 0.3},
+            {s = "glock/magin.ogg",    t = 0.4},
+        },
     },
     ["reload_empty_10"] = {
         Source = "reload_empty_10",
@@ -297,6 +313,12 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
+        SoundTable = {
+            {s = "glock/magrelease.ogg", 	 t = 0.15},
+            {s = "glock/magout.ogg", 	 t = 0.15},
+            {s = "glock/magin.ogg",    t = 0.45},
+            {s = "glock/sliderel.ogg",    t = 1.45},
+        },
     },
 
     -- 33 Round Reloads --
@@ -312,6 +334,11 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.6,
+        SoundTable = {
+            {s = "glock/magrelease.ogg", 	 t = 0.4},
+            {s = "glock/magout.ogg", 	 t = 0.4},
+            {s = "glock/magin.ogg",    t = 0.5},
+        },
     },
     ["reload_empty_33"] = {
         Source = "reload_empty_33",
@@ -324,6 +351,12 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
+        SoundTable = {
+            {s = "glock/magrelease.ogg", 	 t = 0.16},
+            {s = "glock/magout.ogg", 	 t = 0.16},
+            {s = "glock/magin.ogg",    t = 0.46},
+            {s = "glock/sliderel.ogg",    t = 1.46},
+        },
     },
 
     -- 100 Round Reloads --
@@ -339,6 +372,11 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.6,
+        SoundTable = {
+            {s = "glock/magrelease.ogg", 	 t = 0.3},
+            {s = "glock/magout.ogg", 	 t = 0.3},
+            {s = "glock/magin.ogg",    t = 0.4},
+        },
     },
     ["reload_empty_100"] = {
         Source = "reload_empty_100",
@@ -351,6 +389,12 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
+        SoundTable = {
+            {s = "glock/magrelease.ogg", 	 t = 0.12},
+            {s = "glock/magout.ogg", 	 t = 0.12},
+            {s = "glock/magin.ogg",    t = 0.43},
+            {s = "glock/sliderel.ogg",    t = 1.43},
+        },
     },
 }
 

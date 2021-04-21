@@ -165,9 +165,11 @@ SWEP.WorldModelOffset = {
 
 -- Firing sounds --
 
-SWEP.ShootSound = "weapons/arccw/hk416/lowpolyhk416_fire.ogg"
+SWEP.FirstShootSound = "m16/fire_semi.ogg"
+SWEP.ShootSound = {"m16/fire_auto_1.ogg", "m16/fire_auto_1.ogg", "m16/fire_auto_1.ogg"}
 SWEP.ShootSoundSilenced = "weapons/arccw/czbren/lowpolyczbren_supp.ogg"
-SWEP.DistantShootSound = "weapons/arccw/czbren/lowpolyczbren_dist.ogg"
+SWEP.DistantShootSound = "m16/fire_dist.ogg"
+SWEP.ShootPitchVariation = 0
 
 -- Bodygroups --
 
@@ -247,6 +249,10 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.6,
+        SoundTable = {
+            {s = "m16/magout.ogg", 	t = 0.2},
+            {s = "m16/magin.ogg",   t = 1.05},
+        },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
@@ -259,6 +265,11 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
+        SoundTable = {
+            {s = "m16/magout.ogg", 	 t = 0.2},
+            {s = "m16/magin.ogg",    t = 1.05},
+            {s = "m16/boltdrop.ogg", t = 1.77},
+        },
     },
 
     -- 20 Round Reloads --
@@ -274,6 +285,10 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.6,
+        SoundTable = {
+            {s = "m16/magout.ogg", 	 t = 0.2},
+            {s = "m16/magin.ogg",    t = 1.05},
+        },
     },
     ["reload_empty_20"] = {
         Source = "reload_empty_20",
@@ -286,6 +301,11 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
+        SoundTable = {
+            {s = "m16/magout.ogg", 	 t = 0.2},
+            {s = "m16/magin.ogg",    t = 1.05},
+            {s = "m16/boltdrop.ogg", t = 1.77},
+        },
     },
 
     -- 40 Round Reloads --
@@ -301,6 +321,10 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.6,
+        SoundTable = {
+            {s = "m16/magout.ogg", 	 t = 0.2},
+            {s = "m16/magin.ogg",    t = 1.05},
+        },
     },
     ["reload_empty_40"] = {
         Source = "reload_empty_40",
@@ -313,6 +337,11 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
+        SoundTable = {
+            {s = "m16/magout.ogg", 	 t = 0.2},
+            {s = "m16/magin.ogg",    t = 1.05},
+            {s = "m16/boltdrop.ogg", t = 1.77},
+        },
     },
 
     -- 60 Round Reloads --
@@ -328,6 +357,10 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
+        SoundTable = {
+            {s = "m16/magout.ogg", 	 t = 0.2},
+            {s = "m16/magin.ogg",    t = 1.05},
+        },
     },
     ["reload_empty_60"] = {
         Source = "reload_empty_60",
@@ -340,6 +373,11 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
+        SoundTable = {
+            {s = "m16/magout.ogg", 	 t = 0.2},
+            {s = "m16/magin.ogg",    t = 1.05},
+            {s = "m16/boltdrop.ogg", t = 1.77},
+        },
     },
 
     -- 100 Round Reloads --
@@ -355,6 +393,11 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
+        SoundTable = {
+            {s = "m16/magout.ogg", 	 t = 0.2},
+            {s = "m16/magin.ogg",    t = 1.05},
+            {s = "m16/magtap.ogg",   t = 1.59},
+        },
     },
     ["reload_empty_100"] = {
         Source = "reload_empty_100",
@@ -367,6 +410,13 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
+        SoundTable = {
+            {s = "m16/magout.ogg", 	 t = 0.2},
+            {s = "m16/magin.ogg",    t = 1.05},
+            {s = "m16/magtap.ogg",   t = 1.59},
+            {s = "m16/chback.ogg",   t = 1.9},
+            {s = "m16/chamber.ogg",  t = 2.2},
+        },
     },
 }
 

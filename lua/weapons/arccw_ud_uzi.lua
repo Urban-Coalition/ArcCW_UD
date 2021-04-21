@@ -21,7 +21,7 @@ SWEP.TracerWidth = 2
 
 -- Fake name --
 
-SWEP.PrintName = "IA Gal"
+SWEP.PrintName = "STAP-9"
 
 -- True name --
 
@@ -29,9 +29,9 @@ SWEP.TrueName = "Uzi"
 
 -- Trivia --
 
-SWEP.Trivia_Class = "SMG"
-SWEP.Trivia_Desc = "Cost-efficient submachine gun named after its designer against his own wishes. Its compact frame renders it an invaluable weapon in claustrophobic spaces, such as inside buildings."
-SWEP.Trivia_Manufacturer = "IA"
+SWEP.Trivia_Class = "Submachine Gun"
+SWEP.Trivia_Desc = "Submachine gun developed after the second world war. Its ergonomic design, low cost, reliability, and great handling made it popular among militaries, police forces, and private security firms worldwide. Lousy iron sights and a short ideal engagement range make shooting from the hip an optimal choice for close quarters combat."
+SWEP.Trivia_Manufacturer = "IAL Metal Industries"
 SWEP.Trivia_Calibre = "9x19mm Parabellum"
 SWEP.Trivia_Mechanism = "Open Bolt"
 SWEP.Trivia_Country = "Israel"
@@ -45,7 +45,7 @@ SWEP.Slot = 2
 
 if GetConVar("arccw_truenames"):GetBool() then
     SWEP.PrintName = SWEP.TrueName
-    SWEP.Trivia_Manufacturer = "IMI"
+    SWEP.Trivia_Manufacturer = "Israeli Military Industries"
 end
 
 -- Viewmodel / Worldmodel / FOV --
@@ -57,13 +57,13 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage --
 
-SWEP.Damage = 28
-SWEP.DamageMin = 11
-SWEP.Range = 70
-SWEP.Penetration = 6
+SWEP.Damage = 34 -- 3 shot close range kill
+SWEP.DamageMin = 20 -- 6 shot long range kill
+SWEP.Range = 35
+SWEP.Penetration = 3
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
-SWEP.MuzzleVelocity = 400 
+SWEP.MuzzleVelocity = 300 
 
 -- Mag size --
 
@@ -74,8 +74,8 @@ SWEP.ReducedClipSize = 16
 
 -- Recoil --
 
-SWEP.Recoil = 0.5
-SWEP.RecoilSide = 0.2
+SWEP.Recoil = 0.25
+SWEP.RecoilSide = 0.25
 
 SWEP.RecoilRise = 0.24
 SWEP.VisualRecoilMult = 1
@@ -141,10 +141,11 @@ SWEP.HoldtypeActive = "pistol"
 SWEP.HoldtypeSights = "revolver"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.9, 2, 2.05),
-     Ang = Angle(0.1, 0, 0),
+     Pos = Vector(-2.9, 2, 2.1),
+     Ang = Angle(0, 0, 0),
      Magnification = 1,
      SwitchToSound = "",
+     CrosshairInSights = false
 }
 
 SWEP.ActivePos = Vector(0, -2, 0)

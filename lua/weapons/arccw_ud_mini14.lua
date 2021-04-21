@@ -21,7 +21,7 @@ SWEP.TracerWidth = 2
 
 -- Fake name --
 
-SWEP.PrintName = "Marksman Four"
+SWEP.PrintName = "Patriot 809"
 
 -- True name --
 
@@ -30,8 +30,8 @@ SWEP.TrueName = "Mini-14"
 -- Trivia --
 
 SWEP.Trivia_Class = "Semi-Automatic Rifle"
-SWEP.Trivia_Desc = "Lightweight, highly precise rifle with support for a variety of calibers. While it has a major advantage in long distance combat, it can still perform acceptably at closer ranges."
-SWEP.Trivia_Manufacturer = "Literally no idea"
+SWEP.Trivia_Desc = "Autoloading rifle designed for better accuracy than competing models. Possesses a more classical operation compared to its contemporaries. Due to its appearance, it is sometimes exempted from gun control laws targeting \"Assault Weapons\" despite its identical ability to kill. This has helped it find success despite its higher cost and non-standard magazine well."
+SWEP.Trivia_Manufacturer = "Rifles International"
 SWEP.Trivia_Calibre = "5.56x45mm NATO"
 SWEP.Trivia_Mechanism = "Rotating Bolt"
 SWEP.Trivia_Country = "USA"
@@ -56,14 +56,16 @@ SWEP.ViewModelFOV = 70
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage --
+-- does the same damage as the M16; it's all 5.56! Range is improved, however, due to a longer barrel
 
-SWEP.Damage = 28
-SWEP.DamageMin = 11
-SWEP.Range = 70
-SWEP.Penetration = 6
+SWEP.Damage = 34 -- 3 shot kill
+SWEP.DamageMin = 20 -- 5 shot kill
+SWEP.RangeMin = 20
+SWEP.Range = 250
+SWEP.Penetration = 8
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
-SWEP.MuzzleVelocity = 400 
+SWEP.MuzzleVelocity = 500 
 
 -- Mag size --
 
@@ -74,7 +76,7 @@ SWEP.ReducedClipSize = 10
 
 -- Recoil --
 
-SWEP.Recoil = 0.5
+SWEP.Recoil = 0.4
 SWEP.RecoilSide = 0.2
 
 SWEP.RecoilRise = 0.24

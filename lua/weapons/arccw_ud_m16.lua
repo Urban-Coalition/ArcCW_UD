@@ -21,19 +21,19 @@ SWEP.TracerWidth = 2
 
 -- Fake name --
 
-SWEP.PrintName = "Maverick"
+SWEP.PrintName = "AMCAR"
 
 -- True name --
 
-SWEP.TrueName = "M16"
+SWEP.TrueName = "M16A2"
 
 -- Trivia --
 
-SWEP.Trivia_Class = "Rifle"
-SWEP.Trivia_Desc = "Iconic American military rifle, fielded as standard issue across multiple iterations. Well rounded and highly modular, with no major downsides for maximum versatility."
-SWEP.Trivia_Manufacturer = "Cult"
+SWEP.Trivia_Class = "Assault Rifle"
+SWEP.Trivia_Desc = "Third generation of America's iconic military rifle. Army tests showed that soldiers were more likely to hit a target if they fired multiple shots, but were likely to spray in full-auto and fail to hit anything. As a result, they implemented a ratcheted three-round burst system which limited the maximum burst a soldier could fire to three shots. Well-rounded gun with no major downsides."
+SWEP.Trivia_Manufacturer = "Stoner's Legacy Ltd."
 SWEP.Trivia_Calibre = "5.56x45mm NATO"
-SWEP.Trivia_Mechanism = "Rotating Bolt"
+SWEP.Trivia_Mechanism = "Gas-Operated Rotating Bolt"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 1959
 
@@ -45,7 +45,7 @@ SWEP.Slot = 2
 
 if GetConVar("arccw_truenames"):GetBool() then
     SWEP.PrintName = SWEP.TrueName
-    SWEP.Trivia_Manufacturer = "Colt"
+    SWEP.Trivia_Manufacturer = "Colt's Manufacturing Company"
 end
 
 -- Viewmodel / Worldmodel / FOV --
@@ -57,9 +57,10 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage --
 
-SWEP.Damage = 29
-SWEP.DamageMin = 22
-SWEP.Range = 70
+SWEP.Damage = 34 -- 3 shot kill
+SWEP.DamageMin = 20 -- 5 shot kill
+SWEP.RangeMin = 10
+SWEP.Range = 100
 SWEP.Penetration = 6
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
@@ -89,7 +90,7 @@ SWEP.Delay = 60 / 900
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
-        Mode = 2,
+        Mode = -3,
     },
     {
         Mode = 1,
@@ -115,8 +116,8 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 4
-SWEP.HipDispersion = 350
-SWEP.MoveDispersion = 200
+SWEP.HipDispersion = 600
+SWEP.MoveDispersion = 500
 
 SWEP.Primary.Ammo = "smg1"
 SWEP.MagID = "m16"

@@ -18,21 +18,21 @@ SWEP.CamAttachment = 3
 
 -- Fake name --
 
-SWEP.PrintName = "Model 680"
+SWEP.PrintName = "Express-12"
 
 -- True name --
 
-SWEP.TrueName = "Model 870" 
+SWEP.TrueName = "Remington 870" 
 
 -- Trivia --
 
 SWEP.Trivia_Class = "Shotgun"
-SWEP.Trivia_Desc = "Tried and true pump-action shotgun; the best selling of its kind. Accurate for a shotgun, but the mechanism takes crucial time to cycle."
-SWEP.Trivia_Manufacturer = "FakeName"
+SWEP.Trivia_Desc = "Classic pump-action shotgun, renowed for its high quality parts and assembly. A simple firearm with a simple purpose. Marketed primarily to civilians for use in hunting game and self-defense, but it has found popularity among police departments for a relatively innocuous appearance and ability to accept custom loaded less-lethal shells."
+SWEP.Trivia_Manufacturer = "Mauer Armaments"
 SWEP.Trivia_Calibre = "12 Gauge"
-SWEP.Trivia_Mechanism = "Pump Action"
+SWEP.Trivia_Mechanism = "Pump-Action"
 SWEP.Trivia_Country = "USA"
-SWEP.Trivia_Year = 1980
+SWEP.Trivia_Year = 1950
 
 -- Weapon slot --
 
@@ -42,7 +42,7 @@ SWEP.Slot = 2
 
 if GetConVar("arccw_truenames"):GetBool() then
     SWEP.PrintName = SWEP.TrueName
-    SWEP.Trivia_Manufacturer = "Remington"
+    SWEP.Trivia_Manufacturer = "Remington Arms"
 end
 
 -- Viewmodel / Worldmodel / FOV --
@@ -61,13 +61,15 @@ SWEP.WorldModelOffset = {
 
 -- Damage parameters --
 
-SWEP.Damage = 23
-SWEP.DamageMin = 11
+SWEP.Damage = 20 -- 5 pellets to kill
+SWEP.DamageMin = 13 -- land all 8 pellets to kill
 SWEP.Range = 35
+SWEP.RangeMin = 5
+SWEP.Num = 8
 SWEP.Penetration = 1
 SWEP.DamageType = DMG_BUCKSHOT
 SWEP.ShootEntity = nil
-SWEP.MuzzleVelocity = 150
+SWEP.MuzzleVelocity = 200
 
 -- Mag size --
 
@@ -89,7 +91,6 @@ SWEP.MaxRecoilPunch = 1
 -- Firerate / Firemodes --
 
 SWEP.Delay = 60 / 60
-SWEP.Num = 8
 SWEP.Firemodes = {
     {
         PrintName = "PUMP",
@@ -121,7 +122,7 @@ SWEP.NPCWeight = 210
 
 SWEP.AccuracyMOA = 30
 SWEP.HipDispersion = 100
-SWEP.MoveDispersion = 100
+SWEP.MoveDispersion = 400
 
 SWEP.Primary.Ammo = "buckshot"
 

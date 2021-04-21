@@ -18,21 +18,21 @@ SWEP.CamAttachment = 3
 
 -- Fake name --
 
-SWEP.PrintName = "Modello 14"
+SWEP.PrintName = "Skeletonkey"
 
 -- True name --
 
-SWEP.TrueName = "M1014" 
+SWEP.TrueName = "M4 Super 90" 
 
 -- Trivia --
 
 SWEP.Trivia_Class = "Shotgun"
-SWEP.Trivia_Desc = "Semi-automatic shotgun produced as part as Benelli's \"Super 90\" series. While back-to-back 12 gauge is devastating, good trigger discipline is a necessity, lest you spend more time reloading than fighting."
-SWEP.Trivia_Manufacturer = "FakeName"
+SWEP.Trivia_Desc = "Semi-automatic shotgun designed for close-quarters urban warfare. Uses an innovative short-stroke gas system that eliminates complex mechanisms found on most gas-operated automatic weapons. Its main use is in destroying locked doors."
+SWEP.Trivia_Manufacturer = "Mauer Armaments"
 SWEP.Trivia_Calibre = "12 Gauge"
-SWEP.Trivia_Mechanism = "Rotating Bolt"
+SWEP.Trivia_Mechanism = "Gas-Operated Rotating Bolt"
 SWEP.Trivia_Country = "Italy"
-SWEP.Trivia_Year = 1980
+SWEP.Trivia_Year = 1998
 
 -- Weapon slot --
 
@@ -42,7 +42,7 @@ SWEP.Slot = 2
 
 if GetConVar("arccw_truenames"):GetBool() then
     SWEP.PrintName = SWEP.TrueName
-    SWEP.Trivia_Manufacturer = "Benelli"
+    SWEP.Trivia_Manufacturer = "Benelli Armi SPA"
 end
 
 -- Viewmodel / Worldmodel / FOV --
@@ -61,13 +61,15 @@ SWEP.WorldModelOffset = {
 
 -- Damage parameters --
 
-SWEP.Damage = 23
-SWEP.DamageMin = 11
-SWEP.Range = 35
+SWEP.Damage = 20 -- 5 pellets to kill
+SWEP.DamageMin = 10 -- land 10 pellets to kill
+SWEP.Range = 30
+SWEP.RangeMin = 3.5
+SWEP.Num = 8
 SWEP.Penetration = 1
 SWEP.DamageType = DMG_BUCKSHOT
 SWEP.ShootEntity = nil
-SWEP.MuzzleVelocity = 150
+SWEP.MuzzleVelocity = 200
 
 -- Mag size --
 
@@ -89,10 +91,8 @@ SWEP.MaxRecoilPunch = 1
 -- Firerate / Firemodes --
 
 SWEP.Delay = 60 / 220
-SWEP.Num = 8
 SWEP.Firemodes = {
     {
-        PrintName = "SEMI",
         Mode = 1,
     },
     {
@@ -119,7 +119,7 @@ SWEP.NPCWeight = 210
 
 SWEP.AccuracyMOA = 30
 SWEP.HipDispersion = 100
-SWEP.MoveDispersion = 100
+SWEP.MoveDispersion = 400
 
 SWEP.Primary.Ammo = "buckshot"
 

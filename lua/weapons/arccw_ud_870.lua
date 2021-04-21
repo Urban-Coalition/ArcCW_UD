@@ -22,7 +22,7 @@ SWEP.PrintName = "Express-12"
 
 -- True name --
 
-SWEP.TrueName = "Remington 870" 
+SWEP.TrueName = "Remington 870"
 
 -- Trivia --
 
@@ -36,7 +36,7 @@ SWEP.Trivia_Year = 1950
 
 -- Weapon slot --
 
-SWEP.Slot = 2
+SWEP.Slot = 3
 
 -- Weapon's manufacturer real name --
 
@@ -51,7 +51,7 @@ SWEP.ViewModel = "models/weapons/arccw/c_ud_870.mdl"
 SWEP.WorldModel = "models/weapons/w_shot_m3super90.mdl"
 SWEP.ViewModelFOV = 60
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN
- 
+
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     pos        =    Vector(-6.5, 7, -6.6),
@@ -171,12 +171,12 @@ SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 -- Firing sounds --
 
 local path = "weapons/arccw_ud/870/"
-SWEP.ShootSound = path.."fire.ogg"
+SWEP.ShootSound = path .. "fire.ogg"
 SWEP.ShootSoundSilenced = "weapons/arccw/m870/lowpolym870_supp.ogg"
-SWEP.DistantShootSound = path.."fire_dist.ogg"
+SWEP.DistantShootSound = path .. "fire_dist.ogg"
 
 SWEP.Hook_Think = function(wep)
-	wep:GetOwner():GetViewModel():SetPoseParameter( "sights", Lerp(wep:GetSightDelta(), 1, 0) ) -- thanks fesiug
+    wep:GetOwner():GetViewModel():SetPoseParameter( "sights", Lerp(wep:GetSightDelta(), 1, 0) ) -- thanks fesiug
 end
 
 SWEP.Animations = {
@@ -291,7 +291,7 @@ SWEP.Attachments = {
             wang = Angle(-10, -2, 180),
         },
     },
-    { 
+    {
         PrintName = "Underbarrel",
         Slot = {"foregrip"},
         Bone = "870_parent",
@@ -335,7 +335,7 @@ SWEP.Attachments = {
         PrintName = "Charm",
         Slot = {"charm", "fml_charm"},
         FreeSlot = true,
-        Bone = "Body", 
+        Bone = "Body",
         Offset = {
             vpos = Vector(0.6, -4, 4),
             vang = Angle(90, 0, -90),

@@ -64,7 +64,7 @@ SWEP.Range = 100
 SWEP.Penetration = 6
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
-SWEP.MuzzleVelocity = 400 
+SWEP.MuzzleVelocity = 400
 
 -- Mag size --
 
@@ -174,14 +174,14 @@ SWEP.WorldModelOffset = {
 -- Firing sounds --
 
 local path = "weapons/arccw_ud/m16/"
-SWEP.ShootSound = {path.."fire_auto_1.ogg", path.."fire_auto_2.ogg", path.."fire_auto_3.ogg"}
+SWEP.ShootSound = {path .. "fire_auto_1.ogg", path .. "fire_auto_2.ogg", path .. "fire_auto_3.ogg"}
 SWEP.ShootSoundSilenced = "weapons/arccw/czbren/lowpolyczbren_supp.ogg"
-SWEP.DistantShootSound = path.."fire_dist.ogg"
+SWEP.DistantShootSound = path .. "fire_dist.ogg"
 
 SWEP.Hook_GetShootSound = function( wep, snd )
     if wep:GetCurrentFiremode().Mode == 1 then
     --if wep:GetBurstCount() == 1 then
-        return path.."fire_semi.ogg"
+        return path .. "fire_semi.ogg"
     end
 end
 
@@ -211,7 +211,7 @@ SWEP.AttachmentElements = {
 -- Animations --
 
 SWEP.Hook_Think = function(wep)
-	wep:GetOwner():GetViewModel():SetPoseParameter( "sights", Lerp(wep:GetSightDelta(), 1, 0) ) -- thanks fesiug
+    wep:GetOwner():GetViewModel():SetPoseParameter( "sights", Lerp(wep:GetSightDelta(), 1, 0) ) -- thanks fesiug
 end
 
 SWEP.Animations = {
@@ -260,8 +260,8 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.6,
         SoundTable = {
-            {s = path.."magout.ogg", 	t = 0.2},
-            {s = path.."magin.ogg",   t = 1.05},
+            {s = path .. "magout.ogg", 	t = 0.2},
+            {s = path .. "magin.ogg",   t = 1.05},
         },
     },
     ["reload_empty"] = {
@@ -276,9 +276,9 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = path.."magout.ogg", 	 t = 0.2},
-            {s = path.."magin.ogg",    t = 1.05},
-            {s = path.."boltdrop.ogg", t = 1.77},
+            {s = path .. "magout.ogg", 	 t = 0.2},
+            {s = path .. "magin.ogg",    t = 1.05},
+            {s = path .. "boltdrop.ogg", t = 1.77},
         },
     },
 
@@ -296,8 +296,8 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.6,
         SoundTable = {
-            {s = path.."magout.ogg", 	 t = 0.2},
-            {s = path.."magin.ogg",    t = 1.05},
+            {s = path .. "magout.ogg", 	 t = 0.2},
+            {s = path .. "magin.ogg",    t = 1.05},
         },
     },
     ["reload_empty_20"] = {
@@ -312,9 +312,9 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = path.."magout.ogg", 	 t = 0.2},
-            {s = path.."magin.ogg",    t = 1.05},
-            {s = path.."boltdrop.ogg", t = 1.77},
+            {s = path .. "magout.ogg", 	 t = 0.2},
+            {s = path .. "magin.ogg",    t = 1.05},
+            {s = path .. "boltdrop.ogg", t = 1.77},
         },
     },
 
@@ -332,8 +332,8 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.6,
         SoundTable = {
-            {s = path.."magout.ogg", 	 t = 0.2},
-            {s = path.."magin.ogg",    t = 1.05},
+            {s = path .. "magout.ogg", 	 t = 0.2},
+            {s = path .. "magin.ogg",    t = 1.05},
         },
     },
     ["reload_empty_40"] = {
@@ -348,9 +348,9 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = path.."magout.ogg", 	 t = 0.2},
-            {s = path.."magin.ogg",    t = 1.05},
-            {s = path.."boltdrop.ogg", t = 1.77},
+            {s = path .. "magout.ogg", 	 t = 0.2},
+            {s = path .. "magin.ogg",    t = 1.05},
+            {s = path .. "boltdrop.ogg", t = 1.77},
         },
     },
 
@@ -368,8 +368,8 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = path.."magout.ogg", 	 t = 0.2},
-            {s = path.."magin.ogg",    t = 1.05},
+            {s = path .. "magout.ogg", 	 t = 0.2},
+            {s = path .. "magin.ogg",    t = 1.05},
         },
     },
     ["reload_empty_60"] = {
@@ -384,9 +384,9 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = path.."magout.ogg", 	 t = 0.2},
-            {s = path.."magin.ogg",    t = 1.05},
-            {s = path.."boltdrop.ogg", t = 1.77},
+            {s = path .. "magout.ogg", 	 t = 0.2},
+            {s = path .. "magin.ogg",    t = 1.05},
+            {s = path .. "boltdrop.ogg", t = 1.77},
         },
     },
 
@@ -404,9 +404,9 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = path.."magout.ogg", 	 t = 0.2},
-            {s = path.."magin.ogg",    t = 1.05},
-            {s = path.."magtap.ogg",   t = 1.59},
+            {s = path .. "magout.ogg", 	 t = 0.2},
+            {s = path .. "magin.ogg",    t = 1.05},
+            {s = path .. "magtap.ogg",   t = 1.59},
         },
     },
     ["reload_empty_100"] = {
@@ -421,11 +421,11 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = path.."magout.ogg", 	 t = 0.2},
-            {s = path.."magin.ogg",    t = 1.05},
-            {s = path.."magtap.ogg",   t = 1.59},
-            {s = path.."chback.ogg",   t = 1.9},
-            {s = path.."chamber.ogg",  t = 2.2},
+            {s = path .. "magout.ogg", 	 t = 0.2},
+            {s = path .. "magin.ogg",    t = 1.05},
+            {s = path .. "magtap.ogg",   t = 1.59},
+            {s = path .. "chback.ogg",   t = 1.9},
+            {s = path .. "chamber.ogg",  t = 2.2},
         },
     },
 }
@@ -461,7 +461,7 @@ SWEP.Attachments = {
             wang = Angle(-10, -2, 180),
         },
     },
-    { 
+    {
         PrintName = "Underbarrel",
         Slot = {"foregrip"},
         Bone = "m16_parent",
@@ -515,7 +515,7 @@ SWEP.Attachments = {
         PrintName = "Charm",
         Slot = {"charm", "fml_charm"},
         FreeSlot = true,
-        Bone = "Body", 
+        Bone = "Body",
         Offset = {
             vpos = Vector(0.6, -4, 4),
             vang = Angle(90, 0, -90),

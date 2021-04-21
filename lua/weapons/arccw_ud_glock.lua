@@ -39,7 +39,7 @@ SWEP.Trivia_Year = 1982
 
 -- Weapon slot --
 
-SWEP.Slot = 2
+SWEP.Slot = 1
 
 -- Weapon's manufacturer real name --
 
@@ -64,7 +64,7 @@ SWEP.Range = 20
 SWEP.Penetration = 2
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
-SWEP.MuzzleVelocity = 200 
+SWEP.MuzzleVelocity = 200
 
 -- Mag size --
 
@@ -171,9 +171,9 @@ SWEP.WorldModelOffset = {
 -- Firing sounds --
 
 local path = "weapons/arccw_ud/glock/"
-SWEP.ShootSound = path.."fire.ogg"
-SWEP.ShootSoundSilenced = path.."fire_supp.ogg"
-SWEP.DistantShootSound = path.."fire_dist.ogg"
+SWEP.ShootSound = path .. "fire.ogg"
+SWEP.ShootSoundSilenced = path .. "fire_supp.ogg"
+SWEP.DistantShootSound = path .. "fire_dist.ogg"
 
 -- Bodygroups --
 
@@ -196,7 +196,7 @@ SWEP.AttachmentElements = {
 -- Animations --
 
 SWEP.Hook_Think = function(wep)
-	wep:GetOwner():GetViewModel():SetPoseParameter( "sights", Lerp(wep:GetSightDelta(), 1, 0) ) -- thanks fesiug
+    wep:GetOwner():GetViewModel():SetPoseParameter( "sights", Lerp(wep:GetSightDelta(), 1, 0) ) -- thanks fesiug
 end
 
 -- CHAN_ITEM doesn't sound too right
@@ -268,9 +268,9 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.6,
         SoundTable = {
-            {s = path.."magrelease.ogg",    t = 0.3, c = ci},
-            {s = path.."magout.ogg",        t = 0.3, c = ci},
-            {s = path.."magin.ogg",         t = 0.4, c = ci},
+            {s = path .. "magrelease.ogg",    t = 0.3, c = ci},
+            {s = path .. "magout.ogg",        t = 0.3, c = ci},
+            {s = path .. "magin.ogg",         t = 0.4, c = ci},
         },
     },
     ["reload_empty"] = {
@@ -285,10 +285,10 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = path.."magrelease.ogg",    t = 0.15, c = ci},
-            {s = path.."magout.ogg",        t = 0.15, c = ci},
-            {s = path.."magin.ogg",         t = 0.45, c = ci},
-            {s = path.."sliderel.ogg",      t = 1.45, c = ci},
+            {s = path .. "magrelease.ogg",    t = 0.15, c = ci},
+            {s = path .. "magout.ogg",        t = 0.15, c = ci},
+            {s = path .. "magin.ogg",         t = 0.45, c = ci},
+            {s = path .. "sliderel.ogg",      t = 1.45, c = ci},
         },
     },
 
@@ -306,9 +306,9 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.6,
         SoundTable = {
-            {s = path.."magrelease.ogg",    t = 0.3, c = ci},
-            {s = path.."magout.ogg",        t = 0.3, c = ci},
-            {s = path.."magin.ogg",         t = 0.4, c = ci},
+            {s = path .. "magrelease.ogg",    t = 0.3, c = ci},
+            {s = path .. "magout.ogg",        t = 0.3, c = ci},
+            {s = path .. "magin.ogg",         t = 0.4, c = ci},
         },
     },
     ["reload_empty_10"] = {
@@ -323,10 +323,10 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = path.."magrelease.ogg",    t = 0.15, c = ci},
-            {s = path.."magout.ogg",        t = 0.15, c = ci},
-            {s = path.."magin.ogg",         t = 0.45, c = ci},
-            {s = path.."sliderel.ogg",      t = 1.45, c = ci},
+            {s = path .. "magrelease.ogg",    t = 0.15, c = ci},
+            {s = path .. "magout.ogg",        t = 0.15, c = ci},
+            {s = path .. "magin.ogg",         t = 0.45, c = ci},
+            {s = path .. "sliderel.ogg",      t = 1.45, c = ci},
         },
     },
 
@@ -344,9 +344,9 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.6,
         SoundTable = {
-            {s = path.."magrelease.ogg",    t = 0.4, c = ci},
-            {s = path.."magout.ogg",        t = 0.4, c = ci},
-            {s = path.."magin.ogg",         t = 0.5, c = ci},
+            {s = path .. "magrelease.ogg",    t = 0.4, c = ci},
+            {s = path .. "magout.ogg",        t = 0.4, c = ci},
+            {s = path .. "magin.ogg",         t = 0.5, c = ci},
         },
     },
     ["reload_empty_33"] = {
@@ -361,10 +361,10 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = path.."magrelease.ogg",    t = 0.16, c = ci},
-            {s = path.."magout.ogg",        t = 0.16, c = ci},
-            {s = path.."magin.ogg",         t = 0.46, c = ci},
-            {s = path.."sliderel.ogg",      t = 1.46, c = ci},
+            {s = path .. "magrelease.ogg",    t = 0.16, c = ci},
+            {s = path .. "magout.ogg",        t = 0.16, c = ci},
+            {s = path .. "magin.ogg",         t = 0.46, c = ci},
+            {s = path .. "sliderel.ogg",      t = 1.46, c = ci},
         },
     },
 
@@ -382,9 +382,9 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.6,
         SoundTable = {
-            {s = path.."magrelease.ogg",    t = 0.3, c = ci},
-            {s = path.."magout.ogg",        t = 0.3, c = ci},
-            {s = path.."magin.ogg",         t = 0.4, c = ci},
+            {s = path .. "magrelease.ogg",    t = 0.3, c = ci},
+            {s = path .. "magout.ogg",        t = 0.3, c = ci},
+            {s = path .. "magin.ogg",         t = 0.4, c = ci},
         },
     },
     ["reload_empty_100"] = {
@@ -399,10 +399,10 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = path.."magrelease.ogg",    t = 0.12, c = ci},
-            {s = path.."magout.ogg",        t = 0.12, c = ci},
-            {s = path.."magin.ogg",         t = 0.43, c = ci},
-            {s = path.."sliderel.ogg",      t = 1.43, c = ci},
+            {s = path .. "magrelease.ogg",    t = 0.12, c = ci},
+            {s = path .. "magout.ogg",        t = 0.12, c = ci},
+            {s = path .. "magin.ogg",         t = 0.43, c = ci},
+            {s = path .. "sliderel.ogg",      t = 1.43, c = ci},
         },
     },
 }
@@ -438,7 +438,7 @@ SWEP.Attachments = {
             wang = Angle(-10, -2, 180),
         },
     },
-    { 
+    {
         PrintName = "Underbarrel",
         Slot = {"foregrip"},
         Bone = "glock_parent",
@@ -477,7 +477,7 @@ SWEP.Attachments = {
         PrintName = "Charm",
         Slot = {"charm", "fml_charm"},
         FreeSlot = true,
-        Bone = "Body", 
+        Bone = "Body",
         Offset = {
             vpos = Vector(0.6, -4, 4),
             vang = Angle(90, 0, -90),

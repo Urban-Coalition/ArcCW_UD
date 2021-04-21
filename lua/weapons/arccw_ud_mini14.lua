@@ -65,7 +65,7 @@ SWEP.Range = 250
 SWEP.Penetration = 8
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
-SWEP.MuzzleVelocity = 500 
+SWEP.MuzzleVelocity = 500
 
 -- Mag size --
 
@@ -108,7 +108,7 @@ SWEP.ProceduralIronFire = false
 
 SWEP.ReloadInSights = true
 
--- NPC -- 
+-- NPC --
 
 SWEP.NPCWeaponType = "weapon_ar2"
 SWEP.NPCWeight = 60
@@ -173,9 +173,9 @@ SWEP.WorldModelOffset = {
 -- Firing sounds --
 
 local path = "weapons/arccw_ud/mini14/"
-SWEP.ShootSound = path.."fire.wav"
+SWEP.ShootSound = path .. "fire.wav"
 SWEP.ShootSoundSilenced = "weapons/arccw/czbren/lowpolyczbren_supp.ogg"
-SWEP.DistantShootSound = path.."fire_dist.wav"
+SWEP.DistantShootSound = path .. "fire_dist.wav"
 
 -- Bodygroups --
 
@@ -198,7 +198,7 @@ SWEP.AttachmentElements = {
 -- Animations --
 
 SWEP.Hook_Think = function(wep)
-	wep:GetOwner():GetViewModel():SetPoseParameter( "sights", Lerp(wep:GetSightDelta(), 1, 0) ) -- thanks fesiug
+    wep:GetOwner():GetViewModel():SetPoseParameter( "sights", Lerp(wep:GetSightDelta(), 1, 0) ) -- thanks fesiug
 end
 
 SWEP.Animations = {
@@ -375,7 +375,7 @@ SWEP.Attachments = {
             wang = Angle(-10, -2, 180),
         },
     },
-    { 
+    {
         PrintName = "Underbarrel",
         Slot = {"foregrip"},
         Bone = "mini14_parent",
@@ -414,7 +414,7 @@ SWEP.Attachments = {
         PrintName = "Charm",
         Slot = {"charm", "fml_charm"},
         FreeSlot = true,
-        Bone = "Body", 
+        Bone = "Body",
         Offset = {
             vpos = Vector(0.6, -4, 4),
             vang = Angle(90, 0, -90),

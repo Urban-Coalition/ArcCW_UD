@@ -64,7 +64,7 @@ SWEP.Range = 75
 SWEP.Penetration = 3
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
-SWEP.MuzzleVelocity = 300 
+SWEP.MuzzleVelocity = 300
 
 -- Mag size --
 
@@ -109,7 +109,7 @@ SWEP.ProceduralIronFire = false
 
 SWEP.ReloadInSights = true
 
--- NPC -- 
+-- NPC --
 
 SWEP.NPCWeaponType = "weapon_smg"
 SWEP.NPCWeight = 60
@@ -198,7 +198,7 @@ SWEP.AttachmentElements = {
 -- Animations --
 
 SWEP.Hook_Think = function(wep)
-	wep:GetOwner():GetViewModel():SetPoseParameter( "sights", Lerp(wep:GetSightDelta(), 1, 0) ) -- thanks fesiug
+    wep:GetOwner():GetViewModel():SetPoseParameter( "sights", Lerp(wep:GetSightDelta(), 1, 0) ) -- thanks fesiug
 end
 
 SWEP.Animations = {
@@ -375,7 +375,7 @@ SWEP.Attachments = {
             wang = Angle(-10, -2, 180),
         },
     },
-    { 
+    {
         PrintName = "Underbarrel",
         Slot = {"foregrip"},
         Bone = "uzi_parent",
@@ -414,7 +414,7 @@ SWEP.Attachments = {
         PrintName = "Charm",
         Slot = {"charm", "fml_charm"},
         FreeSlot = true,
-        Bone = "Body", 
+        Bone = "Body",
         Offset = {
             vpos = Vector(0.6, -4, 4),
             vang = Angle(90, 0, -90),

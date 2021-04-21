@@ -1,4 +1,4 @@
-att.PrintName = "10 Round Mag"
+att.PrintName = "10-Round G17 Compact Mag"
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "Reduced magazine for the Glock, mostly used on subcompact variants like the Glock 26. The lighter load makes the weapon even more ergonomic."
 att.Desc_Pros = {

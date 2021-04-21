@@ -1,6 +1,6 @@
-att.PrintName = "100 Round Mag"
+att.PrintName = "100-Round STANAG C-Mag"
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "Twin-drum magazine for STANAG systems, ideal for suppressive fire. The extreme weight limits mobility."
+att.Description = "Twin-drum magazine compliant with STANAG 4179 dimensions, ideal for suppressive fire. Bulky construction and high ammo capacity substantially increases weight and shifts the weapon's center of balance."
 att.Desc_Pros = {
     "Increased magazine capacity"
 }

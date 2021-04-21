@@ -29,12 +29,12 @@ SWEP.TrueName = "Glock"
 
 -- Trivia --
 
-SWEP.Trivia_Class = "Rifle"
-SWEP.Trivia_Desc = ">When you lose to this gun in CSGO"
-SWEP.Trivia_Manufacturer = "Glock"
-SWEP.Trivia_Calibre = "9x19mm Para"
-SWEP.Trivia_Mechanism = "Some mechanism"
-SWEP.Trivia_Country = "Belgium"
+SWEP.Trivia_Class = "Pistol"
+SWEP.Trivia_Desc = "Plastic \"wonder nine\" associated with the very idea of a gun. With its low weight and user-focused safety features, it makes an impeccable backup weapon."
+SWEP.Trivia_Manufacturer = "Glawk Ges.m.b.H."
+SWEP.Trivia_Calibre = "9x19mm Parabellum"
+SWEP.Trivia_Mechanism = "Short Recoil"
+SWEP.Trivia_Country = "Austria"
 SWEP.Trivia_Year = 1980
 
 -- Weapon slot --
@@ -45,7 +45,7 @@ SWEP.Slot = 2
 
 if GetConVar("arccw_truenames"):GetBool() then
     SWEP.PrintName = SWEP.TrueName
-    SWEP.Trivia_Manufacturer = "Glock"
+    SWEP.Trivia_Manufacturer = "Glock Ges.m.b.H."
 end
 
 -- Viewmodel / Worldmodel / FOV --

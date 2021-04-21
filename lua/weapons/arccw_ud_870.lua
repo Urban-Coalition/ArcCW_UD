@@ -27,10 +27,10 @@ SWEP.TrueName = "Model 870"
 -- Trivia --
 
 SWEP.Trivia_Class = "Shotgun"
-SWEP.Trivia_Desc = "bottom text"
+SWEP.Trivia_Desc = "Tried and true pump-action shotgun; the best selling of its kind. Accurate for a shotgun, but the mechanism takes crucial time to cycle."
 SWEP.Trivia_Manufacturer = "FakeName"
 SWEP.Trivia_Calibre = "12 Gauge"
-SWEP.Trivia_Mechanism = "Pump-action"
+SWEP.Trivia_Mechanism = "Pump Action"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 1980
 

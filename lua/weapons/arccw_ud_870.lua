@@ -27,10 +27,10 @@ SWEP.TrueName = "Model 870"
 -- Trivia --
 
 SWEP.Trivia_Class = "Shotgun"
-SWEP.Trivia_Desc = "Tried and true pump-action shotgun; the best selling of its kind. Accurate for a shotgun, but the mechanism takes crucial time to cycle."
+SWEP.Trivia_Desc = "bottom text"
 SWEP.Trivia_Manufacturer = "FakeName"
 SWEP.Trivia_Calibre = "12 Gauge"
-SWEP.Trivia_Mechanism = "Pump Action"
+SWEP.Trivia_Mechanism = "Pump-action"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 1980
 
@@ -163,9 +163,9 @@ SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 
 -- Firing sounds --
 
-SWEP.ShootSound = "weapons/arccw_ud/r870/fire.wav"
+SWEP.ShootSound = "870/fire.ogg"
 SWEP.ShootSoundSilenced = "weapons/arccw/m870/lowpolym870_supp.ogg"
-SWEP.DistantShootSound = "weapons/arccw_ud/r870/fire_dist.wav"
+SWEP.DistantShootSound = "870/fire_dist.ogg"
 
 SWEP.Hook_Think = function(wep)
 	wep:GetOwner():GetViewModel():SetPoseParameter( "sights", 1 - wep:GetSightDelta() ) -- thanks fesiug

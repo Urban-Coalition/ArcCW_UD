@@ -30,12 +30,12 @@ SWEP.TrueName = "M16"
 -- Trivia --
 
 SWEP.Trivia_Class = "Rifle"
-SWEP.Trivia_Desc = "Iconic American military rifle, fielded as standard issue across multiple iterations. Well rounded and highly modular, with no major downsides for maximum versatility."
-SWEP.Trivia_Manufacturer = "Cult"
+SWEP.Trivia_Desc = "Desc"
+SWEP.Trivia_Manufacturer = "Colt"
 SWEP.Trivia_Calibre = "5.56x45mm NATO"
-SWEP.Trivia_Mechanism = "Rotating Bolt"
+SWEP.Trivia_Mechanism = "Short recoil, locking rotating barrel"
 SWEP.Trivia_Country = "USA"
-SWEP.Trivia_Year = 1959
+SWEP.Trivia_Year = 1980
 
 -- Weapon slot --
 
@@ -57,8 +57,8 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage --
 
-SWEP.Damage = 29
-SWEP.DamageMin = 22
+SWEP.Damage = 28
+SWEP.DamageMin = 11
 SWEP.Range = 70
 SWEP.Penetration = 6
 SWEP.DamageType = DMG_BULLET
@@ -114,7 +114,7 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 4
-SWEP.HipDispersion = 350
+SWEP.HipDispersion = 200
 SWEP.MoveDispersion = 200
 
 SWEP.Primary.Ammo = "smg1"
@@ -122,9 +122,9 @@ SWEP.MagID = "m16"
 
 -- Speed multipliers --
 
-SWEP.SpeedMult = 0.8
+SWEP.SpeedMult = 0.9
 SWEP.SightedSpeedMult = 0.9
-SWEP.SightTime = 0.3
+SWEP.SightTime = 0.4
 
 -- Length --
 
@@ -138,7 +138,7 @@ SWEP.HolsterAng = Angle(-8.443, 28.843, 0)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"
-SWEP.HoldtypeSights = "rpg"
+SWEP.HoldtypeSights = "ar2"
 
 SWEP.IronSightStruct = {
      Pos = Vector(-2.81, 1, 0.8),
@@ -158,16 +158,18 @@ SWEP.CrouchAng = Angle(0, 0, -8)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-7.8, 3.7, -7),
+    pos        =    Vector(-9.8, 4, -6),
     ang        =    Angle(-6, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
 
 -- Firing sounds --
 
-SWEP.ShootSound = "ar15/fire_semi.wav"
+SWEP.FirstShootSound = "m16/fire_semi.ogg"
+SWEP.ShootSound = {"m16/fire_auto_1.ogg", "m16/fire_auto_1.ogg", "m16/fire_auto_1.ogg"}
 SWEP.ShootSoundSilenced = "weapons/arccw/czbren/lowpolyczbren_supp.ogg"
-SWEP.DistantShootSound = "ar15/fire_dist.wav"
+SWEP.DistantShootSound = "m16/fire_dist.ogg"
+SWEP.ShootPitchVariation = 0
 
 -- Bodygroups --
 
@@ -247,6 +249,10 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.6,
+        SoundTable = {
+            {s = "m16/magout.ogg", 	t = 0.2},
+            {s = "m16/magin.ogg",   t = 1.05},
+        },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
@@ -259,6 +265,11 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
+        SoundTable = {
+            {s = "m16/magout.ogg", 	 t = 0.2},
+            {s = "m16/magin.ogg",    t = 1.05},
+            {s = "m16/boltdrop.ogg", t = 1.77},
+        },
     },
 
     -- 20 Round Reloads --
@@ -274,6 +285,10 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.6,
+        SoundTable = {
+            {s = "m16/magout.ogg", 	 t = 0.2},
+            {s = "m16/magin.ogg",    t = 1.05},
+        },
     },
     ["reload_empty_20"] = {
         Source = "reload_empty_20",
@@ -286,6 +301,11 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
+        SoundTable = {
+            {s = "m16/magout.ogg", 	 t = 0.2},
+            {s = "m16/magin.ogg",    t = 1.05},
+            {s = "m16/boltdrop.ogg", t = 1.77},
+        },
     },
 
     -- 40 Round Reloads --
@@ -301,6 +321,10 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.6,
+        SoundTable = {
+            {s = "m16/magout.ogg", 	 t = 0.2},
+            {s = "m16/magin.ogg",    t = 1.05},
+        },
     },
     ["reload_empty_40"] = {
         Source = "reload_empty_40",
@@ -313,6 +337,11 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
+        SoundTable = {
+            {s = "m16/magout.ogg", 	 t = 0.2},
+            {s = "m16/magin.ogg",    t = 1.05},
+            {s = "m16/boltdrop.ogg", t = 1.77},
+        },
     },
 
     -- 60 Round Reloads --
@@ -328,6 +357,10 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
+        SoundTable = {
+            {s = "m16/magout.ogg", 	 t = 0.2},
+            {s = "m16/magin.ogg",    t = 1.05},
+        },
     },
     ["reload_empty_60"] = {
         Source = "reload_empty_60",
@@ -340,6 +373,11 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
+        SoundTable = {
+            {s = "m16/magout.ogg", 	 t = 0.2},
+            {s = "m16/magin.ogg",    t = 1.05},
+            {s = "m16/boltdrop.ogg", t = 1.77},
+        },
     },
 
     -- 100 Round Reloads --
@@ -355,6 +393,11 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
+        SoundTable = {
+            {s = "m16/magout.ogg", 	 t = 0.2},
+            {s = "m16/magin.ogg",    t = 1.05},
+            {s = "m16/magtap.ogg",   t = 1.59},
+        },
     },
     ["reload_empty_100"] = {
         Source = "reload_empty_100",
@@ -367,6 +410,13 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
+        SoundTable = {
+            {s = "m16/magout.ogg", 	 t = 0.2},
+            {s = "m16/magin.ogg",    t = 1.05},
+            {s = "m16/magtap.ogg",   t = 1.59},
+            {s = "m16/chback.ogg",   t = 1.9},
+            {s = "m16/chamber.ogg",  t = 2.2},
+        },
     },
 }
 
@@ -430,7 +480,7 @@ SWEP.Attachments = {
     {
         PrintName = "Stock",
         Slot = {"ud_m16_stock"},
-        DefaultAttName = "Standard Stock",
+        DefaultAttName = "Stock",
     },
     {
         PrintName = "Mag Type",
@@ -441,19 +491,9 @@ SWEP.Attachments = {
         PrintName = "Ammo Type",
         Slot = {"go_ammo"},
     },
-    -- {
-    --     PrintName = "Perk",
-    --     Slot = "go_perk"
-    -- },
     {
-        PrintName = "Training Package",
-        Slot = "ud_training",
-        DefaultAttName = "Basic Training"
-    },
-    {
-        PrintName = "Internals",
-        Slot = "ud_fg", -- Fire group
-        DefaultAttName = "Standard Internals"
+        PrintName = "Perk",
+        Slot = "go_perk"
     },
     {
         PrintName = "Charm",

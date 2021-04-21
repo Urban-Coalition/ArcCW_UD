@@ -25,16 +25,16 @@ SWEP.PrintName = "Glawk"
 
 -- True name --
 
-SWEP.TrueName = "Glock 17"
+SWEP.TrueName = "Glock"
 
 -- Trivia --
 
 SWEP.Trivia_Class = "Rifle"
-SWEP.Trivia_Desc = "Plastic \"wonder nine\" associated with the very idea of a gun. With its low weight and user-focused safety features, it makes an impeccable backup weapon."
-SWEP.Trivia_Manufacturer = "Glawk Ges.m.b.H."
-SWEP.Trivia_Calibre = "9x19mm Parabellum"
-SWEP.Trivia_Mechanism = "Short Recoil"
-SWEP.Trivia_Country = "Austria"
+SWEP.Trivia_Desc = ">When you lose to this gun in CSGO"
+SWEP.Trivia_Manufacturer = "Glock"
+SWEP.Trivia_Calibre = "9x19mm Para"
+SWEP.Trivia_Mechanism = "Some mechanism"
+SWEP.Trivia_Country = "Belgium"
 SWEP.Trivia_Year = 1980
 
 -- Weapon slot --
@@ -45,7 +45,7 @@ SWEP.Slot = 2
 
 if GetConVar("arccw_truenames"):GetBool() then
     SWEP.PrintName = SWEP.TrueName
-    SWEP.Trivia_Manufacturer = "Glock Ges.m.b.H."
+    SWEP.Trivia_Manufacturer = "Glock"
 end
 
 -- Viewmodel / Worldmodel / FOV --
@@ -152,16 +152,16 @@ SWEP.CrouchAng = Angle(0, 0, -8)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-14.5, 4, -4.8),
+    pos        =    Vector(-9.8, 4, -6),
     ang        =    Angle(-6, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
 
 -- Firing sounds --
 
-SWEP.ShootSound = "weapons/arccw_ud/glock/fire.wav"
-SWEP.ShootSoundSilenced = "weapons/arccw_ud/glock/fire_supp.wav"
-SWEP.DistantShootSound = "weapons/arccw_ud/glock/fire_dist.wav"
+SWEP.ShootSound = "glock/fire.ogg"
+SWEP.ShootSoundSilenced = "weapons/arccw/czbren/lowpolyczbren_supp.ogg"
+SWEP.DistantShootSound = "glock/fire_dist.ogg"
 
 -- Bodygroups --
 
@@ -258,6 +258,11 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.6,
+        SoundTable = {
+            {s = "glock/magrelease.ogg", 	 t = 0.3},
+            {s = "glock/magout.ogg", 	 t = 0.3},
+            {s = "glock/magin.ogg",    t = 0.4},
+        },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
@@ -270,6 +275,12 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
+        SoundTable = {
+            {s = "glock/magrelease.ogg", 	 t = 0.15},
+            {s = "glock/magout.ogg", 	 t = 0.15},
+            {s = "glock/magin.ogg",    t = 0.45},
+            {s = "glock/sliderel.ogg",    t = 1.45},
+        },
     },
 
     -- 10 Round Reloads --
@@ -285,6 +296,11 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.6,
+        SoundTable = {
+            {s = "glock/magrelease.ogg", 	 t = 0.3},
+            {s = "glock/magout.ogg", 	 t = 0.3},
+            {s = "glock/magin.ogg",    t = 0.4},
+        },
     },
     ["reload_empty_10"] = {
         Source = "reload_empty_10",
@@ -297,6 +313,12 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
+        SoundTable = {
+            {s = "glock/magrelease.ogg", 	 t = 0.15},
+            {s = "glock/magout.ogg", 	 t = 0.15},
+            {s = "glock/magin.ogg",    t = 0.45},
+            {s = "glock/sliderel.ogg",    t = 1.45},
+        },
     },
 
     -- 33 Round Reloads --
@@ -312,6 +334,11 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.6,
+        SoundTable = {
+            {s = "glock/magrelease.ogg", 	 t = 0.4},
+            {s = "glock/magout.ogg", 	 t = 0.4},
+            {s = "glock/magin.ogg",    t = 0.5},
+        },
     },
     ["reload_empty_33"] = {
         Source = "reload_empty_33",
@@ -324,6 +351,12 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
+        SoundTable = {
+            {s = "glock/magrelease.ogg", 	 t = 0.16},
+            {s = "glock/magout.ogg", 	 t = 0.16},
+            {s = "glock/magin.ogg",    t = 0.46},
+            {s = "glock/sliderel.ogg",    t = 1.46},
+        },
     },
 
     -- 100 Round Reloads --
@@ -339,6 +372,11 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.6,
+        SoundTable = {
+            {s = "glock/magrelease.ogg", 	 t = 0.3},
+            {s = "glock/magout.ogg", 	 t = 0.3},
+            {s = "glock/magin.ogg",    t = 0.4},
+        },
     },
     ["reload_empty_100"] = {
         Source = "reload_empty_100",
@@ -351,6 +389,12 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
+        SoundTable = {
+            {s = "glock/magrelease.ogg", 	 t = 0.12},
+            {s = "glock/magout.ogg", 	 t = 0.12},
+            {s = "glock/magin.ogg",    t = 0.43},
+            {s = "glock/sliderel.ogg",    t = 1.43},
+        },
     },
 }
 

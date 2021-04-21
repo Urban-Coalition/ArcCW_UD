@@ -91,6 +91,10 @@ SWEP.Firemodes = {
     {
         Mode = 1,
     },
+    {
+        PrintName = "LOW",
+        Mode = 0,
+    }
 }
 
 SWEP.ShootPitch = 100

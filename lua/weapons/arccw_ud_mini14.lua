@@ -79,10 +79,11 @@ SWEP.ReducedClipSize = 10
 SWEP.Recoil = 0.4
 SWEP.RecoilSide = 0.2
 
-SWEP.RecoilRise = 0.24
+SWEP.RecoilRise = 1
 SWEP.VisualRecoilMult = 1
-SWEP.MaxRecoilBlowback = 0.5
-SWEP.MaxRecoilPunch = 0.6
+SWEP.RecoilPunch = 2
+SWEP.MaxRecoilBlowback = 2
+SWEP.MaxRecoilPunch = 2
 
 -- Firerate / Firemodes --
 
@@ -140,10 +141,11 @@ SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-4.28, 2, 2.05),
-     Ang = Angle(0.1, 0, 0),
-     Magnification = 1,
-     SwitchToSound = "",
+    Pos = Vector(-4.28, 2, 2.05),
+    Ang = Angle(0, 0.03, 0),
+    Magnification = 1,
+    SwitchToSound = "",
+    CrosshairInSights = false
 }
 
 SWEP.ActivePos = Vector(0, -2, 0)

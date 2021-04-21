@@ -78,10 +78,11 @@ SWEP.ReducedClipSize = 20
 SWEP.Recoil = 0.5
 SWEP.RecoilSide = 0.14
 
-SWEP.RecoilRise = 0.24
+SWEP.RecoilRise = 1
 SWEP.VisualRecoilMult = 1
-SWEP.MaxRecoilBlowback = 0.5
-SWEP.MaxRecoilPunch = 0.6
+SWEP.RecoilPunch = 2
+SWEP.MaxRecoilBlowback = 2
+SWEP.MaxRecoilPunch = 2
 
 -- Firerate / Firemodes --
 

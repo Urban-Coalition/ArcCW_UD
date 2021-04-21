@@ -85,7 +85,7 @@ SWEP.RecoilSide = 1
 
 SWEP.RecoilRise = 0.24
 SWEP.VisualRecoilMult = 1
-SWEP.MaxRecoilBlowback = 0.3
+SWEP.MaxRecoilBlowback = 1
 SWEP.MaxRecoilPunch = 1
 
 -- Firerate / Firemodes --
@@ -214,7 +214,7 @@ SWEP.Animations = {
     },
     ["sgreload_start"] = {
         Source = "sgreload_start",
-        Time = 18 / 30,
+        Time = 16 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         LHIK = true,
         LHIKIn = 0.5,
@@ -222,7 +222,7 @@ SWEP.Animations = {
     },
     ["sgreload_insert"] = {
         Source = "sgreload_insert",
-        Time = 22 / 30,
+        Time = 18 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         TPAnimStartTime = 0.3,
         LHIK = true,
@@ -231,7 +231,7 @@ SWEP.Animations = {
     },
     ["sgreload_finish"] = {
         Source = "sgreload_finish",
-        Time = 22 / 30,
+        Time = 20 / 30,
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.4,

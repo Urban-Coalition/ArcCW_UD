@@ -15,6 +15,11 @@ att.AutoStats = true
 --att.Mult_Recoil = 1
 --att.Mult_SpeedMult = 1
 
+att.Mult_Recoil = 1.1
+att.Mult_AccuracyMOA = 1.5
+att.Mult_Range = 0.9
+att.Mult_RPM = 0.8
+
 att.Override_Firemodes = {
     {
         Mode = 2,

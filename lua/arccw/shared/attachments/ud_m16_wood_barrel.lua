@@ -1,9 +1,10 @@
-att.PrintName = "20\" Wood Barrel"
+att.PrintName = "20\" Wood M16A1 Barrel"
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "Description"
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
+    "Semi-auto only"
 }
 att.Desc_Neutrals = {
 }

@@ -1,6 +1,10 @@
-att.PrintName = "G18 Slide"
+if GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "Glock 18C Slide"
+end
+
+att.PrintName = "GEN 3 Auto Slide"
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "Description"
+att.Description = "An automatic slide capable of a very high rate of fire. Compensator cuts at the top improve recoil control, although that does not change the fact that this is a hell of a bullet nozzle."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
@@ -14,7 +18,9 @@ att.AutoStats = true
 --att.Mult_SightTime = 1
 --att.Mult_Recoil = 1
 --att.Mult_SpeedMult = 1
-att.Mult_RPM = 2
+att.Mult_HipDispersion = 1.25
+att.Mult_Recoil = 0.9
+att.Mult_RPM = 3
 
 att.Override_Firemodes = {
     {

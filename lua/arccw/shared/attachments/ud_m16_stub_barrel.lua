@@ -20,6 +20,7 @@ att.Mult_Recoil = 2
 att.Mult_AccuracyMOA = 4
 att.Mult_Range = 0.4
 att.Mult_RPM = 1
+att.Mult_Sway = 2
 
 att.Override_Firemodes = {
     {

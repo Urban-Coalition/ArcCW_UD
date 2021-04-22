@@ -47,6 +47,7 @@ $bodygroup "6" {
 }
 
 $cdmaterials "models\weapons\arccw\ud_uzi"
+$cdmaterials "models\weapons\arccw\ud_common"
 
 $attachment "1" "uzi_barrel" 0 0 0 rotate -90 0 0
 $attachment "2" "brass" 0 0 0 rotate -10 140 180

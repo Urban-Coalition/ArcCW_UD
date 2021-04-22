@@ -30,6 +30,7 @@ $bodygroup "4" {
 }
 
 $cdmaterials "models\weapons\arccw\ud_glock"
+$cdmaterials "models\weapons\arccw\ud_common"
 
 $attachment "1" "glock_flash" 0 0 0 rotate -90 0 0
 $attachment "2" "brass" 0 0 0 rotate -10 140 180

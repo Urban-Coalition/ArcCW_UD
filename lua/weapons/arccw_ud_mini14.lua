@@ -89,7 +89,7 @@ SWEP.Sway = 0.25
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 500
+SWEP.Delay = 60 / 600
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
@@ -255,6 +255,10 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.6,
+        SoundTable = {
+            {s = path .. "magout.wav", 	t = 0.15},
+            {s = path .. "magin.wav",   t = 1.10},
+        },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
@@ -266,6 +270,12 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
+        SoundTable = {
+            {s = path .. "magout.wav", 	t = 0.15},
+            {s = path .. "magin.wav",   t = 1.10},
+            {s = path .. "chback.wav",  t = 1.85},
+            {s = path .. "chamber.wav", t = 1.95},
+        },
     },
 
     -- 10 Round Reloads --
@@ -280,6 +290,10 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.6,
+        SoundTable = {
+            {s = path .. "magout.wav", 	t = 0.15},
+            {s = path .. "magin.wav",   t = 1.10},
+        },
     },
     ["reload_empty_10"] = {
         Source = "reload_empty_10",
@@ -291,6 +305,12 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
+        SoundTable = {
+            {s = path .. "magout.wav", 	t = 0.15},
+            {s = path .. "magin.wav",   t = 1.10},
+            {s = path .. "chback.wav",  t = 1.90},
+            {s = path .. "chamber.wav", t = 2.10},
+        },
     },
 
     -- 30 Round Reloads --
@@ -305,6 +325,10 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.6,
+        SoundTable = {
+            {s = path .. "magout.wav", 	t = 0.15},
+            {s = path .. "magin.wav",   t = 1.10},
+        },
     },
     ["reload_empty_30"] = {
         Source = "reload_empty_30",
@@ -316,6 +340,12 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
+        SoundTable = {
+            {s = path .. "magout.wav", 	t = 0.15},
+            {s = path .. "magin.wav",   t = 1.10},
+            {s = path .. "chback.wav",  t = 1.85},
+            {s = path .. "chamber.wav", t = 1.95},
+        },
     },
 
     -- 15 22lr Round Reloads --
@@ -330,6 +360,10 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.6,
+        SoundTable = {
+            {s = path .. "magout.wav", 	t = 0.15},
+            {s = path .. "magin.wav",   t = 1.10},
+        },
     },
     ["reload_empty_15_22lr"] = {
         Source = "reload_empty_15_22lr",
@@ -341,6 +375,12 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
+        SoundTable = {
+            {s = path .. "magout.wav", 	t = 0.15},
+            {s = path .. "magin.wav",   t = 1.10},
+            {s = path .. "chback.wav",  t = 1.85},
+            {s = path .. "chamber.wav", t = 1.95},
+        },
     },
 }
 

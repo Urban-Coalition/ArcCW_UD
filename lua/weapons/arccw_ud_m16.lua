@@ -175,16 +175,10 @@ SWEP.WorldModelOffset = {
 -- Firing sounds --
 
 local path = "weapons/arccw_ud/m16/"
+SWEP.FirstShootSound = path .. "fire_first.ogg"
 SWEP.ShootSound = {path .. "fire_auto_1.ogg", path .. "fire_auto_2.ogg", path .. "fire_auto_3.ogg"}
 SWEP.ShootSoundSilenced = "weapons/arccw/czbren/lowpolyczbren_supp.ogg"
 SWEP.DistantShootSound = path .. "fire_dist.ogg"
-
-SWEP.Hook_GetShootSound = function( wep, snd )
-    --if wep:GetCurrentFiremode().Mode == 1 then
-    if wep:GetBurstCount() == 1 then
-        return path .. "fire_first.ogg"
-    end
-end
 
 -- Bodygroups --
 

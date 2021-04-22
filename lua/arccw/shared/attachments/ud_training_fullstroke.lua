@@ -15,5 +15,7 @@ att.AutoStats = true
 att.Mult_CycleTime = .9
 
 att.Hook_Compatible = function(wep)
-    return wep.ManualAction
+    if !wep.ManualAction then
+        return false
+    end
 end

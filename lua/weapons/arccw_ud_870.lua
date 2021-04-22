@@ -211,6 +211,9 @@ SWEP.Animations = {
         Source = "cycle",
         Time = 17 / 30,
         ShellEjectAt = 0.1,
+        SoundTable = {
+            {s = path .. "eject.ogg",  t = 0.1},
+        },
     },
     ["sgreload_start"] = {
         Source = "sgreload_start",
@@ -245,6 +248,9 @@ SWEP.Animations = {
         TPAnimStartTime = 0.7,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         ShellEjectAt = 0.5,
+        SoundTable = {
+            {s = path .. "eject.ogg",  t = 0.5},
+        },
     },
 }
 

@@ -1,7 +1,8 @@
-att.PrintName = "Wood Short Barrel"
+att.PrintName = "14\" Wood M603 Barrel"
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "Description"
 att.Desc_Pros = {
+    "Full-auto"
 }
 att.Desc_Cons = {
 }
@@ -14,6 +15,23 @@ att.AutoStats = true
 --att.Mult_SightTime = 1
 --att.Mult_Recoil = 1
 --att.Mult_SpeedMult = 1
+
+att.Mult_Recoil = 1.1
+att.Mult_AccuracyMOA = 1.5
+att.Mult_Range = 0.9
+att.Mult_RPM = 0.8
+
+att.Override_Firemodes = {
+    {
+        Mode = 2,
+    },
+    {
+        Mode = 1,
+    },
+    {
+        Mode = 0
+    }
+}
 
 att.LHIK = true
 

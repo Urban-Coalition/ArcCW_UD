@@ -64,6 +64,7 @@ $bodygroup "8" {
 $cdmaterials "models\weapons\arccw\ud_m16"
 $cdmaterials "models\weapons\arccw\ud_m1014"
 $cdmaterials "models\weapons\arccw\ud_common"
+$cdmaterials "models\weapons\arccw\ud_mini14"
 
 $attachment "1" "m16_flash" 0 0 0 rotate -90 0 0
 $attachment "2" "brass" 0 0 -1 rotate -10 140 180

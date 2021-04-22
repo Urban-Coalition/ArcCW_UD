@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 
 att.PrintName = "GEN 3 Auto Slide"
+=======
+att.PrintName = "GEN3 Auto Slide"
+>>>>>>> 120f76648e1bdaf4a8f3ad392f4ff314f4f3ef76
 
 if GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "Glock 18C Slide"
+    att.PrintName = "G18C Auto Slide"
 end
 
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
@@ -32,6 +36,10 @@ att.Override_Firemodes = {
     {
         Mode = 1,
     },
+    {
+        PrintName = "LOW",
+        Mode = 0,
+    }
 }
 
 -- att.Hook_TranslateAnimation = function(wep, anim)

@@ -1,4 +1,4 @@
-att.PrintName = "GEN 3 Auto Slide"
+att.PrintName = "GEN3 Auto Slide"
 
 if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "G18C Auto Slide"
@@ -21,7 +21,7 @@ att.AutoStats = true
 --att.Mult_SpeedMult = 1
 att.Mult_MoveDispersion = 1.5
 att.Mult_HipDispersion = 1.25
-att.Mult_Recoil = 0.9
+att.Mult_Recoil = 0.95
 att.Mult_RPM = 3
 
 att.Override_Firemodes = {

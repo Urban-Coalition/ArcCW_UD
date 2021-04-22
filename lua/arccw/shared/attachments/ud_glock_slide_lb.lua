@@ -1,7 +1,7 @@
-att.PrintName = "GEN 3 Extended Slide"
+att.PrintName = "GEN3 Extended Slide"
 
 if GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "Glock 17L Slide"
+    att.PrintName = "G17L Long Slide"
 end
 
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
@@ -16,8 +16,8 @@ att.Slot = "ud_glock_slide"
 
 att.AutoStats = true
 
-att.Mult_SightTime = 1.25
-att.Mult_Recoil = 0.8
-att.Mult_AccuracyMOA = 0.5
+att.Mult_SightTime = 1.1
+att.Mult_Recoil = 0.9
+att.Mult_AccuracyMOA = 0.9
 
 att.ActivateElements = {"ud_glock_slide_lb"}

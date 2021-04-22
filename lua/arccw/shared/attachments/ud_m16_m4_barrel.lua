@@ -1,6 +1,6 @@
 att.PrintName = "14.5\" M4 Carbine Barrel"
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "Description"
+att.Description = "Barrel of a similar length to the M4 carbine. Provides fully-automatic capability at a well rounded fire rate, with good range and accuracy."
 att.Desc_Pros = {
     "Full-auto"
 }

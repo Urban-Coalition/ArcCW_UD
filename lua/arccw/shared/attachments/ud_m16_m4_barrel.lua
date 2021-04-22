@@ -1,4 +1,4 @@
-att.PrintName = "M4 Barrel"
+att.PrintName = "14.5\" M4 Carbine Barrel"
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "Description"
 att.Desc_Pros = {

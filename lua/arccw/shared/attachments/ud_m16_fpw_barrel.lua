@@ -1,4 +1,4 @@
-att.PrintName = "FPW Barrel"
+att.PrintName = "15.6\" FPW Barrel"
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "Description"
 att.Desc_Pros = {
@@ -18,9 +18,6 @@ att.AutoStats = true
 att.Override_Firemodes = {
     {
         Mode = 2,
-    },
-    {
-        Mode = 1,
     },
     {
         Mode = 0

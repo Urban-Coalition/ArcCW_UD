@@ -1,4 +1,4 @@
-att.PrintName = "Stub Barrel"
+att.PrintName = "2\" Stub Barrel"
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "Description"
 att.Desc_Pros = {
@@ -14,6 +14,20 @@ att.AutoStats = true
 --att.Mult_SightTime = 1
 --att.Mult_Recoil = 1
 --att.Mult_SpeedMult = 1
+
+att.Mult_Recoil = 2
+att.Mult_AccuracyMOA = 4
+att.Mult_Range = 0.25
+att.Mult_RPM = 2
+
+att.Override_Firemodes = {
+    {
+        Mode = 2,
+    },
+    {
+        Mode = 0
+    }
+}
 
 att.LHIK = true
 

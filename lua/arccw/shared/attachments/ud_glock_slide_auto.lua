@@ -18,6 +18,7 @@ att.AutoStats = true
 --att.Mult_SightTime = 1
 --att.Mult_Recoil = 1
 --att.Mult_SpeedMult = 1
+att.Mult_MoveDispersion = 1.5
 att.Mult_HipDispersion = 1.25
 att.Mult_Recoil = 0.9
 att.Mult_RPM = 3
@@ -31,10 +32,10 @@ att.Override_Firemodes = {
     },
 }
 
-att.Hook_TranslateAnimation = function(wep, anim)
-    if (anim == "fire" || anim == "fire_empty") then
-        return anim .. "_18"
-    end
-end
+-- att.Hook_TranslateAnimation = function(wep, anim)
+--     if (anim == "fire" || anim == "fire_empty") then
+--         return anim .. "_18"
+--     end
+-- end
 
 att.ActivateElements = {"ud_glock_slide_auto"}

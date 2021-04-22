@@ -119,8 +119,8 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 4
-SWEP.HipDispersion = 600
-SWEP.MoveDispersion = 500
+SWEP.HipDispersion = 900
+SWEP.MoveDispersion = 200
 SWEP.JumpDispersion = 1000
 
 SWEP.Primary.Ammo = "smg1"
@@ -188,10 +188,6 @@ SWEP.BulletBones = {
 }
 
 SWEP.AttachmentElements = {
-
-    ["rail_optic"] = {
-        VMBodygroups = {{ind = 3, bg = 1}}
-    },
 
     ["ud_m16_20_mag"] = {
         VMBodygroups = {{ind = 2, bg = 1}},
@@ -500,14 +496,15 @@ SWEP.Attachments = {
     {
         PrintName = "Optic",
         DefaultAttName = "Iron Sights",
-        InstalledEles = {"rail_optic"},
+        InstalledEles = {"ud_m16_rail_optic"},
         Slot = {"optic_lp","optic","sniper_optic"},
         Bone = "m16_parent",
         Offset = {
             vpos = Vector(0, -3.9, 2),
             vang = Angle(90, 2, -90),
         },
-        InstalledEles = {"ud_m16_rail_optic"}
+        VMScale = Vector(1.25, 1.25, 1.25),
+        ExtraSightDist = 4
     },
     {
         PrintName = "Barrel",

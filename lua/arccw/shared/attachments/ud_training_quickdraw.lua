@@ -1,7 +1,7 @@
 att.PrintName = "Quick Draw"
 
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "With the fastest hand in the west, you can draw the weapon in the blink of an eye."
+att.Description = "Like the fastest guns in the Old West, you can draw and shoot in the blink of an eye.\n\nTexas Red had not cleared leather 'fore a bullet fairly ripped, and the Ranger's aim was deadly with the big iron on his hip."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

@@ -1,7 +1,7 @@
 att.PrintName = "Maneuver"
 
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "Eat your heart out Arctic"
+att.Description = "Drills in confined spaces allow you to more effectively handle long weapons in close quarters."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

@@ -1,7 +1,7 @@
 att.PrintName = "Never Flinch"
 
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "Eat your heart out Arctic"
+att.Description = "Like the linesmen of World War One, you have practiced to shoot while walking towards the enemy. When firing, you can walk at your normal speed."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

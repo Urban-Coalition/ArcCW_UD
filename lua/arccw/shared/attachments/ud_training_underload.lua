@@ -1,11 +1,11 @@
 att.PrintName = "Underload"
 
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "Underload the magazine to put less stress on the internals, increasing fire rate."
+att.Description = "Just because it fits, does not mean you have to fill it. Partially filling magazines reduces follower stress, improving feed rates."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
-    "Reduced magazine capacity"
+    "-14% magazine capacity"
 }
 att.Desc_Neutrals = {
 }
@@ -15,9 +15,9 @@ att.AutoStats = true
 
 -- I give up, arctic help pls
 
--- function att.Hook_GetCapacity(wep,cap)
---     return wep.Primary.ClipSize
--- end
+function att.Hook_GetCapacity(wep,cap)
+    return math.max(math.floor(cap * 0.84), 1)
+end
 
 -- att.Add_ClipSize = math.floor(att.Hook_GetCapacity() * -.25)
 

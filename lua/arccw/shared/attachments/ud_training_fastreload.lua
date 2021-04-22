@@ -1,7 +1,7 @@
 att.PrintName = "Loading Drills"
 
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "Thorough muscle memory enhances reloading speed marginally."
+att.Description = "Every second counts in the heat of battle. Repeated training drills allow you to reload your weapon more quickly."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

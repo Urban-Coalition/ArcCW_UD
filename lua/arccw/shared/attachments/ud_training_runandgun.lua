@@ -1,7 +1,7 @@
 att.PrintName = "Run and Gun"
 
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "Eat your heart out Arctic"
+att.Description = "Moving-while-shooting drills allow you to aim more steadily even while moving between cover or across open ground."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

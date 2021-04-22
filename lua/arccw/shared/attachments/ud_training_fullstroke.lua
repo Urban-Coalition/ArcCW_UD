@@ -1,7 +1,7 @@
 att.PrintName = "Full Stroke"
 
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "Eat your heart out Arctic"
+att.Description = "Specialist training with your weapon allow you to cycle the action more quickly after a shot, improving your rate of fire."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

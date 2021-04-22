@@ -1,7 +1,7 @@
 att.PrintName = "Firm Grip"
 
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "Tighten your grip on the weapon, helping to reduce its kick."
+att.Description = "Long hours spent training to control the recoil of your weapon have paid off - you are less affected by your weapon's kick and can stay on target for longer."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

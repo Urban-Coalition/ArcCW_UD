@@ -1,7 +1,7 @@
 att.PrintName = "Dropshot"
 
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "Ever played Titanfall 2?"
+att.Description = "Expert training in high-verticality maneuvers, allowing for pinpoint shooting while descending from heights or jumping."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

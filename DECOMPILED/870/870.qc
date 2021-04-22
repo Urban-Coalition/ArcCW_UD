@@ -51,6 +51,8 @@ $bodygroup "8" {
 }
 
 $cdmaterials "models\weapons\arccw\ud_870"
+$cdmaterials "models\weapons\arccw\ud_m1014"
+$cdmaterials "models\weapons\arccw\ud_common"
 
 $attachment "1" "870_flash" 0 0 0 rotate -90 0 0
 $attachment "2" "brass" 0 0 0 rotate -10 140 180

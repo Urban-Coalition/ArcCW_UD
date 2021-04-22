@@ -200,14 +200,37 @@ SWEP.AttachmentElements = {
     ["ud_mini14_rail_fg"] = {
         VMBodygroups = {{ind = 5, bg = 1}},
     },
+
     ["ud_mini14_barrel_long"] = {
         VMBodygroups = {{ind = 3, bg = 1}},
+        AttPosMods = {
+            [3] = {
+                vpos = Vector(0, 0, 5.9),
+            },
+        },
     },
     ["ud_mini14_barrel_short"] = {
         VMBodygroups = {{ind = 3, bg = 2}},
+        AttPosMods = {
+            [3] = {
+                vpos = Vector(0, 0, -6),
+            },
+        },
     },
     ["ud_mini14_barrel_stub"] = {
         VMBodygroups = {{ind = 3, bg = 3}},
+        AttPosMods = {
+            [3] = {
+                vpos = Vector(0, 0, -10),
+            },
+        },
+    },
+
+    ["ud_mini14_stock_polymer"] = {
+        VMBodygroups = {{ind = 1, bg = 1}},
+    },
+    ["ud_mini14_stock_sawnoff"] = {
+        VMBodygroups = {{ind = 1, bg = 2}},
     },
 }
 
@@ -424,7 +447,7 @@ SWEP.Attachments = {
         Slot = {"muzzle"},
         Bone = "mini14_flash",
         Offset = {
-            vpos = Vector(0, 0, 0),
+            vpos = Vector(0, 0, -1),
             vang = Angle(90, 0, -90),
         },
     },
@@ -451,6 +474,11 @@ SWEP.Attachments = {
         PrintName = "Mag Type",
         Slot = {"ud_mini14_mag"},
         DefaultAttName = "20-Round Ranch Rifle Mag",
+    },
+    {
+        PrintName = "Stock Type",
+        Slot = {"ud_mini14_stock"},
+        DefaultAttName = "Wooden Stock",
     },
     {
         PrintName = "Ammo Type",

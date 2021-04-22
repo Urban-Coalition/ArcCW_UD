@@ -13,7 +13,7 @@ att.AutoStats = true
 
 att.Mult_SightTime = 0.6
 att.Mult_Recoil = 1.75
-att.Mult_RecoilSide = 2
+att.Mult_RecoilSide = 1.5
 att.Mult_RPM = 2
 
 att.Add_BarrelLength = -8

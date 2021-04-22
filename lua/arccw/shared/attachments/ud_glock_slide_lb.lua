@@ -19,5 +19,6 @@ att.AutoStats = true
 att.Mult_SightTime = 1.1
 att.Mult_Recoil = 0.9
 att.Mult_AccuracyMOA = 0.9
+att.Mult_Sway = 1.5
 
 att.ActivateElements = {"ud_glock_slide_lb"}

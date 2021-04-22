@@ -145,9 +145,8 @@ SWEP.HoldtypeSights = "revolver"
 
 SWEP.IronSightStruct = {
      Pos = Vector(-2.33, 4, 2.8),
-     Ang = Angle(0.1, 0, 0),
+     Ang = Angle(0.05, -0.06, 0),
      Magnification = 1,
-     SwitchToSound = "",
 }
 
 SWEP.ActivePos = Vector(0, 0, 0)
@@ -198,17 +197,22 @@ SWEP.AttachmentElements = {
     },
     ["ud_glock_slide_comp"] = {
         VMBodygroups = {{ind = 4, bg = 1}},
-        NameChange = "GEN 3 Custom",
+        NameChange = "GEN3 Custom",
         TrueNameChange = "Glock 17 Custom",
+        Override_IronSightStruct = {
+            Pos = Vector(-2.28, 4, 2.6),
+            Ang = Angle(0.2, 0.05, 0),
+            Magnification = 1,
+        }
     },
     ["ud_glock_slide_lb"] = {
         VMBodygroups = {{ind = 4, bg = 2}},
-        NameChange = "GEN 3 Ext.",
+        NameChange = "GEN3 Ext.",
         TrueNameChange = "Glock 17L",
     },
     ["ud_glock_slide_auto"] = {
         VMBodygroups = {{ind = 4, bg = 3}},
-        NameChange = "GEN 3 Auto",
+        NameChange = "GEN3 Auto",
         TrueNameChange = "Glock 18C",
     },
 }

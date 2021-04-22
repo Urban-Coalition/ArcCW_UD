@@ -173,6 +173,7 @@ SWEP.WorldModelOffset = {
 -- Firing sounds --
 
 local path = "weapons/arccw_ud/mini14/"
+local common = "weapons/arccw_ud/common/"
 SWEP.ShootSound = path .. "fire.wav"
 SWEP.ShootSoundSilenced = "weapons/arccw/czbren/lowpolyczbren_supp.ogg"
 SWEP.DistantShootSound = path .. "fire_dist.wav"

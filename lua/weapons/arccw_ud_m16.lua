@@ -175,6 +175,7 @@ SWEP.WorldModelOffset = {
 -- Firing sounds --
 
 local path = "weapons/arccw_ud/m16/"
+local common = "weapons/arccw_ud/common/"
 SWEP.FirstShootSound = path .. "fire_first.ogg"
 SWEP.ShootSound = {path .. "fire_auto_1.ogg", path .. "fire_auto_2.ogg", path .. "fire_auto_3.ogg"}
 SWEP.ShootSoundSilenced = "weapons/arccw/czbren/lowpolyczbren_supp.ogg"
@@ -255,11 +256,11 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.6,
         SoundTable = {
-            {s = path .. "cloth_1.ogg",  t = 0.0},
+            {s = common .. "cloth_1.ogg",  t = 0.0},
             {s = path .. "magout.ogg", 	 t = 0.2},
-            {s = path .. "cloth_2.ogg",  t = 0.75},
+            {s = common .. "cloth_2.ogg",  t = 0.75},
             {s = path .. "magin.ogg",    t = 1.05},
-            {s = path .. "shoulder.ogg", t = 1.93},
+            {s = common .. "shoulder.ogg", t = 1.93},
         },
     },
     ["reload_empty"] = {
@@ -274,13 +275,13 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = path .. "cloth_1.ogg",  t = 0.0},
+            {s = common .. "cloth_1.ogg",  t = 0.0},
             {s = path .. "magout.ogg", 	 t = 0.2},
-            {s = path .. "cloth_2.ogg",  t = 0.75},
+            {s = common .. "cloth_2.ogg",  t = 0.75},
             {s = path .. "magin.ogg",    t = 1.05},
-            {s = path .. "cloth_3.ogg",  t = 1.39},
+            {s = common .. "cloth_3.ogg",  t = 1.39},
             {s = path .. "boltdrop.ogg", t = 1.77},
-            {s = path .. "shoulder.ogg", t = 2.15},
+            {s = common .. "shoulder.ogg", t = 2.15},
         },
     },
 
@@ -298,11 +299,11 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.6,
         SoundTable = {
-            {s = path .. "cloth_1.ogg",  t = 0.0},
+            {s = common .. "cloth_1.ogg",  t = 0.0},
             {s = path .. "magout.ogg", 	 t = 0.2},
-            {s = path .. "cloth_2.ogg",  t = 0.75},
+            {s = common .. "cloth_2.ogg",  t = 0.75},
             {s = path .. "magin.ogg",    t = 1.05},
-            {s = path .. "shoulder.ogg", t = 1.925},
+            {s = common .. "shoulder.ogg", t = 1.925},
         },
     },
     ["reload_empty_20"] = {
@@ -317,13 +318,13 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = path .. "cloth_1.ogg",  t = 0.0},
+            {s = common .. "cloth_1.ogg",  t = 0.0},
             {s = path .. "magout.ogg", 	 t = 0.2},
-            {s = path .. "cloth_2.ogg",  t = 0.75},
+            {s = common .. "cloth_2.ogg",  t = 0.75},
             {s = path .. "magin.ogg",    t = 1.05},
-            {s = path .. "cloth_3.ogg",  t = 1.39},
+            {s = common .. "cloth_3.ogg",  t = 1.39},
             {s = path .. "boltdrop.ogg", t = 1.77},
-            {s = path .. "shoulder.ogg", t = 2.13},
+            {s = common .. "shoulder.ogg", t = 2.13},
         },
     },
 
@@ -341,11 +342,11 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.6,
         SoundTable = {
-            {s = path .. "cloth_1.ogg",  t = 0.0},
+            {s = common .. "cloth_1.ogg",  t = 0.0},
             {s = path .. "magout.ogg", 	 t = 0.2},
-            {s = path .. "cloth_2.ogg",  t = 0.75},
+            {s = common .. "cloth_2.ogg",  t = 0.75},
             {s = path .. "magin.ogg",    t = 1.05},
-            {s = path .. "shoulder.ogg", t = 1.97},
+            {s = common .. "shoulder.ogg", t = 1.97},
         },
     },
     ["reload_empty_40"] = {
@@ -360,13 +361,13 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = path .. "cloth_1.ogg",  t = 0.0},
+            {s = common .. "cloth_1.ogg",  t = 0.0},
             {s = path .. "magout.ogg", 	 t = 0.2},
-            {s = path .. "cloth_2.ogg",  t = 0.75},
+            {s = common .. "cloth_2.ogg",  t = 0.75},
             {s = path .. "magin.ogg",    t = 1.05},
-            {s = path .. "cloth_3.ogg",  t = 1.475},
+            {s = common .. "cloth_3.ogg",  t = 1.475},
             {s = path .. "boltdrop.ogg", t = 1.8},
-            {s = path .. "shoulder.ogg", t = 2.2},
+            {s = common .. "shoulder.ogg", t = 2.2},
         },
     },
 
@@ -384,11 +385,11 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = path .. "cloth_1.ogg",  t = 0.0},
+            {s = common .. "cloth_1.ogg",  t = 0.0},
             {s = path .. "magout.ogg", 	 t = 0.2},
-            {s = path .. "cloth_2.ogg",  t = 0.75},
+            {s = common .. "cloth_2.ogg",  t = 0.75},
             {s = path .. "magin.ogg",    t = 1.05},
-            {s = path .. "shoulder.ogg", t = 1.97},
+            {s = common .. "shoulder.ogg", t = 1.97},
         },
     },
     ["reload_empty_60"] = {
@@ -403,13 +404,13 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = path .. "cloth_1.ogg",  t = 0.0},
+            {s = common .. "cloth_1.ogg",  t = 0.0},
             {s = path .. "magout.ogg", 	 t = 0.2},
-            {s = path .. "cloth_2.ogg",  t = 0.75},
+            {s = common .. "cloth_2.ogg",  t = 0.75},
             {s = path .. "magin.ogg",    t = 1.05},
-            {s = path .. "cloth_3.ogg",  t = 1.475},
+            {s = common .. "cloth_3.ogg",  t = 1.475},
             {s = path .. "boltdrop.ogg", t = 1.8},
-            {s = path .. "shoulder.ogg", t = 2.2},
+            {s = common .. "shoulder.ogg", t = 2.2},
         },
     },
 
@@ -427,13 +428,13 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = path .. "cloth_1.ogg",  t = 0.0},
+            {s = common .. "cloth_1.ogg",  t = 0.0},
             {s = path .. "magout.ogg", 	 t = 0.2},
-            {s = path .. "cloth_2.ogg",  t = 0.75},
+            {s = common .. "cloth_2.ogg",  t = 0.75},
             {s = path .. "magin.ogg",    t = 1.05},
-            {s = path .. "cloth_1.ogg",  t = 1.1},
+            {s = common .. "cloth_1.ogg",  t = 1.1},
             {s = path .. "magtap.ogg",   t = 1.59},
-            {s = path .. "shoulder.ogg", t = 2.05},
+            {s = common .. "shoulder.ogg", t = 2.05},
         },
     },
     ["reload_empty_100"] = {
@@ -448,15 +449,15 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = path .. "cloth_1.ogg",  t = 0.0},
+            {s = common .. "cloth_1.ogg",  t = 0.0},
             {s = path .. "magout.ogg", 	 t = 0.2},
-            {s = path .. "cloth_2.ogg",  t = 0.75},
+            {s = common .. "cloth_2.ogg",  t = 0.75},
             {s = path .. "magin.ogg",    t = 1.05},
             {s = path .. "magtap.ogg",   t = 1.59},
-            {s = path .. "cloth_3.ogg",  t = 1.75},
+            {s = common .. "cloth_3.ogg",  t = 1.75},
             {s = path .. "chback.ogg",   t = 1.9},
             {s = path .. "chamber.ogg",  t = 2.2},
-            {s = path .. "shoulder.ogg", t = 2.7},
+            {s = common .. "shoulder.ogg", t = 2.7},
         },
     },
 }

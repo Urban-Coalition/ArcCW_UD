@@ -116,8 +116,8 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 0
-SWEP.HipDispersion = 400
-SWEP.MoveDispersion = 800
+SWEP.HipDispersion = 800
+SWEP.MoveDispersion = 400
 SWEP.JumpDispersion = 1200
 
 SWEP.Primary.Ammo = "smg1"
@@ -132,7 +132,7 @@ SWEP.ShootSpeedMult = 0.95
 
 -- Length --
 
-SWEP.BarrelLength = 24
+SWEP.BarrelLength = 36
 SWEP.ExtraSightDist = 7
 
 -- Ironsights / Customization / Poses --
@@ -403,6 +403,7 @@ SWEP.Attachments = {
             vpos = Vector(0, -4.2, 6),
             vang = Angle(90, 2, -90),
         },
+        VMScale = Vector(1.25, 1.25, 1.25),
         InstalledEles = {"ud_mini14_rail_optic"},
     },
     {

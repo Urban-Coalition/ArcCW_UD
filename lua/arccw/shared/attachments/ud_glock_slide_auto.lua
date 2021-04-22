@@ -1,6 +1,11 @@
-att.PrintName = "G18 Slide"
+att.PrintName = "GEN3 Auto Slide"
+
+if GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "G18C Auto Slide"
+end
+
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "Description"
+att.Description = "An automatic slide capable of a very high rate of fire. Compensator cuts at the top improve recoil control, although that does not change the fact that this is a hell of a bullet nozzle."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
@@ -14,7 +19,10 @@ att.AutoStats = true
 --att.Mult_SightTime = 1
 --att.Mult_Recoil = 1
 --att.Mult_SpeedMult = 1
-att.Mult_RPM = 2
+att.Mult_MoveDispersion = 1.5
+att.Mult_HipDispersion = 1.25
+att.Mult_Recoil = 0.95
+att.Mult_RPM = 3
 
 att.Override_Firemodes = {
     {
@@ -23,12 +31,16 @@ att.Override_Firemodes = {
     {
         Mode = 1,
     },
+    {
+        PrintName = "LOW",
+        Mode = 0,
+    }
 }
 
-att.Hook_TranslateAnimation = function(wep, anim)
-    if (anim == "fire" || anim == "fire_empty") then
-        return anim .. "_18"
-    end
-end
+-- att.Hook_TranslateAnimation = function(wep, anim)
+--     if (anim == "fire" || anim == "fire_empty") then
+--         return anim .. "_18"
+--     end
+-- end
 
 att.ActivateElements = {"ud_glock_slide_auto"}

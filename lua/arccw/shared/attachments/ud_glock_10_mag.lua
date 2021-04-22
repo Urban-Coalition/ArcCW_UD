@@ -14,10 +14,11 @@ att.Slot = "ud_glock_mag"
 att.AutoStats = true
 
 att.Mult_SightTime = 0.9
---att.Mult_Recoil = 0.9
 att.Mult_ReloadTime = 0.9
---att.Mult_SpeedMult = 0.9
 att.Override_ClipSize = 10
+
+att.Mult_SpeedMult = 1.05
+att.Mult_Sway = 0.5
 
 att.ActivateElements = {"ud_glock_10_mag"}
 

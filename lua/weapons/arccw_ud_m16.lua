@@ -119,8 +119,8 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 4
-SWEP.HipDispersion = 600
-SWEP.MoveDispersion = 500
+SWEP.HipDispersion = 900
+SWEP.MoveDispersion = 200
 SWEP.JumpDispersion = 1000
 
 SWEP.Primary.Ammo = "smg1"
@@ -135,7 +135,7 @@ SWEP.ShootSpeedMult = 0.95
 
 -- Length --
 
-SWEP.BarrelLength = 24
+SWEP.BarrelLength = 32
 SWEP.ExtraSightDist = 7
 
 -- Ironsights / Customization / Poses --
@@ -189,10 +189,6 @@ SWEP.BulletBones = {
 
 SWEP.AttachmentElements = {
 
-    ["rail_optic"] = {
-        VMBodygroups = {{ind = 3, bg = 1}}
-    },
-
     ["ud_m16_20_mag"] = {
         VMBodygroups = {{ind = 2, bg = 1}},
     },
@@ -226,6 +222,12 @@ SWEP.AttachmentElements = {
     },
     ["ud_m16_fpw_barrel"] = {
         VMBodygroups = {{ind = 4, bg = 3}},
+        Override_IronSightStruct = {
+            Pos = Vector(-1, 4, 0),
+            Ang = Angle(0, 0, 0),
+            Magnification = 1,
+            CrosshairInSights = true
+        }
     },
     ["ud_m16_wood_barrel"] = {
         VMBodygroups = {{ind = 4, bg = 4}},
@@ -235,6 +237,12 @@ SWEP.AttachmentElements = {
     },
     ["ud_m16_stub_barrel"] = {
         VMBodygroups = {{ind = 4, bg = 6}},
+        Override_IronSightStruct = {
+            Pos = Vector(-1, 4, 0),
+            Ang = Angle(0, 0, 0),
+            Magnification = 1,
+            CrosshairInSights = true
+        }
     },
 }
 
@@ -276,6 +284,28 @@ SWEP.Animations = {
         ShellEjectAt = 0.01,
     },
 
+    ["fix"] = { -- TEMPOARY
+        Source = "reload_empty",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        Time = 79 / 30,
+        MinProgress = 2,
+        LastClip1OutTime = 0.7,
+        LHIK = true,
+        LHIKIn = 0.4,
+        LHIKEaseIn = 0.4,
+        LHIKEaseOut = 0.15,
+        LHIKOut = 0.4,
+        SoundTable = {
+            {s = common .. "cloth_1.ogg",  t = 0.0},
+            {s = path .. "magout.ogg", 	 t = 0.2},
+            {s = common .. "cloth_2.ogg",  t = 0.75},
+            {s = path .. "magin.ogg",    t = 1.05},
+            {s = common .. "cloth_3.ogg",  t = 1.39},
+            {s = path .. "boltdrop.ogg", t = 1.77},
+            {s = common .. "shoulder.ogg", t = 2.15},
+        },
+    },
+
     -- 30 Round Reloads --
 
     ["reload"] = {
@@ -294,6 +324,7 @@ SWEP.Animations = {
             {s = path .. "magout.ogg", 	 t = 0.2},
             {s = common .. "cloth_2.ogg",  t = 0.75},
             {s = path .. "magin.ogg",    t = 1.05},
+            {s = common .. "cloth_3.ogg",  t = 1.1},
             {s = common .. "shoulder.ogg", t = 1.93},
         },
     },
@@ -337,6 +368,7 @@ SWEP.Animations = {
             {s = path .. "magout.ogg", 	 t = 0.2},
             {s = common .. "cloth_2.ogg",  t = 0.75},
             {s = path .. "magin.ogg",    t = 1.05},
+            {s = common .. "cloth_3.ogg",  t = 1.1},
             {s = common .. "shoulder.ogg", t = 1.925},
         },
     },
@@ -380,6 +412,7 @@ SWEP.Animations = {
             {s = path .. "magout.ogg", 	 t = 0.2},
             {s = common .. "cloth_2.ogg",  t = 0.75},
             {s = path .. "magin.ogg",    t = 1.05},
+            {s = common .. "cloth_3.ogg",  t = 1.1},
             {s = common .. "shoulder.ogg", t = 1.97},
         },
     },
@@ -423,6 +456,7 @@ SWEP.Animations = {
             {s = path .. "magout.ogg", 	 t = 0.2},
             {s = common .. "cloth_2.ogg",  t = 0.75},
             {s = path .. "magin.ogg",    t = 1.05},
+            {s = common .. "cloth_3.ogg",  t = 1.1},
             {s = common .. "shoulder.ogg", t = 1.97},
         },
     },
@@ -466,8 +500,9 @@ SWEP.Animations = {
             {s = path .. "magout.ogg", 	 t = 0.2},
             {s = common .. "cloth_2.ogg",  t = 0.75},
             {s = path .. "magin.ogg",    t = 1.05},
-            {s = common .. "cloth_1.ogg",  t = 1.1},
+            {s = common .. "cloth_3.ogg",  t = 1.1},
             {s = path .. "magtap.ogg",   t = 1.59},
+            {s = common .. "cloth_4.ogg",  t = 1.65},
             {s = common .. "shoulder.ogg", t = 2.05},
         },
     },
@@ -490,6 +525,7 @@ SWEP.Animations = {
             {s = path .. "magtap.ogg",   t = 1.59},
             {s = common .. "cloth_3.ogg",  t = 1.75},
             {s = path .. "chback.ogg",   t = 1.9},
+            {s = common .. "cloth_4.ogg",  t = 2.0},
             {s = path .. "chamber.ogg",  t = 2.2},
             {s = common .. "shoulder.ogg", t = 2.7},
         },
@@ -500,18 +536,19 @@ SWEP.Attachments = {
     {
         PrintName = "Optic",
         DefaultAttName = "Iron Sights",
-        InstalledEles = {"rail_optic"},
+        InstalledEles = {"ud_m16_rail_optic"},
         Slot = {"optic_lp","optic","sniper_optic"},
         Bone = "m16_parent",
         Offset = {
             vpos = Vector(0, -3.9, 2),
             vang = Angle(90, 2, -90),
         },
-        InstalledEles = {"ud_m16_rail_optic"}
+        VMScale = Vector(1.25, 1.25, 1.25),
+        ExtraSightDist = 4
     },
     {
         PrintName = "Barrel",
-        DefaultAttName = "Standard 20in Barrel",
+        DefaultAttName = "20\" M16 Barrel",
         Slot = "ud_m16_barrel",
         Bone = "m16_parent",
         Offset = {
@@ -537,6 +574,7 @@ SWEP.Attachments = {
             vpos = Vector(0, 1.5, 12),
             vang = Angle(90, 0, -90),
         },
+        VMScale = Vector(1.25, 1.25, 1.25),
         InstalledEles = {"ud_m16_rail_fg"}
     },
     {
@@ -562,10 +600,6 @@ SWEP.Attachments = {
     {
         PrintName = "Ammo Type",
         Slot = {"go_ammo"},
-    },
-    {
-        PrintName = "Perk",
-        Slot = "go_perk"
     },
     {
         PrintName = "Training Package",

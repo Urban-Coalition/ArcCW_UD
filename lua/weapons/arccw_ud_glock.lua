@@ -115,8 +115,8 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 7
-SWEP.HipDispersion = 400
-SWEP.MoveDispersion = 800
+SWEP.HipDispersion = 700
+SWEP.MoveDispersion = 250
 SWEP.JumpDispersion = 500
 
 SWEP.Primary.Ammo = "pistol"
@@ -131,7 +131,7 @@ SWEP.ShootSpeedMult = 1
 
 -- Length --
 
-SWEP.BarrelLength = 24
+SWEP.BarrelLength = 8
 SWEP.ExtraSightDist = 7
 
 -- Ironsights / Customization / Poses --
@@ -145,9 +145,8 @@ SWEP.HoldtypeSights = "revolver"
 
 SWEP.IronSightStruct = {
      Pos = Vector(-2.33, 4, 2.8),
-     Ang = Angle(0.1, 0, 0),
+     Ang = Angle(0.05, -0.06, 0),
      Magnification = 1,
-     SwitchToSound = "",
 }
 
 SWEP.ActivePos = Vector(0, 0, 0)
@@ -196,9 +195,30 @@ SWEP.AttachmentElements = {
     ["ud_glock_rail_optic"] = {
         VMBodygroups = {{ind = 3, bg = 1}},
     },
-
+    ["ud_glock_slide_comp"] = {
+        VMBodygroups = {{ind = 4, bg = 1}},
+        NameChange = "GEN3 Custom",
+        TrueNameChange = "Glock 17 Custom",
+        Override_IronSightStruct = {
+            Pos = Vector(-2.28, 4, 2.6),
+            Ang = Angle(0.2, 0.05, 0),
+            Magnification = 1,
+        }
+    },
+    ["ud_glock_slide_lb"] = {
+        VMBodygroups = {{ind = 4, bg = 2}},
+        NameChange = "GEN3 Ext.",
+        TrueNameChange = "Glock 17L",
+    },
     ["ud_glock_slide_auto"] = {
         VMBodygroups = {{ind = 4, bg = 3}},
+        NameChange = "GEN3 Auto",
+        TrueNameChange = "Glock 18C",
+    },
+    ["ud_glock_slide_carbine"] = {
+        VMBodygroups = {{ind = 4, bg = 4}},
+        NameChange = "GEN3 Euro Carbine",
+        TrueNameChange = "Glock 17XXXL",
     },
 }
 
@@ -267,7 +287,7 @@ SWEP.Animations = {
 
     ["reload"] = {
         Source = "reload",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         Time = 56 / 30,
         MinProgress = 1.1,
         LastClip1OutTime = 0.9,
@@ -284,7 +304,7 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         Time = 66 / 30,
         MinProgress = 1.5,
         LastClip1OutTime = 0.7,
@@ -305,7 +325,7 @@ SWEP.Animations = {
 
     ["reload_10"] = {
         Source = "reload_10",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         Time = 56 / 30,
         MinProgress = 1.1,
         LastClip1OutTime = 0.9,
@@ -322,7 +342,7 @@ SWEP.Animations = {
     },
     ["reload_empty_10"] = {
         Source = "reload_empty_10",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         Time = 66 / 30,
         MinProgress = 1.5,
         LastClip1OutTime = 0.7,
@@ -343,7 +363,7 @@ SWEP.Animations = {
 
     ["reload_33"] = {
         Source = "reload_33",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         Time = 56 / 30,
         MinProgress = 1.1,
         LastClip1OutTime = 0.9,
@@ -360,7 +380,7 @@ SWEP.Animations = {
     },
     ["reload_empty_33"] = {
         Source = "reload_empty_33",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         Time = 66 / 30,
         MinProgress = 1.5,
         LastClip1OutTime = 0.7,
@@ -381,7 +401,7 @@ SWEP.Animations = {
 
     ["reload_100"] = {
         Source = "reload_100",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         Time = 56 / 30,
         MinProgress = 1.3,
         LastClip1OutTime = 0.9,
@@ -398,7 +418,7 @@ SWEP.Animations = {
     },
     ["reload_empty_100"] = {
         Source = "reload_empty_100",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         Time = 66 / 30,
         MinProgress = 1.75,
         LastClip1OutTime = 0.7,

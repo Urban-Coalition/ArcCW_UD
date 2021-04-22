@@ -123,8 +123,8 @@ SWEP.NPCWeight = 210
 -- Accuracy --
 
 SWEP.AccuracyMOA = 30
-SWEP.HipDispersion = 100
-SWEP.MoveDispersion = 400
+SWEP.HipDispersion = 400
+SWEP.MoveDispersion = 100
 SWEP.JumpDispersion = 1000
 
 SWEP.Primary.Ammo = "buckshot"
@@ -138,7 +138,7 @@ SWEP.ShootSpeedMult = 0.9
 
 -- Length --
 
-SWEP.BarrelLength = 50
+SWEP.BarrelLength = 32
 SWEP.ExtraSightDist = 20
 
 -- Ironsights / Customization / Poses --
@@ -211,6 +211,9 @@ SWEP.Animations = {
         Source = "cycle",
         Time = 17 / 30,
         ShellEjectAt = 0.1,
+        SoundTable = {
+            {s = path .. "eject.ogg",  t = 0.1},
+        },
     },
     ["sgreload_start"] = {
         Source = "sgreload_start",
@@ -247,6 +250,9 @@ SWEP.Animations = {
         TPAnimStartTime = 0.5,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         ShellEjectAt = 0.5,
+        SoundTable = {
+            {s = path .. "eject.ogg",  t = 0.5},
+        },
     },
 }
 

@@ -120,8 +120,8 @@ SWEP.NPCWeight = 210
 -- Accuracy --
 
 SWEP.AccuracyMOA = 30
-SWEP.HipDispersion = 100
-SWEP.MoveDispersion = 400
+SWEP.HipDispersion = 400
+SWEP.MoveDispersion = 100
 SWEP.JumpDispersion = 1000
 
 SWEP.Primary.Ammo = "buckshot"
@@ -135,7 +135,7 @@ SWEP.ShootSpeedMult = 0.9
 
 -- Length --
 
-SWEP.BarrelLength = 50
+SWEP.BarrelLength = 32
 SWEP.ExtraSightDist = 20
 
 -- Ironsights / Customization / Poses --

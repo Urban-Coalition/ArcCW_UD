@@ -1,7 +1,8 @@
-att.PrintName = "Stub Barrel"
+att.PrintName = "2\" Stub Barrel"
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "Description"
+att.Description = "Jesus Christ, I think I see the bullet sticking out."
 att.Desc_Pros = {
+    "pro.ud.auto"
 }
 att.Desc_Cons = {
 }
@@ -14,6 +15,23 @@ att.AutoStats = true
 --att.Mult_SightTime = 1
 --att.Mult_Recoil = 1
 --att.Mult_SpeedMult = 1
+
+att.Mult_Recoil = 2
+att.Mult_AccuracyMOA = 4
+att.Mult_Range = 0.4
+att.Mult_RPM = 1
+att.Mult_Sway = 2
+
+att.Add_BarrelLength = -8
+
+att.Override_Firemodes = {
+    {
+        Mode = 2,
+    },
+    {
+        Mode = 0
+    }
+}
 
 att.LHIK = true
 

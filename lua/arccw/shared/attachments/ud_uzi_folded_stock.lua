@@ -1,6 +1,6 @@
 att.PrintName = "Folded Stock"
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "Description"
+att.Description = "Remove the stock to improve agility at the cost of recoil control."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
@@ -11,8 +11,12 @@ att.Slot = "ud_uzi_stock"
 
 att.AutoStats = true
 
---att.Mult_SightTime = 1
---att.Mult_Recoil = 1
---att.Mult_SpeedMult = 1
+att.Mult_Recoil = 1.25
+att.Mult_RecoilSide = 1.25
+
+att.Mult_SightTime = 0.75
+att.Mult_SightedSpeedMult = 1.25
+att.Mult_DrawTime = 0.75
+att.Mult_HolsterTime = 0.75
 
 att.ActivateElements = {"ud_uzi_folded_stock"}

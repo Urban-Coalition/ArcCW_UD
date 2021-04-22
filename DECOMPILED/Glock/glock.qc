@@ -27,10 +27,13 @@ $bodygroup "4" {
 	studio "glock_slide_comp.smd"
 	studio "glock_slide_lb.smd"
 	studio "glock_slide_auto.smd"
+	studio "glock_slide_carbine.smd"
 }
 
+$cdmaterials "models\weapons\arccw\ud_m16"
 $cdmaterials "models\weapons\arccw\ud_glock"
 $cdmaterials "models\weapons\arccw\ud_m1014"
+$cdmaterials "models\weapons\arccw\ud_uzi"
 $cdmaterials "models\weapons\arccw\ud_common"
 
 $attachment "1" "glock_flash" 0 0 0 rotate -90 0 0

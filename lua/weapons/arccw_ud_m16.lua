@@ -284,6 +284,28 @@ SWEP.Animations = {
         ShellEjectAt = 0.01,
     },
 
+    ["fix"] = { -- TEMPOARY
+        Source = "reload_empty",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        Time = 79 / 30,
+        MinProgress = 2,
+        LastClip1OutTime = 0.7,
+        LHIK = true,
+        LHIKIn = 0.4,
+        LHIKEaseIn = 0.4,
+        LHIKEaseOut = 0.15,
+        LHIKOut = 0.4,
+        SoundTable = {
+            {s = common .. "cloth_1.ogg",  t = 0.0},
+            {s = path .. "magout.ogg", 	 t = 0.2},
+            {s = common .. "cloth_2.ogg",  t = 0.75},
+            {s = path .. "magin.ogg",    t = 1.05},
+            {s = common .. "cloth_3.ogg",  t = 1.39},
+            {s = path .. "boltdrop.ogg", t = 1.77},
+            {s = common .. "shoulder.ogg", t = 2.15},
+        },
+    },
+
     -- 30 Round Reloads --
 
     ["reload"] = {

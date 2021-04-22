@@ -1,6 +1,6 @@
 att.PrintName = "15.6\" FPW Barrel"
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "Barrel from an M231 Firing Port Weapon. Originally intended to be fired from inside the M2 Bradley IFV, the M231 FPW retains a high fire rate, though it makes no considerations for recoil or accuracy."
+att.Description = "Barrel from an M231 Firing Port Weapon. Originally intended to be fired from inside the M2 Bradley IFV, the M231 FPW has an insanely high cyclic rate and makes no considerations for recoil, accuracy or heat."
 att.Desc_Pros = {
     "Full-auto"
 }
@@ -15,12 +15,17 @@ att.AutoStats = true
 --att.Mult_SightTime = 1
 --att.Mult_Recoil = 1
 --att.Mult_SpeedMult = 1
-
-att.Mult_Recoil = 1.45
+att.Mult_RPM = 1.4
+att.Mult_Recoil = 1.5
+att.Mult_RecoilSide = 2
+att.Mult_Range = 0.65
+--att.Mult_Sway = 1.25
 att.Mult_AccuracyMOA = 3
-att.Mult_Range = 0.85
-att.Mult_RPM = 0.95
-att.Mult_Sway = 1.25
+
+att.Override_Jamming = true
+att.Override_HeatLockout = false
+att.Mult_HeatDissipation = 1
+att.Mult_HeatCapacity = 0.5
 
 att.Add_BarrelLength = -3
 

@@ -21,6 +21,7 @@ att.Add_BarrelLength = -8
 att.LHIK = true
 
 att.Override_HoldtypeActive = "pistol"
+att.Override_HoldtypeSights = "revolver"
 
 att.Model = "models/weapons/arccw/atts/mini_lhik.mdl"
 

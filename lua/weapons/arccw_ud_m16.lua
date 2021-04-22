@@ -189,16 +189,16 @@ SWEP.BulletBones = {
 
 SWEP.AttachmentElements = {
 
-    ["ud_m16_20_mag"] = {
+    ["ud_m16_mag_20"] = {
         VMBodygroups = {{ind = 2, bg = 1}},
     },
-    ["ud_m16_40_mag"] = {
+    ["ud_m16_mag_40"] = {
         VMBodygroups = {{ind = 2, bg = 2}},
     },
-    ["ud_m16_60_mag"] = {
+    ["ud_m16_mag_60"] = {
         VMBodygroups = {{ind = 2, bg = 3}},
     },
-    ["ud_m16_100_mag"] = {
+    ["ud_m16_mag_100"] = {
         VMBodygroups = {{ind = 2, bg = 4}},
     },
 
@@ -214,13 +214,13 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 8, bg = 1}},
     },
 
-    ["ud_m16_m4_barrel"] = {
+    ["ud_m16_barrel_m4"] = {
         VMBodygroups = {{ind = 4, bg = 1}},
     },
-    ["ud_m16_cqbr_barrel"] = {
+    ["ud_m16_barrel_cqbr"] = {
         VMBodygroups = {{ind = 4, bg = 2}},
     },
-    ["ud_m16_fpw_barrel"] = {
+    ["ud_m16_barrel_fpw"] = {
         VMBodygroups = {{ind = 4, bg = 3}},
         Override_IronSightStruct = {
             Pos = Vector(-1, 4, 0),
@@ -229,13 +229,13 @@ SWEP.AttachmentElements = {
             CrosshairInSights = true
         }
     },
-    ["ud_m16_wood_barrel"] = {
+    ["ud_m16_barrel_wood"] = {
         VMBodygroups = {{ind = 4, bg = 4}},
     },
-    ["ud_m16_wood_short_barrel"] = {
+    ["ud_m16_barrel_wood_short"] = {
         VMBodygroups = {{ind = 4, bg = 5}},
     },
-    ["ud_m16_stub_barrel"] = {
+    ["ud_m16_barrel_stub"] = {
         VMBodygroups = {{ind = 4, bg = 6}},
         Override_IronSightStruct = {
             Pos = Vector(-1, 4, 0),

@@ -185,13 +185,13 @@ SWEP.BulletBones = {
 
 SWEP.AttachmentElements = {
 
-    ["ud_uzi_16_mag"] = {
+    ["ud_uzi_mag_20"] = {
         VMBodygroups = {{ind = 2, bg = 1}},
     },
-    ["ud_uzi_41_mag"] = {
+    ["ud_uzi_mag_40"] = {
         VMBodygroups = {{ind = 2, bg = 2}},
     },
-    ["ud_uzi_100_mag"] = {
+    ["ud_uzi_mag_100"] = {
         VMBodygroups = {{ind = 2, bg = 3}},
     },
 
@@ -207,10 +207,10 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 5, bg = 1}},
     },
 
-    ["ud_uzi_wooden_stock"] = {
+    ["ud_uzi_stock_wood"] = {
         VMBodygroups = {{ind = 3, bg = 2}},
     },
-    ["ud_uzi_folded_stock"] = {
+    ["ud_uzi_stock_folded"] = {
         VMBodygroups = {{ind = 3, bg = 1}},
     },
 
@@ -439,7 +439,7 @@ SWEP.Attachments = {
         PrintName = "Stock",
         Slot = {"ud_uzi_stock"},
         DefaultAttName = "Standard Folding Stock",
-		ExcludeFlags = {"micro"},
+        ExcludeFlags = {"micro"},
     },
     {
         PrintName = "Mag Type",

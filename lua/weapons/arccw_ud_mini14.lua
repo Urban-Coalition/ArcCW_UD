@@ -185,13 +185,13 @@ SWEP.BulletBones = {
 
 SWEP.AttachmentElements = {
 
-    ["ud_mini14_10_mag"] = {
+    ["ud_mini14_mag_10"] = {
         VMBodygroups = {{ind = 4, bg = 2}},
     },
-    ["ud_mini14_30_mag"] = {
+    ["ud_mini14_mag_30"] = {
         VMBodygroups = {{ind = 4, bg = 1}},
     },
-    ["ud_mini14_15_22lr_mag"] = {
+    ["ud_mini14_mag_15_22lr"] = {
         VMBodygroups = {{ind = 4, bg = 3}},
     },
 

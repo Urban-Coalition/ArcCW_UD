@@ -182,13 +182,13 @@ SWEP.BulletBones = {
 
 SWEP.AttachmentElements = {
 
-    ["ud_glock_10_mag"] = {
+    ["ud_glock_mag_10"] = {
         VMBodygroups = {{ind = 2, bg = 1}, {ind = 1, bg = 2}},
     },
-    ["ud_glock_33_mag"] = {
+    ["ud_glock_mag_33"] = {
         VMBodygroups = {{ind = 2, bg = 2}},
     },
-    ["ud_glock_100_mag"] = {
+    ["ud_glock_mag_100"] = {
         VMBodygroups = {{ind = 2, bg = 3}},
     },
 

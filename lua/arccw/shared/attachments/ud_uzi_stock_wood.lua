@@ -19,5 +19,3 @@ att.Mult_SightedSpeedMult = 0.8
 
 att.Mult_DrawTime = 1.25
 att.Mult_HolsterTime = 1.25
-
-att.ActivateElements = {"ud_uzi_wooden_stock"}

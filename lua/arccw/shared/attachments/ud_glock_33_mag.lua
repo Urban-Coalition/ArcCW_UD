@@ -1,4 +1,5 @@
 att.PrintName = "33-Round G17 Extended Mag"
+att.SortOrder = 33
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "Extended magazine for the Glock. Allows many more rounds to be fired before reloading."
 att.Desc_Pros = {

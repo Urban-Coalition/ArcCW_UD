@@ -1,4 +1,5 @@
 att.PrintName = "41-Round Uzi Extended Mag"
+att.SortOrder = 41
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "Extended magazine for the Uzi. Enables slightly longer mag dumps, which may save your life, but the longer mag is more awkward to load."
 att.Desc_Pros = {

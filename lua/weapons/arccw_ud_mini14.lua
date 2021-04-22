@@ -165,7 +165,7 @@ SWEP.BarrelOffsetHip = Vector(0, 0, -3)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-8.8, 5.5, -7),
+    pos        =    Vector(-8, 5, -7),
     ang        =    Angle(-6, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
@@ -193,6 +193,14 @@ SWEP.AttachmentElements = {
     },
     ["ud_mini14_15_22lr_mag"] = {
         VMBodygroups = {{ind = 4, bg = 3}},
+    },
+
+    ["ud_mini14_rail_optic"] = {
+        VMBodygroups = {{ind = 2, bg = 1}},
+    },
+
+    ["ud_mini14_rail_fg"] = {
+        VMBodygroups = {{ind = 5, bg = 1}},
     },
 }
 
@@ -236,12 +244,12 @@ SWEP.Animations = {
     ["fire"] = {
         Source = "fire",
         Time = 18 / 30,
-        ShellEjectAt = 0.03,
+        ShellEjectAt = 0.01,
     },
     ["fire_empty"] = {
         Source = "fire_empty",
         Time = 18 / 30,
-        ShellEjectAt = 0.03,
+        ShellEjectAt = 0.01,
     },
 
     -- 20 Round Reloads --
@@ -252,10 +260,10 @@ SWEP.Animations = {
         Time = 65 / 30,
         LastClip1OutTime = 0.9,
         LHIK = true,
-        LHIKIn = 0.4,
+        LHIKIn = 0.3,
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
-        LHIKOut = 0.6,
+        LHIKOut = 0.4,
         SoundTable = {
             {s = path .. "magout.wav", 	t = 0.15},
             {s = path .. "magin.wav",   t = 1.10},
@@ -265,7 +273,7 @@ SWEP.Animations = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
         Time = 80 / 30,
-        LastClip1OutTime = 0.7,
+        LastClip1OutTime = 1.2,
         LHIK = true,
         LHIKIn = 0.4,
         LHIKEaseIn = 0.4,
@@ -287,10 +295,10 @@ SWEP.Animations = {
         Time = 67 / 30,
         LastClip1OutTime = 0.9,
         LHIK = true,
-        LHIKIn = 0.4,
+        LHIKIn = 0.3,
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
-        LHIKOut = 0.6,
+        LHIKOut = 0.4,
         SoundTable = {
             {s = path .. "magout.wav", 	t = 0.15},
             {s = path .. "magin.wav",   t = 1.10},
@@ -322,10 +330,10 @@ SWEP.Animations = {
         Time = 67 / 30,
         LastClip1OutTime = 0.9,
         LHIK = true,
-        LHIKIn = 0.4,
+        LHIKIn = 0.3,
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
-        LHIKOut = 0.6,
+        LHIKOut = 0.4,
         SoundTable = {
             {s = path .. "magout.wav", 	t = 0.15},
             {s = path .. "magin.wav",   t = 1.10},
@@ -357,10 +365,10 @@ SWEP.Animations = {
         Time = 67 / 30,
         LastClip1OutTime = 0.9,
         LHIK = true,
-        LHIKIn = 0.4,
+        LHIKIn = 0.3,
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
-        LHIKOut = 0.6,
+        LHIKOut = 0.4,
         SoundTable = {
             {s = path .. "magout.wav", 	t = 0.15},
             {s = path .. "magin.wav",   t = 1.10},
@@ -392,17 +400,15 @@ SWEP.Attachments = {
         Slot = {"optic_lp","optic"},
         Bone = "mini14_parent",
         Offset = {
-            vpos = Vector(0, -3.3, 1),
+            vpos = Vector(0, -4.2, 6),
             vang = Angle(90, 2, -90),
-            wpos = Vector(8, 0.4, -5.1),
-            wang = Angle(-10, 0, 180),
         },
-        ExtraSightDist = 4
+        InstalledEles = {"ud_mini14_rail_optic"},
     },
     {
         PrintName = "Frame",
-        DefaultAttName = "UZI Frame",
-        Slot = "ud_uzi_frame",
+        DefaultAttName = "Wooden Frame",
+        Slot = "ud_mini14_frame",
     },
     {
         PrintName = "Muzzle",
@@ -412,8 +418,6 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(0, 0, 0),
             vang = Angle(90, 0, -90),
-            wpos = Vector(30, 1, -8),
-            wang = Angle(-10, -2, 180),
         },
     },
     {
@@ -421,11 +425,10 @@ SWEP.Attachments = {
         Slot = {"foregrip"},
         Bone = "mini14_parent",
         Offset = {
-            vpos = Vector(0, 1.7, 12),
+            vpos = Vector(0, 0.5, 13),
             vang = Angle(90, 0, -90),
-            wpos = Vector(18, 0.9, -4.5),
-            wang = Angle(-10, 0, 180),
         },
+        InstalledEles = {"ud_mini14_rail_fg"},
     },
     {
         PrintName = "Tactical",
@@ -434,14 +437,12 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(0, 1.7, 9.5),
             vang = Angle(90, 0, -90),
-            wpos = Vector(22, 0.9, -4.5),
-            wang = Angle(-10, 0, 180),
         },
     },
     {
         PrintName = "Mag Type",
         Slot = {"ud_mini14_mag"},
-        DefaultAttName = "32 Round Mag",
+        DefaultAttName = "20-Round Ranch Rifle Mag",
     },
     {
         PrintName = "Ammo Type",
@@ -459,8 +460,6 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(0.6, -4, 4),
             vang = Angle(90, 0, -90),
-            wpos = Vector(9, 2.3, -4.6),
-            wang = Angle(-14, -2, 180),
         },
     },
 }

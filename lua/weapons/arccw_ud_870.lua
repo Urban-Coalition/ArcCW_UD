@@ -54,7 +54,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-6.5, 7, -6.6),
+    pos        =    Vector(-7, 4, -5.8),
     ang        =    Angle(-6, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
@@ -235,6 +235,8 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0.4,
+        TPAnimStartTime = 0.8,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
     },
     ["sgreload_finish_empty"] = {
         Source = "sgreload_finish_empty",
@@ -242,7 +244,7 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0.7,
         LHIKOut = 0,
-        TPAnimStartTime = 0.7,
+        TPAnimStartTime = 0.5,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         ShellEjectAt = 0.5,
     },

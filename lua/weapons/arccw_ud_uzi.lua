@@ -142,18 +142,18 @@ SWEP.HolsterPos = Vector(4.623, -2.211, 1.004)
 SWEP.HolsterAng = Angle(-8.443, 28.843, 0)
 
 SWEP.HoldtypeHolstered = "passive"
-SWEP.HoldtypeActive = "pistol"
-SWEP.HoldtypeSights = "revolver"
+SWEP.HoldtypeActive = "smg"
+SWEP.HoldtypeSights = "smg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.9, 2, 2.1),
+     Pos = Vector(-2.9, 0, 2.1),
      Ang = Angle(0, 0, 0),
      Magnification = 1,
      SwitchToSound = "",
      CrosshairInSights = false
 }
 
-SWEP.ActivePos = Vector(0, -2, 0)
+SWEP.ActivePos = Vector(0, 0, 0)
 SWEP.ActiveAng = Angle(0, 0, -3)
 
 SWEP.CustomizePos = Vector(5, -2, -2)
@@ -166,7 +166,7 @@ SWEP.BarrelOffsetHip = Vector(0, 0, -3)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-9.8, 4, -6),
+    pos        =    Vector(-15.5, 3.5, -5),
     ang        =    Angle(-6, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
@@ -193,6 +193,32 @@ SWEP.AttachmentElements = {
     },
     ["ud_uzi_100_mag"] = {
         VMBodygroups = {{ind = 2, bg = 3}},
+    },
+
+    ["ud_uzi_rail_optic"] = {
+        VMBodygroups = {{ind = 4, bg = 3}},
+    },
+
+    ["ud_uzi_clamp"] = {
+        VMBodygroups = {{ind = 6, bg = 1}},
+    },
+
+    ["ud_uzi_rail_fg"] = {
+        VMBodygroups = {{ind = 5, bg = 1}},
+    },
+
+    ["ud_uzi_wooden_stock"] = {
+        VMBodygroups = {{ind = 3, bg = 2}},
+    },
+    ["ud_uzi_folded_stock"] = {
+        VMBodygroups = {{ind = 3, bg = 1}},
+    },
+
+    ["ud_uzi_body_mini"] = {
+        VMBodygroups = {{ind = 1, bg = 2}},
+    },
+    ["ud_uzi_body_micro"] = {
+        VMBodygroups = {{ind = 1, bg = 3},{ind = 4, bg = 1},{ind = 3, bg = 3}},
     },
 }
 
@@ -263,10 +289,10 @@ SWEP.Animations = {
         Time = 90 / 30,
         LastClip1OutTime = 0.7,
         LHIK = true,
-        LHIKIn = 0.4,
-        LHIKEaseIn = 0.4,
-        LHIKEaseOut = 0.15,
-        LHIKOut = 0.4,
+        LHIKIn = 0.3,
+        LHIKEaseIn = 0.3,
+        LHIKEaseOut = 0.2,
+        LHIKOut = 0.55,
     },
 
     -- 16 Round Reloads --
@@ -288,10 +314,10 @@ SWEP.Animations = {
         Time = 90 / 30,
         LastClip1OutTime = 0.7,
         LHIK = true,
-        LHIKIn = 0.4,
-        LHIKEaseIn = 0.4,
-        LHIKEaseOut = 0.15,
-        LHIKOut = 0.4,
+        LHIKIn = 0.3,
+        LHIKEaseIn = 0.3,
+        LHIKEaseOut = 0.2,
+        LHIKOut = 0.55,
     },
 
     -- 41 Round Reloads --
@@ -313,10 +339,10 @@ SWEP.Animations = {
         Time = 90 / 30,
         LastClip1OutTime = 0.7,
         LHIK = true,
-        LHIKIn = 0.4,
-        LHIKEaseIn = 0.4,
-        LHIKEaseOut = 0.15,
-        LHIKOut = 0.4,
+        LHIKIn = 0.3,
+        LHIKEaseIn = 0.3,
+        LHIKEaseOut = 0.2,
+        LHIKOut = 0.55,
     },
 
     -- 100 Round Reloads --
@@ -338,12 +364,14 @@ SWEP.Animations = {
         Time = 90 / 30,
         LastClip1OutTime = 0.7,
         LHIK = true,
-        LHIKIn = 0.4,
-        LHIKEaseIn = 0.4,
-        LHIKEaseOut = 0.15,
-        LHIKOut = 0.4,
+        LHIKIn = 0.3,
+        LHIKEaseIn = 0.3,
+        LHIKEaseOut = 0.2,
+        LHIKOut = 0.55,
     },
 }
+
+SWEP.AutosolveSourceSeq = "idle"
 
 SWEP.Attachments = {
     {
@@ -352,17 +380,20 @@ SWEP.Attachments = {
         Slot = {"optic_lp","optic"},
         Bone = "uzi_parent",
         Offset = {
-            vpos = Vector(0, -3.3, 1),
+            vpos = Vector(-0.2, -1.7, -3),
             vang = Angle(90, 2, -90),
-            wpos = Vector(8, 0.4, -5.1),
-            wang = Angle(-10, 0, 180),
         },
-        ExtraSightDist = 4
+        InstalledEles = {"ud_uzi_rail_optic"}
     },
     {
         PrintName = "Frame",
-        DefaultAttName = "UZI Frame",
+        DefaultAttName = "Uzi Frame",
         Slot = "ud_uzi_frame",
+        Bone = "uzi_parent",
+        Offset = {
+            vpos = Vector(2.6, -3.7, -17.3),
+            vang = Angle(90, 0, -90),
+        },
     },
     {
         PrintName = "Muzzle",
@@ -372,8 +403,6 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(0, 0, 0),
             vang = Angle(90, 0, -90),
-            wpos = Vector(30, 1, -8),
-            wang = Angle(-10, -2, 180),
         },
     },
     {
@@ -381,27 +410,31 @@ SWEP.Attachments = {
         Slot = {"foregrip"},
         Bone = "uzi_parent",
         Offset = {
-            vpos = Vector(0, 1.7, 12),
+            vpos = Vector(-0.2, 2.4, 8),
             vang = Angle(90, 0, -90),
-            wpos = Vector(18, 0.9, -4.5),
-            wang = Angle(-10, 0, 180),
         },
+        InstalledEles = {"ud_uzi_rail_fg"}
     },
     {
         PrintName = "Tactical",
         Slot = {"tac_pistol"},
         Bone = "uzi_parent",
         Offset = {
-            vpos = Vector(0, 1.7, 9.5),
-            vang = Angle(90, 0, -90),
-            wpos = Vector(22, 0.9, -4.5),
-            wang = Angle(-10, 0, 180),
+            vpos = Vector(0.8, 0.5, 12),
+            vang = Angle(90, 0, 0),
         },
+        InstalledEles = {"ud_uzi_clamp"}
+    },
+    {
+        PrintName = "Stock",
+        Slot = {"ud_uzi_stock"},
+        DefaultAttName = "Standard Folding Stock",
+		ExcludeFlags = {"micro"},
     },
     {
         PrintName = "Mag Type",
         Slot = {"ud_uzi_mag"},
-        DefaultAttName = "32 Round Mag",
+        DefaultAttName = "32-Round Uzi Mag",
     },
     {
         PrintName = "Ammo Type",
@@ -419,8 +452,6 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(0.6, -4, 4),
             vang = Angle(90, 0, -90),
-            wpos = Vector(9, 2.3, -4.6),
-            wang = Angle(-14, -2, 180),
         },
     },
 }

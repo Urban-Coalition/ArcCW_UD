@@ -173,7 +173,7 @@ SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 local path = "weapons/arccw_ud/870/"
 local common = "weapons/arccw_ud/common/"
 SWEP.ShootSound = path .. "fire.ogg"
-SWEP.ShootSoundSilenced = "weapons/arccw/m870/lowpolym870_supp.ogg"
+SWEP.ShootSoundSilenced = path .. "fire_supp.ogg"
 SWEP.DistantShootSound = path .. "fire_dist.ogg"
 
 SWEP.Hook_Think = function(wep)

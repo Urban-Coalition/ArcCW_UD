@@ -119,8 +119,8 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 4
-SWEP.HipDispersion = 600
-SWEP.MoveDispersion = 500
+SWEP.HipDispersion = 900
+SWEP.MoveDispersion = 200
 SWEP.JumpDispersion = 1000
 
 SWEP.Primary.Ammo = "smg1"
@@ -474,11 +474,12 @@ SWEP.Attachments = {
         Slot = {"optic_lp","optic","sniper_optic"},
         Bone = "m16_parent",
         Offset = {
-            vpos = Vector(0, -3.3, 1),
+            vpos = Vector(0, -3.9, 3),
             vang = Angle(90, 2, -90),
             wpos = Vector(8, 0.4, -5.1),
             wang = Angle(-10, 0, 180),
         },
+        VMScale = Vector(1.25, 1.25, 1.25),
         ExtraSightDist = 4
     },
     {

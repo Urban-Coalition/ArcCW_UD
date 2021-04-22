@@ -196,6 +196,10 @@ SWEP.AttachmentElements = {
     ["ud_glock_rail_optic"] = {
         VMBodygroups = {{ind = 3, bg = 1}},
     },
+
+    ["ud_glock_slide_auto"] = {
+        VMBodygroups = {{ind = 4, bg = 3}},
+    },
 }
 
 -- Animations --
@@ -249,12 +253,12 @@ SWEP.Animations = {
         ShellEjectAt = 0.03,
     },
     ["fire_18"] = {
-        Source = "fire",
+        Source = "fire_18",
         Time = 16 / 30,
         ShellEjectAt = 0.03,
     },
     ["fire_empty_18"] = {
-        Source = "fire_empty",
+        Source = "fire_empty_18",
         Time = 16 / 30,
         ShellEjectAt = 0.03,
     },
@@ -428,9 +432,9 @@ SWEP.Attachments = {
         InstalledEles = {"ud_glock_rail_optic"},
     },
     {
-        PrintName = "Barrel",
-        DefaultAttName = "Standard Barrel",
-        Slot = "ud_glock_barrel",
+        PrintName = "Slide",
+        DefaultAttName = "Standard Slide",
+        Slot = "ud_glock_slide",
     },
     {
         PrintName = "Muzzle",

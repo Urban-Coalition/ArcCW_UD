@@ -18,6 +18,8 @@ att.Mult_RPM = 2
 
 att.LHIK = true
 
+att.Override_HoldtypeActive = "pistol"
+
 att.Model = "models/weapons/arccw/atts/mini_lhik.mdl"
 
 att.ActivateElements = {"ud_uzi_body_micro"}

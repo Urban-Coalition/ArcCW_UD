@@ -216,9 +216,19 @@ SWEP.AttachmentElements = {
 
     ["ud_uzi_body_mini"] = {
         VMBodygroups = {{ind = 1, bg = 2}},
+        AttPosMods = {
+            [3] = {
+                vpos = Vector(0, 0, -3.4),
+            },
+        },
     },
     ["ud_uzi_body_micro"] = {
         VMBodygroups = {{ind = 1, bg = 3},{ind = 4, bg = 1},{ind = 3, bg = 3}},
+        AttPosMods = {
+            [3] = {
+                vpos = Vector(0, 0, -5.8),
+            },
+        },
     },
 }
 
@@ -356,7 +366,7 @@ SWEP.Animations = {
         LHIKIn = 0.4,
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
-        LHIKOut = 0.6,
+        LHIKOut = 0.4,
     },
     ["reload_empty_100"] = {
         Source = "reload_empty_100",

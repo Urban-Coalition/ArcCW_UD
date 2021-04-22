@@ -15,17 +15,14 @@ att.AutoStats = true
 
 att.Mult_HipDispersion = 0.75
 att.Mult_SightTime = 1.5
-att.Mult_Recoil = 1.2
-att.Mult_RecoilSide = 1.2
+att.Mult_Sway = 1.5
 
 att.LHIK = true
 att.LHIKHide = true
 
 -- sry bby u too OP
---att.Override_ShootWhileSprint = true
 if GetConVar("arccw_ud_homeboy_epic"):GetBool() then
     att.Override_ShootWhileSprint = true
-    att.Mult_MoveDispersion = 2
 end
 
 att.Override_ActivePos = Vector(0, 0, 1)

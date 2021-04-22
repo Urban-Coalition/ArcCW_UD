@@ -13,11 +13,10 @@ att.Slot = "ud_mini14_mag"
 
 att.AutoStats = true
 
---att.Mult_SightTime = 1.4
---att.Mult_Recoil = 0.9
-att.Mult_ReloadTime = 0.95
---att.Mult_SpeedMult = 0.9
+att.Mult_SightTime = 0.85
+att.Mult_ReloadTime = 0.9
 att.Override_ClipSize = 10
+att.Mult_Sway = 0.75
 
 att.ActivateElements = {"ud_mini14_10_mag"}
 

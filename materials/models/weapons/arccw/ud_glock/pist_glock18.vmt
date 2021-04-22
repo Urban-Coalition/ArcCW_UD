@@ -3,9 +3,9 @@
 	"$baseTexture" "models\weapons\arccw\ud_glock\pist_glock18"
 
 	$phong 1
-	$phongboost 100
+	$phongboost 5
 
-	$phongfresnelranges "[.1 .4 2]"
+	$phongfresnelranges "[.2 .2 1]"
 	$nocompress 1
 	$phongexponenttexture "models\weapons\arccw\ud_glock\pist_glock18_exponent"
 

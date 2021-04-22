@@ -54,7 +54,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN
  
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-6.5, 7, -6.6),
+    pos        =    Vector(-7, 4, -5.8),
     ang        =    Angle(-6, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
@@ -217,15 +217,17 @@ SWEP.Animations = {
         Time = 16 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         LHIK = true,
-        LHIKIn = 0.5,
+        LHIKIn = 0.2,
+        LHIKEaseIn = 0.2,
         LHIKOut = 0,
     },
     ["sgreload_start_empty"] = {
         Source = "sgreload_start_empty",
         Time = 40 / 30,
         LHIK = true,
-        LHIKIn = 0.7,
+        LHIKIn = 0.2,
         LHIKOut = 0,
+        TPAnimStartTime = 0.5,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
     },
     ["sgreload_insert"] = {
@@ -242,7 +244,10 @@ SWEP.Animations = {
         Time = 22 / 30,
         LHIK = true,
         LHIKIn = 0,
-        LHIKOut = 0.4,
+        LHIKEaseOut = 0.3,
+        LHIKOut = 0.6,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        TPAnimStartTime = 0.8,
     },
 }
 
@@ -253,8 +258,8 @@ SWEP.BulletBones = {
 -- Bodygroups --
 
 SWEP.AttachmentElements = {
-    ["ExampleBG"] = {
-        VMBodygroups = {{ind = 1, bg = 1}},
+    ["ud_autoshotgun_rail_fg"] = {
+        VMBodygroups = {{ind = 3, bg = 1}},
     },
 }
 
@@ -267,10 +272,7 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(0, -2, 5),
             vang = Angle(90, 2, -90),
-            wpos = Vector(8, 0.4, -5.1),
-            wang = Angle(-10, 0, 180),
         },
-        ExtraSightDist = 4
     },
     {
         PrintName = "Barrel",
@@ -285,8 +287,6 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(-0.03, -0.05, -0.5),
             vang = Angle(90, 0, -90),
-            wpos = Vector(30, 1, -8),
-            wang = Angle(-10, -2, 180),
         },
     },
     { 
@@ -294,11 +294,10 @@ SWEP.Attachments = {
         Slot = {"foregrip"},
         Bone = "1014_parent",
         Offset = {
-            vpos = Vector(0, 1.7, 7),
+            vpos = Vector(0, 2, 12),
             vang = Angle(90, 0, -90),
-            wpos = Vector(18, 0.9, -4.5),
-            wang = Angle(-10, 0, 180),
         },
+        InstalledEles = {"ud_autoshotgun_rail_fg"},
     },
     {
         PrintName = "Tactical",
@@ -307,8 +306,6 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(0, 1.7, 9.5),
             vang = Angle(90, 0, -90),
-            wpos = Vector(22, 0.9, -4.5),
-            wang = Angle(-10, 0, 180),
         },
     },
     {
@@ -326,8 +323,14 @@ SWEP.Attachments = {
         Slot = {"go_ammo"},
     },
     {
-        PrintName = "Perk",
-        Slot = "go_perk"
+        PrintName = "Training Package",
+        Slot = "ud_training",
+        DefaultAttName = "Basic Training"
+    },
+    {
+        PrintName = "Internals",
+        Slot = "ud_fg", -- Fire group
+        DefaultAttName = "Standard Internals"
     },
     {
         PrintName = "Charm",
@@ -337,8 +340,6 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(0.6, -4, 4),
             vang = Angle(90, 0, -90),
-            wpos = Vector(9, 2.3, -4.6),
-            wang = Angle(-14, -2, 180),
         },
     },
 }

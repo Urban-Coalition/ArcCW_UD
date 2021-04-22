@@ -22,6 +22,8 @@ att.Mult_Range = 0.9
 att.Mult_RPM = 0.8
 att.Mult_Sway = 1.1
 
+att.Add_BarrelLength = -4
+
 att.Override_Firemodes = {
     {
         Mode = 2,

@@ -16,6 +16,8 @@ att.Mult_Recoil = 1.75
 att.Mult_RecoilSide = 2
 att.Mult_RPM = 2
 
+att.Add_BarrelLength = -8
+
 att.LHIK = true
 
 att.Override_HoldtypeActive = "pistol"

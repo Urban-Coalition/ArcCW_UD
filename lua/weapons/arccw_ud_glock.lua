@@ -131,7 +131,7 @@ SWEP.ShootSpeedMult = 1
 
 -- Length --
 
-SWEP.BarrelLength = 24
+SWEP.BarrelLength = 8
 SWEP.ExtraSightDist = 7
 
 -- Ironsights / Customization / Poses --

@@ -16,6 +16,8 @@ att.Mult_Recoil = 1.1
 att.Mult_RecoilSide = 1.2
 att.Mult_RPM = 1.50
 
+att.Add_BarrelLength = -4
+
 att.LHIK = true
 
 att.Model = "models/weapons/arccw/atts/mini_lhik.mdl"

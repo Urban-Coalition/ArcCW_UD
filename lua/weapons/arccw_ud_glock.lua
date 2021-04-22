@@ -196,9 +196,20 @@ SWEP.AttachmentElements = {
     ["ud_glock_rail_optic"] = {
         VMBodygroups = {{ind = 3, bg = 1}},
     },
-
+    ["ud_glock_slide_comp"] = {
+        VMBodygroups = {{ind = 4, bg = 1}},
+        NameChange = "GEN 3 Custom",
+        TrueNameChange = "Glock 17 Custom",
+    },
+    ["ud_glock_slide_lb"] = {
+        VMBodygroups = {{ind = 4, bg = 2}},
+        NameChange = "GEN 3 Ext.",
+        TrueNameChange = "Glock 17L",
+    },
     ["ud_glock_slide_auto"] = {
         VMBodygroups = {{ind = 4, bg = 3}},
+        NameChange = "GEN 3 Auto",
+        TrueNameChange = "Glock 18C",
     },
 }
 

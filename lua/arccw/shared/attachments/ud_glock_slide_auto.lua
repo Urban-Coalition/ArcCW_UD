@@ -1,3 +1,4 @@
+
 att.PrintName = "GEN 3 Auto Slide"
 
 if GetConVar("arccw_truenames"):GetBool() then

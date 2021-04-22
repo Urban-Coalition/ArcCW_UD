@@ -574,10 +574,6 @@ SWEP.Attachments = {
         Slot = {"go_ammo"},
     },
     {
-        PrintName = "Perk",
-        Slot = "go_perk"
-    },
-    {
         PrintName = "Training Package",
         Slot = "ud_training",
         DefaultAttName = "Basic Training"

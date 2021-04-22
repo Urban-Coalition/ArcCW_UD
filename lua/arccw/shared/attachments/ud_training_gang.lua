@@ -1,7 +1,7 @@
 att.PrintName = "Homeboy"
 
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "GANGSTAS ROLL UP IN DA HOOD, POP POP POP POP POP NIGGA, I BALL HARD STICK A GLOCK UP IN YOUR FACE NIGGA, DROP DROP DROP DROP DROP DROP DROP GO YOUR HOMIES NIGGA"
+att.Description = "GANGSTAS ROLL UP IN DA HOOD, POP POP POP POP POP NIGGA, I BALL HARD STICK A GLOCK UP IN YOUR FACE NIGGA, DROP DROP DROP DROP DROP GO YOUR HOMIES NIGGA"
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

@@ -27,6 +27,7 @@ $bodygroup "4" {
 	studio "glock_slide_comp.smd"
 	studio "glock_slide_lb.smd"
 	studio "glock_slide_auto.smd"
+	studio "glock_slide_carbine.smd"
 }
 
 $cdmaterials "models\weapons\arccw\ud_m16"

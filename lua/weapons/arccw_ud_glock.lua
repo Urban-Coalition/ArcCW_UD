@@ -215,6 +215,11 @@ SWEP.AttachmentElements = {
         NameChange = "GEN3 Auto",
         TrueNameChange = "Glock 18C",
     },
+    ["ud_glock_slide_carbine"] = {
+        VMBodygroups = {{ind = 4, bg = 4}},
+        NameChange = "GEN3 Euro Carbine",
+        TrueNameChange = "Glock 17XXXL",
+    },
 }
 
 -- Animations --

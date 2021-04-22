@@ -222,6 +222,12 @@ SWEP.AttachmentElements = {
     },
     ["ud_m16_fpw_barrel"] = {
         VMBodygroups = {{ind = 4, bg = 3}},
+        Override_IronSightStruct = {
+            Pos = Vector(-1, 4, 0),
+            Ang = Angle(0, 0, 0),
+            Magnification = 1,
+            CrosshairInSights = true
+        }
     },
     ["ud_m16_wood_barrel"] = {
         VMBodygroups = {{ind = 4, bg = 4}},
@@ -231,6 +237,12 @@ SWEP.AttachmentElements = {
     },
     ["ud_m16_stub_barrel"] = {
         VMBodygroups = {{ind = 4, bg = 6}},
+        Override_IronSightStruct = {
+            Pos = Vector(-1, 4, 0),
+            Ang = Angle(0, 0, 0),
+            Magnification = 1,
+            CrosshairInSights = true
+        }
     },
 }
 
@@ -534,6 +546,7 @@ SWEP.Attachments = {
             vpos = Vector(0, 1.5, 12),
             vang = Angle(90, 0, -90),
         },
+        VMScale = Vector(1.25, 1.25, 1.25),
         InstalledEles = {"ud_m16_rail_fg"}
     },
     {

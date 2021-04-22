@@ -189,6 +189,10 @@ SWEP.BulletBones = {
 
 SWEP.AttachmentElements = {
 
+    ["rail_optic"] = {
+        VMBodygroups = {{ind = 3, bg = 1}}
+    },
+
     ["ud_m16_20_mag"] = {
         VMBodygroups = {{ind = 2, bg = 1}},
     },
@@ -496,6 +500,7 @@ SWEP.Attachments = {
     {
         PrintName = "Optic",
         DefaultAttName = "Iron Sights",
+        InstalledEles = {"rail_optic"},
         Slot = {"optic_lp","optic","sniper_optic"},
         Bone = "m16_parent",
         Offset = {
@@ -558,10 +563,10 @@ SWEP.Attachments = {
         PrintName = "Ammo Type",
         Slot = {"go_ammo"},
     },
-    -- {
-    --     PrintName = "Perk",
-    --     Slot = "go_perk"
-    -- },
+    {
+        PrintName = "Perk",
+        Slot = "go_perk"
+    },
     {
         PrintName = "Training Package",
         Slot = "ud_training",

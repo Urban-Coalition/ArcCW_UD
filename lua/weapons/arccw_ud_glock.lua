@@ -346,7 +346,7 @@ SWEP.Animations = {
         SoundTable = {
             {s = path .. "magrelease.ogg",    t = 0.4, c = ci},
             {s = path .. "magout.ogg",        t = 0.4, c = ci},
-            {s = path .. "magin.ogg",         t = 0.5, c = ci},
+            {s = path .. "magin.ogg",         t = 0.52, c = ci},
         },
     },
     ["reload_empty_33"] = {
@@ -384,7 +384,7 @@ SWEP.Animations = {
         SoundTable = {
             {s = path .. "magrelease.ogg",    t = 0.3, c = ci},
             {s = path .. "magout.ogg",        t = 0.3, c = ci},
-            {s = path .. "magin.ogg",         t = 0.4, c = ci},
+            {s = path .. "magin.ogg",         t = 0.63, c = ci},
         },
     },
     ["reload_empty_100"] = {
@@ -399,10 +399,11 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = path .. "magrelease.ogg",    t = 0.12, c = ci},
-            {s = path .. "magout.ogg",        t = 0.12, c = ci},
-            {s = path .. "magin.ogg",         t = 0.43, c = ci},
-            {s = path .. "sliderel.ogg",      t = 1.43, c = ci},
+            {s = path .. "magrelease.ogg",      t = 0.12, c = ci},
+            {s = path .. "magout.ogg",          t = 0.12, c = ci},
+            {s = path .. "magin.ogg",           t = 0.43, c = ci},
+            {s = path .. "sliderel_deact.ogg",  t = 1.3, c = ci},
+            {s = path .. "sliderel.ogg",        t = 1.545, c = ci},
         },
     },
 }

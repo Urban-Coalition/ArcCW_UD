@@ -14,6 +14,7 @@ att.AutoStats = true
 --att.Mult_SightTime = 1
 --att.Mult_Recoil = 1
 --att.Mult_SpeedMult = 1
+att.Mult_RPM = 1.5
 
 att.LHIK = true
 

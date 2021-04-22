@@ -20,5 +20,5 @@ function att.Hook_GetCapacity(wep,cap)
 end
 
 -- att.Add_ClipSize = math.floor(att.Hook_GetCapacity() * -.25)
-
+att.Mult_HeatCapacity = 1.25
 att.Mult_RPM = 1.05

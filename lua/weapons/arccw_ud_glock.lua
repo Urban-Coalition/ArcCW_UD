@@ -21,7 +21,7 @@ SWEP.TracerWidth = 2
 
 -- Fake name --
 
-SWEP.PrintName = "GEN 3"
+SWEP.PrintName = "GEN3"
 
 -- True name --
 

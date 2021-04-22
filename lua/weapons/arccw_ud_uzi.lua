@@ -128,7 +128,7 @@ SWEP.MagID = "glock"
 
 SWEP.SpeedMult = 0.9
 SWEP.SightedSpeedMult = 0.9
-SWEP.SightTime = 0.18
+SWEP.SightTime = 0.2
 SWEP.ShootSpeedMult = 0.95
 
 -- Length --

@@ -11,11 +11,15 @@ att.Slot = "ud_uzi_frame"
 
 att.AutoStats = true
 
+att.Mult_AccuracyMOA = 3
 att.Mult_SightTime = 0.6
-att.Mult_Recoil = 1.75
+att.Mult_Recoil = 1.5
 att.Mult_RecoilSide = 1.5
 att.Mult_RPM = 2
 att.Mult_Range = 0.5
+
+att.Mult_DrawTime = 0.6
+att.Mult_HolsterTime = 0.6
 
 att.Add_BarrelLength = -8
 

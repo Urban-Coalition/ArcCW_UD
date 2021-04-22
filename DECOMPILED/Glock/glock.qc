@@ -77,8 +77,8 @@ $sequence "fire" {
 	blend "sights" 0 1
 	fps 30
 	"ACT_VM_PRIMARYATTACK" 1
-	fadein 0.03
-	fadeout 0.03
+	fadein 0.02
+	fadeout 0.02
 }
 
 $sequence "fire_empty" {
@@ -87,8 +87,8 @@ $sequence "fire_empty" {
 	blend "sights" 0 1
 	fps 30
 	"ACT_VM_PRIMARYATTACK" 1
-	fadein 0.03
-	fadeout 0.03
+	fadein 0.02
+	fadeout 0.02
 }
 
 $sequence "fire_18" {
@@ -97,8 +97,8 @@ $sequence "fire_18" {
 	blend "sights" 0 1
 	fps 30
 	"ACT_VM_PRIMARYATTACK" 1
-	fadein 0.03
-	fadeout 0.03
+	fadein 0.01
+	fadeout 0.01
 }
 
 $sequence "fire_empty_18" {
@@ -107,8 +107,8 @@ $sequence "fire_empty_18" {
 	blend "sights" 0 1
 	fps 30
 	"ACT_VM_PRIMARYATTACK" 1
-	fadein 0.03
-	fadeout 0.03
+	fadein 0.01
+	fadeout 0.01
 }
 
 $sequence "draw" "anims\draw.smd" {

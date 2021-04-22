@@ -1,7 +1,8 @@
-att.PrintName = "14.5\" Wood Carbine Barrel"
+att.PrintName = "14\" Wood Carbine Barrel"
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "Description"
 att.Desc_Pros = {
+    "Full-auto"
 }
 att.Desc_Cons = {
 }

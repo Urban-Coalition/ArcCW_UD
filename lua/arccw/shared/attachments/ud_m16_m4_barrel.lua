@@ -2,6 +2,7 @@ att.PrintName = "14.5\" M4 Carbine Barrel"
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "Description"
 att.Desc_Pros = {
+    "Full-auto"
 }
 att.Desc_Cons = {
 }
@@ -32,4 +33,4 @@ att.Override_Firemodes = {
     }
 }
 
-att.ActivateElements = {"ud_m16_m4_barrel"}
+att.ActivateElements = {"ud_m16_cqbr_barrel"}

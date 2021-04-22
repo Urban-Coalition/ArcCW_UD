@@ -29,6 +29,7 @@ $bodygroup "4" {
 	studio "glock_slide_auto.smd"
 }
 
+$cdmaterials "models\weapons\arccw\ud_m16"
 $cdmaterials "models\weapons\arccw\ud_glock"
 $cdmaterials "models\weapons\arccw\ud_m1014"
 $cdmaterials "models\weapons\arccw\ud_common"

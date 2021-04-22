@@ -267,7 +267,7 @@ SWEP.Animations = {
 
     ["reload"] = {
         Source = "reload",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         Time = 56 / 30,
         MinProgress = 1.1,
         LastClip1OutTime = 0.9,
@@ -284,7 +284,7 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         Time = 66 / 30,
         MinProgress = 1.5,
         LastClip1OutTime = 0.7,
@@ -305,7 +305,7 @@ SWEP.Animations = {
 
     ["reload_10"] = {
         Source = "reload_10",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         Time = 56 / 30,
         MinProgress = 1.1,
         LastClip1OutTime = 0.9,
@@ -322,7 +322,7 @@ SWEP.Animations = {
     },
     ["reload_empty_10"] = {
         Source = "reload_empty_10",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         Time = 66 / 30,
         MinProgress = 1.5,
         LastClip1OutTime = 0.7,
@@ -343,7 +343,7 @@ SWEP.Animations = {
 
     ["reload_33"] = {
         Source = "reload_33",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         Time = 56 / 30,
         MinProgress = 1.1,
         LastClip1OutTime = 0.9,
@@ -360,7 +360,7 @@ SWEP.Animations = {
     },
     ["reload_empty_33"] = {
         Source = "reload_empty_33",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         Time = 66 / 30,
         MinProgress = 1.5,
         LastClip1OutTime = 0.7,
@@ -381,7 +381,7 @@ SWEP.Animations = {
 
     ["reload_100"] = {
         Source = "reload_100",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         Time = 56 / 30,
         MinProgress = 1.3,
         LastClip1OutTime = 0.9,
@@ -398,7 +398,7 @@ SWEP.Animations = {
     },
     ["reload_empty_100"] = {
         Source = "reload_empty_100",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
         Time = 66 / 30,
         MinProgress = 1.75,
         LastClip1OutTime = 0.7,

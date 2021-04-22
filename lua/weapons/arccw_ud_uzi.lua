@@ -284,7 +284,7 @@ SWEP.Animations = {
 
     ["reload"] = {
         Source = "reload",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
         Time = 67 / 30,
         LastClip1OutTime = 0.9,
         LHIK = true,
@@ -295,7 +295,7 @@ SWEP.Animations = {
     },
     ["reload_empty"] = {
         Source = "reload_empty",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
         Time = 90 / 30,
         LastClip1OutTime = 0.7,
         LHIK = true,
@@ -309,7 +309,7 @@ SWEP.Animations = {
 
     ["reload_16"] = {
         Source = "reload_16",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
         Time = 67 / 30,
         LastClip1OutTime = 0.9,
         LHIK = true,
@@ -320,7 +320,7 @@ SWEP.Animations = {
     },
     ["reload_empty_16"] = {
         Source = "reload_empty_16",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
         Time = 90 / 30,
         LastClip1OutTime = 0.7,
         LHIK = true,
@@ -334,7 +334,7 @@ SWEP.Animations = {
 
     ["reload_41"] = {
         Source = "reload_41",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
         Time = 67 / 30,
         LastClip1OutTime = 0.9,
         LHIK = true,
@@ -345,7 +345,7 @@ SWEP.Animations = {
     },
     ["reload_empty_41"] = {
         Source = "reload_empty_41",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
         Time = 90 / 30,
         LastClip1OutTime = 0.7,
         LHIK = true,
@@ -359,7 +359,7 @@ SWEP.Animations = {
 
     ["reload_100"] = {
         Source = "reload_100",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
         Time = 67 / 30,
         LastClip1OutTime = 0.9,
         LHIK = true,
@@ -370,7 +370,7 @@ SWEP.Animations = {
     },
     ["reload_empty_100"] = {
         Source = "reload_empty_100",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
         Time = 90 / 30,
         LastClip1OutTime = 0.7,
         LHIK = true,

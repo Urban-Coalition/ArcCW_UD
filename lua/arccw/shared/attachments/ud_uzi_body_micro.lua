@@ -1,6 +1,6 @@
 att.PrintName = "Micro Frame"
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "Description"
+att.Description = "Extremely compact frame that turns this sub-machine gun into a machine pistol. Without an attach point for stocks, recoil is dramatically increased."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
@@ -11,9 +11,9 @@ att.Slot = "ud_uzi_frame"
 
 att.AutoStats = true
 
---att.Mult_SightTime = 1
---att.Mult_Recoil = 1
---att.Mult_SpeedMult = 1
+att.Mult_SightTime = 0.6
+att.Mult_Recoil = 1.75
+att.Mult_RecoilSide = 2
 att.Mult_RPM = 2
 
 att.LHIK = true

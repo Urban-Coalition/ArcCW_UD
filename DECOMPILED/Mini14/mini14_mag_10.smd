@@ -71,7 +71,7 @@ nodes
 68 "mini14_flash" 64
 69 "mini14_trigger" 64
 70 "mini14_sling" 64
-71 "Brass" 64
+71 "brass" 64
 72 "mini14_mag" -1
 73 "mini14_bullet1" 72
 74 "mini14_bullet2" 72

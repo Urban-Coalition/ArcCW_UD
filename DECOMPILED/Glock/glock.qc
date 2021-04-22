@@ -137,6 +137,30 @@ $sequence "holster_empty" "anims\holster_empty.smd" {
 	snap
 }
 
+$sequence "fix" "anims\jam.smd" {
+	fps 30
+	"ACT_VM_IDLE" 1
+	snap
+}
+
+$sequence "fix_10" "anims\jam_10.smd" {
+	fps 30
+	"ACT_VM_IDLE" 1
+	snap
+}
+
+$sequence "fix_33" "anims\jam_33.smd" {
+	fps 30
+	"ACT_VM_IDLE" 1
+	snap
+}
+
+$sequence "fix_100" "anims\jam_100.smd" {
+	fps 30
+	"ACT_VM_IDLE" 1
+	snap
+}
+
 $sequence "reload" {
 	"anims\reload.smd"
 	"anims\reload_iron.smd"

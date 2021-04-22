@@ -1,6 +1,6 @@
 att.PrintName = "14\" Wood M603 Barrel"
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "Description"
+att.Description = "Wooden handguard replicating that of the Colt Model 603. No such official product has ever been made, so all examples are the result of individual gunsmiths. Performs identically to the M4 barrel."
 att.Desc_Pros = {
     "Full-auto"
 }

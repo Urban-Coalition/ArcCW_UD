@@ -146,7 +146,19 @@ $sequence "fix" "anims\jam.smd" {
 	snap
 }
 
+$sequence "fix_empty" "anims\jam_empty.smd" {
+	fps 30
+	"ACT_VM_IDLE" 1
+	snap
+}
+
 $sequence "fix_10" "anims\jam_10.smd" {
+	fps 30
+	"ACT_VM_IDLE" 1
+	snap
+}
+
+$sequence "fix_empty_10" "anims\jam_10_empty.smd" {
 	fps 30
 	"ACT_VM_IDLE" 1
 	snap
@@ -158,7 +170,19 @@ $sequence "fix_33" "anims\jam_33.smd" {
 	snap
 }
 
+$sequence "fix_empty_33" "anims\jam_33_empty.smd" {
+	fps 30
+	"ACT_VM_IDLE" 1
+	snap
+}
+
 $sequence "fix_100" "anims\jam_100.smd" {
+	fps 30
+	"ACT_VM_IDLE" 1
+	snap
+}
+
+$sequence "fix_empty_100" "anims\jam_100_empty.smd" {
 	fps 30
 	"ACT_VM_IDLE" 1
 	snap

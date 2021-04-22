@@ -25,3 +25,9 @@ att.ActivateElements = {"ud_glock_33_mag"}
 att.Hook_SelectReloadAnimation = function(wep, anim)
     return anim .. "_33"
 end
+
+att.Hook_TranslateAnimation = function(wep, anim)
+    if (anim == "fix") then
+        return anim .. "_33"
+    end
+end

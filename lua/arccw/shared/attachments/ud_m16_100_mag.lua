@@ -31,3 +31,9 @@ att.Override_HeatDelayTime = 3
 att.Hook_SelectReloadAnimation = function(wep, anim)
     return anim .. "_100"
 end
+
+att.Hook_TranslateAnimation = function(wep, anim)
+    if (anim == "fix") then
+        return anim .. "_100"
+    end
+end

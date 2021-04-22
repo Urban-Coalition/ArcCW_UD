@@ -30,6 +30,7 @@ $bodygroup "4" {
 }
 
 $cdmaterials "models\weapons\arccw\ud_glock"
+$cdmaterials "models\weapons\arccw\ud_m1014"
 $cdmaterials "models\weapons\arccw\ud_common"
 
 $attachment "1" "glock_flash" 0 0 0 rotate -90 0 0
@@ -47,6 +48,12 @@ $bbox 0 0 0 0 0 0
 $cbox 0 0 0 0 0 0
 
 $poseparameter "sights" 0 1 loop 0
+
+$sequence "WM" "anims\WM.smd" {
+	fps 30
+	"ACT_VM_IDLE" 1
+	snap
+}
 
 $sequence "idle" "anims\idle.smd" {
 	fps 30

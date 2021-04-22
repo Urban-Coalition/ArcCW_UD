@@ -51,7 +51,7 @@ end
 -- Viewmodel / Worldmodel / FOV --
 
 SWEP.ViewModel = "models/weapons/arccw/c_ud_glock.mdl"
-SWEP.WorldModel = "models/weapons/w_rif_m4a1.mdl"
+SWEP.WorldModel = "models/weapons/w_pist_usp.mdl"
 SWEP.ViewModelFOV = 60
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
@@ -150,7 +150,7 @@ SWEP.IronSightStruct = {
      SwitchToSound = "",
 }
 
-SWEP.ActivePos = Vector(0, -1, 0)
+SWEP.ActivePos = Vector(0, 0, 0)
 SWEP.ActiveAng = Angle(0, 0, -3)
 
 SWEP.CustomizePos = Vector(5, -2, -2)
@@ -163,7 +163,7 @@ SWEP.BarrelOffsetHip = Vector(0, 0, -3)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-14.5, 4, -4.8),
+    pos        =    Vector(-10.5, 3.5, -4.5),
     ang        =    Angle(-6, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
@@ -191,6 +191,14 @@ SWEP.AttachmentElements = {
     },
     ["ud_glock_100_mag"] = {
         VMBodygroups = {{ind = 2, bg = 3}},
+    },
+
+    ["ud_glock_rail_optic"] = {
+        VMBodygroups = {{ind = 3, bg = 1}},
+    },
+
+    ["ud_glock_slide_auto"] = {
+        VMBodygroups = {{ind = 4, bg = 3}},
     },
 }
 
@@ -237,22 +245,22 @@ SWEP.Animations = {
     ["fire"] = {
         Source = "fire",
         Time = 16 / 30,
-        ShellEjectAt = 0.01,
+        ShellEjectAt = 0.03,
     },
     ["fire_empty"] = {
         Source = "fire_empty",
         Time = 16 / 30,
-        ShellEjectAt = 0.01,
+        ShellEjectAt = 0.03,
     },
     ["fire_18"] = {
-        Source = "fire",
+        Source = "fire_18",
         Time = 16 / 30,
-        ShellEjectAt = 0.01,
+        ShellEjectAt = 0.03,
     },
     ["fire_empty_18"] = {
-        Source = "fire_empty",
+        Source = "fire_empty_18",
         Time = 16 / 30,
-        ShellEjectAt = 0.01,
+        ShellEjectAt = 0.03,
     },
 
     -- 17 Round Reloads --
@@ -264,10 +272,10 @@ SWEP.Animations = {
         MinProgress = 1.1,
         LastClip1OutTime = 0.9,
         LHIK = true,
-        LHIKIn = 0.4,
-        LHIKEaseIn = 0.4,
+        LHIKIn = 0.2,
+        LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.15,
-        LHIKOut = 0.6,
+        LHIKOut = 0.3,
         SoundTable = {
             {s = path .. "magrelease.ogg",    t = 0.3, c = ci},
             {s = path .. "magout.ogg",        t = 0.3, c = ci},
@@ -281,10 +289,10 @@ SWEP.Animations = {
         MinProgress = 1.5,
         LastClip1OutTime = 0.7,
         LHIK = true,
-        LHIKIn = 0.4,
-        LHIKEaseIn = 0.4,
+        LHIKIn = 0.2,
+        LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.15,
-        LHIKOut = 0.4,
+        LHIKOut = 0.3,
         SoundTable = {
             {s = path .. "magrelease.ogg",    t = 0.15, c = ci},
             {s = path .. "magout.ogg",        t = 0.15, c = ci},
@@ -302,10 +310,10 @@ SWEP.Animations = {
         MinProgress = 1.1,
         LastClip1OutTime = 0.9,
         LHIK = true,
-        LHIKIn = 0.4,
-        LHIKEaseIn = 0.4,
+        LHIKIn = 0.2,
+        LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.15,
-        LHIKOut = 0.6,
+        LHIKOut = 0.3,
         SoundTable = {
             {s = path .. "magrelease.ogg",    t = 0.3, c = ci},
             {s = path .. "magout.ogg",        t = 0.3, c = ci},
@@ -319,10 +327,10 @@ SWEP.Animations = {
         MinProgress = 1.5,
         LastClip1OutTime = 0.7,
         LHIK = true,
-        LHIKIn = 0.4,
-        LHIKEaseIn = 0.4,
+        LHIKIn = 0.2,
+        LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.15,
-        LHIKOut = 0.4,
+        LHIKOut = 0.3,
         SoundTable = {
             {s = path .. "magrelease.ogg",    t = 0.15, c = ci},
             {s = path .. "magout.ogg",        t = 0.15, c = ci},
@@ -340,10 +348,10 @@ SWEP.Animations = {
         MinProgress = 1.1,
         LastClip1OutTime = 0.9,
         LHIK = true,
-        LHIKIn = 0.4,
-        LHIKEaseIn = 0.4,
+        LHIKIn = 0.2,
+        LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.15,
-        LHIKOut = 0.6,
+        LHIKOut = 0.3,
         SoundTable = {
             {s = path .. "magrelease.ogg",    t = 0.4, c = ci},
             {s = path .. "magout.ogg",        t = 0.4, c = ci},
@@ -357,10 +365,10 @@ SWEP.Animations = {
         MinProgress = 1.5,
         LastClip1OutTime = 0.7,
         LHIK = true,
-        LHIKIn = 0.4,
-        LHIKEaseIn = 0.4,
+        LHIKIn = 0.2,
+        LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.15,
-        LHIKOut = 0.4,
+        LHIKOut = 0.3,
         SoundTable = {
             {s = path .. "magrelease.ogg",    t = 0.16, c = ci},
             {s = path .. "magout.ogg",        t = 0.16, c = ci},
@@ -378,10 +386,10 @@ SWEP.Animations = {
         MinProgress = 1.3,
         LastClip1OutTime = 0.9,
         LHIK = true,
-        LHIKIn = 0.4,
-        LHIKEaseIn = 0.4,
+        LHIKIn = 0.2,
+        LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.15,
-        LHIKOut = 0.6,
+        LHIKOut = 0.3,
         SoundTable = {
             {s = path .. "magrelease.ogg",    t = 0.3, c = ci},
             {s = path .. "magout.ogg",        t = 0.3, c = ci},
@@ -395,10 +403,10 @@ SWEP.Animations = {
         MinProgress = 1.75,
         LastClip1OutTime = 0.7,
         LHIK = true,
-        LHIKIn = 0.4,
-        LHIKEaseIn = 0.4,
+        LHIKIn = 0.2,
+        LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.15,
-        LHIKOut = 0.4,
+        LHIKOut = 0.3,
         SoundTable = {
             {s = path .. "magrelease.ogg",      t = 0.12, c = ci},
             {s = path .. "magout.ogg",          t = 0.12, c = ci},
@@ -409,6 +417,8 @@ SWEP.Animations = {
     },
 }
 
+SWEP.AutosolveSourceSeq = "idle"
+
 SWEP.Attachments = {
     {
         PrintName = "Optic",
@@ -416,17 +426,15 @@ SWEP.Attachments = {
         Slot = {"optic_lp","optic"},
         Bone = "glock_parent",
         Offset = {
-            vpos = Vector(0, -3.3, 1),
+            vpos = Vector(0, -3.5, 2),
             vang = Angle(90, 2, -90),
-            wpos = Vector(8, 0.4, -5.1),
-            wang = Angle(-10, 0, 180),
         },
-        ExtraSightDist = 4
+        InstalledEles = {"ud_glock_rail_optic"},
     },
     {
-        PrintName = "Barrel",
-        DefaultAttName = "Standard Barrel",
-        Slot = "ud_glock_barrel",
+        PrintName = "Slide",
+        DefaultAttName = "Standard Slide",
+        Slot = "ud_glock_slide",
     },
     {
         PrintName = "Muzzle",
@@ -436,8 +444,6 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(0, 0, 0),
             vang = Angle(90, 0, -90),
-            wpos = Vector(30, 1, -8),
-            wang = Angle(-10, -2, 180),
         },
     },
     {
@@ -445,35 +451,39 @@ SWEP.Attachments = {
         Slot = {"foregrip"},
         Bone = "glock_parent",
         Offset = {
-            vpos = Vector(0, 1.7, 12),
+            vpos = Vector(0, -1.3, 5),
             vang = Angle(90, 0, -90),
-            wpos = Vector(18, 0.9, -4.5),
-            wang = Angle(-10, 0, 180),
         },
+        MergeSlots = {4,5},
     },
     {
+        Hidden = true,
         PrintName = "Tactical",
         Slot = {"tac_pistol"},
         Bone = "glock_parent",
         Offset = {
-            vpos = Vector(0, 1.7, 9.5),
+            vpos = Vector(0, -1.3, 5),
             vang = Angle(90, 0, -90),
-            wpos = Vector(22, 0.9, -4.5),
-            wang = Angle(-10, 0, 180),
         },
     },
     {
         PrintName = "Mag Type",
         Slot = {"ud_glock_mag"},
-        DefaultAttName = "17 Round Mag",
+        DefaultAttName = "17-Round G17 Mag",
     },
     {
         PrintName = "Ammo Type",
         Slot = {"go_ammo"},
     },
     {
-        PrintName = "Perk",
-        Slot = "go_perk"
+        PrintName = "Training Package",
+        Slot = "ud_training",
+        DefaultAttName = "Basic Training"
+    },
+    {
+        PrintName = "Internals",
+        Slot = "ud_fg", -- Fire group
+        DefaultAttName = "Standard Internals"
     },
     {
         PrintName = "Charm",
@@ -483,8 +493,6 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(0.6, -4, 4),
             vang = Angle(90, 0, -90),
-            wpos = Vector(9, 2.3, -4.6),
-            wang = Angle(-14, -2, 180),
         },
     },
 }

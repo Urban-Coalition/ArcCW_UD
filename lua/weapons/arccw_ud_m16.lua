@@ -148,7 +148,7 @@ SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.81, 1, 0.8),
+     Pos = Vector(-2.81, -3, 0.8),
      Ang = Angle(0.1, 0, 0),
      Magnification = 1.1,
      SwitchToSound = "",
@@ -167,7 +167,7 @@ SWEP.BarrelOffsetHip = Vector(0, 0, -3)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-7.8, 3.7, -7),
+    pos        =    Vector(-7.8, 3.5, -7),
     ang        =    Angle(-6, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
@@ -189,6 +189,10 @@ SWEP.BulletBones = {
 
 SWEP.AttachmentElements = {
 
+    ["rail_optic"] = {
+        VMBodygroups = {{ind = 3, bg = 1}}
+    },
+
     ["ud_m16_20_mag"] = {
         VMBodygroups = {{ind = 2, bg = 1}},
     },
@@ -202,6 +206,36 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 2, bg = 4}},
     },
 
+    ["ud_m16_rail_fg"] = {
+        VMBodygroups = {{ind = 7, bg = 1}},
+    },
+
+    ["ud_m16_rail_optic"] = {
+        VMBodygroups = {{ind = 3, bg = 1}},
+    },
+
+    ["ud_m16_clamp_fullsize"] = {
+        VMBodygroups = {{ind = 8, bg = 1}},
+    },
+
+    ["ud_m16_m4_barrel"] = {
+        VMBodygroups = {{ind = 4, bg = 1}},
+    },
+    ["ud_m16_cqbr_barrel"] = {
+        VMBodygroups = {{ind = 4, bg = 2}},
+    },
+    ["ud_m16_fpw_barrel"] = {
+        VMBodygroups = {{ind = 4, bg = 3}},
+    },
+    ["ud_m16_wood_barrel"] = {
+        VMBodygroups = {{ind = 4, bg = 4}},
+    },
+    ["ud_m16_wood_short_barrel"] = {
+        VMBodygroups = {{ind = 4, bg = 5}},
+    },
+    ["ud_m16_stub_barrel"] = {
+        VMBodygroups = {{ind = 4, bg = 6}},
+    },
 }
 
 -- Animations --
@@ -254,7 +288,7 @@ SWEP.Animations = {
         LHIKIn = 0.4,
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
-        LHIKOut = 0.6,
+        LHIKOut = 0.5,
         SoundTable = {
             {s = common .. "cloth_1.ogg",  t = 0.0},
             {s = path .. "magout.ogg", 	 t = 0.2},
@@ -297,7 +331,7 @@ SWEP.Animations = {
         LHIKIn = 0.4,
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
-        LHIKOut = 0.6,
+        LHIKOut = 0.5,
         SoundTable = {
             {s = common .. "cloth_1.ogg",  t = 0.0},
             {s = path .. "magout.ogg", 	 t = 0.2},
@@ -340,7 +374,7 @@ SWEP.Animations = {
         LHIKIn = 0.4,
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
-        LHIKOut = 0.6,
+        LHIKOut = 0.5,
         SoundTable = {
             {s = common .. "cloth_1.ogg",  t = 0.0},
             {s = path .. "magout.ogg", 	 t = 0.2},
@@ -466,20 +500,24 @@ SWEP.Attachments = {
     {
         PrintName = "Optic",
         DefaultAttName = "Iron Sights",
+        InstalledEles = {"rail_optic"},
         Slot = {"optic_lp","optic","sniper_optic"},
         Bone = "m16_parent",
         Offset = {
-            vpos = Vector(0, -3.3, 1),
+            vpos = Vector(0, -3.9, 2),
             vang = Angle(90, 2, -90),
-            wpos = Vector(8, 0.4, -5.1),
-            wang = Angle(-10, 0, 180),
         },
-        ExtraSightDist = 4
+        InstalledEles = {"ud_m16_rail_optic"}
     },
     {
         PrintName = "Barrel",
-        DefaultAttName = "Standard Barrel",
+        DefaultAttName = "Standard 20in Barrel",
         Slot = "ud_m16_barrel",
+        Bone = "m16_parent",
+        Offset = {
+            vpos = Vector(2.8, -4.2, -11.5),
+            vang = Angle(90, 0, -90),
+        },
     },
     {
         PrintName = "Muzzle",
@@ -489,8 +527,6 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(-0.03, -0.05, -0.5),
             vang = Angle(90, 0, -90),
-            wpos = Vector(30, 1, -8),
-            wang = Angle(-10, -2, 180),
         },
     },
     {
@@ -498,22 +534,20 @@ SWEP.Attachments = {
         Slot = {"foregrip"},
         Bone = "m16_parent",
         Offset = {
-            vpos = Vector(0, 1.7, 12),
+            vpos = Vector(0, 1.5, 12),
             vang = Angle(90, 0, -90),
-            wpos = Vector(18, 0.9, -4.5),
-            wang = Angle(-10, 0, 180),
         },
+        InstalledEles = {"ud_m16_rail_fg"}
     },
     {
         PrintName = "Tactical",
         Slot = {"tac_pistol"},
         Bone = "m16_parent",
         Offset = {
-            vpos = Vector(0, 1.7, 9.5),
+            vpos = Vector(0, 0.8, 25.4),
             vang = Angle(90, 0, -90),
-            wpos = Vector(22, 0.9, -4.5),
-            wang = Angle(-10, 0, 180),
         },
+        InstalledEles = {"ud_m16_clamp_fullsize"}
     },
     {
         PrintName = "Stock",
@@ -523,16 +557,16 @@ SWEP.Attachments = {
     {
         PrintName = "Mag Type",
         Slot = {"ud_m16_mag"},
-        DefaultAttName = "30 Round Mag",
+        DefaultAttName = "30-Round STANAG Mag",
     },
     {
         PrintName = "Ammo Type",
         Slot = {"go_ammo"},
     },
-    -- {
-    --     PrintName = "Perk",
-    --     Slot = "go_perk"
-    -- },
+    {
+        PrintName = "Perk",
+        Slot = "go_perk"
+    },
     {
         PrintName = "Training Package",
         Slot = "ud_training",
@@ -551,8 +585,6 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(0.6, -4, 4),
             vang = Angle(90, 0, -90),
-            wpos = Vector(9, 2.3, -4.6),
-            wang = Angle(-14, -2, 180),
         },
     },
 }

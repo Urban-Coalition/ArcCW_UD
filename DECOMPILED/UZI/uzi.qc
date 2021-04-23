@@ -80,6 +80,18 @@ $sequence "idle" "anims\idle.smd" {
 	node "Ready"
 }
 
+$sequence "fix" "anims\jam.smd" {
+	fps 30
+	"ACT_VM_IDLE" 1
+	snap
+}
+
+$sequence "fix_empty" "anims\jam_empty.smd" {
+	fps 30
+	"ACT_VM_IDLE" 1
+	snap
+}
+
 $sequence "idle_empty" "anims\idle_empty.smd" {
 	fps 30
 	"ACT_VM_IDLE" 1

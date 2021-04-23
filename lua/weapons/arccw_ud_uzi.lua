@@ -280,6 +280,31 @@ SWEP.Animations = {
         ShellEjectAt = 0.03,
     },
 
+    ["fix"] = {
+        Source = "fix",
+        Time = 37 / 30,
+        ShellEjectAt = false,
+        LHIK = true,
+        LHIKIn = 0.4,
+        LHIKEaseIn = 0.4,
+        LHIKEaseOut = 0.15,
+        LHIKOut = 0.4,
+        SoundTable = {
+        },
+    },
+    ["fix_empty"] = {
+        Source = "fix_empty",
+        Time = 37 / 30,
+        ShellEjectAt = false,
+        LHIK = true,
+        LHIKIn = 0.4,
+        LHIKEaseIn = 0.4,
+        LHIKEaseOut = 0.15,
+        LHIKOut = 0.4,
+        SoundTable = {
+        },
+    },
+
     -- 32 Round Reloads --
 
     ["reload"] = {

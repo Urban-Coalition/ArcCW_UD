@@ -216,9 +216,21 @@ SWEP.AttachmentElements = {
 
     ["ud_m16_barrel_m4"] = {
         VMBodygroups = {{ind = 4, bg = 1}},
+        AttPosMods = {
+            [3] = {
+                vpos = Vector(-0.03, -0.05, -6.5),
+                vang = Angle(90, 0, -90),
+            }
+        }
     },
     ["ud_m16_barrel_cqbr"] = {
         VMBodygroups = {{ind = 4, bg = 2}},
+        AttPosMods = {
+            [3] = {
+                vpos = Vector(-0.03, -0.05, -12),
+                vang = Angle(90, 0, -90),
+            }
+        }
     },
     ["ud_m16_barrel_fpw"] = {
         VMBodygroups = {{ind = 4, bg = 3}},
@@ -227,13 +239,31 @@ SWEP.AttachmentElements = {
             Ang = Angle(0, 0, 0),
             Magnification = 1,
             CrosshairInSights = true
+        },
+        AttPosMods = {
+            [3] = {
+                vpos = Vector(-0.03, -0.05, -10),
+                vang = Angle(90, 0, -90),
+            }
         }
     },
     ["ud_m16_barrel_wood"] = {
         VMBodygroups = {{ind = 4, bg = 4}},
+        AttPosMods = {
+            [3] = {
+                vpos = Vector(-0.03, -0.05, -2),
+                vang = Angle(90, 0, -90),
+            }
+        }
     },
     ["ud_m16_barrel_wood_short"] = {
         VMBodygroups = {{ind = 4, bg = 5}},
+        AttPosMods = {
+            [3] = {
+                vpos = Vector(-0.03, -0.05, -7.5),
+                vang = Angle(90, 0, -90),
+            }
+        }
     },
     ["ud_m16_barrel_stub"] = {
         VMBodygroups = {{ind = 4, bg = 6}},
@@ -242,6 +272,12 @@ SWEP.AttachmentElements = {
             Ang = Angle(0, 0, 0),
             Magnification = 1,
             CrosshairInSights = true
+        },
+        AttPosMods = {
+            [3] = {
+                vpos = Vector(-0.03, -0.05, -22),
+                vang = Angle(90, 0, -90),
+            }
         }
     },
 }
@@ -598,10 +634,10 @@ SWEP.Attachments = {
     {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
-        Slot = {"choke", "muzzle_shotgun"},
+        Slot = {"muzzle"},
         Bone = "m16_flash",
         Offset = {
-            vpos = Vector(-0.03, -0.05, -0.5),
+            vpos = Vector(-0.03, -0.05, -1.5),
             vang = Angle(90, 0, -90),
         },
     },

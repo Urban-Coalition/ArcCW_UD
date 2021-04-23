@@ -209,6 +209,12 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 4, bg = 2}},
         NameChange = "GEN3 Ext.",
         TrueNameChange = "Glock 17L",
+        AttPosMods = {
+            [3] = {
+                vpos = Vector(0, 0, 1),
+                vang = Angle(90, 0, -90),
+            }
+        }
     },
     ["ud_glock_slide_auto"] = {
         VMBodygroups = {{ind = 4, bg = 3}},
@@ -219,6 +225,12 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 4, bg = 4}},
         NameChange = "GEN3 Euro Carbine",
         TrueNameChange = "Glock 17XXXL",
+        AttPosMods = {
+            [3] = {
+                vpos = Vector(0, 0, 9),
+                vang = Angle(90, 0, -90),
+            }
+        }
     },
 }
 

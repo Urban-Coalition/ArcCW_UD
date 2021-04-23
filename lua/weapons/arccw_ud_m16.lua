@@ -79,9 +79,9 @@ SWEP.Recoil = 0.75
 SWEP.RecoilSide = 0.3
 
 SWEP.RecoilRise = 1
-SWEP.RecoilPunch = 2
-SWEP.VisualRecoilMult = 3
-SWEP.MaxRecoilBlowback = 3
+SWEP.RecoilPunch = 3
+SWEP.VisualRecoilMult = 1
+SWEP.MaxRecoilBlowback = 1
 SWEP.MaxRecoilPunch = 0.6
 
 SWEP.Sway = 0.5
@@ -126,11 +126,15 @@ SWEP.JumpDispersion = 1000
 SWEP.Primary.Ammo = "smg1"
 SWEP.MagID = "m16"
 
+SWEP.HeatCapacity = 150
+SWEP.HeatDissipation = 10
+SWEP.HeatDelayTime = 3
+
 -- Speed multipliers --
 
-SWEP.SpeedMult = 0.8
-SWEP.SightedSpeedMult = 0.9
-SWEP.SightTime = 0.3
+SWEP.SpeedMult = 0.925
+SWEP.SightedSpeedMult = 0.75
+SWEP.SightTime = 0.333
 SWEP.ShootSpeedMult = 0.95
 
 -- Length --

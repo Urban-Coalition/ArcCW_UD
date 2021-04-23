@@ -131,9 +131,9 @@ SWEP.Primary.Ammo = "buckshot"
 
 -- Speed multipliers --
 
-SWEP.SpeedMult = 0.7
-SWEP.SightedSpeedMult = 0.7
-SWEP.SightTime = 0.3
+SWEP.SpeedMult = 0.9
+SWEP.SightedSpeedMult = 0.75
+SWEP.SightTime = 0.333
 SWEP.ShootSpeedMult = 0.9
 
 -- Length --
@@ -319,8 +319,8 @@ SWEP.Attachments = {
         },
     },
     {
-        PrintName = "Slide Type",
-        DefaultAttName = "Wooden Slide",
+        PrintName = "Slide",
+        DefaultAttName = "Factory Slide",
         Slot = {"ud_870_slide"},
         Bone = "870_slide",
         Offset = {

@@ -122,11 +122,15 @@ SWEP.JumpDispersion = 500
 SWEP.Primary.Ammo = "pistol"
 SWEP.MagID = "glock"
 
+SWEP.HeatCapacity = 50
+SWEP.HeatDissipation = 20
+SWEP.HeatDelayTime = 3
+
 -- Speed multipliers --
 
-SWEP.SpeedMult = 0.9
+SWEP.SpeedMult = 0.975
 SWEP.SightedSpeedMult = 0.9
-SWEP.SightTime = 0.18
+SWEP.SightTime = 0.233
 SWEP.ShootSpeedMult = 1
 
 -- Length --
@@ -213,7 +217,7 @@ SWEP.AttachmentElements = {
     },
     ["ud_glock_slide_lb"] = {
         VMBodygroups = {{ind = 4, bg = 2}},
-        NameChange = "GEN3 Ext.",
+        NameChange = "GEN3 Extended",
         TrueNameChange = "Glock 17L",
         AttPosMods = {
             [3] = {
@@ -236,6 +240,23 @@ SWEP.AttachmentElements = {
                 vpos = Vector(0, 0, 9),
                 vang = Angle(90, 0, -90),
             }
+        }
+    },
+    ["ud_glock_slide_sd"] = {
+        VMBodygroups = {{ind = 4, bg = 5}},
+        NameChange = "GEN3 Silent Mistress",
+        TrueNameChange = "Glock SD17",
+        GivesFlags = {"sd"},
+        AttPosMods = {
+            [4] = {
+                vpos = Vector(0, 0.1, 5),
+                vang = Angle(90, 0, -90),
+            },
+            [5] = {
+                vpos = Vector(0, 0.1, 5),
+                vang = Angle(90, 0, 90),
+            },
+            
         }
     },
 }
@@ -304,7 +325,7 @@ SWEP.Animations = {
     ["fix"] = {
         Source = "fix",
         Time = 32 / 30,
-        ShellEjectAt = 0.5,
+        ShellEjectAt = false,
         SoundTable = {
             {s = path .. "sliderel_deact.ogg",  t = 0.3, c = ci},
             {s = path .. "sliderel.ogg",        t = 0.6, c = ci},
@@ -313,7 +334,7 @@ SWEP.Animations = {
     ["fix_empty"] = {
         Source = "fix_empty",
         Time = 32 / 30,
-        ShellEjectAt = 0.5,
+        ShellEjectAt = false,
         SoundTable = {
             {s = path .. "sliderel_deact.ogg",  t = 0.3, c = ci},
         },
@@ -321,7 +342,7 @@ SWEP.Animations = {
     ["fix_10"] = {
         Source = "fix_10",
         Time = 32 / 30,
-        ShellEjectAt = 0.5,
+        ShellEjectAt = false,
         SoundTable = {
             {s = path .. "sliderel_deact.ogg",  t = 0.3, c = ci},
             {s = path .. "sliderel.ogg",        t = 0.6, c = ci},
@@ -330,7 +351,7 @@ SWEP.Animations = {
     ["fix_empty_10"] = {
         Source = "fix_empty_10",
         Time = 32 / 30,
-        ShellEjectAt = 0.5,
+        ShellEjectAt = false,
         SoundTable = {
             {s = path .. "sliderel_deact.ogg",  t = 0.3, c = ci},
         },
@@ -338,7 +359,7 @@ SWEP.Animations = {
     ["fix_33"] = {
         Source = "fix_33",
         Time = 32 / 30,
-        ShellEjectAt = 0.5,
+        ShellEjectAt = false,
         SoundTable = {
             {s = path .. "sliderel_deact.ogg",  t = 0.3, c = ci},
             {s = path .. "sliderel.ogg",        t = 0.6, c = ci},
@@ -347,7 +368,7 @@ SWEP.Animations = {
     ["fix_empty_33"] = {
         Source = "fix_empty_33",
         Time = 32 / 30,
-        ShellEjectAt = 0.5,
+        ShellEjectAt = false,
         SoundTable = {
             {s = path .. "sliderel_deact.ogg",  t = 0.3, c = ci},
         },
@@ -355,7 +376,7 @@ SWEP.Animations = {
     ["fix_100"] = {
         Source = "fix_100",
         Time = 32 / 30,
-        ShellEjectAt = 0.4,
+        ShellEjectAt = false,
         SoundTable = {
             {s = path .. "sliderel_deact.ogg",  t = 0.2, c = ci},
             {s = path .. "sliderel.ogg",        t = 0.6, c = ci},
@@ -364,7 +385,7 @@ SWEP.Animations = {
     ["fix_empty_100"] = {
         Source = "fix_empty_100",
         Time = 32 / 30,
-        ShellEjectAt = 0.4,
+        ShellEjectAt = false,
     },
 
     -- 17 Round Reloads --
@@ -557,6 +578,7 @@ SWEP.Attachments = {
             vpos = Vector(0, 0, 0),
             vang = Angle(90, 0, -90),
         },
+        ExcludeFlags = {"sd"},
     },
     {
         PrintName = "Underbarrel",

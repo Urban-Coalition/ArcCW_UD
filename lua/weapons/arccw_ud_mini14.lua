@@ -81,7 +81,7 @@ SWEP.RecoilSide = 0.1
 
 SWEP.RecoilRise = 1
 SWEP.VisualRecoilMult = 1
-SWEP.RecoilPunch = 2
+SWEP.RecoilPunch = 3
 SWEP.MaxRecoilBlowback = 2
 SWEP.MaxRecoilPunch = 2
 
@@ -126,8 +126,8 @@ SWEP.MagID = "mini14"
 -- Speed multipliers --
 
 SWEP.SpeedMult = 0.9
-SWEP.SightedSpeedMult = 0.9
-SWEP.SightTime = 0.3
+SWEP.SightedSpeedMult = 0.75
+SWEP.SightTime = 0.333
 SWEP.ShootSpeedMult = 0.95
 
 -- Length --

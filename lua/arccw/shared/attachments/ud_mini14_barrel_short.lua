@@ -1,4 +1,4 @@
-att.PrintName = "Mini-14 Short Barrel"
+att.PrintName = "18\" Ranch Rifle Short Barrel"
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.SortOrder = 5
 att.Description = "Compact barrel for popping close-up varmints. More agile but less accurate."

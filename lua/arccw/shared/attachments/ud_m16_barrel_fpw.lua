@@ -31,6 +31,8 @@ att.Override_HeatDissipation_Priority = 100
 att.Mult_HeatCapacity = 0.5
 
 att.A_Hook_Add_SightsDispersion = function(wep, data)
+    if !data then return end
+
     if not wep.Attachments[1].Installed then
         data.add = data.add + 200
     end

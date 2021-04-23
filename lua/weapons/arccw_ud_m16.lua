@@ -79,9 +79,9 @@ SWEP.Recoil = 0.75
 SWEP.RecoilSide = 0.3
 
 SWEP.RecoilRise = 1
-SWEP.RecoilPunch = 2
-SWEP.VisualRecoilMult = 3
-SWEP.MaxRecoilBlowback = 3
+SWEP.RecoilPunch = 3
+SWEP.VisualRecoilMult = 1
+SWEP.MaxRecoilBlowback = 1
 SWEP.MaxRecoilPunch = 0.6
 
 SWEP.Sway = 0.5
@@ -142,6 +142,8 @@ SWEP.ExtraSightDist = 7
 
 SWEP.HolsterPos = Vector(4.623, -2.211, 1.004)
 SWEP.HolsterAng = Angle(-8.443, 28.843, 0)
+
+SWEP.HeatDissipation = 10
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"

@@ -1,4 +1,4 @@
-att.PrintName = "MOE Forend"
+att.PrintName = "MOE Slide"
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "Description"
 att.Desc_Pros = {

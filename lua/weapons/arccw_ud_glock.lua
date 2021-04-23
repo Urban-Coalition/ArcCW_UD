@@ -190,7 +190,7 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 2, bg = 1}, {ind = 1, bg = 2}},
         AttPosMods = {
             [7] = {
-                vpos = Vector(0.1, 1, 1),
+            vpos = Vector(0.1, 1, -1.2),
                 vang = Angle(90, 0, -90),
             }
         }
@@ -321,6 +321,10 @@ SWEP.Animations = {
         Time = 16 / 30,
         ShellEjectAt = 0.03,
     },
+    ["fire_cycle"] = {
+        Source = "fire_cycle",
+        Time = 16 / 30,
+    },
 
     ["fix"] = {
         Source = "fix",
@@ -386,6 +390,27 @@ SWEP.Animations = {
         Source = "fix_empty_100",
         Time = 32 / 30,
         ShellEjectAt = false,
+        SoundTable = {
+            {s = path .. "sliderel_deact.ogg",  t = 0.2, c = ci},
+        },
+    },
+
+    ["cycle"] = {
+        Source = "fix_100",
+        Time = 32 / 30,
+        ShellEjectAt = 0.4,
+        SoundTable = {
+            {s = path .. "sliderel_deact.ogg",  t = 0.2, c = ci},
+            {s = path .. "sliderel.ogg",        t = 0.6, c = ci},
+        },
+    },
+    ["cycle_empty"] = {
+        Source = "fix_empty_100",
+        Time = 32 / 30,
+        ShellEjectAt = 0.4,
+        SoundTable = {
+            {s = path .. "sliderel_deact.ogg",  t = 0.2, c = ci},
+        },
     },
 
     -- 17 Round Reloads --
@@ -611,7 +636,7 @@ SWEP.Attachments = {
         DefaultAttName = "No Stock",
         Bone = "glock_parent",
         Offset = {
-            vpos = Vector(0.1, 2, 1),
+            vpos = Vector(0.1, 2, -1.4),
             vang = Angle(90, 0, -90),
         }
     },

@@ -24,6 +24,8 @@ att.Mult_Range = 1.25
 
 att.Mult_ShootVol = 0.6
 
+att.Override_ManualAction = true
+
 att.Silencer = true
 att.Override_MuzzleEffect = "muzzleflash_suppressed"
 
@@ -32,3 +34,9 @@ att.Add_BarrelLength = 8
 att.ActivateElements = {"ud_glock_slide_sd"}
 
 att.GivesFlags = {"sd"}
+
+att.Hook_TranslateAnimation = function(wep, anim)
+    if (anim == "fire" || anim == "fire_empty") then
+        return "fire_cycle"
+    end
+end

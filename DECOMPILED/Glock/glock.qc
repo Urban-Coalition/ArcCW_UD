@@ -115,6 +115,16 @@ $sequence "fire_empty_18" {
 	fadeout 0.01
 }
 
+$sequence "fire_cycle" {
+	"anims\fire_cycle.smd"
+	"anims\fire_iron_cycle.smd"
+	blend "sights" 0 1
+	fps 30
+	"ACT_VM_PRIMARYATTACK" 1
+	fadein 0.02
+	fadeout 0.02
+}
+
 $sequence "draw" "anims\draw.smd" {
 	fps 30
 	"ACT_VM_DRAW" 1

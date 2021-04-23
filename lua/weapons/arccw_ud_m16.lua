@@ -126,6 +126,10 @@ SWEP.JumpDispersion = 1000
 SWEP.Primary.Ammo = "smg1"
 SWEP.MagID = "m16"
 
+SWEP.HeatCapacity = 150
+SWEP.HeatDissipation = 10
+SWEP.HeatDelayTime = 3
+
 -- Speed multipliers --
 
 SWEP.SpeedMult = 0.8
@@ -142,8 +146,6 @@ SWEP.ExtraSightDist = 7
 
 SWEP.HolsterPos = Vector(4.623, -2.211, 1.004)
 SWEP.HolsterAng = Angle(-8.443, 28.843, 0)
-
-SWEP.HeatDissipation = 10
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"

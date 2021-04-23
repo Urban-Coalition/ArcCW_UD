@@ -124,6 +124,10 @@ SWEP.JumpDispersion = 800
 SWEP.Primary.Ammo = "pistol"
 SWEP.MagID = "glock"
 
+SWEP.HeatCapacity = 75
+SWEP.HeatDissipation = 15
+SWEP.HeatDelayTime = 3
+
 -- Speed multipliers --
 
 SWEP.SpeedMult = 0.9

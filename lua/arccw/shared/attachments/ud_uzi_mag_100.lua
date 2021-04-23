@@ -24,9 +24,6 @@ att.Override_ClipSize = 100
 att.ActivateElements = {"ud_uzi_100_mag"}
 
 att.Override_Jamming = true
-att.Override_HeatCapacity = 200
-att.Override_HeatDissipation = 5
-att.Override_HeatDelayTime = 3
 
 att.Hook_SelectReloadAnimation = function(wep, anim)
     return anim .. "_100"

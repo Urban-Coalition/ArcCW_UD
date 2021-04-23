@@ -189,16 +189,16 @@ SWEP.BulletBones = {
 
 SWEP.AttachmentElements = {
 
-    ["ud_m16_20_mag"] = {
+    ["ud_m16_mag_20"] = {
         VMBodygroups = {{ind = 2, bg = 1}},
     },
-    ["ud_m16_40_mag"] = {
+    ["ud_m16_mag_40"] = {
         VMBodygroups = {{ind = 2, bg = 2}},
     },
-    ["ud_m16_60_mag"] = {
+    ["ud_m16_mag_60"] = {
         VMBodygroups = {{ind = 2, bg = 3}},
     },
-    ["ud_m16_100_mag"] = {
+    ["ud_m16_mag_100"] = {
         VMBodygroups = {{ind = 2, bg = 4}},
     },
 
@@ -214,7 +214,7 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 8, bg = 1}},
     },
 
-    ["ud_m16_m4_barrel"] = {
+    ["ud_m16_barrel_m4"] = {
         VMBodygroups = {{ind = 4, bg = 1}},
         AttPosMods = {
             [3] = {
@@ -223,7 +223,7 @@ SWEP.AttachmentElements = {
             }
         }
     },
-    ["ud_m16_cqbr_barrel"] = {
+    ["ud_m16_barrel_cqbr"] = {
         VMBodygroups = {{ind = 4, bg = 2}},
         AttPosMods = {
             [3] = {
@@ -232,7 +232,7 @@ SWEP.AttachmentElements = {
             }
         }
     },
-    ["ud_m16_fpw_barrel"] = {
+    ["ud_m16_barrel_fpw"] = {
         VMBodygroups = {{ind = 4, bg = 3}},
         Override_IronSightStruct = {
             Pos = Vector(-1, 4, 0),
@@ -247,7 +247,7 @@ SWEP.AttachmentElements = {
             }
         }
     },
-    ["ud_m16_wood_barrel"] = {
+    ["ud_m16_barrel_wood"] = {
         VMBodygroups = {{ind = 4, bg = 4}},
         AttPosMods = {
             [3] = {
@@ -256,7 +256,7 @@ SWEP.AttachmentElements = {
             }
         }
     },
-    ["ud_m16_wood_short_barrel"] = {
+    ["ud_m16_barrel_wood_short"] = {
         VMBodygroups = {{ind = 4, bg = 5}},
         AttPosMods = {
             [3] = {
@@ -265,7 +265,7 @@ SWEP.AttachmentElements = {
             }
         }
     },
-    ["ud_m16_stub_barrel"] = {
+    ["ud_m16_barrel_stub"] = {
         VMBodygroups = {{ind = 4, bg = 6}},
         Override_IronSightStruct = {
             Pos = Vector(-1, 4, 0),
@@ -320,6 +320,67 @@ SWEP.Animations = {
         ShellEjectAt = 0.01,
     },
 
+    ["fix"] = {
+        Source = "fix",
+        Time = 36 / 30,
+        ShellEjectAt = 0.4,
+        LHIK = true,
+        LHIKIn = 0.3,
+        LHIKEaseIn = 0.4,
+        LHIKEaseOut = 0.15,
+        LHIKOut = 0.4,
+        SoundTable = {
+            {s = path .. "chback.ogg",   t = 0.1},
+            {s = common .. "cloth_4.ogg",  t = 0.5},
+            {s = path .. "chamber.ogg",  t = 0.5},
+        },
+    },
+    ["fix_empty"] = {
+        Source = "fix_empty",
+        Time = 36 / 30,
+        ShellEjectAt = 0.4,
+        LHIK = true,
+        LHIKIn = 0.3,
+        LHIKEaseIn = 0.4,
+        LHIKEaseOut = 0.15,
+        LHIKOut = 0.4,
+        SoundTable = {
+            {s = path .. "chback.ogg",   t = 0.1},
+            {s = common .. "cloth_4.ogg",  t = 0.5},
+            {s = path .. "chamber.ogg",  t = 0.5},
+        },
+    },
+    ["fix_100"] = {
+        Source = "fix_100",
+        Time = 36 / 30,
+        ShellEjectAt = 0.4,
+        LHIK = true,
+        LHIKIn = 0.3,
+        LHIKEaseIn = 0.4,
+        LHIKEaseOut = 0.15,
+        LHIKOut = 0.4,
+        SoundTable = {
+            {s = path .. "chback.ogg",   t = 0.1},
+            {s = common .. "cloth_4.ogg",  t = 0.5},
+            {s = path .. "chamber.ogg",  t = 0.5},
+        },
+    },
+    ["fix_empty_100"] = {
+        Source = "fix_empty_100",
+        Time = 36 / 30,
+        ShellEjectAt = 0.4,
+        LHIK = true,
+        LHIKIn = 0.3,
+        LHIKEaseIn = 0.4,
+        LHIKEaseOut = 0.15,
+        LHIKOut = 0.4,
+        SoundTable = {
+            {s = path .. "chback.ogg",   t = 0.1},
+            {s = common .. "cloth_4.ogg",  t = 0.5},
+            {s = path .. "chamber.ogg",  t = 0.5},
+        },
+    },
+
     -- 30 Round Reloads --
 
     ["reload"] = {
@@ -338,6 +399,7 @@ SWEP.Animations = {
             {s = path .. "magout.ogg", 	 t = 0.2},
             {s = common .. "cloth_2.ogg",  t = 0.75},
             {s = path .. "magin.ogg",    t = 1.05},
+            {s = common .. "cloth_3.ogg",  t = 1.1},
             {s = common .. "shoulder.ogg", t = 1.93},
         },
     },
@@ -381,6 +443,7 @@ SWEP.Animations = {
             {s = path .. "magout.ogg", 	 t = 0.2},
             {s = common .. "cloth_2.ogg",  t = 0.75},
             {s = path .. "magin.ogg",    t = 1.05},
+            {s = common .. "cloth_3.ogg",  t = 1.1},
             {s = common .. "shoulder.ogg", t = 1.925},
         },
     },
@@ -424,6 +487,7 @@ SWEP.Animations = {
             {s = path .. "magout.ogg", 	 t = 0.2},
             {s = common .. "cloth_2.ogg",  t = 0.75},
             {s = path .. "magin.ogg",    t = 1.05},
+            {s = common .. "cloth_3.ogg",  t = 1.1},
             {s = common .. "shoulder.ogg", t = 1.97},
         },
     },
@@ -467,6 +531,7 @@ SWEP.Animations = {
             {s = path .. "magout.ogg", 	 t = 0.2},
             {s = common .. "cloth_2.ogg",  t = 0.75},
             {s = path .. "magin.ogg",    t = 1.05},
+            {s = common .. "cloth_3.ogg",  t = 1.1},
             {s = common .. "shoulder.ogg", t = 1.97},
         },
     },
@@ -501,7 +566,7 @@ SWEP.Animations = {
         MinProgress = 1.75,
         LastClip1OutTime = 0.9,
         LHIK = true,
-        LHIKIn = 0.4,
+        LHIKIn = 0.3,
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
@@ -510,8 +575,9 @@ SWEP.Animations = {
             {s = path .. "magout.ogg", 	 t = 0.2},
             {s = common .. "cloth_2.ogg",  t = 0.75},
             {s = path .. "magin.ogg",    t = 1.05},
-            {s = common .. "cloth_1.ogg",  t = 1.1},
+            {s = common .. "cloth_3.ogg",  t = 1.1},
             {s = path .. "magtap.ogg",   t = 1.59},
+            {s = common .. "cloth_4.ogg",  t = 1.65},
             {s = common .. "shoulder.ogg", t = 2.05},
         },
     },
@@ -522,7 +588,7 @@ SWEP.Animations = {
         MinProgress = 2.5,
         LastClip1OutTime = 0.7,
         LHIK = true,
-        LHIKIn = 0.4,
+        LHIKIn = 0.3,
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
@@ -534,6 +600,7 @@ SWEP.Animations = {
             {s = path .. "magtap.ogg",   t = 1.59},
             {s = common .. "cloth_3.ogg",  t = 1.75},
             {s = path .. "chback.ogg",   t = 1.9},
+            {s = common .. "cloth_4.ogg",  t = 2.0},
             {s = path .. "chamber.ogg",  t = 2.2},
             {s = common .. "shoulder.ogg", t = 2.7},
         },

@@ -1,5 +1,8 @@
 --CreateConVar("arccw_ud_darkrp", "1", FCVAR_ARCHIVE + FCVAR_REPLICATED, "Enable Urban Decay's DarkRP features.", 0, 1)
 
+CreateConVar("arccw_ud_homeboy_epic", "0", FCVAR_ARCHIVE + FCVAR_REPLICATED, "Enables the 'Homeboy' training to be used on all non-manual guns. Additionally, enables its sprint-and-shoot functionality.", 0, 1)
+
+
 local jobatts = CreateConVar("arccw_ud_jobatts", "1", FCVAR_ARCHIVE + FCVAR_REPLICATED, "Certain jobs are allowed to take specified attachments on guns.", 0, 1)
 local jobatts_f = CreateConVar("arccw_ud_jobatts_forced", "1", FCVAR_ARCHIVE + FCVAR_REPLICATED, "Job-specific attachments *cannot* be removed.", 0, 1)
 

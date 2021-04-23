@@ -33,6 +33,7 @@ $bodygroup "4" {
 $cdmaterials "models\weapons\arccw\ud_m16"
 $cdmaterials "models\weapons\arccw\ud_glock"
 $cdmaterials "models\weapons\arccw\ud_m1014"
+$cdmaterials "models\weapons\arccw\ud_uzi"
 $cdmaterials "models\weapons\arccw\ud_common"
 
 $attachment "1" "glock_flash" 0 0 0 rotate -90 0 0
@@ -79,8 +80,8 @@ $sequence "fire" {
 	blend "sights" 0 1
 	fps 30
 	"ACT_VM_PRIMARYATTACK" 1
-	fadein 0.03
-	fadeout 0.03
+	fadein 0.02
+	fadeout 0.02
 }
 
 $sequence "fire_empty" {
@@ -89,8 +90,8 @@ $sequence "fire_empty" {
 	blend "sights" 0 1
 	fps 30
 	"ACT_VM_PRIMARYATTACK" 1
-	fadein 0.03
-	fadeout 0.03
+	fadein 0.02
+	fadeout 0.02
 }
 
 $sequence "fire_18" {
@@ -99,8 +100,8 @@ $sequence "fire_18" {
 	blend "sights" 0 1
 	fps 30
 	"ACT_VM_PRIMARYATTACK" 1
-	fadein 0.03
-	fadeout 0.03
+	fadein 0.01
+	fadeout 0.01
 }
 
 $sequence "fire_empty_18" {
@@ -109,8 +110,8 @@ $sequence "fire_empty_18" {
 	blend "sights" 0 1
 	fps 30
 	"ACT_VM_PRIMARYATTACK" 1
-	fadein 0.03
-	fadeout 0.03
+	fadein 0.01
+	fadeout 0.01
 }
 
 $sequence "draw" "anims\draw.smd" {
@@ -136,6 +137,54 @@ $sequence "holster" "anims\holster.smd" {
 $sequence "holster_empty" "anims\holster_empty.smd" {
 	fps 30
 	"ACT_VM_DRAW" 1
+	snap
+}
+
+$sequence "fix" "anims\jam.smd" {
+	fps 30
+	"ACT_VM_IDLE" 1
+	snap
+}
+
+$sequence "fix_empty" "anims\jam_empty.smd" {
+	fps 30
+	"ACT_VM_IDLE" 1
+	snap
+}
+
+$sequence "fix_10" "anims\jam_10.smd" {
+	fps 30
+	"ACT_VM_IDLE" 1
+	snap
+}
+
+$sequence "fix_empty_10" "anims\jam_10_empty.smd" {
+	fps 30
+	"ACT_VM_IDLE" 1
+	snap
+}
+
+$sequence "fix_33" "anims\jam_33.smd" {
+	fps 30
+	"ACT_VM_IDLE" 1
+	snap
+}
+
+$sequence "fix_empty_33" "anims\jam_33_empty.smd" {
+	fps 30
+	"ACT_VM_IDLE" 1
+	snap
+}
+
+$sequence "fix_100" "anims\jam_100.smd" {
+	fps 30
+	"ACT_VM_IDLE" 1
+	snap
+}
+
+$sequence "fix_empty_100" "anims\jam_100_empty.smd" {
+	fps 30
+	"ACT_VM_IDLE" 1
 	snap
 }
 

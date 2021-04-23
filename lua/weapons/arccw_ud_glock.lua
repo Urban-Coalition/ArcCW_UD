@@ -115,8 +115,8 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 7
-SWEP.HipDispersion = 1100
-SWEP.MoveDispersion = 100
+SWEP.HipDispersion = 700
+SWEP.MoveDispersion = 250
 SWEP.JumpDispersion = 500
 
 SWEP.Primary.Ammo = "pistol"
@@ -182,13 +182,13 @@ SWEP.BulletBones = {
 
 SWEP.AttachmentElements = {
 
-    ["ud_glock_10_mag"] = {
+    ["ud_glock_mag_10"] = {
         VMBodygroups = {{ind = 2, bg = 1}, {ind = 1, bg = 2}},
     },
-    ["ud_glock_33_mag"] = {
+    ["ud_glock_mag_33"] = {
         VMBodygroups = {{ind = 2, bg = 2}},
     },
-    ["ud_glock_100_mag"] = {
+    ["ud_glock_mag_100"] = {
         VMBodygroups = {{ind = 2, bg = 3}},
     },
 
@@ -293,6 +293,72 @@ SWEP.Animations = {
         Source = "fire_empty_18",
         Time = 16 / 30,
         ShellEjectAt = 0.03,
+    },
+
+    ["fix"] = {
+        Source = "fix",
+        Time = 32 / 30,
+        ShellEjectAt = 0.5,
+        SoundTable = {
+            {s = path .. "sliderel_deact.ogg",  t = 0.3, c = ci},
+            {s = path .. "sliderel.ogg",        t = 0.6, c = ci},
+        },
+    },
+    ["fix_empty"] = {
+        Source = "fix_empty",
+        Time = 32 / 30,
+        ShellEjectAt = 0.5,
+        SoundTable = {
+            {s = path .. "sliderel_deact.ogg",  t = 0.3, c = ci},
+        },
+    },
+    ["fix_10"] = {
+        Source = "fix_10",
+        Time = 32 / 30,
+        ShellEjectAt = 0.5,
+        SoundTable = {
+            {s = path .. "sliderel_deact.ogg",  t = 0.3, c = ci},
+            {s = path .. "sliderel.ogg",        t = 0.6, c = ci},
+        },
+    },
+    ["fix_empty_10"] = {
+        Source = "fix_empty_10",
+        Time = 32 / 30,
+        ShellEjectAt = 0.5,
+        SoundTable = {
+            {s = path .. "sliderel_deact.ogg",  t = 0.3, c = ci},
+        },
+    },
+    ["fix_33"] = {
+        Source = "fix_33",
+        Time = 32 / 30,
+        ShellEjectAt = 0.5,
+        SoundTable = {
+            {s = path .. "sliderel_deact.ogg",  t = 0.3, c = ci},
+            {s = path .. "sliderel.ogg",        t = 0.6, c = ci},
+        },
+    },
+    ["fix_empty_33"] = {
+        Source = "fix_empty_33",
+        Time = 32 / 30,
+        ShellEjectAt = 0.5,
+        SoundTable = {
+            {s = path .. "sliderel_deact.ogg",  t = 0.3, c = ci},
+        },
+    },
+    ["fix_100"] = {
+        Source = "fix_100",
+        Time = 32 / 30,
+        ShellEjectAt = 0.4,
+        SoundTable = {
+            {s = path .. "sliderel_deact.ogg",  t = 0.2, c = ci},
+            {s = path .. "sliderel.ogg",        t = 0.6, c = ci},
+        },
+    },
+    ["fix_empty_100"] = {
+        Source = "fix_empty_100",
+        Time = 32 / 30,
+        ShellEjectAt = 0.4,
     },
 
     -- 17 Round Reloads --
@@ -451,6 +517,14 @@ SWEP.Animations = {
 
 SWEP.AutosolveSourceSeq = "idle"
 
+SWEP.Hook_TranslateAnimation = function(wep, anim)
+    if wep.Attachments[7].Installed == "go_stock_pistol_bt" then
+        if (anim == "fire" || anim == "fire_empty") then
+            return anim .. "_18"
+        end
+    end
+end
+
 SWEP.Attachments = {
     {
         PrintName = "Optic",
@@ -502,6 +576,16 @@ SWEP.Attachments = {
         PrintName = "Mag Type",
         Slot = {"ud_glock_mag"},
         DefaultAttName = "17-Round G17 Mag",
+    },
+    {
+        PrintName = "Stock Type",
+        Slot = "go_stock_pistol_bt",
+        DefaultAttName = "No Stock",
+        Bone = "glock_parent",
+        Offset = {
+            vpos = Vector(0.1, 2, 1),
+            vang = Angle(90, 0, -90),
+        }
     },
     {
         PrintName = "Ammo Type",

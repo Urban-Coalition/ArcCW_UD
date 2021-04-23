@@ -167,11 +167,12 @@ SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 
 -- Firing sounds --
 
-local path = "weapons/arccw_ud/870/"
+local path1 = "weapons/arccw_ud/870/"
+local path = "weapons/arccw_ud/m1014/"
 local common = "weapons/arccw_ud/common/"
-SWEP.ShootSound = path.."fire.ogg"
-SWEP.ShootSoundSilenced = "weapons/arccw/m870/lowpolym870_supp.ogg"
-SWEP.DistantShootSound = path.."fire_dist.ogg"
+SWEP.ShootSound = path1.."fire.ogg"
+SWEP.ShootSoundSilenced = path1.."fire_supp.ogg"
+SWEP.DistantShootSound = path1.."fire_dist.ogg"
 
 -- Animations --
 
@@ -229,6 +230,11 @@ SWEP.Animations = {
         LHIKOut = 0,
         TPAnimStartTime = 0.5,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        SoundTable = {
+            {s = common .. "cloth_2.ogg",  t = 0},
+            {s = path .. "breechload.ogg",  t = 0.05},
+            {s = path .. "breechclose.ogg",  t = 0.7},
+        },
     },
     ["sgreload_insert"] = {
         Source = "sgreload_insert",
@@ -238,6 +244,10 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0,
+        SoundTable = {
+            {s = common .. "cloth_4.ogg",  t = 0},
+            {s = common .. "shotgun_insert.ogg",  t = 0.05},
+        },
     },
     ["sgreload_finish"] = {
         Source = "sgreload_finish",

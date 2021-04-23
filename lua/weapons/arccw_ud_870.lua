@@ -173,7 +173,7 @@ SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 local path = "weapons/arccw_ud/870/"
 local common = "weapons/arccw_ud/common/"
 SWEP.ShootSound = path .. "fire.ogg"
-SWEP.ShootSoundSilenced = "weapons/arccw/m870/lowpolym870_supp.ogg"
+SWEP.ShootSoundSilenced = path .. "fire_supp.ogg"
 SWEP.DistantShootSound = path .. "fire_dist.ogg"
 
 SWEP.Hook_Think = function(wep)
@@ -212,7 +212,10 @@ SWEP.Animations = {
         Time = 17 / 30,
         ShellEjectAt = 0.1,
         SoundTable = {
-            {s = path .. "eject.ogg",  t = 0.1},
+            {s = common .. "cloth_3.ogg",  t = 0},
+            {s = path .. "rack_1.ogg",  t = 0.1},
+            {s = path .. "eject.ogg",  t = 0.11},
+            {s = path .. "rack_2.ogg",  t = 0.2},
         },
     },
     ["sgreload_start"] = {
@@ -231,27 +234,40 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 0,
+        SoundTable = {
+            {s = common .. "shotgun_insert.ogg",  t = 0},
+            {s = common .. "cloth_2.ogg",  t = 0},
+        },
     },
     ["sgreload_finish"] = {
         Source = "sgreload_finish",
         Time = 20 / 30,
         LHIK = true,
         LHIKIn = 0,
-        LHIKOut = 0.4,
+        LHIKEaseOut = 0.6,
+        LHIKOut = 0.7,
         TPAnimStartTime = 0.8,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        SoundTable = {
+            {s = common .. "shoulder.ogg",  t = 0.2},
+        },
     },
     ["sgreload_finish_empty"] = {
         Source = "sgreload_finish_empty",
         Time = 37 / 30,
         LHIK = true,
         LHIKIn = 0,
-        LHIKOut = 0.25,
+        LHIKEaseOut = 1.2,
+        LHIKOut = 1.4,
         TPAnimStartTime = 0.5,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         ShellEjectAt = 0.5,
         SoundTable = {
-            {s = path .. "eject.ogg",  t = 0.5},
+            {s = common .. "cloth_2.ogg",  t = 0.5},
+            {s = path .. "rack_1.ogg",  t = 0.5},
+            {s = path .. "eject.ogg",  t = 0.51},
+            {s = path .. "rack_2.ogg",  t = 0.7},
+            {s = common .. "shoulder.ogg",  t = 0.9},
         },
     },
 }
@@ -264,8 +280,15 @@ SWEP.BulletBones = {
 -- Bodygroups --
 
 SWEP.AttachmentElements = {
-    ["ExampleBG"] = {
-        VMBodygroups = {{ind = 1, bg = 1}},
+    ["ud_shotgun_rail_fg"] = {
+        VMBodygroups = {{ind = 3, bg = 1}},
+    },
+
+    ["ud_870_slide_moe"] = {
+        VMBodygroups = {{ind = 6, bg = 1}},
+    },
+    ["ud_870_slide_long"] = {
+        VMBodygroups = {{ind = 6, bg = 2}},
     },
 }
 
@@ -278,10 +301,7 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(0, -2, 5),
             vang = Angle(90, 2, -90),
-            wpos = Vector(8, 0.4, -5.1),
-            wang = Angle(-10, 0, 180),
         },
-        ExtraSightDist = 4
     },
     {
         PrintName = "Barrel",
@@ -296,36 +316,41 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(-0.03, -0.05, -0.5),
             vang = Angle(90, 0, -90),
-            wpos = Vector(30, 1, -8),
-            wang = Angle(-10, -2, 180),
+        },
+    },
+    {
+        PrintName = "Slide Type",
+        DefaultAttName = "Wooden Slide",
+        Slot = {"ud_870_slide"},
+        Bone = "870_slide",
+        Offset = {
+            vpos = Vector(3, -4.4, -29),
+            vang = Angle(90, 0, -90),
         },
     },
     {
         PrintName = "Underbarrel",
         Slot = {"foregrip"},
-        Bone = "870_parent",
+        Bone = "870_slide",
         Offset = {
-            vpos = Vector(0, 1.7, 7),
+            vpos = Vector(0, 1.3, 0),
             vang = Angle(90, 0, -90),
-            wpos = Vector(18, 0.9, -4.5),
-            wang = Angle(-10, 0, 180),
         },
+        InstalledEles = {"ud_shotgun_rail_fg"}
     },
     {
         PrintName = "Tactical",
         Slot = {"tac_pistol"},
-        Bone = "1014_parent",
+        Bone = "870_slide",
         Offset = {
             vpos = Vector(0, 1.7, 9.5),
             vang = Angle(90, 0, -90),
-            wpos = Vector(22, 0.9, -4.5),
-            wang = Angle(-10, 0, 180),
         },
     },
     {
-        PrintName = "Stock",
+        PrintName = "Stock Type",
+        DefaultAttName = "Wooden Stock",
         Slot = {"ud_870_stock"},
-        DefaultAttName = "Unfolded stock",
     },
     {
         PrintName = "Tube Type",
@@ -354,8 +379,6 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(0.6, -4, 4),
             vang = Angle(90, 0, -90),
-            wpos = Vector(9, 2.3, -4.6),
-            wang = Angle(-14, -2, 180),
         },
     },
 }

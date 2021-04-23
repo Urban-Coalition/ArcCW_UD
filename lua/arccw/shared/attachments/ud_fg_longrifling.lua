@@ -1,13 +1,12 @@
 att.PrintName = "Long Rifling"
 
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "Eat your heart out Arctic"
+att.Description = "Custom rifling improves muzzle velocity, allowing the weapon to shoot further."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
 }
 att.Desc_Neutrals = {
-    "Cannot be used with shotguns"
 }
 att.Slot = "ud_fg"
 att.AutoStats = true

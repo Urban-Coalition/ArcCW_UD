@@ -1,7 +1,7 @@
 att.PrintName = "Civvy Conversion"
 
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "Eat your heart out Arctic"
+att.Description = "Adapt the gun for use in civilian markets, where fully-automatic firing weapons are usually outlawed."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
@@ -32,7 +32,7 @@ att.Override_Firemodes = {
         Mode = 0
     }
 }
-att.Override_Firemodes_Priority = 999
+att.Override_Firemodes_Priority = 10
 
 att.Mult_Range = 1.25
 att.Mult_RPM = .9

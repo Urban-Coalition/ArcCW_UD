@@ -1,7 +1,7 @@
 att.PrintName = "Match Trigger"
 
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "Eat your heart out Arctic"
+att.Description = "Hair trigger for competition shooting allows crisp trigger pulls, improving first shot recoil."
 att.Desc_Pros = {
     "-25% Recoil for first shot"
 }
@@ -23,14 +23,4 @@ att.Hook_Compatible = function(wep)
     return false
 end
 
-att.Hook_ModifyRecoil = function(wep,rec)
-    local recoil = 1
-
-    if wep:GetBurstCount() == 0 then
-        recoil = .75
-    end
-
-    return {
-        Recoil = recoil
-    }
-end
+att.Override_ShotRecoilTable = {0.75}

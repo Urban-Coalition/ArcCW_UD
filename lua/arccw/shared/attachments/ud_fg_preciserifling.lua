@@ -1,13 +1,12 @@
 att.PrintName = "Precision Rifling"
 
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "Eat your heart out Arctic"
+att.Description = "High-precision machined rifling allows the weapon to shoot much more consistently."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
 }
 att.Desc_Neutrals = {
-    "Cannot be used with shotguns"
 }
 att.Slot = "ud_fg"
 att.AutoStats = true

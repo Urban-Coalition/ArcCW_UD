@@ -1,12 +1,12 @@
 att.PrintName = "Dual-Stage Trigger"
 
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "Eat your heart out Arctic"
+att.Description = "A heavy trigger with a semi-automatic middle stage and a fully-automatic end stage. Can shoot semi- and fully- automatically without the need for switching a fire selector."
 att.Desc_Pros = {
     "+15% Fire rate after first shot"
 }
 att.Desc_Cons = {
-    "-50% Fire rate for first shot"
+    "-100% Fire rate for first shot"
 }
 att.Desc_Neutrals = {
 }
@@ -28,6 +28,6 @@ function att.Hook_ModifyRPM(wep,delay)
     if wep:GetBurstCount() > 0 then
         return delay * .85
     else
-        return delay * 1.5
+        return delay * 2
     end
 end

@@ -1,7 +1,7 @@
 att.PrintName = "Forced Reset Trigger"
 
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "Eat your heart out Arctic"
+att.Description = "Trigger system that pushes back against the shooter's finger, allowing them to fire much more rapidly. By the definition of the ATF, this does not count as full-automatic, for the time being at least."
 att.Desc_Pros = {
     "Fully automatic fire"
 }
@@ -26,6 +26,7 @@ end
 
 att.Override_Firemodes = {
     {
+        PrintName = "FRCD",
         Mode = 2,
     },
     {

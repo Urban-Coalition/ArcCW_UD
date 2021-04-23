@@ -1,7 +1,7 @@
 att.PrintName = "Loose Springs"
 
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "Eat your heart out Arctic"
+att.Description = "With help from some loose magazine springs, it is possible to stuff more ammo in a magazine than is usually recommended."
 att.Desc_Pros = {
     "+5% Magazine capacity"
 }

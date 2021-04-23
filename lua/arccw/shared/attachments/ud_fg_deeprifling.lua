@@ -1,13 +1,12 @@
 att.PrintName = "Deep Rifling"
 
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "Eat your heart out Arctic"
+att.Description = "A custom tailored rifling scheme allows bullets to strike with greater impact, penetrating more deeply."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
 }
 att.Desc_Neutrals = {
-    "Cannot be used with shotguns"
 }
 att.Slot = "ud_fg"
 att.AutoStats = true

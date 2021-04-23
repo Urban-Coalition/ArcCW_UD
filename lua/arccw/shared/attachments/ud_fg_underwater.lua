@@ -1,7 +1,7 @@
 att.PrintName = "Sealed Bolt"
 
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "For when Noah gets the boat"
+att.Description = "A set of modifications needed to allow the weapon to fire underwater."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

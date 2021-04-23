@@ -132,9 +132,9 @@ SWEP.HeatDelayTime = 3
 
 -- Speed multipliers --
 
-SWEP.SpeedMult = 0.8
-SWEP.SightedSpeedMult = 0.9
-SWEP.SightTime = 0.3
+SWEP.SpeedMult = 0.925
+SWEP.SightedSpeedMult = 0.75
+SWEP.SightTime = 0.333
 SWEP.ShootSpeedMult = 0.95
 
 -- Length --

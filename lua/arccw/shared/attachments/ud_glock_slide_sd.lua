@@ -30,3 +30,5 @@ att.Override_MuzzleEffect = "muzzleflash_suppressed"
 att.Add_BarrelLength = 8
 
 att.ActivateElements = {"ud_glock_slide_sd"}
+
+att.GivesFlags = {"sd"}

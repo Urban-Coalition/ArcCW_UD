@@ -1,4 +1,4 @@
-att.PrintName = "Mini-14 Long Barrel"
+att.PrintName = "24\" Ranch Rifle Long Barrel"
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.SortOrder = 10
 att.Description = "Lengthened barrel for shooting far-away varmints. More accurate, but slightly more heavy."

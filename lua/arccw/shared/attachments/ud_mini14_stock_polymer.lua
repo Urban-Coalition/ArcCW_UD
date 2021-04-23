@@ -15,6 +15,6 @@ att.AutoStats = true
 --att.Mult_Recoil = 0.5
 --att.Mult_Sway = 3
 
-att.Add_BarrelLength = 32
+-- att.Add_BarrelLength = 32
 
 att.ActivateElements = {"ud_mini14_stock_polymer"}

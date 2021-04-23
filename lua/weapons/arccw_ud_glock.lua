@@ -184,6 +184,12 @@ SWEP.AttachmentElements = {
 
     ["ud_glock_mag_10"] = {
         VMBodygroups = {{ind = 2, bg = 1}, {ind = 1, bg = 2}},
+        AttPosMods = {
+            [7] = {
+                vpos = Vector(0.1, 1, 1),
+                vang = Angle(90, 0, -90),
+            }
+        }
     },
     ["ud_glock_mag_33"] = {
         VMBodygroups = {{ind = 2, bg = 2}},

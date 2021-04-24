@@ -302,8 +302,12 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
+            {s = common .. "cloth_1.ogg",  t = 0.0},
             {s = path .. "magout.ogg", 	t = 0.25},
+            {s = common .. "cloth_2.ogg",  t = 0.4},
             {s = path .. "magin.ogg",   t = 1.05},
+            {s = common .. "cloth_3.ogg",  t = 1.3},
+            {s = common .. "shoulder.ogg",  t = 1.75},
         },
     },
     ["reload_empty"] = {
@@ -317,10 +321,14 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
+            {s = common .. "cloth_1.ogg",  t = 0.0},
             {s = path .. "magout.ogg", 	t = 0.15},
+            {s = common .. "cloth_2.ogg",  t = 0.4},
             {s = path .. "magin.ogg",   t = 1.10},
             {s = path .. "chback.ogg",  t = 1.85},
             {s = path .. "chamber.ogg", t = 1.95},
+            {s = common .. "cloth_3.ogg",  t = 2.2},
+            {s = common .. "shoulder.ogg",  t = 2.4},
         },
     },
 
@@ -337,8 +345,11 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
+            {s = common .. "cloth_1.ogg",  t = 0.0},
             {s = path .. "magout.ogg", 	t = 0.15},
+            {s = common .. "cloth_2.ogg",  t = 0.3},
             {s = path .. "magin.ogg",   t = 1.10},
+            {s = common .. "cloth_3.ogg",  t = 1.5},
         },
     },
     ["reload_empty_10"] = {
@@ -352,10 +363,14 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
+            {s = common .. "cloth_1.ogg",  t = 0.0},
             {s = path .. "magout.ogg", 	t = 0.15},
+            {s = common .. "cloth_2.ogg",  t = 0.4},
             {s = path .. "magin.ogg",   t = 1.10},
             {s = path .. "chback.ogg",  t = 1.90},
             {s = path .. "chamber.ogg", t = 2.10},
+            {s = common .. "cloth_3.ogg",  t = 2.4},
+            {s = common .. "shoulder.ogg",  t = 2.5},
         },
     },
 
@@ -372,8 +387,12 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
+            {s = common .. "cloth_1.ogg",  t = 0.0},
             {s = path .. "magout.ogg", 	t = 0.15},
+            {s = common .. "cloth_2.ogg",  t = 0.3},
             {s = path .. "magin.ogg",   t = 1.10},
+            {s = common .. "cloth_3.ogg",  t = 1.4},
+            {s = common .. "shoulder.ogg",  t = 1.85},
         },
     },
     ["reload_empty_30"] = {
@@ -387,10 +406,14 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
+            {s = common .. "cloth_1.ogg",  t = 0.0},
             {s = path .. "magout.ogg", 	t = 0.15},
-            {s = path .. "magin.ogg",   t = 1.10},
-            {s = path .. "chback.ogg",  t = 1.85},
-            {s = path .. "chamber.ogg", t = 1.95},
+            {s = common .. "cloth_2.ogg",  t = 0.3},
+            {s = path .. "magin.ogg",   t = 1.20},
+            {s = path .. "chback.ogg",  t = 2},
+            {s = path .. "chamber.ogg", t = 2.1},
+            {s = common .. "cloth_3.ogg",  t = 2.3},
+            {s = common .. "shoulder.ogg",  t = 2.65},
         },
     },
 
@@ -407,8 +430,11 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
+            {s = common .. "cloth_1.ogg",  t = 0.0},
             {s = path .. "magout.ogg", 	t = 0.15},
+            {s = common .. "cloth_2.ogg",  t = 0.3},
             {s = path .. "magin.ogg",   t = 1.10},
+            {s = common .. "cloth_3.ogg",  t = 1.4},
         },
     },
     ["reload_empty_15_22lr"] = {
@@ -422,10 +448,13 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
+            {s = common .. "cloth_1.ogg",  t = 0.0},
             {s = path .. "magout.ogg", 	t = 0.15},
+            {s = common .. "cloth_2.ogg",  t = 0.5},
             {s = path .. "magin.ogg",   t = 1.10},
-            {s = path .. "chback.ogg",  t = 1.85},
-            {s = path .. "chamber.ogg", t = 1.95},
+            {s = path .. "chback.ogg",  t = 2},
+            {s = path .. "chamber.ogg", t = 2.1},
+            {s = common .. "cloth_3.ogg",  t = 2.3},
         },
     },
 }

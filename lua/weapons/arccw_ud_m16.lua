@@ -219,6 +219,9 @@ SWEP.AttachmentElements = {
     ["ud_m16_clamp_fullsize"] = {
         VMBodygroups = {{ind = 8, bg = 1}},
     },
+    ["ud_m16_clamp_fullsize"] = {
+        VMBodygroups = {{ind = 8, bg = 1}},
+    },
 
     ["ud_m16_stock_m4"] = {
         VMBodygroups = {{ind = 5, bg = 1}},

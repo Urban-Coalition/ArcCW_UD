@@ -348,7 +348,7 @@ SWEP.Animations = {
         Time = 13 / 30,
         ShellEjectAt = 0.01,
         SoundTable = {
-            {s = path .. "boltdrop.ogg", t = 0}, -- Temporary
+            {s = path .. "mech_last.ogg", t = 0}, -- Temporary
         },
     },
 

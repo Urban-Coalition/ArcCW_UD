@@ -212,6 +212,9 @@ SWEP.Animations = {
         Source = "fire_empty",
         Time = 23 / 30,
         ShellEjectAt = 0.01,
+        SoundTable = {
+            {s = path .. "breechclose.ogg", t = 0}, -- Temporary
+        },
     },
     ["sgreload_start"] = {
         Source = "sgreload_start",

@@ -232,6 +232,10 @@ SWEP.AttachmentElements = {
     ["ud_mini14_stock_sawnoff"] = {
         VMBodygroups = {{ind = 1, bg = 2}},
     },
+
+    ["ud_mini14_clamp"] = {
+        VMBodygroups = {{ind = 6, bg = 1}},
+    },
 }
 
 -- Animations --
@@ -280,6 +284,9 @@ SWEP.Animations = {
         Source = "fire_empty",
         Time = 18 / 30,
         ShellEjectAt = 0.01,
+        SoundTable = {
+            {s = path .. "chamber.wav", t = 0}, -- Temporary
+        },
     },
 
     -- 20 Round Reloads --
@@ -466,9 +473,10 @@ SWEP.Attachments = {
         Slot = {"tac_pistol"},
         Bone = "mini14_parent",
         Offset = {
-            vpos = Vector(0, 1.7, 9.5),
+            vpos = Vector(0, -1.5, 26.2),
             vang = Angle(90, 0, -90),
         },
+        InstalledEles = {"ud_mini14_clamp"},
     },
     {
         PrintName = "Mag Type",

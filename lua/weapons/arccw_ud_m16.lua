@@ -191,6 +191,8 @@ SWEP.BulletBones = {
     [2] = "m16_bullets1",    [3] = "m16_bullets2"
 }
 
+SWEP.DefaultBodyGroups = "00000000000"
+
 SWEP.AttachmentElements = {
 
     ["ud_m16_mag_20"] = {
@@ -216,6 +218,26 @@ SWEP.AttachmentElements = {
 
     ["ud_m16_clamp_fullsize"] = {
         VMBodygroups = {{ind = 8, bg = 1}},
+    },
+
+    ["ud_m16_stock_m4"] = {
+        VMBodygroups = {{ind = 5, bg = 1}},
+    },
+    ["ud_m16_stock_wood"] = {
+        VMBodygroups = {{ind = 5, bg = 2}},
+    },
+    ["ud_m16_stock_buffer"] = {
+        VMBodygroups = {{ind = 5, bg = 3}},
+    },
+
+    ["ud_m16_grip_ergo"] = {
+        VMBodygroups = {{ind = 6, bg = 1}},
+    },
+    ["ud_m16_grip_skel"] = {
+        VMBodygroups = {{ind = 6, bg = 2}},
+    },
+    ["ud_m16_grip_wood"] = {
+        VMBodygroups = {{ind = 6, bg = 3}},
     },
 
     ["ud_m16_barrel_m4"] = {
@@ -322,6 +344,9 @@ SWEP.Animations = {
         Source = "fire_empty",
         Time = 13 / 30,
         ShellEjectAt = 0.01,
+        SoundTable = {
+            {s = path .. "boltdrop.ogg", t = 0}, -- Temporary
+        },
     },
 
     ["fix"] = {
@@ -667,7 +692,12 @@ SWEP.Attachments = {
         InstalledEles = {"ud_m16_clamp_fullsize"}
     },
     {
-        PrintName = "Stock",
+        PrintName = "Grip Type",
+        Slot = {"ud_m16_grip"},
+        DefaultAttName = "Standard Grip",
+    },
+    {
+        PrintName = "Stock Type",
         Slot = {"ud_m16_stock"},
         DefaultAttName = "Standard Stock",
     },

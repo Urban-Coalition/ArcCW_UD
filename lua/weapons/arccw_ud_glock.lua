@@ -310,6 +310,9 @@ SWEP.Animations = {
         Source = "fire_empty",
         Time = 16 / 30,
         ShellEjectAt = 0.03,
+        SoundTable = {
+            {s = path .. "sliderel.ogg", t = 0, c = ci}, -- Temporary
+        },
     },
     ["fire_18"] = {
         Source = "fire_18",
@@ -320,6 +323,9 @@ SWEP.Animations = {
         Source = "fire_empty_18",
         Time = 16 / 30,
         ShellEjectAt = 0.03,
+        SoundTable = {
+            {s = path .. "sliderel.ogg", t = 0, c = ci}, -- Temporary
+        },
     },
     ["fire_cycle"] = {
         Source = "fire_cycle",
@@ -396,7 +402,7 @@ SWEP.Animations = {
     },
 
     ["cycle"] = {
-        Source = "fix_100",
+        Source = "cycle",
         Time = 32 / 30,
         ShellEjectAt = 0.4,
         SoundTable = {
@@ -405,7 +411,7 @@ SWEP.Animations = {
         },
     },
     ["cycle_empty"] = {
-        Source = "fix_empty_100",
+        Source = "cycle_empty",
         Time = 32 / 30,
         ShellEjectAt = 0.4,
         SoundTable = {

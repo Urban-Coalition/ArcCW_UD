@@ -122,7 +122,21 @@ $sequence "fire_cycle" {
 	fps 30
 	"ACT_VM_PRIMARYATTACK" 1
 	fadein 0.02
-	fadeout 0.02
+	fadeout 0.3
+}
+
+$sequence "cycle" "anims\jam_100.smd" {
+	fps 30
+	"ACT_VM_IDLE" 1
+	fadein 0.3
+	fadeout 0
+}
+
+$sequence "cycle_empty" "anims\jam_100_empty.smd" {
+	fps 30
+	"ACT_VM_IDLE" 1
+	fadein 0.3
+	fadeout 0
 }
 
 $sequence "draw" "anims\draw.smd" {

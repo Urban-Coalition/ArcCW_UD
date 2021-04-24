@@ -394,8 +394,10 @@ SWEP.Animations = {
         Time = 32 / 30,
         ShellEjectAt = false,
         SoundTable = {
+            {s = common .. "cloth_2.ogg",  t = 0},
             {s = path .. "slide_pull.ogg",  t = 0.2, c = ci},
             {s = path .. "sliderel_deact.ogg",  t = 0.2, c = ci},
+            {s = common .. "cloth_3.ogg",  t = 0.5},
             {s = path .. "sliderel.ogg",        t = 0.6, c = ci},
         },
     },
@@ -404,8 +406,10 @@ SWEP.Animations = {
         Time = 32 / 30,
         ShellEjectAt = false,
         SoundTable = {
+            {s = common .. "cloth_2.ogg",  t = 0},
             {s = path .. "sliderel_deact.ogg",  t = 0.2, c = ci},
             {s = path .. "slide_pull.ogg",  t = 0.2, c = ci},
+            {s = common .. "cloth_3.ogg",  t = 0.5},
         },
     },
 
@@ -414,8 +418,10 @@ SWEP.Animations = {
         Time = 32 / 30,
         ShellEjectAt = 0.4,
         SoundTable = {
+            {s = common .. "cloth_2.ogg",  t = 0},
             {s = path .. "slide_pull.ogg",  t = 0.2, c = ci},
             {s = path .. "sliderel_deact.ogg",  t = 0.2, c = ci},
+            {s = common .. "cloth_3.ogg",  t = 0.5},
             {s = path .. "sliderel.ogg",        t = 0.6, c = ci},
         },
     },
@@ -424,8 +430,10 @@ SWEP.Animations = {
         Time = 32 / 30,
         ShellEjectAt = 0.4,
         SoundTable = {
+            {s = common .. "cloth_2.ogg",  t = 0},
             {s = path .. "slide_pull.ogg",  t = 0.2, c = ci},
             {s = path .. "sliderel_deact.ogg",  t = 0.2, c = ci},
+            {s = common .. "cloth_3.ogg",  t = 0.5},
         },
     },
 
@@ -443,9 +451,12 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.3,
         SoundTable = {
+            {s = common .. "cloth_1.ogg",  t = 0},
+            {s = common .. "cloth_2.ogg",  t = 0.3},
             {s = path .. "magrelease.ogg",    t = 0.3, c = ci},
             {s = path .. "magout.ogg",        t = 0.3, c = ci},
             {s = path .. "magin.ogg",         t = 0.4, c = ci},
+            {s = common .. "cloth_3.ogg",  t = 1.1},
         },
     },
     ["reload_empty"] = {
@@ -460,10 +471,13 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.3,
         SoundTable = {
+            {s = common .. "cloth_1.ogg",  t = 0},
             {s = path .. "magrelease.ogg",    t = 0.15, c = ci},
             {s = path .. "magout.ogg",        t = 0.15, c = ci},
             {s = path .. "magin.ogg",         t = 0.45, c = ci},
+            {s = common .. "cloth_2.ogg",  t = 0.5},
             {s = path .. "sliderel.ogg",      t = 1.45, c = ci},
+            {s = common .. "cloth_3.ogg",  t = 1.5},
         },
     },
 
@@ -481,9 +495,12 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.3,
         SoundTable = {
+            {s = common .. "cloth_1.ogg",  t = 0},
+            {s = common .. "cloth_2.ogg",  t = 0.3},
             {s = path .. "magrelease.ogg",    t = 0.3, c = ci},
             {s = path .. "magout.ogg",        t = 0.3, c = ci},
             {s = path .. "magin.ogg",         t = 0.4, c = ci},
+            {s = common .. "cloth_3.ogg",  t = 1.1},
         },
     },
     ["reload_empty_10"] = {
@@ -498,10 +515,13 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.3,
         SoundTable = {
+            {s = common .. "cloth_1.ogg",  t = 0},
             {s = path .. "magrelease.ogg",    t = 0.15, c = ci},
             {s = path .. "magout.ogg",        t = 0.15, c = ci},
             {s = path .. "magin.ogg",         t = 0.45, c = ci},
+            {s = common .. "cloth_2.ogg",  t = 0.5},
             {s = path .. "sliderel.ogg",      t = 1.45, c = ci},
+            {s = common .. "cloth_3.ogg",  t = 1.5},
         },
     },
 
@@ -519,9 +539,12 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.3,
         SoundTable = {
+            {s = common .. "cloth_1.ogg",  t = 0},
+            {s = common .. "cloth_2.ogg",  t = 0.3},
             {s = path .. "magrelease.ogg",    t = 0.4, c = ci},
             {s = path .. "magout.ogg",        t = 0.4, c = ci},
             {s = path .. "magin.ogg",         t = 0.52, c = ci},
+            {s = common .. "cloth_3.ogg",  t = 1.2},
         },
     },
     ["reload_empty_33"] = {
@@ -536,10 +559,13 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.3,
         SoundTable = {
+            {s = common .. "cloth_1.ogg",  t = 0},
             {s = path .. "magrelease.ogg",    t = 0.16, c = ci},
             {s = path .. "magout.ogg",        t = 0.16, c = ci},
             {s = path .. "magin.ogg",         t = 0.46, c = ci},
+            {s = common .. "cloth_2.ogg",  t = 0.5},
             {s = path .. "sliderel.ogg",      t = 1.46, c = ci},
+            {s = common .. "cloth_3.ogg",  t = 1.6},
         },
     },
 
@@ -557,9 +583,12 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.3,
         SoundTable = {
+            {s = common .. "cloth_1.ogg",  t = 0},
             {s = path .. "magrelease.ogg",    t = 0.3, c = ci},
             {s = path .. "magout.ogg",        t = 0.3, c = ci},
             {s = path .. "magin.ogg",         t = 0.63, c = ci},
+            {s = common .. "cloth_2.ogg",  t = 0.7},
+            {s = common .. "cloth_3.ogg",  t = 1.1},
         },
     },
     ["reload_empty_100"] = {
@@ -574,11 +603,14 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.3,
         SoundTable = {
+            {s = common .. "cloth_1.ogg",  t = 0},
             {s = path .. "magrelease.ogg",      t = 0.12, c = ci},
             {s = path .. "magout.ogg",          t = 0.12, c = ci},
             {s = path .. "magin.ogg",           t = 0.43, c = ci},
+            {s = common .. "cloth_2.ogg",  t = 0.7},
             {s = path .. "sliderel_deact.ogg",  t = 1.3, c = ci},
             {s = path .. "sliderel.ogg",        t = 1.545, c = ci},
+            {s = common .. "cloth_3.ogg",  t = 1.7},
         },
     },
 }

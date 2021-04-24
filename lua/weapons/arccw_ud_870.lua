@@ -225,6 +225,10 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0.5,
         LHIKOut = 0,
+        SoundTable = {
+            {s = common .. "cloth_1.ogg",  t = 0},
+            {s = common .. "shoulder.ogg",  t = 0.1},
+        },
     },
     ["sgreload_insert"] = {
         Source = "sgreload_insert",
@@ -249,7 +253,7 @@ SWEP.Animations = {
         TPAnimStartTime = 0.8,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         SoundTable = {
-            {s = common .. "shoulder.ogg",  t = 0.2},
+            {s = common .. "cloth_3.ogg",  t = 0},
         },
     },
     ["sgreload_finish_empty"] = {

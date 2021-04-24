@@ -174,9 +174,9 @@ SWEP.WorldModelOffset = {
 
 local path = "weapons/arccw_ud/mini14/"
 local common = "weapons/arccw_ud/common/"
-SWEP.ShootSound = path .. "fire.wav"
-SWEP.ShootSoundSilenced = "weapons/arccw/czbren/lowpolyczbren_supp.ogg"
-SWEP.DistantShootSound = path .. "fire_dist.wav"
+SWEP.ShootSound = path .. "fire.ogg"
+SWEP.ShootSoundSilenced = path .. "fire_supp.ogg"
+SWEP.DistantShootSound = path .. "fire_dist.ogg"
 
 -- Bodygroups --
 
@@ -302,8 +302,8 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = path .. "magout.wav", 	t = 0.15},
-            {s = path .. "magin.wav",   t = 1.10},
+            {s = path .. "magout.ogg", 	t = 0.25},
+            {s = path .. "magin.ogg",   t = 1.05},
         },
     },
     ["reload_empty"] = {
@@ -317,10 +317,10 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = path .. "magout.wav", 	t = 0.15},
-            {s = path .. "magin.wav",   t = 1.10},
-            {s = path .. "chback.wav",  t = 1.85},
-            {s = path .. "chamber.wav", t = 1.95},
+            {s = path .. "magout.ogg", 	t = 0.15},
+            {s = path .. "magin.ogg",   t = 1.10},
+            {s = path .. "chback.ogg",  t = 1.85},
+            {s = path .. "chamber.ogg", t = 1.95},
         },
     },
 
@@ -337,8 +337,8 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = path .. "magout.wav", 	t = 0.15},
-            {s = path .. "magin.wav",   t = 1.10},
+            {s = path .. "magout.ogg", 	t = 0.15},
+            {s = path .. "magin.ogg",   t = 1.10},
         },
     },
     ["reload_empty_10"] = {
@@ -352,10 +352,10 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = path .. "magout.wav", 	t = 0.15},
-            {s = path .. "magin.wav",   t = 1.10},
-            {s = path .. "chback.wav",  t = 1.90},
-            {s = path .. "chamber.wav", t = 2.10},
+            {s = path .. "magout.ogg", 	t = 0.15},
+            {s = path .. "magin.ogg",   t = 1.10},
+            {s = path .. "chback.ogg",  t = 1.90},
+            {s = path .. "chamber.ogg", t = 2.10},
         },
     },
 
@@ -372,8 +372,8 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = path .. "magout.wav", 	t = 0.15},
-            {s = path .. "magin.wav",   t = 1.10},
+            {s = path .. "magout.ogg", 	t = 0.15},
+            {s = path .. "magin.ogg",   t = 1.10},
         },
     },
     ["reload_empty_30"] = {
@@ -387,10 +387,10 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = path .. "magout.wav", 	t = 0.15},
-            {s = path .. "magin.wav",   t = 1.10},
-            {s = path .. "chback.wav",  t = 1.85},
-            {s = path .. "chamber.wav", t = 1.95},
+            {s = path .. "magout.ogg", 	t = 0.15},
+            {s = path .. "magin.ogg",   t = 1.10},
+            {s = path .. "chback.ogg",  t = 1.85},
+            {s = path .. "chamber.ogg", t = 1.95},
         },
     },
 
@@ -407,8 +407,8 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = path .. "magout.wav", 	t = 0.15},
-            {s = path .. "magin.wav",   t = 1.10},
+            {s = path .. "magout.ogg", 	t = 0.15},
+            {s = path .. "magin.ogg",   t = 1.10},
         },
     },
     ["reload_empty_15_22lr"] = {
@@ -422,10 +422,10 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = path .. "magout.wav", 	t = 0.15},
-            {s = path .. "magin.wav",   t = 1.10},
-            {s = path .. "chback.wav",  t = 1.85},
-            {s = path .. "chamber.wav", t = 1.95},
+            {s = path .. "magout.ogg", 	t = 0.15},
+            {s = path .. "magin.ogg",   t = 1.10},
+            {s = path .. "chback.ogg",  t = 1.85},
+            {s = path .. "chamber.ogg", t = 1.95},
         },
     },
 }

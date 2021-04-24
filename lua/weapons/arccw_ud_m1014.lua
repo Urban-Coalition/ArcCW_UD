@@ -171,7 +171,7 @@ local path1 = "weapons/arccw_ud/870/"
 local path = "weapons/arccw_ud/m1014/"
 local common = "weapons/arccw_ud/common/"
 SWEP.ShootSound = path1.."fire.ogg"
-SWEP.ShootSoundSilenced = "weapons/arccw/m870/lowpolym870_supp.ogg"
+SWEP.ShootSoundSilenced = path.."fire_supp.ogg"
 SWEP.DistantShootSound = path1.."fire_dist.ogg"
 
 -- Animations --

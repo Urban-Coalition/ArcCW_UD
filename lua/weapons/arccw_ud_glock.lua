@@ -331,6 +331,7 @@ SWEP.Animations = {
         Time = 32 / 30,
         ShellEjectAt = false,
         SoundTable = {
+            {s = path .. "slide_pull.ogg",  t = 0.3, c = ci},
             {s = path .. "sliderel_deact.ogg",  t = 0.3, c = ci},
             {s = path .. "sliderel.ogg",        t = 0.6, c = ci},
         },
@@ -340,6 +341,7 @@ SWEP.Animations = {
         Time = 32 / 30,
         ShellEjectAt = false,
         SoundTable = {
+            {s = path .. "slide_pull.ogg",  t = 0.3, c = ci},
             {s = path .. "sliderel_deact.ogg",  t = 0.3, c = ci},
         },
     },
@@ -348,6 +350,7 @@ SWEP.Animations = {
         Time = 32 / 30,
         ShellEjectAt = false,
         SoundTable = {
+            {s = path .. "slide_pull.ogg",  t = 0.3, c = ci},
             {s = path .. "sliderel_deact.ogg",  t = 0.3, c = ci},
             {s = path .. "sliderel.ogg",        t = 0.6, c = ci},
         },
@@ -357,6 +360,7 @@ SWEP.Animations = {
         Time = 32 / 30,
         ShellEjectAt = false,
         SoundTable = {
+            {s = path .. "slide_pull.ogg",  t = 0.3, c = ci},
             {s = path .. "sliderel_deact.ogg",  t = 0.3, c = ci},
         },
     },
@@ -365,6 +369,7 @@ SWEP.Animations = {
         Time = 32 / 30,
         ShellEjectAt = false,
         SoundTable = {
+            {s = path .. "slide_pull.ogg",  t = 0.3, c = ci},
             {s = path .. "sliderel_deact.ogg",  t = 0.3, c = ci},
             {s = path .. "sliderel.ogg",        t = 0.6, c = ci},
         },
@@ -374,6 +379,7 @@ SWEP.Animations = {
         Time = 32 / 30,
         ShellEjectAt = false,
         SoundTable = {
+            {s = path .. "slide_pull.ogg",  t = 0.3, c = ci},
             {s = path .. "sliderel_deact.ogg",  t = 0.3, c = ci},
         },
     },
@@ -382,6 +388,7 @@ SWEP.Animations = {
         Time = 32 / 30,
         ShellEjectAt = false,
         SoundTable = {
+            {s = path .. "slide_pull.ogg",  t = 0.2, c = ci},
             {s = path .. "sliderel_deact.ogg",  t = 0.2, c = ci},
             {s = path .. "sliderel.ogg",        t = 0.6, c = ci},
         },
@@ -392,6 +399,7 @@ SWEP.Animations = {
         ShellEjectAt = false,
         SoundTable = {
             {s = path .. "sliderel_deact.ogg",  t = 0.2, c = ci},
+            {s = path .. "slide_pull.ogg",  t = 0.2, c = ci},
         },
     },
 
@@ -400,6 +408,7 @@ SWEP.Animations = {
         Time = 32 / 30,
         ShellEjectAt = 0.4,
         SoundTable = {
+            {s = path .. "slide_pull.ogg",  t = 0.2, c = ci},
             {s = path .. "sliderel_deact.ogg",  t = 0.2, c = ci},
             {s = path .. "sliderel.ogg",        t = 0.6, c = ci},
         },
@@ -409,6 +418,7 @@ SWEP.Animations = {
         Time = 32 / 30,
         ShellEjectAt = 0.4,
         SoundTable = {
+            {s = path .. "slide_pull.ogg",  t = 0.2, c = ci},
             {s = path .. "sliderel_deact.ogg",  t = 0.2, c = ci},
         },
     },

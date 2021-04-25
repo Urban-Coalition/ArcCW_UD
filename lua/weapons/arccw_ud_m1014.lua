@@ -177,7 +177,8 @@ SWEP.DistantShootSound = path1.."fire_dist.ogg"
 -- Animations --
 
 SWEP.Hook_Think = function(wep)
-	wep:GetOwner():GetViewModel():SetPoseParameter( "sights", Lerp(wep:GetSightDelta(), 1, 0) ) -- thanks fesiug
+    local vm = wep:GetOwner():GetViewModel()
+    vm:SetPoseParameter( "sights", Lerp(wep:GetSightDelta(), 1, 0) ) -- thanks fesiug
 end
 
 SWEP.Animations = {

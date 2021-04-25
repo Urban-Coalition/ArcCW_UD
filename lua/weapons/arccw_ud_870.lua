@@ -177,7 +177,8 @@ SWEP.ShootSoundSilenced = path .. "fire_supp.ogg"
 SWEP.DistantShootSound = path .. "fire_dist.ogg"
 
 SWEP.Hook_Think = function(wep)
-    wep:GetOwner():GetViewModel():SetPoseParameter( "sights", Lerp(wep:GetSightDelta(), 1, 0) ) -- thanks fesiug
+    local vm = wep:GetOwner():GetViewModel()
+    vm:SetPoseParameter( "sights", Lerp(wep:GetSightDelta(), 1, 0) ) -- thanks fesiug
 end
 
 SWEP.Animations = {

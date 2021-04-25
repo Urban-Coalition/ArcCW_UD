@@ -174,6 +174,7 @@ SWEP.WorldModelOffset = {
 -- Firing sounds --
 
 local path = "weapons/arccw_ud/glock/"
+local path1 = "weapons/arccw_ud/uzi/"
 local common = "weapons/arccw_ud/common/"
 SWEP.ShootSound = path .. "fire.ogg"
 SWEP.ShootSoundSilenced = path .. "fire_supp.ogg"
@@ -586,8 +587,8 @@ SWEP.Animations = {
         SoundTable = {
             {s = common .. "cloth_1.ogg",  t = 0},
             {s = path .. "magrelease.ogg",    t = 0.3, c = ci},
-            {s = path .. "magout.ogg",        t = 0.3, c = ci},
-            {s = path .. "magin.ogg",         t = 0.63, c = ci},
+            {s = path1 .. "magout.ogg",        t = 0.3, c = ci},
+            {s = path1 .. "magin.ogg",         t = 0.63, c = ci},
             {s = common .. "cloth_2.ogg",  t = 0.7},
             {s = common .. "cloth_3.ogg",  t = 1.1},
         },
@@ -606,8 +607,8 @@ SWEP.Animations = {
         SoundTable = {
             {s = common .. "cloth_1.ogg",  t = 0},
             {s = path .. "magrelease.ogg",      t = 0.12, c = ci},
-            {s = path .. "magout.ogg",          t = 0.12, c = ci},
-            {s = path .. "magin.ogg",           t = 0.43, c = ci},
+            {s = path1 .. "magout.ogg",          t = 0.12, c = ci},
+            {s = path1 .. "magin.ogg",           t = 0.43, c = ci},
             {s = common .. "cloth_2.ogg",  t = 0.7},
             {s = path .. "sliderel_deact.ogg",  t = 1.3, c = ci},
             {s = path .. "sliderel.ogg",        t = 1.545, c = ci},

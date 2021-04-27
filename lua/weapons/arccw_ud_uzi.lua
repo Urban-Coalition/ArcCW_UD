@@ -297,6 +297,9 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
+            {s = common .. "cloth_3.ogg",  t = 0.15},
+            {s = path .. "chback.ogg",         t = 0.3, c = ci},
+            {s = path .. "chforward.ogg",         t = 0.65, c = ci},
         },
     },
     ["fix_empty"] = {

@@ -38,5 +38,9 @@ att.GivesFlags = {"sd"}
 att.Hook_TranslateAnimation = function(wep, anim)
     if (anim == "fire" || anim == "fire_empty") then
         return "fire_cycle"
+    elseif (anim == "idle" || anim == "idle_empty") then
+        if wep:GetNeedCycle() then
+            return "idle"
+        end
     end
 end

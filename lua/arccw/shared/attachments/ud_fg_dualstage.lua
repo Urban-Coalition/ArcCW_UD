@@ -1,6 +1,6 @@
 att.PrintName = "Dual-Stage Trigger"
 
-att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
+att.Icon = Material("entities/att/arccw_ud_dualstagetrigger.png", "mips smooth")
 att.Description = "A heavy trigger with a semi-automatic middle stage and a fully-automatic end stage. Can shoot semi- and fully- automatically without the need for switching a fire selector."
 att.Desc_Pros = {
     "+15% Fire rate after first shot"

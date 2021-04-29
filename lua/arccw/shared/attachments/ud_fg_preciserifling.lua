@@ -1,6 +1,6 @@
 att.PrintName = "Precision Rifling"
 
-att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
+att.Icon = Material("entities/att/arccw_ud_precisionrifling.png", "mips smooth")
 att.Description = "High-precision machined rifling allows the weapon to shoot much more consistently."
 att.Desc_Pros = {
 }

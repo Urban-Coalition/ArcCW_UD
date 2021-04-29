@@ -1,6 +1,6 @@
 att.PrintName = "Forced Reset Trigger"
 
-att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
+att.Icon = Material("entities/att/arccw_ud_forcedresettrigger.png", "mips smooth")
 att.Description = "Trigger system that pushes back against the shooter's finger, allowing them to fire much more rapidly. By the definition of the ATF, this does not count as full-automatic, for the time being at least."
 att.Desc_Pros = {
     "Fully automatic fire"

@@ -1,6 +1,6 @@
 att.PrintName = "Long Rifling"
 
-att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
+att.Icon = Material("entities/att/arccw_ud_longrifling.png", "mips smooth")
 att.Description = "Custom rifling improves muzzle velocity, allowing the weapon to shoot further."
 att.Desc_Pros = {
 }

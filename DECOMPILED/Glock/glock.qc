@@ -95,9 +95,9 @@ $sequence "fire_empty" {
 	fadeout 0.02
 }
 
-$sequence "fire_18" {
-	"anims\fire_18.smd"
-	"anims\fire_iron_18.smd"
+$sequence "fire_stock" {
+	"anims\fire_stock.smd"
+	"anims\fire_iron_stock.smd"
 	blend "sights" 0 1
 	fps 30
 	"ACT_VM_PRIMARYATTACK" 1
@@ -105,9 +105,9 @@ $sequence "fire_18" {
 	fadeout 0.01
 }
 
-$sequence "fire_empty_18" {
-	"anims\fire_empty_18.smd"
-	"anims\fire_iron_empty_18.smd"
+$sequence "fire_empty_stock" {
+	"anims\fire_empty_stock.smd"
+	"anims\fire_iron_empty_stock.smd"
 	blend "sights" 0 1
 	fps 30
 	"ACT_VM_PRIMARYATTACK" 1

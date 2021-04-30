@@ -154,7 +154,7 @@ SWEP.IronSightStruct = {
 }
 
 SWEP.ActivePos = Vector(0, 0, 0)
-SWEP.ActiveAng = Angle(0, 0, -3)
+SWEP.ActiveAng = Angle(0, 0, -5)
 
 SWEP.CustomizePos = Vector(5, -2, -2)
 SWEP.CustomizeAng = Angle(15, 25, 0)
@@ -316,13 +316,13 @@ SWEP.Animations = {
             {s = path .. "sliderel.ogg", t = 0, c = ci}, -- Temporary
         },
     },
-    ["fire_18"] = {
-        Source = "fire_18",
+    ["fire_stock"] = {
+        Source = "fire_stock",
         Time = 16 / 30,
         ShellEjectAt = 0.03,
     },
-    ["fire_empty_18"] = {
-        Source = "fire_empty_18",
+    ["fire_empty_stock"] = {
+        Source = "fire_empty_stock",
         Time = 16 / 30,
         ShellEjectAt = 0.03,
         SoundTable = {
@@ -672,7 +672,7 @@ SWEP.AutosolveSourceSeq = "idle"
 SWEP.Hook_TranslateAnimation = function(wep, anim)
     if wep.Attachments[7].Installed == "go_stock_pistol_bt" then
         if (anim == "fire" || anim == "fire_empty") then
-            return anim .. "_18"
+            return anim .. "_stock"
         end
     end
 end

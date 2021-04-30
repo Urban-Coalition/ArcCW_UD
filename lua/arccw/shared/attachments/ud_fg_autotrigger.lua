@@ -18,6 +18,7 @@ att.Hook_Compatible = function(wep)
     -- Shamelessly robbed from CS+
     for i, v in pairs(wep.Firemodes) do
         if !v then continue end
+        if !v.Mode then continue end
         if v.Mode == 2 or v.Mode < 0 then
             return false
         end

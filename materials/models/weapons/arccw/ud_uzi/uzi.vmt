@@ -1,19 +1,16 @@
 VertexLitGeneric
 {
-<<<<<<< HEAD
-$baseTexture "models\weapons\arccw\ud_uzi\uzi"
-$bumpmap "effects/flat_normal"
-=======
 		$basetexture			"models\v_models\Weapons\smg/uzi"
 		$bumpmap 				"effects/flat_normal"
 		
 		$envmap					"env_cubemap"
 		$envmaptint				"[0.01 0.01 0.01]"
->>>>>>> ab8a53cc8fe0683c6b47a1cb6b5f58b4632eb43c
 
 		$phong					1
         $phongboost				20
         $phongexponent			900
         $phongfresnelranges		"[1 0.1 0.1]"
 		$color2					"[1.5 1.5 1.8]"
+
+		$nocull 1
 }

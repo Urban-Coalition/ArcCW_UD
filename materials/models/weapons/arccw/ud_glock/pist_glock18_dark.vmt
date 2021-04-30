@@ -16,6 +16,8 @@
 	$envmapFresnelMinMaxExp "[10 40 .4]"
 
 	$color2 "[0.8 0.8 0.8]"
+
+	$nocull 1
 }
 
 

@@ -14,6 +14,8 @@
 	$envmap env_cubemap
 	$envmapfresnel 1
 	$envmapFresnelMinMaxExp "[10 40 .4]"
+
+	$nocull 1
 }
 
 

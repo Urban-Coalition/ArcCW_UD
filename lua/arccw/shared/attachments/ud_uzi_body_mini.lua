@@ -1,4 +1,4 @@
-att.PrintName = "Mini Frame"
+att.PrintName = "8\" Uzi Mini Barrel"
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "Compact frame with a higher firerate."
 att.Desc_Pros = {
@@ -15,7 +15,7 @@ att.Mult_AccuracyMOA = 2
 att.Mult_SightTime = 0.85
 att.Mult_Recoil = 1.1
 att.Mult_RecoilSide = 1.2
-att.Mult_RPM = 1.50
+att.Mult_RPM = 1.25
 att.Mult_Range = 0.75
 
 att.Add_BarrelLength = -4

@@ -78,10 +78,12 @@ SWEP.ReducedClipSize = 16
 SWEP.Recoil = 0.4
 SWEP.RecoilSide = 0.4
 
-SWEP.RecoilRise = -0.1
+SWEP.RecoilRise = 0.1
+SWEP.RecoilPunch = 1
 SWEP.VisualRecoilMult = 1
 SWEP.MaxRecoilBlowback = 1
-SWEP.MaxRecoilPunch = 1
+SWEP.MaxRecoilPunch = 0.6
+SWEP.RecoilPunchBack = 1.5
 
 SWEP.Sway = 0.5
 
@@ -220,6 +222,14 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 3, bg = 1}},
     },
 
+    ["ud_uzi_body_carbine"] = {
+        VMBodygroups = {{ind = 1, bg = 1}},
+        AttPosMods = {
+            [3] = {
+                vpos = Vector(0, 0, 4),
+            },
+        },
+    },
     ["ud_uzi_body_mini"] = {
         VMBodygroups = {{ind = 1, bg = 2}},
         AttPosMods = {
@@ -496,8 +506,8 @@ SWEP.Attachments = {
         InstalledEles = {"ud_uzi_rail_optic"}
     },
     {
-        PrintName = "Frame",
-        DefaultAttName = "Uzi Frame",
+        PrintName = "Barrel",
+        DefaultAttName = "10\" Uzi SMG Barrel",
         Slot = "ud_uzi_frame",
         Bone = "uzi_parent",
         Offset = {

@@ -1,4 +1,4 @@
-att.PrintName = "20 Round Uzi Compact Mag"
+att.PrintName = "20-Round Uzi Compact Mag"
 att.SortOrder = 20
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "Low-capacity flush magazine. The lighter load makes the weapon even more ergonomic."

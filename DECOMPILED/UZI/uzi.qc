@@ -9,6 +9,7 @@ $bodygroup "1" {
 	studio "uzi_body_carbine.smd"
 	studio "uzi_body_mini.smd"
 	studio "uzi_body_micro.smd"
+	studio "uzi_body_civvy.smd"
 }
 
 $bodygroup "2" {

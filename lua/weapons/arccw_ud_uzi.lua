@@ -244,11 +244,21 @@ SWEP.AttachmentElements = {
     },
     ["ud_uzi_body_micro"] = {
         VMBodygroups = {{ind = 1, bg = 3},{ind = 4, bg = 1},{ind = 3, bg = 3}},
-        NameChange = "MiP-9UK",
+        NameChange = "MiP-9G",
         TrueNameChange = "Micro Uzi",
         AttPosMods = {
             [3] = {
                 vpos = Vector(0, 0, -5.8),
+            },
+        },
+    },
+    ["ud_uzi_body_civvy"] = {
+        VMBodygroups = {{ind = 1, bg = 4}},
+        NameChange = "CarP-9 Model GB",
+        TrueNameChange = "Uzi Action-B",
+        AttPosMods = {
+            [3] = {
+                vpos = Vector(0, 0, 8),
             },
         },
     },

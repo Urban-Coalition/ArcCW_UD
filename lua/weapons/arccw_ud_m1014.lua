@@ -169,7 +169,6 @@ SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 
 local path1 = "weapons/arccw_ud/870/"
 local path = "weapons/arccw_ud/m1014/"
-local path2 = "weapons/arccw_ud/m16/"
 local common = "weapons/arccw_ud/common/"
 SWEP.ShootSound = path.."fire.ogg"
 SWEP.ShootSoundSilenced = path.."fire_supp.ogg"
@@ -209,13 +208,16 @@ SWEP.Animations = {
         Source = "fire",
         Time = 23 / 30,
         ShellEjectAt = 0.01,
+        SoundTable = {
+            {s = path .. "mech.ogg", t = 0}, -- Not temporary
+        },
     },
     ["fire_empty"] = {
         Source = "fire_empty",
         Time = 23 / 30,
         ShellEjectAt = 0.01,
         SoundTable = {
-            {s = path2 .. "mech_last.ogg", t = 0}, -- Temporary
+            {s = path .. "mech_last.ogg", t = 0}, -- Not temporary
         },
     },
     ["sgreload_start"] = {

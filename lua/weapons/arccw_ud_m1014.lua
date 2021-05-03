@@ -210,6 +210,7 @@ SWEP.Animations = {
         ShellEjectAt = 0.01,
         SoundTable = {
             {s = path .. "mech.ogg", t = 0}, -- Not temporary
+            {s = path1 .. "eject.ogg", t = 0}, -- Not temporary
         },
     },
     ["fire_empty"] = {
@@ -218,6 +219,7 @@ SWEP.Animations = {
         ShellEjectAt = 0.01,
         SoundTable = {
             {s = path .. "mech_last.ogg", t = 0}, -- Not temporary
+            {s = path1 .. "eject.ogg", t = 0}, -- Not temporary
         },
     },
     ["sgreload_start"] = {

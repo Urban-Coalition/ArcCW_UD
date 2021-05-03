@@ -2,10 +2,10 @@ att.PrintName = "2\" Stub Barrel"
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "Jesus Christ, I think I see the bullet sticking out."
 att.Desc_Pros = {
-    "pro.ud.auto"
+    "ud.auto"
 }
 att.Desc_Cons = {
-    "con.fpw",
+    "ud.nofs",
 }
 att.Desc_Neutrals = {
 }

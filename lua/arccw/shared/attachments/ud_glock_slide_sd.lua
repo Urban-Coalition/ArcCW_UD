@@ -9,6 +9,7 @@ att.Description = "A slide with an integrated silencer installed. A slide lock s
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
+    "ud.manual",
 }
 att.Desc_Neutrals = {
 }
@@ -19,7 +20,7 @@ att.AutoStats = true
 att.Mult_SightTime = 1.15
 att.Mult_Recoil = 0.85
 att.Mult_AccuracyMOA = 0.75
-att.Mult_Sway = 1.75
+att.Mult_Sway = 1.5
 att.Mult_Range = 1.25
 
 att.Mult_ShootVol = 0.6

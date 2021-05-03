@@ -21,8 +21,15 @@ att.LHIK = true
 att.LHIKHide = true
 
 -- sry bby u too OP
+--[[]
 if GetConVar("arccw_ud_homeboy_epic"):GetBool() then
     att.Override_ShootWhileSprint = true
+end
+]]
+att.O_Hook_Override_ShootWhileSprint = function(wep, data)
+    if GetConVar("arccw_ud_homeboy_epic"):GetBool() then
+        return true
+    end
 end
 
 att.Override_ActivePos = Vector(0, 0, 1)

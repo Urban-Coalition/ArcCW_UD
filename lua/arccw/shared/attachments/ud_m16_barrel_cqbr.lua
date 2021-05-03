@@ -2,7 +2,7 @@ att.PrintName = "10.5\" CAR-15 Barrel"
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "Short barrel of a length emulating the CAR-15 assault rifle. Technically classified as a submachine gun, it offers relatively high fire rates at the cost of range."
 att.Desc_Pros = {
-    "pro.ud.auto"
+    "ud.auto"
 }
 att.Desc_Cons = {
 }

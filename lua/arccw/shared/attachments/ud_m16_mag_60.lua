@@ -6,7 +6,7 @@ att.Desc_Pros = {
     "pro.magcap"
 }
 att.Desc_Cons = {
-    "con.jam"
+    "ud.jam"
 }
 att.Desc_Neutrals = {
 }

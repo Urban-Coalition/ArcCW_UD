@@ -25,6 +25,6 @@ att.AutoStats = true
 
 att.A_Hook_Add_SightsDispersion = function(wep, data)
     if data and !wep.Attachments[1].Installed then
-        data.add = data.add + 200
+        data.add = data.add + 100
     end
 end

@@ -264,12 +264,14 @@ SWEP.AttachmentElements = {
     },
     ["ud_m16_barrel_fpw"] = {
         VMBodygroups = {{ind = 4, bg = 3}},
+        --[[]
         Override_IronSightStruct = {
             Pos = Vector(-1, 4, 0),
             Ang = Angle(0, 0, 0),
             Magnification = 1,
             CrosshairInSights = true
         },
+        ]]
         AttPosMods = {
             [3] = {
                 vpos = Vector(-0.03, -0.05, -10),

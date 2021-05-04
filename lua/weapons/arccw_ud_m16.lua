@@ -94,6 +94,7 @@ SWEP.Num = 1
 SWEP.Firemodes = {
     {
         Mode = -3,
+        RunAwayBurst = true,
     },
     {
         Mode = 1,

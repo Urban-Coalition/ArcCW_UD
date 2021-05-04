@@ -5,7 +5,7 @@ att.Description = "Adapt the gun for use in civilian markets, where fully-automa
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
-    "Semi-auto only"
+    "ud.semionly"
 }
 att.Desc_Neutrals = {
 }
@@ -13,17 +13,12 @@ att.Slot = "ud_fg"
 att.AutoStats = true
 
 att.Hook_Compatible = function(wep)
-    -- Shamelessly robbed from CS+
-    for i, v in pairs(wep.Firemodes) do
-        if !v then continue end
-        if v.Mode and v.Mode != 1 and v.Mode != 0 then
-            return
-        end
+    if wep:GetIsManualAction() then
+        return false
     end
-
-    return false
 end
 
+att.Override_Firemodes_Priority = 100
 att.Override_Firemodes = {
     {
         Mode = 1,

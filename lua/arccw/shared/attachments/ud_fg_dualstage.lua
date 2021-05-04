@@ -13,14 +13,22 @@ att.Desc_Neutrals = {
 att.Slot = "ud_fg"
 
 att.Hook_Compatible = function(wep)
-    -- Shamelessly robbed from CS+
+    if wep:GetIsManualAction() then
+        return false
+    end
+end
+
+
+att.Hook_Compatible = function(wep)
+    if wep:GetIsManualAction() then
+        return false
+    end
     for i, v in pairs(wep.Firemodes) do
         if !v then continue end
         if v.Mode and v.Mode != 1 and v.Mode != 0 then
             return
         end
     end
-
     return false
 end
 

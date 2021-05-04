@@ -15,6 +15,7 @@ att.Mult_SightTime = 0.75
 att.Mult_DrawTime = 0.75
 att.Mult_HolsterTime = 0.75
 att.Mult_Recoil = 1.5
+att.Mult_RecoilSide = 1.5
 att.Mult_Sway = 2
 
 att.Add_BarrelLength = -4

@@ -20,6 +20,7 @@ att.Mult_ReloadTime = 1.2
 att.Mult_SpeedMult = 0.92
 att.Mult_DrawTime = 1.06
 att.Override_ClipSize = 60
+att.Mult_Sway = 2
 
 att.ActivateElements = {"ud_m16_60_mag"}
 

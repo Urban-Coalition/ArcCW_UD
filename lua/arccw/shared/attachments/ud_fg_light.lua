@@ -13,3 +13,9 @@ att.AutoStats = true
 
 att.Mult_Recoil = 1.25
 att.Mult_RPM = 1.1
+
+att.Hook_Compatible = function(wep)
+    if wep:GetIsManualAction() then
+        return false
+    end
+end

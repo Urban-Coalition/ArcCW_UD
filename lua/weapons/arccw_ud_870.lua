@@ -324,8 +324,8 @@ SWEP.Attachments = {
         },
     },
     {
-        PrintName = "Slide",
-        DefaultAttName = "Factory Slide",
+        PrintName = "Forend",
+        DefaultAttName = "Factory Forend",
         Slot = {"ud_870_slide"},
         Bone = "870_slide",
         Offset = {

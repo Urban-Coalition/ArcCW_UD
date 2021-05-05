@@ -1,6 +1,6 @@
-att.PrintName = "R870 Long Slide"
+att.PrintName = "R870 Long Forend"
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "Long wood slide for the R870. Additional heft improves recoil, but at the cost of cycling time."
+att.Description = "Long wood forend for the R870. Additional heft improves recoil, but at the cost of cycling time."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

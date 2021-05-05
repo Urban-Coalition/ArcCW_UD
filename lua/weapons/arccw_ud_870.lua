@@ -214,8 +214,8 @@ SWEP.Animations = {
         ShellEjectAt = 0.1,
         SoundTable = {
             {s = common .. "cloth_3.ogg",  t = 0},
-            {s = path .. "rack_1.ogg",  t = 0.1},
-            {s = path .. "eject.ogg",  t = 0.11},
+            {s = path .. "rack_1.ogg",  t = 0},
+            {s = path .. "eject.ogg",  t = 0.075},
             {s = path .. "rack_2.ogg",  t = 0.2},
         },
     },

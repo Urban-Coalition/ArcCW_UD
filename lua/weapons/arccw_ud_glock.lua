@@ -669,10 +669,8 @@ SWEP.Animations = {
 SWEP.AutosolveSourceSeq = "idle"
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
-    if wep.Attachments[7].Installed == "go_stock_pistol_bt" then
-        if (anim == "fire" || anim == "fire_empty") then
-            return anim .. "_stock"
-        end
+    if wep.Attachments[7].Installed and (anim == "fire" or anim == "fire_empty") then
+        return anim .. "_stock"
     end
 end
 
@@ -686,6 +684,7 @@ SWEP.Attachments = {
             vpos = Vector(0, -3.5, 2),
             vang = Angle(90, 2, -90),
         },
+        CorrectivePos = Vector(0, 0, 0.05),
         InstalledEles = {"ud_glock_rail_optic"},
     },
     {
@@ -712,7 +711,7 @@ SWEP.Attachments = {
             vpos = Vector(0, -1.3, 5),
             vang = Angle(90, 0, -90),
         },
-        MergeSlots = {4,5},
+        MergeSlots = {5},
     },
     {
         Hidden = true,

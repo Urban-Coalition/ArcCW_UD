@@ -210,8 +210,9 @@ SWEP.Animations = {
     },
     ["cycle"] = {
         Source = "cycle",
-        Time = 17 / 30,
+        Time = 20 / 30,
         ShellEjectAt = 0.1,
+        MinProgress = 12 / 30,
         SoundTable = {
             {s = common .. "cloth_3.ogg",  t = 0},
             {s = path .. "rack_1.ogg",  t = 0},

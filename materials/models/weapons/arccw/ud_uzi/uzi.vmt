@@ -1,6 +1,6 @@
 VertexLitGeneric
 {
-		$basetexture			"models\v_models\Weapons\smg/uzi"
+		$basetexture			models\weapons\arccw\ud_uzi\uzi"
 		$bumpmap 				"effects/flat_normal"
 		
 		$envmap					"env_cubemap"

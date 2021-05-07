@@ -13,26 +13,27 @@ att.Slot = "ud_training"
 
 att.AutoStats = true
 
-att.Mult_HipDispersion = 0.75
-att.Mult_SightTime = 1.5
-att.Mult_Sway = 1.5
+att.Mult_HipDispersion = 0.6
+att.Mult_RecoilSide = 1.25
+att.Mult_SightTime = 1.75
+att.Mult_Sway = 1.75
 
 att.LHIK = true
 att.LHIKHide = true
 
 -- sry bby u too OP
---[[]
 if GetConVar("arccw_ud_homeboy_epic"):GetBool() then
     att.Override_ShootWhileSprint = true
 end
-]]
+--[[
 att.O_Hook_Override_ShootWhileSprint = function(wep, data)
     if GetConVar("arccw_ud_homeboy_epic"):GetBool() then
         return true
     end
 end
+]]
 
-att.Override_ActivePos = Vector(0, 0, 1)
+att.Override_ActivePos = Vector(1, 0, 1)
 att.Override_ActiveAng = Angle(0, 0, -60)
 
 att.Override_RecoilDirection = Angle(0.707, -0.707, 0)

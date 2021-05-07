@@ -20,6 +20,7 @@ att.Mult_ReloadTime = 1.4
 att.Mult_SpeedMult = 0.9
 att.Mult_DrawTime = 1.25
 att.Override_ClipSize = 100
+att.Mult_Sway = 1.5
 
 att.ActivateElements = {"ud_uzi_100_mag"}
 

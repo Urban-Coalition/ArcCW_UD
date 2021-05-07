@@ -17,6 +17,7 @@ att.Mult_Recoil = 0.9
 att.Mult_RecoilSide = 0.9
 att.Mult_RPM = 0.9
 att.Mult_Range = 1.25
+att.Mult_Sway = 1.5
 
 att.Add_BarrelLength = 5
 

@@ -4,6 +4,7 @@ att.Description = "Civilian barrel for the Uzi, elongated to fit minimum length 
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
+    "ud.semionly"
 }
 att.Desc_Neutrals = {
 }
@@ -17,6 +18,7 @@ att.Mult_Recoil = 0.75
 att.Mult_RecoilSide = 0.75
 att.Mult_RPM = 0.9
 att.Mult_Range = 1.5
+att.Mult_Sway = 2
 
 att.Override_Firemodes = {
     {

@@ -16,6 +16,7 @@ att.AutoStats = true
 att.Mult_SightTime = 0.9
 att.Mult_ReloadTime = 0.85
 att.Override_ClipSize = 20
+att.Mult_Sway = 0.85
 
 att.ActivateElements = {"ud_uzi_16_mag"}
 

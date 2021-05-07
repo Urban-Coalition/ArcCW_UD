@@ -6,6 +6,7 @@ $bodygroup "studio" {
 
 $bodygroup "1" {
 	studio "m16_upper_ch.smd"
+	studio "m16_upper_flat.smd"
 }
 
 $bodygroup "2" {
@@ -19,6 +20,7 @@ $bodygroup "2" {
 $bodygroup "3" {
 	blank
 	studio "m16_rail_optic.smd"
+	studio "m16_rail_flat_optic.smd"
 }
 
 $bodygroup "4" {
@@ -58,7 +60,6 @@ $bodygroup "8" {
 	studio "m16_clamp_fullsize.smd"
 	studio "m16_clamp_stub.smd"
 	studio "m16_clamp_short.smd"
-	studio "m16_barrel_wood_short.smd"
 }
 
 $cdmaterials "models\weapons\arccw\ud_m16"

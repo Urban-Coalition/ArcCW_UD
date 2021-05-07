@@ -214,15 +214,14 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 7, bg = 1}},
     },
 
-    ["ud_m16_rail_optic"] = {
-        VMBodygroups = {{ind = 3, bg = 1}},
-    },
-
-    ["ud_m16_clamp_fullsize"] = {
-        VMBodygroups = {{ind = 8, bg = 1}},
-    },
-    ["ud_m16_clamp_fullsize"] = {
-        VMBodygroups = {{ind = 8, bg = 1}},
+    ["ud_m16_upper_flat"] = {
+        VMBodygroups = {{ind = 1, bg = 1}},
+        AttPosMods = {
+            [1] = {
+                vpos = Vector(0, -1.9, 2),
+                vang = Angle(90, 2, -90),
+            }
+        }
     },
 
     ["ud_m16_stock_m4"] = {
@@ -251,7 +250,11 @@ SWEP.AttachmentElements = {
             [3] = {
                 vpos = Vector(-0.03, -0.05, -6.5),
                 vang = Angle(90, 0, -90),
-            }
+            },
+            [6] = {
+                vpos = Vector(0, 0.8, 20),
+                vang = Angle(90, 0, -90),
+            },
         }
     },
     ["ud_m16_barrel_cqbr"] = {
@@ -260,7 +263,11 @@ SWEP.AttachmentElements = {
             [3] = {
                 vpos = Vector(-0.03, -0.05, -12),
                 vang = Angle(90, 0, -90),
-            }
+            },
+            [6] = {
+                vpos = Vector(0, 0.8, 20),
+                vang = Angle(90, 0, -90),
+            },
         }
     },
     ["ud_m16_barrel_fpw"] = {
@@ -277,7 +284,11 @@ SWEP.AttachmentElements = {
             [3] = {
                 vpos = Vector(-0.03, -0.05, -10),
                 vang = Angle(90, 0, -90),
-            }
+            },
+            [6] = {
+                vpos = Vector(0, 0.8, 20),
+                vang = Angle(90, 0, -90),
+            },
         }
     },
     ["ud_m16_barrel_wood"] = {
@@ -295,7 +306,11 @@ SWEP.AttachmentElements = {
             [3] = {
                 vpos = Vector(-0.03, -0.05, -7.5),
                 vang = Angle(90, 0, -90),
-            }
+            },
+            [6] = {
+                vpos = Vector(0, 0.8, 20),
+                vang = Angle(90, 0, -90),
+            },
         }
     },
     ["ud_m16_barrel_stub"] = {
@@ -310,7 +325,11 @@ SWEP.AttachmentElements = {
             [3] = {
                 vpos = Vector(-0.03, -0.05, -22),
                 vang = Angle(90, 0, -90),
-            }
+            },
+            [6] = {
+                vpos = Vector(1.1, -0.4, 9),
+                vang = Angle(90, 0, 0),
+            },
         }
     },
 }
@@ -644,6 +663,34 @@ SWEP.Animations = {
     },
 }
 
+SWEP.Hook_ModifyBodygroups = function(wep, data)
+    local vm = data.vm
+    local barrel = wep.Attachments[2].Installed
+    if wep.Attachments[1].Installed then
+        -- Optic rail
+        if vm:GetBodygroup(1) == 1 then
+            -- Flat top (ud_m16_upper_flat)
+            vm:SetBodygroup(3, 2)
+        else
+            -- Carry handle
+            vm:SetBodygroup(3, 1)
+        end
+    end
+    if wep.Attachments[6].Installed then
+        -- Tactical clamp
+        if barrel == "ud_m16_barrel_stub" then
+            -- Stub
+            vm:SetBodygroup(8, 2)
+        elseif !barrel or barrel == "" or barrel == "ud_m16_barrel_wood" then
+            -- Full length
+            vm:SetBodygroup(8, 1)
+        else
+            -- Short
+            vm:SetBodygroup(8, 3)
+        end
+    end
+end
+
 SWEP.Attachments = {
     {
         PrintName = "Optic",
@@ -679,6 +726,16 @@ SWEP.Attachments = {
         },
     },
     {
+        PrintName = "Receiver",
+        DefaultAttName = "Standard Receiver",
+        Slot = {"ud_m16_receiver"},
+        Bone = "m16_parent",
+        Offset = {
+            vpos = Vector(2.8, -4.2, -11.5),
+            vang = Angle(90, 0, -90),
+        },
+    },
+    {
         PrintName = "Underbarrel",
         Slot = {"foregrip"},
         Bone = "m16_parent",
@@ -697,7 +754,7 @@ SWEP.Attachments = {
             vpos = Vector(0, 0.8, 25.4),
             vang = Angle(90, 0, -90),
         },
-        InstalledEles = {"ud_m16_clamp_fullsize"}
+        --InstalledEles = {"ud_m16_clamp_fullsize"}
     },
     {
         PrintName = "Grip Type",

@@ -2,7 +2,7 @@ att.PrintName = "2\" Stub Barrel"
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "Jesus Christ, I think I see the bullet sticking out."
 att.Desc_Pros = {
-    "ud.auto"
+    --"ud.auto"
 }
 att.Desc_Cons = {
     "ud.nofs",
@@ -24,12 +24,13 @@ att.Mult_RPM = 1.1
 
 att.A_Hook_Add_SightsDispersion = function(wep, data)
     if not wep.Attachments[1].Installed then
-        data.add = data.add + 200
+        data.add = data.add + 100
     end
 end
 
 att.Add_BarrelLength = -8
 
+--[[]
 att.Override_Firemodes = {
     {
         Mode = 2,
@@ -38,6 +39,7 @@ att.Override_Firemodes = {
         Mode = 0
     }
 }
+]]
 
 att.LHIK = true
 

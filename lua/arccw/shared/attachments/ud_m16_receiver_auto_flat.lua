@@ -1,10 +1,12 @@
-att.PrintName = "M16 Automatic Receiver"
+att.PrintName = "M16 Auto Flat Top Receiver"
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "An automatic receiver with auto-semi-safe firemodes, used in small quantities by the U.S. Navy."
+att.Description = "An automatic receiver with removed carry handle. It's like a poor man's M4."
 att.Desc_Pros = {
-    "ud.auto"
+    "ud.auto",
+    "ud.flattop"
 }
 att.Desc_Cons = {
+    "ud.nofs"
 }
 att.Desc_Neutrals = {
 }

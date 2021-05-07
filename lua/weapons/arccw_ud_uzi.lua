@@ -147,7 +147,7 @@ SWEP.ExtraSightDist = 7
 SWEP.HolsterPos = Vector(4.623, -2.211, 1.004)
 SWEP.HolsterAng = Angle(-8.443, 28.843, 0)
 
-SWEP.HoldtypeHolstered = "passive"
+SWEP.HoldtypeHolstered = "normal"
 SWEP.HoldtypeActive = "smg"
 SWEP.HoldtypeSights = "smg"
 

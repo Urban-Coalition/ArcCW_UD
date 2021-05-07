@@ -63,7 +63,7 @@ ArcCW.UD.LicenseAtts = {
     ud_m1014_tube_ext = true,
 }
 
-local function shipment_func(class, cat, price, sep, allowed)
+local function shipment_func(class, price, sep, allowed)
     local wep = weapons.Get(class)
     DarkRP.createShipment(wep.PrintName, {
         model = wep.WorldModel,
@@ -74,7 +74,7 @@ local function shipment_func(class, cat, price, sep, allowed)
         pricesep = math.Round(price * shipments_mult:GetFloat() / 10),
         noship = false,
         allowed = allowed,
-        category = cat,
+        category = "Urban Decay",
     })
 end
 
@@ -91,22 +91,39 @@ local function load_ud_config()
             GAMEMODE.NoLicense[k] = true
         end
     end
+
+    if shipments:GetBool() then
+        DarkRP.createCategory{
+            name = "Urban Decay",
+            categorises = "shipments",
+            startExpanded = true,
+            color = Color(50, 107, 50, 255),
+            sortOrder = 500,
+        }
+        DarkRP.createCategory{
+            name = "Urban Decay",
+            categorises = "weapons",
+            startExpanded = true,
+            color = Color(50, 107, 50, 255),
+            sortOrder = 500,
+        }
+    end
 end
 hook.Add("postLoadCustomDarkRPItems", "ArcCW_UD", load_ud_config)
 
 hook.Add("InitPostEntity", "ArcCW_UD_DarkRP", function()
     if shipments:GetBool() then
-        shipment_func("arccw_ud_glock", "Pistols", 1600, true, {TEAM_GUN})
-        shipment_func("arccw_ud_uzi", nil, 2200, false, {TEAM_GUN})
-        shipment_func("arccw_ud_mini14", "Rifles", 2100, false, {TEAM_GUN})
-        shipment_func("arccw_ud_m16", "Rifles", 2750, false, {TEAM_GUN})
-        shipment_func("arccw_ud_870", "Shotguns", 1750, false, {TEAM_GUN})
-        shipment_func("arccw_ud_m1014", "Shotguns", 2250, false, {TEAM_GUN})
+        shipment_func("arccw_ud_glock", 1800, true, {TEAM_GUN})
+        shipment_func("arccw_ud_uzi", 2550, false, {TEAM_GUN})
+        shipment_func("arccw_ud_mini14", 2300, false, {TEAM_GUN})
+        shipment_func("arccw_ud_m16", 2950, false, {TEAM_GUN})
+        shipment_func("arccw_ud_870", 2150, false, {TEAM_GUN})
+        shipment_func("arccw_ud_m1014", 2650, false, {TEAM_GUN})
     end
 end)
 
 hook.Add("ArcCW_PostLoadAtts", "ArcCW_UD", function()
-    if not licenseatts_civ:GetBool() then return end
+    if not DarkRP or not licenseatts_civ:GetBool() then return end
     for k, v in pairs(ArcCW.UD.LicenseGuns) do
         if not istable(v) then continue end
         for _, attname in pairs(v) do

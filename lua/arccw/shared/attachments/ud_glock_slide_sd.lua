@@ -7,6 +7,7 @@ end
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "A slide with an integrated silencer installed. A slide lock system can prevent the weapon from cycling when fired, reducing its audible report even further."
 att.Desc_Pros = {
+    "ud.invistracer"
 }
 att.Desc_Cons = {
     --"ud.manual",
@@ -54,6 +55,9 @@ att.Override_Firemodes = {
         Mode = 0,
     }
 }
+
+att.Override_TracerNum = 0
+att.Override_PhysTracerProfile = 0
 
 att.Hook_TranslateAnimation = function(wep, anim)
     if not wep:GetBuff_Override("Override_ManualAction") then return end

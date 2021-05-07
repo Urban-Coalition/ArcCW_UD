@@ -1,4 +1,4 @@
-att.PrintName = "M4 Stock"
+att.PrintName = "Carbine Stock"
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "Adjustable combat stock used on the M4 carbine. Lightweight and agile."
 att.Desc_Pros = {

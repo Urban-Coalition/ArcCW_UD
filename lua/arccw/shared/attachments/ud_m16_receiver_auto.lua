@@ -1,4 +1,9 @@
-att.PrintName = "M16 Automatic Receiver"
+att.PrintName = "AMCAR Automatic Receiver"
+
+if GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "M16 Automatic Receiver"
+end
+
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "An automatic receiver with auto-semi-safe firemodes, used in small quantities by the U.S. Navy."
 att.Desc_Pros = {

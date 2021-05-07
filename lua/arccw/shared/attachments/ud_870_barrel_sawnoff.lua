@@ -1,4 +1,9 @@
-att.PrintName = "12\" R870 Sawn-Off Barrel"
+att.PrintName = "12\" Ex-12 Sawn-Off Barrel"
+
+if GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "12\" R870 Sawn-Off Barrel"
+end
+
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "A hand-made shortened barrel with no sights. More agile and has a bigger pellet spread."
 att.Desc_Pros = {

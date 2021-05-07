@@ -22,7 +22,7 @@ SWEP.PrintName = "Skeletonkey"
 
 -- True name --
 
-SWEP.TrueName = "M4 Super 90" 
+SWEP.TrueName = "M4 Super 90"
 
 -- Trivia --
 
@@ -74,8 +74,8 @@ SWEP.MuzzleVelocity = 200
 -- Mag size --
 
 SWEP.ChamberSize = 1
-SWEP.Primary.ClipSize = 5
-SWEP.ExtendedClipSize = 8
+SWEP.Primary.ClipSize = 4
+SWEP.ExtendedClipSize = 7
 SWEP.ReducedClipSize = 2
 
 -- Recoil --
@@ -128,8 +128,8 @@ SWEP.Primary.Ammo = "buckshot"
 
 -- Speed multipliers --
 
-SWEP.SpeedMult = 0.925
-SWEP.SightedSpeedMult = 0.75
+SWEP.SpeedMult = 0.92
+SWEP.SightedSpeedMult = 0.6
 SWEP.SightTime = 0.333
 SWEP.ShootSpeedMult = 0.9
 
@@ -247,7 +247,7 @@ SWEP.Animations = {
     },
     ["sgreload_insert"] = {
         Source = "sgreload_insert",
-        Time = 20 / 30,
+        Time = 18 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         TPAnimStartTime = 0.3,
         LHIK = true,
@@ -279,19 +279,22 @@ SWEP.BulletBones = {
 SWEP.AttachmentElements = {
     ["ud_autoshotgun_rail_fg"] = {
         VMBodygroups = {{ind = 3, bg = 1}},
-},
+    },
     ["ud_autoshotgun_barrel_short"] = {
         VMBodygroups = {{ind = 1, bg = 1}},
-},
+    },
     ["ud_autoshotgun_tube_short"] = {
         VMBodygroups = {{ind = 2, bg = 1}},
-},
+    },
+    ["ud_autoshotgun_tube_long"] = {
+        VMBodygroups = {{ind = 2, bg = 0}},
+    },
     ["ud_autoshotgun_stock_in"] = {
-    VMBodygroups = {{ind = 4, bg = 1}},
-},
+        VMBodygroups = {{ind = 4, bg = 1}},
+    },
     ["ud_autoshotgun_stock_buffer"] = {
-    VMBodygroups = {{ind = 4, bg = 2}},
-},
+        VMBodygroups = {{ind = 4, bg = 2}},
+    },
 }
 
 SWEP.Attachments = {
@@ -320,7 +323,7 @@ SWEP.Attachments = {
             vang = Angle(90, 0, -90),
         },
     },
-    { 
+    {
         PrintName = "Underbarrel",
         Slot = {"foregrip"},
         Bone = "1014_parent",
@@ -347,7 +350,8 @@ SWEP.Attachments = {
     {
         PrintName = "Tube Type",
         Slot = {"ud_1014_tube"},
-        DefaultAttName = "5 Shell Tube",
+        DefaultAttName = "4 Shell Tube",
+        DefaultEles = {"ud_autoshotgun_tube_short"},
     },
     {
         PrintName = "Ammo Type",
@@ -367,9 +371,9 @@ SWEP.Attachments = {
         PrintName = "Charm",
         Slot = {"charm", "fml_charm"},
         FreeSlot = true,
-        Bone = "Body", 
+        Bone = "1014_parent",
         Offset = {
-            vpos = Vector(0.6, -4, 4),
+            vpos = Vector(0.6, -0.5, 4),
             vang = Angle(90, 0, -90),
         },
     },

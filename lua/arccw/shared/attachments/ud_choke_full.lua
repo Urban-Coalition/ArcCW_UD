@@ -1,14 +1,14 @@
-att.PrintName = "Tight Choke"
+att.PrintName = "Full Choke"
 
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "A tight choke for shotguns improves pellet spread, improving capabilities at range."
+att.Description = "A very tight choke for shotguns, noticably tightening spread. However, it tends to offset aiming."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
 }
 att.Desc_Neutrals = {
 }
-att.Slot = "ud_fg"
+att.Slot = "choke"
 att.AutoStats = true
 
 att.Hook_Compatible = function(wep)
@@ -17,4 +17,8 @@ att.Hook_Compatible = function(wep)
     end
 end
 
-att.Mult_AccuracyMOA = .75
+att.Mult_AccuracyMOA = .7
+--[[]
+att.Add_HipDispersion = 50
+att.Add_SightsDispersion = 50
+]]

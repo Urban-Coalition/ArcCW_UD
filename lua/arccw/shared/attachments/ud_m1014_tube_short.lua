@@ -12,5 +12,6 @@ att.Slot = "ud_1014_tube"
 att.Override_ClipSize = 2
 
 att.AutoStats = true
+att.Ignore = true
 
 att.ActivateElements = {"ud_autoshotgun_tube_short"}

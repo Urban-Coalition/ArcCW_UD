@@ -346,7 +346,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Barrel",
-        DefaultAttName = "Standard Barrel",
+        DefaultAttName = "16\" R870 Standard Barrel",
         Slot = "ud_870_barrel",
     },
     {
@@ -416,9 +416,9 @@ SWEP.Attachments = {
         PrintName = "Charm",
         Slot = {"charm", "fml_charm"},
         FreeSlot = true,
-        Bone = "Body",
+        Bone = "870_parent",
         Offset = {
-            vpos = Vector(0.6, -4, 4),
+            vpos = Vector(0.6, 0, 5),
             vang = Angle(90, 0, -90),
         },
     },

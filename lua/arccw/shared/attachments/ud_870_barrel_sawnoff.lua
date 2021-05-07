@@ -1,4 +1,4 @@
-att.PrintName = "R870 Sawn-Off Barrel"
+att.PrintName = "12\" R870 Sawn-Off Barrel"
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "A hand-made shortened barrel with no sights. More agile and has a bigger pellet spread."
 att.Desc_Pros = {
@@ -11,14 +11,16 @@ att.Desc_Neutrals = {
 att.Slot = "ud_870_barrel"
 
 att.AutoStats = true
+att.SortOrder = -1
 
-att.Mult_AccuracyMOA = 1.2
-att.Mult_Recoil = 1.2
+att.Mult_AccuracyMOA = 1.5
+att.Mult_Recoil = 1.25
 
 att.Mult_Sway = 0.5
-att.Mult_SightTime = 0.8
+att.Mult_SightTime = 0.75
 att.Mult_SpeedMult = 1.05
---att.Mult_SightedSpeedMult = 1.25
+
+att.Add_BarrelLength = -4
 
 att.A_Hook_Add_SightsDispersion = function(wep, data)
     if data and !wep.Attachments[1].Installed then

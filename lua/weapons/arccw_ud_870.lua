@@ -51,6 +51,7 @@ SWEP.ViewModel = "models/weapons/arccw/c_ud_870.mdl"
 SWEP.WorldModel = "models/weapons/w_shot_m3super90.mdl"
 SWEP.ViewModelFOV = 60
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN
+SWEP.DefaultBodygroups = "00000000"
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
@@ -289,12 +290,46 @@ SWEP.AttachmentElements = {
     ["ud_shotgun_rail_fg"] = {
         VMBodygroups = {{ind = 3, bg = 1}},
     },
-
     ["ud_870_slide_moe"] = {
         VMBodygroups = {{ind = 6, bg = 1}},
     },
     ["ud_870_slide_long"] = {
         VMBodygroups = {{ind = 6, bg = 2}},
+    },
+    ["ud_shotgun_rail_fg"] = {
+        VMBodygroups = {{ind = 3, bg = 1}},
+    },
+    ["ud_870_barrel_long"] = {
+        Override_IronSightStruct = {
+            Pos = Vector(-2.99, -1, 2.25),
+            Ang = Angle(0, 0, 0),
+            Magnification = 1.1
+        },
+        VMBodygroups = {
+            {ind = 8, bg = 1},
+            {ind = 1, bg = 1}
+        },
+    },
+    ["ud_870_barrel_sawnoff"] = {
+        VMBodygroups = {
+        {ind = 1, bg = 2},
+        {ind = 7, bg = 2}
+        },
+    },
+    ["ud_870_tube_reduced"] = {
+        VMBodygroups = {
+        {ind = 2, bg = 2},
+        {ind = 7, bg = 2}
+        },
+    },
+    ["ud_870_tube_ext"] = {
+        VMBodygroups = {{ind = 2, bg = 1}},
+    },
+    ["ud_870_stock_poly"] = {
+        VMBodygroups = {{ind = 4, bg = 1}},
+    },
+    ["ud_870_stock_sawnoff"] = {
+        VMBodygroups = {{ind = 4, bg = 2}},
     },
 }
 

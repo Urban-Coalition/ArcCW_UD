@@ -707,7 +707,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Barrel",
-        DefaultAttName = "20\" M16 Barrel",
+        DefaultAttName = "20\" M16A2 Barrel",
         Slot = "ud_m16_barrel",
         Bone = "m16_parent",
         Offset = {
@@ -717,7 +717,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Muzzle",
-        DefaultAttName = "Standard Muzzle",
+        DefaultAttName = "A2 Birdcage Flash Hider",
         Slot = {"muzzle"},
         Bone = "m16_flash",
         Offset = {
@@ -759,12 +759,12 @@ SWEP.Attachments = {
     {
         PrintName = "Grip Type",
         Slot = {"ud_m16_grip"},
-        DefaultAttName = "Standard Grip",
+        DefaultAttName = "A2 Pistol Grip",
     },
     {
         PrintName = "Stock Type",
         Slot = {"ud_m16_stock"},
-        DefaultAttName = "Standard Stock",
+        DefaultAttName = "Full Stock",
     },
     {
         PrintName = "Mag Type",

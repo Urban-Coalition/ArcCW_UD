@@ -74,9 +74,9 @@ SWEP.MuzzleVelocity = 200
 -- Mag size --
 
 SWEP.ChamberSize = 1
-SWEP.Primary.ClipSize = 4
+SWEP.Primary.ClipSize = 5
 SWEP.ExtendedClipSize = 8
-SWEP.ReducedClipSize = 6
+SWEP.ReducedClipSize = 2
 
 -- Recoil --
 
@@ -342,12 +342,12 @@ SWEP.Attachments = {
     {
         PrintName = "Stock",
         Slot = {"ud_1014_stock"},
-        DefaultAttName = "Unfolded stock",
+        DefaultAttName = "Extended Stock",
     },
     {
         PrintName = "Tube Type",
         Slot = {"ud_1014_tube"},
-        DefaultAttName = "4 Shell Tube",
+        DefaultAttName = "5 Shell Tube",
     },
     {
         PrintName = "Ammo Type",

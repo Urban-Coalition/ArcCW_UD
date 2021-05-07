@@ -279,7 +279,19 @@ SWEP.BulletBones = {
 SWEP.AttachmentElements = {
     ["ud_autoshotgun_rail_fg"] = {
         VMBodygroups = {{ind = 3, bg = 1}},
-    },
+},
+    ["ud_autoshotgun_barrel_short"] = {
+        VMBodygroups = {{ind = 1, bg = 1}},
+},
+    ["ud_autoshotgun_tube_short"] = {
+        VMBodygroups = {{ind = 2, bg = 1}},
+},
+    ["ud_autoshotgun_stock_in"] = {
+    VMBodygroups = {{ind = 4, bg = 1}},
+},
+    ["ud_autoshotgun_stock_buffer"] = {
+    VMBodygroups = {{ind = 4, bg = 2}},
+},
 }
 
 SWEP.Attachments = {
@@ -295,7 +307,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Barrel",
-        DefaultAttName = "Standard Barrel",
+        DefaultAttName = "16\" M4 Super 90 SBS Barrel",
         Slot = "ud_1014_barrel",
     },
     {
@@ -335,7 +347,7 @@ SWEP.Attachments = {
     {
         PrintName = "Tube Type",
         Slot = {"ud_1014_tube"},
-        DefaultAttName = "6 Shell Tube",
+        DefaultAttName = "4 Shell Tube",
     },
     {
         PrintName = "Ammo Type",

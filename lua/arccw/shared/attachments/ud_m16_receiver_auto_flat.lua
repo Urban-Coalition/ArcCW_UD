@@ -31,3 +31,4 @@ att.Override_Firemodes = {
 
 att.GivesFlags = {"m16_auto"}
 att.ExcludeFlags = {"m16_noauto"}
+att.ActivateElements = {"ud_m16_upper_flat"}

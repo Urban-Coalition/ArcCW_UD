@@ -54,5 +54,5 @@ att.Model = "models/weapons/arccw/atts/fpw_lhik.mdl"
 
 att.ActivateElements = {"ud_m16_fpw_barrel"}
 
-att.ExcludeFlags = {"m16_auto"}
+att.ExcludeFlags = {"m16_auto", "m16_semi"}
 att.GivesFlags = {"m16_noauto"}

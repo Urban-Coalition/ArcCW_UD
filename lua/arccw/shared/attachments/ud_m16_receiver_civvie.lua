@@ -1,24 +1,22 @@
-att.PrintName = "M16 Automatic Receiver"
+att.PrintName = "M16 Civilian Receiver"
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "An automatic receiver with auto-semi-safe firemodes, used in small quantities by the U.S. Navy."
+att.Description = "Semi-automatic only receiver for civilian use."
 att.Desc_Pros = {
-    "ud.auto"
 }
 att.Desc_Cons = {
+    "ud.semionly"
 }
 att.Desc_Neutrals = {
 }
 att.Slot = "ud_m16_receiver"
 
 att.AutoStats = true
+att.SortOrder = -1
 
-att.Mult_AccuracyMOA = 1.25
-att.Mult_RPM = 0.85
+att.Mult_AccuracyMOA = 0.8
+att.Mult_Range = 1.2
 
 att.Override_Firemodes = {
-    {
-        Mode = 2,
-    },
     {
         Mode = 1,
     },
@@ -27,4 +25,4 @@ att.Override_Firemodes = {
     }
 }
 
-att.GivesFlags = {"m16_auto"}
+att.GivesFlags = {"m16_semi"}

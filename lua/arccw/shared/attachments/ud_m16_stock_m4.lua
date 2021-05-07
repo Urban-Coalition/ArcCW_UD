@@ -11,8 +11,8 @@ att.Slot = "ud_m16_stock"
 
 att.AutoStats = true
 
-att.Mult_SightTime = 0.9
-att.Mult_SightedSpeedMult = 1.1
-att.Mult_Recoil = 1.2
+att.Mult_SightTime = 0.85
+att.Mult_SightedSpeedMult = 1.15
+att.Mult_Recoil = 1.15
 
 att.ActivateElements = {"ud_m16_stock_m4"}

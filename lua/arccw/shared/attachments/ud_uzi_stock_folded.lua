@@ -10,7 +10,6 @@ att.Desc_Neutrals = {
 att.Slot = "ud_uzi_stock"
 
 att.AutoStats = true
-
 att.Free = true
 
 att.Mult_Recoil = 1.25

@@ -18,7 +18,6 @@ att.Hook_Compatible = function(wep)
     end
 end
 
-att.Override_Firemodes_Priority = 100
 att.Override_Firemodes = {
     {
         Mode = 1,

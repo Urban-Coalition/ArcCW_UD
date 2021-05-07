@@ -10,6 +10,7 @@ att.Desc_Cons = {
 att.Desc_Neutrals = {
 }
 att.Slot = "ud_m16_barrel"
+att.SortOrder = -1
 
 att.AutoStats = true
 

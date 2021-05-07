@@ -376,6 +376,27 @@ SWEP.Animations = {
         },
     },
 
+    ["fire_cycle"] = {
+        Source = "fire",
+        Time = 13 / 30,
+    },
+
+    ["cycle"] = {
+        Source = "fix",
+        Time = 36 / 30 * 0.7,
+        ShellEjectAt = 0.3,
+        LHIK = true,
+        LHIKIn = 0.3 * 0.7,
+        LHIKEaseIn = 0.4 * 0.7,
+        LHIKEaseOut = 0.15 * 0.7,
+        LHIKOut = 0.4 * 0.7,
+        SoundTable = {
+            {s = path .. "chback.ogg",   t = 0.1},
+            {s = common .. "cloth_4.ogg",  t = 0.5},
+            {s = path .. "chamber.ogg",  t = 0.5},
+        },
+    },
+
     ["fix"] = {
         Source = "fix",
         Time = 36 / 30,

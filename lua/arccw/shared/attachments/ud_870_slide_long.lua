@@ -15,10 +15,11 @@ att.AutoStats = true
 --att.Mult_Recoil = 0.5
 --att.Mult_Sway = 3
 
-att.Mult_SightTime = 1.1
+att.Mult_SightTime = 1.15
 
-att.Mult_Sway = 0.8
+att.Mult_Sway = 0.75
 att.Mult_Recoil = 0.9
+att.Mult_RecoilSide = 0.5
 
 att.Mult_CycleTime = 1.1
 

@@ -51,7 +51,7 @@ SWEP.ViewModel = "models/weapons/arccw/c_ud_870.mdl"
 SWEP.WorldModel = "models/weapons/w_shot_m3super90.mdl"
 SWEP.ViewModelFOV = 60
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN
-SWEP.DefaultBodygroups = "00000000"
+SWEP.DefaultBodygroups = "000000000"
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {

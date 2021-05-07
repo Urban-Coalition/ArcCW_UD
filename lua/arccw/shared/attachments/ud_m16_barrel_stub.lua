@@ -21,7 +21,7 @@ att.AutoStats = true
 att.Mult_Recoil = 2
 att.Mult_AccuracyMOA = 4
 att.Mult_Range = 0.4
-att.Mult_RPM = 1.1
+att.Mult_RPM = 1.176
 
 att.A_Hook_Add_SightsDispersion = function(wep, data)
     if not wep.Attachments[1].Installed then

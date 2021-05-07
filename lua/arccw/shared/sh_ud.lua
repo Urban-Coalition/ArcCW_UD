@@ -5,7 +5,6 @@ CreateConVar("arccw_ud_homeboy_epic", "0", FCVAR_ARCHIVE + FCVAR_REPLICATED, "En
 local shipments = CreateConVar("arccw_ud_shipments", "1", FCVAR_ARCHIVE + FCVAR_REPLICATED, "Create weapon shipments for DarkRP.", 0, 1)
 local shipments_mult = CreateConVar("arccw_ud_shipments_pricemult", "1", FCVAR_ARCHIVE + FCVAR_REPLICATED, "Shipment price multiplier.", 0)
 
-
 local jobatts = CreateConVar("arccw_ud_jobatts", "1", FCVAR_ARCHIVE + FCVAR_REPLICATED, "Certain jobs are allowed to take specified attachments on guns.", 0, 1)
 local jobatts_f = CreateConVar("arccw_ud_jobatts_forced", "1", FCVAR_ARCHIVE + FCVAR_REPLICATED, "Job-specific attachments *cannot* be removed.", 0, 1)
 
@@ -26,19 +25,19 @@ ArcCW.UD = ArcCW.UD or {}
 -- These guns do not require a gun license.
 ArcCW.UD.CivvieGuns = {
     arccw_ud_glock = true,
-    arccw_ud_mini14 = true,
-    arccw_ud_870 = true,
+    --arccw_ud_mini14 = true,
+    --arccw_ud_870 = true,
 }
 
 -- If arccw_ud_licenseatts_civvie is on:
 -- For each of these guns, specified slots will be forced to have its attachment.
--- They cannot be taken off unless the user has a gun license.
+-- They cannot be taken off unless the user has a gun license. (They are also made free.)
 -- If set to true, the guns require a gun license.
 
 -- If arccw_ud_licenseatts_civvie is off:
 -- The following guns require a gun license.
 ArcCW.UD.LicenseGuns = {
-    arccw_ud_m16 = {[2] = "ud_m16_receiver_civvie"},
+    arccw_ud_m16 = {[4] = "ud_m16_receiver_civvie"},
     arccw_ud_uzi = {[2] = "ud_uzi_body_civvy"},
     arccw_ud_m1014 = true,
 }
@@ -57,6 +56,11 @@ ArcCW.UD.LicenseAtts = {
 
     -- Uzi
     ud_uzi_mag_100 = true,
+    ud_uzi_body_mini = true,
+    ud_uzi_body_micro = true,
+
+    -- M1014
+    ud_m1014_tube_ext = true,
 }
 
 local function shipment_func(class, cat, price, sep, allowed)
@@ -101,23 +105,59 @@ hook.Add("InitPostEntity", "ArcCW_UD_DarkRP", function()
     end
 end)
 
+hook.Add("ArcCW_PostLoadAtts", "ArcCW_UD", function()
+    if not licenseatts_civ:GetBool() then return end
+    for k, v in pairs(ArcCW.UD.LicenseGuns) do
+        if not istable(v) then continue end
+        for _, attname in pairs(v) do
+            if ArcCW.AttachmentTable[attname] then
+                ArcCW.AttachmentTable[attname].Free = true
+            end
+        end
+    end
+end)
+
+-- I found this hook in the darkrp github but it's not documented?
+hook.Add("playerPickedUpWeapon", "ArcCW_UD", function(ply, ent, wep)
+    local class = ent:GetWeaponClass()
+    if licenseatts_civ:GetBool() and
+            not ply:getDarkRPVar("HasGunlicense", false)
+            and istable(ArcCW.UD.LicenseGuns[class]) then
+        timer.Simple(0.001, function()
+            wep = ply:GetWeapon(class)
+            if not IsValid(wep) then return end
+            for k, v in pairs(ArcCW.UD.LicenseGuns[class]) do
+                local oldatt = wep.Attachments[k].Installed
+                wep.Attachments[k].Installed = v
+                if oldatt then
+                    ArcCW:PlayerGiveAtt(ply, oldatt)
+                end
+            end
+            wep:NetworkWeapon()
+            ArcCW:PlayerSendAttInv(ply)
+        end)
+    end
+end)
+
 hook.Add("ArcCW_PlayerCanAttach", "ArcCW_UD", function(ply, wep, attname, slot, detach)
     if not DarkRP or not licenseatts:GetBool() then return end
 
     local strict = licenseatts_s:GetBool()
     local has = ply:getDarkRPVar("HasGunlicense", false)
-    if has or (not strict and detach) then return end
+    if has then return end
 
     local req = hook.Run("ArcCW_UD_AttNeedsLicense", ply, attname)
     req = req or ArcCW.UD.LicenseAtts[attname]
-    if req then
-        if SERVER then DarkRP.notify(ply, 1, 3, "You need a gun license to use this attachment!") end
+    if req and (not detach or strict) then
+        if SERVER then DarkRP.notify(ply, 1, 3, "You need a gun license to use this attachment!")
+        else notification.AddLegacy("You need a gun license to use this attachment!", 1, 3) end
         return false
     end
 
     local lic = ArcCW.UD.LicenseGuns[wep:GetClass()]
     if licenseatts_civ:GetBool() and istable(lic) and detach and lic[slot] and lic[slot] == attname then
-        if SERVER then DarkRP.notify(ply, 1, 3, "You can't remove this without a gun license!") end
+        if SERVER then DarkRP.notify(ply, 1, 3, "You can't remove this without a gun license!")
+        else notification.AddLegacy("You can't remove this without a gun license!", 1, 3) end
         return false
     end
 end)
@@ -130,7 +170,8 @@ hook.Add("ArcCW_PickupAttEnt", "ArcCW_UD", function(ply, attname)
     local req = hook.Run("ArcCW_UD_AttNeedsLicense", ply, attname)
     req = req or ArcCW.UD.LicenseAtts[attname]
     if req then
-        if SERVER then DarkRP.notify(ply, 1, 3, "You need a gun license to pickup this attachment!") end -- todo localize
+        if SERVER then DarkRP.notify(ply, 1, 3, "You need a gun license to pickup this attachment!")
+        else notification.AddLegacy("You need a gun license to pickup this attachment!", 1, 3) end
         return true
     end
 end)

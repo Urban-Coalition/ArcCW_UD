@@ -10,6 +10,7 @@ att.Desc_Neutrals = {
 att.Slot = "ud_1014_stock"
 
 att.AutoStats = true
+att.Free = true
 
 att.Mult_SpeedMult = 1.05
 

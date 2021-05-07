@@ -687,7 +687,7 @@ SWEP.Animations = {
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local barrel = wep.Attachments[2].Installed
-    if (wep.Attachments[1].Installed or "") != "" then
+    if wep.Attachments[1].Installed then
         -- Optic rail
         if vm:GetBodygroup(1) == 1 then
             -- Flat top (ud_m16_upper_flat)
@@ -699,7 +699,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     else
         vm:SetBodygroup(3, 0)
     end
-    if (wep.Attachments[6].Installed or "") != "" then
+    if wep.Attachments[6].Installed then
         -- Tactical clamp
         if barrel == "ud_m16_barrel_stub" then
             -- Stub

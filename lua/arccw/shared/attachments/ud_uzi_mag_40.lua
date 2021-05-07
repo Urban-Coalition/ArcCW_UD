@@ -1,4 +1,10 @@
 att.PrintName = "40-Round Uzi Extended Mag"
+
+if !GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "40-Round STAP Extended Mag"
+end
+
+
 att.SortOrder = 40
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "Extended magazine for the Uzi. Enables slightly longer mag dumps, which may save your life, but the longer mag is more awkward to load."

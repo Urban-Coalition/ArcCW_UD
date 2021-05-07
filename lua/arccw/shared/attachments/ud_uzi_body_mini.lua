@@ -1,4 +1,9 @@
 att.PrintName = "8\" Uzi Mini Barrel"
+
+if !GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "8\" STAP Rapid Barrel"
+end
+
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "Compact frame with a higher firerate."
 att.Desc_Pros = {

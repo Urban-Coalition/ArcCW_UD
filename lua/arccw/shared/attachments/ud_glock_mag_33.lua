@@ -1,4 +1,9 @@
 att.PrintName = "33-Round G17 Extended Mag"
+
+if !GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "33-Round GEN3 Extended Mag"
+end
+
 att.SortOrder = 33
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "Extended magazine for the Glock. Allows many more rounds to be fired before reloading, but comes with extra weight."

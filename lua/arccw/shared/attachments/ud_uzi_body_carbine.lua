@@ -1,4 +1,9 @@
 att.PrintName = "13\" Uzi Carbine Barrel"
+
+if !GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "13\" STAP Carbine Barrel"
+end
+
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "Long barrel for the Uzi, built for long range patrols. Improves range and recoil."
 att.Desc_Pros = {

@@ -1,4 +1,9 @@
 att.PrintName = "100-Round G17 C-Mag"
+
+if !GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "100-Round GEN3 C-Mag"
+end
+
 att.SortOrder = 100
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "Twin-drum magazine for pistols, ideal for suppressive fire. Bulky construction and high ammo capacity substantially increases weight and shifts the weapon's center of balance. Prone to jamming."

@@ -1,4 +1,9 @@
 att.PrintName = "4.6\" Uzi Micro Barrel"
+
+if !GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "4.6\" STAP Turbo Barrel"
+end
+
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "Extremely compact frame that turns this sub-machine gun into a machine pistol. Without an attach point for stocks, recoil is dramatically increased."
 att.Desc_Pros = {

@@ -726,7 +726,7 @@ SWEP.Attachments = {
     {
         PrintName = "Mag Type",
         Slot = {"ud_glock_mag"},
-        DefaultAttName = "17-Round G17 Mag",
+        DefaultAttName = "17-Round Standard Mag",
     },
     {
         PrintName = "Stock Type",

@@ -523,7 +523,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Barrel",
-        DefaultAttName = "10\" Uzi SMG Barrel",
+        DefaultAttName = "10\" Standard Barrel",
         Slot = "ud_uzi_frame",
         Bone = "uzi_parent",
         Offset = {
@@ -570,7 +570,7 @@ SWEP.Attachments = {
     {
         PrintName = "Mag Type",
         Slot = {"ud_uzi_mag"},
-        DefaultAttName = "32-Round Uzi Mag",
+        DefaultAttName = "32-Round Standard Mag",
     },
     {
         PrintName = "Ammo Type",

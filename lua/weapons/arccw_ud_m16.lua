@@ -750,7 +750,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Barrel",
-        DefaultAttName = "20\" M16A2 Barrel",
+        DefaultAttName = "20\" Standard Barrel",
         Slot = "ud_m16_barrel",
         Bone = "m16_parent",
         Offset = {

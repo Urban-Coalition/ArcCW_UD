@@ -1,6 +1,11 @@
-att.PrintName = "14.5\" M4 Carbine Barrel"
+att.PrintName = "14.5\" CAR-4 Barrel"
+
+if GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "14.5\" M4 Carbine Barrel"
+end
+
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "Barrel of a similar length to the M4 carbine. Provides fully-automatic capability at a well rounded fire rate, with good range and accuracy."
+att.Description = "Carbine length barrel with short handguard. Provides a small increase in firerate while maintaining respectable accuracy and range."
 att.Desc_Pros = {
     --"ud.auto"
 }

@@ -1,4 +1,9 @@
-att.PrintName = "20\" LMG Barrel"
+att.PrintName = "20\" AMSAW Barrel"
+
+if GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "20\" Colt LMG Barrel"
+end
+
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "Heavy duty barrel and handguard used on the SAW variants of the rifle. Heavy and signficantly reduces fire rate, but is quite stable to fire and has superior cooling capabilities."
 att.Desc_Pros = {

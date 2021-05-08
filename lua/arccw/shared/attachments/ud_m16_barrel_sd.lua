@@ -1,4 +1,9 @@
-att.PrintName = "10.5\" SD Barrel"
+att.PrintName = "10.5\" AMCAR SD Barrel"
+
+if GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "10.5\" M16 SD Barrel"
+end
+
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "Integrally suppressed short barrel made by hobbyists. Dampens sound effectively, but fires slower and adds to weapon weight."
 att.Desc_Pros = {

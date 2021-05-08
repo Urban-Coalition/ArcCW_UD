@@ -1,4 +1,9 @@
 att.PrintName = "R870 Long Forend"
+
+if GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "Ex-12 Long Forend"
+end
+
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "Long wood forend for the R870. Additional heft improves grip but is slower to cycle."
 att.Desc_Pros = {

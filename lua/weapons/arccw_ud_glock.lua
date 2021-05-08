@@ -57,8 +57,8 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage --
 
-SWEP.Damage = 34 -- 3 shot close range kill
-SWEP.DamageMin = 20 -- 5 shot long range kill
+SWEP.Damage = 24 -- Arctic, you can't kill someone with 3 9mm bullets.
+SWEP.DamageMin = 16
 SWEP.RangeMin = 10
 SWEP.Range = 20
 SWEP.Penetration = 2

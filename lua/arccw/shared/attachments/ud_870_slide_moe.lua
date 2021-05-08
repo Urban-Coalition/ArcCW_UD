@@ -1,4 +1,9 @@
 att.PrintName = "R870 MOE Forend"
+
+if GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "Ex-12 MOE Forend"
+end
+
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "Polymer Forend for the R870. Faster to cycle, but grip is weakened."
 att.Desc_Pros = {

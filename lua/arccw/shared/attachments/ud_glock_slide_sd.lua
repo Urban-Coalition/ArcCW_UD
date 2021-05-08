@@ -13,6 +13,7 @@ att.Desc_Cons = {
     --"ud.manual",
 }
 att.Desc_Neutrals = {
+    "ud.hushpuppy"
 }
 att.Slot = "ud_glock_slide"
 
@@ -53,6 +54,7 @@ att.Override_Firemodes = {
     },
     {
         Mode = 0,
+        PrintName = "LOW",
     }
 }
 

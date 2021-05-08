@@ -2,6 +2,7 @@ $modelname "weapons\arccw\c_ud_m16.mdl"
  
 $bodygroup "studio" {
 	studio "m16.smd"
+	studio "m16_usas.smd"
 }
 
 $bodygroup "1" {
@@ -35,6 +36,7 @@ $bodygroup "4" {
 	studio "m16_barrel_usas.smd"
 	studio "m16_barrel_lmg.smd"
 	studio "m16_barrel_SD.smd"
+	studio "m16_barrel_exposed.smd"
 }
 
 $bodygroup "5" {

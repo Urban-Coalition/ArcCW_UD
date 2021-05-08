@@ -18,8 +18,8 @@ att.Mult_SightTime = 0.9
 att.Mult_SightedSpeedMult = 1.1
 
 att.Mult_RPM = 1.55 --1.389
-att.Mult_Recoil = 1.5
-att.Mult_RecoilSide = 2
+att.Mult_Recoil = 1.25
+att.Mult_RecoilSide = 1.5
 att.Mult_Range = 0.65
 --att.Mult_Sway = 1.25
 att.Mult_AccuracyMOA = 3
@@ -38,6 +38,7 @@ end
 
 att.Add_BarrelLength = -3
 
+--[[]
 att.Override_Firemodes_Priority = 10
 att.Override_Firemodes = {
     {
@@ -47,12 +48,12 @@ att.Override_Firemodes = {
         Mode = 0
     }
 }
+att.ExcludeFlags = {"m16_auto", "m16_semi"}
+att.GivesFlags = {"m16_noauto"}
+]]
 
 att.LHIK = true
 
 att.Model = "models/weapons/arccw/atts/fpw_lhik.mdl"
 
 att.ActivateElements = {"ud_m16_fpw_barrel"}
-
-att.ExcludeFlags = {"m16_auto", "m16_semi"}
-att.GivesFlags = {"m16_noauto"}

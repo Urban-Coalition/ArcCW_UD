@@ -18,7 +18,7 @@ att.Slot = "ud_m16_receiver"
 att.AutoStats = true
 
 att.Mult_AccuracyMOA = 1.25
-att.Mult_RPM = 0.85
+att.Mult_RPM = 0.9
 
 att.Override_Firemodes = {
     {
@@ -33,3 +33,4 @@ att.Override_Firemodes = {
 }
 
 att.GivesFlags = {"m16_auto"}
+att.ExcludeFlags = {"m16_noauto"}

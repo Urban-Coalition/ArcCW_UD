@@ -112,7 +112,7 @@ end
 hook.Add("postLoadCustomDarkRPItems", "ArcCW_UD", load_ud_config)
 
 hook.Add("InitPostEntity", "ArcCW_UD_DarkRP", function()
-    if shipments:GetBool() then
+    if DarkRP and shipments:GetBool() then
         shipment_func("arccw_ud_glock", 1800, true, {TEAM_GUN})
         shipment_func("arccw_ud_uzi", 2550, false, {TEAM_GUN})
         shipment_func("arccw_ud_mini14", 2300, false, {TEAM_GUN})

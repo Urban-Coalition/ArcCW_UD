@@ -332,6 +332,24 @@ SWEP.AttachmentElements = {
             },
         }
     },
+    ["ud_m16_barrel_lmg"] = {
+        VMBodygroups = {{ind = 4, bg = 8}},
+        AttPosMods = {
+            [6] = {
+                vpos = Vector(0, 0.8, 20),
+                vang = Angle(90, 0, -90),
+            },
+        }
+    },
+    ["ud_m16_barrel_sd"] = {
+        VMBodygroups = {{ind = 4, bg = 9}},
+        AttPosMods = {
+            [6] = {
+                vpos = Vector(0, 0.8, 20),
+                vang = Angle(90, 0, -90),
+            },
+        }
+    },
 }
 
 -- Animations --
@@ -749,6 +767,7 @@ SWEP.Attachments = {
             vpos = Vector(-0.03, -0.05, -1.5),
             vang = Angle(90, 0, -90),
         },
+        ExcludeFlags = {"sd"},
     },
     {
         PrintName = "Receiver",
@@ -769,11 +788,12 @@ SWEP.Attachments = {
             vang = Angle(90, 0, -90),
         },
         VMScale = Vector(1.25, 1.25, 1.25),
-        InstalledEles = {"ud_m16_rail_fg"}
+        InstalledEles = {"ud_m16_rail_fg"},
+        ExcludeFlags = {"m16_lmg"},
     },
     {
         PrintName = "Tactical",
-        Slot = {"tac_pistol"},
+        Slot = {"tac"},
         Bone = "m16_parent",
         Offset = {
             vpos = Vector(0, 0.8, 25.4),

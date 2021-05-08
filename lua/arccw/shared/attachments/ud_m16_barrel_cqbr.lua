@@ -23,19 +23,3 @@ att.Mult_Range = 0.8
 att.Mult_Sway = 1.25
 
 att.Add_BarrelLength = -6
-
---[[]
-att.Override_Firemodes = {
-    {
-        Mode = 2,
-    },
-    {
-        Mode = 1,
-    },
-    {
-        Mode = 0
-    }
-}
-]]
-
-att.ActivateElements = {"ud_m16_m4_barrel"}

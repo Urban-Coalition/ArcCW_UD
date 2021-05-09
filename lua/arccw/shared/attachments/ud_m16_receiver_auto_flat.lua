@@ -34,6 +34,12 @@ att.Override_Firemodes = {
     }
 }
 
+att.A_Hook_Add_SightsDispersion = function(wep, data)
+    if data and !wep.Attachments[1].Installed then
+        data.add = data.add + 100
+    end
+end
+
 att.GivesFlags = {"m16_auto"}
 att.ExcludeFlags = {"m16_noauto"}
 att.ActivateElements = {"ud_m16_upper_flat"}

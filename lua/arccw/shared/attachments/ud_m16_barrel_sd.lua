@@ -17,14 +17,11 @@ att.Slot = "ud_m16_barrel"
 
 att.AutoStats = true
 
-att.Mult_SightTime = 1.1
-att.Mult_SpeedMult = 0.975
-att.Mult_SightedSpeedMult = 0.9
+att.Mult_SightTime = 1.2
 
 att.Mult_Recoil = 1.25
 att.Mult_AccuracyMOA = 0.8
-att.Mult_Range = 0.8
-att.Mult_Sway = 1.5
+att.Mult_RPM = 1.111
 
 att.Add_BarrelLength = -6
 

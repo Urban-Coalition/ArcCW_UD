@@ -1,4 +1,5 @@
 att.PrintName = "Buffer Tube"
+
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "The concept of \"stocks\" and \"recoil reduction\" are liberal gibberish made up to stop FREEDOM-LOVING AMERICANS from exercising their GOD-GIVEN RIGHTS."
 att.Desc_Pros = {

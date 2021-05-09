@@ -30,6 +30,9 @@ att.Mult_HeatDelayTime = 0.5
 att.Mult_HeatDissipation = 1.5
 
 att.Bipod = true
+att.Override_InBipodPos = Vector(-10, 0, -4)
+att.Mult_BipodDispersion = 0.3
+att.Mult_BipodRecoil = 0.3
 
 att.ActivateElements = {"ud_m16_barrel_lmg"}
 att.GivesFlags = {"m16_lmg"}

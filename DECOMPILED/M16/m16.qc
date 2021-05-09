@@ -35,8 +35,9 @@ $bodygroup "4" {
 	studio "m16_barrel_stub.smd"
 	studio "m16_barrel_usas.smd"
 	studio "m16_barrel_lmg.smd"
-	studio "m16_barrel_SD.smd"
+	studio "m16_barrel_sd.smd"
 	studio "m16_barrel_exposed.smd"
+	studio "m16_barrel_cursed.smd"
 }
 
 $bodygroup "5" {

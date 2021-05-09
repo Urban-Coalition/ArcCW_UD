@@ -315,12 +315,14 @@ SWEP.AttachmentElements = {
     },
     ["ud_m16_barrel_stub"] = {
         VMBodygroups = {{ind = 4, bg = 6}},
+        --[[]
         Override_IronSightStruct = {
             Pos = Vector(-1, 4, 0),
             Ang = Angle(0, 0, 0),
             Magnification = 1,
             CrosshairInSights = true
         },
+        ]]
         AttPosMods = {
             [3] = {
                 vpos = Vector(-0.03, -0.05, -22),
@@ -343,6 +345,15 @@ SWEP.AttachmentElements = {
     },
     ["ud_m16_barrel_sd"] = {
         VMBodygroups = {{ind = 4, bg = 9}},
+        AttPosMods = {
+            [6] = {
+                vpos = Vector(0, 0.8, 20),
+                vang = Angle(90, 0, -90),
+            },
+        }
+    },
+    ["ud_m16_receiver_usas"] = {
+        VMBodygroups = {{ind = 1, bg = 2}, {ind = 4, bg = 7}},
         AttPosMods = {
             [6] = {
                 vpos = Vector(0, 0.8, 20),
@@ -757,6 +768,7 @@ SWEP.Attachments = {
             vpos = Vector(2.8, -4.2, -11.5),
             vang = Angle(90, 0, -90),
         },
+        ExcludeFlags = {"m16_usas"},
     },
     {
         PrintName = "Muzzle",
@@ -767,7 +779,7 @@ SWEP.Attachments = {
             vpos = Vector(-0.03, -0.05, -1.5),
             vang = Angle(90, 0, -90),
         },
-        ExcludeFlags = {"sd"},
+        ExcludeFlags = {"sd", "m16_usas"},
     },
     {
         PrintName = "Receiver",
@@ -815,6 +827,7 @@ SWEP.Attachments = {
         PrintName = "Mag Type",
         Slot = {"ud_m16_mag"},
         DefaultAttName = "30-Round STANAG Mag",
+        ExcludeFlags = {"m16_usas"},
     },
     {
         PrintName = "Ammo Type",

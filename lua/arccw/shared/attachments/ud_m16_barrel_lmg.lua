@@ -20,7 +20,7 @@ att.Mult_SpeedMult = 0.925
 att.Mult_SightedSpeedMult = 0.75
 att.Mult_Sway = 2
 
-att.Mult_RPM = 0.85
+att.Mult_RPM = 0.926
 att.Mult_Recoil = 0.75
 att.Mult_RecoilSide = 0.5
 

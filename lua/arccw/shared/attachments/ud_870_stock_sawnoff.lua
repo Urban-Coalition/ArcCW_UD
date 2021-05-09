@@ -1,7 +1,7 @@
 att.PrintName = "Ex-12 Sawn-Off Stock"
 
 if GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "R870 MOE Forend"
+    att.PrintName = "R870 Sawn-Off Stock"
 end
 
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")

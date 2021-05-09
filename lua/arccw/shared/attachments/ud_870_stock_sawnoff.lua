@@ -1,4 +1,9 @@
-att.PrintName = "R870 Sawn-Off Stock"
+att.PrintName = "Ex-12 Sawn-Off Stock"
+
+if GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "R870 MOE Forend"
+end
+
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "Wooden stock with only a grip remaining. In case you want to roleplay as a bank robber."
 att.Desc_Pros = {

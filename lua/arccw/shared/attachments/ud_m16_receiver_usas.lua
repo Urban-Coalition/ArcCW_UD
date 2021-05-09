@@ -7,6 +7,8 @@ end
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "Total conversion kit that turns the rifle into an automatic combat shotgun."
 att.Desc_Pros = {
+    "ud.usas",
+    "ud.auto"
 }
 att.Desc_Cons = {
 }
@@ -19,16 +21,23 @@ att.SortOrder = -100
 
 att.Override_ClipSize = 20
 
-att.Mult_HipDispersion = 0.75
+att.Mult_HipDispersion = 0.6
+att.Mult_MoveDispersion = 0.75
+att.Mult_RPM = 0.4
+
+att.Override_AccuracyMOA_Priority = -1
 att.Override_AccuracyMOA = 40
+att.Override_Num_Priority = -1 -- shotgun ammo may need to overwrite this
 att.Override_Num = 8
 att.Mult_Damage = 3.5
 att.Mult_DamageMin = 3.5
 att.Mult_Range = 0.25
+att.Mult_PhysBulletMuzzleVelocity = 3 -- revert velocity changes by range
 att.Mult_RangeMin = 0.75
-att.Mult_RPM = 0.4
+att.Mult_Recoil = 2
+att.Mult_RecoilSide = 2
 
-att.Mult_SpeedMult = 0.95
+att.Mult_SpeedMult = 0.925
 att.Mult_ReloadTime = 1.25
 
 att.Override_Firemodes = {

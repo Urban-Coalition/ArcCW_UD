@@ -1,5 +1,7 @@
 L = {}
 
+L["ud.title"] = "Urban Decay"
+
 L["pro.magcap"] = "Increased magazine capacity"
 L["con.magcap"] = "Reduced magazine capacity"
 
@@ -18,3 +20,7 @@ L["ud.invistracer"] = "Invisible tracers"
 L["ud.hushpuppy"] = "Switch to LOCK firemode for manual action, reducing volume and imprecision"
 L["ud.bipod"] = "Allows use of bipod"
 L["ud.usas"] = "Fire shotgun shells instead of bullets"
+
+L["ud.darkrp.cantremove"] = "You can't remove this without a gun license!"
+L["ud.darkrp.cantattach"] = "You need a gun license to use this attachment!"
+L["ud.darkrp.cantpickup"] = "You need a gun license to pickup this attachment!"

@@ -3,7 +3,7 @@ att.SortOrder = -1
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "Description"
 att.Desc_Pros = {
-    "Increased magazine capacity"
+    "pro.magcap"
 }
 att.Desc_Cons = {
 }

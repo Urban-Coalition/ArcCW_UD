@@ -193,7 +193,7 @@ SWEP.BulletBones = {
     [2] = "m16_bullets1",    [3] = "m16_bullets2"
 }
 
-SWEP.DefaultBodyGroups = "00000000000"
+SWEP.DefaultBodyGroups = "000000000000"
 
 SWEP.AttachmentElements = {
 

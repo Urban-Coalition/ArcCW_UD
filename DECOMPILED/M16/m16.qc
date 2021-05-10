@@ -18,6 +18,8 @@ $bodygroup "2" {
 	studio "m16_mag_60.smd"
 	studio "m16_mag_100.smd"
 	studio "m16_mag_9mm.smd"
+	studio "m16_mag_usas_10.smd"
+	studio "m16_mag_usas_20.smd"
 }
 
 $bodygroup "3" {

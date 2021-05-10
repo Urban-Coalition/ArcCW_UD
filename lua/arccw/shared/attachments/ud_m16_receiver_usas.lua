@@ -24,12 +24,14 @@ att.Override_ClipSize = 10
 
 att.Mult_HipDispersion = 0.6
 att.Mult_MoveDispersion = 0.75
-att.Mult_RPM = 0.4
+att.Mult_RPM = 0.5
 
 att.Override_AccuracyMOA_Priority = -1
 att.Override_AccuracyMOA = 40
 att.Override_Num_Priority = -1 -- shotgun ammo may need to overwrite this
 att.Override_Num = 8
+att.Override_ShellModel = "models/shells/shell_12gauge.mdl"
+att.Override_ShellSounds = ArcCW.ShotgunShellSoundsTable
 att.Mult_Damage = 3.5
 att.Mult_DamageMin = 3.5
 att.Mult_Range = 0.25
@@ -53,6 +55,10 @@ att.Override_Firemodes = {
     }
 }
 
+att.LHIK = true
+
+att.Model = "models/weapons/arccw/atts/usas_lhik.mdl"
+
 att.Override_IsShotgun = true
 att.Override_Ammo = "buckshot"
 att.Override_Trivia_Calibre = "12 Gauge"
@@ -66,7 +72,7 @@ att.Hook_GetShootSound = function(wep, fsound)
 end
 
 att.Hook_GetDistantShootSound = function(wep, sound)
-    if fsound == wep.DistantShootSound then return "weapons/arccw_ud/m1014/fire_dist.ogg" end
+    if fsound == wep.DistantShootSound then return "weapons/arccw_ud/r870/fire_dist.ogg" end
 end
 
 local slotinfo = {

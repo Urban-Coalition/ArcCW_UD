@@ -193,7 +193,7 @@ SWEP.BulletBones = {
     [2] = "m16_bullets1",    [3] = "m16_bullets2"
 }
 
-SWEP.DefaultBodyGroups = "00000000000"
+SWEP.DefaultBodyGroups = "000000000000"
 
 SWEP.AttachmentElements = {
 
@@ -208,6 +208,9 @@ SWEP.AttachmentElements = {
     },
     ["ud_m16_mag_100"] = {
         VMBodygroups = {{ind = 2, bg = 4}},
+    },
+    ["ud_m16_mag_9mm"] = {
+        VMBodygroups = {{ind = 2, bg = 5}},
     },
 
     ["ud_m16_rail_fg"] = {
@@ -242,6 +245,20 @@ SWEP.AttachmentElements = {
     },
     ["ud_m16_grip_wood"] = {
         VMBodygroups = {{ind = 6, bg = 3}},
+    },
+
+    ["ud_m16_barrel_tactical"] = {
+        VMBodygroups = {{ind = 4, bg = 12}},
+        AttPosMods = {
+            [3] = {
+                vpos = Vector(-0.03, -0.05, -6.5),
+                vang = Angle(90, 0, -90),
+            },
+            [6] = {
+                vpos = Vector(0, 0.8, 20),
+                vang = Angle(90, 0, -90),
+            },
+        }
     },
 
     ["ud_m16_barrel_m4"] = {
@@ -353,7 +370,7 @@ SWEP.AttachmentElements = {
         }
     },
     ["ud_m16_receiver_usas"] = {
-        VMBodygroups = {{ind = 1, bg = 2}, {ind = 4, bg = 7}},
+        VMBodygroups = {{ind = 0, bg = 1}, {ind = 1, bg = 2}, {ind = 4, bg = 7}},
         AttPosMods = {
             [6] = {
                 vpos = Vector(0, 0.8, 20),
@@ -709,6 +726,50 @@ SWEP.Animations = {
             {s = common .. "cloth_4.ogg",  t = 2.0},
             {s = path .. "chamber.ogg",  t = 2.2},
             {s = common .. "shoulder.ogg", t = 2.7},
+        },
+    },
+
+    -- 9mm 32 Round Reloads --
+
+    ["reload_9mm"] = {
+        Source = "reload_9mm",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        Time = 71 / 30,
+        MinProgress = 1.5,
+        LastClip1OutTime = 0.9,
+        LHIK = true,
+        LHIKIn = 0.4,
+        LHIKEaseIn = 0.4,
+        LHIKEaseOut = 0.15,
+        LHIKOut = 0.5,
+        SoundTable = {
+            {s = common .. "cloth_1.ogg",  t = 0.0},
+            {s = path .. "magout.ogg", 	 t = 0.2},
+            {s = common .. "cloth_2.ogg",  t = 0.75},
+            {s = path .. "magin.ogg",    t = 1.05},
+            {s = common .. "cloth_3.ogg",  t = 1.1},
+            {s = common .. "shoulder.ogg", t = 1.93},
+        },
+    },
+    ["reload_empty_9mm"] = {
+        Source = "reload_empty_9mm",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        Time = 79 / 30,
+        MinProgress = 2,
+        LastClip1OutTime = 0.7,
+        LHIK = true,
+        LHIKIn = 0.4,
+        LHIKEaseIn = 0.4,
+        LHIKEaseOut = 0.15,
+        LHIKOut = 0.4,
+        SoundTable = {
+            {s = common .. "cloth_1.ogg",  t = 0.0},
+            {s = path .. "magout.ogg", 	 t = 0.2},
+            {s = common .. "cloth_2.ogg",  t = 0.75},
+            {s = path .. "magin.ogg",    t = 1.05},
+            {s = common .. "cloth_3.ogg",  t = 1.39},
+            {s = path .. "boltdrop.ogg", t = 1.77},
+            {s = common .. "shoulder.ogg", t = 2.15},
         },
     },
 }

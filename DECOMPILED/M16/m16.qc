@@ -38,6 +38,7 @@ $bodygroup "4" {
 	studio "m16_barrel_sd.smd"
 	studio "m16_barrel_exposed.smd"
 	studio "m16_barrel_cursed.smd"
+	studio "m16_barrel_tactical.smd"
 }
 
 $bodygroup "5" {
@@ -67,6 +68,15 @@ $bodygroup "8" {
 	studio "m16_clamp_fullsize.smd"
 	studio "m16_clamp_stub.smd"
 	studio "m16_clamp_short.smd"
+}
+
+$bodygroup "9" {
+	blank
+	studio "railcover_bottom"
+	studio "railcover_left"
+	studio "railcover_quad"
+	studio "railcover_right"
+	studio "railcover_top"
 }
 
 $cdmaterials "models\weapons\arccw\ud_m16"

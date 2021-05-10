@@ -244,6 +244,23 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 6, bg = 3}},
     },
 
+    ["ud_m16_barrel_tactical"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 12}
+            {ind = 9, bg = 3}
+        },
+        AttPosMods = {
+            [3] = {
+                vpos = Vector(-0.03, -0.05, -6.5),
+                vang = Angle(90, 0, -90),
+            },
+            [6] = {
+                vpos = Vector(0, 0.8, 20),
+                vang = Angle(90, 0, -90),
+            },
+        }
+    },
+
     ["ud_m16_barrel_m4"] = {
         VMBodygroups = {{ind = 4, bg = 1}},
         AttPosMods = {
@@ -353,7 +370,7 @@ SWEP.AttachmentElements = {
         }
     },
     ["ud_m16_receiver_usas"] = {
-        VMBodygroups = {{ind = 1, bg = 2}, {ind = 4, bg = 7}},
+        VMBodygroups = {{ind = 0, bg = 1}, {ind = 1, bg = 2}, {ind = 4, bg = 7}},
         AttPosMods = {
             [6] = {
                 vpos = Vector(0, 0.8, 20),

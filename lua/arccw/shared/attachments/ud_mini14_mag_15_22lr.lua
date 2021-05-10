@@ -5,7 +5,7 @@ att.Description = ".22 Long Rifle conversion for the Mini-14. While the light, w
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
-    "Reduced magazine capacity"
+    "con.magcap"
 }
 att.Desc_Neutrals = {
 }
@@ -48,6 +48,6 @@ att.Hook_GetShootSound = function(wep, sound)
 end
 
 att.Hook_GetDistantShootSound = function(wep, distancesound)
-    if distancesound == wep.DistantShootSound then 
+    if distancesound == wep.DistantShootSound then
         return "weapons/arccw_ud/mini14/fire_22_dist.ogg" end
 end

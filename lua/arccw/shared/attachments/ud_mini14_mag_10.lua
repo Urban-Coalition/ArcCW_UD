@@ -5,7 +5,7 @@ att.Description = "Low-capacity flush magazine for the Mini-14. The lighter load
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
-    "Reduced magazine capacity"
+    "con.magcap"
 }
 att.Desc_Neutrals = {
 }

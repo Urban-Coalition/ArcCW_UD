@@ -25,3 +25,5 @@ att.ActivateElements = {"ud_m16_20_mag"}
 att.Hook_SelectReloadAnimation = function(wep, anim)
     return anim .. "_20"
 end
+
+att.ExcludeFlags = {"m16_usas"}

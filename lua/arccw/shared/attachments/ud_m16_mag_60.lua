@@ -32,3 +32,5 @@ att.Override_HeatDelayTime = 3
 att.Hook_SelectReloadAnimation = function(wep, anim)
     return anim .. "_60"
 end
+
+att.ExcludeFlags = {"m16_usas"}

@@ -10,7 +10,7 @@ att.Description = "Low-capacity magazine for the Glock, mostly used on subcompac
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
-    "Reduced magazine capacity"
+    "con.magcap"
 }
 att.Desc_Neutrals = {
 }

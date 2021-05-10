@@ -209,7 +209,7 @@ SWEP.AttachmentElements = {
     ["ud_m16_mag_100"] = {
         VMBodygroups = {{ind = 2, bg = 4}},
     },
-    ["ud_m16_mag_9mm"] = {
+    ["ud_m16_9mm_mag"] = {
         VMBodygroups = {{ind = 2, bg = 5}},
     },
 
@@ -757,9 +757,9 @@ SWEP.Animations = {
         LHIKOut = 0.5,
         SoundTable = {
             {s = common .. "cloth_1.ogg",  t = 0.0},
-            {s = path .. "magout.ogg", 	 t = 0.2},
+            {s = path .. "magout.ogg", 	 t = 19 / 30},
             {s = common .. "cloth_2.ogg",  t = 0.75},
-            {s = path .. "magin.ogg",    t = 1.05},
+            {s = path .. "magin.ogg",    t = 32 / 30},
             {s = common .. "cloth_3.ogg",  t = 1.1},
             {s = common .. "shoulder.ogg", t = 1.93},
         },
@@ -781,7 +781,7 @@ SWEP.Animations = {
             {s = common .. "cloth_2.ogg",  t = 0.75},
             {s = path .. "magin.ogg",    t = 1.05},
             {s = common .. "cloth_3.ogg",  t = 1.39},
-            {s = path .. "boltdrop.ogg", t = 1.77},
+            {s = path .. "boltdrop.ogg", t = 56 / 30},
             {s = common .. "shoulder.ogg", t = 2.15},
         },
     },

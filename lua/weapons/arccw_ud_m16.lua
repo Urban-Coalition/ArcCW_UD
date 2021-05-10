@@ -831,7 +831,7 @@ SWEP.Attachments = {
             vang = Angle(90, 2, -90),
         },
         VMScale = Vector(1.25, 1.25, 1.25),
-        ExtraSightDist = 4
+        ExtraSightDist = 8
     },
     {
         PrintName = "Barrel",

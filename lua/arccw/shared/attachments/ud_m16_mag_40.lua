@@ -26,4 +26,4 @@ att.Hook_SelectReloadAnimation = function(wep, anim)
     return anim .. "_40"
 end
 
-att.ExcludeFlags = {"m16_usas"}
+att.ExcludeFlags = {"m16_usas", "m16_9mm"}

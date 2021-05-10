@@ -58,7 +58,7 @@ att.Override_ShellModel = "models/shells/shell_9mm.mdl"
 att.Override_ShellScale = 1
 
 att.Hook_GetShootSound = function(wep, fsound)
-    if fsound == wep.ShootSound or fsound == wep.FirstShootSound then return "weapons/arccw_ud/uzi/fire_auto.ogg" end
+    if fsound == wep.ShootSound or fsound == wep.FirstShootSound then return "weapons/arccw_ud/uzi/fire.ogg" end
     if fsound == wep.ShootSoundSilenced then return "weapons/arccw_ud/glock/fire_supp.ogg" end
 end
 

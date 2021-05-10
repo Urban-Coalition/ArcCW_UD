@@ -827,7 +827,6 @@ SWEP.Attachments = {
         PrintName = "Mag Type",
         Slot = {"ud_m16_mag"},
         DefaultAttName = "30-Round STANAG Mag",
-        ExcludeFlags = {"m16_usas"},
     },
     {
         PrintName = "Ammo Type",

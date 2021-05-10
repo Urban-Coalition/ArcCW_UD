@@ -38,3 +38,5 @@ att.Hook_TranslateAnimation = function(wep, anim)
         return anim .. "_100"
     end
 end
+
+att.ExcludeFlags = {"m16_usas"}

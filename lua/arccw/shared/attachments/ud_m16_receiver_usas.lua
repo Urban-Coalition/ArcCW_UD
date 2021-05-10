@@ -19,7 +19,8 @@ att.Slot = "ud_m16_receiver"
 att.AutoStats = true
 att.SortOrder = -100
 
-att.Override_ClipSize = 20
+att.Override_ClipSize_Priority = -1
+att.Override_ClipSize = 10
 
 att.Mult_HipDispersion = 0.6
 att.Mult_MoveDispersion = 0.75
@@ -38,7 +39,7 @@ att.Mult_Recoil = 2
 att.Mult_RecoilSide = 2
 
 att.Mult_SpeedMult = 0.925
-att.Mult_ReloadTime = 1.25
+att.Mult_ReloadTime = 1.15
 
 att.Override_Firemodes = {
     {
@@ -71,7 +72,7 @@ end
 local slotinfo = {
     [2] = {"18\" AMCS Barrel", "18\" USAS Barrel", nil},
     [3] = {"Standard Choke", "Standard Choke", nil},
-    [9] = {"20-Round AMCS Magazine", "20-Round USAS Magazine", nil},
+    [9] = {"10-Round AMCS Magazine", "10-Round USAS Magazine", nil},
 }
 att.Hook_GetDefaultAttName = function(wep, slot)
     if slotinfo[slot] then

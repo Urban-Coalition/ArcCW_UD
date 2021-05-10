@@ -31,13 +31,14 @@ ArcCW.UD.CivvieGuns = {
 
 -- If arccw_ud_licenseatts_civvie is on:
 -- For each of these guns, specified slots will be forced to have its attachment.
+-- If it is a table of attachments, the first one will be installed.
 -- They cannot be taken off unless the user has a gun license. (They are also made free.)
 -- If set to true, the guns require a gun license.
 
 -- If arccw_ud_licenseatts_civvie is off:
 -- The following guns require a gun license.
 ArcCW.UD.LicenseGuns = {
-    arccw_ud_m16 = {[4] = "ud_m16_receiver_civvie"},
+    arccw_ud_m16 = {[4] = {"ud_m16_receiver_civvie", "ud_m16_receiver_civvie_flat"}},
     arccw_ud_uzi = {[2] = "ud_uzi_body_civvy"},
     arccw_ud_m1014 = true,
 }
@@ -63,25 +64,14 @@ ArcCW.UD.LicenseAtts = {
     ud_m1014_tube_ext = true,
 }
 
-local function shipment_func(class, price, sep, allowed)
-    local wep = weapons.Get(class)
-    DarkRP.createShipment(wep.PrintName, {
-        model = wep.WorldModel,
-        entity = class,
-        price = math.Round(price * shipments_mult:GetFloat()),
-        amount = 10,
-        separate = sep,
-        pricesep = math.Round(price * shipments_mult:GetFloat() / 10),
-        noship = false,
-        allowed = allowed,
-        category = "Urban Decay",
-    })
-end
-
 local function load_ud_config()
+    -- Set job-specific attachments.
     ArcCW.UD.JobAtts = {
         --[TEAM_POLICE] = {att = true}
     }
+
+    -- Don't touch the following stuff unless you know what you are doing.
+
     for k, _ in pairs(ArcCW.UD.CivvieGuns) do
         GAMEMODE.NoLicense[k] = true
     end
@@ -94,14 +84,14 @@ local function load_ud_config()
 
     if shipments:GetBool() then
         DarkRP.createCategory{
-            name = "Urban Decay",
+            name = ArcCW.GetTranslation("ud.title") or "Urban Decay",
             categorises = "shipments",
             startExpanded = true,
             color = Color(50, 107, 50, 255),
             sortOrder = 500,
         }
         DarkRP.createCategory{
-            name = "Urban Decay",
+            name = ArcCW.GetTranslation("ud.title") or "Urban Decay",
             categorises = "weapons",
             startExpanded = true,
             color = Color(50, 107, 50, 255),
@@ -111,6 +101,20 @@ local function load_ud_config()
 end
 hook.Add("postLoadCustomDarkRPItems", "ArcCW_UD", load_ud_config)
 
+local function shipment_func(class, price, sep, allowed)
+    local wep = weapons.Get(class)
+    DarkRP.createShipment(wep.PrintName, {
+        model = wep.WorldModel,
+        entity = class,
+        price = math.Round(price * shipments_mult:GetFloat()),
+        amount = 10,
+        separate = sep,
+        pricesep = math.Round(price * shipments_mult:GetFloat() / 10),
+        noship = false,
+        allowed = allowed,
+        category = ArcCW.GetTranslation("ud.title") or "Urban Decay",
+    })
+end
 hook.Add("InitPostEntity", "ArcCW_UD_DarkRP", function()
     if DarkRP and shipments:GetBool() then
         shipment_func("arccw_ud_glock", 1800, true, {TEAM_GUN})
@@ -126,9 +130,12 @@ hook.Add("ArcCW_PostLoadAtts", "ArcCW_UD", function()
     if not DarkRP or not licenseatts_civ:GetBool() then return end
     for k, v in pairs(ArcCW.UD.LicenseGuns) do
         if not istable(v) then continue end
-        for _, attname in pairs(v) do
-            if ArcCW.AttachmentTable[attname] then
-                ArcCW.AttachmentTable[attname].Free = true
+        for _, atts in pairs(v) do
+            local tbl = istable(atts) and atts or {atts}
+            for _, attname in pairs(tbl) do
+                if ArcCW.AttachmentTable[attname] then
+                    ArcCW.AttachmentTable[attname].Free = true
+                end
             end
         end
     end
@@ -145,7 +152,7 @@ hook.Add("playerPickedUpWeapon", "ArcCW_UD", function(ply, ent, wep)
             if not IsValid(wep) then return end
             for k, v in pairs(ArcCW.UD.LicenseGuns[class]) do
                 local oldatt = wep.Attachments[k].Installed
-                wep.Attachments[k].Installed = v
+                wep.Attachments[k].Installed = istable(v) and v[1] or v
                 if oldatt then
                     ArcCW:PlayerGiveAtt(ply, oldatt)
                 end
@@ -159,22 +166,28 @@ end)
 hook.Add("ArcCW_PlayerCanAttach", "ArcCW_UD", function(ply, wep, attname, slot, detach)
     if not DarkRP or not licenseatts:GetBool() then return end
 
-    local strict = licenseatts_s:GetBool()
     local has = ply:getDarkRPVar("HasGunlicense", false)
     if has then return end
 
+    local lic = ArcCW.UD.LicenseGuns[wep:GetClass()]
+    if licenseatts_civ:GetBool() and istable(lic) and lic[slot] then
+
+        local list = istable(lic[slot]) and lic[slot] or {lic[slot]}
+
+        local curatt_civ = (wep.Attachments[slot].Installed or "") != "" and table.HasValue(list, wep.Attachments[slot].Installed)
+        local tgtatt_civ = table.HasValue(list, attname)
+
+        if not curatt_civ or not tgtatt_civ then
+            if CLIENT then notification.AddLegacy(ArcCW.GetTranslation("ud.darkrp.cantremove"), 1, 3) end
+            return false
+        end
+    end
+
+    local strict = licenseatts_s:GetBool()
     local req = hook.Run("ArcCW_UD_AttNeedsLicense", ply, attname)
     req = req or ArcCW.UD.LicenseAtts[attname]
     if req and (not detach or strict) then
-        if SERVER then DarkRP.notify(ply, 1, 3, "You need a gun license to use this attachment!")
-        else notification.AddLegacy("You need a gun license to use this attachment!", 1, 3) end
-        return false
-    end
-
-    local lic = ArcCW.UD.LicenseGuns[wep:GetClass()]
-    if licenseatts_civ:GetBool() and istable(lic) and detach and lic[slot] and lic[slot] == attname then
-        if SERVER then DarkRP.notify(ply, 1, 3, "You can't remove this without a gun license!")
-        else notification.AddLegacy("You can't remove this without a gun license!", 1, 3) end
+        if CLIENT then notification.AddLegacy(ArcCW.GetTranslation("ud.darkrp.cantattach"), 1, 3) end
         return false
     end
 end)
@@ -187,8 +200,7 @@ hook.Add("ArcCW_PickupAttEnt", "ArcCW_UD", function(ply, attname)
     local req = hook.Run("ArcCW_UD_AttNeedsLicense", ply, attname)
     req = req or ArcCW.UD.LicenseAtts[attname]
     if req then
-        if SERVER then DarkRP.notify(ply, 1, 3, "You need a gun license to pickup this attachment!")
-        else notification.AddLegacy("You need a gun license to pickup this attachment!", 1, 3) end
+        if CLIENT then notification.AddLegacy(ArcCW.GetTranslation("ud.darkrp.cantpickup"), 1, 3) end
         return true
     end
 end)

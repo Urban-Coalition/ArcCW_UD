@@ -1,5 +1,5 @@
-att.PrintName = "20-Round USAS Drum Magazine"
-att.SortOrder = -20
+att.PrintName = "20-Round USAS Drum Mag"
+att.SortOrder = -1
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "Heavy drum magazine holding double the amount of shotgun shells. If twenty 12 gauge rounds isn't killing what you're killing, no gun is gonna be big enough."
 att.Desc_Pros = {

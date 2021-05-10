@@ -39,4 +39,4 @@ att.Hook_TranslateAnimation = function(wep, anim)
     end
 end
 
-att.ExcludeFlags = {"m16_usas"}
+att.ExcludeFlags = {"m16_usas", "m16_9mm"}

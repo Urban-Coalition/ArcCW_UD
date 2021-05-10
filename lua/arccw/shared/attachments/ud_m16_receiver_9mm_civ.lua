@@ -45,6 +45,7 @@ att.Override_Firemodes = {
 
 att.GivesFlags = {"m16_auto", "m16_9mm"}
 att.ExcludeFlags = {"m16_noauto"}
+att.ActivateElements = {"ud_m16_9mm_mag"}
 
 att.Override_Ammo = "pistol"
 att.Override_Trivia_Calibre = "9x19mm Parabellum"
@@ -74,4 +75,8 @@ att.Hook_GetDefaultAttIcon = function(wep, slot)
     if slotinfo[slot] then
         return slotinfo[slot][3]
     end
+end
+
+att.Hook_SelectReloadAnimation = function(wep, anim)
+    return anim .. "_9mm"
 end

@@ -372,7 +372,7 @@ $sequence "reload_empty_100" {
 
 $sequence "reload_9mm" {
 	"anims\reload_9mm.smd"
-	//"anims\reload_iron.smd"
+	"anims\reload_iron_9mm.smd"
 	fps 30
 	"ACT_VM_RELOAD" 1
 	blend "sights" 0 1
@@ -387,7 +387,7 @@ $sequence "reload_9mm" {
 
 $sequence "reload_empty_9mm" {
 	"anims\reload_empty_9mm.smd"
-	//"anims\reload_empty_iron.smd"
+	"anims\reload_empty_iron_9mm.smd"
 	fps 30
 	"ACT_VM_RELOAD" 1
 	blend "sights" 0 1

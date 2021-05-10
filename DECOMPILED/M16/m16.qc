@@ -140,6 +140,26 @@ $sequence "fire_empty" {
 	fadeout 0.03
 }
 
+$sequence "fire_usas" {
+	"anims\fire_usas.smd"
+	"anims\fire_iron.smd"
+	blend "sights" 0 1
+	fps 30
+	"ACT_VM_PRIMARYATTACK" 1
+	fadein 0.03
+	fadeout 0.03
+}
+
+$sequence "fire_empty_usas" {
+	"anims\fire_empty_usas.smd"
+	"anims\fire_iron_empty.smd"
+	blend "sights" 0 1
+	fps 30
+	"ACT_VM_PRIMARYATTACK" 1
+	fadein 0.03
+	fadeout 0.03
+}
+
 $sequence "draw" "anims\draw.smd" {
 	fps 30
 	"ACT_VM_DRAW" 1

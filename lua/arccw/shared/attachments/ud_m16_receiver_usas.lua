@@ -90,3 +90,9 @@ att.Hook_GetDefaultAttIcon = function(wep, slot)
         return slotinfo[slot][3]
     end
 end
+
+att.Hook_TranslateAnimation = function(wep, anim)
+    if (anim == "fire" or anim == "fire_empty") then
+        return anim .. "_usas"
+    end
+end

@@ -15,6 +15,8 @@ att.Desc_Cons = {
 att.Desc_Neutrals = {
 }
 att.Slot = "ud_m16_receiver"
+att.Free = true
+att.SortOrder = 100
 
 att.A_Hook_Add_SightsDispersion = function(wep, data)
     if data and !wep.Attachments[1].Installed then

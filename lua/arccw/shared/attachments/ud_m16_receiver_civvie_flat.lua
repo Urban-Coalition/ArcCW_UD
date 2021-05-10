@@ -1,7 +1,7 @@
-att.PrintName = "AMCAR Civ. Flat Top Receiver"
+att.PrintName = "AMCAR Civilian FT Receiver"
 
 if GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "M16 Civ. Flat Top Receiver"
+    att.PrintName = "M16 Civilian FT Receiver"
 end
 
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
@@ -16,6 +16,7 @@ att.Desc_Cons = {
 att.Desc_Neutrals = {
 }
 att.Slot = "ud_m16_receiver"
+att.InvAtt = "ud_m16_receiver_civvie"
 
 att.AutoStats = true
 att.SortOrder = -1.1

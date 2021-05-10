@@ -1,11 +1,13 @@
-att.PrintName = "AMCAR Combat Shotgun Receiver"
-
-if GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "M16 USAS Receiver"
-end
+att.PrintName = "AMCS Combat Shotgun Receiver"
 
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "Total conversion kit that turns the rifle into an automatic combat shotgun."
+
+if GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "M16 Combat Shotgun Receiver"
+    att.Description = "Total conversion kit that turns the rifle into an automatic combat shotgun, based on the USAS-12."
+end
+
 att.Desc_Pros = {
     "ud.usas",
     "ud.auto"
@@ -63,6 +65,8 @@ att.Override_IsShotgun = true
 att.Override_Ammo = "buckshot"
 att.Override_Trivia_Calibre = "12 Gauge"
 att.Override_Trivia_Class = "Automatic Shotgun"
+att.Override_ShellModel = "models/shells/shell_12gauge.mdl"
+att.Override_ShellScale = 1
 
 att.GivesFlags = {"m16_usas"}
 

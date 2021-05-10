@@ -89,7 +89,7 @@ SWEP.Sway = 0.5
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 / 950
+SWEP.Delay = 60 / 900
 SWEP.Num = 1
 SWEP.Firemodes = {
     {

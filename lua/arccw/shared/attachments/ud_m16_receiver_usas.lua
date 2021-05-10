@@ -54,6 +54,10 @@ att.Override_Firemodes = {
     }
 }
 
+att.LHIK = true
+
+att.Model = "models/weapons/arccw/atts/usas_lhik.mdl"
+
 att.Override_IsShotgun = true
 att.Override_Ammo = "buckshot"
 att.Override_Trivia_Calibre = "12 Gauge"

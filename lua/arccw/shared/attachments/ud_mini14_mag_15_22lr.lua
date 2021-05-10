@@ -11,8 +11,6 @@ att.Desc_Neutrals = {
 }
 att.Slot = "ud_mini14_mag"
 
-att.Override_Ammo = "pistol"
-
 att.AutoStats = true
 
 att.Mult_SightTime = 0.8

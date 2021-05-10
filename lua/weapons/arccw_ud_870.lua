@@ -272,7 +272,7 @@ SWEP.Animations = {
         SoundTable = {
             {s = common .. "cloth_2.ogg",  t = 0.5},
             {s = path .. "rack_1.ogg",  t = 0.5},
-            {s = path .. "eject.ogg",  t = 0.51},
+            {s = path .. "eject.ogg",  t = 0.58},
             {s = path .. "rack_2.ogg",  t = 0.7},
             {s = common .. "shoulder.ogg",  t = 0.9},
         },

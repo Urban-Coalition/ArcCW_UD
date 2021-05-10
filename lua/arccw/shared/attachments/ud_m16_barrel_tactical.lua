@@ -1,7 +1,7 @@
-att.PrintName = "14.5\" CAR-4 RIS Barrel"
+att.PrintName = "11.5\" CAR-4 RIS Barrel"
 
 if GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "14.5\" M4 RIS Barrel"
+    att.PrintName = "11.5\" M4 RIS Barrel"
 end
 
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")

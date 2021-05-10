@@ -245,10 +245,7 @@ SWEP.AttachmentElements = {
     },
 
     ["ud_m16_barrel_tactical"] = {
-        VMBodygroups = {
-            {ind = 4, bg = 12}
-            {ind = 9, bg = 3}
-        },
+        VMBodygroups = {{ind = 4, bg = 12}},
         AttPosMods = {
             [3] = {
                 vpos = Vector(-0.03, -0.05, -6.5),

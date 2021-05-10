@@ -348,6 +348,36 @@ $sequence "reload_empty_100" {
 	{ event 5004 105 "StockHitsShoulder" }
 }
 
+$sequence "reload_9mm" {
+	"anims\reload_9mm.smd"
+	//"anims\reload_iron.smd"
+	fps 30
+	"ACT_VM_RELOAD" 1
+	blend "sights" 0 1
+	snap
+	{ event 5004 0 "Starts" }
+	{ event 5004 13 "MagOut" }
+	{ event 5004 29 "GunRaises" }
+	{ event 5004 39 "MagInFail" }
+	{ event 5004 47 "MagIn" }
+	{ event 5004 65 "StockHitsShoulder" }
+}
+
+$sequence "reload_empty_9mm" {
+	"anims\reload_empty_9mm.smd"
+	//"anims\reload_empty_iron.smd"
+	fps 30
+	"ACT_VM_RELOAD" 1
+	blend "sights" 0 1
+	snap
+	{ event 5004 0 "Starts" }
+	{ event 5004 12 "MagOut" }
+	{ event 5004 35 "GunRaises" }
+	{ event 5004 39 "MagInFail" }
+	{ event 5004 47 "MagIn" }
+	{ event 5004 59 "BoltCloses" }
+	{ event 5004 73 "StockHitsShoulder" }
+}
 
 $bonemerge "ValveBiped.Bip01_Spine4"
 $bonemerge "ValveBiped.Bip01_L_Clavicle"

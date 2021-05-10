@@ -369,6 +369,15 @@ SWEP.AttachmentElements = {
             },
         }
     },
+    ["ud_m16_barrel_cursed"] = {
+        VMBodygroups = {{ind = 4, bg = 11}},
+        AttPosMods = {
+            [6] = {
+                vpos = Vector(0, 0.8, 20),
+                vang = Angle(90, 0, -90),
+            },
+        }
+    },
     ["ud_m16_receiver_usas"] = {
         VMBodygroups = {{ind = 0, bg = 1}, {ind = 1, bg = 2}, {ind = 4, bg = 7}},
         AttPosMods = {

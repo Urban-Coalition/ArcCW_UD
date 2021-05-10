@@ -38,7 +38,7 @@ ArcCW.UD.CivvieGuns = {
 -- If arccw_ud_licenseatts_civvie is off:
 -- The following guns require a gun license.
 ArcCW.UD.LicenseGuns = {
-    arccw_ud_m16 = {[4] = {"ud_m16_receiver_civvie", "ud_m16_receiver_civvie_flat"}},
+    arccw_ud_m16 = {[12] = "ud_fg_civvy"},
     arccw_ud_uzi = {[2] = "ud_uzi_body_civvy"},
     arccw_ud_m1014 = true,
 }

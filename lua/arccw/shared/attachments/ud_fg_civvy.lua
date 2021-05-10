@@ -1,4 +1,4 @@
-att.PrintName = "Civvy Conversion"
+att.PrintName = "Civilian Conversion"
 
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "Adapt the gun for use in civilian markets, where fully-automatic firing weapons are usually outlawed."
@@ -29,4 +29,5 @@ att.Override_Firemodes = {
 att.Override_Firemodes_Priority = 10
 
 att.Mult_Range = 1.25
+att.Mult_AccuracyMOA = 0.75
 att.Mult_RPM = .9

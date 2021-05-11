@@ -49,6 +49,8 @@ $bodygroup "5" {
 	studio "m16_stock_m4.smd"
 	studio "m16_stock_wood.smd"
 	blank
+	studio "m16_stock_polymer.smd"
+	studio "m16_stock_usas.smd"
 }
 
 $bodygroup "6" {

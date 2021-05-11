@@ -75,8 +75,8 @@ att.Hook_GetShootSound = function(wep, fsound)
     if fsound == wep.ShootSoundSilenced then return "weapons/arccw_ud/m1014/fire_supp.ogg" end
 end
 
-att.Hook_GetDistantShootSound = function(wep, sound)
-    if fsound == wep.DistantShootSound then return "weapons/arccw_ud/r870/fire_dist.ogg" end
+att.Hook_GetDistantShootSound = function(wep, distancesound)
+    if distancesound == wep.DistantShootSound then return "weapons/arccw_ud/870/fire_dist.ogg" end
 end
 
 local slotinfo = {

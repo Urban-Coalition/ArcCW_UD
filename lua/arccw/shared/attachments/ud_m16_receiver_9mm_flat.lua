@@ -5,7 +5,7 @@ if GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "Automatic 9mm receiver with removed carry handle."
+att.Description = "Automatic 9mm receiver with a flip-up rear sight."
 att.Desc_Pros = {
     "ud.auto",
     "ud.flattop"

@@ -5,7 +5,7 @@ if GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "A standard receiver that has had its carry handle cut off with an angle grinder. Lowers optic height, but has no rear sight."
+att.Description = "A more modern receiver that did away with the carry handle sight. Lowers optic height and uses a rail-mounted backup rear sight."
 att.Desc_Pros = {
     "ud.flattop"
 }

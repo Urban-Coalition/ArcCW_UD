@@ -5,7 +5,7 @@ if GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "An automatic receiver with removed carry handle. It's like a poor man's M4."
+att.Description = "An automatic receiver with a flip-up rear sight. It's like a poor man's M4."
 att.Desc_Pros = {
     "ud.auto",
     "ud.flattop"

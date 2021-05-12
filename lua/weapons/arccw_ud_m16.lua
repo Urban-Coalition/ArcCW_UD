@@ -193,7 +193,7 @@ SWEP.BulletBones = {
     [2] = "m16_bullets1",    [3] = "m16_bullets2"
 }
 
-SWEP.DefaultBodyGroups = "000000000000"
+SWEP.DefaultBodyGroups = "0000000000000"
 
 SWEP.AttachmentElements = {
 
@@ -218,7 +218,11 @@ SWEP.AttachmentElements = {
     },
 
     ["ud_m16_upper_flat"] = {
-        VMBodygroups = {{ind = 1, bg = 1}},
+        VMBodygroups = {
+            {ind = 1, bg = 1},
+            {ind = 10, bg = 1},
+            {ind = 3, bg = 2}
+        },
         AttPosMods = {
             [1] = {
                 vpos = Vector(0, -1.9, 2),
@@ -803,13 +807,17 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         -- Optic rail
         if vm:GetBodygroup(1) == 1 then
             -- Flat top (ud_m16_upper_flat)
-            vm:SetBodygroup(3, 2)
+            vm:SetBodygroup(10, 0)
         else
             -- Carry handle
             vm:SetBodygroup(3, 1)
         end
     else
-        vm:SetBodygroup(3, 0)
+        if vm:GetBodygroup(1) == 0 then
+            --Checks if it has carry handle
+            vm:SetBodygroup(10, 0)
+            vm:SetBodygroup(3, 0)
+        end
     end
     if wep.Attachments[6].Installed then
         -- Tactical clamp

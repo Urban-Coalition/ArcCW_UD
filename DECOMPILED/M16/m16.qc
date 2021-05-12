@@ -42,6 +42,7 @@ $bodygroup "4" {
 	studio "m16_barrel_exposed.smd"
 	studio "m16_barrel_cursed.smd"
 	studio "m16_barrel_tactical.smd"
+	studio "m16_barrel_smg.smd"
 }
 
 $bodygroup "5" {
@@ -82,6 +83,11 @@ $bodygroup "9" {
 	studio "railcover_quad"
 	studio "railcover_right"
 	studio "railcover_top"
+}
+
+$bodygroup "10" {
+	blank
+	studio "m16_sights_m4a4.smd"
 }
 
 $cdmaterials "models\weapons\arccw\ud_m16"

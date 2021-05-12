@@ -395,7 +395,7 @@ SWEP.Attachments = {
         Slot = {"tac_pistol"},
         Bone = "870_slide",
         Offset = {
-            vpos = Vector(0, 1.7, 9.5),
+            vpos = Vector(0, 1, 4.25),
             vang = Angle(90, 0, -90),
         },
     },

@@ -224,7 +224,7 @@ SWEP.AttachmentElements = {
         VMBodygroups = {
             {ind = 1, bg = 1},
             {ind = 10, bg = 1},
-            {ind = 3, bg = 2}
+            {ind = 3, bg = 3}
         },
         AttPosMods = {
             [1] = {

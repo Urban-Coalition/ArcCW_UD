@@ -21,6 +21,8 @@ att.Mult_ReloadTime = 1.25
 att.Mult_SpeedMult = 0.95
 att.Mult_Sway = 3
 
+att.ActivateElements = {"ud_m16_usas_mag_20"}
+
 att.Hook_SelectReloadAnimation = function(wep, anim)
     return anim .. "_40"
 end

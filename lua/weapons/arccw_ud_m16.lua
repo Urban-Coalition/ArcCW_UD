@@ -212,6 +212,9 @@ SWEP.AttachmentElements = {
     ["ud_m16_9mm_mag"] = {
         VMBodygroups = {{ind = 2, bg = 5}},
     },
+    ["ud_m16_usas_mag_20"] = {
+        VMBodygroups = {{ind = 2, bg = 7}},
+    },
 
     ["ud_m16_rail_fg"] = {
         VMBodygroups = {{ind = 7, bg = 1}},
@@ -383,7 +386,13 @@ SWEP.AttachmentElements = {
         }
     },
     ["ud_m16_receiver_usas"] = {
-        VMBodygroups = {{ind = 0, bg = 1}, {ind = 1, bg = 2}, {ind = 4, bg = 7}},
+        VMBodygroups = {
+            {ind = 0, bg = 1},
+            {ind = 1, bg = 2},
+            {ind = 4, bg = 7},
+            {ind = 5, bg = 5},
+            {ind = 2, bg = 6}
+        },
         AttPosMods = {
             [6] = {
                 vpos = Vector(0, 0.8, 20),
@@ -913,6 +922,7 @@ SWEP.Attachments = {
         PrintName = "Stock Type",
         Slot = {"ud_m16_stock"},
         DefaultAttName = "Full Stock",
+        ExcludeFlags = {"m16_usas"},
     },
     {
         PrintName = "Mag Type",

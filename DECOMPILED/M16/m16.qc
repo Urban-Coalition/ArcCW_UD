@@ -26,6 +26,7 @@ $bodygroup "3" {
 	blank
 	studio "m16_rail_optic.smd"
 	studio "m16_rail_flat_optic.smd"
+	studio "rail_m16_dedicated.smd"
 }
 
 $bodygroup "4" {

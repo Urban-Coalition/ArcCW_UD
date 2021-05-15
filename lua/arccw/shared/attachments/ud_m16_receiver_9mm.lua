@@ -7,7 +7,6 @@ end
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "A converted receiver that fires 9x19mm Parabellum rounds. The smaller caliber drastically reduces recoil, but has much less range and is less accurate."
 att.Desc_Pros = {
-    "ud.auto"
 }
 att.Desc_Cons = {
 }
@@ -35,18 +34,6 @@ att.Override_ClipSize = 20
 
 att.Mult_AccuracyMOA = 2
 --att.Mult_RPM = 1.1
-
-att.Override_Firemodes = {
-    {
-        Mode = 2,
-    },
-    {
-        Mode = 1,
-    },
-    {
-        Mode = 0
-    }
-}
 
 att.GivesFlags = {"m16_auto", "m16_9mm"}
 att.ExcludeFlags = {"m16_noauto"}

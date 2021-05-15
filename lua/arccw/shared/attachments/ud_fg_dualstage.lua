@@ -6,7 +6,7 @@ att.Desc_Pros = {
     "+15% Fire rate after first shot"
 }
 att.Desc_Cons = {
-    "-100% Fire rate for first shot"
+    "-50% Fire rate for first shot"
 }
 att.Desc_Neutrals = {
 }

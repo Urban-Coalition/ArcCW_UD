@@ -36,8 +36,9 @@ att.Override_ClipSize_Priority = -1
 att.Override_ClipSize = 20
 
 att.Mult_AccuracyMOA = 2
---att.Mult_RPM = 1.1
+att.Mult_RPM = 0.9
 
+att.Override_Firemodes_Priority = 0.5
 att.Override_Firemodes = {
     {
         Mode = 2,

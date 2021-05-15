@@ -26,7 +26,7 @@ att.Override_ClipSize = 5
 
 att.Mult_HipDispersion = 0.6
 att.Mult_MoveDispersion = 0.75
-att.Mult_RPM = 0.5
+att.Mult_RPM = 0.4
 
 att.Override_AccuracyMOA_Priority = -1
 att.Override_AccuracyMOA = 40
@@ -46,9 +46,6 @@ att.Mult_SpeedMult = 0.925
 att.Mult_ReloadTime = 1.15
 
 att.Override_Firemodes = {
-    {
-        Mode = 2,
-    },
     {
         Mode = 1,
     },

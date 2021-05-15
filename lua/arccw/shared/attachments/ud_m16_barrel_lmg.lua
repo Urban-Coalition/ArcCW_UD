@@ -5,7 +5,7 @@ if GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "Heavy duty barrel and handguard with inbuilt bipod and foregrip, used on SAW variants of the rifle. Heavy and signficantly reduces fire rate, but is quite stable to fire and has superior cooling capabilities."
+att.Description = "Heavy duty handguard with built-in bipod and foregrip, sporting improved durability and heat dissipation capabilities for sustained automatic fire."
 att.Desc_Pros = {
     "ud.bipod"
 }

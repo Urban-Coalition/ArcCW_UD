@@ -13,6 +13,7 @@ att.Desc_Neutrals = {
 att.Slot = "ud_m16_barrel"
 
 att.AutoStats = false
+att.Ignore = true
 
 att.Mult_SightTime = 0.9
 att.Mult_SightedSpeedMult = 1.1

@@ -61,7 +61,7 @@ SWEP.Damage = 34 -- 3 shot kill
 SWEP.DamageMin = 20 -- 5 shot kill
 SWEP.RangeMin = 15
 SWEP.Range = 175
-SWEP.Penetration = 6
+SWEP.Penetration = 12
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 400
@@ -79,11 +79,11 @@ SWEP.Recoil = 0.75
 SWEP.RecoilSide = 0.3
 
 SWEP.RecoilRise = 0.1
-SWEP.RecoilPunch = 1
+SWEP.RecoilPunch = 2.5
 SWEP.VisualRecoilMult = 1
 SWEP.MaxRecoilBlowback = 1
-SWEP.MaxRecoilPunch = 0.6
-SWEP.RecoilPunchBack = 1.5
+SWEP.MaxRecoilPunch = 1
+SWEP.RecoilPunchBack = 1
 
 SWEP.Sway = 0.5
 

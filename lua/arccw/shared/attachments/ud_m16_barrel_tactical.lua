@@ -1,11 +1,11 @@
 att.PrintName = "11.5\" CAR-4 RIS Barrel"
 
 if GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "11.5\" M4 RIS Barrel"
+    att.PrintName = "11.5\" M4A1 RIS Barrel"
 end
 
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "it got d railers :astonished:"
+att.Description = "Handguard from the SOPMOD I kit, giving the rifle the ability to better take the attachment of tactical devices or foregrips."
 att.Desc_Pros = {
     --"ud.auto"
 }

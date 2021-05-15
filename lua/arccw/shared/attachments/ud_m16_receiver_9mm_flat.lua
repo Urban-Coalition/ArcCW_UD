@@ -11,7 +11,6 @@ att.Desc_Pros = {
     "ud.flattop"
 }
 att.Desc_Cons = {
-    "ud.nofs"
 }
 att.Desc_Neutrals = {
 }

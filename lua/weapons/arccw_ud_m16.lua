@@ -79,7 +79,7 @@ SWEP.Recoil = 0.75
 SWEP.RecoilSide = 0.3
 
 SWEP.RecoilRise = 0.1
-SWEP.RecoilPunch = 2.5
+SWEP.RecoilPunch = 1
 SWEP.VisualRecoilMult = 1
 SWEP.MaxRecoilBlowback = 1
 SWEP.MaxRecoilPunch = 1
@@ -228,8 +228,8 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [1] = {
-                vpos = Vector(0, -1.9, 2),
-                vang = Angle(90, 2, -90),
+                vpos = Vector(0, -1.7, 3),
+                vang = Angle(90, 0, -90),
             }
         }
     },
@@ -853,8 +853,8 @@ SWEP.Attachments = {
         Slot = {"optic_lp","optic","sniper_optic"},
         Bone = "m16_parent",
         Offset = {
-            vpos = Vector(0, -3.9, 2),
-            vang = Angle(90, 2, -90),
+            vpos = Vector(0, -4, 3),
+            vang = Angle(90, 0, -90),
         },
         VMScale = Vector(1.25, 1.25, 1.25),
         ExtraSightDist = 8
@@ -872,7 +872,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Muzzle",
-        DefaultAttName = "A2 Birdcage Flash Hider",
+        DefaultAttName = "Standard Muzzle",
         Slot = {"muzzle"},
         Bone = "m16_flash",
         Offset = {

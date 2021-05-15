@@ -1,6 +1,6 @@
-att.PrintName = "M16 California Compliant Receiver"
+att.PrintName = ".223 AR-15GB Receiver"
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "bolt action m16 :trollscream:"
+att.Description = "Straight-pull bolt action receiver for the M16, designed to comply with British centrefire rifle laws."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
@@ -10,7 +10,6 @@ att.Desc_Neutrals = {
 }
 att.Slot = "ud_m16_receiver"
 att.AutoStats = true
-att.Ignore = true
 
 att.Override_Firemodes = {
     {

@@ -20,6 +20,8 @@ att.AutoStats = true
 att.Mult_AccuracyMOA = 1.25
 att.Mult_RPM = 0.9
 
+att.Ignore = true
+
 att.Override_Firemodes = {
     {
         Mode = 2,

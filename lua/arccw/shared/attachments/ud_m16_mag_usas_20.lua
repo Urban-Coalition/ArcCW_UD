@@ -1,7 +1,12 @@
-att.PrintName = "20-Round USAS Drum Mag"
+att.PrintName = "20-Round AMSAS Drum Mag"
+
+if GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "20-Round USAR Drum Mag"
+end
+
 att.SortOrder = -1
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "Heavy drum magazine holding double the amount of shotgun shells. If twenty 12 gauge rounds isn't killing what you're killing, no gun is gonna be big enough."
+att.Description = "Extended drum magazine that offers extra magazine capacity. Almost no legitimate military uses, but makes a fun range toy."
 att.Desc_Pros = {
     "pro.magcap"
 }

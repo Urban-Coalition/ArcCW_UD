@@ -20,6 +20,8 @@ att.InvAtt = "ud_m16_receiver_auto"
 
 att.AutoStats = true
 
+att.Ignore = true
+
 att.Mult_AccuracyMOA = 1.25
 att.Mult_RPM = 0.9
 

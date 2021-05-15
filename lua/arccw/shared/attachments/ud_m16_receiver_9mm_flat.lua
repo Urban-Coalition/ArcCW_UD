@@ -1,7 +1,7 @@
-att.PrintName = "AMCAR 9mm SMG FT Receiver"
+att.PrintName = "9mm AMPAW-9A1 Receiver"
 
 if GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "M16 9mm SMG FT Receiver"
+    att.PrintName = "9mm R0635A1 Receiver"
 end
 
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
@@ -78,7 +78,7 @@ att.Hook_GetDistantShootSound = function(wep, sound)
 end
 
 local slotinfo = {
-    [9] = {"20-Round 9mm AMSMG Mag", "20-Round 9mm AR-15 Mag", nil},
+    [9] = {"20-Round 9mm AMPAW Mag", "20-Round 9mm Uzi Mag", nil},
 }
 att.Hook_GetDefaultAttName = function(wep, slot)
     if slotinfo[slot] then

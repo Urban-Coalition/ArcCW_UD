@@ -1,7 +1,7 @@
-att.PrintName = "AMCAR Flat Top Receiver"
+att.PrintName = "AMCAR-NG Receiver"
 
 if GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "M16 Flat Top Receiver"
+    att.PrintName = "M16A4 Receiver"
 end
 
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")

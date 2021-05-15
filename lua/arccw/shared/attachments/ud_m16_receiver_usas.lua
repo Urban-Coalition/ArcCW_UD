@@ -1,10 +1,10 @@
-att.PrintName = "AMCS Combat Shotgun Receiver"
+att.PrintName = "AMSAS-12 Receiver"
 
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "Total conversion kit that turns the rifle into an automatic combat shotgun."
 
 if GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "M16 Combat Shotgun Receiver"
+    att.PrintName = "USAR-1200 Receiver"
     att.Description = "Total conversion kit that turns the rifle into an automatic combat shotgun, based on the USAS-12."
 end
 
@@ -22,7 +22,7 @@ att.AutoStats = true
 att.SortOrder = -100
 
 att.Override_ClipSize_Priority = -1
-att.Override_ClipSize = 10
+att.Override_ClipSize = 5
 
 att.Mult_HipDispersion = 0.6
 att.Mult_MoveDispersion = 0.75
@@ -80,9 +80,9 @@ att.Hook_GetDistantShootSound = function(wep, distancesound)
 end
 
 local slotinfo = {
-    [2] = {"18\" AMCS Barrel", "18\" USAS Barrel", nil},
+    [2] = {"18\" AMSAS Barrel", "18\" USAR Barrel", nil},
     [3] = {"Standard Choke", "Standard Choke", nil},
-    [9] = {"10-Round AMCS Magazine", "10-Round USAS Magazine", nil},
+    [9] = {"5-Round AMSAS Magazine", "5-Round USAR Magazine", nil},
 }
 att.Hook_GetDefaultAttName = function(wep, slot)
     if slotinfo[slot] then

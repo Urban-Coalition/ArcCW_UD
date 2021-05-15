@@ -1,6 +1,6 @@
-att.PrintName = "7 Shell Tube"
+att.PrintName = "8 Shell Tube"
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "Longer shell tube holding one more round. Increases weapon weight."
+att.Description = "Longer shell tube holding 8 rounds. Increases weapon weight."
 att.Desc_Pros = {
     "pro.magcap"
 }
@@ -12,7 +12,7 @@ att.Slot = "ud_870_tube"
 
 att.AutoStats = true
 
-att.Override_ClipSize = 7
+att.Override_ClipSize = 8
 att.Mult_Sway = 1.15
 att.Mult_SightedSpeedMult = 0.9
 att.Mult_SightTime = 1.1

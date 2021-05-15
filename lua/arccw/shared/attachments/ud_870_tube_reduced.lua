@@ -1,6 +1,6 @@
-att.PrintName = "5 Shell Tube"
+att.PrintName = "4 Shell Tube"
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "Shortened shell tube holding one less round. Slightly reduces weapon weight."
+att.Description = "Shortened shell tube holding 4 rounds. Slightly reduces weapon weight."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
@@ -12,7 +12,7 @@ att.Slot = "ud_870_tube"
 
 att.AutoStats = true
 
-att.Override_ClipSize = 5
+att.Override_ClipSize = 4
 att.Mult_Sway = 0.85
 att.Mult_SightedSpeedMult = 1.1
 att.Mult_SightTime = 0.9

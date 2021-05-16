@@ -36,7 +36,7 @@ att.Override_ClipSize_Priority = -1
 att.Override_ClipSize = 20
 
 att.Mult_AccuracyMOA = 2
-att.Mult_RPM = 0.9
+--att.Mult_RPM = 0.9
 
 att.Override_Firemodes_Priority = 0.5
 att.Override_Firemodes = {
@@ -50,12 +50,6 @@ att.Override_Firemodes = {
         Mode = 0
     }
 }
-
-att.A_Hook_Add_SightsDispersion = function(wep, data)
-    if data and !wep.Attachments[1].Installed then
-        data.add = data.add + 100
-    end
-end
 
 att.GivesFlags = {"m16_auto", "m16_9mm"}
 att.ExcludeFlags = {"m16_noauto"}

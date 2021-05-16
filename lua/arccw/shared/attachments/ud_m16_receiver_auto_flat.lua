@@ -11,7 +11,6 @@ att.Desc_Pros = {
     "ud.flattop"
 }
 att.Desc_Cons = {
-    "ud.nofs"
 }
 att.Desc_Neutrals = {
 }
@@ -34,12 +33,6 @@ att.Override_Firemodes = {
         Mode = 0
     }
 }
-
-att.A_Hook_Add_SightsDispersion = function(wep, data)
-    if data and !wep.Attachments[1].Installed then
-        data.add = data.add + 100
-    end
-end
 
 att.GivesFlags = {"m16_auto"}
 att.ExcludeFlags = {"m16_noauto"}

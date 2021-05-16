@@ -22,10 +22,9 @@ att.AutoStats = true
 att.SortOrder = -100
 
 att.Override_ClipSize_Priority = -1
-att.Override_ClipSize = 5
+att.Override_ClipSize = 10
 
-att.Mult_HipDispersion = 0.6
-att.Mult_MoveDispersion = 0.75
+att.Mult_HipDispersion = 1.25
 att.Mult_RPM = 0.4
 
 att.Override_AccuracyMOA_Priority = -1
@@ -34,12 +33,12 @@ att.Override_Num_Priority = -1 -- shotgun ammo may need to overwrite this
 att.Override_Num = 8
 att.Override_ShellModel = "models/shells/shell_12gauge.mdl"
 att.Override_ShellSounds = ArcCW.ShotgunShellSoundsTable
-att.Mult_Damage = 3.5
-att.Mult_DamageMin = 3.5
+att.Mult_Damage = 3
+att.Mult_DamageMin = 3
 att.Mult_Range = 0.25
 att.Mult_PhysBulletMuzzleVelocity = 3 -- revert velocity changes by range
 att.Mult_RangeMin = 0.75
-att.Mult_Recoil = 2
+att.Mult_Recoil = 3
 att.Mult_RecoilSide = 2
 
 att.Mult_SpeedMult = 0.925
@@ -79,10 +78,14 @@ att.Hook_GetDistantShootSound = function(wep, distancesound)
     if distancesound == wep.DistantShootSound then return "weapons/arccw_ud/870/fire_dist.ogg" end
 end
 
+att.Hook_SelectReloadAnimation = function(wep, anim)
+    return anim .. "_40"
+end
+
 local slotinfo = {
     [2] = {"18\" AMSAS Barrel", "18\" USAR Barrel", nil},
     [3] = {"Standard Choke", "Standard Choke", nil},
-    [9] = {"5-Round AMSAS Magazine", "5-Round USAR Magazine", nil},
+    [9] = {"10-Round AMSAS Magazine", "5-Round USAR Magazine", nil},
 }
 att.Hook_GetDefaultAttName = function(wep, slot)
     if slotinfo[slot] then

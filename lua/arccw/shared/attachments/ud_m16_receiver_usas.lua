@@ -22,7 +22,7 @@ att.AutoStats = true
 att.SortOrder = -100
 
 att.Override_ClipSize_Priority = -1
-att.Override_ClipSize = 5
+att.Override_ClipSize = 10
 
 att.Mult_HipDispersion = 0.6
 att.Mult_MoveDispersion = 0.75

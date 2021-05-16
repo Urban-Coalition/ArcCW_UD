@@ -5,6 +5,7 @@ att.Description = "A very tight choke for shotguns, noticably tightening spread.
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
+    "ud.disp.100"
 }
 att.Desc_Neutrals = {
 }
@@ -17,8 +18,8 @@ att.Hook_Compatible = function(wep)
     end
 end
 
+att.Mult_Recoil = 1.25
+att.Mult_RecoilSide = 1.5
 att.Mult_AccuracyMOA = .7
---[[]
-att.Add_HipDispersion = 50
-att.Add_SightsDispersion = 50
-]]
+att.Add_HipDispersion = 100
+att.Add_SightsDispersion = 100

@@ -30,18 +30,24 @@ ArcCW.UD.CivvieGuns = {
 }
 
 -- If arccw_ud_licenseatts_civvie is on:
--- For each of these guns, specified slots will be forced to have its attachment.
--- If it is a table of attachments, the first one will be installed.
+-- For each of these guns, at least one of the specified slots has to have its attachment.
 -- They cannot be taken off unless the user has a gun license. (They are also made free.)
 -- If set to true, the guns require a gun license.
 
 -- If arccw_ud_licenseatts_civvie is off:
 -- The following guns require a gun license.
 ArcCW.UD.LicenseGuns = {
-    arccw_ud_m16 = {[12] = "ud_fg_civvy"},
+    arccw_ud_m16 = {[2] = "ud_m16_barrel_wood", [4] = "ud_m16_receiver_cali", [12] = "ud_fg_civvy"},
     arccw_ud_uzi = {[2] = "ud_uzi_body_civvy"},
     arccw_ud_m1014 = true,
 }
+
+-- Civvie attachments installed by default.
+ArcCW.UD.LicenseGuns_Default = {
+    arccw_ud_m16 = {[12] = "ud_fg_civvy"},
+    arccw_ud_uzi = {[2] = "ud_uzi_body_civvy"},
+}
+
 
 
 -- If arccw_ud_licenseatts_strict is on:
@@ -52,7 +58,6 @@ ArcCW.UD.LicenseAtts = {
     ud_glock_100_mag = true,
 
     -- M16
-    ud_m16_receiver_auto = true,
     ud_m16_receiver_auto_flat = true,
 
     -- Uzi
@@ -146,11 +151,11 @@ hook.Add("playerPickedUpWeapon", "ArcCW_UD", function(ply, ent, wep)
     local class = ent:GetWeaponClass()
     if licenseatts_civ:GetBool() and
             not ply:getDarkRPVar("HasGunlicense", false)
-            and istable(ArcCW.UD.LicenseGuns[class]) then
+            and istable(ArcCW.UD.LicenseGuns_Default[class]) then
         timer.Simple(0.001, function()
             wep = ply:GetWeapon(class)
             if not IsValid(wep) then return end
-            for k, v in pairs(ArcCW.UD.LicenseGuns[class]) do
+            for k, v in pairs(ArcCW.UD.LicenseGuns_Default[class]) do
                 local oldatt = wep.Attachments[k].Installed
                 wep.Attachments[k].Installed = istable(v) and v[1] or v
                 if oldatt then
@@ -174,12 +179,24 @@ hook.Add("ArcCW_PlayerCanAttach", "ArcCW_UD", function(ply, wep, attname, slot, 
 
         local list = istable(lic[slot]) and lic[slot] or {lic[slot]}
 
-        local curatt_civ = (wep.Attachments[slot].Installed or "") != "" and table.HasValue(list, wep.Attachments[slot].Installed)
+        local curatt_civ = (wep.Attachments[slot].Installed or "") ~= "" and table.HasValue(list, wep.Attachments[slot].Installed)
         local tgtatt_civ = table.HasValue(list, attname)
 
         if not curatt_civ or not tgtatt_civ then
-            if CLIENT then notification.AddLegacy(ArcCW.GetTranslation("ud.darkrp.cantremove"), 1, 3) end
-            return false
+
+            -- If there is another civvie attachment, we are still compliant after removing this
+            local has_other = false
+            for k, v in pairs(wep.Attachments) do
+                if k ~= slot and (istable(lic[k]) and table.HasValue(list, v.Installed or "") or ((v.Installed or "") == lic[k])) then
+                    has_other = true
+                    break
+                end
+            end
+
+            if not has_other then
+                if CLIENT then notification.AddLegacy(ArcCW.GetTranslation("ud.darkrp.cantremove"), 1, 3) end
+                return false
+            end
         end
     end
 

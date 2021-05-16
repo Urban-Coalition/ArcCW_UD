@@ -18,5 +18,6 @@ att.Free = true
 att.SortOrder = 100
 
 att.AutoStats = true
+att.Ignore = true
 
 att.ActivateElements = {"ud_m16_upper_flat"}

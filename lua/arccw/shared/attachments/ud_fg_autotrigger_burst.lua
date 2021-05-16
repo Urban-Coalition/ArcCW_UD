@@ -8,13 +8,16 @@ att.Desc_Pros = {
 att.Desc_Cons = {
 }
 att.Desc_Neutrals = {
+    "ud.frcd_burst"
 }
 att.Slot = "ud_fg"
 att.AutoStats = true
+att.InvAtt = "ud_fg_autotrigger"
 
 att.Hook_Compatible = function(wep)
     if wep:GetIsManualAction() then return false end
 
+    local burst = false
     for i, v in pairs(wep.Firemodes) do
         if !v then continue end
         if !v.Mode then continue end
@@ -22,10 +25,11 @@ att.Hook_Compatible = function(wep)
             -- Not available if gun has automatic firemode
             return false
         elseif v.Mode < 0 then
-            -- Use burst variant
-            return false
+            -- Burst *needed* for this variant
+            burst = true
         end
     end
+    if !burst then return false end
 end
 
 att.Override_Firemodes_Priority = 100
@@ -39,4 +43,4 @@ att.Override_Firemodes = {
     }
 }
 
-att.Mult_RPM = .95
+att.Mult_RPM = .8

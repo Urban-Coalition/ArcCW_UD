@@ -10,6 +10,7 @@ att.Desc_Neutrals = {
 }
 att.Slot = "ud_m16_receiver"
 att.AutoStats = true
+att.SortOrder = -100
 
 att.Override_Firemodes = {
     {

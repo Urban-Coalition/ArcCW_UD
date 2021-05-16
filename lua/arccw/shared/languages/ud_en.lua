@@ -21,6 +21,7 @@ L["ud.hushpuppy"] = "Switch to LOCK firemode for manual action, reducing volume 
 L["ud.bipod"] = "Allows use of bipod"
 L["ud.usas"] = "Fire shotgun shells instead of bullets"
 L["ud.frcd_burst"] = "Worse performance on burst-fire weapons"
+L["ud.cosmetic"] = "This attachment is entirely cosmetic."
 
 L["ud.darkrp.cantremove"] = "You can't remove this without a gun license!"
 L["ud.darkrp.cantattach"] = "You need a gun license to use this attachment!"

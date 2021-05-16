@@ -226,12 +226,6 @@ SWEP.AttachmentElements = {
             {ind = 10, bg = 1},
             {ind = 3, bg = 3}
         },
-        AttPosMods = {
-            [1] = {
-                vpos = Vector(0, -1.7, 3),
-                vang = Angle(90, 0, -90),
-            }
-        }
     },
 
     ["ud_m16_stock_m4"] = {
@@ -394,6 +388,10 @@ SWEP.AttachmentElements = {
             {ind = 2, bg = 6}
         },
         AttPosMods = {
+            [1] = {
+                vpos = Vector(0, -4, 3),
+                vang = Angle(90, 0, -90),
+            },
             [6] = {
                 vpos = Vector(0, 0.8, 20),
                 vang = Angle(90, 0, -90),
@@ -849,15 +847,16 @@ SWEP.Attachments = {
     {
         PrintName = "Optic",
         DefaultAttName = "Iron Sights",
-        InstalledEles = {"ud_m16_rail_optic"},
+        InstalledEles = {"ud_m16_upper_flat"},
         Slot = {"optic_lp","optic","sniper_optic"},
         Bone = "m16_parent",
         Offset = {
-            vpos = Vector(0, -4, 3),
+            vpos = Vector(0, -1.7, 3),
             vang = Angle(90, 0, -90),
         },
         VMScale = Vector(1.25, 1.25, 1.25),
-        ExtraSightDist = 8
+        ExtraSightDist = 8,
+        MergeSlots = {14}
     },
     {
         PrintName = "Barrel",
@@ -953,4 +952,9 @@ SWEP.Attachments = {
             vang = Angle(90, 0, -90),
         },
     },
+    {
+        Hidden = true,
+        Slot = "ud_m16_rs",
+        FreeSlot = true
+    }
 }

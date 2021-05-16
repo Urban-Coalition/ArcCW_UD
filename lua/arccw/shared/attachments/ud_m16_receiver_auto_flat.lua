@@ -1,11 +1,12 @@
 att.PrintName = "AMCAR-NG Automatic Receiver"
 
 if GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "M16A4 Automatic Receiver"
+    att.PrintName = "M16A3 Automatic Receiver"
 end
 
+att.Description = "A receiver that allows automatic fire. Comes in semi-auto-safe configuration."
+
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "A receiver made to imitate the M16A4. Comes in semi-auto-safe configuration and has milled flat top with backup iron sights."
 att.Desc_Pros = {
     "ud.auto",
     "ud.flattop"
@@ -37,4 +38,4 @@ att.Override_Firemodes = {
 
 att.GivesFlags = {"m16_auto"}
 att.ExcludeFlags = {"m16_noauto"}
-att.ActivateElements = {"ud_m16_upper_flat"}
+-- att.ActivateElements = {"ud_m16_upper_flat"}

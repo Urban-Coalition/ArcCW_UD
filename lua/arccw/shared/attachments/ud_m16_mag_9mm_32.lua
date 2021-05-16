@@ -23,7 +23,7 @@ att.Mult_SightTime = 1.1
 att.Mult_ReloadTime = 1.15
 att.Mult_Sway = 1.25
 
-att.ActivateElements = {"ud_m16_9mm_mag"}
+att.ActivateElements = {"ud_m16_9mm_mag_32"}
 att.RequireFlags = {"m16_9mm"}
 
 att.Hook_SelectReloadAnimation = function(wep, anim)

@@ -17,9 +17,10 @@ $bodygroup "2" {
 	studio "m16_mag_40.smd"
 	studio "m16_mag_60.smd"
 	studio "m16_mag_100.smd"
-	studio "m16_mag_9mm.smd"
+	studio "m16_mag_9mm_20.smd"
 	studio "m16_mag_usas_10.smd"
 	studio "m16_mag_usas_20.smd"
+	studio "m16_mag_9mm_32.smd"
 }
 
 $bodygroup "3" {
@@ -96,7 +97,7 @@ $cdmaterials "models\weapons\arccw\ud_m1014"
 $cdmaterials "models\weapons\arccw\ud_common"
 $cdmaterials "models\weapons\arccw\ud_mini14"
 $cdmaterials "models\weapons\arccw\ud_uzi"
-$cdmaterials "models\shells\12gauge"
+// $cdmaterials "models\shells\12gauge"
 
 $attachment "1" "m16_flash" 0 0 0 rotate -90 0 0
 $attachment "2" "brass" 0 0 -1 rotate -10 140 180

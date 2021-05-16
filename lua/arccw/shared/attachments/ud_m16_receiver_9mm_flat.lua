@@ -19,6 +19,7 @@ att.InvAtt = "ud_m16_receiver_9mm"
 att.SortOrder = -10
 
 att.AutoStats = true
+att.Ignore = true
 
 att.Mult_Damage = 0.88
 att.Mult_DamageMin = 0.88

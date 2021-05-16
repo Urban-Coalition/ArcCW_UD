@@ -312,9 +312,10 @@ SWEP.AttachmentElements = {
     },
     ["ud_870_barrel_long"] = {
         Override_IronSightStruct = {
-            Pos = Vector(-2.99, -1, 2.25),
-            Ang = Angle(0, 0, 0),
-            Magnification = 1.1
+            Pos = Vector(-3.0075, -1, 2.25),
+            Ang = Angle(-0.5, 0.025, 0),
+            Magnification = 1.1,
+            CrosshairInSights = false
         },
         VMBodygroups = {
             {ind = 8, bg = 1},

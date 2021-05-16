@@ -47,6 +47,9 @@ att.Mult_ReloadTime = 1.15
 
 att.Override_Firemodes = {
     {
+        Mode = 2,
+    },
+    {
         Mode = 1,
     },
     {

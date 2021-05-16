@@ -1,11 +1,11 @@
-att.PrintName = "AMCAR Automatic FT Receiver"
+att.PrintName = "AMCAR FT Receiver w/ Automatic Bolt Carrier"
 
 if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "M16 Automatic FT Receiver"
 end
 
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
-att.Description = "An automatic receiver with a flip-up rear sight. It's like a poor man's M4."
+att.Description = "A FT reciever with an added automatic bolt carrier."
 att.Desc_Pros = {
     "ud.auto",
     "ud.flattop"

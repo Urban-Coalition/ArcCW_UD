@@ -17,9 +17,11 @@ att.Hook_Compatible = function(wep)
 
     -- Shamelessly robbed from CS+
     for i, v in pairs(wep.Firemodes) do
+        PrintTable(v)
         if !v then continue end
         if !v.Mode then continue end
-        if v.Mode != 1 and v.Mode != 0 then
+        if v.Mode == 2 then
+            print("FUCK")
             return false
         end
     end

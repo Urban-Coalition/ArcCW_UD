@@ -30,7 +30,10 @@ att.Mult_Sway = 1.5
 
 att.ActivateElements = {"ud_uzi_100_mag"}
 
-att.Override_Jamming = true
+--att.Override_Jamming = true
+att.Override_Malfunction = true
+att.Mult_MalfunctionMean = 0.75
+att.Mult_MalfunctionVariance = 1.5
 
 att.Hook_SelectReloadAnimation = function(wep, anim)
     return anim .. "_100"

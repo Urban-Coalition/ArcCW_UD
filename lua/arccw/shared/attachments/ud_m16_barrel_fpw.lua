@@ -7,7 +7,7 @@ att.Desc_Pros = {
 }
 att.Desc_Cons = {
     "ud.nofs",
-    "ud.jam"
+    "ud.overheat"
 }
 att.Desc_Neutrals = {
 }
@@ -26,10 +26,11 @@ att.Mult_Range = 0.65
 att.Mult_AccuracyMOA = 3
 
 att.Override_Jamming = true
-att.Override_HeatLockout = false
-att.Override_HeatDissipation = 2
-att.Override_HeatDissipation_Priority = 100
-att.Mult_HeatCapacity = 0.5
+att.Override_HeatLockout = true
+att.Override_HeatCapacity = 75
+att.Hook_PostOverheat = function(wep)
+    wep:SetHeat(wep:GetHeat() - 20)
+end
 
 att.A_Hook_Add_SightsDispersion = function(wep, data)
     if data and !wep.Attachments[1].Installed then

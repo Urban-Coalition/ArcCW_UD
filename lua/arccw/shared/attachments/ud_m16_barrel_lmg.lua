@@ -26,8 +26,9 @@ att.Mult_RPM = 0.915
 att.Mult_Recoil = 0.75
 att.Mult_RecoilSide = 0.5
 
-att.Mult_HeatDelayTime = 0.5
-att.Mult_HeatDissipation = 1.5
+--att.Mult_HeatDelayTime = 0.5
+--att.Mult_HeatDissipation = 1.5
+att.Mult_MalfunctionMean = 1.5
 
 att.Bipod = true
 att.Override_InBipodPos = Vector(-10, 0, -4)

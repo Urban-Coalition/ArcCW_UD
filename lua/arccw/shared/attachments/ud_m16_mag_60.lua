@@ -24,10 +24,14 @@ att.Mult_Sway = 2
 
 att.ActivateElements = {"ud_m16_60_mag"}
 
+--[[]
 att.Override_Jamming = true
 att.Override_HeatCapacity = 300
 att.Override_HeatDissipation = 5
 att.Override_HeatDelayTime = 3
+]]
+att.Override_Malfunction = true
+att.Mult_MalfunctionVariance = 1.25
 
 att.Hook_SelectReloadAnimation = function(wep, anim)
     return anim .. "_60"

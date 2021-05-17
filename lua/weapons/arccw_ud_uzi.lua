@@ -124,11 +124,13 @@ SWEP.MoveDispersion = 100
 SWEP.JumpDispersion = 800
 
 SWEP.Primary.Ammo = "pistol"
-SWEP.MagID = "glock"
+SWEP.MagID = "uzi"
 
 SWEP.HeatCapacity = 75
 SWEP.HeatDissipation = 15
 SWEP.HeatDelayTime = 3
+
+SWEP.MalfunctionMean = 300
 
 -- Speed multipliers --
 

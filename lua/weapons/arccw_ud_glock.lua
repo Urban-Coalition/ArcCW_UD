@@ -126,6 +126,8 @@ SWEP.HeatCapacity = 50
 SWEP.HeatDissipation = 20
 SWEP.HeatDelayTime = 3
 
+SWEP.MalfunctionMean = 200
+
 -- Speed multipliers --
 
 SWEP.SpeedMult = 0.975

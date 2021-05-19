@@ -13,6 +13,7 @@ att.Desc_Neutrals = {
 att.Slot = "ud_fg"
 att.AutoStats = true
 att.InvAtt = "ud_fg_autotrigger"
+att.SortOrder = 2
 
 att.Hook_Compatible = function(wep)
     if wep:GetIsManualAction() then return false end

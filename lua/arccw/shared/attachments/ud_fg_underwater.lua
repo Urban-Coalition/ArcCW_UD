@@ -10,5 +10,6 @@ att.Desc_Neutrals = {
 }
 att.Slot = "ud_fg"
 att.AutoStats = true
+att.SortOrder = 3
 
 att.Override_CanFireUnderwater = true

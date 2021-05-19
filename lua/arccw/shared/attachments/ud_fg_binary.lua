@@ -13,6 +13,7 @@ att.Slot = "ud_fg"
 att.Ignore = true -- as i was writing htis i got headache
 att.AutoStats = true
 att.NotForNPCS = true
+att.SortOrder = 2
 
 att.Hook_Compatible = function(wep)
     if wep:GetIsManualAction() then

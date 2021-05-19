@@ -3,10 +3,10 @@ att.PrintName = "Dual-Stage Trigger"
 att.Icon = Material("entities/att/arccw_ud_dualstagetrigger.png", "mips smooth")
 att.Description = "A heavy trigger with a semi-automatic middle stage and a fully-automatic end stage. Can shoot semi- and fully- automatically without the need for switching a fire selector."
 att.Desc_Pros = {
-    "+15% Fire rate after first shot"
+    "ud.dualstage.pro"
 }
 att.Desc_Cons = {
-    "-50% Fire rate for first shot"
+    "ud.dualstage.con"
 }
 att.Desc_Neutrals = {
 }
@@ -17,7 +17,7 @@ att.Hook_Compatible = function(wep)
         return false
     end
 end
-
+att.SortOrder = 2
 
 att.Hook_Compatible = function(wep)
     if wep:GetIsManualAction() then
@@ -32,9 +32,11 @@ att.Hook_Compatible = function(wep)
     return false
 end
 
-function att.Hook_ModifyRPM(wep,delay)
+--att.Override_ShotRecoilTable = {0.7}
+
+function att.Hook_ModifyRPM(wep, delay)
     if wep:GetBurstCount() > 0 then
-        return delay * .85
+        return delay * .95
     else
         return delay * 2
     end

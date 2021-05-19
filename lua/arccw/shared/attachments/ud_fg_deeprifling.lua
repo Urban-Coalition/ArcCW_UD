@@ -10,6 +10,7 @@ att.Desc_Neutrals = {
 }
 att.Slot = "ud_fg"
 att.AutoStats = true
+att.SortOrder = 1
 
 att.Hook_Compatible = function(wep)
     if wep:GetIsShotgun() then

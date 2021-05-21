@@ -11,6 +11,7 @@ SWEP.ShellModel = "models/shells/shell_9mm.mdl"
 SWEP.ShellScale = 1.4
 SWEP.ShellMaterial = "models/weapons/arcticcw/shell_9mm"
 SWEP.ShellPitch = 100
+SWEP.ShellSounds = ArcCW.PistolShellSoundsTable
 
 SWEP.MuzzleEffectAttachment = 1
 SWEP.CaseEffectAttachment = 2

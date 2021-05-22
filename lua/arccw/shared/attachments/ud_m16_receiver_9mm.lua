@@ -59,6 +59,7 @@ att.Override_Trivia_Class = "Submachine Gun"
 att.Override_ShellModel = "models/shells/shell_9mm.mdl"
 --att.Override_ShellMaterial = "models/weapons/arcticcw/shell_9mm"
 att.Override_ShellScale = 1
+att.Override_ShellSounds = ArcCW.PistolShellSoundsTable
 
 att.Hook_GetShootSound = function(wep, fsound)
     if fsound == wep.ShootSound or fsound == wep.FirstShootSound then return "weapons/arccw_ud/m16/fire_9.ogg" end

@@ -34,6 +34,7 @@ att.Override_Trivia_Calibre = ".22 Long Rifle"
 att.Override_ShellModel = "models/shells/shell_9mm.mdl"
 att.Override_ShellMaterial = "models/weapons/arcticcw/shell_9mm"
 att.Override_ShellScale = 0.75
+att.Override_ShellSounds = ArcCW.TinyShellSoundsTable
 
 att.Hook_SelectReloadAnimation = function(wep, anim)
     return anim .. "_15_22lr"

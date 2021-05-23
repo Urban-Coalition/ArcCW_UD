@@ -236,6 +236,7 @@ SWEP.Animations = {
     ["sgreload_insert"] = {
         Source = "sgreload_insert",
         Time = 18 / 30,
+        MinProgress = 0.24,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         TPAnimStartTime = 0.3,
         LHIK = true,

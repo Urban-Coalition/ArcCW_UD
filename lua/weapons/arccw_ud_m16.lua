@@ -106,7 +106,7 @@ SWEP.Firemodes = {
 
 SWEP.ShootPitch = 100
 SWEP.ShootVol = 120
-SWEP.ShootPitchVariation = 0
+//SWEP.ShootPitchVariation = 0
 
 SWEP.ProceduralRegularFire = false
 SWEP.ProceduralIronFire = false
@@ -185,7 +185,7 @@ SWEP.WorldModelOffset = {
 local path = "weapons/arccw_ud/m16/"
 local common = "weapons/arccw_ud/common/"
 SWEP.FirstShootSound = path .. "fire_first.ogg"
-SWEP.ShootSound = {path .. "fire_auto_1.ogg", path .. "fire_auto_2.ogg", path .. "fire_auto_3.ogg"}
+SWEP.ShootSound = {path .. "fire_auto_1.ogg", path .. "fire_auto_2.ogg", path .. "fire_auto_3.ogg", path .. "fire_auto_4.ogg"}
 SWEP.ShootSoundSilenced = path .. "fire_supp.ogg"
 SWEP.DistantShootSound = path .. "fire_dist.ogg"
 

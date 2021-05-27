@@ -1,6 +1,6 @@
 att.PrintName = "Dropshot"
 
-att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
+att.Icon = Material("entities/att/arccw_ud_tp_dropshot.png", "smooth")
 att.Description = "Expert training in high-verticality maneuvers, allowing for pinpoint shooting while descending from heights or jumping."
 att.Desc_Pros = {
 }

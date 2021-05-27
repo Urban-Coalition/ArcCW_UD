@@ -1,6 +1,6 @@
 att.PrintName = "Pointman"
 
-att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
+att.Icon = Material("entities/att/arccw_ud_tp_pointman.png", "smooth")
 att.Description = "Firearms and dexterity training for quick response in breaching situations. The pointman is always the first to enter, and the first to identify and disable threats."
 att.Desc_Pros = {
     "ud.pointman"

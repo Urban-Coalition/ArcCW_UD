@@ -1,6 +1,6 @@
 att.PrintName = "Run and Gun"
 
-att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
+att.Icon = Material("entities/att/arccw_ud_tp_run_and_gun.png", "smooth")
 att.Description = "Moving-while-shooting drills allow you to aim more steadily even while moving between cover or across open ground."
 att.Desc_Pros = {
 }

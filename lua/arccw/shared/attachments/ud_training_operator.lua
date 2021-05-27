@@ -1,6 +1,6 @@
 att.PrintName = "Operator"
 
-att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
+att.Icon = Material("entities/att/arccw_ud_tp_operator.png", "smooth")
 att.Description = "'Operator' is a term used originally by the Delta Force, and now represents special forces around the world. Although your training is nowhere as rigorous, your recoil control is still a notch above the average civilian. Definitely go lose some weight though, you filthy LARPer."
 att.Desc_Pros = {
 }

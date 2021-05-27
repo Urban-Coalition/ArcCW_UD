@@ -1,6 +1,6 @@
 att.PrintName = "Underload"
 
-att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
+att.Icon = Material("entities/att/arccw_ud_tp_underload.png", "smooth")
 att.Description = "Just because it fits, does not mean you have to fill it. Partially filled magazines reduces follower stress and improves feeding rate."
 att.Desc_Pros = {
 }

@@ -12,6 +12,6 @@ att.Slot = "ud_training"
 
 att.AutoStats = true
 
-att.Mult_ReloadTime = 0.95
+att.Mult_ReloadTime = 0.9
 
 -- CS/GSO rapid reload OP

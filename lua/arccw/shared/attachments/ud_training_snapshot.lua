@@ -12,4 +12,4 @@ att.Slot = "ud_training"
 
 att.AutoStats = true
 
-att.Mult_SightTime = 0.95
+att.Mult_SightTime = 0.85

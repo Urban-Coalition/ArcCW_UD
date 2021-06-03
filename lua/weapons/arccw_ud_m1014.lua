@@ -269,6 +269,9 @@ SWEP.Animations = {
         LHIKOut = 0.6,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         TPAnimStartTime = 0.8,
+        SoundTable = {
+            {s = common .. "shoulder.ogg",  t = 0.4},
+        },
     },
 }
 

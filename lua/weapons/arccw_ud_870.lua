@@ -258,6 +258,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         SoundTable = {
             {s = common .. "cloth_3.ogg",  t = 0},
+            {s = common .. "shoulder.ogg",  t = 0.27},
         },
     },
     ["sgreload_finish_empty"] = {

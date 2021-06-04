@@ -362,6 +362,7 @@ SWEP.Animations = {
             {s = path .. "magout.ogg",        t = 0.25, c = ci},
             {s = common .. "cloth_2.ogg",  t = 0.25},
             {s = path .. "magin.ogg",         t = 0.55, c = ci},
+            {s = common .. "shoulder.ogg",  t = 1.75},
         },
     },
     ["reload_empty"] = {
@@ -383,6 +384,7 @@ SWEP.Animations = {
             {s = common .. "cloth_3.ogg",  t = 1.25},
             {s = path .. "chback.ogg",         t = 1.947, c = ci},
             {s = path .. "chforward.ogg",         t = 2.15, c = ci},
+            {s = common .. "shoulder.ogg",  t = 2.6},
         },
     },
 
@@ -404,6 +406,7 @@ SWEP.Animations = {
             {s = path .. "magout.ogg",        t = 0.25, c = ci},
             {s = common .. "cloth_2.ogg",  t = 0.25},
             {s = path .. "magin.ogg",         t = 0.55, c = ci},
+            {s = common .. "shoulder.ogg",  t = 1.75},
         },
     },
     ["reload_empty_16"] = {
@@ -425,6 +428,7 @@ SWEP.Animations = {
             {s = common .. "cloth_3.ogg",  t = 1.25},
             {s = path .. "chback.ogg",         t = 1.947, c = ci},
             {s = path .. "chforward.ogg",         t = 2.15, c = ci},
+            {s = common .. "shoulder.ogg",  t = 2.45},
         },
     },
 
@@ -446,6 +450,7 @@ SWEP.Animations = {
             {s = path .. "magout.ogg",        t = 0.35, c = ci},
             {s = common .. "cloth_2.ogg",  t = 0.25},
             {s = path .. "magin.ogg",         t = 0.65, c = ci},
+            {s = common .. "shoulder.ogg",  t = 1.75},
         },
     },
     ["reload_empty_41"] = {
@@ -467,6 +472,7 @@ SWEP.Animations = {
             {s = common .. "cloth_3.ogg",  t = 1.25},
             {s = path .. "chback.ogg",         t = 1.95, c = ci},
             {s = path .. "chforward.ogg",         t = 2.2, c = ci},
+            {s = common .. "shoulder.ogg",  t = 2.6},
         },
     },
 

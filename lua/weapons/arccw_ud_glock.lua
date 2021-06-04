@@ -309,13 +309,16 @@ SWEP.Animations = {
         Source = "fire",
         Time = 16 / 30,
         ShellEjectAt = 0.03,
+        SoundTable = {
+            {s = path .. "mech.ogg", t = 0}, -- Not Temporary
+        },
     },
     ["fire_empty"] = {
         Source = "fire_empty",
         Time = 16 / 30,
         ShellEjectAt = 0.03,
         SoundTable = {
-            {s = path .. "sliderel.ogg", t = 0, c = ci}, -- Temporary
+            {s = path .. "mech_last.ogg", t = 0, c = ci}, -- Not Temporary
         },
     },
     ["fire_stock"] = {
@@ -510,7 +513,7 @@ SWEP.Animations = {
             {s = path .. "magrelease.ogg",    t = 0.3, c = ci},
             {s = path .. "magout.ogg",        t = 0.3, c = ci},
             {s = path .. "magin.ogg",         t = 0.4, c = ci},
-            {s = common .. "cloth_3.ogg",  t = 1.1},
+            {s = common .. "cloth_3.ogg",  t = 0.75},
         },
     },
     ["reload_empty"] = {
@@ -530,8 +533,8 @@ SWEP.Animations = {
             {s = path .. "magout.ogg",        t = 0.15, c = ci},
             {s = path .. "magin.ogg",         t = 0.45, c = ci},
             {s = common .. "cloth_2.ogg",  t = 0.5},
+            {s = common .. "cloth_3.ogg",  t = 1.25},
             {s = path .. "sliderel.ogg",      t = 1.45, c = ci},
-            {s = common .. "cloth_3.ogg",  t = 1.5},
         },
     },
 
@@ -554,7 +557,7 @@ SWEP.Animations = {
             {s = path .. "magrelease.ogg",    t = 0.3, c = ci},
             {s = path .. "magout.ogg",        t = 0.3, c = ci},
             {s = path .. "magin.ogg",         t = 0.4, c = ci},
-            {s = common .. "cloth_3.ogg",  t = 1.1},
+            {s = common .. "cloth_3.ogg",  t = 0.65},
         },
     },
     ["reload_empty_10"] = {
@@ -574,8 +577,8 @@ SWEP.Animations = {
             {s = path .. "magout.ogg",        t = 0.15, c = ci},
             {s = path .. "magin.ogg",         t = 0.45, c = ci},
             {s = common .. "cloth_2.ogg",  t = 0.5},
+            {s = common .. "cloth_3.ogg",  t = 1.0},
             {s = path .. "sliderel.ogg",      t = 1.45, c = ci},
-            {s = common .. "cloth_3.ogg",  t = 1.5},
         },
     },
 
@@ -598,7 +601,7 @@ SWEP.Animations = {
             {s = path .. "magrelease.ogg",    t = 0.4, c = ci},
             {s = path .. "magout.ogg",        t = 0.4, c = ci},
             {s = path .. "magin.ogg",         t = 0.52, c = ci},
-            {s = common .. "cloth_3.ogg",  t = 1.2},
+            {s = common .. "cloth_3.ogg",  t = 0.75},
         },
     },
     ["reload_empty_33"] = {
@@ -618,8 +621,8 @@ SWEP.Animations = {
             {s = path .. "magout.ogg",        t = 0.16, c = ci},
             {s = path .. "magin.ogg",         t = 0.46, c = ci},
             {s = common .. "cloth_2.ogg",  t = 0.5},
+            {s = common .. "cloth_3.ogg",  t = 1.4},
             {s = path .. "sliderel.ogg",      t = 1.46, c = ci},
-            {s = common .. "cloth_3.ogg",  t = 1.6},
         },
     },
 

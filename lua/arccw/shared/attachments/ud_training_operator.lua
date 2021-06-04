@@ -1,8 +1,9 @@
 att.PrintName = "Operator"
 
 att.Icon = Material("entities/att/arccw_ud_tp_operator.png", "smooth")
-att.Description = "'Operator' is a term used originally by the Delta Force, and now represents special forces around the world. Although your training is nowhere as rigorous, your recoil control is still a notch above the average civilian. Definitely go lose some weight though, you filthy LARPer."
+att.Description = "Extensive live fire operations have made your reactions to firearm recoil much less disorienting."
 att.Desc_Pros = {
+    "ud.operator"
 }
 att.Desc_Cons = {
 }
@@ -12,9 +13,5 @@ att.Slot = "ud_training"
 
 att.AutoStats = true
 
+att.Mult_VisualRecoilMult = 0.2
 att.Mult_RecoilSide = 0.8
-att.Mult_Recoil = 0.9
-
-att.Mult_SightedSpeedMult = 0.8
-att.Mult_DrawTime = 1.25
-att.Mult_HolsterTime = 1.25

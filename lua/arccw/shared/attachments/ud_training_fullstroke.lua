@@ -15,7 +15,7 @@ att.AutoStats = true
 att.Mult_CycleTime = .9
 
 att.Hook_Compatible = function(wep)
-    if !wep.ManualAction then
+    if !wep:GetBuff_Override("Override_ManualAction", wep.ManualAction) then
         return false
     end
 end

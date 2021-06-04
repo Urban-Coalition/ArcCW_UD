@@ -12,4 +12,4 @@ att.Slot = "ud_training"
 
 att.AutoStats = true
 
-att.Mult_Recoil = 0.95
+att.Mult_Recoil = 0.9

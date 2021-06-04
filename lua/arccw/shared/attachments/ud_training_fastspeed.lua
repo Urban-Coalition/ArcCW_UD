@@ -12,4 +12,4 @@ att.Slot = "ud_training"
 
 att.AutoStats = true
 
-att.Mult_MoveSpeed = 1.1
+att.Mult_MoveSpeed = 1.05

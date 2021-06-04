@@ -13,10 +13,10 @@ att.Slot = "ud_training"
 
 att.AutoStats = true
 
-att.Mult_HipDispersion = 0.6
+att.Mult_HipDispersion = 0.5
 att.Mult_RecoilSide = 1.25
 att.Mult_SightTime = 1.75
-att.Mult_Sway = 1.75
+att.Mult_Sway = 1.5
 
 att.LHIK = true
 att.LHIKHide = true

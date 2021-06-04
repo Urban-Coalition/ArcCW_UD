@@ -5,7 +5,7 @@ att.Description = "Just because it fits, does not mean you have to fill it. Part
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
-    "-14% magazine capacity"
+    "ud.underload"
 }
 att.Desc_Neutrals = {
 }

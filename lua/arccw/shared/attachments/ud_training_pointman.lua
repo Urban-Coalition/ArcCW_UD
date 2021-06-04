@@ -13,12 +13,8 @@ att.Slot = "ud_training"
 
 att.AutoStats = true
 
-att.Mult_SightTime = 0.9
-att.Add_BarrelLength = -4
 att.M_Hook_Mult_RPM = function(wep, data)
-    local hta = wep:GetBuff("HoldtypeActive")
-    if (hta == "pistol" or hta == "revolver") and wep:GetCurrentFiremode().Mode == 1 then
-        data.mult = data.mult * 1.25
+    if wep:GetCurrentFiremode().Mode == 1 then
+        data.mult = data.mult * 1.2
     end
 end
-att.Mult_ReloadTime = 1.2

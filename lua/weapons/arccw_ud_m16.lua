@@ -448,12 +448,12 @@ SWEP.Animations = {
     },
     ["fire_usas"] = {
         Source = "fire_usas",
-        Time = 16 / 30,
+        Time = 20 / 30,
         ShellEjectAt = 0.01,
     },
     ["fire_empty_usas"] = {
         Source = "fire_empty_usas",
-        Time = 16 / 30,
+        Time = 20 / 30,
         ShellEjectAt = 0.01,
         SoundTable = {
             {s = path .. "mech_last.ogg", t = 0}, -- Temporary
@@ -808,6 +808,55 @@ SWEP.Animations = {
             {s = common .. "cloth_3.ogg",  t = 1.39},
             {s = path .. "boltdrop.ogg", t = 56 / 30},
             {s = common .. "shoulder.ogg", t = 2.15},
+        },
+    },
+
+    -- 20 USAS Reloads --
+
+    ["reload_usas_20"] = {
+        Source = "reload_empty_usas_20",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        Time = 71 / 30,
+        MinProgress = 2.5,
+        LastClip1OutTime = 0.7,
+        LHIK = true,
+        LHIKIn = 0.4,
+        LHIKEaseIn = 0.4,
+        LHIKEaseOut = 0.15,
+        LHIKOut = 0.4,
+        SoundTable = {
+            {s = common .. "cloth_1.ogg",  t = 0.0},
+            {s = path .. "magout.ogg", 	 t = 0.2},
+            {s = common .. "cloth_2.ogg",  t = 0.75},
+            {s = path .. "magin.ogg",    t = 1.05},
+            {s = common .. "cloth_3.ogg",  t = 1.75},
+            {s = path .. "chback.ogg",   t = 1.9},
+            {s = common .. "cloth_4.ogg",  t = 2.0},
+            {s = path .. "chamber.ogg",  t = 2.2},
+            {s = common .. "shoulder.ogg", t = 2.6},
+        },
+    },
+    ["reload_empty_usas_20"] = {
+        Source = "reload_empty_usas_20",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        Time = 86 / 30,
+        MinProgress = 2.5,
+        LastClip1OutTime = 0.7,
+        LHIK = true,
+        LHIKIn = 0.4,
+        LHIKEaseIn = 0.4,
+        LHIKEaseOut = 0.15,
+        LHIKOut = 0.4,
+        SoundTable = {
+            {s = common .. "cloth_1.ogg",  t = 0.0},
+            {s = path .. "magout.ogg", 	 t = 0.2},
+            {s = common .. "cloth_2.ogg",  t = 0.75},
+            {s = path .. "magin.ogg",    t = 1.05},
+            {s = common .. "cloth_3.ogg",  t = 1.75},
+            {s = path .. "chback.ogg",   t = 1.9},
+            {s = common .. "cloth_4.ogg",  t = 2.0},
+            {s = path .. "chamber.ogg",  t = 2.12},
+            {s = common .. "shoulder.ogg", t = 2.55},
         },
     },
 }

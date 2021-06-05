@@ -414,6 +414,15 @@ $sequence "reload_empty_9mm" {
 	{ event 5004 73 "StockHitsShoulder" }
 }
 
+$sequence "reload_empty_usas_20" {
+	"anims\reload_empty_usas_20.smd"
+	//"anims\reload_empty_usas_drum.smd"
+	fps 30
+	"ACT_VM_RELOAD" 1
+	//blend "sights" 0 1
+	snap
+}
+
 $bonemerge "ValveBiped.Bip01_Spine4"
 $bonemerge "ValveBiped.Bip01_L_Clavicle"
 $bonemerge "ValveBiped.Bip01_L_UpperArm"

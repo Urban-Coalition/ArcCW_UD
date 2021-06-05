@@ -29,7 +29,7 @@ att.Mult_Sway = 3
 att.ActivateElements = {"ud_m16_usas_mag_20"}
 
 att.Hook_SelectReloadAnimation = function(wep, anim)
-    return anim .. "_100"
+    return anim .. "_usas_20"
 end
 
 

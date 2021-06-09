@@ -51,7 +51,7 @@ SWEP.ViewModel = "models/weapons/arccw/c_ud_m1014.mdl"
 SWEP.WorldModel = "models/weapons/w_shot_m3super90.mdl"
 SWEP.ViewModelFOV = 60
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN
- 
+
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     pos        =    Vector(-7, 4, -5.8),
@@ -63,8 +63,8 @@ SWEP.WorldModelOffset = {
 
 SWEP.Damage = 20 -- 5 pellets to kill
 SWEP.DamageMin = 10 -- land 10 pellets to kill
-SWEP.Range = 35
-SWEP.RangeMin = 3.5
+SWEP.Range = 40
+SWEP.RangeMin = 4
 SWEP.Num = 8
 SWEP.Penetration = 1
 SWEP.DamageType = DMG_BUCKSHOT
@@ -170,9 +170,9 @@ SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 local path1 = "weapons/arccw_ud/870/"
 local path = "weapons/arccw_ud/m1014/"
 local common = "weapons/arccw_ud/common/"
-SWEP.ShootSound = path.."fire.ogg"
-SWEP.ShootSoundSilenced = path.."fire_supp.ogg"
-SWEP.DistantShootSound = path.."fire_dist.ogg"
+SWEP.ShootSound = path .. "fire.ogg"
+SWEP.ShootSoundSilenced = path .. "fire_supp.ogg"
+SWEP.DistantShootSound = path .. "fire_dist.ogg"
 
 -- Animations --
 

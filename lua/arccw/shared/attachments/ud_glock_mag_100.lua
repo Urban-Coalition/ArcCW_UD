@@ -1,12 +1,13 @@
-att.PrintName = "100-Round G17 C-Mag"
+att.PrintName = "Glock 100-Round C-Mag"
+att.AbbrevName = "100-Round C-Mag"
 
 if !GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "100-Round GEN3 C-Mag"
+    att.PrintName = "GEN3 100-Round C-Mag"
 end
 
 att.SortOrder = 100
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
-att.Description = "Twin-drum magazine for pistols, ideal for suppressive fire. Bulky construction and high ammo capacity substantially increases weight and shifts the weapon's center of balance. Prone to jamming."
+att.Description = "Twin-drum magazine ideal for suppressive fire (a nicer way to say \"mag dump\"). Bulky construction and high ammo capacity substantially increases weight and shifts the weapon's center of balance. Prone to jamming."
 att.Desc_Pros = {}
 att.Desc_Cons = {
     "ud.jam"

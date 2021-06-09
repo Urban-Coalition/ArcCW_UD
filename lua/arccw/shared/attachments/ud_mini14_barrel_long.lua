@@ -1,6 +1,12 @@
-att.PrintName = "24\" Ranch Rifle Long Barrel"
+att.PrintName = "Mini-14 24\" Long Barrel"
+att.AbbrevName = "24\" Long Barrel"
+
+if !GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "Patriot 809 24\" Long Barrel"
+end
+
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
-att.SortOrder = 10
+att.SortOrder = 24
 att.Description = "Lengthened barrel for shooting far-away varmints. More accurate, but slightly more heavy."
 att.Desc_Pros = {
 }

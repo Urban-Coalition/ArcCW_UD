@@ -1,4 +1,10 @@
-att.PrintName = "15 Round Ranch Rifle .22LR"
+att.PrintName = "Mini-14 15-Round .22 LR Mag"
+att.AbbrevName = "15-Round .22 LR Mag"
+
+if !GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "Patriot 809 15-Round .22 LR Mag"
+end
+
 att.SortOrder = 15
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = ".22 Long Rifle conversion for the Mini-14. While the light, weak cartridge has poor stopping power, its recoil is extremely manageable, making it a cinch to follow up shots."

@@ -1,11 +1,12 @@
-att.PrintName = "12\" Ex-12 Sawn-Off Barrel"
+att.PrintName = "Express-12 12\" Sawn-off Barrel"
+att.AbbrevName = "12\" Sawn-off Barrel"
 
 if GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "12\" R870 Sawn-Off Barrel"
+    att.PrintName = "Remington 870 12\" Sawn-off Barrel"
 end
 
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
-att.Description = "A hand-made shortened barrel with no sights. More agile and has a bigger pellet spread."
+att.Description = "Hand-made short barrel with no sights. More agile and has a bigger pellet spread."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
@@ -20,6 +21,7 @@ att.SortOrder = -1
 
 att.Mult_AccuracyMOA = 1.5
 att.Mult_Recoil = 1.25
+att.Mult_Range = 0.8
 
 att.Mult_Sway = 0.5
 att.Mult_SightTime = 0.75

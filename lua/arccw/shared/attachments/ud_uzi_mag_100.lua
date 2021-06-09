@@ -1,8 +1,8 @@
-att.PrintName = "100-Round Uzi C-Mag"
+att.PrintName = "Uzi 100-Round C-Mag"
 att.AbbrevName = "100-Round C-Mag"
 
 if !GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "100-Round STAP C-Mag"
+    att.PrintName = "STAP 100-Round C-Mag"
 end
 
 
@@ -26,7 +26,7 @@ att.Mult_ReloadTime = 1.4
 att.Mult_SpeedMult = 0.9
 att.Mult_DrawTime = 1.25
 att.Override_ClipSize = 100
-att.Mult_Sway = 1.5
+att.Mult_Sway = 2
 att.Mult_ShootSpeedMult = 0.85
 
 att.ActivateElements = {"ud_uzi_100_mag"}

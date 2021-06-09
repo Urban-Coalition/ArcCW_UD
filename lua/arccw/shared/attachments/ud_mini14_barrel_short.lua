@@ -1,6 +1,12 @@
-att.PrintName = "18\" Ranch Rifle Short Barrel"
+att.PrintName = "Mini-14 18\" Short Barrel"
+att.AbbrevName = "18\" Short Barrel"
+
+if !GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "Patriot 809 18\" Short Barrel"
+end
+
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
-att.SortOrder = 5
+att.SortOrder = 18
 att.Description = "Compact barrel for popping close-up varmints. More agile but less accurate."
 att.Desc_Pros = {
 }

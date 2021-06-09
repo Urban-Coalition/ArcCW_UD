@@ -1,13 +1,15 @@
-att.PrintName = "4 Shell Tube"
+att.PrintName = "Express-12 4 Shell Tube"
+att.AbbrevName = "4 Shell Tube"
+
+if GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "Remington 870 4 Shell Tube"
+end
+
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
-att.Description = "Shortened shell tube holding 4 rounds. Slightly reduces weapon weight."
-att.Desc_Pros = {
-}
-att.Desc_Cons = {
-    "con.magcap"
-}
-att.Desc_Neutrals = {
-}
+att.Description = "Shortened shell tube holding fewer rounds, but reduces weapon weight."
+att.Desc_Pros = {}
+att.Desc_Cons = {}
+att.Desc_Neutrals = {}
 att.Slot = "ud_870_tube"
 
 att.AutoStats = true

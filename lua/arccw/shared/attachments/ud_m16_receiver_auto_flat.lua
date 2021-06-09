@@ -1,4 +1,5 @@
 att.PrintName = "AMCAR-NG Automatic Receiver"
+--att.AbbrevName = "Automatic Receiver"
 
 if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "M16A3 Automatic Receiver"
@@ -9,7 +10,7 @@ att.Description = "A receiver that allows automatic fire. Comes in semi-auto-saf
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Desc_Pros = {
     "ud.auto",
-    "ud.flattop"
+    --"ud.flattop"
 }
 att.Desc_Cons = {
 }

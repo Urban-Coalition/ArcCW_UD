@@ -1,4 +1,10 @@
-att.PrintName = "10-Round Ranch Rifle Compact Mag"
+att.PrintName = "Mini-14 10-Round Flush Mag"
+att.AbbrevName = "10-Round Flush Mag"
+
+if !GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "Patriot 809 10-Round Flush Mag"
+end
+
 att.SortOrder = 10
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = "Low-capacity flush magazine for the Mini-14. The lighter load makes the weapon even more ergonomic."

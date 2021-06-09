@@ -1,7 +1,8 @@
-att.PrintName = "Ex-12 Long Forend"
+att.PrintName = "Express-12 Long Forend"
+att.AbbrevName = "Long Forend"
 
 if GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "R870 Long Forend"
+    att.PrintName = "Remington 870 Long Forend"
 end
 
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")

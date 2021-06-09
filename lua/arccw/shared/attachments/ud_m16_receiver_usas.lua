@@ -1,10 +1,11 @@
-att.PrintName = "12G AMSAS-12 Receiver"
+att.PrintName = "AMSAS-12 12G Receiver"
+--att.AbbrevName = "Combat Shotgun Receiver"
 
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = "Total conversion kit that turns the rifle into an automatic combat shotgun."
 
 if GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "12G USAR-1200 Receiver"
+    att.PrintName = "USAR-1200 12G Receiver"
     att.Description = "Total conversion kit that turns the rifle into an automatic combat shotgun, based on the USAS-12."
 end
 

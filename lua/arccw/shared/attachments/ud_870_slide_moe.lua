@@ -1,11 +1,12 @@
-att.PrintName = "Ex-12 MOE Forend"
+att.PrintName = "Express-12 MOE Forend"
+att.AbbrevName = "MOE Forend"
 
 if GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "R870 MOE Forend"
+    att.PrintName = "Remington 870 MOE Forend"
 end
 
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
-att.Description = "Polymer Forend for the R870. Faster to cycle, but grip is weakened."
+att.Description = "A lightweight polymer forend. Faster to cycle but harder to grip on, increasing both fire rate and recoil."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

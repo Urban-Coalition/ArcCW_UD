@@ -1,8 +1,8 @@
-att.PrintName = "16\" Uzi Civilian Barrel"
+att.PrintName = "Uzi 16\" Civilian Barrel"
 att.AbbrevName = "16\" Civilian Barrel"
 
 if !GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "16\" STAP Civilian Barrel"
+    att.PrintName = "STAP 16\" Civilian Barrel"
 end
 
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")

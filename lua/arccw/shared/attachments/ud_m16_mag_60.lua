@@ -1,4 +1,4 @@
-att.PrintName = "60-Round STANAG Casket Mag"
+att.PrintName = "STANAG 60-Round Casket Mag"
 att.AbbrevName = "60-Round Casket Mag"
 att.SortOrder = 60
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")

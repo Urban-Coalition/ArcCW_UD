@@ -13,14 +13,14 @@ att.Slot = "ud_training"
 
 att.AutoStats = true
 
--- I give up, arctic help pls
-
 function att.Hook_GetCapacity(wep, cap)
     return math.max(math.floor(cap * (1 - 0.14)), 1)
 end
 
--- att.Add_ClipSize = math.floor(att.Hook_GetCapacity() * -.25)
 att.Mult_MalfunctionMean = 1.25
 att.Mult_HeatCapacity = 1.25
 att.Mult_RPM = 1.05
 att.Mult_ReloadTime = 0.95
+
+att.GivesFlags = {"ud_underload"}
+att.ExcludeFlags = {"ud_loosesprings"}

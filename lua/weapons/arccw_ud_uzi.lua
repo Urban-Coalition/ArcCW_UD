@@ -71,7 +71,7 @@ SWEP.MuzzleVelocity = 300
 
 SWEP.ChamberSize = 0
 SWEP.Primary.ClipSize = 32
-SWEP.ExtendedClipSize = 41
+SWEP.ExtendedClipSize = 40
 SWEP.ReducedClipSize = 16
 
 -- Recoil --
@@ -79,7 +79,7 @@ SWEP.ReducedClipSize = 16
 SWEP.Recoil = 0.4
 SWEP.RecoilSide = 0.4
 
-SWEP.RecoilRise = 0.1
+SWEP.RecoilRise = 0.2
 SWEP.RecoilPunch = 1
 SWEP.VisualRecoilMult = 1
 SWEP.MaxRecoilBlowback = 1
@@ -120,7 +120,7 @@ SWEP.NPCWeight = 60
 -- Accuracy --
 
 SWEP.AccuracyMOA = 6
-SWEP.HipDispersion = 500
+SWEP.HipDispersion = 400
 SWEP.MoveDispersion = 100
 SWEP.JumpDispersion = 800
 
@@ -581,7 +581,7 @@ SWEP.Attachments = {
     {
         PrintName = "Stock",
         Slot = {"ud_uzi_stock"},
-        DefaultAttName = "Standard Folding Stock",
+        DefaultAttName = "Folding Stock",
         ExcludeFlags = {"micro"},
     },
     {

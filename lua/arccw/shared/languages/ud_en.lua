@@ -2,6 +2,8 @@ L = {}
 
 L["ud.title"] = "Urban Decay"
 
+L["ud.mag.20"] = "20-Round magazine capacity"
+
 L["ud.auto"] = "Fully automatic fire"
 L["ud.semionly"] = "Semi-automatic fire only"
 L["ud.manual"] = "Weapon becomes manual action"
@@ -9,7 +11,7 @@ L["ud.nofs"] = "Inaccurate without optics"
 L["ud.overheat"] = "Will overheat after extended use"
 L["ud.jam"] = "Will occasionally jam"
 L["ud.homeboy"] = "Recoil becomes diagonal"
-L["ud.pointman"] = "+20% Fire rate on semi-automatic weapons"
+L["ud.pointman"] = "+15% Fire rate on semi-automatic weapons"
 L["ud.match"] = "-30% Recoil for first shot"
 L["ud.slam"] = "Slamfire firemode"
 L["ud.disp.100"] = "+100MOA Dispersion"
@@ -25,6 +27,7 @@ L["ud.dualstage.con"] = "-50% Fire rate for first shot"
 L["ud.operator"] = "-80% Visual recoil"
 L["ud.overload"] = "+1 Magazine capacity"
 L["ud.underload"] = "-14% Magazine capacity"
+L["ud.loosesprings"] = "+8% Magazine capacity"
 L["ud.neverflinch"] = "No shooting movement speed loss"
 
 L["ud.darkrp.cantremove"] = "You can't remove this without a gun license!"

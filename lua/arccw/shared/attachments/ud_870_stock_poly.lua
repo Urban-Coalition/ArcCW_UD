@@ -1,7 +1,8 @@
-att.PrintName = "Ex-12 Polymer Stock"
+att.PrintName = "Express-12 Polymer Stock"
+att.AbbrevName = "Polymer Stock"
 
 if GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "R870 Polymer Stock"
+    att.PrintName = "Remington 870 Polymer Stock"
 end
 
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")

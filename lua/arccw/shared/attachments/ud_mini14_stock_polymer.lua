@@ -1,4 +1,10 @@
-att.PrintName = "Polymer Stock"
+att.PrintName = "Mini-14 Polymer Stock"
+att.AbbrevName = "Polymer Stock"
+
+if !GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "Patriot 809 Polymer Stock"
+end
+
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = "A lightweight body replacement that improves weapon agility."
 att.Desc_Pros = {

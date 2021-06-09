@@ -1,6 +1,12 @@
-att.PrintName = "15\" Ranch Rifle Stub Barrel"
+att.PrintName = "Mini-14 15\" Stub Barrel"
+att.AbbrevName = "15\" Stub Barrel"
+
+if !GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "Patriot 809 15\" Stub Barrel"
+end
+
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
-att.SortOrder = 1
+att.SortOrder = 15
 att.Description = "No, using your hacksaw on the barrel is not gunsmithing."
 att.Desc_Pros = {
 }

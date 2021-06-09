@@ -1,4 +1,4 @@
-att.PrintName = "20-Round STANAG Compact Mag"
+att.PrintName = "STANAG 20-Round Compact Mag"
 att.AbbrevName = "20-Round Compact Mag"
 att.SortOrder = 20
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")

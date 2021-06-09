@@ -1,4 +1,5 @@
 att.PrintName = "AMCAR Flat Top Receiver"
+att.AbbrevName = "FT Receiver"
 
 if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "M16 Flat Top Receiver"

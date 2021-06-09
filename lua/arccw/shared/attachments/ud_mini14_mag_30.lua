@@ -1,4 +1,10 @@
-att.PrintName = "30-Round Ranch Rifle Extended Mag"
+att.PrintName = "Mini-14 30-Round Extended Mag"
+att.AbbrevName = "30-Round Extended Mag"
+
+if !GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "Patriot 809 30-Round Extended Mag"
+end
+
 att.SortOrder = 30
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = "Extended magazine for the Mini-14. Allows more shots to be taken before reloading."

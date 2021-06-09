@@ -1,4 +1,5 @@
 att.PrintName = "GEN3 Silent Mistress Slide"
+att.AbbrevName = "SD Slide"
 
 if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "G17SD Hush Puppy Slide"

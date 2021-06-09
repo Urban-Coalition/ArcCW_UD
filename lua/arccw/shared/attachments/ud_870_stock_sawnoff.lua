@@ -1,7 +1,8 @@
-att.PrintName = "Ex-12 Sawn-Off Stock"
+att.PrintName = "Express-12 Sawn-off Stock"
+att.AbbrevName = "Sawn-off Stock"
 
 if GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "R870 Sawn-Off Stock"
+    att.PrintName = "Remington 870 Sawn-off Stock"
 end
 
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
@@ -17,13 +18,17 @@ att.Slot = "ud_870_stock"
 att.AutoStats = true
 
 att.Mult_SpeedMult = 1.05
-
 att.Mult_SightTime = 0.75
+att.Mult_SightedSpeedMult = 1.2
+att.Mult_ShootSpeedMult = 1.2
+
 att.Mult_DrawTime = 0.75
 att.Mult_HolsterTime = 0.75
-att.Mult_Recoil = 1.5
-att.Mult_RecoilSide = 2
 
-att.Mult_Sway = 2
+att.Mult_Recoil = 2
+att.Mult_RecoilSide = 3
+
+att.Add_BarrelLength = -4
+att.Mult_Sway = 3
 
 att.ActivateElements = {"ud_870_stock_sawnoff"}

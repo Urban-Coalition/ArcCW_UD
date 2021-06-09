@@ -23,6 +23,7 @@ att.AutoStats = true
 att.Mult_AccuracyMOA = 1.25
 att.Mult_RPM = 0.85
 att.Mult_HipDispersion = 1.125
+att.Mult_ShootSpeedMult = 0.85
 
 att.Override_Firemodes = {
     {

@@ -31,7 +31,7 @@ SWEP.TrueName = "Uzi"
 -- Trivia --
 
 SWEP.Trivia_Class = "Submachine Gun"
-SWEP.Trivia_Desc = "Submachine gun developed after the second world war. Its ergonomic design, low cost, reliability, and great handling made it popular among militaries, police forces, and private security firms worldwide. Lousy iron sights and a short ideal engagement range make shooting from the hip an optimal choice for close quarters combat."
+SWEP.Trivia_Desc = "Submachine gun developed after the second world war. Its ergonomic design, low cost, reliability, and great handling made it popular among militaries, police forces, and private security firms worldwide. Its low recoil and limited range makes the weapon good at hip firing in close quarters."
 SWEP.Trivia_Manufacturer = "IAL Metal Industries"
 SWEP.Trivia_Calibre = "9x19mm Parabellum"
 SWEP.Trivia_Mechanism = "Open Bolt"
@@ -131,7 +131,7 @@ SWEP.HeatCapacity = 75
 SWEP.HeatDissipation = 15
 SWEP.HeatDelayTime = 3
 
-SWEP.MalfunctionMean = 300
+SWEP.MalfunctionMean = 200
 
 -- Speed multipliers --
 

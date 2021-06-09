@@ -24,7 +24,7 @@ att.SortOrder = -100
 att.Override_ClipSize_Priority = -1
 att.Override_ClipSize = 10
 
-att.Mult_HipDispersion = 1.25
+--att.Mult_HipDispersion = 1.25
 att.Mult_RPM = 0.4
 
 att.Override_AccuracyMOA_Priority = -1
@@ -37,9 +37,10 @@ att.Mult_Damage = 3
 att.Mult_DamageMin = 3
 att.Mult_Range = 0.25
 att.Mult_PhysBulletMuzzleVelocity = 3 -- revert velocity changes by range
-att.Mult_RangeMin = 0.75
+--att.Mult_RangeMin = 0.75
 att.Mult_Recoil = 3
 att.Mult_RecoilSide = 2
+att.Mult_ShootSpeedMult = 0.75
 
 att.Mult_SpeedMult = 0.925
 att.Mult_ReloadTime = 1.15

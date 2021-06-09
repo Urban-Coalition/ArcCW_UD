@@ -24,6 +24,7 @@ att.Mult_Recoil = 0.4
 att.Mult_VisualRecoilMult = 0.25
 att.Mult_RPM = 2
 att.Mult_Penetration = 0.1
+att.Mult_ShootSpeedMult = 1.2
 
 att.Override_ClipSize = 15
 

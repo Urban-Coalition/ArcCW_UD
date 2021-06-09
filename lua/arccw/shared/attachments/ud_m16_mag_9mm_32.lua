@@ -17,11 +17,13 @@ att.Desc_Neutrals = {
 att.Slot = "ud_m16_mag"
 
 att.AutoStats = true
+att.HideIfBlocked = true
 
 att.Override_ClipSize = 32
 att.Mult_SightTime = 1.1
 att.Mult_ReloadTime = 1.15
 att.Mult_Sway = 1.25
+att.Mult_ShootSpeedMult = 0.95
 
 att.ActivateElements = {"ud_m16_9mm_mag_32"}
 att.RequireFlags = {"m16_9mm"}

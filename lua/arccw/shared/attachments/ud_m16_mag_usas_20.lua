@@ -17,6 +17,7 @@ att.Desc_Neutrals = {
 att.Slot = "ud_m16_mag"
 
 att.AutoStats = true
+att.HideIfBlocked = true
 
 att.Override_ClipSize = 20
 

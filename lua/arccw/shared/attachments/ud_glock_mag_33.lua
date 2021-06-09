@@ -24,6 +24,7 @@ att.Override_ClipSize = 33
 
 att.Mult_HipDispersion = 1.25
 att.Mult_Sway = 1.5
+att.Mult_ShootSpeedMult = 0.95
 
 att.ActivateElements = {"ud_glock_33_mag"}
 

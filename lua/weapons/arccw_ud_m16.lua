@@ -132,14 +132,14 @@ SWEP.HeatCapacity = 150
 SWEP.HeatDissipation = 10
 SWEP.HeatDelayTime = 3
 
-SWEP.MalfunctionMean = 300
+SWEP.MalfunctionMean = 200
 
 -- Speed multipliers --
 
 SWEP.SpeedMult = 0.925
 SWEP.SightedSpeedMult = 0.75
 SWEP.SightTime = 0.333
-SWEP.ShootSpeedMult = 0.95
+SWEP.ShootSpeedMult = 0.9
 
 -- Length --
 

@@ -7,14 +7,11 @@ end
 att.SortOrder = 100
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "Twin-drum magazine for pistols, ideal for suppressive fire. Bulky construction and high ammo capacity substantially increases weight and shifts the weapon's center of balance. Prone to jamming."
-att.Desc_Pros = {
-    "pro.magcap"
-}
+att.Desc_Pros = {}
 att.Desc_Cons = {
     "ud.jam"
 }
-att.Desc_Neutrals = {
-}
+att.Desc_Neutrals = {}
 att.Slot = "ud_glock_mag"
 
 att.AutoStats = true

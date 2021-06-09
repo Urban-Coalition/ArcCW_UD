@@ -7,13 +7,9 @@ end
 att.SortOrder = -2
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "A long stick magazine for the 9mm AR-15 conversion."
-att.Desc_Pros = {
-    "pro.magcap"
-}
-att.Desc_Cons = {
-}
-att.Desc_Neutrals = {
-}
+att.Desc_Pros = {}
+att.Desc_Cons = {}
+att.Desc_Neutrals = {}
 att.Slot = "ud_m16_mag"
 
 att.AutoStats = true

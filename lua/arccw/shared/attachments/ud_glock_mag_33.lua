@@ -7,13 +7,9 @@ end
 att.SortOrder = 33
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "Extended magazine for the Glock. Allows many more rounds to be fired before reloading, but comes with extra weight."
-att.Desc_Pros = {
-    "Increased magazine capacity"
-}
-att.Desc_Cons = {
-}
-att.Desc_Neutrals = {
-}
+att.Desc_Pros = {}
+att.Desc_Cons = {}
+att.Desc_Neutrals = {}
 att.Slot = "ud_glock_mag"
 
 att.AutoStats = true

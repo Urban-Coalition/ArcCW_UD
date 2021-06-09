@@ -5,7 +5,6 @@ att.Description = ".22 Long Rifle conversion for the Mini-14. While the light, w
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
-    "con.magcap"
 }
 att.Desc_Neutrals = {
 }

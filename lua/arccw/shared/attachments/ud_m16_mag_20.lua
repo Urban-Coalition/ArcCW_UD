@@ -2,13 +2,9 @@ att.PrintName = "20-Round STANAG Compact Mag"
 att.SortOrder = 20
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "Original, low-capacity magazine for the M16. The lighter load reduces the weapon's weight and brings back memories of the rice fields."
-att.Desc_Pros = {
-}
-att.Desc_Cons = {
-    "con.magcap"
-}
-att.Desc_Neutrals = {
-}
+att.Desc_Pros = {}
+att.Desc_Cons = {}
+att.Desc_Neutrals = {}
 att.Slot = "ud_m16_mag"
 
 att.AutoStats = true

@@ -7,13 +7,9 @@ end
 att.SortOrder = 10
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "Low-capacity magazine for the Glock, mostly used on subcompact variants like the Glock 26. The lighter load makes the weapon even more ergonomic."
-att.Desc_Pros = {
-}
-att.Desc_Cons = {
-    "con.magcap"
-}
-att.Desc_Neutrals = {
-}
+att.Desc_Pros = {}
+att.Desc_Cons = {}
+att.Desc_Neutrals = {}
 att.Slot = "ud_glock_mag"
 
 att.AutoStats = true

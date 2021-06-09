@@ -9,7 +9,6 @@ att.SortOrder = 100
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "Twin-drum magazine for the Uzi. Allows for a long period between reloads, but harms the weapon's ergonomics significantly. Prone to jamming."
 att.Desc_Pros = {
-    "pro.magcap"
 }
 att.Desc_Cons = {
     "ud.jam"

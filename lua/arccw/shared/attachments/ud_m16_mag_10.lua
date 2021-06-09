@@ -2,13 +2,9 @@ att.PrintName = "10-Round STANAG Flush Mag"
 att.SortOrder = 10
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "Extremely low capacity magazines designed to comply with firearm laws. Bit cringe innit, bruv?"
-att.Desc_Pros = {
-}
-att.Desc_Cons = {
-    "con.magcap"
-}
-att.Desc_Neutrals = {
-}
+att.Desc_Pros = {}
+att.Desc_Cons = {}
+att.Desc_Neutrals = {}
 att.Slot = "ud_m16_mag"
 
 att.AutoStats = true

@@ -3,7 +3,6 @@ att.SortOrder = 30
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "Extended magazine for the Mini-14. Allows more shots to be taken before reloading."
 att.Desc_Pros = {
-    "pro.magcap"
 }
 att.Desc_Cons = {
 }

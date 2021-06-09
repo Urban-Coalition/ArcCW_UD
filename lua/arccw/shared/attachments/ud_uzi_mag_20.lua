@@ -10,7 +10,6 @@ att.Description = "Low-capacity flush magazine. The lighter load makes the weapo
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
-    "con.magcap"
 }
 att.Desc_Neutrals = {
 }

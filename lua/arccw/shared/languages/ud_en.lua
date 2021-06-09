@@ -2,9 +2,6 @@ L = {}
 
 L["ud.title"] = "Urban Decay"
 
-L["pro.magcap"] = "Increased magazine capacity"
-L["con.magcap"] = "Reduced magazine capacity"
-
 L["ud.auto"] = "Fully automatic fire"
 L["ud.semionly"] = "Semi-automatic fire only"
 L["ud.manual"] = "Weapon becomes manual action"

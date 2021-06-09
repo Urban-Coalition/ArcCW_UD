@@ -521,7 +521,7 @@ SWEP.Attachments = {
     {
         PrintName = "Mag Type",
         Slot = {"ud_mini14_mag"},
-        DefaultAttName = "20-Round Ranch Rifle Mag",
+        DefaultAttName = "20-Round Mag",
     },
     {
         PrintName = "Stock Type",

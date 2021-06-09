@@ -249,7 +249,7 @@ SWEP.AttachmentElements = {
     ["ud_glock_slide_sd"] = {
         VMBodygroups = {{ind = 4, bg = 5}},
         NameChange = "GEN3 Silent Mistress",
-        TrueNameChange = "Glock SD17",
+        TrueNameChange = "Glock 17SD",
         GivesFlags = {"sd"},
         AttPosMods = {
             [4] = {
@@ -732,7 +732,7 @@ SWEP.Attachments = {
     {
         PrintName = "Mag Type",
         Slot = {"ud_glock_mag"},
-        DefaultAttName = "17-Round Standard Mag",
+        DefaultAttName = "17-Round Mag",
     },
     {
         PrintName = "Stock Type",

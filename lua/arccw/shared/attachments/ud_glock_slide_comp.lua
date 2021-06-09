@@ -1,7 +1,8 @@
 att.PrintName = "GEN3 Competition Slide"
+att.AbbrevName = "Competition Slide"
 
 if GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "G17 Competition Slide"
+    att.PrintName = "Glock 17 Competition Slide"
 end
 
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")

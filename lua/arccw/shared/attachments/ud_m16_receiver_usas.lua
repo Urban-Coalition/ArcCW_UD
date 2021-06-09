@@ -1,5 +1,5 @@
 att.PrintName = "AMSAS-12 12G Receiver"
---att.AbbrevName = "Combat Shotgun Receiver"
+att.AbbrevName = "12G Receiver"
 
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = "Total conversion kit that turns the rifle into an automatic combat shotgun."

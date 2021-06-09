@@ -1,5 +1,5 @@
 att.PrintName = "AMPAW-9 9mm Receiver"
---att.AbbrevName = "Pistol Carbine Receiver"
+att.AbbrevName = "9mm Receiver"
 
 if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "R0635 9mm Receiver"

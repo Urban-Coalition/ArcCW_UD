@@ -1,12 +1,13 @@
-att.PrintName = "33-Round G17 Extended Mag"
+att.PrintName = "Glock 33-Round Extended Mag"
+att.AbbrevName = "33-Round Extended Mag"
 
 if !GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "33-Round GEN3 Extended Mag"
+    att.PrintName = "GEN3 33-Round Extended Mag"
 end
 
 att.SortOrder = 33
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
-att.Description = "Extended magazine for the Glock. Allows many more rounds to be fired before reloading, but comes with extra weight."
+att.Description = "Extended stick magazine. Heavier and throws off weapon balance, but does allow you to fire for longer."
 att.Desc_Pros = {}
 att.Desc_Cons = {}
 att.Desc_Neutrals = {}

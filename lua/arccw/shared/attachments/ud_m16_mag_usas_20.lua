@@ -9,6 +9,7 @@ att.SortOrder = -1
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = "Extended drum magazine that offers extra magazine capacity. Almost no legitimate military uses, but makes a fun range toy."
 att.Desc_Pros = {
+    "ud.mag.20"
 }
 att.Desc_Cons = {
 }
@@ -20,6 +21,7 @@ att.AutoStats = true
 att.HideIfBlocked = true
 
 att.Override_ClipSize = 20
+att.Override_ClipSize_SkipAS = true
 
 att.Mult_SightTime = 1.25
 --att.Mult_Recoil = 0.9

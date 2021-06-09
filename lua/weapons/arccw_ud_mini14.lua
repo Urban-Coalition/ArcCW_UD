@@ -119,8 +119,8 @@ SWEP.NPCWeight = 60
 
 SWEP.AccuracyMOA = 2
 SWEP.HipDispersion = 800
-SWEP.MoveDispersion = 400
-SWEP.JumpDispersion = 1200
+SWEP.MoveDispersion = 150
+SWEP.JumpDispersion = 1000
 
 SWEP.Primary.Ammo = "smg1"
 SWEP.MagID = "mini14"
@@ -521,7 +521,7 @@ SWEP.Attachments = {
     {
         PrintName = "Mag Type",
         Slot = {"ud_mini14_mag"},
-        DefaultAttName = "20-Round Ranch Rifle Mag",
+        DefaultAttName = "20-Round Mag",
     },
     {
         PrintName = "Stock Type",

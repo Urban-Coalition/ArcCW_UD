@@ -1,7 +1,8 @@
-att.PrintName = "10-Round G17 Compact Mag"
+att.PrintName = "Glock 10-Round Compact Mag"
+att.AbbrevName = "10-Round Compact Mag"
 
 if !GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "10-Round GEN3 Compact Mag"
+    att.PrintName = "GEN3 10-Round Compact Mag"
 end
 
 att.SortOrder = 10

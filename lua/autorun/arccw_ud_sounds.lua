@@ -1,22 +1,11 @@
 local sadd = sound.Add -- :(
 local ups = util.PrecacheSound -- yeah
+local common = "weapons/arccw_ud/common/"
+local ARC_UD_CM = {}
 
-local ARC_UD_RL = {}
-
--- M16
-ARC_UD_RL["ARC_UD_M16.BoltDrop"] = "m16/boltdrop.ogg"
-ARC_UD_RL["ARC_UD_M16.Chamber"] = "m16/chamber.ogg"
-ARC_UD_RL["ARC_UD_M16.CHBack"] = "m16/chback.ogg"
-ARC_UD_RL["ARC_UD_M16.MagIn"] = "m16/magin.ogg"
-ARC_UD_RL["ARC_UD_M16.MagOut"] = "m16/magout.ogg"
-ARC_UD_RL["ARC_UD_M16.MagTap"] = "m16/magtap.ogg"
-
--- Glock
-ARC_UD_RL["ARC_UD_Glock.Chamber"] = "glock/sliderel.ogg"
-ARC_UD_RL["ARC_UD_Glock.CHBack"] = "glock/sliderel_deact.ogg"
-ARC_UD_RL["ARC_UD_Glock.MagIn"] = "glock/magin.ogg"
-ARC_UD_RL["ARC_UD_Glock.MagOut"] = "glock/magout.ogg"
-ARC_UD_RL["ARC_UD_Glock.MagRelease"] = "glock/magrel.ogg"
+-- Common Sounds
+ARC_UD_CM["ARC_UD_ShellIn"] = {common .. "shotgun_insert_1.ogg", common .. "shotgun_insert_2.ogg", common .. "shotgun_insert_3.ogg"}
+ARC_UD_CM["ARC_UD_Cloth"] = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg"}
 
 local tbl = {channel = CHAN_ITEM, 
 	volume = 1,
@@ -24,7 +13,7 @@ local tbl = {channel = CHAN_ITEM,
 	pitchstart = 92,
 	pitchend = 112}
 
-for k, v in pairs(ARC_UD_RL) do
+for k, v in pairs(ARC_UD_CM) do
 	tbl.name = k
 	tbl.sound = v
 		

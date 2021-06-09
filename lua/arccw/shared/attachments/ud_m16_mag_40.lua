@@ -17,7 +17,7 @@ att.Mult_SightTime = 1.1
 att.Mult_ReloadTime = 1.15
 att.Mult_Sway = 1.5
 
-att.Mult_SpeedMult = 1.025
+att.Mult_SpeedMult = 0.975
 att.Mult_ShootSpeedMult = 0.95
 
 att.ActivateElements = {"ud_m16_40_mag"}

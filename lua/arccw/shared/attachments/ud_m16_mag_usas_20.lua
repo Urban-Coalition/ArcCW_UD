@@ -1,4 +1,5 @@
 att.PrintName = "20-Round AMSAS Drum Mag"
+att.AbbrevName = "20-Round Drum Mag"
 
 if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "20-Round USAR Drum Mag"
@@ -8,7 +9,6 @@ att.SortOrder = -1
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "Extended drum magazine that offers extra magazine capacity. Almost no legitimate military uses, but makes a fun range toy."
 att.Desc_Pros = {
-    "pro.magcap"
 }
 att.Desc_Cons = {
 }

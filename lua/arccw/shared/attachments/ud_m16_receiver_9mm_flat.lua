@@ -72,7 +72,7 @@ att.Hook_GetDistantShootSound = function(wep, sound)
 end
 
 local slotinfo = {
-    [9] = {"20-Round 9mm AMPAW Mag", "20-Round 9mm Uzi Mag", nil},
+    [9] = {"20-Round Mag", "20-Round Mag", nil},
 }
 att.Hook_GetDefaultAttName = function(wep, slot)
     if slotinfo[slot] then

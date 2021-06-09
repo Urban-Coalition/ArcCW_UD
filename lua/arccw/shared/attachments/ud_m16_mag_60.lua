@@ -1,4 +1,5 @@
 att.PrintName = "60-Round STANAG Casket Mag"
+att.AbbrevName = "60-Round Casket Mag"
 att.SortOrder = 60
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "Quad-stacked magazine for the M16. Quite bulky, but provides double the ammo capacity of a typical STANAG magazine. Has a tendency to jam."

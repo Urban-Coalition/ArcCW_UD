@@ -587,7 +587,7 @@ SWEP.Attachments = {
     {
         PrintName = "Mag Type",
         Slot = {"ud_uzi_mag"},
-        DefaultAttName = "32-Round Standard Mag",
+        DefaultAttName = "32-Round Mag",
     },
     {
         PrintName = "Ammo Type",

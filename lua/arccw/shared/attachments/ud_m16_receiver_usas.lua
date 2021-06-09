@@ -86,7 +86,7 @@ end
 local slotinfo = {
     [2] = {"18\" AMSAS Barrel", "18\" USAR Barrel", nil},
     [3] = {"Standard Choke", "Standard Choke", nil},
-    [9] = {"10-Round AMSAS Magazine", "5-Round USAR Magazine", nil},
+    [9] = {"10-Round Mag", "10-Round Mag", nil},
 }
 att.Hook_GetDefaultAttName = function(wep, slot)
     if slotinfo[slot] then

@@ -1,4 +1,5 @@
 att.PrintName = "20-Round Uzi Compact Mag"
+att.AbbrevName = "20-Round Compact Mag"
 
 if !GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "20-Round STAP Compact Mag"

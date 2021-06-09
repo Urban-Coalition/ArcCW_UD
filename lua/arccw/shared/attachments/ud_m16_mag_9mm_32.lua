@@ -1,4 +1,5 @@
 att.PrintName = "32-Round AMSMG Mag"
+att.AbbrevName = "32-Round Mag"
 
 if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "32-Round 9mm AR-15 Mag"

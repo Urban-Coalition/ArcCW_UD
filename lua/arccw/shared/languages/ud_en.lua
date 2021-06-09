@@ -25,7 +25,7 @@ L["ud.dualstage.con"] = "-50% Fire rate for first shot"
 L["ud.operator"] = "-80% Visual recoil"
 L["ud.overload"] = "+1 Magazine capacity"
 L["ud.underload"] = "-14% Magazine capacity"
-L["ud.neverflinch"] = "-100% Shooting movement speed loss"
+L["ud.neverflinch"] = "No shooting movement speed loss"
 
 L["ud.darkrp.cantremove"] = "You can't remove this without a gun license!"
 L["ud.darkrp.cantattach"] = "You need a gun license to use this attachment!"

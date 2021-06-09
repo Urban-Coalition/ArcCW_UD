@@ -1,4 +1,5 @@
 att.PrintName = "16\" Uzi Civilian Barrel"
+att.AbbrevName = "16\" Civilian Barrel"
 
 if !GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "16\" STAP Civilian Barrel"
@@ -16,6 +17,7 @@ att.Desc_Neutrals = {
 att.Slot = "ud_uzi_frame"
 
 att.AutoStats = true
+att.SortOrder = 16
 
 att.Mult_AccuracyMOA = 0.5
 att.Mult_SightTime = 1.25

@@ -315,7 +315,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Barrel",
-        DefaultAttName = "16\" M4 Super 90 SBS Barrel",
+        DefaultAttName = "18.5\" M4 Barrel", --16\" M4 Super 90 SBS Barrel
         Slot = "ud_1014_barrel",
     },
     {

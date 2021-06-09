@@ -1,4 +1,5 @@
 att.PrintName = "4.6\" Uzi Micro Barrel"
+att.AbbrevName = "4.6\" Micro Barrel"
 
 if !GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "4.6\" STAP Turbo Barrel"
@@ -15,6 +16,7 @@ att.Desc_Neutrals = {
 att.Slot = "ud_uzi_frame"
 
 att.AutoStats = true
+att.SortOrder = 4.6
 
 att.Mult_AccuracyMOA = 3
 att.Mult_SightTime = 0.6

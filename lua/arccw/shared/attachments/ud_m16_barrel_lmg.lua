@@ -6,13 +6,9 @@ end
 
 att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
 att.Description = "Heavy duty handguard with built-in bipod and foregrip, sporting improved durability and heat dissipation capabilities for sustained automatic fire."
-att.Desc_Pros = {
-    "ud.bipod"
-}
-att.Desc_Cons = {
-}
-att.Desc_Neutrals = {
-}
+att.Desc_Pros = {}
+att.Desc_Cons = {}
+att.Desc_Neutrals = {}
 att.Slot = "ud_m16_barrel"
 
 att.AutoStats = true

@@ -895,6 +895,14 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     else
         vm:SetBodygroup(8, 0)
     end
+    if wep.Attachments[4].Installed == "ud_m16_receiver_cali" then
+        vm:SetBodygroup(0, 2)
+        if vm:GetBodygroup(1) == 1 then
+            vm:SetBodygroup(1, 4)
+        else
+            vm:SetBodygroup(1, 3)
+        end
+    end
 end
 
 SWEP.Attachments = {

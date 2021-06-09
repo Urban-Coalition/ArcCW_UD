@@ -1,6 +1,6 @@
 att.PrintName = "Slamfire Kit"
 
-att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
+att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = "Reckless removal of trigger safety features allows shells to fire immediately upon being cycled while the trigger is held. This enables rapid \"rack and fire\" behavior similar to old trench guns, but impacts weapon performance."
 att.Desc_Pros = {
     "ud.slam"

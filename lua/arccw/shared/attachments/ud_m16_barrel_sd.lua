@@ -4,7 +4,7 @@ if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "10.5\" M16 SD Barrel"
 end
 
-att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
+att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = "Integrally suppressed short barrel made by hobbyists. Dampens sound effectively, but fires slower and adds to weapon weight."
 att.Desc_Pros = {
     --"ud.auto"

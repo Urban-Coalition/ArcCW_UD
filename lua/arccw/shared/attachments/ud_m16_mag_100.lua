@@ -1,7 +1,7 @@
 att.PrintName = "100-Round STANAG C-Mag"
 att.AbbrevName = "100-Round C-Mag"
 att.SortOrder = 100
-att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
+att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = "Twin-drum magazine compliant with STANAG 4179 dimensions, ideal for suppressive fire. Bulky construction and high ammo capacity substantially increases weight, making the weapon difficult to handle. Prone to feeding failures."
 att.Desc_Pros = {}
 att.Desc_Cons = {

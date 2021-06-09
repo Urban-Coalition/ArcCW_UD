@@ -4,7 +4,7 @@ if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "G17L Long Slide"
 end
 
-att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
+att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = "A somewhat uncommon long polymer slide. Improves precision, but is awkward to handle."
 att.Desc_Pros = {
 }

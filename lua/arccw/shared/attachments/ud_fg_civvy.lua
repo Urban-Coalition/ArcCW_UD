@@ -1,6 +1,6 @@
 att.PrintName = "Civilian Conversion"
 
-att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
+att.Icon = Material("entities/att/arccw_ud_fg_civvy.png", "smooth mips")
 att.Description = "Adapt the gun for use in civilian markets, where fully-automatic firing weapons are usually outlawed."
 att.Desc_Pros = {
 }

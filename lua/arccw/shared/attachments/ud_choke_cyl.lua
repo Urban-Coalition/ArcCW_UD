@@ -1,6 +1,6 @@
 att.PrintName = "Cylinder Choke"
 
-att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
+att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = "A mildly tight shotgun choke. Tightens pellet spread at the cost of straight recoil."
 att.Desc_Pros = {
 }

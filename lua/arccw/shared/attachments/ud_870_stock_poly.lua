@@ -4,7 +4,7 @@ if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "R870 Polymer Stock"
 end
 
-att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
+att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = "Lightweight polymer stock."
 att.Desc_Pros = {
 }

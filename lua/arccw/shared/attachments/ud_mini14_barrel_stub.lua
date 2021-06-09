@@ -1,5 +1,5 @@
 att.PrintName = "15\" Ranch Rifle Stub Barrel"
-att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
+att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.SortOrder = 1
 att.Description = "No, using your hacksaw on the barrel is not gunsmithing."
 att.Desc_Pros = {

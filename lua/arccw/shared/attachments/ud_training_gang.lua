@@ -1,6 +1,6 @@
 att.PrintName = "Homeboy"
 -- BANDIT STYLE IS BACK, BABY
-att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
+att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = "GANGSTAS ROLL UP IN DA HOOD, POP POP POP POP POP NIGGA, I BALL HARD STICK A GLOCK UP IN YOUR FACE NIGGA, DROP DROP DROP DROP DROP GO YOUR HOMIES NIGGA"
 att.Desc_Pros = {
     "ud.homeboy"

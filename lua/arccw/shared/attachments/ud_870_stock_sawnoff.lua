@@ -4,7 +4,7 @@ if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "R870 Sawn-Off Stock"
 end
 
-att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
+att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = "Wooden stock with only a grip remaining. In case you want to roleplay as a bank robber."
 att.Desc_Pros = {
 }

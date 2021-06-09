@@ -1,6 +1,6 @@
 att.PrintName = "20\" Cursed Barrel"
 
-att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
+att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = "WHAT THE FUCK IS THIS?"
 att.Desc_Pros = {
     "????????????"

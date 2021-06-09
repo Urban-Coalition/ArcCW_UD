@@ -1,5 +1,5 @@
 att.PrintName = "8 Shell Tube"
-att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
+att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = "Longer shell tube holding 8 rounds. Increases weapon weight."
 att.Desc_Pros = {
     "pro.magcap"

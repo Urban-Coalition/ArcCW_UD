@@ -5,7 +5,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "16\" STAP Civilian Barrel"
 end
 
-att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
+att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = "Civilian barrel for the Uzi, elongated to fit minimum length requirements. Substantially improves range and recoil, at the cost of prohibiting fully-automatic fire."
 att.Desc_Pros = {
 }

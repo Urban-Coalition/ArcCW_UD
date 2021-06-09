@@ -1,6 +1,6 @@
 att.PrintName = "20\" \"Service Rifle\" Barrel"
 
-att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
+att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = "Standard barrel with custom wooden handguard. Such products are created only by independent gunsmiths from the state of Nevada, and are semi-automatic only due to what seems to be personal preference."
 att.Desc_Pros = {
 }

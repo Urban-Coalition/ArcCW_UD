@@ -1,5 +1,5 @@
 att.PrintName = "Folded Stock"
-att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
+att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = "Fold the stock to improve agility at the cost of recoil control."
 att.Desc_Pros = {
 }

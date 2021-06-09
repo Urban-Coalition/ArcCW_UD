@@ -1,5 +1,5 @@
 att.PrintName = "18\" Ranch Rifle Short Barrel"
-att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
+att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.SortOrder = 5
 att.Description = "Compact barrel for popping close-up varmints. More agile but less accurate."
 att.Desc_Pros = {

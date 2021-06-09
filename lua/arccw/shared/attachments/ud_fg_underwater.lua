@@ -1,6 +1,6 @@
 att.PrintName = "Sealed Bolt"
 
-att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
+att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = "A set of modifications needed to allow the weapon to fire underwater."
 att.Desc_Pros = {
 }

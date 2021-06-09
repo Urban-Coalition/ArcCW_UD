@@ -1,6 +1,6 @@
 att.PrintName = "Binary Trigger"
 
-att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
+att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = "you pull it to fire a shot. you release it to fire a shot. like 2 bullet"
 att.Desc_Pros = {
     "Binary fire"

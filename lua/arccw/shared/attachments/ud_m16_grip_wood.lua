@@ -1,5 +1,5 @@
 att.PrintName = "Wooden Grip"
-att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
+att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = "For a classy look."
 att.Desc_Pros = {
 }

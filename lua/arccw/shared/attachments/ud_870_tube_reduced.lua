@@ -1,5 +1,5 @@
 att.PrintName = "4 Shell Tube"
-att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
+att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = "Shortened shell tube holding 4 rounds. Slightly reduces weapon weight."
 att.Desc_Pros = {
 }

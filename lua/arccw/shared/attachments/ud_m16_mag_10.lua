@@ -1,7 +1,7 @@
 att.PrintName = "10-Round STANAG Flush Mag"
 att.AbbrevName = "10-Round Flush Mag"
 att.SortOrder = 10
-att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
+att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = "Extremely low capacity magazines designed to comply with firearm laws. Bit cringe innit, bruv?"
 att.Desc_Pros = {}
 att.Desc_Cons = {}

@@ -1,6 +1,6 @@
 att.PrintName = "Loading Drills"
 
-att.Icon = Material("entities/att/arccw_ud_tp_loading_drills.png", "smooth")
+att.Icon = Material("entities/att/arccw_ud_tp_loading_drills.png", "smooth mips")
 att.Description = "Every second counts in the heat of battle. Repeated training drills allow you to reload your weapon more quickly."
 att.Desc_Pros = {
 }

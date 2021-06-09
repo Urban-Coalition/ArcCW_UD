@@ -1,6 +1,6 @@
 att.PrintName = "Snapshot"
 
-att.Icon = Material("entities/att/arccw_ud_tp_snapshot.png", "smooth")
+att.Icon = Material("entities/att/arccw_ud_tp_snapshot.png", "smooth mips")
 att.Description = "Your experience with reflex drills allow you to aim down the sights of your weapon more quickly."
 att.Desc_Pros = {
 }

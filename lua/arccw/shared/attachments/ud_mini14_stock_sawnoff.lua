@@ -1,5 +1,5 @@
 att.PrintName = "Sawn-off Stock"
-att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
+att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = "Using your hacksaw on the stock is not gunsmithing either."
 att.Desc_Pros = {
 }

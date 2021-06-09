@@ -1,6 +1,6 @@
 att.PrintName = "Full Stroke"
 
-att.Icon = Material("entities/att/arccw_ud_full_stroke.png", "smooth")
+att.Icon = Material("entities/att/arccw_ud_full_stroke.png", "smooth mips")
 att.Description = "Specialist training with your weapon allow you to cycle the action more quickly after a shot, improving your rate of fire."
 att.Desc_Pros = {
 }

@@ -1,5 +1,5 @@
 att.PrintName = "Wooden Stock"
-att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
+att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = "A solid, non-foldable stock made of wood. Old-fashioned and sturdy, though less compact."
 att.Desc_Pros = {
 }

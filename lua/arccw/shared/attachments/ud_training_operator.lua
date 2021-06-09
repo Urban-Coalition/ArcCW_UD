@@ -1,6 +1,6 @@
 att.PrintName = "Operator"
 
-att.Icon = Material("entities/att/arccw_ud_tp_operator.png", "smooth")
+att.Icon = Material("entities/att/arccw_ud_tp_operator.png", "smooth mips")
 att.Description = "Extensive live fire operations have made your reactions to firearm recoil much less disorienting."
 att.Desc_Pros = {
     "ud.operator"

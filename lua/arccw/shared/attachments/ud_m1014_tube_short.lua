@@ -1,5 +1,5 @@
 att.PrintName = "2 Shell Tube"
-att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
+att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = "WEN THE TOOB IS BEBEY"
 att.Desc_Pros = {}
 att.Desc_Cons = {}

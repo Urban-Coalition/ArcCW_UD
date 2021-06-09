@@ -1,5 +1,5 @@
 att.PrintName = "Flip-up Irons"
-att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
+att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = "A rail-mounted rear sight for flat top receivers."
 att.Desc_Pros = {
 }

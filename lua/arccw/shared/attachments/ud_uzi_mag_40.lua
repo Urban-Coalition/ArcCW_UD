@@ -7,7 +7,7 @@ end
 
 
 att.SortOrder = 40
-att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
+att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = "Extended magazine for the Uzi. Enables slightly longer mag dumps, which may save your life, but the longer mag is more awkward to load."
 att.Desc_Pros = {
 }

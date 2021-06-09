@@ -1,5 +1,5 @@
 att.PrintName = "Polymer Stock"
-att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
+att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = "A lightweight body replacement that improves weapon agility."
 att.Desc_Pros = {
 }

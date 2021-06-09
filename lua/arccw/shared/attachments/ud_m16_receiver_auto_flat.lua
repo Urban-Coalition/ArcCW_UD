@@ -6,7 +6,7 @@ end
 
 att.Description = "A receiver that allows automatic fire. Comes in semi-auto-safe configuration."
 
-att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
+att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Desc_Pros = {
     "ud.auto",
     "ud.flattop"

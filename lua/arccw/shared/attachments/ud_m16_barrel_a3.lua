@@ -1,5 +1,5 @@
 att.PrintName = "20\" Auto M16A3 Barrel"
-att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
+att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = "Visually and functionally identical to the M16A2, this barrel and receiver is custom modified for automatic fire. As it is a hand-made reproduction of the A3, it suffers from lower cyclic rate and worse precision."
 att.Desc_Pros = {
     "ud.auto"

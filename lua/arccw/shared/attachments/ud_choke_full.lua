@@ -1,6 +1,6 @@
 att.PrintName = "Full Choke"
 
-att.Icon = Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth")
+att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = "A very tight choke for shotguns, noticably tightening spread. However, it tends to offset aiming."
 att.Desc_Pros = {
 }

@@ -960,7 +960,6 @@ SWEP.Attachments = {
             vpos = Vector(0, 1.5, 12),
             vang = Angle(90, 0, -90),
         },
-        VMScale = Vector(1.25, 1.25, 1.25),
         InstalledEles = {"ud_m16_rail_fg"},
         ExcludeFlags = {"m16_lmg"},
     },

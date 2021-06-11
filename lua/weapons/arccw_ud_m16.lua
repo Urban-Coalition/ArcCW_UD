@@ -553,8 +553,8 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0.4,
         LHIKEaseIn = 0.4,
-        LHIKEaseOut = 0.15,
-        LHIKOut = 0.5,
+        LHIKEaseOut = 0.5,
+        LHIKOut = 0.7,
         SoundTable = {
             {s = common .. "cloth_1.ogg",  t = 0.0},
             {s = path .. "magout.ogg", 	 t = 0.2},
@@ -879,6 +879,9 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
             vm:SetBodygroup(10, 0)
             vm:SetBodygroup(3, 0)
         end
+    end
+    if wep.Attachments[2].Installed == "ud_m16_barrel_tactical" then
+        vm:SetBodygroup(7, 0)
     end
     if wep.Attachments[6].Installed then
         -- Tactical clamp

@@ -6,7 +6,7 @@ if GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
-att.Description = "3 round burst conversion, custom-made and used by various 'agents' and counter-terrorism units around the world."
+att.Description = "3 round burst conversion, custom-made and used by various counter-terrorism units and 'agents' around the world."
 att.Desc_Pros = {
     "ud.3burst",
 }

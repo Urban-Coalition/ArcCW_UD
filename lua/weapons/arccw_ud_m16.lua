@@ -553,8 +553,8 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0.4,
         LHIKEaseIn = 0.4,
-        LHIKEaseOut = 0.15,
-        LHIKOut = 0.5,
+        LHIKEaseOut = 0.5,
+        LHIKOut = 0.7,
         SoundTable = {
             {s = common .. "cloth_1.ogg",  t = 0.0},
             {s = path .. "magout.ogg", 	 t = 0.2},
@@ -880,6 +880,9 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
             vm:SetBodygroup(3, 0)
         end
     end
+    if wep.Attachments[2].Installed == "ud_m16_barrel_tactical" then
+        vm:SetBodygroup(7, 0)
+    end
     if wep.Attachments[6].Installed then
         -- Tactical clamp
         if barrel == "ud_m16_barrel_stub" then
@@ -894,6 +897,14 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         end
     else
         vm:SetBodygroup(8, 0)
+    end
+    if wep.Attachments[4].Installed == "ud_m16_receiver_cali" then
+        vm:SetBodygroup(0, 2)
+        if vm:GetBodygroup(1) == 1 then
+            vm:SetBodygroup(1, 4)
+        else
+            vm:SetBodygroup(1, 3)
+        end
     end
 end
 
@@ -952,7 +963,6 @@ SWEP.Attachments = {
             vpos = Vector(0, 1.5, 12),
             vang = Angle(90, 0, -90),
         },
-        VMScale = Vector(1.25, 1.25, 1.25),
         InstalledEles = {"ud_m16_rail_fg"},
         ExcludeFlags = {"m16_lmg"},
     },

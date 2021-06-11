@@ -5,6 +5,7 @@ L["ud.title"] = "Urban Decay"
 L["ud.mag.20"] = "20-Round magazine capacity"
 
 L["ud.auto"] = "Fully automatic fire"
+L["ud.3burst"] = "3-round burst fire"
 L["ud.semionly"] = "Semi-automatic fire only"
 L["ud.manual"] = "Weapon becomes manual action"
 L["ud.nofs"] = "Inaccurate without optics"

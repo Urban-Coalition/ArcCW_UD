@@ -37,3 +37,4 @@ att.GivesFlags = {"m16_lmg"}
 att.LHIK = true
 
 att.Model = "models/weapons/arccw/atts/lmg_lhik.mdl"
+att.ModelOffset = Vector(2.2, 0, 0)

@@ -1,4 +1,5 @@
 att.PrintName = "GEN3 Op. CS Slide"
+att.AbbrevName = "Op. CS Slide"
 
 if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "G18C Op. CS Slide"

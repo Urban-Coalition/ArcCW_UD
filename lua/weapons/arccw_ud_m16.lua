@@ -260,9 +260,13 @@ SWEP.AttachmentElements = {
                 vpos = Vector(-0.03, -0.05, -6.5),
                 vang = Angle(90, 0, -90),
             },
-            [6] = {
-                vpos = Vector(0, 0.8, 20),
+            [5] = {
+                vpos = Vector(0, 1.25, 12),
                 vang = Angle(90, 0, -90),
+            },
+            [6] = {
+                vpos = Vector(1.25, 0, 15),
+                vang = Angle(90, 0, 0),
             },
         }
     },
@@ -879,6 +883,9 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
             vm:SetBodygroup(10, 0)
             vm:SetBodygroup(3, 0)
         end
+    end
+    if wep:GetBuff_Override("TrueFlatTop") then
+        vm:SetBodygroup(10,0)
     end
     if wep.Attachments[2].Installed == "ud_m16_barrel_tactical" then
         vm:SetBodygroup(7, 0)

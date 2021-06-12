@@ -1,6 +1,6 @@
 att.PrintName = "Collapsed Stock"
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
-att.Description = "Push in the adjustable stock, makes the weapon easier to use on the move but less stable."
+att.Description = "Pushing in the collapsable stock makes the weapon significantly shorter, allowing for easier use around corners and making it easier on the move at the cost of less stability."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
@@ -19,6 +19,6 @@ att.Mult_SightedSpeedMult = 1.1
 att.Mult_ShootSpeedMult = 1.1
 
 att.Mult_Sway = 1.5
-att.Add_BarrelLength = -2
+att.Add_BarrelLength = -8
 
 att.ActivateElements = {"ud_autoshotgun_stock_in"}

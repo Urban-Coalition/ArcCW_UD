@@ -22,4 +22,6 @@ att.Mult_HipDispersion = 0.85
 att.Mult_Recoil = 1.1
 att.Mult_RecoilSide = 1.25
 
+att.Add_BarrelLength = -4
+
 att.ActivateElements = {"ud_m16_stock_m4"}

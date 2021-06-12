@@ -233,21 +233,36 @@ SWEP.Hook_NameChange = function(wep, name)
         if k <= 2 and k > 0 then
             model = "XM"
             alt = "4"
+            if wep:GetBuff_Override("SDBarrel") then
+                alt = alt .. "-S"
+            end
             if flat then
                 model = "M"
                 alt = "4 Carbine"
+                if wep:GetBuff_Override("SDBarrel") then
+                    alt = "4-S"
+                end
             end
         end
         if rec == 1 then
             model = "M"
             alt = "16A3"
-            if k <= 2 and k > 0 then
+            if k == 1 then
                 alt = "727"
+                if flat then
+                    alt = "4A1"
+                end
+            end
+            if k == 2 then
+                alt = "733"
                 if flat then
                     alt = "4A1"
                     if wep:GetBuff_Override("SDBarrel") then
                         alt = alt .. "-S"
                     end
+                end
+                if wep:GetBuff_Override("SDBarrel") then
+                    alt = alt .. "-S"
                 end
             end
         elseif rec == 2 then
@@ -266,6 +281,9 @@ SWEP.Hook_NameChange = function(wep, name)
         if k == 4 then
             model = "Service"
             alt = " Rifle"
+            if rec == 2 then
+                alt = " SMG"
+            end
         end
         if k == 5 then
             model = "Service"
@@ -960,6 +978,7 @@ SWEP.Animations = {
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local barrel = wep.Attachments[2].Installed
+    local flipup = wep.Attachments[14].Installed == "ud_m16_rs"
     if wep.Attachments[1].Installed then
         -- Optic rail
         if vm:GetBodygroup(1) == 1 then
@@ -976,7 +995,8 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
             vm:SetBodygroup(3, 0)
         end
     end
-    if wep:GetBuff_Override("TrueFlatTop") then
+    local trueflat = wep:GetBuff_Override("TrueFlatTop")
+    if trueflat then
         vm:SetBodygroup(10,0)
     end
     if wep.Attachments[2].Installed == "ud_m16_barrel_tactical" then
@@ -1000,9 +1020,19 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     if wep.Attachments[4].Installed == "ud_m16_receiver_cali" then
         vm:SetBodygroup(0, 2)
         if vm:GetBodygroup(1) == 1 then
-            vm:SetBodygroup(1, 4)
+            vm:SetBodygroup(1, 5)
         else
+            vm:SetBodygroup(1, 4)
+        end
+    end
+    if wep.Attachments[4].Installed == "ud_m16_receiver_usas" then
+        vm:SetBodygroup(0, 1)
+        if flipup then
             vm:SetBodygroup(1, 3)
+            vm:SetBodygroup(10, 1)
+        elseif trueflat then
+            vm:SetBodygroup(1, 3)
+            vm:SetBodygroup(10, 0)
         end
     end
 end

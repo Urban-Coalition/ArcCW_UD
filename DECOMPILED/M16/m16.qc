@@ -10,6 +10,7 @@ $bodygroup "1" {
 	studio "m16_upper_ch.smd"
 	studio "m16_upper_flat.smd"
 	studio "m16_upper_usas.smd"
+	studio "m16_upper_usas_flat.smd"
 	studio "m16_upper_ch_tosser.smd"
 	studio "m16_upper_flat_tosser.smd"
 }

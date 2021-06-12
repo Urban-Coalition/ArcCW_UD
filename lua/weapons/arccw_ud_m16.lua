@@ -94,7 +94,7 @@ SWEP.Num = 1
 SWEP.Firemodes = {
     {
         Mode = -3,
-        RunAwayBurst = true,
+        RunawayBurst = true,
     },
     {
         Mode = 1,
@@ -507,10 +507,12 @@ SWEP.AttachmentElements = {
             {ind = 2, bg = 6}
         },
         AttPosMods = {
+            --[[
             [1] = {
                 vpos = Vector(0, -4, 3),
                 vang = Angle(90, 0, -90),
             },
+            ]]
             [6] = {
                 vpos = Vector(0, 0.8, 20),
                 vang = Angle(90, 0, -90),
@@ -984,9 +986,9 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         if vm:GetBodygroup(1) == 1 then
             -- Flat top (ud_m16_upper_flat)
             vm:SetBodygroup(10, 0)
-        else
+        --else
             -- Carry handle
-            vm:SetBodygroup(3, 1)
+            --vm:SetBodygroup(3, 1)
         end
     else
         if vm:GetBodygroup(1) == 0 then
@@ -1027,10 +1029,15 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     end
     if wep.Attachments[4].Installed == "ud_m16_receiver_usas" then
         vm:SetBodygroup(0, 1)
+        if vm:GetBodygroup(1) == 1 then
+            vm:SetBodygroup(1, 3)
+        else
+            vm:SetBodygroup(1, 2)
+        end
         if flipup then
             vm:SetBodygroup(1, 3)
             vm:SetBodygroup(10, 1)
-        elseif trueflat then
+        elseif trueflat or wep.Attachments[1].Installed then
             vm:SetBodygroup(1, 3)
             vm:SetBodygroup(10, 0)
         end

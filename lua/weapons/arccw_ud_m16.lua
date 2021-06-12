@@ -195,6 +195,98 @@ SWEP.BulletBones = {
     [2] = "m16_bullets1",    [3] = "m16_bullets2"
 }
 
+SWEP.Hook_NameChange = function(wep, name)
+
+    local barrel = 0
+    local barrelatt = wep.Attachments[2].Installed
+
+    if barrelatt == "ud_m16_barrel_m4" then barrel = 1
+    elseif barrelatt == "ud_m16_barrel_tactical" then barrel = 1
+    elseif barrelatt == "ud_m16_barrel_cqbr" then barrel = 2
+    elseif barrelatt == "ud_m16_barrel_sd" then barrel = 2
+    elseif barrelatt == "ud_m16_barrel_fpw" then barrel = 3
+    elseif barrelatt == "ud_m16_barrel_wood" then barrel = 4
+    elseif barrelatt == "ud_m16_barrel_wood_short" then barrel = 5
+    elseif barrelatt == "ud_m16_barrel_stub" then barrel = 6
+    elseif barrelatt == "ud_m16_barrel_lmg" then barrel = 8
+    end
+
+    local rec = 0
+    local recatt = wep.Attachments[4].Installed
+
+    -- "ud_m16_receiver_9mm" "ud_m16_receiver_auto" "ud_m16_receiver_cali" "ud_m16_receiver_usas"
+    if recatt == "ud_m16_receiver_auto" then rec = 1
+    elseif recatt == "ud_m16_receiver_9mm" then rec = 2
+    elseif recatt == "ud_m16_receiver_cali" then rec = 3
+    elseif recatt == "ud_m16_receiver_usas" then rec = 4
+    end
+
+    local flat = wep.Attachments[1].Installed or wep.Attachments[14].Installed
+
+    model = "M"
+    alt = "16A2"
+
+    for k = barrel, barrel do
+        if flat then
+            alt = "16A4"
+        end
+        if k <= 2 and k > 0 then
+            model = "XM"
+            alt = "4"
+            if flat then
+                model = "M"
+                alt = "4 Carbine"
+            end
+        end
+        if rec == 1 then
+            model = "M"
+            alt = "16A3"
+            if k <= 2 and k > 0 then
+                alt = "727"
+                if flat then
+                    alt = "4A1"
+                    if wep:GetBuff_Override("SDBarrel") then
+                        alt = alt .. "-S"
+                    end
+                end
+            end
+        elseif rec == 2 then
+            model = "Colt "
+            alt = "SMG"
+        elseif rec == 3 then
+            model = "AR"
+            alt = "-15"
+        elseif rec == 4 then
+            model = "USAS"
+            alt = "-12"
+        end
+        if k == 3 then
+            alt = "231 FPW"
+        end
+        if k == 4 then
+            model = "Service"
+            alt = " Rifle"
+        end
+        if k == 5 then
+            model = "Service"
+            alt = " Carbine"
+            if rec == 2 then
+                alt = " SMG"
+            end
+        end
+        if k == 6 then
+            alt = "4 Stub"
+        end
+        if k == 8 then
+            alt = "16 LSW"
+        end
+    end
+
+    if GetConVar("arccw_truenames"):GetBool() then
+        return model .. alt
+    else return "AMCAR" end
+end
+
 SWEP.DefaultBodyGroups = "0000000000000"
 
 SWEP.AttachmentElements = {

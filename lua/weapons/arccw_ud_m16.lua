@@ -221,13 +221,15 @@ SWEP.Hook_NameChange = function(wep, name)
     elseif recatt == "ud_m16_receiver_usas" then rec = 4
     end
 
-    local flat = wep.Attachments[1].Installed or wep.Attachments[14].Installed
+    local flat
+    if wep.Attachments[1].Installed or wep.Attachments[14].Installed then flat = 1 end
+    if wep:GetBuff_Override("KeepRetro") then flat = 0 end
 
     model = "M"
     alt = "16A2"
 
     for k = barrel, barrel do
-        if flat then
+        if flat == 1 then
             alt = "16A4"
         end
         if k <= 2 and k > 0 then
@@ -236,7 +238,7 @@ SWEP.Hook_NameChange = function(wep, name)
             if wep:GetBuff_Override("SDBarrel") then
                 alt = alt .. "-S"
             end
-            if flat then
+            if flat == 1 then
                 model = "M"
                 alt = "4 Carbine"
                 if wep:GetBuff_Override("SDBarrel") then
@@ -249,13 +251,13 @@ SWEP.Hook_NameChange = function(wep, name)
             alt = "16A3"
             if k == 1 then
                 alt = "727"
-                if flat then
+                if flat == 1 then
                     alt = "4A1"
                 end
             end
             if k == 2 then
                 alt = "733"
-                if flat then
+                if flat == 1 then
                     alt = "4A1"
                     if wep:GetBuff_Override("SDBarrel") then
                         alt = alt .. "-S"

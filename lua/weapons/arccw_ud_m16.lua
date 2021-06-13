@@ -94,7 +94,7 @@ SWEP.Num = 1
 SWEP.Firemodes = {
     {
         Mode = -3,
-        RunAwayBurst = true,
+        RunawayBurst = true,
     },
     {
         Mode = 1,
@@ -143,7 +143,7 @@ SWEP.ShootSpeedMult = 0.9
 
 -- Length --
 
-SWEP.BarrelLength = 32
+SWEP.BarrelLength = 48
 SWEP.ExtraSightDist = 7
 
 -- Ironsights / Customization / Poses --
@@ -194,6 +194,118 @@ SWEP.DistantShootSound = path .. "fire_dist.ogg"
 SWEP.BulletBones = {
     [2] = "m16_bullets1",    [3] = "m16_bullets2"
 }
+
+SWEP.Hook_NameChange = function(wep, name)
+
+    local barrel = 0
+    local barrelatt = wep.Attachments[2].Installed
+
+    if barrelatt == "ud_m16_barrel_m4" then barrel = 1
+    elseif barrelatt == "ud_m16_barrel_tactical" then barrel = 1
+    elseif barrelatt == "ud_m16_barrel_cqbr" then barrel = 2
+    elseif barrelatt == "ud_m16_barrel_sd" then barrel = 2
+    elseif barrelatt == "ud_m16_barrel_fpw" then barrel = 3
+    elseif barrelatt == "ud_m16_barrel_wood" then barrel = 4
+    elseif barrelatt == "ud_m16_barrel_wood_short" then barrel = 5
+    elseif barrelatt == "ud_m16_barrel_stub" then barrel = 6
+    elseif barrelatt == "ud_m16_barrel_lmg" then barrel = 8
+    end
+
+    local rec = 0
+    local recatt = wep.Attachments[4].Installed
+
+    -- "ud_m16_receiver_9mm" "ud_m16_receiver_auto" "ud_m16_receiver_cali" "ud_m16_receiver_usas"
+    if recatt == "ud_m16_receiver_auto" then rec = 1
+    elseif recatt == "ud_m16_receiver_9mm" then rec = 2
+    elseif recatt == "ud_m16_receiver_cali" then rec = 3
+    elseif recatt == "ud_m16_receiver_usas" then rec = 4
+    end
+
+    local flat
+    if wep.Attachments[1].Installed or wep.Attachments[14].Installed then flat = 1 end
+    if wep:GetBuff_Override("KeepRetro") then flat = 0 end
+
+    model = "M"
+    alt = "16A2"
+
+    for k = barrel, barrel do
+        if flat == 1 then
+            alt = "16A4"
+        end
+        if k <= 2 and k > 0 then
+            model = "XM"
+            alt = "4"
+            if wep:GetBuff_Override("SDBarrel") then
+                alt = alt .. "-S"
+            end
+            if flat == 1 then
+                model = "M"
+                alt = "4 Carbine"
+                if wep:GetBuff_Override("SDBarrel") then
+                    alt = "4-S"
+                end
+            end
+        end
+        if rec == 1 then
+            model = "M"
+            alt = "16A3"
+            if k == 1 then
+                alt = "727"
+                if flat == 1 then
+                    alt = "4A1"
+                end
+            end
+            if k == 2 then
+                alt = "733"
+                if flat == 1 then
+                    alt = "4A1"
+                    if wep:GetBuff_Override("SDBarrel") then
+                        alt = alt .. "-S"
+                    end
+                end
+                if wep:GetBuff_Override("SDBarrel") then
+                    alt = alt .. "-S"
+                end
+            end
+        elseif rec == 2 then
+            model = "Colt "
+            alt = "SMG"
+        elseif rec == 3 then
+            model = "AR"
+            alt = "-15"
+        elseif rec == 4 then
+            model = "USAS"
+            alt = "-12"
+        end
+        if k == 3 then
+            alt = "231 FPW"
+        end
+        if k == 4 then
+            model = "Service"
+            alt = " Rifle"
+            if rec == 2 then
+                alt = " SMG"
+            end
+        end
+        if k == 5 then
+            model = "Service"
+            alt = " Carbine"
+            if rec == 2 then
+                alt = " SMG"
+            end
+        end
+        if k == 6 then
+            alt = "4 Stub"
+        end
+        if k == 8 then
+            alt = "16 LSW"
+        end
+    end
+
+    if GetConVar("arccw_truenames"):GetBool() then
+        return model .. alt
+    else return "AMCAR" end
+end
 
 SWEP.DefaultBodyGroups = "0000000000000"
 
@@ -260,9 +372,13 @@ SWEP.AttachmentElements = {
                 vpos = Vector(-0.03, -0.05, -6.5),
                 vang = Angle(90, 0, -90),
             },
-            [6] = {
-                vpos = Vector(0, 0.8, 20),
+            [5] = {
+                vpos = Vector(0, 1.25, 12),
                 vang = Angle(90, 0, -90),
+            },
+            [6] = {
+                vpos = Vector(1.25, 0, 15),
+                vang = Angle(90, 0, 0),
             },
         }
     },
@@ -393,15 +509,25 @@ SWEP.AttachmentElements = {
             {ind = 2, bg = 6}
         },
         AttPosMods = {
+            --[[
             [1] = {
                 vpos = Vector(0, -4, 3),
                 vang = Angle(90, 0, -90),
             },
+            ]]
             [6] = {
                 vpos = Vector(0, 0.8, 20),
                 vang = Angle(90, 0, -90),
             },
         }
+    },
+    ["ud_m16_upper_charm"] = {
+        AttPosMods = {
+            [1] = {
+                vpos = Vector(0, -4, 3),
+                vang = Angle(90, 0, -90),
+            },
+        },
     },
 }
 
@@ -553,8 +679,8 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0.4,
         LHIKEaseIn = 0.4,
-        LHIKEaseOut = 0.5,
-        LHIKOut = 0.7,
+        LHIKEaseOut = 0.3,
+        LHIKOut = 0.5,
         SoundTable = {
             {s = common .. "cloth_1.ogg",  t = 0.0},
             {s = path .. "magout.ogg", 	 t = 0.2},
@@ -573,8 +699,8 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0.4,
         LHIKEaseIn = 0.4,
-        LHIKEaseOut = 0.15,
-        LHIKOut = 0.4,
+        LHIKEaseOut = 0.3,
+        LHIKOut = 0.5,
         SoundTable = {
             {s = common .. "cloth_1.ogg",  t = 0.0},
             {s = path .. "magout.ogg", 	 t = 0.2},
@@ -597,7 +723,7 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0.4,
         LHIKEaseIn = 0.4,
-        LHIKEaseOut = 0.15,
+        LHIKEaseOut = 0.3,
         LHIKOut = 0.5,
         SoundTable = {
             {s = common .. "cloth_1.ogg",  t = 0.0},
@@ -617,8 +743,8 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0.4,
         LHIKEaseIn = 0.4,
-        LHIKEaseOut = 0.15,
-        LHIKOut = 0.4,
+        LHIKEaseOut = 0.3,
+        LHIKOut = 0.5,
         SoundTable = {
             {s = common .. "cloth_1.ogg",  t = 0.0},
             {s = path .. "magout.ogg", 	 t = 0.2},
@@ -641,8 +767,8 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0.4,
         LHIKEaseIn = 0.4,
-        LHIKEaseOut = 0.15,
-        LHIKOut = 0.5,
+        LHIKEaseOut = 0.4,
+        LHIKOut = 0.6,
         SoundTable = {
             {s = common .. "cloth_1.ogg",  t = 0.0},
             {s = path .. "magout.ogg", 	 t = 0.2},
@@ -661,8 +787,8 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0.4,
         LHIKEaseIn = 0.4,
-        LHIKEaseOut = 0.15,
-        LHIKOut = 0.4,
+        LHIKEaseOut = 0.3,
+        LHIKOut = 0.5,
         SoundTable = {
             {s = common .. "cloth_1.ogg",  t = 0.0},
             {s = path .. "magout.ogg", 	 t = 0.2},
@@ -685,8 +811,8 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0.4,
         LHIKEaseIn = 0.4,
-        LHIKEaseOut = 0.15,
-        LHIKOut = 0.4,
+        LHIKEaseOut = 0.3,
+        LHIKOut = 0.5,
         SoundTable = {
             {s = common .. "cloth_1.ogg",  t = 0.0},
             {s = path .. "magout.ogg", 	 t = 0.2},
@@ -705,8 +831,8 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0.4,
         LHIKEaseIn = 0.4,
-        LHIKEaseOut = 0.15,
-        LHIKOut = 0.4,
+        LHIKEaseOut = 0.3,
+        LHIKOut = 0.5,
         SoundTable = {
             {s = common .. "cloth_1.ogg",  t = 0.0},
             {s = path .. "magout.ogg", 	 t = 0.2},
@@ -728,9 +854,9 @@ SWEP.Animations = {
         LastClip1OutTime = 0.9,
         LHIK = true,
         LHIKIn = 0.3,
-        LHIKEaseIn = 0.4,
-        LHIKEaseOut = 0.15,
-        LHIKOut = 0.4,
+        LHIKEaseIn = 0.5,
+        LHIKEaseOut = 0.4,
+        LHIKOut = 0.5,
         SoundTable = {
             {s = common .. "cloth_1.ogg",  t = 0.0},
             {s = path .. "magout.ogg", 	 t = 0.2},
@@ -751,8 +877,8 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0.3,
         LHIKEaseIn = 0.4,
-        LHIKEaseOut = 0.15,
-        LHIKOut = 0.4,
+        LHIKEaseOut = 0.4,
+        LHIKOut = 0.5,
         SoundTable = {
             {s = common .. "cloth_1.ogg",  t = 0.0},
             {s = path .. "magout.ogg", 	 t = 0.2},
@@ -864,14 +990,15 @@ SWEP.Animations = {
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local barrel = wep.Attachments[2].Installed
+    local flipup = wep.Attachments[14].Installed == "ud_m16_rs"
     if wep.Attachments[1].Installed then
         -- Optic rail
         if vm:GetBodygroup(1) == 1 then
             -- Flat top (ud_m16_upper_flat)
             vm:SetBodygroup(10, 0)
-        else
+        --else
             -- Carry handle
-            vm:SetBodygroup(3, 1)
+            --vm:SetBodygroup(3, 1)
         end
     else
         if vm:GetBodygroup(1) == 0 then
@@ -879,6 +1006,10 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
             vm:SetBodygroup(10, 0)
             vm:SetBodygroup(3, 0)
         end
+    end
+    local trueflat = wep:GetBuff_Override("TrueFlatTop")
+    if trueflat then
+        vm:SetBodygroup(10,0)
     end
     if wep.Attachments[2].Installed == "ud_m16_barrel_tactical" then
         vm:SetBodygroup(7, 0)
@@ -901,9 +1032,39 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     if wep.Attachments[4].Installed == "ud_m16_receiver_cali" then
         vm:SetBodygroup(0, 2)
         if vm:GetBodygroup(1) == 1 then
-            vm:SetBodygroup(1, 4)
+            vm:SetBodygroup(1, 5)
         else
+            vm:SetBodygroup(1, 4)
+        end
+    end
+    if wep.Attachments[4].Installed == "ud_m16_receiver_usas" then
+        vm:SetBodygroup(0, 1)
+        if vm:GetBodygroup(1) == 1 then
             vm:SetBodygroup(1, 3)
+        else
+            vm:SetBodygroup(1, 2)
+        end
+        if flipup then
+            vm:SetBodygroup(1, 3)
+            vm:SetBodygroup(10, 1)
+        elseif trueflat or wep.Attachments[1].Installed then
+            vm:SetBodygroup(1, 3)
+            vm:SetBodygroup(10, 0)
+        end
+    end
+    if wep:GetBuff_Override("KeepRetro") then
+        vm:SetBodygroup(0,0)
+        vm:SetBodygroup(1,0)
+        if wep.Attachments[1].Installed then
+            vm:SetBodygroup(3, 1)
+        end
+        if wep.Attachments[4].Installed == "ud_m16_receiver_usas" then
+            vm:SetBodygroup(0, 1)
+            vm:SetBodygroup(1, 2)
+        end
+        if wep.Attachments[4].Installed == "ud_m16_receiver_cali" then
+            vm:SetBodygroup(0, 2)
+            vm:SetBodygroup(1, 4)
         end
     end
 end
@@ -1008,7 +1169,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Charm",
-        Slot = {"charm", "fml_charm"},
+        Slot = {"charm", "fml_charm", "ud_m16_charm"},
         FreeSlot = true,
         Bone = "m16_parent",
         Offset = {

@@ -23,7 +23,7 @@ att.Mult_HolsterTime = 0.75
 att.Mult_Recoil = 2
 att.Mult_RecoilSide = 3
 
-att.Add_BarrelLength = -4
+att.Add_BarrelLength = -12
 att.Mult_Sway = 3
 
 att.ActivateElements = {"ud_autoshotgun_stock_buffer"}

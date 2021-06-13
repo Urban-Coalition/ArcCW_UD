@@ -10,6 +10,7 @@ $bodygroup "1" {
 	studio "m16_upper_ch.smd"
 	studio "m16_upper_flat.smd"
 	studio "m16_upper_usas.smd"
+	studio "m16_upper_usas_flat.smd"
 	studio "m16_upper_ch_tosser.smd"
 	studio "m16_upper_flat_tosser.smd"
 }
@@ -34,20 +35,20 @@ $bodygroup "3" {
 }
 
 $bodygroup "4" {
-	studio "m16_barrel.smd"
-	studio "m16_barrel_m4.smd"
-	studio "m16_barrel_cqbr.smd"
-	studio "m16_barrel_fpw.smd"
-	studio "m16_barrel_wood.smd"
-	studio "m16_barrel_wood_short.smd"
-	studio "m16_barrel_stub.smd"
-	studio "m16_barrel_usas.smd"
-	studio "m16_barrel_lmg.smd"
-	studio "m16_barrel_sd.smd"
-	studio "m16_barrel_exposed.smd"
-	studio "m16_barrel_cursed.smd"
-	studio "m16_barrel_tactical.smd"
-	studio "m16_barrel_smg.smd"
+	studio "m16_barrel.smd" //0
+	studio "m16_barrel_m4.smd" //1
+	studio "m16_barrel_cqbr.smd" //2
+	studio "m16_barrel_fpw.smd" //3
+	studio "m16_barrel_wood.smd" //4
+	studio "m16_barrel_wood_short.smd" //5
+	studio "m16_barrel_stub.smd" //6
+	studio "m16_barrel_usas.smd" //7
+	studio "m16_barrel_lmg.smd" //8
+	studio "m16_barrel_sd.smd" //9
+	studio "m16_barrel_exposed.smd" //10
+	studio "m16_barrel_cursed.smd" //11
+	studio "m16_barrel_tactical.smd" //12
+	studio "m16_barrel_smg.smd" //13
 }
 
 $bodygroup "5" {

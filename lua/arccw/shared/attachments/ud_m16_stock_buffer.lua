@@ -20,4 +20,6 @@ att.Mult_Recoil = 1.5
 att.Mult_RecoilSide = 1.5
 att.Mult_Sway = 2
 
+att.Add_BarrelLength = -8
+
 att.ActivateElements = {"ud_m16_stock_buffer"}

@@ -135,7 +135,7 @@ SWEP.ShootSpeedMult = 0.75
 
 -- Length --
 
-SWEP.BarrelLength = 32
+SWEP.BarrelLength = 48
 SWEP.ExtraSightDist = 20
 
 -- Ironsights / Customization / Poses --
@@ -146,7 +146,7 @@ SWEP.HoldtypeSights = "ar2"
 
 SWEP.IronSightStruct = {
      Pos = Vector(-3.05, -1, 1.8),
-     Ang = Angle(0, 0, 0),
+     Ang = Angle(-0.4, 0, 0),
      Magnification = 1.1,
      SwitchToSound = "",
 }

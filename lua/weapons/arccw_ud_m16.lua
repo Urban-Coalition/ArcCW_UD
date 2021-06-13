@@ -373,7 +373,7 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [3] = {
-                vpos = Vector(-0.03, -0.05, -6.5),
+                vpos = Vector(0, -0.35, 22.75),
                 vang = Angle(90, 0, -90),
             },
             [5] = {
@@ -393,10 +393,6 @@ SWEP.AttachmentElements = {
             {ind = 11, bg = 8}
         },
         AttPosMods = {
-            [3] = {
-                vpos = Vector(-0.03, -0.05, 0),
-                vang = Angle(90, 0, -90),
-            },
             [5] = {
                 vpos = Vector(0, 1.25, 12),
                 vang = Angle(90, 0, -90),
@@ -415,7 +411,7 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [3] = {
-                vpos = Vector(-0.03, -0.05, -6.5),
+                vpos = Vector(0, -0.35, 25.5),
                 vang = Angle(90, 0, -90),
             },
             [6] = {
@@ -431,7 +427,23 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [3] = {
-                vpos = Vector(-0.03, -0.05, -12),
+                vpos = Vector(0, -0.35, 20.5),
+                vang = Angle(90, 0, -90),
+            },
+            [6] = {
+                vpos = Vector(0, 0.8, 20),
+                vang = Angle(90, 0, -90),
+            },
+        }
+    },
+    ["ud_m16_barrel_smg"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 14},
+            {ind = 11, bg = 10}
+        },
+        AttPosMods = {
+            [3] = {
+                vpos = Vector(0, -0.35, 15.75),
                 vang = Angle(90, 0, -90),
             },
             [6] = {
@@ -455,7 +467,7 @@ SWEP.AttachmentElements = {
         ]]
         AttPosMods = {
             [3] = {
-                vpos = Vector(-0.03, -0.05, -10),
+                vpos = Vector(0, -0.35, 25.75),
                 vang = Angle(90, 0, -90),
             },
             [6] = {
@@ -471,7 +483,7 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [3] = {
-                vpos = Vector(-0.03, -0.05, -2),
+                vpos = Vector(0, -0.35, 30.95),
                 vang = Angle(90, 0, -90),
             }
         }
@@ -483,7 +495,7 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [3] = {
-                vpos = Vector(-0.03, -0.05, -7.5),
+                vpos = Vector(0, -0.35, 25),
                 vang = Angle(90, 0, -90),
             },
             [6] = {
@@ -504,7 +516,7 @@ SWEP.AttachmentElements = {
         ]]
         AttPosMods = {
             [3] = {
-                vpos = Vector(-0.03, -0.05, -22),
+                vpos = Vector(0, -0.35, 10.25),
                 vang = Angle(90, 0, -90),
             },
             [6] = {
@@ -1051,6 +1063,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     elseif barrelatt == "ud_m16_barrel_stub" then barrel = 11
     elseif barrelatt == "ud_m16_barrel_lmg" then barrel = 5
     elseif barrelatt == "ud_m16_barrel_tactical_a4" then barrel = 8
+    elseif barrelatt == "ud_m16_barrel_smg" then barrel = 9
     end
 
     if wep.Attachments[1].Installed then
@@ -1136,9 +1149,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 
         for k = barrel, barrel do
             vm:SetBodygroup(11, k)
-            if k == 10 then --10
-                vm:SetBodygroup(11, 10)
-            elseif k == 11 then --11
+            if k >= 9 then --11
                 vm:SetBodygroup(11, 10)
             end
         end
@@ -1188,9 +1199,9 @@ SWEP.Attachments = {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
         Slot = {"muzzle"},
-        Bone = "m16_flash",
+        Bone = "m16_parent",
         Offset = {
-            vpos = Vector(-0.03, -0.05, -1.5),
+            vpos = Vector(0, -0.35, 30.75),
             vang = Angle(90, 0, -90),
         },
         ExcludeFlags = {"sd", "m16_usas"},

@@ -49,7 +49,7 @@ $bodygroup "4" {
 	studio "newbatch/m16_barrel_cursed.smd" //11
 	studio "newbatch/m16_barrel_tactical.smd" //12
 	studio "newbatch/m16_barrel_tactical_a4.smd" //13
-	studio "newbatch/m16_barrel_smg.smd" //13
+	studio "newbatch/m16_barrel_smg.smd" //14
 }
 
 $bodygroup "5" {

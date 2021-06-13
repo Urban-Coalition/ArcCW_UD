@@ -519,6 +519,14 @@ SWEP.AttachmentElements = {
             },
         }
     },
+    ["ud_m16_upper_charm"] = {
+        AttPosMods = {
+            [1] = {
+                vpos = Vector(0, -4, 3),
+                vang = Angle(90, 0, -90),
+            },
+        },
+    },
 }
 
 -- Animations --
@@ -1042,6 +1050,21 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
             vm:SetBodygroup(10, 0)
         end
     end
+    if wep:GetBuff_Override("KeepRetro") then
+        vm:SetBodygroup(0,0)
+        vm:SetBodygroup(1,0)
+        if wep.Attachments[1].Installed then
+            vm:SetBodygroup(3, 1)
+        end
+        if wep.Attachments[4].Installed == "ud_m16_receiver_usas" then
+            vm:SetBodygroup(0, 1)
+            vm:SetBodygroup(1, 2)
+        end
+        if wep.Attachments[4].Installed == "ud_m16_receiver_cali" then
+            vm:SetBodygroup(0, 2)
+            vm:SetBodygroup(1, 4)
+        end
+    end
 end
 
 SWEP.Attachments = {
@@ -1144,7 +1167,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Charm",
-        Slot = {"charm", "fml_charm"},
+        Slot = {"charm", "fml_charm", "ud_m16_charm"},
         FreeSlot = true,
         Bone = "m16_parent",
         Offset = {

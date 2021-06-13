@@ -1155,6 +1155,20 @@ end
 
 SWEP.Attachments = {
     {
+        PrintName = "Railcovers",
+        DefaultAttName = "Railcovers",
+        InstalledEles = {"ud_m16_barrel_tactical"},
+        Slot = {"optic_lp","tactical","railcover_cosmetic"},
+        Bone = "m16_parent",
+        Offset = {
+            vpos = Vector(0, -1.7, 3),
+            vang = Angle(90, 0, -90),
+        },
+        VMScale = Vector(1.25, 1.25, 1.25),
+        ExtraSightDist = 8,
+        MergeSlots = {14}
+    },
+    {
         PrintName = "Optic",
         DefaultAttName = "Iron Sights",
         InstalledEles = {"ud_m16_upper_flat"},

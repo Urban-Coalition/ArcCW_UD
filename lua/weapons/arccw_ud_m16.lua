@@ -1085,6 +1085,11 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         if wep.Attachments[6].Installed then
             vm:SetBodygroup(12, 0)
         end
+    else
+        vm:SetBodygroup(9, 0)
+        vm:SetBodygroup(12, 0)
+        vm:SetBodygroup(13, 0)
+        vm:SetBodygroup(14, 0)
     end
     if wep.Attachments[6].Installed then
         -- Tactical clamp

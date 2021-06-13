@@ -1151,8 +1151,6 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
             vm:SetBodygroup(1, 4)
         end
     end
-
-    
 end
 
 SWEP.Attachments = {

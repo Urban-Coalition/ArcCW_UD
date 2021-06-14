@@ -1,6 +1,6 @@
 att.PrintName = "9\" SMG Barrel"
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
-att.Description = "Short barrel to go with a 9mm receiver."
+att.Description = "Short barrel for use with a 9mm receiver."
 att.Desc_Pros = {
     --"ud.auto"
 }

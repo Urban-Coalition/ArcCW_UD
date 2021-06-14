@@ -1,11 +1,11 @@
-att.PrintName = "20\" AMCAR A4 Barrel"
+att.PrintName = "20\" AMR-16 A4 Barrel"
 
 if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "20\" M16A4 RIS Barrel"
 end
 
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
-att.Description = "Standard barrel with shourded by a quad-rail, RIS handguard giving the rifle the ability to better take the attachment of tactical devices or foregrips. Otherwise functionally identical to the A2 handugard."
+att.Description = "Standard barrel shrouded by a quad-rail RIS handguard, giving the rifle the ability to accept the attachment of tactical devices or foregrips without any additional modification. Functionally identical to the A2 handguard."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

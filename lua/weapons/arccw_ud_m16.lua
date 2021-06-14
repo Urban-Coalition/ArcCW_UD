@@ -21,7 +21,7 @@ SWEP.TracerWidth = 2
 
 -- Fake name --
 
-SWEP.PrintName = "AMCAR"
+SWEP.PrintName = "AMR-16"
 
 -- True name --
 
@@ -281,20 +281,6 @@ SWEP.Hook_NameChange = function(wep, name)
         if k == 3 then
             alt = "231 FPW"
         end
-        if k == 4 then
-            model = "Service"
-            alt = " Rifle"
-            if rec == 2 then
-                alt = " SMG"
-            end
-        end
-        if k == 5 then
-            model = "Service"
-            alt = " Carbine"
-            if rec == 2 then
-                alt = " SMG"
-            end
-        end
         if k == 6 then
             alt = "4 Stub"
         end
@@ -303,9 +289,30 @@ SWEP.Hook_NameChange = function(wep, name)
         end
     end
 
+    if barrel == 4 then
+        if rec == 2 then
+            return "Service SMG"
+        end
+        return "Service Rifle"
+    end
+    if barrel == 5 then
+        if rec == 2 then
+            return "Service SMG"
+        end
+        return "Service Carbine"
+    end
+
     if GetConVar("arccw_truenames"):GetBool() then
         return model .. alt
-    else return "AMCAR" end
+    else
+        if barrel <= 2 and barrel > 0 then
+            if flat == 1 then
+                return "CAR-4"
+            end
+            return "AMCAR"
+        end
+        return "AMR-16"
+    end
 end
 
 SWEP.DefaultBodyGroups = "000000000000000"

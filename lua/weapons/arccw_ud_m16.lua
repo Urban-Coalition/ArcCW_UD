@@ -292,11 +292,11 @@ SWEP.Hook_NameChange = function(wep, name)
         elseif barrel == 8 then
             alt = "16 LSW"
         end
-        
+
         if !silHandled then
             if mftoflat[model] then model = mftoflat[model] silHandled = true end
             if nftoflat[alt] then alt = nftoflat[alt] silHandled = true end
-            if !silHandled then alt = alt .. "-S" end            
+            if !silHandled then alt = alt .. "-S" end
         end
 
         return model .. alt
@@ -1094,7 +1094,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     if trueflat then
         vm:SetBodygroup(10,0)
     end
-    if barrel == 7 or barrel == 8 then
+    --[[if barrel == 7 or barrel == 8 then
         vm:SetBodygroup(7, 0)
         vm:SetBodygroup(9, 1)
         vm:SetBodygroup(12, 1)
@@ -1111,7 +1111,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         vm:SetBodygroup(12, 0)
         vm:SetBodygroup(13, 0)
         vm:SetBodygroup(14, 0)
-    end
+    end]]
     if wep.Attachments[6].Installed then
         -- Tactical clamp
         if barrel == 11 then

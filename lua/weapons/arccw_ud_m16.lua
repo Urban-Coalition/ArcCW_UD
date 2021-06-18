@@ -21,7 +21,8 @@ SWEP.TracerWidth = 2
 
 -- Fake name --
 
-SWEP.PrintName = "AMR-16"
+SWEP.PrintName = "AMCAR"
+-- AMCAR stands for (american) Colt Assault Rifle, not Carbine!!
 
 -- True name --
 
@@ -195,100 +196,43 @@ SWEP.BulletBones = {
     [2] = "m16_bullets1",    [3] = "m16_bullets2"
 }
 
+local desg_barr = {
+    ["ud_m16_barrel_lmg"]           =   8, -- amsaw lmg         20
+    ["ud_m16_barrel_tactical_a4"]   =   9, -- Railed HG M16     20
+    ["ud_m16_barrel_wood"]          =   4, -- service rifle     20
+    ["ud_m16_barrel_fpw"]           =   3, -- FPW barrel        15.6
+    ["ud_m16_barrel_m4"]            =   1, -- classic m4,       14.5
+    ["ud_m16_barrel_wood_short"]    =   5, -- service carbine   14
+    ["ud_m16_barrel_tactical"]      =   1, -- Railed HG M4      11.5
+    ["ud_m16_barrel_cqbr"]          =   2, -- cant see the barr 10.5
+    --["ud_m16_barrel_sd"]            =   2, -- amcar-s m4 sd     10.5
+    ["ud_m16_barrel_stub"]          =   6, -- A BIT OF A STUB   2
+}
+
+local desg_rec = {
+    ["ud_m16_receiver_auto"]        =   1,
+    ["ud_m16_receiver_9mm"]         =   2,
+    ["ud_m16_receiver_cali"]        =   3,
+    ["ud_m16_receiver_usas"]        =   4,
+}
+
+local mftoflat = {
+    ["AR"]     =   "M",
+}
+
+local nftoflat = {
+    ["SMG"]     =   "SSMG", -- silenced smg
+    ["16A2"]    =   "SB", -- silenced burst
+    ["16A3"]    =   "SA", -- auto
+    ["-15"]     =   "SS", -- semi
+    ["-15GB"]   =   "SM", -- manual
+}
+
 SWEP.Hook_NameChange = function(wep, name)
+    local barrel = desg_barr[wep.Attachments[2].Installed] or 0
+    local rec = desg_rec[wep.Attachments[4].Installed] or 0
 
-    local barrel = 0
-    local barrelatt = wep.Attachments[2].Installed
-
-    if barrelatt == "ud_m16_barrel_m4" then barrel = 1
-    elseif barrelatt == "ud_m16_barrel_tactical" then barrel = 1
-    elseif barrelatt == "ud_m16_barrel_cqbr" then barrel = 2
-    elseif barrelatt == "ud_m16_barrel_sd" then barrel = 2
-    elseif barrelatt == "ud_m16_barrel_fpw" then barrel = 3
-    elseif barrelatt == "ud_m16_barrel_wood" then barrel = 4
-    elseif barrelatt == "ud_m16_barrel_wood_short" then barrel = 5
-    elseif barrelatt == "ud_m16_barrel_stub" then barrel = 6
-    elseif barrelatt == "ud_m16_barrel_lmg" then barrel = 8
-    elseif barrelatt == "ud_m16_barrel_tactical_a4" then barrel = 9
-    end
-
-    local rec = 0
-    local recatt = wep.Attachments[4].Installed
-
-    -- "ud_m16_receiver_9mm" "ud_m16_receiver_auto" "ud_m16_receiver_cali" "ud_m16_receiver_usas"
-    if recatt == "ud_m16_receiver_auto" then rec = 1
-    elseif recatt == "ud_m16_receiver_9mm" then rec = 2
-    elseif recatt == "ud_m16_receiver_cali" then rec = 3
-    elseif recatt == "ud_m16_receiver_usas" then rec = 4
-    end
-
-    local flat
-    if wep.Attachments[1].Installed or wep.Attachments[14].Installed then flat = 1 end
-    if wep:GetBuff_Override("KeepRetro") then flat = 0 end
-
-    model = "M"
-    alt = "16A2"
-
-    for k = barrel, barrel do
-        if flat == 1 then
-            alt = "16A4"
-        end
-        if k <= 2 and k > 0 then
-            model = "XM"
-            alt = "4"
-            if wep:GetBuff_Override("SDBarrel") then
-                alt = alt .. "-S"
-            end
-            if flat == 1 then
-                model = "M"
-                alt = "4 Carbine"
-                if wep:GetBuff_Override("SDBarrel") then
-                    alt = "4-S"
-                end
-            end
-        end
-        if rec == 1 then
-            model = "M"
-            alt = "16A3"
-            if k == 1 then
-                alt = "727"
-                if flat == 1 then
-                    alt = "4A1"
-                end
-            end
-            if k == 2 then
-                alt = "733"
-                if flat == 1 then
-                    alt = "4A1"
-                    if wep:GetBuff_Override("SDBarrel") then
-                        alt = alt .. "-S"
-                    end
-                end
-                if wep:GetBuff_Override("SDBarrel") then
-                    alt = alt .. "-S"
-                end
-            end
-        elseif rec == 2 then
-            model = "Colt "
-            alt = "SMG"
-        elseif rec == 3 then
-            model = "AR"
-            alt = "-15"
-        elseif rec == 4 then
-            model = "USAS"
-            alt = "-12"
-        end
-        if k == 3 then
-            alt = "231 FPW"
-        end
-        if k == 6 then
-            alt = "4 Stub"
-        end
-        if k == 8 then
-            alt = "16 LSW"
-        end
-    end
-
+    -- service loadouts
     if barrel == 4 then
         if rec == 2 then
             return "Service SMG"
@@ -302,16 +246,73 @@ SWEP.Hook_NameChange = function(wep, name)
         return "Service Carbine"
     end
 
+    local flat = false
+    if wep.Attachments[1].Installed or wep.Attachments[14].Installed then flat = true end
+    if wep:GetBuff_Override("KeepRetro") then flat = false end
+
     if GetConVar("arccw_truenames"):GetBool() then
+        local model = "M"
+        local alt = "16A2"
+
+        local sil = wep:GetBuff_Override("SDBarrel")
+        local silHandled = !sil
+
+        if barrel <= 2 and barrel > 0 then
+            model = "XM"
+            alt = "4"
+            if flat then
+                model = "M"
+                alt = "4 Carbine"
+            end
+        end
+        if rec == 1 then
+            model = "M"
+            alt = "16A3"
+            if flat then
+                alt = "4A1"
+            elseif barrel == 1 then
+                alt = "727"
+            elseif barrel == 2 then
+                alt = "733"
+            end
+        elseif rec == 2 then
+            model = "Colt "
+            alt = "SMG"
+        elseif rec == 3 then
+            model = "AR"
+            alt = "-15GB"
+        elseif rec == 4 then
+            model = "USAS"
+            alt = "-12"
+        end
+        if barrel == 3 then
+            alt = "231 FPW"
+        elseif barrel == 6 then
+            alt = "4 Stub"
+        elseif barrel == 8 then
+            alt = "16 LSW"
+        end
+        
+        if !silHandled then
+            if mftoflat[model] then model = mftoflat[model] silHandled = true end
+            if nftoflat[alt] then alt = nftoflat[alt] silHandled = true end
+            if !silHandled then alt = alt .. "-S" end            
+        end
+
         return model .. alt
     else
-        if barrel <= 2 and barrel > 0 then
-            if flat == 1 then
-                return "CAR-4"
-            end
+        -- work on this in a few
+        if false then
+            return "AMCAR-NG"
+        elseif false then
+            return "AMSAS-12"
+        elseif false then
+            return "AMPAW-9"
+        elseif false then
+            return "UKCAR .223"
+        else
             return "AMCAR"
         end
-        return "AMR-16"
     end
 end
 

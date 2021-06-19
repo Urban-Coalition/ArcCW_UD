@@ -242,10 +242,7 @@ SWEP.AttachmentElements = {
 
 -- Animations --
 
-SWEP.Hook_Think = function(wep)
-    local vm = wep:GetOwner():GetViewModel()
-    vm:SetPoseParameter( "sights", Lerp(wep:GetSightDelta(), 1, 0) ) -- thanks fesiug
-end
+SWEP.Hook_Think = ArcCW.UD.ADSReload
 
 SWEP.Animations = {
     ["idle"] = {

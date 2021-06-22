@@ -139,8 +139,8 @@ SWEP.ExtraSightDist = 7
 
 -- Ironsights / Customization / Poses --
 
-SWEP.HolsterPos = Vector(4.623, -2.211, 1.004)
-SWEP.HolsterAng = Angle(-8.443, 28.843, 0)
+SWEP.HolsterPos = Vector(-0.5, -4, -3)
+SWEP.HolsterAng = Angle(3.5, 7, -20)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"

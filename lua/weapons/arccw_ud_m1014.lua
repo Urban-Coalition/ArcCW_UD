@@ -253,7 +253,7 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 0,
         SoundTable = {
-            {s = common .. "shotgun_insert_3.ogg",  t = 0},
+            {s = {common .. "shotgun_insert_1.ogg", common .. "shotgun_insert_2.ogg", common .. "shotgun_insert_3.ogg"},  t = 0},
             {s = common .. "cloth_4.ogg",  t = 0.05},
         },
     },

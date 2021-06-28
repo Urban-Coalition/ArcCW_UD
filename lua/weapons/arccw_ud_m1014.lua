@@ -135,7 +135,7 @@ SWEP.ShootSpeedMult = 0.75
 
 -- Length --
 
-SWEP.BarrelLength = 32
+SWEP.BarrelLength = 48
 SWEP.ExtraSightDist = 20
 
 -- Ironsights / Customization / Poses --
@@ -146,19 +146,19 @@ SWEP.HoldtypeSights = "ar2"
 
 SWEP.IronSightStruct = {
      Pos = Vector(-3.05, -1, 1.8),
-     Ang = Angle(0, 0, 0),
+     Ang = Angle(-0.4, 0, 0),
      Magnification = 1.1,
      SwitchToSound = "",
 }
 
-SWEP.HolsterPos = Vector(-0.202, -0.401, 0)
-SWEP.HolsterAng = Angle(-2.814, 10.553, -4.926)
+SWEP.HolsterPos = Vector(-0.5, -4, -3)
+SWEP.HolsterAng = Angle(3.5, 7, -20)
 
 SWEP.ActivePos = Vector(0, 0, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)
 
-SWEP.CrouchPos = Vector(-6.5, 2, 0)
-SWEP.CrouchAng = Angle(0, 0, -40)
+SWEP.CrouchPos = Vector(-4, -2, 0)
+SWEP.CrouchAng = Angle(0, 0, -30)
 
 SWEP.BarrelOffsetHip = Vector(0, 0, -3)
 
@@ -176,10 +176,7 @@ SWEP.DistantShootSound = path .. "fire_dist.ogg"
 
 -- Animations --
 
-SWEP.Hook_Think = function(wep)
-    local vm = wep:GetOwner():GetViewModel()
-    vm:SetPoseParameter( "sights", Lerp(wep:GetSightDelta(), 1, 0) ) -- thanks fesiug
-end
+SWEP.Hook_Think = ArcCW.UD.ADSReload
 
 SWEP.Animations = {
     ["idle"] = {
@@ -256,7 +253,7 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 0,
         SoundTable = {
-            {s = common .. "shotgun_insert_3.ogg",  t = 0},
+            {s = {common .. "shotgun_insert_1.ogg", common .. "shotgun_insert_2.ogg", common .. "shotgun_insert_3.ogg"},  t = 0},
             {s = common .. "cloth_4.ogg",  t = 0.05},
         },
     },

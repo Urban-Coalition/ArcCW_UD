@@ -147,8 +147,8 @@ SWEP.ExtraSightDist = 7
 
 -- Ironsights / Customization / Poses --
 
-SWEP.HolsterPos = Vector(4.623, -2.211, 1.004)
-SWEP.HolsterAng = Angle(-8.443, 28.843, 0)
+SWEP.HolsterPos = Vector(0.5, -2, 1)
+SWEP.HolsterAng = Angle(-8.5, 8, -10)
 
 SWEP.HoldtypeHolstered = "normal"
 SWEP.HoldtypeActive = "smg"
@@ -168,8 +168,8 @@ SWEP.ActiveAng = Angle(0, 0, -3)
 SWEP.CustomizePos = Vector(5, -2, -2)
 SWEP.CustomizeAng = Angle(15, 25, 0)
 
-SWEP.CrouchPos = Vector(-6.5, 2, 1)
-SWEP.CrouchAng = Angle(0, 0, -45)
+SWEP.CrouchPos = Vector(-3, -3, 0)
+SWEP.CrouchAng = Angle(0, 0, -30)
 
 SWEP.BarrelOffsetHip = Vector(0, 0, -3)
 
@@ -269,10 +269,7 @@ SWEP.AttachmentElements = {
 
 -- Animations --
 
-SWEP.Hook_Think = function(wep)
-    local vm = wep:GetOwner():GetViewModel()
-    vm:SetPoseParameter( "sights", Lerp(wep:GetSightDelta(), 1, 0) ) -- thanks fesiug
-end
+SWEP.Hook_Think = ArcCW.UD.ADSReload
 
 SWEP.Animations = {
     ["idle"] = {

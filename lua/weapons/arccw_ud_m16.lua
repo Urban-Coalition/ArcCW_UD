@@ -52,7 +52,7 @@ end
 
 SWEP.ViewModel = "models/weapons/arccw/c_ud_m16.mdl"
 SWEP.WorldModel = "models/weapons/w_rif_m4a1.mdl"
-SWEP.ViewModelFOV = 70
+SWEP.ViewModelFOV = 80
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage --
@@ -156,14 +156,14 @@ SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.81, -3, 0.8),
+     Pos = Vector(-3.15, 0, 0.4),
      Ang = Angle(0.1, 0, 0),
      Magnification = 1.1,
      SwitchToSound = "",
 }
 
-SWEP.ActivePos = Vector(0, 0, 0.5)
-SWEP.ActiveAng = Angle(0, 0, -3)
+SWEP.ActivePos = Vector(0, 0, 0)
+SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.CustomizePos = Vector(5, -2, -2)
 SWEP.CustomizeAng = Angle(15, 25, 0)
@@ -257,7 +257,7 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 4, bg = 12}},
         AttPosMods = {
             [3] = {
-                vpos = Vector(-0.03, -0.05, -6.5),
+                vpos = Vector(-0.03, -0.05, -9),
                 vang = Angle(90, 0, -90),
             },
             [6] = {
@@ -407,6 +407,8 @@ SWEP.AttachmentElements = {
 
 -- Animations --
 
+SWEP.AutosolveSourceSeq = "autoresolver"
+
 SWEP.Hook_Think = function(wep)
     local vm = wep:GetOwner():GetViewModel()
     vm:SetPoseParameter( "sights", Lerp(wep:GetSightDelta(), 1, 0) ) -- thanks fesiug
@@ -424,23 +426,24 @@ SWEP.Animations = {
     },
     ["draw_empty"] = {
         Source = "draw_empty",
-        Time = 20 / 30,
+        Time = 20 / 60,
     },
     ["holster"] = {
         Source = "holster",
     },
     ["holster_empty"] = {
         Source = "holster_empty",
-        Time = 20 / 30,
+        Time = 20 / 60,
     },
     ["fire"] = {
-        Source = "fire",
-        Time = 13 / 30,
+        Source = {"fire_01","fire_02","fire_03"},
+        Framerate = 60,
+        Time = 30 / 60,
         ShellEjectAt = 0.01,
     },
     ["fire_empty"] = {
         Source = "fire_empty",
-        Time = 13 / 30,
+        Time = 30 / 60,
         ShellEjectAt = 0.01,
         SoundTable = {
             {s = path .. "mech_last.ogg", t = 0}, -- Temporary
@@ -448,12 +451,12 @@ SWEP.Animations = {
     },
     ["fire_usas"] = {
         Source = "fire_usas",
-        Time = 20 / 30,
+        Time = 20 / 60,
         ShellEjectAt = 0.01,
     },
     ["fire_empty_usas"] = {
         Source = "fire_empty_usas",
-        Time = 20 / 30,
+        Time = 20 / 60,
         ShellEjectAt = 0.01,
         SoundTable = {
             {s = path .. "mech_last.ogg", t = 0}, -- Temporary
@@ -461,13 +464,13 @@ SWEP.Animations = {
     },
 
     ["fire_cycle"] = {
-        Source = "fire",
-        Time = 13 / 30,
+        Source = {"fire_01","fire_02","fire_03"},
+        Time = 30 / 60,
     },
 
     ["cycle"] = {
         Source = "fix",
-        Time = 36 / 30 * 0.7,
+        Time = 80 / 60 * 0.7,
         ShellEjectAt = 0.3,
         LHIK = true,
         LHIKIn = 0.3 * 0.7,
@@ -483,7 +486,7 @@ SWEP.Animations = {
 
     ["fix"] = {
         Source = "fix",
-        Time = 36 / 30,
+        Time = 80 / 60,
         ShellEjectAt = false,
         LHIK = true,
         LHIKIn = 0.3,
@@ -498,7 +501,7 @@ SWEP.Animations = {
     },
     ["fix_empty"] = {
         Source = "fix_empty",
-        Time = 36 / 30,
+        Time = 80 / 60,
         ShellEjectAt = false,
         LHIK = true,
         LHIKIn = 0.3,
@@ -513,7 +516,7 @@ SWEP.Animations = {
     },
     ["fix_100"] = {
         Source = "fix_100",
-        Time = 36 / 30,
+        Time = 36 / 60,
         ShellEjectAt = false,
         LHIK = true,
         LHIKIn = 0.3,
@@ -528,7 +531,7 @@ SWEP.Animations = {
     },
     ["fix_empty_100"] = {
         Source = "fix_empty_100",
-        Time = 36 / 30,
+        Time = 36 / 60,
         ShellEjectAt = false,
         LHIK = true,
         LHIKIn = 0.3,
@@ -547,12 +550,12 @@ SWEP.Animations = {
     ["reload"] = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Time = 71 / 30,
+        Time = 136 / 60,
         MinProgress = 1.5,
         LastClip1OutTime = 0.9,
         LHIK = true,
-        LHIKIn = 0.4,
-        LHIKEaseIn = 0.4,
+        LHIKIn = 0.3,
+        LHIKEaseIn = 0.3,
         LHIKEaseOut = 0.5,
         LHIKOut = 0.7,
         SoundTable = {
@@ -567,14 +570,14 @@ SWEP.Animations = {
     ["reload_empty"] = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Time = 79 / 30,
+        Time = 160 / 60,
         MinProgress = 2,
         LastClip1OutTime = 0.7,
         LHIK = true,
-        LHIKIn = 0.4,
-        LHIKEaseIn = 0.4,
-        LHIKEaseOut = 0.15,
-        LHIKOut = 0.4,
+        LHIKIn = 0.3,
+        LHIKEaseIn = 0.3,
+        LHIKEaseOut = 0.2,
+        LHIKOut = 0.6,
         SoundTable = {
             {s = common .. "cloth_1.ogg",  t = 0.0},
             {s = path .. "magout.ogg", 	 t = 0.2},
@@ -591,14 +594,14 @@ SWEP.Animations = {
     ["reload_20"] = {
         Source = "reload_20",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Time = 71 / 30,
+        Time = 136 / 60,
         MinProgress = 1.5,
         LastClip1OutTime = 0.9,
         LHIK = true,
-        LHIKIn = 0.4,
-        LHIKEaseIn = 0.4,
+        LHIKIn = 0.3,
+        LHIKEaseIn = 0.3,
         LHIKEaseOut = 0.15,
-        LHIKOut = 0.5,
+        LHIKOut = 0.6,
         SoundTable = {
             {s = common .. "cloth_1.ogg",  t = 0.0},
             {s = path .. "magout.ogg", 	 t = 0.2},
@@ -611,14 +614,14 @@ SWEP.Animations = {
     ["reload_empty_20"] = {
         Source = "reload_empty_20",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Time = 79 / 30,
+        Time = 160 / 60,
         MinProgress = 2,
         LastClip1OutTime = 0.7,
         LHIK = true,
-        LHIKIn = 0.4,
-        LHIKEaseIn = 0.4,
-        LHIKEaseOut = 0.15,
-        LHIKOut = 0.4,
+        LHIKIn = 0.3,
+        LHIKEaseIn = 0.3,
+        LHIKEaseOut = 0.2,
+        LHIKOut = 0.6,
         SoundTable = {
             {s = common .. "cloth_1.ogg",  t = 0.0},
             {s = path .. "magout.ogg", 	 t = 0.2},
@@ -635,7 +638,7 @@ SWEP.Animations = {
     ["reload_40"] = {
         Source = "reload_40",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Time = 71 / 30,
+        Time = 139 / 60,
         MinProgress = 1.5,
         LastClip1OutTime = 0.9,
         LHIK = true,
@@ -655,7 +658,7 @@ SWEP.Animations = {
     ["reload_empty_40"] = {
         Source = "reload_empty_40",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Time = 79 / 30,
+        Time = 163 / 60,
         MinProgress = 2,
         LastClip1OutTime = 0.7,
         LHIK = true,
@@ -679,14 +682,14 @@ SWEP.Animations = {
     ["reload_60"] = {
         Source = "reload_60",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Time = 71 / 30,
+        Time = 143 / 60,
         MinProgress = 1.5,
         LastClip1OutTime = 0.9,
         LHIK = true,
-        LHIKIn = 0.4,
-        LHIKEaseIn = 0.4,
-        LHIKEaseOut = 0.15,
-        LHIKOut = 0.4,
+        LHIKIn = 0.2,
+        LHIKEaseIn = 0.2,
+        LHIKEaseOut = 0.3,
+        LHIKOut = 0.7,
         SoundTable = {
             {s = common .. "cloth_1.ogg",  t = 0.0},
             {s = path .. "magout.ogg", 	 t = 0.2},
@@ -699,14 +702,14 @@ SWEP.Animations = {
     ["reload_empty_60"] = {
         Source = "reload_empty_60",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Time = 79 / 30,
+        Time = 169 / 60,
         MinProgress = 2,
         LastClip1OutTime = 0.7,
         LHIK = true,
-        LHIKIn = 0.4,
-        LHIKEaseIn = 0.4,
-        LHIKEaseOut = 0.15,
-        LHIKOut = 0.4,
+        LHIKIn = 0.2,
+        LHIKEaseIn = 0.2,
+        LHIKEaseOut = 0.3,
+        LHIKOut = 0.7,
         SoundTable = {
             {s = common .. "cloth_1.ogg",  t = 0.0},
             {s = path .. "magout.ogg", 	 t = 0.2},
@@ -723,7 +726,7 @@ SWEP.Animations = {
     ["reload_100"] = {
         Source = "reload_100",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Time = 71 / 30,
+        Time = 71 / 60,
         MinProgress = 1.75,
         LastClip1OutTime = 0.9,
         LHIK = true,
@@ -745,7 +748,7 @@ SWEP.Animations = {
     ["reload_empty_100"] = {
         Source = "reload_empty_100",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Time = 90 / 30,
+        Time = 90 / 60,
         MinProgress = 2.5,
         LastClip1OutTime = 0.7,
         LHIK = true,
@@ -767,12 +770,12 @@ SWEP.Animations = {
         },
     },
 
-    -- 9mm 32 Round Reloads --
+    -- 9mm 20 Round Reloads --
 
-    ["reload_9mm"] = {
-        Source = "reload_9mm",
+    ["reload_9mm_20"] = {
+        Source = "reload_9mm_20",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Time = 71 / 30,
+        Time = 136 / 60,
         MinProgress = 1.5,
         LastClip1OutTime = 0.9,
         LHIK = true,
@@ -782,17 +785,17 @@ SWEP.Animations = {
         LHIKOut = 0.5,
         SoundTable = {
             {s = common .. "cloth_1.ogg",  t = 0.0},
-            {s = path .. "magout.ogg", 	 t = 19 / 30},
+            {s = path .. "magout.ogg", 	 t = 0.2},
             {s = common .. "cloth_2.ogg",  t = 0.75},
-            {s = path .. "magin.ogg",    t = 32 / 30},
+            {s = path .. "magin.ogg",    t = 1.05},
             {s = common .. "cloth_3.ogg",  t = 1.1},
             {s = common .. "shoulder.ogg", t = 1.93},
         },
     },
-    ["reload_empty_9mm"] = {
-        Source = "reload_empty_9mm",
+    ["reload_empty_9mm_20"] = {
+        Source = "reload_empty_9mm_20",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Time = 79 / 30,
+        Time = 160 / 60,
         MinProgress = 2,
         LastClip1OutTime = 0.7,
         LHIK = true,
@@ -806,7 +809,52 @@ SWEP.Animations = {
             {s = common .. "cloth_2.ogg",  t = 0.75},
             {s = path .. "magin.ogg",    t = 1.05},
             {s = common .. "cloth_3.ogg",  t = 1.39},
-            {s = path .. "boltdrop.ogg", t = 56 / 30},
+            {s = path .. "boltdrop.ogg", t = 1.77},
+            {s = common .. "shoulder.ogg", t = 2.15},
+        },
+    },
+
+
+    -- 9mm 32 Round Reloads --
+
+    ["reload_9mm_32"] = {
+        Source = "reload_9mm_32",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        Time = 136 / 60,
+        MinProgress = 1.5,
+        LastClip1OutTime = 0.9,
+        LHIK = true,
+        LHIKIn = 0.4,
+        LHIKEaseIn = 0.4,
+        LHIKEaseOut = 0.15,
+        LHIKOut = 0.5,
+        SoundTable = {
+            {s = common .. "cloth_1.ogg",  t = 0.0},
+            {s = path .. "magout.ogg", 	 t = 0.2},
+            {s = common .. "cloth_2.ogg",  t = 0.75},
+            {s = path .. "magin.ogg",    t = 1.05},
+            {s = common .. "cloth_3.ogg",  t = 1.1},
+            {s = common .. "shoulder.ogg", t = 1.93},
+        },
+    },
+    ["reload_empty_9mm_32"] = {
+        Source = "reload_empty_9mm_32",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        Time = 160 / 60,
+        MinProgress = 2,
+        LastClip1OutTime = 0.7,
+        LHIK = true,
+        LHIKIn = 0.4,
+        LHIKEaseIn = 0.4,
+        LHIKEaseOut = 0.15,
+        LHIKOut = 0.4,
+        SoundTable = {
+            {s = common .. "cloth_1.ogg",  t = 0.0},
+            {s = path .. "magout.ogg", 	 t = 0.2},
+            {s = common .. "cloth_2.ogg",  t = 0.75},
+            {s = path .. "magin.ogg",    t = 1.05},
+            {s = common .. "cloth_3.ogg",  t = 1.39},
+            {s = path .. "boltdrop.ogg", t = 1.77},
             {s = common .. "shoulder.ogg", t = 2.15},
         },
     },
@@ -816,7 +864,7 @@ SWEP.Animations = {
     ["reload_usas_20"] = {
         Source = "reload_empty_usas_20",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Time = 71 / 30,
+        Time = 71 / 60,
         MinProgress = 2.5,
         LastClip1OutTime = 0.7,
         LHIK = true,
@@ -839,7 +887,7 @@ SWEP.Animations = {
     ["reload_empty_usas_20"] = {
         Source = "reload_empty_usas_20",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Time = 86 / 30,
+        Time = 86 / 60,
         MinProgress = 2.5,
         LastClip1OutTime = 0.7,
         LHIK = true,
@@ -916,10 +964,11 @@ SWEP.Attachments = {
         Slot = {"optic_lp","optic","sniper_optic"},
         Bone = "m16_parent",
         Offset = {
-            vpos = Vector(0, -1.7, 3),
+            vpos = Vector(-0.02, -3.3, 4),
             vang = Angle(90, 0, -90),
         },
         VMScale = Vector(1.25, 1.25, 1.25),
+        CorrectivePos = Vector(0, 0, -0.01),
         ExtraSightDist = 8,
         MergeSlots = {14}
     },
@@ -929,7 +978,7 @@ SWEP.Attachments = {
         Slot = "ud_m16_barrel",
         Bone = "m16_parent",
         Offset = {
-            vpos = Vector(2.8, -4.2, -11.5),
+            vpos = Vector(2.8, -5.7, -10.5),
             vang = Angle(90, 0, -90),
         },
         ExcludeFlags = {"m16_usas"},
@@ -960,7 +1009,7 @@ SWEP.Attachments = {
         Slot = {"foregrip"},
         Bone = "m16_parent",
         Offset = {
-            vpos = Vector(0, 1.5, 12),
+            vpos = Vector(0, 0, 14),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"ud_m16_rail_fg"},

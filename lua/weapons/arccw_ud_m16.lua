@@ -515,7 +515,7 @@ SWEP.AttachmentElements = {
         }
     },
     ["ud_m16_barrel_stub"] = {
-        VMBodygroups = {{ind = 4, bg = 6}},
+        VMBodygroups = {{ind = 4, bg = 6}, {ind = 11, bg = 11}},
         --[[]
         Override_IronSightStruct = {
             Pos = Vector(-1, 4, 0),
@@ -1133,8 +1133,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         else
             vm:SetBodygroup(1, 4)
         end
-    end
-    if wep.Attachments[4].Installed == "ud_m16_receiver_usas" then
+    elseif wep.Attachments[4].Installed == "ud_m16_receiver_usas" then
         vm:SetBodygroup(0, 1)
         if vm:GetBodygroup(1) == 1 then
             vm:SetBodygroup(1, 3)
@@ -1168,8 +1167,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
             vm:SetBodygroup(0, 1)
             vm:SetBodygroup(1, 2)
             vm:SetBodygroup(11, 10)
-        end
-        if wep.Attachments[4].Installed == "ud_m16_receiver_cali" then
+        elseif wep.Attachments[4].Installed == "ud_m16_receiver_cali" then
             vm:SetBodygroup(0, 2)
             vm:SetBodygroup(1, 4)
         end

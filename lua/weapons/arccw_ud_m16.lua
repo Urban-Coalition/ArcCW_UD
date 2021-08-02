@@ -1288,6 +1288,11 @@ SWEP.Attachments = {
         },
     },
     {
+        PrintName = "Sound",
+        Slot = {"ud_m16_sound"},
+        DefaultAttName = "Default Firing Sound",
+    },
+    {
         Hidden = true,
         Slot = "ud_m16_rs",
         FreeSlot = true

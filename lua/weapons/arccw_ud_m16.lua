@@ -185,10 +185,10 @@ SWEP.WorldModelOffset = {
 
 local path = "weapons/arccw_ud/m16/"
 local common = "weapons/arccw_ud/common/"
-SWEP.FirstShootSound = path .. "fire_first.ogg"
-SWEP.ShootSound = {path .. "fire_auto_1.ogg", path .. "fire_auto_2.ogg", path .. "fire_auto_3.ogg"}
+SWEP.FirstShootSound = path .. "first.ogg"
+SWEP.ShootSound = {path .. "auto1.ogg", path .. "auto2.ogg", path .. "auto3.ogg", path .. "auto4.ogg"}
 SWEP.ShootSoundSilenced = path .. "fire_supp.ogg"
-SWEP.DistantShootSound = path .. "fire_dist.ogg"
+SWEP.DistantShootSound = path .. "dist.ogg"
 
 -- Bodygroups --
 
@@ -1286,11 +1286,6 @@ SWEP.Attachments = {
             vpos = Vector(0.6, 1, 5),
             vang = Angle(90, 0, -90),
         },
-    },
-    {
-        PrintName = "Sound",
-        Slot = {"ud_m16_sound"},
-        DefaultAttName = "Default Firing Sound",
     },
     {
         Hidden = true,

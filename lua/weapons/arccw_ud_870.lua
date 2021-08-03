@@ -304,6 +304,9 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 6, bg = 1}},
     },
     ["ud_870_slide_long"] = {
+        VMBodygroups = {{ind = 6, bg = 3}},
+    },
+    ["ud_870_slide_poly"] = {
         VMBodygroups = {{ind = 6, bg = 2}},
     },
     ["ud_shotgun_rail_fg"] = {
@@ -311,8 +314,8 @@ SWEP.AttachmentElements = {
     },
     ["ud_870_barrel_long"] = {
         Override_IronSightStruct = {
-            Pos = Vector(-3.0075, -1, 2.25),
-            Ang = Angle(-0.5, 0.025, 0),
+            Pos = Vector(-3.05, -1, 1.95),
+            Ang = Angle(0, 0, 0),
             Magnification = 1.1,
             CrosshairInSights = false
         },

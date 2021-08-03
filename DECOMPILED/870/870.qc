@@ -25,6 +25,7 @@ $bodygroup "4" {
 	studio "shotgun_stock.smd"
 	studio "shotgun_stock_poly.smd"
 	studio "shotgun_stock_sawnoff.smd"
+	studio "shotgun_stock_polyshort.smd"
 }
 
 $bodygroup "5" {

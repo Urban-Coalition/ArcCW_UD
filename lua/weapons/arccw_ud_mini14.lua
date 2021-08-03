@@ -51,7 +51,7 @@ end
 -- Viewmodel / Worldmodel / FOV --
 
 SWEP.ViewModel = "models/weapons/arccw/c_ud_mini14.mdl"
-SWEP.WorldModel = "models/weapons/w_rif_m4a1.mdl"
+SWEP.WorldModel = "models/weapons/arccw/c_ud_mini14.mdl"
 SWEP.ViewModelFOV = 70
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 

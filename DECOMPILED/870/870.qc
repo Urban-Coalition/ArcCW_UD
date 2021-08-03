@@ -37,6 +37,7 @@ $bodygroup "6" {
 	studio "shotgun_slide_wood.smd"
 	studio "shotgun_slide_moe.smd"
 	studio "shotgun_slide_long.smd"
+	studio "shotgun_slide_long_wood.smd"
 }
 
 $bodygroup "7" {

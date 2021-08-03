@@ -48,7 +48,7 @@ end
 -- Viewmodel / Worldmodel / FOV --
 
 SWEP.ViewModel = "models/weapons/arccw/c_ud_870.mdl"
-SWEP.WorldModel = "models/weapons/w_shot_m3super90.mdl"
+SWEP.WorldModel = "models/weapons/arccw/c_ud_870.mdl"
 SWEP.ViewModelFOV = 60
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN
 SWEP.DefaultBodygroups = "000000000"
@@ -342,6 +342,9 @@ SWEP.AttachmentElements = {
     ["ud_870_stock_sawnoff"] = {
         VMBodygroups = {{ind = 4, bg = 2}},
     },
+    ["ud_870_stock_raptor"] = {
+        VMBodygroups = {{ind = 4, bg = 3}},
+    },
 }
 
 SWEP.Attachments = {
@@ -351,7 +354,7 @@ SWEP.Attachments = {
         Slot = {"optic_lp","optic","sniper_optic"},
         Bone = "870_parent",
         Offset = {
-            vpos = Vector(0, -1.8, 4),
+            vpos = Vector(0, -1.8, 3),
             vang = Angle(90, 2, -90),
         },
     },

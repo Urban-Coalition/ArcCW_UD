@@ -1187,7 +1187,7 @@ SWEP.Attachments = {
         },
         VMScale = Vector(1.25, 1.25, 1.25),
         ExtraSightDist = 8,
-        MergeSlots = {14}
+        MergeSlots = {15}
     },
     {
         PrintName = "Barrel",

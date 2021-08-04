@@ -52,7 +52,7 @@ end
 -- Viewmodel / Worldmodel / FOV --
 
 SWEP.ViewModel = "models/weapons/arccw/c_ud_m16.mdl"
-SWEP.WorldModel = "models/weapons/w_rif_m4a1.mdl"
+SWEP.WorldModel = "models/weapons/arccw/c_ud_m16.mdl"
 SWEP.ViewModelFOV = 70
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
@@ -185,10 +185,10 @@ SWEP.WorldModelOffset = {
 
 local path = "weapons/arccw_ud/m16/"
 local common = "weapons/arccw_ud/common/"
-SWEP.FirstShootSound = path .. "fire_first.ogg"
-SWEP.ShootSound = {path .. "fire_auto_1.ogg", path .. "fire_auto_2.ogg", path .. "fire_auto_3.ogg"}
+SWEP.FirstShootSound = path .. "first.ogg"
+SWEP.ShootSound = {path .. "auto1.ogg", path .. "auto2.ogg", path .. "auto3.ogg", path .. "auto4.ogg"}
 SWEP.ShootSoundSilenced = path .. "fire_supp.ogg"
-SWEP.DistantShootSound = path .. "fire_dist.ogg"
+SWEP.DistantShootSound = path .. "dist.ogg"
 
 -- Bodygroups --
 

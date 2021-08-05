@@ -30,6 +30,11 @@ L["ud.overload"] = "+1 Magazine capacity"
 L["ud.underload"] = "-14% Magazine capacity"
 L["ud.loosesprings"] = "+8% Magazine capacity"
 L["ud.neverflinch"] = "No shooting movement speed loss"
+L["ud.glock.cs"] = "+3 Default magazine capacity"
+
+L["ud.m16_ch.1"] = "This aesthetic-only attachment preserves the carry handle when optics are mounted."
+L["ud.m16_ch.2"] = "It might improve visibility when aiming, or block your vision when hip-firing."
+L["ud.m16_ch.3"] = "Alternative iron sight attachments are disabled when this is enabled."
 
 L["ud.darkrp.cantremove"] = "You can't remove this without a gun license!"
 L["ud.darkrp.cantattach"] = "You need a gun license to use this attachment!"

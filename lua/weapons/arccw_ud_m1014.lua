@@ -48,7 +48,7 @@ end
 -- Viewmodel / Worldmodel / FOV --
 
 SWEP.ViewModel = "models/weapons/arccw/c_ud_m1014.mdl"
-SWEP.WorldModel = "models/weapons/w_shot_m3super90.mdl"
+SWEP.WorldModel = "models/weapons/arccw/c_ud_m1014.mdl"
 SWEP.ViewModelFOV = 60
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN
 
@@ -358,6 +358,11 @@ SWEP.Attachments = {
     {
         PrintName = "Ammo Type",
         Slot = {"go_ammo"},
+    },
+    {
+        PrintName = "Powder Load",
+        Slot = {"ud_powder"},
+        DefaultAttName = "Standard Load"
     },
     {
         PrintName = "Training Package",

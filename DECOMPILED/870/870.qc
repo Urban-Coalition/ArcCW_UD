@@ -25,6 +25,7 @@ $bodygroup "4" {
 	studio "shotgun_stock.smd"
 	studio "shotgun_stock_poly.smd"
 	studio "shotgun_stock_sawnoff.smd"
+	studio "shotgun_stock_polyshort.smd"
 }
 
 $bodygroup "5" {
@@ -36,6 +37,7 @@ $bodygroup "6" {
 	studio "shotgun_slide_wood.smd"
 	studio "shotgun_slide_moe.smd"
 	studio "shotgun_slide_long.smd"
+	studio "shotgun_slide_long_wood.smd"
 }
 
 $bodygroup "7" {

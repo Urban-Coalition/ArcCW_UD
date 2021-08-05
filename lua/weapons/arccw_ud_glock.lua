@@ -52,7 +52,7 @@ end
 -- Viewmodel / Worldmodel / FOV --
 
 SWEP.ViewModel = "models/weapons/arccw/c_ud_glock.mdl"
-SWEP.WorldModel = "models/weapons/w_pist_usp.mdl"
+SWEP.WorldModel = "models/weapons/arccw/c_ud_glock.mdl"
 SWEP.ViewModelFOV = 60
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
@@ -332,13 +332,16 @@ SWEP.Animations = {
         Source = "fire_stock",
         Time = 16 / 30,
         ShellEjectAt = 0.03,
+        SoundTable = {
+            {s = path .. "mech.ogg", t = 0}, -- Not Temporary
+        },
     },
     ["fire_empty_stock"] = {
         Source = "fire_empty_stock",
         Time = 16 / 30,
         ShellEjectAt = 0.03,
         SoundTable = {
-            {s = path .. "sliderel.ogg", t = 0, c = ci}, -- Temporary
+            {s = path .. "mech_last.ogg", t = 0, c = ci}, -- Not Temporary
         },
     },
     ["fire_cycle"] = {
@@ -754,6 +757,11 @@ SWEP.Attachments = {
     {
         PrintName = "Ammo Type",
         Slot = {"go_ammo"},
+    },
+    {
+        PrintName = "Powder Load",
+        Slot = {"ud_powder"},
+        DefaultAttName = "Standard Load"
     },
     {
         PrintName = "Training Package",

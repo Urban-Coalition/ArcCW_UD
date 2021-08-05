@@ -1,13 +1,20 @@
 att.PrintName = "Keep it Retro"
 att.Icon = Material("entities/att/arccw_ud_keepitretro.png", "smooth mips")
-att.Description = "Do not butcher your classic black rifle. Keep the carry handle while attaching an optic."
+att.Description = "Do not butcher your classic black rifle."
 att.Desc_Pros = {}
 att.Desc_Cons = {}
+--[[]
 att.Desc_Neutrals = {
     " This attachment is cosmetic in nature, but your sight will be elevated, and you may obtain a less obstructed sight picture.",
     " However, while hip firing, your view will be more obstructed.",
     " Other than that, there is little benefit or detriment to your performance.",
     " This will disable alternate iron sight attachments."
+}
+]]
+att.Desc_Neutrals = {
+    "ud.m16_ch.1",
+    "ud.m16_ch.2",
+    "ud.m16_ch.3"
 }
 att.Slot = "ud_m16_charm"
 

@@ -52,8 +52,8 @@ end
 -- Viewmodel / Worldmodel / FOV --
 
 SWEP.ViewModel = "models/weapons/arccw/c_ud_m16.mdl"
-SWEP.WorldModel = "models/weapons/w_rif_m4a1.mdl"
-SWEP.ViewModelFOV = 80
+SWEP.WorldModel = "models/weapons/arccw/c_ud_m16.mdl"
+SWEP.ViewModelFOV = 70
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage --
@@ -185,10 +185,10 @@ SWEP.WorldModelOffset = {
 
 local path = "weapons/arccw_ud/m16/"
 local common = "weapons/arccw_ud/common/"
-SWEP.FirstShootSound = path .. "fire_first.ogg"
-SWEP.ShootSound = {path .. "fire_auto_1.ogg", path .. "fire_auto_2.ogg", path .. "fire_auto_3.ogg"}
+SWEP.FirstShootSound = path .. "first.ogg"
+SWEP.ShootSound = {path .. "auto1.ogg", path .. "auto2.ogg", path .. "auto3.ogg", path .. "auto4.ogg"}
 SWEP.ShootSoundSilenced = path .. "fire_supp.ogg"
-SWEP.DistantShootSound = path .. "fire_dist.ogg"
+SWEP.DistantShootSound = path .. "dist.ogg"
 
 -- Bodygroups --
 
@@ -511,7 +511,7 @@ SWEP.AttachmentElements = {
         }
     },
     ["ud_m16_barrel_stub"] = {
-        VMBodygroups = {{ind = 4, bg = 6}},
+        VMBodygroups = {{ind = 4, bg = 6}, {ind = 11, bg = 11}},
         --[[]
         Override_IronSightStruct = {
             Pos = Vector(-1, 4, 0),
@@ -1180,8 +1180,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         else
             vm:SetBodygroup(1, 4)
         end
-    end
-    if wep.Attachments[4].Installed == "ud_m16_receiver_usas" then
+    elseif wep.Attachments[4].Installed == "ud_m16_receiver_usas" then
         vm:SetBodygroup(0, 1)
         if vm:GetBodygroup(1) == 1 then
             vm:SetBodygroup(1, 3)
@@ -1215,8 +1214,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
             vm:SetBodygroup(0, 1)
             vm:SetBodygroup(1, 2)
             vm:SetBodygroup(11, 10)
-        end
-        if wep.Attachments[4].Installed == "ud_m16_receiver_cali" then
+        elseif wep.Attachments[4].Installed == "ud_m16_receiver_cali" then
             vm:SetBodygroup(0, 2)
             vm:SetBodygroup(1, 4)
         end
@@ -1237,7 +1235,7 @@ SWEP.Attachments = {
         VMScale = Vector(1.25, 1.25, 1.25),
         CorrectivePos = Vector(0, 0, -0.01),
         ExtraSightDist = 8,
-        MergeSlots = {14}
+        MergeSlots = {15}
     },
     {
         PrintName = "Barrel",
@@ -1311,6 +1309,11 @@ SWEP.Attachments = {
     {
         PrintName = "Ammo Type",
         Slot = {"go_ammo"},
+    },
+    {
+        PrintName = "Powder Load",
+        Slot = {"ud_powder"},
+        DefaultAttName = "Standard Load"
     },
     {
         PrintName = "Training Package",

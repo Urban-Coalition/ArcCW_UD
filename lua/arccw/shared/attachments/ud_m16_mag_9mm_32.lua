@@ -26,5 +26,5 @@ att.ActivateElements = {"ud_m16_9mm_mag_32"}
 att.RequireFlags = {"m16_9mm"}
 
 att.Hook_SelectReloadAnimation = function(wep, anim)
-    return anim .. "_9mm_32"
+    return anim .. "_9mm"
 end

@@ -319,6 +319,11 @@ SWEP.AttachmentElements = {
             Magnification = 1.1,
             CrosshairInSights = false
         },
+        AttPosMods = {
+            [3] = {
+                vpos = Vector(0, 0.25, 11.5),
+            }
+        },
         VMBodygroups = {
             {ind = 8, bg = 1},
             {ind = 1, bg = 1}
@@ -328,6 +333,11 @@ SWEP.AttachmentElements = {
         VMBodygroups = {
         {ind = 1, bg = 2},
         {ind = 7, bg = 2}
+        },
+        AttPosMods = {
+            [3] = {
+                vpos = Vector(0, 0, -10),
+            }
         },
     },
     ["ud_870_tube_reduced"] = {

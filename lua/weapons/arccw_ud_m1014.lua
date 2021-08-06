@@ -284,6 +284,11 @@ SWEP.AttachmentElements = {
     },
     ["ud_autoshotgun_barrel_short"] = {
         VMBodygroups = {{ind = 1, bg = 1}},
+        AttPosMods = {
+            [3] = {
+                vpos = Vector(0, 0, -10),
+            }
+        },
     },
     ["ud_autoshotgun_tube_short"] = {
         VMBodygroups = {{ind = 2, bg = 1}},

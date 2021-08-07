@@ -2,7 +2,7 @@ att.PrintName = "\"Plus\" Overpressured"
 
 att.SortOrder = 20
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
-att.Description = "Higher pressure ammunition allows for higher muzzle velocity at the cost of stronger knockback. Such immense pressure may result in feed failures."
+att.Description = "Higher pressure ammunition allows for higher muzzle velocity at the cost of stronger knockback. Such immense pressure increases the likelihood of extraction failures."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

@@ -778,7 +778,7 @@ SWEP.Animations = {
             {s = common .. "cloth_2.ogg",  t = 0.75},
             {s = path .. "magin.ogg",    t = 1.05},
             {s = common .. "cloth_3.ogg",  t = 1.39},
-            {s = path .. "boltdrop.ogg", t = 1.77},
+            {s = path .. "boltdrop.ogg", t = 1.82},
             {s = common .. "shoulder.ogg", t = 2.15},
         },
     },

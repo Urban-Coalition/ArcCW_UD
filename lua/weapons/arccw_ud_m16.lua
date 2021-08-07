@@ -188,8 +188,9 @@ local common = "weapons/arccw_ud/common/"
 SWEP.FirstShootSound = path .. "first.ogg"
 SWEP.ShootSound = {path .. "auto1.ogg", path .. "auto2.ogg", path .. "auto3.ogg", path .. "auto4.ogg"}
 SWEP.DistantShootSound = path .. "dist.ogg"
-SWEP.FirstShootSoundSilenced = path .. "fire_first_sup.ogg"
-SWEP.ShootSoundSilenced = {path .. "fire_auto_sup_1.ogg", path .. "fire_auto_sup_2.ogg", path .. "fire_auto_sup_3.ogg", path .. "fire_auto_sup_4.ogg"}
+SWEP.ShootSoundSilenced = path .. "fire_first_sup.ogg"
+--[[SWEP.FirstShootSoundSilenced = path .. "fire_first_sup.ogg"
+--SWEP.ShootSoundSilenced = {path .. "fire_auto_sup_1.ogg", path .. "fire_auto_sup_2.ogg", path .. "fire_auto_sup_3.ogg", path .. "fire_auto_sup_4.ogg"}
 SWEP.DistantShootSoundSilenced = path .. "fire_auto_sup_tail.ogg"]]
 
 -- Bodygroups --

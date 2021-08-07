@@ -304,12 +304,12 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = "fire",
-        Time = 8 / 30,
+        Time = 11 / 30,
         ShellEjectAt = 0.03,
     },
     ["fire_empty"] = {
         Source = "fire_empty",
-        Time = 8 / 30,
+        Time = 11 / 30,
         ShellEjectAt = 0.03,
     },
 

@@ -448,7 +448,7 @@ SWEP.AttachmentElements = {
     },
     ["ud_m16_barrel_smg"] = {
         VMBodygroups = {
-            {ind = 4, bg = 14},
+            {ind = 4, bg = 13},
             {ind = 11, bg = 10}
         },
         AttPosMods = {

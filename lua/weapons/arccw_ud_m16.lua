@@ -269,6 +269,8 @@ SWEP.Hook_NameChange = function(wep, name)
                 model = "M"
                 alt = "4 Carbine"
             end
+        elseif rec == 0 and flat then
+            alt = "16A4"
         end
         if rec == 1 then
             model = "M"
@@ -451,7 +453,7 @@ SWEP.AttachmentElements = {
     },
     ["ud_m16_barrel_smg"] = {
         VMBodygroups = {
-            {ind = 4, bg = 14},
+            {ind = 4, bg = 13},
             {ind = 11, bg = 10}
         },
         AttPosMods = {
@@ -1058,7 +1060,7 @@ SWEP.Animations = {
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
-    local flipup = wep.Attachments[14].Installed == "ud_m16_rs"
+    local flipup = wep.Attachments[1].Installed == "ud_m16_rs"
     local trueflat = wep:GetBuff_Override("TrueFlatTop")
     local barrel = 0
     local barrelatt = wep.Attachments[2].Installed
@@ -1078,7 +1080,9 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 
     if wep.Attachments[1].Installed then
         -- Optic rail
-        if vm:GetBodygroup(1) == 1 then
+        if flipup then
+            vm:SetBodygroup(10, 1)
+        elseif vm:GetBodygroup(1) == 1 then
             -- Flat top (ud_m16_upper_flat)
             vm:SetBodygroup(10, 0)
             vm:SetBodygroup(11, 10)
@@ -1150,6 +1154,8 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
             vm:SetBodygroup(1, 3)
             vm:SetBodygroup(10, 0)
         end
+    elseif barrel == 0 then
+        vm:SetBodygroup(11,0)
     end
 
     if wep:GetBuff_Override("KeepRetro") then
@@ -1182,7 +1188,7 @@ SWEP.Attachments = {
         PrintName = "Optic",
         DefaultAttName = "Iron Sights",
         InstalledEles = {"ud_m16_upper_flat"},
-        Slot = {"optic_lp","optic","sniper_optic"},
+        Slot = {"optic_lp","optic","sniper_optic","ud_m16_rs"},
         Bone = "m16_parent",
         Offset = {
             vpos = Vector(0, -1.7, 3),

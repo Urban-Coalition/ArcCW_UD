@@ -155,7 +155,7 @@ SWEP.HoldtypeActive = "smg"
 SWEP.HoldtypeSights = "smg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.9, 0, 2.1),
+     Pos = Vector(-2.869, 0, 1.886),
      Ang = Angle(0, 0, 0),
      Magnification = 1,
      SwitchToSound = "",
@@ -221,6 +221,9 @@ SWEP.AttachmentElements = {
     ["ud_uzi_stock_wood"] = {
         VMBodygroups = {{ind = 3, bg = 2}},
     },
+	["ud_uzi_stock_polymer"] = {
+        VMBodygroups = {{ind = 3, bg = 3}},
+    },
     ["ud_uzi_stock_folded"] = {
         VMBodygroups = {{ind = 3, bg = 1}},
     },
@@ -246,9 +249,15 @@ SWEP.AttachmentElements = {
         },
     },
     ["ud_uzi_body_micro"] = {
-        VMBodygroups = {{ind = 1, bg = 3},{ind = 4, bg = 1},{ind = 3, bg = 3}},
+        VMBodygroups = {{ind = 1, bg = 3},{ind = 4, bg = 1},{ind = 3, bg = 4}},
         NameChange = "MiP-9G",
         TrueNameChange = "Micro Uzi",
+		Override_IronSightStruct = {
+            Pos = Vector(-2.869, 0, 2.2),
+            Ang = Angle(0, 0, 0),
+            Magnification = 1,
+            CrosshairInSights = true
+        },
         AttPosMods = {
             [3] = {
                 vpos = Vector(0, 0, -5.8),

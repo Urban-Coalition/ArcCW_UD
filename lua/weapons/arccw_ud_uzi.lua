@@ -555,9 +555,10 @@ SWEP.Attachments = {
         Slot = {"optic_lp","optic"},
         Bone = "uzi_parent",
         Offset = {
-            vpos = Vector(-0.2, -1.7, -3),
-            vang = Angle(90, 2, -90),
+            vpos = Vector(-0.2, -2, -3),
+            vang = Angle(90, 0, -90),
         },
+        VMScale = Vector(1.25, 1.25, 1.25),
         InstalledEles = {"ud_uzi_rail_optic"}
     },
     {
@@ -595,8 +596,8 @@ SWEP.Attachments = {
         Slot = {"tac_pistol"},
         Bone = "uzi_parent",
         Offset = {
-            vpos = Vector(0.8, 0.5, 12),
-            vang = Angle(90, 0, 0),
+            vpos = Vector(0.3, 0.9, 12.5),
+            vang = Angle(90, 0, -45),
         },
         InstalledEles = {"ud_uzi_clamp"}
     },

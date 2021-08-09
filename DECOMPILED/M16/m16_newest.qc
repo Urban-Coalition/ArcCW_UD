@@ -133,6 +133,7 @@ $attachment "2" "brass" 0 0 -1 rotate -10 140 180
 $attachment "3" "camera" 0 0 0 rotate 0 0 0
 $attachment "4" "m16_flash" 0 0 -4 rotate -90 0 0
 $attachment "5" "m16_flash" 0 0 -10 rotate -90 0 0
+$attachment "6" "brass" 0 0 -1 rotate -180 -140 -180
  
 $surfaceprop "default"
  

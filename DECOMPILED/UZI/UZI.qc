@@ -94,6 +94,18 @@ $sequence "fix_empty" "anims\jam_empty.smd" {
 	snap
 }
 
+$sequence "fix_micro" "anims\jam_micro.smd" {
+	fps 30
+	"ACT_VM_IDLE" 1
+	snap
+}
+
+$sequence "fix_micro_empty" "anims\jam_micro_empty.smd" {
+	fps 30
+	"ACT_VM_IDLE" 1
+	snap
+}
+
 $sequence "idle_empty" "anims\idle_empty.smd" {
 	fps 30
 	"ACT_VM_IDLE" 1
@@ -129,6 +141,18 @@ $sequence "draw" "anims\draw.smd" {
 }
 
 $sequence "holster" "anims\holster.smd" {
+	fps 30
+	"ACT_VM_DRAW" 1
+	snap
+}
+
+$sequence "draw_empty" "anims\draw_empty.smd" {
+	fps 30
+	"ACT_VM_DRAW" 1
+	snap
+}
+
+$sequence "holster_empty" "anims\holster_empty.smd" {
 	fps 30
 	"ACT_VM_DRAW" 1
 	snap

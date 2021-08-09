@@ -1052,7 +1052,7 @@ SWEP.Animations = {
             {s = common .. "cloth_3.ogg",  t = 1.75},
             {s = path .. "usas_chback.ogg",   t = 1.9},
             {s = common .. "cloth_4.ogg",  t = 2.0},
-            {s = path .. "usas_chamber.ogg",  t = 2.12},
+            {s = path .. "usas_chamber.ogg",  t = 2.14},
             {s = common .. "shoulder.ogg", t = 2.55},
         },
     },
@@ -1232,7 +1232,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Underbarrel",
-        Slot = {"foregrip"},
+        Slot = {"foregrip","bipod","ubgl"},
         Bone = "m16_parent",
         Offset = {
             vpos = Vector(0, 1.5, 12),

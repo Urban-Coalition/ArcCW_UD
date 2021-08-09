@@ -162,7 +162,7 @@ SWEP.IronSightStruct = {
      CrosshairInSights = false
 }
 
-SWEP.ActivePos = Vector(0, 0, 0)
+SWEP.ActivePos = Vector(0, 0, 1)
 SWEP.ActiveAng = Angle(0, 0, -3)
 
 SWEP.CustomizePos = Vector(5, -2, -2)
@@ -192,6 +192,7 @@ SWEP.DistantShootSound = path .. "fire_dist.ogg"
 -- Bodygroups --
 
 SWEP.BulletBones = {
+    [1] = "uzi_b1", [2] = "uzi_b2", [3] = "uzi_b3", [4] = "uzi_b4"
 }
 
 SWEP.AttachmentElements = {
@@ -254,9 +255,9 @@ SWEP.AttachmentElements = {
         TrueNameChange = "Micro Uzi",
 		Override_IronSightStruct = {
             Pos = Vector(-2.869, 0, 2.2),
-            Ang = Angle(0, 0, 0),
+            Ang = Angle(-0.5, 0, 0),
             Magnification = 1,
-            CrosshairInSights = true
+            CrosshairInSights = false
         },
         AttPosMods = {
             [3] = {
@@ -292,24 +293,12 @@ SWEP.Animations = {
     },
     ["draw_empty"] = {
         Source = "draw_empty",
-        Time = 12 / 30,
     },
     ["holster"] = {
         Source = "holster",
-        LHIK = true,
-        LHIKIn = 0.4,
-        LHIKEaseIn = 0.4,
-        LHIKEaseOut = 0,
-        LHIKOut = 0,
     },
     ["holster_empty"] = {
         Source = "holster_empty",
-        Time = 12 / 30,
-        LHIK = true,
-        LHIKIn = 0.4,
-        LHIKEaseIn = 0.4,
-        LHIKEaseOut = 0,
-        LHIKOut = 0,
     },
     ["fire"] = {
         Source = "fire",
@@ -324,7 +313,7 @@ SWEP.Animations = {
 
     ["fix"] = {
         Source = "fix",
-        Time = 37 / 30,
+        Time = 40 / 30,
         ShellEjectAt = false,
         LHIK = true,
         LHIKIn = 0.4,
@@ -339,7 +328,7 @@ SWEP.Animations = {
     },
     ["fix_empty"] = {
         Source = "fix_empty",
-        Time = 37 / 30,
+        Time = 40 / 30,
         ShellEjectAt = false,
         LHIK = true,
         LHIKIn = 0.4,
@@ -347,6 +336,40 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
+            {s = common .. "cloth_3.ogg",  t = 0.15},
+            {s = path .. "chback.ogg",         t = 0.3, c = ci},
+            {s = path .. "chforward.ogg",         t = 0.65, c = ci},
+        },
+    },
+
+    ["fix_micro"] = {
+        Source = "fix_micro",
+        Time = 40 / 30,
+        ShellEjectAt = false,
+        LHIK = true,
+        LHIKIn = 0.4,
+        LHIKEaseIn = 0.4,
+        LHIKEaseOut = 0.15,
+        LHIKOut = 0.4,
+        SoundTable = {
+            {s = common .. "cloth_3.ogg",  t = 0.15},
+            {s = path .. "chback.ogg",         t = 0.3, c = ci},
+            {s = path .. "chforward.ogg",         t = 0.65, c = ci},
+        },
+    },
+    ["fix_empty_micro"] = {
+        Source = "fix_empty_micro",
+        Time = 40 / 30,
+        ShellEjectAt = false,
+        LHIK = true,
+        LHIKIn = 0.4,
+        LHIKEaseIn = 0.4,
+        LHIKEaseOut = 0.15,
+        LHIKOut = 0.4,
+        SoundTable = {
+            {s = common .. "cloth_3.ogg",  t = 0.15},
+            {s = path .. "chback.ogg",         t = 0.3, c = ci},
+            {s = path .. "chforward.ogg",         t = 0.65, c = ci},
         },
     },
 
@@ -357,7 +380,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
         Time = 67 / 30,
         MinProgress = 1.2,
-        LastClip1OutTime = 0.9,
+        LastClip1OutTime = 67 / 30,
         LHIK = true,
         LHIKIn = 0.4,
         LHIKEaseIn = 0.4,
@@ -376,7 +399,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
         Time = 90 / 30,
         MinProgress = 2.2,
-        LastClip1OutTime = 0.7,
+        LastClip1OutTime = 1.8,
         LHIK = true,
         LHIKIn = 0.3,
         LHIKEaseIn = 0.3,
@@ -401,7 +424,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
         Time = 67 / 30,
         MinProgress = 1.2,
-        LastClip1OutTime = 0.9,
+        LastClip1OutTime = 67 / 30,
         LHIK = true,
         LHIKIn = 0.4,
         LHIKEaseIn = 0.4,
@@ -420,7 +443,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
         Time = 90 / 30,
         MinProgress = 2.2,
-        LastClip1OutTime = 0.7,
+        LastClip1OutTime = 1.8,
         LHIK = true,
         LHIKIn = 0.3,
         LHIKEaseIn = 0.3,
@@ -445,7 +468,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
         Time = 67 / 30,
         MinProgress = 1.2,
-        LastClip1OutTime = 0.9,
+        LastClip1OutTime = 67 / 30,
         LHIK = true,
         LHIKIn = 0.4,
         LHIKEaseIn = 0.4,
@@ -464,7 +487,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
         Time = 90 / 30,
         MinProgress = 2.2,
-        LastClip1OutTime = 0.7,
+        LastClip1OutTime = 1.8,
         LHIK = true,
         LHIKIn = 0.3,
         LHIKEaseIn = 0.3,
@@ -489,7 +512,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
         Time = 67 / 30,
         MinProgress = 1.6,
-        LastClip1OutTime = 0.9,
+        LastClip1OutTime = 1,
         LHIK = true,
         LHIKIn = 0.4,
         LHIKEaseIn = 0.4,
@@ -510,7 +533,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SMG1,
         Time = 90 / 30,
         MinProgress = 2.4,
-        LastClip1OutTime = 0.7,
+        LastClip1OutTime = 1.8,
         LHIK = true,
         LHIKIn = 0.3,
         LHIKEaseIn = 0.3,
@@ -539,7 +562,7 @@ SWEP.Attachments = {
         Slot = {"optic_lp","optic"},
         Bone = "uzi_parent",
         Offset = {
-            vpos = Vector(-0.2, -1.7, -3),
+            vpos = Vector(-0.2, -2, -3),
             vang = Angle(90, 2, -90),
         },
         InstalledEles = {"ud_uzi_rail_optic"}

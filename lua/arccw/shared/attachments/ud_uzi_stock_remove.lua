@@ -16,6 +16,7 @@ att.SortOrder = 1
 att.Mult_Recoil = 1.25
 att.Mult_RecoilSide = 1.5
 att.Mult_VisualRecoilMult = 2
+att.Mult_Sway = 2
 
 att.Mult_SightTime = 0.75
 att.Mult_SightedSpeedMult = 1.1

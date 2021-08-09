@@ -332,7 +332,7 @@ SWEP.Animations = {
 
     ["trigger"] = {
         Source = "idle",
-        Time = 0.05,
+        Time = 0.025,
         SoundTable = {
             {s = path .. "prefire.ogg",         t = 0, c = ci},
         },
@@ -542,14 +542,6 @@ SWEP.Animations = {
             {s = path .. "chback.ogg",         t = 2.25, c = ci},
             {s = path .. "chforward.ogg",         t = 2.1, c = ci},
             {s = common .. "shoulder.ogg",  t = 2.7},
-        },
-    },
-
-    ["trigger"] = {
-        Source = "idle",
-        Time = 0.04,
-        SoundTable = {
-            {s = path .. "prefire.ogg",         t = 0, c = ci},
         },
     },
 }

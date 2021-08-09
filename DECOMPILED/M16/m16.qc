@@ -49,6 +49,7 @@ $bodygroup "4" {
 	studio "m16_barrel_cursed.smd" //11
 	studio "m16_barrel_tactical.smd" //12
 	studio "m16_barrel_smg.smd" //13
+	studio "m16_barrel_tactical_a4.smd" // 14
 }
 
 $bodygroup "5" {

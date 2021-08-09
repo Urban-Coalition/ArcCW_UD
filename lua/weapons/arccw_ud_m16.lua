@@ -1188,10 +1188,10 @@ SWEP.Attachments = {
         PrintName = "Optic",
         DefaultAttName = "Iron Sights",
         InstalledEles = {"ud_m16_upper_flat"},
-        Slot = {"optic_lp","optic","sniper_optic","ud_m16_rs"},
+        Slot = {"optic","sniper_optic","ud_m16_rs"},
         Bone = "m16_parent",
         Offset = {
-            vpos = Vector(0, -1.7, 3),
+            vpos = Vector(-0.02, -1.65, 3),
             vang = Angle(90, 0, -90),
         },
         VMScale = Vector(1.25, 1.25, 1.25),

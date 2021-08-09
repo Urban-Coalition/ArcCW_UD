@@ -11,14 +11,16 @@ att.Slot = "ud_uzi_stock"
 
 att.AutoStats = true
 att.Free = true
+att.SortOrder = 1
 
 att.Mult_Recoil = 1.25
 att.Mult_RecoilSide = 1.5
 att.Mult_VisualRecoilMult = 2
 
-att.Mult_SightTime = 0.8
+att.Mult_SightTime = 0.75
 att.Mult_SightedSpeedMult = 1.1
 att.Mult_ShootSpeedMult = 1.1
+
 att.Mult_DrawTime = 0.75
 att.Mult_HolsterTime = 0.75
 att.Add_BarrelLength = -2

@@ -90,11 +90,14 @@ SWEP.Sway = 0.5
 
 -- Firerate / Firemodes --
 
+SWEP.TriggerDelay = true
+
 SWEP.Delay = 60 / 600
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
         Mode = 2,
+        Mult_TriggerDelayTime = 2,
     },
     {
         Mode = 1,
@@ -223,13 +226,13 @@ SWEP.AttachmentElements = {
     ["ud_uzi_stock_wood"] = {
         VMBodygroups = {{ind = 3, bg = 2}},
     },
-	["ud_uzi_stock_polymer"] = {
+    ["ud_uzi_stock_polymer"] = {
         VMBodygroups = {{ind = 3, bg = 3}},
     },
     ["ud_uzi_stock_folded"] = {
         VMBodygroups = {{ind = 3, bg = 1}},
     },
-	["ud_uzi_stock_remove"] = {
+    ["ud_uzi_stock_remove"] = {
         VMBodygroups = {{ind = 3, bg = 4}},
     },
 
@@ -540,6 +543,14 @@ SWEP.Animations = {
             {s = path .. "chback.ogg",         t = 2.25, c = ci},
             {s = path .. "chforward.ogg",         t = 2.1, c = ci},
             {s = common .. "shoulder.ogg",  t = 2.7},
+        },
+    },
+
+    ["trigger"] = {
+        Source = "idle",
+        Time = 0.04,
+        SoundTable = {
+            {s = path .. "prefire.ogg",         t = 0, c = ci},
         },
     },
 }

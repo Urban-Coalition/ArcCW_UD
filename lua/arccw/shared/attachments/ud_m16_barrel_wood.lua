@@ -35,5 +35,5 @@ att.LHIK = true
 att.Model = "models/weapons/arccw/atts/wood_lhik.mdl"
 
 att.ActivateElements = {"ud_m16_wood_barrel"}
---att.ExcludeFlags = {"m16_auto"}
---att.GivesFlags = {"m16_noauto"}
+-- att.ExcludeFlags = {"m16_auto"}
+-- att.GivesFlags = {"m16_noauto"}

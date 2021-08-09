@@ -11,6 +11,7 @@ att.Desc_Pros = {
 att.Desc_Cons = {
 }
 att.Desc_Neutrals = {
+    "ud.cosmetic"
 }
 att.Slot = "ud_m16_barrel"
 

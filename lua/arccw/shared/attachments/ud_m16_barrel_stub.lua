@@ -6,6 +6,7 @@ att.Desc_Pros = {
 }
 att.Desc_Cons = {
     "ud.nofs",
+    "ud.noubs"
 }
 att.Desc_Neutrals = {
 }
@@ -21,7 +22,7 @@ att.AutoStats = true
 att.Mult_Recoil = 2
 att.Mult_AccuracyMOA = 5
 att.Mult_Range = 0.25
-att.Mult_RPM = 1.2
+att.Mult_RPM = 1.35
 att.Mult_SpeedMult = 1.1
 att.Mult_SightedSpeedMult = 1.25
 att.Mult_SightTime = 0.6
@@ -50,3 +51,4 @@ att.LHIK = true
 att.Model = "models/weapons/arccw/atts/stub_lhik.mdl"
 
 att.ActivateElements = {"ud_m16_stub_barrel"}
+att.GivesFlags = {"m16_lmg"}

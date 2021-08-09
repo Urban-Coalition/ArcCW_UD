@@ -1,7 +1,7 @@
 att.PrintName = "Civilian Conversion"
 
 att.Icon = Material("entities/att/arccw_ud_fg_civvy.png", "smooth mips")
-att.Description = "Adapt the gun for use in civilian markets, where fully-automatic firing weapons are usually outlawed."
+att.Description = "Adapt the gun for use in civilian markets, where fully-automatic firing weapons are usually outlawed. The simplified internals have a performance advantage over automatic receivers."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
@@ -31,3 +31,4 @@ att.Override_Firemodes_Priority = 10
 att.Mult_Range = 1.25
 att.Mult_AccuracyMOA = 0.75
 att.Mult_RPM = .9
+att.Mult_MalfunctionMean = 1.05

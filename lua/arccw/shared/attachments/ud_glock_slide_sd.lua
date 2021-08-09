@@ -12,6 +12,7 @@ att.Desc_Pros = {
 }
 att.Desc_Cons = {
     --"ud.manual",
+    "ud.nomuzzle"
 }
 att.Desc_Neutrals = {
     "ud.hushpuppy"

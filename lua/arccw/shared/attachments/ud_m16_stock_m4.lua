@@ -21,6 +21,7 @@ att.Mult_SightTime = 0.9
 att.Mult_HipDispersion = 0.85
 att.Mult_Recoil = 1.1
 att.Mult_RecoilSide = 1.25
+att.Mult_Sway = 1.25
 
 att.Add_BarrelLength = -4
 

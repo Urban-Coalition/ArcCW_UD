@@ -404,7 +404,7 @@ SWEP.AttachmentElements = {
 
     ["ud_m16_barrel_tactical_a4"] = {
         VMBodygroups = {
-            {ind = 4, bg = 13},
+            {ind = 4, bg = 14},
             {ind = 11, bg = 8}
         },
         AttPosMods = {
@@ -1134,12 +1134,12 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         vm:SetBodygroup(8, 0)
     end
     if wep.Attachments[4].Installed == "ud_m16_receiver_cali" then
-        vm:SetBodygroup(0, 2)
-        if vm:GetBodygroup(1) == 1 then
-            vm:SetBodygroup(1, 5)
-        else
-            vm:SetBodygroup(1, 4)
-        end
+        -- vm:SetBodygroup(0, 2)
+        -- if vm:GetBodygroup(1) == 1 then
+        --     vm:SetBodygroup(1, 5)
+        -- else
+        --     vm:SetBodygroup(1, 4)
+        -- end
     elseif wep.Attachments[4].Installed == "ud_m16_receiver_usas" then
         vm:SetBodygroup(0, 1)
         if vm:GetBodygroup(1) == 1 then
@@ -1188,10 +1188,10 @@ SWEP.Attachments = {
         PrintName = "Optic",
         DefaultAttName = "Iron Sights",
         InstalledEles = {"ud_m16_upper_flat"},
-        Slot = {"optic_lp","optic","sniper_optic","ud_m16_rs"},
+        Slot = {"optic","sniper_optic","ud_m16_rs"},
         Bone = "m16_parent",
         Offset = {
-            vpos = Vector(0, -1.7, 3),
+            vpos = Vector(-0.02, -1.65, 3),
             vang = Angle(90, 0, -90),
         },
         VMScale = Vector(1.25, 1.25, 1.25),
@@ -1232,7 +1232,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Underbarrel",
-        Slot = {"foregrip","bipod","ubgl"},
+        Slot = {"foregrip","ubgl"},
         Bone = "m16_parent",
         Offset = {
             vpos = Vector(0, 1.5, 12),

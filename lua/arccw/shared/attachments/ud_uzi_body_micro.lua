@@ -6,10 +6,11 @@ if !GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
-att.Description = "Extremely compact frame that turns this sub-machine gun into a machine pistol. Without an attach point for stocks, recoil is dramatically increased."
+att.Description = "Extremely compact frame that turns this sub-machine gun into a machine pistol. Without an attach point for stocks, recoil is dramatically increased. Converts weapon to closed bolt operation."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
+    "ud.nostocks"
 }
 att.Desc_Neutrals = {
 }
@@ -18,7 +19,7 @@ att.Slot = "ud_uzi_frame"
 att.AutoStats = true
 att.SortOrder = 4.6
 
-att.Mult_AccuracyMOA = 3
+att.Mult_AccuracyMOA = 1.75
 att.Mult_SightTime = 0.6
 att.Mult_Recoil = 1.5
 att.Mult_RecoilSide = 2
@@ -30,6 +31,9 @@ att.Mult_DrawTime = 0.6
 att.Mult_HolsterTime = 0.6
 
 att.Add_BarrelLength = -8
+
+att.Override_ChamberSize = 1
+att.Mult_TriggerDelayTime = 0
 
 att.LHIK = true
 

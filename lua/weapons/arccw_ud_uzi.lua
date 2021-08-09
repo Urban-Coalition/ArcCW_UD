@@ -86,15 +86,18 @@ SWEP.MaxRecoilBlowback = 1
 SWEP.MaxRecoilPunch = 0.6
 SWEP.RecoilPunchBack = 1.5
 
-SWEP.Sway = 0.5
+SWEP.Sway = 0.3
 
 -- Firerate / Firemodes --
+
+SWEP.TriggerDelay = true
 
 SWEP.Delay = 60 / 600
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
         Mode = 2,
+        Mult_TriggerDelayTime = 2,
     },
     {
         Mode = 1,
@@ -111,6 +114,8 @@ SWEP.ProceduralRegularFire = false
 SWEP.ProceduralIronFire = false
 
 SWEP.ReloadInSights = true
+
+SWEP.TriggerDelay = true
 
 -- NPC --
 
@@ -155,7 +160,7 @@ SWEP.HoldtypeActive = "smg"
 SWEP.HoldtypeSights = "smg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.869, 0, 1.886),
+     Pos = Vector(-2.869, 0, 1.95),
      Ang = Angle(0, 0, 0),
      Magnification = 1,
      SwitchToSound = "",
@@ -222,11 +227,14 @@ SWEP.AttachmentElements = {
     ["ud_uzi_stock_wood"] = {
         VMBodygroups = {{ind = 3, bg = 2}},
     },
-	["ud_uzi_stock_polymer"] = {
+    ["ud_uzi_stock_polymer"] = {
         VMBodygroups = {{ind = 3, bg = 3}},
     },
     ["ud_uzi_stock_folded"] = {
         VMBodygroups = {{ind = 3, bg = 1}},
+    },
+    ["ud_uzi_stock_remove"] = {
+        VMBodygroups = {{ind = 3, bg = 4}},
     },
 
     ["ud_uzi_body_carbine"] = {
@@ -253,9 +261,9 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 1, bg = 3},{ind = 4, bg = 1},{ind = 3, bg = 4}},
         NameChange = "MiP-9G",
         TrueNameChange = "Micro Uzi",
-		Override_IronSightStruct = {
-            Pos = Vector(-2.869, 0, 2.2),
-            Ang = Angle(-0.5, 0, 0),
+        Override_IronSightStruct = {
+            Pos = Vector(-2.869, 0, 2.3),
+            Ang = Angle(-0.95, 0.035, 0),
             Magnification = 1,
             CrosshairInSights = false
         },
@@ -309,6 +317,14 @@ SWEP.Animations = {
         Source = "fire_empty",
         Time = 13 / 30,
         ShellEjectAt = 0.03,
+    },
+
+    ["trigger"] = {
+        Source = "idle",
+        Time = 0.025,
+        SoundTable = {
+            {s = path .. "prefire.ogg",         t = 0, c = ci},
+        },
     },
 
     ["fix"] = {
@@ -563,8 +579,9 @@ SWEP.Attachments = {
         Bone = "uzi_parent",
         Offset = {
             vpos = Vector(-0.2, -2, -3),
-            vang = Angle(90, 2, -90),
+            vang = Angle(90, 0, -90),
         },
+        VMScale = Vector(1.25, 1.25, 1.25),
         InstalledEles = {"ud_uzi_rail_optic"}
     },
     {
@@ -602,8 +619,8 @@ SWEP.Attachments = {
         Slot = {"tac_pistol"},
         Bone = "uzi_parent",
         Offset = {
-            vpos = Vector(0.8, 0.5, 12),
-            vang = Angle(90, 0, 0),
+            vpos = Vector(0.3, 0.9, 12.5),
+            vang = Angle(90, 0, -45),
         },
         InstalledEles = {"ud_uzi_clamp"}
     },

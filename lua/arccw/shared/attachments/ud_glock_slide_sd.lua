@@ -12,6 +12,7 @@ att.Desc_Pros = {
 }
 att.Desc_Cons = {
     --"ud.manual",
+    "ud.nomuzzle"
 }
 att.Desc_Neutrals = {
     "ud.hushpuppy"
@@ -48,14 +49,14 @@ att.Override_Firemodes = {
     },
     {
         Mode = 1,
-        PrintName = "LOCK",
+        PrintName = "Slide-Lock",
         Override_ManualAction = true,
         Mult_ShootVol = 0.8,
         Mult_AccuracyMOA = 0.75
     },
     {
         Mode = 0,
-        PrintName = "LOW",
+        PrintName = "Low",
     }
 }
 

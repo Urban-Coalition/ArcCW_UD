@@ -41,7 +41,7 @@ att.Override_Firemodes = {
         Mode = 1,
     },
     {
-        PrintName = "LOW",
+        PrintName = "Low",
         Mode = 0,
     }
 }

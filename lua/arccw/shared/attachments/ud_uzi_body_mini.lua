@@ -28,6 +28,8 @@ att.Mult_HipDispersion = 1.25
 
 att.Add_BarrelLength = -4
 
+att.Mult_TriggerDelayTime = 0.75
+
 att.LHIK = true
 
 att.Override_HoldtypeActive = "pistol"

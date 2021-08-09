@@ -18,7 +18,7 @@ att.Slot = "ud_uzi_frame"
 att.AutoStats = true
 att.SortOrder = 4.6
 
-att.Mult_AccuracyMOA = 3
+att.Mult_AccuracyMOA = 1.75
 att.Mult_SightTime = 0.6
 att.Mult_Recoil = 1.5
 att.Mult_RecoilSide = 2

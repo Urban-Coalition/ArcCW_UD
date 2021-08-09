@@ -86,7 +86,7 @@ SWEP.MaxRecoilBlowback = 1
 SWEP.MaxRecoilPunch = 0.6
 SWEP.RecoilPunchBack = 1.5
 
-SWEP.Sway = 0.5
+SWEP.Sway = 0.3
 
 -- Firerate / Firemodes --
 

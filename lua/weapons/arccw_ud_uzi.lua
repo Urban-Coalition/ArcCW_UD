@@ -112,6 +112,8 @@ SWEP.ProceduralIronFire = false
 
 SWEP.ReloadInSights = true
 
+SWEP.TriggerDelay = true
+
 -- NPC --
 
 SWEP.NPCWeaponType = "weapon_smg"
@@ -323,6 +325,15 @@ SWEP.Animations = {
         Source = "fire_empty",
         Time = 13 / 30,
         ShellEjectAt = 0.03,
+    },
+
+    ["trigger"] = {
+        Source = "idle",
+        Time = 2.25 / 30,
+        ShellEjectAt = false,
+        SoundTable = {
+            {s = path .. "prefire.ogg", t = 0},
+        },
     },
 
     ["fix"] = {

@@ -155,7 +155,7 @@ SWEP.HoldtypeActive = "smg"
 SWEP.HoldtypeSights = "smg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.869, 0, 1.886),
+     Pos = Vector(-2.869, 0, 1.95),
      Ang = Angle(0, 0, 0),
      Magnification = 1,
      SwitchToSound = "",
@@ -252,11 +252,11 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 1, bg = 3},{ind = 4, bg = 1},{ind = 3, bg = 4}},
         NameChange = "MiP-9G",
         TrueNameChange = "Micro Uzi",
-		Override_IronSightStruct = {
-            Pos = Vector(-2.869, 0, 2.2),
-            Ang = Angle(0, 0, 0),
+        Override_IronSightStruct = {
+            Pos = Vector(-2.869, 0, 2.3),
+            Ang = Angle(-0.95, 0.035, 0),
             Magnification = 1,
-            CrosshairInSights = true
+            CrosshairInSights = false
         },
         AttPosMods = {
             [3] = {

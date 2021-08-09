@@ -227,6 +227,9 @@ SWEP.AttachmentElements = {
     ["ud_uzi_stock_folded"] = {
         VMBodygroups = {{ind = 3, bg = 1}},
     },
+	["ud_uzi_stock_remove"] = {
+        VMBodygroups = {{ind = 3, bg = 4}},
+    },
 
     ["ud_uzi_body_carbine"] = {
         VMBodygroups = {{ind = 1, bg = 1}},

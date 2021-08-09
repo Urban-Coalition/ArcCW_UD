@@ -332,10 +332,9 @@ SWEP.Animations = {
 
     ["trigger"] = {
         Source = "idle",
-        Time = 2.25 / 30,
-        ShellEjectAt = false,
+        Time = 0.05,
         SoundTable = {
-            {s = path .. "prefire.ogg", t = 0},
+            {s = path .. "prefire.ogg",         t = 0, c = ci},
         },
     },
 

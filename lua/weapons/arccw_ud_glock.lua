@@ -108,7 +108,7 @@ SWEP.ProceduralIronFire = false
 
 SWEP.ReloadInSights = true
 
--- NPC --
+-- NPC -- 
 
 SWEP.NPCWeaponType = "weapon_pistol"
 SWEP.NPCWeight = 60
@@ -151,8 +151,8 @@ SWEP.HoldtypeActive = "pistol"
 SWEP.HoldtypeSights = "revolver"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.33, 4, 2.76),
-     Ang = Angle(0.05, -0.06, 0),
+     Pos = Vector(-2.3, 3.3, 2.52),
+     Ang = Angle(0.3, 0, 0),
      Magnification = 1,
 }
 
@@ -200,27 +200,27 @@ SWEP.AttachmentElements = {
         }
     },
     ["ud_glock_mag_33"] = {
-        VMBodygroups = {{ind = 2, bg = 2}},
+        VMBodygroups = {{ind = 1, bg = 2}},
     },
     ["ud_glock_mag_100"] = {
-        VMBodygroups = {{ind = 2, bg = 3}},
+        VMBodygroups = {{ind = 1, bg = 3}},
     },
 
     ["ud_glock_rail_optic"] = {
-        VMBodygroups = {{ind = 3, bg = 1}},
+        VMBodygroups = {{ind = 2, bg = 1}},
     },
     ["ud_glock_slide_comp"] = {
-        VMBodygroups = {{ind = 4, bg = 1}},
+        VMBodygroups = {{ind = 3, bg = 1}},
         NameChange = "GEN3 Custom",
         TrueNameChange = "Glock 17 Custom",
         Override_IronSightStruct = {
-            Pos = Vector(-2.28, 4, 2.6),
-            Ang = Angle(0.2, 0.05, 0),
+            Pos = Vector(-2.283, 0, 2.506),
+            Ang = Angle(0.58, 0, 0),
             Magnification = 1,
         }
     },
     ["ud_glock_slide_lb"] = {
-        VMBodygroups = {{ind = 4, bg = 2}},
+        VMBodygroups = {{ind = 3, bg = 2}},
         NameChange = "GEN3 Extended",
         TrueNameChange = "Glock 17L",
         AttPosMods = {
@@ -231,22 +231,17 @@ SWEP.AttachmentElements = {
         }
     },
     ["ud_glock_slide_auto"] = {
-        VMBodygroups = {{ind = 4, bg = 3}},
+        VMBodygroups = {{ind = 3, bg = 3}},
         NameChange = "GEN3 Auto",
         TrueNameChange = "Glock 18C",
     },
     ["ud_glock_slide_cs"] = {
-        VMBodygroups = {{ind = 4, bg = 6}},
+        VMBodygroups = {{ind = 3, bg = 6}},
         NameChange = "GEN3 CS",
         TrueNameChange = "Glock 18CS",
-        Override_IronSightStruct = {
-            Pos = Vector(-2.26, 4, 2.76),
-            Ang = Angle(0.05, 0.06, 0),
-            Magnification = 1,
-        }
     },
     ["ud_glock_slide_carbine"] = {
-        VMBodygroups = {{ind = 4, bg = 4}},
+        VMBodygroups = {{ind = 3, bg = 4}},
         NameChange = "GEN3 Euro Carbine",
         TrueNameChange = "Glock 17XXXL",
         AttPosMods = {
@@ -257,7 +252,7 @@ SWEP.AttachmentElements = {
         }
     },
     ["ud_glock_slide_sd"] = {
-        VMBodygroups = {{ind = 4, bg = 5}},
+        VMBodygroups = {{ind = 3, bg = 5}},
         NameChange = "GEN3 Silent Mistress",
         TrueNameChange = "Glock 17SD",
         GivesFlags = {"sd"},
@@ -270,6 +265,16 @@ SWEP.AttachmentElements = {
                 vpos = Vector(0, 0.1, 5),
                 vang = Angle(90, 0, 90),
             },
+        }
+    },
+	["ud_glock_slide_nytesyte"] = {
+        VMBodygroups = {{ind = 3, bg = 7}},
+        NameChange = "GEN3 Homeboy",
+        TrueNameChange = "Glock 17 NyteSyte",
+        Override_IronSightStruct = {
+            Pos = Vector(-3.057, 0, 3.397),
+            Ang = Angle(0, 0, -90),
+            Magnification = 1,
         }
     },
 }
@@ -445,7 +450,7 @@ SWEP.Animations = {
             {s = path .. "slide_pull.ogg",  t = 0.2, c = ci},
             {s = path .. "sliderel_deact.ogg",  t = 0.2, c = ci},
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.5},
-            {s = path .. "sliderel.ogg",        t = 0.5, c = ci},
+            {s = path .. "sliderel.ogg",        t = 0.6, c = ci},
         },
         LHIK = true,
         LHIKIn = 0.2,
@@ -478,8 +483,8 @@ SWEP.Animations = {
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
             {s = path .. "slide_pull.ogg",  t = 0.2, c = ci},
             {s = path .. "sliderel_deact.ogg",  t = 0.2, c = ci},
-            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.3},
-            {s = path .. "sliderel.ogg",        t = 0.5, c = ci},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.5},
+            {s = path .. "sliderel.ogg",        t = 0.6, c = ci},
         },
         LHIK = true,
         LHIKIn = 0.2,
@@ -495,7 +500,7 @@ SWEP.Animations = {
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
             {s = path .. "slide_pull.ogg",  t = 0.2, c = ci},
             {s = path .. "sliderel_deact.ogg",  t = 0.2, c = ci},
-            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.3},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.5},
         },
         LHIK = true,
         LHIKIn = 0.2,
@@ -538,7 +543,7 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.3,
         SoundTable = {
-            {s = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"},  t = 0},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
             {s = path .. "magrelease.ogg",    t = 0.15, c = ci},
             {s = path .. "magout.ogg",        t = 0.15, c = ci},
             {s = path .. "magin.ogg",         t = 0.45, c = ci},
@@ -562,7 +567,7 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.3,
         SoundTable = {
-            {s = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"},  t = 0},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.3},
             {s = path .. "magrelease.ogg",    t = 0.3, c = ci},
             {s = path .. "magout.ogg",        t = 0.3, c = ci},
@@ -582,7 +587,7 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.3,
         SoundTable = {
-            {s = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"},  t = 0},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
             {s = path .. "magrelease.ogg",    t = 0.15, c = ci},
             {s = path .. "magout.ogg",        t = 0.15, c = ci},
             {s = path .. "magin.ogg",         t = 0.45, c = ci},
@@ -606,7 +611,7 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.3,
         SoundTable = {
-            {s = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"},  t = 0},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.3},
             {s = path .. "magrelease.ogg",    t = 0.4, c = ci},
             {s = path .. "magout.ogg",        t = 0.4, c = ci},
@@ -626,7 +631,7 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.3,
         SoundTable = {
-            {s = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"},  t = 0},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
             {s = path .. "magrelease.ogg",    t = 0.16, c = ci},
             {s = path .. "magout.ogg",        t = 0.16, c = ci},
             {s = path .. "magin.ogg",         t = 0.46, c = ci},
@@ -650,7 +655,7 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.3,
         SoundTable = {
-            {s = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"},  t = 0},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
             {s = path .. "magrelease.ogg",    t = 0.3, c = ci},
             {s = path1 .. "magout.ogg",        t = 0.3, c = ci},
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.7},
@@ -670,7 +675,7 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.3,
         SoundTable = {
-            {s = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"},  t = 0},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
             {s = path .. "magrelease.ogg",      t = 0.12, c = ci},
             {s = path1 .. "magout.ogg",          t = 0.12, c = ci},
             {s = path1 .. "magin.ogg",           t = 0.6, c = ci},

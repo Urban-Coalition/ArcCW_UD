@@ -29,12 +29,12 @@ att.Override_Malfunction = true
 att.Override_Firemodes = {
     {
         Mode = -3,
-        Mult_RPM = 4,
+        Mult_RPM = 3,
         PostBurstDelay = 0.25,
         RunawayBurst = true,
-        ShotRecoilTable = {
-            [1] = 0.5,
-            [2] = 0.5,
+        Override_ShotRecoilTable = {
+            [0] = 0.6,
+            [1] = 0.8,
         }
     },
     {

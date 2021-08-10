@@ -636,7 +636,7 @@ SWEP.Attachments = {
         DefaultAttName = "32-Round Mag",
     },
     {
-        PrintName = "Ammo",
+        PrintName = "Ammo Type",
         Slot = {"go_ammo"},
     },
     {

@@ -526,7 +526,7 @@ SWEP.Attachments = {
         DefaultAttName = "Wooden Stock",
     },
     {
-        PrintName = "Ammo",
+        PrintName = "Ammo Type",
         Slot = {"go_ammo"},
     },
     {

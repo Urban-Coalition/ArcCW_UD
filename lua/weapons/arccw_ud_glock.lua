@@ -108,7 +108,7 @@ SWEP.ProceduralIronFire = false
 
 SWEP.ReloadInSights = true
 
--- NPC -- 
+-- NPC --
 
 SWEP.NPCWeaponType = "weapon_pistol"
 SWEP.NPCWeight = 60
@@ -760,7 +760,7 @@ SWEP.Attachments = {
         }
     },
     {
-        PrintName = "Ammo",
+        PrintName = "Ammo Type",
         Slot = {"go_ammo"},
     },
     {

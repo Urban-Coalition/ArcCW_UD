@@ -116,7 +116,7 @@ SWEP.ProceduralIronFire = false
 
 SWEP.ReloadInSights = true
 
--- NPC -- 
+-- NPC --
 
 SWEP.NPCWeaponType = "weapon_shotgun"
 SWEP.NPCWeight = 210
@@ -426,7 +426,7 @@ SWEP.Attachments = {
         DefaultAttName = "6 Shell Tube",
     },
     {
-        PrintName = "Ammo",
+        PrintName = "Ammo Type",
         Slot = {"go_ammo"},
     },
     {

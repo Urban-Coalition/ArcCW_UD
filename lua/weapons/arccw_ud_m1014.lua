@@ -238,7 +238,7 @@ SWEP.Animations = {
         TPAnimStartTime = 0.5,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         SoundTable = {
-            {s = common .. "cloth_2.ogg",  t = 0},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
             {s = path .. "breechload.ogg",  t = 0.05},
             {s = path .. "breechclose.ogg",  t = 0.7},
         },
@@ -254,7 +254,7 @@ SWEP.Animations = {
         LHIKOut = 0,
         SoundTable = {
             {s = {common .. "shotgun_insert_1.ogg", common .. "shotgun_insert_2.ogg", common .. "shotgun_insert_3.ogg"},  t = 0},
-            {s = common .. "cloth_4.ogg",  t = 0.05},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.05},
         },
     },
     ["sgreload_finish"] = {

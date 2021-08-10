@@ -44,3 +44,7 @@ att.Model = "models/weapons/arccw/atts/mini_lhik.mdl"
 
 att.ActivateElements = {"ud_uzi_body_micro"}
 att.GivesFlags = {"micro"}
+
+att.Hook_TranslateAnimation = function(wep, anim)
+    return anim .. "_micro"
+end

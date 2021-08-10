@@ -212,7 +212,7 @@ SWEP.Animations = {
         ShellEjectAt = 0.1,
         MinProgress = 12 / 30,
         SoundTable = {
-            {s = common .. "cloth_3.ogg",  t = 0},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
             {s = path .. "rack_1.ogg",  t = 0},
             {s = path .. "eject.ogg",  t = 0.075},
             {s = path .. "rack_2.ogg",  t = 0.2},
@@ -226,7 +226,7 @@ SWEP.Animations = {
         LHIKIn = 0.5,
         LHIKOut = 0,
         SoundTable = {
-            {s = common .. "cloth_1.ogg",  t = 0},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
             {s = common .. "shoulder.ogg",  t = 0.1},
         },
     },
@@ -241,7 +241,7 @@ SWEP.Animations = {
         LHIKOut = 0,
         SoundTable = {
             {s = {common .. "shotgun_insert_1.ogg", common .. "shotgun_insert_2.ogg", common .. "shotgun_insert_3.ogg"},  t = 0.1},
-            {s = common .. "cloth_2.ogg",  t = 0},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
         },
     },
     ["sgreload_finish"] = {
@@ -254,7 +254,7 @@ SWEP.Animations = {
         TPAnimStartTime = 0.8,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         SoundTable = {
-            {s = common .. "cloth_3.ogg",  t = 0},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
             {s = common .. "shoulder.ogg",  t = 0.27},
         },
     },
@@ -269,7 +269,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         ShellEjectAt = 0.5,
         SoundTable = {
-            {s = common .. "cloth_2.ogg",  t = 0.5},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.5},
             {s = path .. "rack_1.ogg",  t = 0.5},
             {s = path .. "eject.ogg",  t = 0.58},
             {s = path .. "rack_2.ogg",  t = 0.7},

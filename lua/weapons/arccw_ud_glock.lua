@@ -685,7 +685,7 @@ SWEP.Animations = {
 SWEP.AutosolveSourceSeq = "idle"
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
-    if wep.Attachments[7].Installed and (anim == "fire" or anim == "fire_empty") then
+    if wep.Attachments[8].Installed and (anim == "fire" or anim == "fire_empty") then
         return anim .. "_stock"
     end
 end

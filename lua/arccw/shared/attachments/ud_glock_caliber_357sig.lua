@@ -26,3 +26,16 @@ att.Mult_AccuracyMOA = 0.5
 att.Mult_Recoil = 1.15
 
 att.Mult_ClipSize = 0.88
+
+att.Hook_GetShootSound = function(wep, sound)
+    if wep:GetBuff_Override("Silencer") then
+        return "weapons/arccw_ud/glock/fire_supp.ogg" -- Not Placeholder
+    else
+        return "weapons/arccw_ud/glock/fire_10.ogg" -- Placeholder
+    end
+end
+
+att.Hook_GetDistantShootSound = function(wep, distancesound)
+    if distancesound == wep.DistantShootSound then
+        return "weapons/arccw_ud/glock/fire_dist_45.ogg" end
+end

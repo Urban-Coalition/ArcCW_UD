@@ -39,13 +39,13 @@ att.Override_ShellSounds = ArcCW.TinyShellSoundsTable
 
 att.Hook_GetShootSound = function(wep, sound)
     if wep:GetBuff_Override("Silencer") then
-        return "weapons/arccw_ud/mini14/fire_22_supp.ogg" -- Not Placeholder
+        return "weapons/arccw_ud/mini14/fire_22_supp.ogg" -- Placeholder
     else
-        return "weapons/arccw_ud/mini14/fire_22.ogg" -- Not Placeholder
+        return "weapons/arccw_ud/glock/fire_22.ogg" -- Not Placeholder
     end
 end
 
 att.Hook_GetDistantShootSound = function(wep, distancesound)
     if distancesound == wep.DistantShootSound then
-        return "weapons/arccw_ud/mini14/fire_22_dist.ogg" end
+        return "weapons/arccw_ud/glock/fire_dist_22.ogg" end
 end

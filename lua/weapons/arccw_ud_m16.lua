@@ -1257,18 +1257,18 @@ SWEP.Attachments = {
         DefaultAttName = "A2 Pistol Grip",
     },
     {
-        PrintName = "Stock Type",
+        PrintName = "Stock",
         Slot = {"ud_m16_stock"},
         DefaultAttName = "Full Stock",
         ExcludeFlags = {"m16_usas"},
     },
     {
-        PrintName = "Mag Type",
+        PrintName = "Magazine",
         Slot = {"ud_m16_mag"},
         DefaultAttName = "30-Round Mag",
     },
     {
-        PrintName = "Ammo Type",
+        PrintName = "Ammo",
         Slot = {"go_ammo"},
     },
     {

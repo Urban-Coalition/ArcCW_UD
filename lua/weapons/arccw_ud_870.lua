@@ -416,7 +416,7 @@ SWEP.Attachments = {
         },
     },
     {
-        PrintName = "Stock Type",
+        PrintName = "Stock",
         DefaultAttName = "Wooden Stock",
         Slot = {"ud_870_stock"},
     },
@@ -426,7 +426,7 @@ SWEP.Attachments = {
         DefaultAttName = "6 Shell Tube",
     },
     {
-        PrintName = "Ammo Type",
+        PrintName = "Ammo",
         Slot = {"go_ammo"},
     },
     {

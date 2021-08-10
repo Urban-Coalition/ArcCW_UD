@@ -361,7 +361,7 @@ SWEP.Attachments = {
         DefaultEles = {"ud_autoshotgun_tube_short"},
     },
     {
-        PrintName = "Ammo Type",
+        PrintName = "Ammo",
         Slot = {"go_ammo"},
     },
     {

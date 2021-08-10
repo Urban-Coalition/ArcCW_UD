@@ -516,17 +516,17 @@ SWEP.Attachments = {
         InstalledEles = {"ud_mini14_clamp"},
     },
     {
-        PrintName = "Mag Type",
+        PrintName = "Magazine",
         Slot = {"ud_mini14_mag"},
         DefaultAttName = "20-Round Mag",
     },
     {
-        PrintName = "Stock Type",
+        PrintName = "Stock",
         Slot = {"ud_mini14_stock"},
         DefaultAttName = "Wooden Stock",
     },
     {
-        PrintName = "Ammo Type",
+        PrintName = "Ammo",
         Slot = {"go_ammo"},
     },
     {

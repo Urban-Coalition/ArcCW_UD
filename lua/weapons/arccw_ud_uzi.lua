@@ -608,12 +608,12 @@ SWEP.Attachments = {
         ExcludeFlags = {"micro"},
     },
     {
-        PrintName = "Mag Type",
+        PrintName = "Magazine",
         Slot = {"ud_uzi_mag"},
         DefaultAttName = "32-Round Mag",
     },
     {
-        PrintName = "Ammo Type",
+        PrintName = "Ammo",
         Slot = {"go_ammo"},
     },
     {

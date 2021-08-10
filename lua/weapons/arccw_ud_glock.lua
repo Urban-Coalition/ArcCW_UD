@@ -709,6 +709,11 @@ SWEP.Attachments = {
         Slot = "ud_glock_slide",
     },
     {
+        PrintName = "Caliber",
+        DefaultAttName = "9x19mm Parabellum",
+        Slot = "ud_glock_caliber",
+    },
+    {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
         Slot = {"muzzle"},
@@ -727,7 +732,7 @@ SWEP.Attachments = {
             vpos = Vector(0, -1.3, 5),
             vang = Angle(90, 0, -90),
         },
-        MergeSlots = {5},
+        MergeSlots = {6},
     },
     {
         Hidden = true,
@@ -740,12 +745,12 @@ SWEP.Attachments = {
         },
     },
     {
-        PrintName = "Mag Type",
+        PrintName = "Magazine",
         Slot = {"ud_glock_mag"},
         DefaultAttName = "17-Round Mag",
     },
     {
-        PrintName = "Stock Type",
+        PrintName = "Stock",
         Slot = "go_stock_pistol_bt",
         DefaultAttName = "No Stock",
         Bone = "glock_parent",
@@ -755,7 +760,7 @@ SWEP.Attachments = {
         }
     },
     {
-        PrintName = "Ammo Type",
+        PrintName = "Ammo",
         Slot = {"go_ammo"},
     },
     {

@@ -169,8 +169,8 @@ SWEP.ActiveAng = Angle(0, 0, -3)
 SWEP.CustomizePos = Vector(5, -2, -2)
 SWEP.CustomizeAng = Angle(15, 25, 0)
 
-SWEP.CrouchPos = Vector(-4, -2, -0.5)
-SWEP.CrouchAng = Angle(0, 0, -35)
+SWEP.CrouchPos = Vector(-2.5, -2, -0.6)
+SWEP.CrouchAng = Angle(0, 0, -14)
 
 SWEP.BarrelOffsetHip = Vector(0, 0, -3)
 

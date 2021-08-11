@@ -30,7 +30,7 @@ att.Mult_RecoilSide = 1.5
 --att.Mult_RPM = 0.75
 att.Mult_MalfunctionMean = 0.75
 
-att.Mult_ClipSize = 0.8
+att.Mult_ClipSize = 0.76
 
 att.Hook_GetShootSound = function(wep, sound)
     if wep:GetBuff_Override("Silencer") then

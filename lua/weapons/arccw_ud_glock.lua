@@ -361,9 +361,9 @@ SWEP.Hook_NameChange = function(wep,name)
                 end
             elseif caliber == 4 then
                 if barrel == 8 then
-                    mid = "39"
+                    mid = "30"
                 else
-                    mid = "37"
+                    mid = "21"
                 end
             else
                 mid = "44"

@@ -11,6 +11,7 @@ att.Desc_Neutrals = {
 att.Slot = "ud_training"
 
 att.AutoStats = true
+att.SortOrder = 15
 
 att.Mult_CycleTime = .9
 

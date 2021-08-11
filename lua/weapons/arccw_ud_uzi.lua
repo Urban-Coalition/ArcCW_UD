@@ -167,7 +167,7 @@ SWEP.IronSightStruct = {
      CrosshairInSights = false
 }
 
-SWEP.ActivePos = Vector(0, 0, 1)
+SWEP.ActivePos = Vector(0.4, -1.9, 1.4)
 SWEP.ActiveAng = Angle(0, 0, -3)
 
 SWEP.CustomizePos = Vector(5, -2, -2)

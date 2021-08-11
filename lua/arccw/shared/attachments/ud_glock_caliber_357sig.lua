@@ -31,11 +31,11 @@ att.Hook_GetShootSound = function(wep, sound)
     if wep:GetBuff_Override("Silencer") then
         return "weapons/arccw_ud/glock/fire_supp.ogg" -- Not Placeholder
     else
-        return "weapons/arccw_ud/glock/fire_10.ogg" -- Placeholder
+        return "weapons/arccw_ud/glock/fire_357.ogg" -- Placeholder
     end
 end
 
 att.Hook_GetDistantShootSound = function(wep, distancesound)
     if distancesound == wep.DistantShootSound then
-        return "weapons/arccw_ud/glock/fire_dist_45.ogg" end
+        return "weapons/arccw_ud/glock/fire_dist_357.ogg" end
 end

@@ -6,7 +6,7 @@ if GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
-att.Description = "Subcompact frame. balance me lo"
+att.Description = "Subcompact frame. balance me lo wweed wweed wweed wweed wweed wweed wweed wweed wweed wweed wweed wweed wweed wweed wweed wweed wweed wweed wweed wweed wweed wweed wweed wweed wweed wweed wweed wweed "
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

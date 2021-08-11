@@ -12,6 +12,7 @@ att.Desc_Neutrals = {
 att.Slot = "ud_training"
 
 att.AutoStats = true
+att.SortOrder = 1
 
 function att.Hook_GetCapacity(wep, cap)
     return math.max(math.floor(cap * (1 - 0.14)), 1)

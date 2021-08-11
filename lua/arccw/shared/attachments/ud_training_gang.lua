@@ -12,6 +12,7 @@ att.Desc_Neutrals = {
 att.Slot = "ud_training"
 
 att.AutoStats = true
+att.SortOrder = 14
 
 att.Mult_HipDispersion = 0.5
 att.Mult_RecoilSide = 1.25

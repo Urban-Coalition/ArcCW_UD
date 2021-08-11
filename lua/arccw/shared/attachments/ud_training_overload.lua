@@ -12,5 +12,6 @@ att.Desc_Neutrals = {
 att.Slot = "ud_training"
 
 att.AutoStats = true
+att.SortOrder = 8
 
 att.Add_ClipSize = 1

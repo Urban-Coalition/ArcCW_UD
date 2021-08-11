@@ -12,6 +12,7 @@ att.Desc_Neutrals = {
 att.Slot = "ud_training"
 
 att.AutoStats = true
+att.SortOrder = 7
 
 att.M_Hook_Mult_RPM = function(wep, data)
     if wep:GetCurrentFiremode().Mode == 1 then

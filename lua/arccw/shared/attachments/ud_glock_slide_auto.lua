@@ -50,3 +50,5 @@ att.Override_Firemodes = {
 -- end
 
 att.ActivateElements = {"ud_glock_slide_auto"}
+att.GivesFlags = {"ud_glock_auto"}
+att.ExcludeFlags = {"ud_glock_not_9mil"}

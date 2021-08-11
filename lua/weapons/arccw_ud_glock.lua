@@ -191,6 +191,9 @@ SWEP.BulletBones = {
 
 SWEP.AttachmentElements = {
 
+    ["ud_glock_skin_tan"] = {
+        VMSkin = 1,
+    },
     ["ud_glock_mag_10"] = {
         VMBodygroups = {{ind = 1, bg = 1}},
         AttPosMods = {
@@ -241,6 +244,11 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 3, bg = 3}},
         NameChange = "GEN3 Auto",
         TrueNameChange = "Glock 18C",
+    },
+    ["ud_glock_slide_subompact"] = {
+        VMBodygroups = {{ind = 3, bg = 8}},
+        NameChange = "GEN3K",
+        TrueNameChange = "Glock 26",
     },
     ["ud_glock_slide_cs"] = {
         VMBodygroups = {{ind = 3, bg = 6}},
@@ -909,5 +917,10 @@ SWEP.Attachments = {
             vang = Angle(90, 0, -90),
         },
         VMScale = Vector(0.7, 0.7, 0.7),
+    },
+    {
+        PrintName = "Material",
+        DefaultAttName = "Black Polymer",
+        Slot = "ud_glock_skin",
     },
 }

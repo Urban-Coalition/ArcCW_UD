@@ -11,6 +11,7 @@ att.Description = "The FBI's preferred caliber of choice.\nSignificantly more po
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
+    "ud.reducedmag"
 }
 att.Desc_Neutrals = {
 }
@@ -29,7 +30,7 @@ att.Mult_RecoilSide = 1.25
 att.Mult_ReloadTime = 1.15
 att.Mult_MalfunctionMean = 0.75
 
-att.Mult_ClipSize = 0.88
+att.Mult_ClipSize = 0.9
 
 att.Hook_GetShootSound = function(wep, sound)
     if wep:GetBuff_Override("Silencer") then

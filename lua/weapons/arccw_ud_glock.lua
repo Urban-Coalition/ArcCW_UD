@@ -302,6 +302,7 @@ desg_barr = {
     ["ud_glock_slide_cs"] = 5,
     ["ud_glock_slide_sd"] = 6,
     ["ud_glock_slide_nytesyte"] = 7,
+    ["ud_glock_slide_subcompact"] = 8,
 }
 desg_cal = {
     ["ud_glock_caliber_40sw"] = 1,
@@ -326,20 +327,44 @@ SWEP.Hook_NameChange = function(wep,name)
         if caliber == 0 then
             if barrel == 1 then
                 mid = "18C"
+            elseif barrel == 2 then
+                mid = "17L"
             elseif barrel == 5 then
                 mid = "18"
+            elseif barrel == 8 then
+                mid = "26"
             else
                 mid = "17"
             end
         else
             if caliber == 1 then
-                mid = "22"
+                if barrel == 2 then
+                    mid = "24"
+                elseif barrel == 8 then
+                    mid = "27"
+                else
+                    mid = "22"
+                end
             elseif caliber == 2 then
-                mid = "31"
+                if barrel == 8 then
+                    mid = "33"
+                else
+                    mid = "31"
+                end
             elseif caliber == 3 then
-                mid = "20"
+                if barrel == 2 then
+                    mid = "40"
+                elseif barrel == 8 then
+                    mid = "29"
+                else
+                    mid = "20"
+                end
             elseif caliber == 4 then
-                mid = "37"
+                if barrel == 8 then
+                    mid = "39"
+                else
+                    mid = "37"
+                end
             else
                 mid = "44"
             end
@@ -360,11 +385,17 @@ SWEP.Hook_NameChange = function(wep,name)
         else
             mid = "22"
         end
+
+        if barrel == 2 then
+            suffix = "L"
+        elseif barrel == 8 then
+            suffix = "K"
+        end
     end
 
     if barrel == 1 and (caliber ~= 0 or !trueNames) then
         suffix = " Auto"
-    elseif barrel == 2 then
+    elseif barrel == 2 and !trueNames then
         suffix = "L"
     elseif barrel == 3 then
         if trueNames then

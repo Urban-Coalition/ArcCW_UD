@@ -9,6 +9,7 @@ att.SortOrder = 00
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = "A plinking cartridge that is easy to handle but not very lethal.\nIts form factor allows more rounds to be stuffed into magazines."
 att.Desc_Pros = {
+    "ud.extmag"
 }
 att.Desc_Cons = {
 }

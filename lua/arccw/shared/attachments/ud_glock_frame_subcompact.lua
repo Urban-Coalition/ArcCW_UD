@@ -19,7 +19,7 @@ att.Slot = "ud_glock_frame"
 
 att.AutoStats = true
 
-att.Mult_DrawTime = 0.75
+att.Mult_DrawTime = 0.85
 att.Mult_HolsterTime = 0.75
 att.Mult_Recoil = 1.15
 att.Mult_SightedSpeedMult = 1.05

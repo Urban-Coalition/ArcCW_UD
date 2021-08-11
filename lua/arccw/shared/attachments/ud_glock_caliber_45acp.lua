@@ -11,6 +11,8 @@ att.Description = "A venerable caliber with excellent stopping power.\nBecause o
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
+    "ud.jam",
+    "ud.reducedmag"
 }
 att.Desc_Neutrals = {
 }
@@ -28,7 +30,7 @@ att.Mult_RecoilSide = 1.5
 --att.Mult_RPM = 0.75
 att.Mult_MalfunctionMean = 0.75
 
-att.Mult_ClipSize = 0.75
+att.Mult_ClipSize = 0.8
 
 att.Hook_GetShootSound = function(wep, sound)
     if wep:GetBuff_Override("Silencer") then

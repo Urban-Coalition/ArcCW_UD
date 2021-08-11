@@ -11,6 +11,7 @@ att.Description = "A law-enforcement caliber well-known for its accuracy."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
+    "ud.reducedmag"
 }
 att.Desc_Neutrals = {
 }
@@ -25,7 +26,7 @@ att.Mult_Damage = 1.1
 att.Mult_AccuracyMOA = 0.5
 att.Mult_Recoil = 1.15
 
-att.Mult_ClipSize = 0.88
+att.Mult_ClipSize = 0.9
 
 att.Hook_GetShootSound = function(wep, sound)
     if wep:GetBuff_Override("Silencer") then

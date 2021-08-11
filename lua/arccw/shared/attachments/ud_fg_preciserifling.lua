@@ -18,4 +18,4 @@ att.Hook_Compatible = function(wep)
     end
 end
 
-att.Mult_AccuracyMOA = 0.5
+att.Mult_AccuracyMOA = 0.75

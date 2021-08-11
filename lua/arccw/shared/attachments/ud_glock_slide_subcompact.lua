@@ -6,7 +6,7 @@ if GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
-att.Description = "Subcompact slide. Reduced length means less holster to clear and improved handling. However, this comes at the cost of accuracy, range and control."
+att.Description = "Shortest available slide. Reduced length means less holster to clear and improved handling. However, this comes at the cost of accuracy, range and control."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

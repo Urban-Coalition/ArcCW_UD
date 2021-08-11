@@ -28,5 +28,5 @@ att.Mult_Recoil = 1.25
 -- :)
 
 att.ActivateElements = {"ud_glock_slide_subompact"}
-att.AddFlags = {"ud_glock_slide_subompact"}
+att.AddFlags = {"ud_glock_slide_subcompact"}
 att.RequireFlags = {"ud_glock_frame_subcompact"}

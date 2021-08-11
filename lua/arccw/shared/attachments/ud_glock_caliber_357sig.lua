@@ -11,7 +11,6 @@ att.Description = "A law-enforcement caliber well-known for its accuracy."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
-    "ud.reducedmag"
 }
 att.Desc_Neutrals = {
 }

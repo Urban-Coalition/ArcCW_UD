@@ -11,8 +11,7 @@ att.Description = "A venerable caliber with excellent stopping power.\nBecause o
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
-    "ud.jam",
-    "ud.reducedmag"
+    "ud.jam"
 }
 att.Desc_Neutrals = {
 }

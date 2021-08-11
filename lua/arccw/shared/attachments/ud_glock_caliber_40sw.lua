@@ -11,7 +11,6 @@ att.Description = "Law-enforcement caliber with a slightly larger bullet and sho
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
-    "ud.reducedmag"
 }
 att.Desc_Neutrals = {
 }
@@ -21,7 +20,7 @@ att.AutoStats = true
 
 att.Override_Trivia_Calibre = ".40 S&W"
 
-att.Mult_DamageMin = 1.17
+att.Mult_DamageMin = 1.35
 att.Mult_RangeMin = 0.75
 att.Mult_Recoil = 1.15
 att.Mult_ClipSize = .9

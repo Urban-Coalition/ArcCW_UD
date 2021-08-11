@@ -11,7 +11,6 @@ att.Description = "The FBI's preferred caliber of choice.\nSignificantly more po
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
-    "ud.reducedmag"
 }
 att.Desc_Neutrals = {
 }

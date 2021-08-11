@@ -192,7 +192,7 @@ SWEP.BulletBones = {
 SWEP.AttachmentElements = {
 
     ["ud_glock_mag_10"] = {
-        VMBodygroups = {{ind = 2, bg = 1}, {ind = 1, bg = 2}},
+        VMBodygroups = {{ind = 0, bg = 2}, {ind = 1, bg = 1}},
         AttPosMods = {
             [7] = {
             vpos = Vector(0.1, 1, -1.2),
@@ -258,11 +258,11 @@ SWEP.AttachmentElements = {
         TrueNameChange = "Glock 17SD",
         GivesFlags = {"sd"},
         AttPosMods = {
-            [4] = {
+            [5] = {
                 vpos = Vector(0, 0.1, 5),
                 vang = Angle(90, 0, -90),
             },
-            [5] = {
+            [6] = {
                 vpos = Vector(0, 0.1, 5),
                 vang = Angle(90, 0, 90),
             },

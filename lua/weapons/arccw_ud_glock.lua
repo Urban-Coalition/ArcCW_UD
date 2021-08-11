@@ -192,13 +192,19 @@ SWEP.BulletBones = {
 SWEP.AttachmentElements = {
 
     ["ud_glock_mag_10"] = {
-        VMBodygroups = {{ind = 0, bg = 2}, {ind = 1, bg = 1}},
+        VMBodygroups = {{ind = 1, bg = 1}},
         AttPosMods = {
-            [7] = {
+            [8] = {
             vpos = Vector(0.1, 1, -1.2),
                 vang = Angle(90, 0, -90),
             }
         }
+    },
+    ["ud_glock_frame_subcompact"] = {
+        VMBodygroups = {{ind = 0, bg = 2}},
+    },
+    ["ud_glock_frame_flared"] = {
+        VMBodygroups = {{ind = 0, bg = 1}},
     },
     ["ud_glock_mag_33"] = {
         VMBodygroups = {{ind = 1, bg = 2}},
@@ -258,11 +264,11 @@ SWEP.AttachmentElements = {
         TrueNameChange = "Glock 17SD",
         GivesFlags = {"sd"},
         AttPosMods = {
-            [5] = {
+            [6] = {
                 vpos = Vector(0, 0.1, 5),
                 vang = Angle(90, 0, -90),
             },
-            [6] = {
+            [7] = {
                 vpos = Vector(0, 0.1, 5),
                 vang = Angle(90, 0, 90),
             },
@@ -276,9 +282,9 @@ SWEP.AttachmentElements = {
             Pos = Vector(-3.057, 0, 3.397),
             Ang = Angle(0, 0, -90),
             Magnification = 1,
+            }
         }
-    },
-}
+    }
 
 -- Animations --
 
@@ -529,7 +535,7 @@ SWEP.Animations = {
             {s = path .. "magrelease.ogg",    t = 0.3, c = ci},
             {s = path .. "magout.ogg",        t = 0.3, c = ci},
             {s = path .. "magin.ogg",         t = 0.4, c = ci},
-            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.75},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.55},
         },
     },
     ["reload_empty"] = {
@@ -691,7 +697,7 @@ SWEP.Animations = {
 SWEP.AutosolveSourceSeq = "idle"
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
-    if wep.Attachments[8].Installed and (anim == "fire" or anim == "fire_empty") then
+    if wep.Attachments[9].Installed and (anim == "fire" or anim == "fire_empty") then
         return anim .. "_stock"
     end
 end
@@ -713,6 +719,11 @@ SWEP.Attachments = {
         PrintName = "Slide",
         DefaultAttName = "Standard Slide",
         Slot = "ud_glock_slide",
+    },
+    {
+        PrintName = "Frame",
+        DefaultAttName = "Standard Frame",
+        Slot = "ud_glock_frame",
     },
     {
         PrintName = "Caliber",
@@ -738,7 +749,7 @@ SWEP.Attachments = {
             vpos = Vector(0, -1.3, 5),
             vang = Angle(90, 0, -90),
         },
-        MergeSlots = {6},
+        MergeSlots = {7},
     },
     {
         Hidden = true,

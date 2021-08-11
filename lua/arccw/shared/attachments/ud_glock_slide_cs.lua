@@ -60,13 +60,13 @@ function att.Hook_GetCapacity(wep,cap)
 end
 ]]
 att.A_Hook_Add_ClipSize = function(wep, data)
-    if not wep.Attachments[6].Installed then
+    if not wep.Attachments[8].Installed then
         data.add = (data.add or 0) + 3
     end
 end
 
 att.Hook_GetDefaultAttName = function(wep, slot)
-    if slot == 6 then
+    if slot == 8 then
         return "20-Round Mag"
     end
 end

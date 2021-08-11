@@ -2,7 +2,7 @@ att.PrintName = "Glock .22 LR Conversion"
 att.AbbrevName = ".22 LR"
 
 if not GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = ".22 LR Conversion"
+    att.PrintName = "GEN3 .22 LR Conversion"
 end
 
 att.SortOrder = 00

@@ -2,7 +2,7 @@ att.PrintName = "Glock .45 ACP Conversion"
 att.AbbrevName = ".45 ACP"
 
 if !GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = ".45 ACP Conversion"
+    att.PrintName = "GEN3 .45 ACP Conversion"
 end
 
 att.SortOrder = 70

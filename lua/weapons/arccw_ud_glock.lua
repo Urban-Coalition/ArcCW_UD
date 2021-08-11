@@ -84,7 +84,7 @@ SWEP.VisualRecoilMult = 1
 SWEP.MaxRecoilBlowback = 0.5
 SWEP.MaxRecoilPunch = 0.6
 
-SWEP.Sway = 1.5
+SWEP.Sway = 1
 
 -- Firerate / Firemodes --
 
@@ -231,7 +231,7 @@ SWEP.AttachmentElements = {
         NameChange = "GEN3 Extended",
         TrueNameChange = "Glock 17L",
         AttPosMods = {
-            [3] = {
+            [5] = {
                 vpos = Vector(0, 0, 1),
                 vang = Angle(90, 0, -90),
             }
@@ -252,7 +252,7 @@ SWEP.AttachmentElements = {
         NameChange = "GEN3 Euro Carbine",
         TrueNameChange = "Glock 17XXXL",
         AttPosMods = {
-            [3] = {
+            [5] = {
                 vpos = Vector(0, 0, 9),
                 vang = Angle(90, 0, -90),
             }
@@ -274,7 +274,7 @@ SWEP.AttachmentElements = {
             },
         }
     },
-	["ud_glock_slide_nytesyte"] = {
+    ["ud_glock_slide_nytesyte"] = {
         VMBodygroups = {{ind = 3, bg = 7}},
         NameChange = "GEN3 Homeboy",
         TrueNameChange = "Glock 17 NyteSyte",
@@ -809,10 +809,12 @@ SWEP.Attachments = {
         Slot = {"optic_lp","optic"},
         Bone = "glock_parent",
         Offset = {
-            vpos = Vector(0, -3.5, 2),
+            vpos = Vector(0, -3.65, 2.5),
             vang = Angle(90, 2, -90),
         },
         CorrectivePos = Vector(0, 0, 0.05),
+        VMScale = Vector(1.25, 1.25, 1.25),
+        WMScale = Vector(1.25, 1.25, 1.25),
         InstalledEles = {"ud_glock_rail_optic"},
     },
     {

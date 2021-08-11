@@ -6,7 +6,7 @@ if GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
-att.Description = "Subcompact frame. The smaller magwell is marginally easier to insert mags into, but offers less grip space."
+att.Description = "A smaller frame that is noticably shorter on the magwell.\nFast to handle, but the smaller grip surface affects handling."
 att.Desc_Pros = {
     "ud.glock.subcompact"
 }
@@ -19,11 +19,11 @@ att.Slot = "ud_glock_frame"
 
 att.AutoStats = true
 
---att.Mult_ReloadTime = 0.8
-
-att.Mult_ReloadTime = .975
-att.Mult_DrawTime = .9
-att.Mult_Recoil = 1.1
+att.Mult_DrawTime = 0.75
+att.Mult_HolsterTime = 0.75
+att.Mult_Recoil = 1.15
+att.Mult_SightedSpeedMult = 1.05
+att.Mult_SightTime = 0.9
 
 -- Put this on the slide attachment you fucking moron
 -- att.Mult_DrawTime = .85

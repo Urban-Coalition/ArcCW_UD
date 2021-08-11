@@ -2,7 +2,7 @@ att.PrintName = "GEN3K Subcompact Slide"
 att.AbbrevName = "Subcompact Slide"
 
 if GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "Glock 26 Subcompact Slice"
+    att.PrintName = "Glock 26 Subcompact Slide"
 end
 
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")

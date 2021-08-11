@@ -286,6 +286,106 @@ SWEP.AttachmentElements = {
         }
     }
 
+desg_barr = {
+    ["ud_glock_slide_auto"] = 1,
+    ["ud_glock_slide_lb"] = 2,
+    ["ud_glock_slide_carbine"] = 3,
+    ["ud_glock_slide_comp"] = 4,
+    ["ud_glock_slide_cs"] = 5,
+    ["ud_glock_slide_sd"] = 6,
+    ["ud_glock_slide_nytesyte"] = 7,
+}
+desg_cal = {
+    ["ud_glock_caliber_40sw"] = 1,
+    ["ud_glock_caliber_357sig"] = 2,
+    ["ud_glock_caliber_10auto"] = 3,
+    ["ud_glock_caliber_45acp"] = 4,
+    ["ud_glock_caliber_22lr"] = 5,
+}
+
+SWEP.Hook_NameChange = function(wep,name)
+    barrel = desg_barr[wep.Attachments[2].Installed] or 0
+    caliber = desg_cal[wep.Attachments[4].Installed] or 0
+    trueNames = GetConVar("arccw_truenames"):GetBool()
+
+    start = ""
+    mid = ""
+    suffix = ""
+
+    if trueNames then
+        start = "Glock "
+
+        if caliber == 0 then
+            if barrel == 1 then
+                mid = "18C"
+            elseif barrel == 5 then
+                mid = "18"
+            else
+                mid = "17"
+            end
+        else
+            if caliber == 1 then
+                mid = "22"
+            elseif caliber == 2 then
+                mid = "31"
+            elseif caliber == 3 then
+                mid = "20"
+            elseif caliber == 4 then
+                mid = "37"
+            else
+                mid = "44"
+            end
+        end
+    else
+        start = "GEN"
+        
+        if caliber == 0 then
+            mid = "3"
+        elseif caliber == 1 then
+            mid = "5"
+        elseif caliber == 2 then
+            mid = "6"
+        elseif caliber == 3 then
+            mid = "8"
+        elseif caliber == 4 then
+            mid = "11"
+        else
+            mid = "22"
+        end
+    end
+
+    if barrel == 1 and (caliber ~= 0 or !trueNames) then
+        suffix = " Auto"
+    elseif barrel == 2 then
+        suffix = "L"
+    elseif barrel == 3 then
+        if trueNames then
+            suffix = "XXXL"
+        else
+            suffix = " Euro Carbine"
+        end
+    elseif barrel == 4 then
+        suffix = " Custom"
+    elseif barrel == 5 then
+        suffix = "CS"
+    elseif barrel == 6 then
+        if trueNames then
+            suffix = " Hush Puppy"
+        else
+            suffix = " Silent Mistress"
+        end
+    elseif barrel == 7 then
+        if trueNames then
+            suffix = " NyteSyte"
+        else
+            suffix = " Homeboy"
+        end
+    end
+
+    -- Todo: Subcompact variants when the barrel variant comes out
+    return start..mid..suffix
+end
+
 -- Animations --
 
 SWEP.Hook_Think = ArcCW.UD.ADSReload

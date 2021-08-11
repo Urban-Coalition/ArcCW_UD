@@ -1,4 +1,4 @@
-att.PrintName = "GEN3 Long Slide"
+att.PrintName = "GEN3L Long Slide"
 att.AbbrevName = "Long Slide"
 
 if GetConVar("arccw_truenames"):GetBool() then

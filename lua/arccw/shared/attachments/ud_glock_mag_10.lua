@@ -23,6 +23,7 @@ att.Mult_SpeedMult = 1.05
 att.Mult_Sway = 0.5
 
 att.ActivateElements = {"ud_glock_10_mag"}
+att.RequireFlags = {"ud_glock_frame_subcompact"}
 
 att.Hook_SelectReloadAnimation = function(wep, anim)
     return anim .. "_10"

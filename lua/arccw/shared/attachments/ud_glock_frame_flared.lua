@@ -18,5 +18,6 @@ att.Slot = "ud_glock_frame"
 att.AutoStats = true
 
 att.Mult_ReloadTime = 0.95
+att.Mult_SightTime = 1.05
 
 att.ActivateElements = {"ud_glock_frame_flared"}

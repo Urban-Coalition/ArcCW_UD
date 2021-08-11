@@ -8,7 +8,7 @@ end
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = "Subcompact frame. The smaller magwell is marginally easier to insert mags into, but offers less grip space."
 att.Desc_Pros = {
-    "Enables 10-Round Compact Mag"
+    "ud.glock.subcompact"
 }
 att.Desc_Cons = {
     "ud.nostocks"
@@ -23,7 +23,7 @@ att.AutoStats = true
 
 att.Mult_ReloadTime = .975
 att.Mult_DrawTime = .9
-att.Mult_Sway = 1.15
+att.Mult_Recoil = 1.1
 
 -- Put this on the slide attachment you fucking moron
 -- att.Mult_DrawTime = .85

@@ -775,7 +775,8 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(0.1, 2, -1.4),
             vang = Angle(90, 0, -90),
-        }
+        },
+        ExcludeFlags = {"ud_glock_frame_subcompact"}
     },
     {
         PrintName = "Ammo Type",

@@ -6,7 +6,7 @@ if GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
-att.Description = "Custom frame with a flared magwell to facilitate quicker and more efficient reloads. Please balance me!"
+att.Description = "Custom frame with a flared magwell to facilitate quicker and more efficient reloads."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
@@ -18,6 +18,6 @@ att.Slot = "ud_glock_frame"
 att.AutoStats = true
 
 att.Mult_ReloadTime = 0.95
-att.Mult_SightTime = 1.05
+att.Mult_SightTime = 1.075
 
 att.ActivateElements = {"ud_glock_frame_flared"}

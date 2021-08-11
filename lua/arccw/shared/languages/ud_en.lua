@@ -42,3 +42,5 @@ L["ud.m16_ch.3"] = "Alternative iron sight attachments are disabled when this is
 L["ud.darkrp.cantremove"] = "You can't remove this without a gun license!"
 L["ud.darkrp.cantattach"] = "You need a gun license to use this attachment!"
 L["ud.darkrp.cantpickup"] = "You need a gun license to pickup this attachment!"
+
+L["ud.glock.subcompact"] = "Enables 10-Round Compact Mag"

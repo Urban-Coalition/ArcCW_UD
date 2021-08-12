@@ -6,7 +6,7 @@ if GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
-att.Description = "A smaller frame that is noticably shorter on the magwell.\nFast to handle, but the smaller grip surface affects handling."
+att.Description = "A smaller frame that is noticably shorter on the magwell.\nFast to handle, but the smaller grip surface affects recoil control."
 att.Desc_Pros = {
     "ud.glock.subcompact"
 }

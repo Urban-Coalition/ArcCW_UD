@@ -7,7 +7,7 @@ end
 
 att.SortOrder = 100
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
-att.Description = "Law-enforcement caliber with a slightly larger bullet and shorter case.\nPerforms better at range."
+att.Description = "Law-enforcement caliber with a slightly larger bullet and shorter case.\nRetains damage over distance better than other calibers."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

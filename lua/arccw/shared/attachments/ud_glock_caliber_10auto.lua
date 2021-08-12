@@ -2,7 +2,7 @@ att.PrintName = "Glock 10mm Auto Conversion"
 att.AbbrevName = "10mm Auto"
 
 if !GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "10mm Auto Conversion"
+    att.PrintName = "GEN3 10mm Auto Conversion"
 end
 
 att.SortOrder = 80
@@ -25,11 +25,10 @@ att.Mult_DamageMin = 1.15
 
 att.Mult_Recoil = 1.25
 att.Mult_RecoilSide = 1.25
---att.Mult_RPM = 0.85
 att.Mult_ReloadTime = 1.15
 att.Mult_MalfunctionMean = 0.75
 
-att.Mult_ClipSize = 0.88
+att.Mult_ClipSize = 0.9
 
 att.Hook_GetShootSound = function(wep, sound)
     if wep:GetBuff_Override("Silencer") then

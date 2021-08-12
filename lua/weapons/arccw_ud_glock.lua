@@ -84,7 +84,7 @@ SWEP.VisualRecoilMult = 1
 SWEP.MaxRecoilBlowback = 0.5
 SWEP.MaxRecoilPunch = 0.6
 
-SWEP.Sway = 1.5
+SWEP.Sway = 1
 
 -- Firerate / Firemodes --
 
@@ -157,13 +157,13 @@ SWEP.IronSightStruct = {
      ViewModelFOV = 55,
 }
 
-SWEP.ActivePos = Vector(0.2, -1, 1)
+SWEP.ActivePos = Vector(0.2, -1, 2)
 SWEP.ActiveAng = Angle(0, 0, -5)
 
 SWEP.CustomizePos = Vector(5, -2, -2)
 SWEP.CustomizeAng = Angle(15, 25, 0)
 
-SWEP.CrouchPos = Vector(-3, -3, 0)
+SWEP.CrouchPos = Vector(-3, -3, 1)
 SWEP.CrouchAng = Angle(0, 0, -30)
 
 SWEP.BarrelOffsetHip = Vector(0, 0, -3)
@@ -191,6 +191,9 @@ SWEP.BulletBones = {
 
 SWEP.AttachmentElements = {
 
+    ["ud_glock_skin_tan"] = {
+        VMSkin = 1,
+    },
     ["ud_glock_mag_10"] = {
         VMBodygroups = {{ind = 1, bg = 1}},
         AttPosMods = {
@@ -231,7 +234,7 @@ SWEP.AttachmentElements = {
         NameChange = "GEN3 Extended",
         TrueNameChange = "Glock 17L",
         AttPosMods = {
-            [3] = {
+            [5] = {
                 vpos = Vector(0, 0, 1),
                 vang = Angle(90, 0, -90),
             }
@@ -241,6 +244,11 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 3, bg = 3}},
         NameChange = "GEN3 Auto",
         TrueNameChange = "Glock 18C",
+    },
+    ["ud_glock_slide_subompact"] = {
+        VMBodygroups = {{ind = 3, bg = 8}},
+        NameChange = "GEN3K",
+        TrueNameChange = "Glock 26",
     },
     ["ud_glock_slide_cs"] = {
         VMBodygroups = {{ind = 3, bg = 6}},
@@ -252,7 +260,7 @@ SWEP.AttachmentElements = {
         NameChange = "GEN3 Euro Carbine",
         TrueNameChange = "Glock 17XXXL",
         AttPosMods = {
-            [3] = {
+            [5] = {
                 vpos = Vector(0, 0, 9),
                 vang = Angle(90, 0, -90),
             }
@@ -274,7 +282,7 @@ SWEP.AttachmentElements = {
             },
         }
     },
-	["ud_glock_slide_nytesyte"] = {
+    ["ud_glock_slide_nytesyte"] = {
         VMBodygroups = {{ind = 3, bg = 7}},
         NameChange = "GEN3 Homeboy",
         TrueNameChange = "Glock 17 NyteSyte",
@@ -294,6 +302,7 @@ desg_barr = {
     ["ud_glock_slide_cs"] = 5,
     ["ud_glock_slide_sd"] = 6,
     ["ud_glock_slide_nytesyte"] = 7,
+    ["ud_glock_slide_subcompact"] = 8,
 }
 desg_cal = {
     ["ud_glock_caliber_40sw"] = 1,
@@ -318,20 +327,44 @@ SWEP.Hook_NameChange = function(wep,name)
         if caliber == 0 then
             if barrel == 1 then
                 mid = "18C"
+            elseif barrel == 2 then
+                mid = "17L"
             elseif barrel == 5 then
                 mid = "18"
+            elseif barrel == 8 then
+                mid = "26"
             else
                 mid = "17"
             end
         else
             if caliber == 1 then
-                mid = "22"
+                if barrel == 2 then
+                    mid = "24"
+                elseif barrel == 8 then
+                    mid = "27"
+                else
+                    mid = "22"
+                end
             elseif caliber == 2 then
-                mid = "31"
+                if barrel == 8 then
+                    mid = "33"
+                else
+                    mid = "31"
+                end
             elseif caliber == 3 then
-                mid = "20"
+                if barrel == 2 then
+                    mid = "40"
+                elseif barrel == 8 then
+                    mid = "29"
+                else
+                    mid = "20"
+                end
             elseif caliber == 4 then
-                mid = "37"
+                if barrel == 8 then
+                    mid = "30"
+                else
+                    mid = "21"
+                end
             else
                 mid = "44"
             end
@@ -352,11 +385,17 @@ SWEP.Hook_NameChange = function(wep,name)
         else
             mid = "22"
         end
+
+        if barrel == 2 then
+            suffix = "L"
+        elseif barrel == 8 then
+            suffix = "K"
+        end
     end
 
     if barrel == 1 and (caliber ~= 0 or !trueNames) then
         suffix = " Auto"
-    elseif barrel == 2 then
+    elseif barrel == 2 and !trueNames then
         suffix = "L"
     elseif barrel == 3 then
         if trueNames then
@@ -809,10 +848,12 @@ SWEP.Attachments = {
         Slot = {"optic_lp","optic"},
         Bone = "glock_parent",
         Offset = {
-            vpos = Vector(0, -3.5, 2),
+            vpos = Vector(0, -3.65, 2.5),
             vang = Angle(90, 2, -90),
         },
         CorrectivePos = Vector(0, 0, 0.05),
+        VMScale = Vector(1.25, 1.25, 1.25),
+        WMScale = Vector(1.25, 1.25, 1.25),
         InstalledEles = {"ud_glock_rail_optic"},
     },
     {
@@ -907,5 +948,10 @@ SWEP.Attachments = {
             vang = Angle(90, 0, -90),
         },
         VMScale = Vector(0.7, 0.7, 0.7),
+    },
+    {
+        PrintName = "Material",
+        DefaultAttName = "Black Polymer",
+        Slot = "ud_glock_skin",
     },
 }

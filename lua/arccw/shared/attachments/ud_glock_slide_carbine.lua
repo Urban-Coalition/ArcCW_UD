@@ -20,8 +20,11 @@ att.AutoStats = true
 att.Mult_SightTime = 1.75
 att.Mult_Recoil = 0.5
 att.Mult_AccuracyMOA = 0.25
-att.Mult_Sway = 3
+att.Mult_Sway = 2
 att.Mult_Range = 3
+
+att.Mult_DrawTime = 1.5
+att.Mult_HolsterTime = 1.5
 
 att.Add_BarrelLength = 32
 

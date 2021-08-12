@@ -251,6 +251,10 @@ SWEP.Hook_NameChange = function(wep, name)
         return "Service Carbine"
     end
 
+    if wep.Attachments[13].Installed == "ud_fg_civvy" then
+        return "AR-15"
+    end
+
     local flat = false
     if wep.Attachments[1].Installed or wep.Attachments[14].Installed then flat = true end
     if wep:GetBuff_Override("KeepRetro") then flat = false end

@@ -1,0 +1,19 @@
+VertexlitGeneric
+{
+    $basetexture "models\weapons\arccw\ud_shells\12gauge_shell"
+    $phong 1
+    $phongexponenttexture "models\weapons\arccw\ud_shells\12gauge_shell_roughness"
+    $phongboost 0.5
+    $phongfresnelranges "[2 3 4]"
+    $phongtint "[0.925 0.925 0.9]"
+
+
+    $rimlight 1
+    $rimlightexponent 50
+    $rimlightboost 0.2
+    $envmap "env_cubemap"
+    $normalmapalphaenvmapmask 1
+    $envmaptint "[0.04 0.04 0.04]"
+
+    $bumpmap "models\weapons\arccw\ud_shells\12gauge_shell_roughness"
+}

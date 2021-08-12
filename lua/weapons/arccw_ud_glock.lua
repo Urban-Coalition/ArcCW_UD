@@ -7,9 +7,9 @@ SWEP.UseHands = true
 -- Muzzle and shell effects --
 
 SWEP.MuzzleEffect = "muzzleflash_1"
-SWEP.ShellModel = "models/shells/shell_9mm.mdl"
+SWEP.ShellModel = "models/weapons/arccw/ud_shells/9.mdl"
 SWEP.ShellScale = 1.4
-SWEP.ShellMaterial = "models/weapons/arcticcw/shell_9mm"
+--SWEP.ShellMaterial = "models/weapons/arcticcw/shell_9mm"
 SWEP.ShellPitch = 100
 SWEP.ShellSounds = ArcCW.PistolShellSoundsTable
 
@@ -160,7 +160,7 @@ SWEP.IronSightStruct = {
 SWEP.ActivePos = Vector(0.2, -1, 2)
 SWEP.ActiveAng = Angle(0, 0, -5)
 
-SWEP.CustomizePos = Vector(5, -2, -2)
+SWEP.CustomizePos = Vector(7, -2, -2)
 SWEP.CustomizeAng = Angle(15, 25, 0)
 
 SWEP.CrouchPos = Vector(-3, -3, 1)
@@ -881,6 +881,7 @@ SWEP.Attachments = {
             vang = Angle(90, 0, -90),
         },
         ExcludeFlags = {"sd"},
+        VMScale = Vector(0.8, 0.8, 0.8)
     },
     {
         PrintName = "Underbarrel",

@@ -7,7 +7,7 @@ SWEP.UseHands = true
 -- Muzzle and shell effects --
 
 SWEP.MuzzleEffect = "muzzleflash_shotgun"
-SWEP.ShellModel = "models/shells/shell_12gauge.mdl"
+SWEP.ShellModel = "models/weapons/arccw/ud_shells/12.mdl"
 SWEP.ShellPitch = 100
 SWEP.ShellSounds = ArcCW.ShotgunShellSoundsTable
 SWEP.ShellScale = 1.7

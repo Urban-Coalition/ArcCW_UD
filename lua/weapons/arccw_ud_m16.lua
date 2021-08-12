@@ -7,9 +7,9 @@ SWEP.UseHands = true
 -- Muzzle and shell effects --
 
 SWEP.MuzzleEffect = "muzzleflash_1"
-SWEP.ShellModel = "models/shells/shell_556.mdl"
+SWEP.ShellModel = "models/weapons/arccw/ud_shells/556.mdl"
 SWEP.ShellScale = 1.4
-SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556"
+--SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556"
 SWEP.ShellPitch = 100
 
 SWEP.MuzzleEffectAttachment = 1

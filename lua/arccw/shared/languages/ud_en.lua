@@ -45,4 +45,4 @@ L["ud.darkrp.cantremove"] = "You can't remove this without a gun license!"
 L["ud.darkrp.cantattach"] = "You need a gun license to use this attachment!"
 L["ud.darkrp.cantpickup"] = "You need a gun license to pickup this attachment!"
 
-L["ud.glock.subcompact"] = "Enables 10-Round Compact Mag and Subcompact Slide"
+L["ud.glock.subcompact"] = "Enables Subcompact attachments"

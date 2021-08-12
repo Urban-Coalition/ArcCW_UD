@@ -18,16 +18,17 @@ att.Slot = "ud_glock_slide"
 
 att.AutoStats = true
 
--- Put this on the slide attachment you fucking moron
--- ok
-att.Mult_DrawTime = 0.75
-att.Mult_SightTime = 0.9
+att.Mult_DrawTime = 0.85
+att.Mult_HolsterTime = 0.85
 att.Add_BarrelLength = -4
+
+att.Mult_Sway = 0.75
+att.Mult_HipDispersion = 0.85
+att.Mult_SightTime = 0.9
+
 att.Mult_AccuracyMOA = 1.5
-att.Mult_Range = 0.45
+att.Mult_Range = 0.75
 att.Mult_Recoil = 1.25
--- :)
--- tyvm
 
 att.ActivateElements = {"ud_glock_slide_subompact"}
 att.AddFlags = {"ud_glock_slide_subcompact"}

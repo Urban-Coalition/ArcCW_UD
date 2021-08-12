@@ -23,6 +23,9 @@ att.Mult_AccuracyMOA = 0.25
 att.Mult_Sway = 2
 att.Mult_Range = 3
 
+att.Mult_DrawTime = 1.5
+att.Mult_HolsterTime = 1.5
+
 att.Add_BarrelLength = 32
 
 att.ActivateElements = {"ud_glock_slide_carbine"}

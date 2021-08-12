@@ -17,11 +17,16 @@ att.Slot = "ud_glock_slide"
 
 att.AutoStats = true
 
-att.Mult_SightTime = 1.1
-att.Mult_Recoil = 0.9
-att.Mult_AccuracyMOA = 0.9
+att.Mult_DrawTime = 1.15
+att.Mult_HolsterTime = 1.15
+att.Add_BarrelLength = 4
+
 att.Mult_Sway = 1.25
-att.Mult_Range = 1.15
-att.Mult_DrawTime = 1.1
+att.Mult_HipDispersion = 1.15
+att.Mult_SightTime = 1.1
+
+att.Mult_AccuracyMOA = 0.85
+att.Mult_Recoil = 0.85
+att.Mult_Range = 1.25
 
 att.ActivateElements = {"ud_glock_slide_lb"}

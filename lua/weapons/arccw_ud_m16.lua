@@ -236,6 +236,7 @@ local nftoflat = {
 SWEP.Hook_NameChange = function(wep, name)
     local barrel = desg_barr[wep.Attachments[2].Installed] or 0
     local rec = desg_rec[wep.Attachments[4].Installed] or 0
+    local trueNames = GetConVar("arccw_truenames"):GetBool()
 
     -- service loadouts
     if barrel == 4 then
@@ -251,7 +252,7 @@ SWEP.Hook_NameChange = function(wep, name)
         return "Service Carbine"
     end
 
-    if wep.Attachments[13].Installed == "ud_fg_civvy" then
+    if trueNames and wep.Attachments[13].Installed == "ud_fg_civvy" then
         return "AR-15"
     end
 
@@ -259,7 +260,7 @@ SWEP.Hook_NameChange = function(wep, name)
     if wep.Attachments[1].Installed or wep.Attachments[14].Installed then flat = true end
     if wep:GetBuff_Override("KeepRetro") then flat = false end
 
-    if GetConVar("arccw_truenames"):GetBool() then
+    if trueNames then
         local model = "M"
         local alt = "16A2"
 

@@ -7,7 +7,7 @@ end
 
 att.SortOrder = 50
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
-att.Description = "A relatively weak caliber that is somewhat obsolete.\nHas lower recoil but also lower range and weaker stopping power."
+att.Description = "An old and smaller pistol caliber that is somewhat obsolete.\nHas lower recoil but also lower range and weaker stopping power."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

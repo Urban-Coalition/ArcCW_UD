@@ -25,17 +25,15 @@ att.Mult_Damage = 0.9
 att.Mult_DamageMin = 0.9
 att.Mult_Recoil = 0.65
 
---[[
 att.Hook_GetShootSound = function(wep, sound)
     if wep:GetBuff_Override("Silencer") then
-        return "weapons/arccw_ud/glock/fire_supp_357.ogg"
+        return "weapons/arccw_ud/glock/fire_supp_380.ogg"
     else
-        return "weapons/arccw_ud/glock/fire_357.ogg"
+        return "weapons/arccw_ud/glock/fire_380.ogg"
     end
 end
 
 att.Hook_GetDistantShootSound = function(wep, distancesound)
     if distancesound == wep.DistantShootSound then
-        return "weapons/arccw_ud/glock/fire_dist_357.ogg" end
+        return "weapons/arccw_ud/glock/fire_dist_380.ogg" end
 end
-]]

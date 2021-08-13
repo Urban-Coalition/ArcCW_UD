@@ -29,7 +29,7 @@ att.Override_ShellScale = 1.5
 
 att.Hook_GetShootSound = function(wep, sound)
     if wep:GetBuff_Override("Silencer") then
-        return "weapons/arccw_ud/glock/fire_supp.ogg" -- Placeholder
+        return "weapons/arccw_ud/glock/fire_supp_40.ogg" -- Placeholder
     else
         return "weapons/arccw_ud/glock/fire_40.ogg" -- Not Placeholder
     end

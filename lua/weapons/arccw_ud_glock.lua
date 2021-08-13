@@ -514,6 +514,7 @@ SWEP.Animations = {
         Time = 40 / 30,
         ShellEjectAt = false,
         SoundTable = {
+            {s = path .. "magtap.ogg",    t = 0.18, c = ci},
             {s = path .. "slide_pull.ogg",  t = 0.5, c = ci},
             {s = path .. "sliderel_deact.ogg",  t = 0.5, c = ci},
             {s = path .. "sliderel.ogg",        t = 0.7, c = ci},
@@ -529,6 +530,7 @@ SWEP.Animations = {
         Time = 40 / 30,
         ShellEjectAt = false,
         SoundTable = {
+            {s = path .. "magtap.ogg",    t = 0.18, c = ci},
             {s = path .. "slide_pull.ogg",  t = 0.5, c = ci},
             {s = path .. "sliderel_deact.ogg",  t = 0.5, c = ci},
         },
@@ -543,6 +545,7 @@ SWEP.Animations = {
         Time = 40 / 30,
         ShellEjectAt = false,
         SoundTable = {
+            {s = path .. "magtap.ogg",    t = 0.18, c = ci},
             {s = path .. "slide_pull.ogg",  t = 0.5, c = ci},
             {s = path .. "sliderel_deact.ogg",  t = 0.5, c = ci},
             {s = path .. "sliderel.ogg",        t = 0.7, c = ci},
@@ -558,6 +561,7 @@ SWEP.Animations = {
         Time = 40 / 30,
         ShellEjectAt = false,
         SoundTable = {
+            {s = path .. "magtap.ogg",    t = 0.18, c = ci},
             {s = path .. "slide_pull.ogg",  t = 0.5, c = ci},
             {s = path .. "sliderel_deact.ogg",  t = 0.5, c = ci},
         },
@@ -572,6 +576,7 @@ SWEP.Animations = {
         Time = 40 / 30,
         ShellEjectAt = false,
         SoundTable = {
+            {s = path .. "magtap.ogg",    t = 0.18, c = ci},
             {s = path .. "slide_pull.ogg",  t = 0.5, c = ci},
             {s = path .. "sliderel_deact.ogg",  t = 0.5, c = ci},
             {s = path .. "sliderel.ogg",        t = 0.7, c = ci},
@@ -587,6 +592,7 @@ SWEP.Animations = {
         Time = 40 / 30,
         ShellEjectAt = false,
         SoundTable = {
+            {s = path .. "magtap.ogg",    t = 0.18, c = ci},
             {s = path .. "slide_pull.ogg",  t = 0.5, c = ci},
             {s = path .. "sliderel_deact.ogg",  t = 0.5, c = ci},
         },

@@ -7,9 +7,9 @@ SWEP.UseHands = true
 -- Effects --
 
 SWEP.MuzzleEffect = "muzzleflash_1"
-SWEP.ShellModel = "models/shells/shell_9mm.mdl"
+SWEP.ShellModel = "models/weapons/arccw/ud_shells/9.mdl"
 SWEP.ShellScale = 1.4
-SWEP.ShellMaterial = "models/weapons/arcticcw/shell_9mm"
+--SWEP.ShellMaterial = "models/weapons/arcticcw/shell_9mm"
 SWEP.ShellPitch = 100
 SWEP.ShellSounds = ArcCW.PistolShellSoundsTable
 

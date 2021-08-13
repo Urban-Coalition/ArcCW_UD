@@ -32,8 +32,6 @@ att.Override_AccuracyMOA_Priority = -1
 att.Override_AccuracyMOA = 40
 att.Override_Num_Priority = -1 -- shotgun ammo may need to overwrite this
 att.Override_Num = 8
-att.Override_ShellModel = "models/shells/shell_12gauge.mdl"
-att.Override_ShellSounds = ArcCW.ShotgunShellSoundsTable
 att.Mult_Damage = 3
 att.Mult_DamageMin = 3
 att.Mult_Range = 0.25
@@ -66,8 +64,9 @@ att.Override_IsShotgun = true
 att.Override_Ammo = "buckshot"
 att.Override_Trivia_Calibre = "12 Gauge"
 att.Override_Trivia_Class = "Automatic Shotgun"
-att.Override_ShellModel = "models/shells/shell_12gauge.mdl"
-att.Override_ShellScale = 1
+att.Override_ShellModel = "models/weapons/arccw/ud_shells/12.mdl"
+att.Override_ShellScale = 1.7
+att.Override_ShellSounds = ArcCW.ShotgunShellSoundsTable
 
 att.GivesFlags = {"m16_usas"}
 

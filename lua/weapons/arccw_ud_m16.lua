@@ -7,9 +7,9 @@ SWEP.UseHands = true
 -- Muzzle and shell effects --
 
 SWEP.MuzzleEffect = "muzzleflash_1"
-SWEP.ShellModel = "models/shells/shell_556.mdl"
+SWEP.ShellModel = "models/weapons/arccw/ud_shells/556.mdl"
 SWEP.ShellScale = 1.4
-SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556"
+--SWEP.ShellMaterial = "models/weapons/arcticcw/shell_556"
 SWEP.ShellPitch = 100
 
 SWEP.MuzzleEffectAttachment = 1
@@ -163,7 +163,7 @@ SWEP.IronSightStruct = {
      SwitchToSound = "",
 }
 
-SWEP.ActivePos = Vector(0, 0, 0.5)
+SWEP.ActivePos = Vector(0.33, 0, 1)
 SWEP.ActiveAng = Angle(0, 0, -3)
 
 SWEP.CustomizePos = Vector(5, -2, -2)
@@ -236,6 +236,7 @@ local nftoflat = {
 SWEP.Hook_NameChange = function(wep, name)
     local barrel = desg_barr[wep.Attachments[2].Installed] or 0
     local rec = desg_rec[wep.Attachments[4].Installed] or 0
+    local trueNames = GetConVar("arccw_truenames"):GetBool()
 
     -- service loadouts
     if barrel == 4 then
@@ -251,11 +252,15 @@ SWEP.Hook_NameChange = function(wep, name)
         return "Service Carbine"
     end
 
+    if trueNames and wep.Attachments[13].Installed == "ud_fg_civvy" then
+        return "AR-15"
+    end
+
     local flat = false
     if wep.Attachments[1].Installed or wep.Attachments[14].Installed then flat = true end
     if wep:GetBuff_Override("KeepRetro") then flat = false end
 
-    if GetConVar("arccw_truenames"):GetBool() then
+    if trueNames then
         local model = "M"
         local alt = "16A2"
 

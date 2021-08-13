@@ -26,12 +26,13 @@ att.Mult_AccuracyMOA = 0.5
 att.Mult_Recoil = 1.15
 
 att.Mult_ClipSize = 0.9
+att.Override_ShellScale = 1.5
 
 att.Hook_GetShootSound = function(wep, sound)
     if wep:GetBuff_Override("Silencer") then
-        return "weapons/arccw_ud/glock/fire_supp.ogg" -- Not Placeholder
+        return "weapons/arccw_ud/glock/fire_supp_357.ogg"
     else
-        return "weapons/arccw_ud/glock/fire_357.ogg" -- Placeholder
+        return "weapons/arccw_ud/glock/fire_357.ogg"
     end
 end
 

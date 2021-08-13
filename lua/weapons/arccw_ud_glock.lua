@@ -7,9 +7,9 @@ SWEP.UseHands = true
 -- Muzzle and shell effects --
 
 SWEP.MuzzleEffect = "muzzleflash_1"
-SWEP.ShellModel = "models/shells/shell_9mm.mdl"
+SWEP.ShellModel = "models/weapons/arccw/ud_shells/9.mdl"
 SWEP.ShellScale = 1.4
-SWEP.ShellMaterial = "models/weapons/arcticcw/shell_9mm"
+--SWEP.ShellMaterial = "models/weapons/arcticcw/shell_9mm"
 SWEP.ShellPitch = 100
 SWEP.ShellSounds = ArcCW.PistolShellSoundsTable
 
@@ -160,7 +160,7 @@ SWEP.IronSightStruct = {
 SWEP.ActivePos = Vector(0.2, -1, 2)
 SWEP.ActiveAng = Angle(0, 0, -5)
 
-SWEP.CustomizePos = Vector(5, -2, -2)
+SWEP.CustomizePos = Vector(7, -2, -2)
 SWEP.CustomizeAng = Angle(15, 25, 0)
 
 SWEP.CrouchPos = Vector(-3, -3, 1)
@@ -803,9 +803,11 @@ SWEP.Animations = {
         SoundTable = {
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
             {s = path .. "magrelease.ogg",    t = 0.3, c = ci},
+            {s = path .. "magout.ogg",        t = 0.3, c = ci},
             {s = path1 .. "magout.ogg",        t = 0.3, c = ci},
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.7},
-            {s = path1 .. "magin.ogg",         t = 0.8, c = ci},
+            {s = path .. "magin.ogg",         t = 0.7, c = ci},
+            {s = path1 .. "magin.ogg",         t = 0.7, c = ci},
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 1.1},
         },
     },
@@ -823,8 +825,10 @@ SWEP.Animations = {
         SoundTable = {
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
             {s = path .. "magrelease.ogg",      t = 0.12, c = ci},
+            {s = path .. "magout.ogg",        t = 0.12, c = ci},
             {s = path1 .. "magout.ogg",          t = 0.12, c = ci},
-            {s = path1 .. "magin.ogg",           t = 0.6, c = ci},
+            {s = path .. "magin.ogg",           t = 0.5, c = ci},
+            {s = path1 .. "magin.ogg",           t = 0.5, c = ci},
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.7},
             {s = path .. "sliderel_deact.ogg",  t = 1.35, c = ci},
             {s = path .. "sliderel.ogg",        t = 1.6, c = ci},
@@ -881,6 +885,7 @@ SWEP.Attachments = {
             vang = Angle(90, 0, -90),
         },
         ExcludeFlags = {"sd"},
+        VMScale = Vector(0.8, 0.8, 0.8)
     },
     {
         PrintName = "Underbarrel",

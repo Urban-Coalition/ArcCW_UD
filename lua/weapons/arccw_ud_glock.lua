@@ -278,7 +278,7 @@ SWEP.AttachmentElements = {
             },
             [7] = {
                 vpos = Vector(0, 0.1, 5),
-                vang = Angle(90, 0, 90),
+                vang = Angle(90, 0, -90),
             },
         }
     },

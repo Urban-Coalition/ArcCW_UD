@@ -1,13 +1,13 @@
-att.PrintName = "Glock .357 SIG Conversion"
-att.AbbrevName = ".357 SIG"
+att.PrintName = "Glock .380 ACP Conversion"
+att.AbbrevName = ".380 ACP"
 
 if !GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "GEN3 .357 SIG Conversion"
+    att.PrintName = "GEN3 .380 ACP Conversion"
 end
 
-att.SortOrder = 90
+att.SortOrder = 50
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
-att.Description = "A law-enforcement caliber well-known for its accuracy."
+att.Description = "A relatively weak caliber that is somewhat obsolete.\nHas lower recoil but also lower range and weaker stopping power."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
@@ -18,15 +18,14 @@ att.Slot = "ud_glock_caliber"
 
 att.AutoStats = true
 
-att.Override_Trivia_Calibre = ".357 SIG"
+att.Override_Trivia_Calibre = ".380 ACP"
 
-att.Mult_Damage = 1.1
-att.Mult_AccuracyMOA = 0.5
-att.Mult_Recoil = 1.15
+att.Mult_Range = 0.75
+att.Mult_Damage = 0.9
+att.Mult_DamageMin = 0.9
+att.Mult_Recoil = 0.65
 
-att.Mult_ClipSize = 0.9
-att.Override_ShellScale = 1.5
-
+--[[
 att.Hook_GetShootSound = function(wep, sound)
     if wep:GetBuff_Override("Silencer") then
         return "weapons/arccw_ud/glock/fire_supp_357.ogg"
@@ -39,3 +38,4 @@ att.Hook_GetDistantShootSound = function(wep, distancesound)
     if distancesound == wep.DistantShootSound then
         return "weapons/arccw_ud/glock/fire_dist_357.ogg" end
 end
+]]

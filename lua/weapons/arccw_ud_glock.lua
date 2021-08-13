@@ -294,7 +294,7 @@ SWEP.AttachmentElements = {
         }
     }
 
-desg_barr = {
+local desg_barr = {
     ["ud_glock_slide_auto"] = 1,
     ["ud_glock_slide_lb"] = 2,
     ["ud_glock_slide_carbine"] = 3,
@@ -304,12 +304,13 @@ desg_barr = {
     ["ud_glock_slide_nytesyte"] = 7,
     ["ud_glock_slide_subcompact"] = 8,
 }
-desg_cal = {
+local desg_cal = {
     ["ud_glock_caliber_40sw"] = 1,
     ["ud_glock_caliber_357sig"] = 2,
     ["ud_glock_caliber_10auto"] = 3,
     ["ud_glock_caliber_45acp"] = 4,
     ["ud_glock_caliber_22lr"] = 5,
+    ["ud_glock_caliber_380acp"] = 6,
 }
 
 SWEP.Hook_NameChange = function(wep,name)
@@ -365,13 +366,19 @@ SWEP.Hook_NameChange = function(wep,name)
                 else
                     mid = "21"
                 end
-            else
+            elseif caliber == 5 then
                 mid = "44"
+            elseif caliber == 6 then
+                if barrel == 8 then
+                    mid = "28"
+                else
+                    mid = "25"
+                end
             end
         end
     else
         start = "GEN"
-        
+
         if caliber == 0 then
             mid = "3"
         elseif caliber == 1 then
@@ -382,8 +389,10 @@ SWEP.Hook_NameChange = function(wep,name)
             mid = "8"
         elseif caliber == 4 then
             mid = "11"
-        else
+        elseif caliber == 5 then
             mid = "22"
+        elseif caliber == 6 then
+            mid = "15"
         end
 
         if barrel == 2 then
@@ -422,7 +431,7 @@ SWEP.Hook_NameChange = function(wep,name)
     end
 
     -- Todo: Subcompact variants when the barrel variant comes out
-    return start..mid..suffix
+    return start .. mid .. suffix
 end
 
 -- Animations --

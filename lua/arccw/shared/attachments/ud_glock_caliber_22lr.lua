@@ -18,9 +18,6 @@ att.Slot = "ud_glock_caliber"
 
 att.AutoStats = true
 
---att.Override_ClipSize = 20
---att.Override_ClipSize_Priority = -1
-
 att.Override_Trivia_Calibre = ".22 LR"
 
 att.Mult_Damage = 0.4

@@ -1,0 +1,20 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models/weapons/arccw/ud_mini14/Flashlight_D"
+	"$bumpmap" "models/weapons/arccw/ud_mini14/Flashlight_N"
+
+	"$phong"                        "1"
+	"$phongalbedotint"              "1"
+	"$phongtint"                    "[.67 .9 1]"
+
+	"$phongboost"                   ".75"
+	"$phongexponent"                "40"
+	"$phongfresnelranges"           "[1.5 8 20]"
+
+	"$envmap"                       "env_cubemap"
+	"$normalmapalphaenvmapmask"	"1"
+	"$envmaptint"                   "[0.13 0.13 0.13]"
+	$envmapfresnel 1
+	$envmapFresnelMinMaxExp "[0 5 .4]"
+	//$envmaptint "[0.5 0.53 0.6]"
+}

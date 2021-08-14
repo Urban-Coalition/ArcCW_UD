@@ -1,0 +1,25 @@
+VertexLitGeneric
+{
+	$basetexture "models/weapons/arccw/ud_mini14/mini14_D"
+	$bumpmap "models/weapons/arccw/ud_mini14/mini14_N"
+	"$nocull"	"1"
+	"$halflambert" 		"1"
+
+	$basealphaenvmapmask 1
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[.01 .01 .01]"
+	"$envmapcontrast" ".4"
+	$envmapfresnel 1
+	$envmapFresnelMinMaxExp "[0 3 2.0]"
+
+	"$phong"     "1"
+	//$phongexponent 17
+	$phongboost 2
+	$phongfresnelranges "[0.3 1.4 1.0]"
+	"$phongtint"         "[1 1 1.1]" 
+
+	//We still load in an exponent texture for albedo tinting
+	"$phongexponenttexture"  "models/weapons/arccw/ud_mini14/mini14_G"
+	"$phongalbedotint"		"1"
+	"$phongalbedoboost" 	"40"
+}

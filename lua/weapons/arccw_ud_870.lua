@@ -326,7 +326,7 @@ SWEP.AttachmentElements = {
         },
         VMBodygroups = {
             {ind = 8, bg = 1},
-            {ind = 1, bg = 1}
+            {ind = 1, bg = 1},
         },
     },
     ["ud_870_barrel_sawnoff"] = {
@@ -347,7 +347,10 @@ SWEP.AttachmentElements = {
         },
     },
     ["ud_870_tube_ext"] = {
-        VMBodygroups = {{ind = 2, bg = 1}},
+        VMBodygroups = {
+            {ind = 2, bg = 1},
+            {ind = 7, bg = 1}
+            },
     },
     ["ud_870_stock_poly"] = {
         VMBodygroups = {{ind = 4, bg = 1}},

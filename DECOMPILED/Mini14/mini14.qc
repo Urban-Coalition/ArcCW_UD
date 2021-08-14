@@ -1,13 +1,15 @@
 $modelname "weapons\arccw\c_ud_mini14.mdl"
  
 $bodygroup "studio" {
-	studio "mini14.smd"
+	studio "mini14_receiver.smd"
 }
 
 $bodygroup "1" {
 	studio "mini14_stock.smd"
 	studio "mini14_stock_poly.smd"
 	studio "mini14_stock_sawnoff.smd"
+	studio "mini14_stock_tactical.smd"
+	studio "mini14_stock_tactical_wood.smd"
 }
 
 $bodygroup "2" {
@@ -27,6 +29,8 @@ $bodygroup "4" {
 	studio "mini14_mag_30.smd"
 	studio "mini14_mag_10.smd"
 	studio "mini14_mag_15_22lr.smd"
+	studio "mini14_mag_30_tac.smd"
+	studio "mini14_mag_60.smd"
 }
 
 $bodygroup "5" {
@@ -42,6 +46,7 @@ $bodygroup "6" {
 
 $cdmaterials "models\weapons\arccw\ud_mini14"
 $cdmaterials "models\weapons\arccw\ud_m1014"
+$cdmaterials "models\weapons\arccw\ud_m16"
 $cdmaterials "models\weapons\arccw\ud_common"
 
 $attachment "1" "mini14_flash" 0 0 0 rotate -90 0 0

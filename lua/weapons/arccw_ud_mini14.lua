@@ -148,11 +148,11 @@ SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-4.3, 2, 2.5),
+    Pos = Vector(-4.294, -3, 2.495),
     Ang = Angle(0, 0, 0),
     Magnification = 1,
     SwitchToSound = "",
-    CrosshairInSights = false
+    CrosshairInSights = false,
 }
 
 SWEP.ActivePos = Vector(0, -2, 0)
@@ -488,10 +488,9 @@ SWEP.Attachments = {
         Slot = {"optic_lp","optic"},
         Bone = "mini14_parent",
         Offset = {
-            vpos = Vector(0, -4.2, 6),
+            vpos = Vector(0, -3.8, 6),
             vang = Angle(90, 2, -90),
         },
-        VMScale = Vector(1.25, 1.25, 1.25),
         InstalledEles = {"ud_mini14_rail_optic"},
     },
     {

@@ -245,6 +245,7 @@ SWEP.AttachmentElements = {
     },
     ["ud_mini14_stock_tactical_polymer"] = {
         VMBodygroups = {{ind = 1, bg = 3}},
+        VMSkin = 1,
     },
 
     ["ud_mini14_clamp"] = {

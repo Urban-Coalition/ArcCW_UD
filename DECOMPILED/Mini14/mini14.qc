@@ -51,7 +51,7 @@ $cdmaterials "models\weapons\arccw\ud_common"
 
 $texturegroup "skinfamilies"
 {
-    { "mini14_wood"  }
+    { "mini14"  }
     { "mini14_poly"  }
 }
 

@@ -54,6 +54,7 @@ SWEP.ViewModel = "models/weapons/arccw/c_ud_mini14.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_ud_mini14.mdl"
 SWEP.ViewModelFOV = 70
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
+SWEP.DefaultSkin = 0
 
 -- Damage --
 -- does the same damage as the M16; it's all 5.56! Range is improved, however, due to a longer barrel

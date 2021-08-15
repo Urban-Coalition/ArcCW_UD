@@ -192,6 +192,12 @@ SWEP.AttachmentElements = {
     ["ud_mini14_mag_30"] = {
         VMBodygroups = {{ind = 4, bg = 1}},
     },
+    ["ud_mini14_mag_30_polymer"] = {
+        VMBodygroups = {{ind = 4, bg = 4}},
+    },
+    ["ud_mini14_mag_60"] = {
+        VMBodygroups = {{ind = 4, bg = 5}},
+    },
     ["ud_mini14_mag_15_22lr"] = {
         VMBodygroups = {{ind = 4, bg = 3}},
     },
@@ -233,6 +239,12 @@ SWEP.AttachmentElements = {
     },
     ["ud_mini14_stock_sawnoff"] = {
         VMBodygroups = {{ind = 1, bg = 2}},
+    },
+    ["ud_mini14_stock_tactical"] = {
+        VMBodygroups = {{ind = 1, bg = 4}},
+    },
+    ["ud_mini14_stock_tactical_polymer"] = {
+        VMBodygroups = {{ind = 1, bg = 3}},
     },
 
     ["ud_mini14_clamp"] = {

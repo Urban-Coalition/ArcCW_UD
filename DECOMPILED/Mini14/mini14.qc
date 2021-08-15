@@ -49,12 +49,6 @@ $cdmaterials "models\weapons\arccw\ud_m1014"
 $cdmaterials "models\weapons\arccw\ud_m16"
 $cdmaterials "models\weapons\arccw\ud_common"
 
-$texturegroup "skinfamilies"
-{
-    { "mini14"  }
-    { "mini14_poly"  }
-}
-
 $attachment "1" "mini14_flash" 0 0 0 rotate -90 0 0
 $attachment "2" "brass" 0 0 -2 rotate -10 140 180
 $attachment "3" "camera" 0 0 0 rotate 0 0 0

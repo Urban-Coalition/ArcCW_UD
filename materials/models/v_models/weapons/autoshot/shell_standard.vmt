@@ -1,0 +1,10 @@
+VertexLitGeneric
+{
+$baseTexture "models\v_models\Weapons\autoshot/shell"
+$bumpmap "models\v_models\Weapons\autoshot/shell_n"
+$phong 1
+$phongboost	12
+$phongexponent 35
+$phongfresnelranges	"[0.05 0.5 1]"
+
+}

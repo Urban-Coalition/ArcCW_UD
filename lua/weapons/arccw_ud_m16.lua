@@ -390,12 +390,8 @@ SWEP.AttachmentElements = {
     ["ud_m16_stock_carbine_in"] = {
         VMBodygroups = {{ind = 5, bg = 9}},
     },
-
     ["ud_m16_stock_wood"] = {
-        VMBodygroups = {{ind = 5, bg = 2}},
-    },
-    ["ud_m16_stock_buffer"] = {
-        VMBodygroups = {{ind = 5, bg = 3}},
+        VMBodygroups = {{ind = 5, bg = 10}},
     },
 
     ["ud_m16_grip_ergo"] = {

@@ -26,7 +26,7 @@ att.Mult_Recoil = 0.75
 att.Mult_HipDispersion = 0.75
 att.Mult_ShootSpeedMult = 1.1
 
-att.Mult_ReloadTime = 0.85
+--att.Mult_ReloadTime = 0.85
 att.Mult_SightTime = 0.9
 
 att.Override_ClipSize_Priority = -1

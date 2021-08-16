@@ -605,7 +605,7 @@ SWEP.AttachmentElements = {
             {ind = 0, bg = 1},
             {ind = 1, bg = 2},
             {ind = 4, bg = 7},
-            {ind = 5, bg = 5},
+            {ind = 5, bg = 1},
             {ind = 2, bg = 6},
             {ind = 11, bg = 10}
         },

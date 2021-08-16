@@ -366,9 +366,31 @@ SWEP.AttachmentElements = {
         },
     },
 
-    ["ud_m16_stock_m4"] = {
-        VMBodygroups = {{ind = 5, bg = 1}},
+    ["ud_m16_stock_231_ex"] = {
+        VMBodygroups = {{ind = 5, bg = 2}},
     },
+    ["ud_m16_stock_231_in"] = {
+        VMBodygroups = {{ind = 5, bg = 3}},
+    },
+    ["ud_m16_stock_231_tube"] = {
+        VMBodygroups = {{ind = 5, bg = 4}},
+    },
+    ["ud_m16_stock_607_ex"] = {
+        VMBodygroups = {{ind = 5, bg = 5}},
+    },
+    ["ud_m16_stock_607_in"] = {
+        VMBodygroups = {{ind = 5, bg = 6}},
+    },
+    ["ud_m16_stock_608"] = {
+        VMBodygroups = {{ind = 5, bg = 7}},
+    },
+    ["ud_m16_stock_carbine_ex"] = {
+        VMBodygroups = {{ind = 5, bg = 8}},
+    },
+    ["ud_m16_stock_carbine_in"] = {
+        VMBodygroups = {{ind = 5, bg = 9}},
+    },
+
     ["ud_m16_stock_wood"] = {
         VMBodygroups = {{ind = 5, bg = 2}},
     },

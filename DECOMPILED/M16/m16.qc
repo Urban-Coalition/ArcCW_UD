@@ -51,11 +51,20 @@ $bodygroup "4" {
 
 $bodygroup "5" {
 	studio "m16_stock.smd"
-	studio "m16_stock_m4.smd"
-	studio "m16_stock_wood.smd"
-	blank
-	studio "m16_stock_polymer.smd"
 	studio "m16_stock_usas.smd"
+	studio "Stock_231_EX.smd"
+	studio "Stock_231_IN.smd"
+	studio "Stock_231_TUBE.smd"
+	studio "Stock_607_EX.smd"
+	studio "Stock_607_IN.smd"
+	studio "Stock_608.smd"
+	studio "Stock_Carbine_EX.smd"
+	studio "Stock_Carbine_IN.smd"
+	
+	//studio "m16_stock_m4.smd"
+	//studio "m16_stock_wood.smd"
+	//blank
+	//studio "m16_stock_polymer.smd"
 }
 
 $bodygroup "6" {

@@ -1,8 +1,8 @@
-att.PrintName = "AMCAR 231 TUBE Stock"
-att.AbbrevName = "231 TUBE Stock"
+att.PrintName = "AMCAR Wire TUBE Stock"
+att.AbbrevName = "Wire TUBE Stock"
 
 if GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "M16 231 TUBE Stock"
+    att.PrintName = "M16 Wire/231 TUBE Stock"
 end
 
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")

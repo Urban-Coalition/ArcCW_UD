@@ -1004,9 +1004,9 @@ SWEP.Animations = {
         LHIKOut = 0.5,
         SoundTable = {
             {s = rottle, t = 0.0},
-            {s = path .. "magout.ogg", 	 t = 19 / 30},
+            {s = "weapons/arccw_ud/uzi/" .. "magout.ogg", 	 t = 16 / 30},
             {s = rottle, t = 0.75},
-            {s = path .. "magin.ogg",    t = 29 / 30},
+            {s = "weapons/arccw_ud/uzi/" .. "magin.ogg",    t = 27 / 30},
             {s = rottle, t = 1.1},
             {s = common .. "shoulder.ogg", t = 1.93},
         },
@@ -1024,9 +1024,9 @@ SWEP.Animations = {
         LHIKOut = 0.4,
         SoundTable = {
             {s = rottle, t = 0.0},
-            {s = path .. "magout.ogg", 	 t = 0.2},
+            {s = "weapons/arccw_ud/uzi/" .. "magout.ogg", 	 t = 0.2},
             {s = rottle, t = 0.75},
-            {s = path .. "magin.ogg",    t = 0.98},
+            {s = "weapons/arccw_ud/uzi/" .. "magin.ogg",    t = 0.98},
             {s = rottle, t = 1.39},
             {s = path .. "boltdrop.ogg", t = 56 / 30},
             {s = common .. "shoulder.ogg", t = 2.15},

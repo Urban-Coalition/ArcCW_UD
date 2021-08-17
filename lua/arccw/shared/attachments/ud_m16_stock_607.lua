@@ -1,12 +1,12 @@
-att.PrintName = "AMCAR 608 Stock"
-att.AbbrevName = "608 Stock"
+att.PrintName = "AMCAR 607 Stock"
+att.AbbrevName = "607 Stock"
 
 if GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "M16 608 Stock"
+    att.PrintName = "M16 Model 607 Stock"
 end
 
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
-att.Description = "Adjustable combat stock used on the M4 carbine. Improves point shooting capabilities."
+att.Description = "Collapsable combat stock used on the Model 607 SMG. Lorem ipsum."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
@@ -25,4 +25,13 @@ att.Mult_Sway = 1.25
 
 att.Add_BarrelLength = -4
 
-att. ActivateElements = {"stock_608"}
+att.ToggleStats = {
+    {
+        PrintName = "Extended",
+        ActivateElements = {"stock_607_ex"}
+    },
+    {
+        PrintName = "Collapsed",
+        ActivateElements = {"stock_607_in"}
+    },
+}

@@ -42,11 +42,9 @@ $bodygroup "4" {
 	studio "m16_barrel_usas.smd" //7
 	studio "m16_barrel_lmg.smd" //8
 	studio "m16_barrel_sd.smd" //9
-	studio "m16_barrel_exposed.smd" //10
-	studio "m16_barrel_cursed.smd" //11
-	studio "m16_barrel_tactical.smd" //12
-	studio "m16_barrel_smg.smd" //13
-	studio "m16_barrel_tactical_a4.smd" // 14
+	studio "m16_barrel_tactical.smd" //10
+	studio "m16_barrel_smg.smd" //11
+	studio "m16_barrel_tactical_a4.smd" // 12
 }
 
 $bodygroup "5" {
@@ -87,11 +85,11 @@ $bodygroup "8" {
 
 $bodygroup "9" {
 	blank
-	studio "railcover_bottom"
-	studio "railcover_left"
-	studio "railcover_quad"
-	studio "railcover_right"
-	studio "railcover_top"
+	//studio "railcover_bottom"
+	//studio "railcover_left"
+	//studio "railcover_quad"
+	//studio "railcover_right"
+	//studio "railcover_top"
 }
 
 $bodygroup "10" {

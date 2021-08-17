@@ -1,55 +1,55 @@
 $modelname "weapons\arccw\c_ud_m16.mdl"
  
 $bodygroup "studio" {
-	studio "m16.smd"
-	studio "m16_usas.smd"
+	studio "base.smd"
+	studio "base_usas.smd"
 }
 
 $bodygroup "1" {
-	studio "m16_upper_ch.smd"
-	studio "m16_upper_flat.smd"
-	studio "m16_upper_usas.smd"
-	studio "m16_upper_usas_flat.smd"
+	studio "upper_ch.smd"
+	studio "upper_flat.smd"
+	studio "upper_usas.smd"
+	studio "upper_usas_flat.smd"
 }
 
 $bodygroup "2" {
-	studio "m16_mag_30.smd"
-	studio "m16_mag_20.smd"
-	studio "m16_mag_40.smd"
-	studio "m16_mag_60.smd"
-	studio "m16_mag_100.smd"
-	studio "m16_mag_9mm_20.smd"
-	studio "m16_mag_usas_10.smd"
-	studio "m16_mag_usas_20.smd"
-	studio "m16_mag_9mm_32.smd"
+	studio "mag_30.smd"
+	studio "mag_20.smd"
+	studio "mag_40.smd"
+	studio "mag_60.smd"
+	studio "mag_100.smd"
+	studio "mag_9mm_20.smd"
+	studio "mag_usas_10.smd"
+	studio "mag_usas_20.smd"
+	studio "mag_9mm_32.smd"
 }
 
 $bodygroup "3" {
 	blank
-	studio "m16_rail_optic.smd"
-	studio "m16_rail_flat_optic.smd"
+	studio "rail_optic.smd"
+	studio "rail_flat_optic.smd"
 	studio "rail_m16_dedicated.smd"
 }
 
 $bodygroup "4" {
-	studio "m16_barrel.smd" //0
-	studio "m16_barrel_m4.smd" //1
-	studio "m16_barrel_cqbr.smd" //2
-	studio "m16_barrel_fpw.smd" //3
-	studio "m16_barrel_wood.smd" //4
-	studio "m16_barrel_wood_short.smd" //5
-	studio "m16_barrel_stub.smd" //6
-	studio "m16_barrel_usas.smd" //7
-	studio "m16_barrel_lmg.smd" //8
-	studio "m16_barrel_sd.smd" //9
-	studio "m16_barrel_tactical.smd" //10
-	studio "m16_barrel_smg.smd" //11
-	studio "m16_barrel_tactical_a4.smd" // 12
+	studio "barrel.smd" //0
+	studio "barrel_m4.smd" //1
+	studio "barrel_cqbr.smd" //2
+	studio "barrel_fpw.smd" //3
+	studio "barrel_wood.smd" //4
+	studio "barrel_wood_short.smd" //5
+	studio "barrel_stub.smd" //6
+	studio "barrel_usas.smd" //7
+	studio "barrel_lmg.smd" //8
+	studio "barrel_sd.smd" //9
+	studio "barrel_tactical.smd" //10
+	studio "barrel_smg.smd" //11
+	studio "barrel_tactical_a4.smd" // 12
 }
 
 $bodygroup "5" {
-	studio "m16_stock.smd"
-	studio "m16_stock_usas.smd"
+	studio "stock.smd"
+	studio "stock_usas.smd"
 	studio "Stock_231_EX.smd"
 	studio "Stock_231_IN.smd"
 	studio "Stock_231_TUBE.smd"
@@ -58,29 +58,29 @@ $bodygroup "5" {
 	studio "Stock_608.smd"
 	studio "Stock_Carbine_EX.smd"
 	studio "Stock_Carbine_IN.smd"
-	studio "m16_stock_wood.smd"
+	studio "stock_wood.smd"
 }
 
 $bodygroup "6" {
-	studio "m16_grip.smd"
-	studio "m16_grip_ergo.smd"
-	studio "m16_grip_skel.smd"
-	studio "m16_grip_wood.smd"
+	studio "grip.smd"
+	studio "grip_ergo.smd"
+	studio "grip_skel.smd"
+	studio "grip_wood.smd"
 }
 
 $bodygroup "7" {
 	blank
-	studio "m16_rail_fg.smd"
-	studio "m16_rail_fg_stub.smd"
-	studio "m16_rail_fg_wood.smd"
-	studio "m16_rail_fg_wood_short.smd"
+	studio "rail_fg.smd"
+	studio "rail_fg_stub.smd"
+	studio "rail_fg_wood.smd"
+	studio "rail_fg_wood_short.smd"
 }
 
 $bodygroup "8" {
 	blank
-	studio "m16_clamp_fullsize.smd"
-	studio "m16_clamp_stub.smd"
-	studio "m16_clamp_short.smd"
+	studio "clamp_fullsize.smd"
+	studio "clamp_stub.smd"
+	studio "clamp_short.smd"
 }
 
 $bodygroup "9" {
@@ -94,7 +94,7 @@ $bodygroup "9" {
 
 $bodygroup "10" {
 	blank
-	studio "m16_sights_m4a4.smd"
+	studio "sights_m4a4.smd"
 }
 
 $cdmaterials "models\weapons\arccw\ud_m16"

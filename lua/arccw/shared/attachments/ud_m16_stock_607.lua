@@ -6,7 +6,7 @@ if GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
-att.Description = "Collapsable combat stock used on the Model 607 SMG. Lorem ipsum."
+att.Description = "Collapsable combat stock used on the Model 607 SMG. The bulk of the full stock combined with the collapsibility of any other."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
@@ -16,14 +16,14 @@ att.Desc_Neutrals = {
 att.Slot = "ud_m16_stock"
 
 att.AutoStats = true
+att.SortOrder = 5
 
-att.Mult_SightTime = 0.9
-att.Mult_HipDispersion = 0.85
-att.Mult_Recoil = 1.1
-att.Mult_RecoilSide = 1.25
-att.Mult_Sway = 1.25
+att.Mult_SightTime = 0.95
+att.Mult_HipDispersion = 1.15
+att.Mult_RecoilSide = 0.9
+att.Mult_Sway = 1.1
 
-att.Add_BarrelLength = -4
+att.Add_BarrelLength = 0
 
 att.ToggleStats = {
     {

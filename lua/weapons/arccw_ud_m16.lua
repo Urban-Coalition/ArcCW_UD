@@ -823,7 +823,7 @@ SWEP.Animations = {
         LHIKOut = 0.5,
         SoundTable = {
             {s = rottle,  t = 0.0},
-            {s = path .. "magout.ogg", 	 t = 0.2},
+            {s = path .. "magout.ogg", 	 t = 0.35},
             {s = rottle,  t = 0.75},
             {s = path .. "magin.ogg",    t = 0.95},
             {s = rottle,  t = 1.1},

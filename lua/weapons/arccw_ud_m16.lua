@@ -366,34 +366,34 @@ SWEP.AttachmentElements = {
         },
     },
 
-    ["ud_m16_stock_231_ex"] = {
+    ["stock_231_ex"] = {
         VMBodygroups = {{ind = 5, bg = 2}},
     },
-    ["ud_m16_stock_231_in"] = {
+    ["stock_231_in"] = {
         VMBodygroups = {{ind = 5, bg = 3}},
     },
-    ["ud_m16_stock_231_tube"] = {
+    ["stock_231_tube"] = {
         VMBodygroups = {{ind = 5, bg = 4}},
     },
-    ["ud_m16_stock_607_ex"] = {
+    ["stock_607_ex"] = {
         VMBodygroups = {{ind = 5, bg = 5}},
     },
-    ["ud_m16_stock_607_in"] = {
+    ["stock_607_in"] = {
         VMBodygroups = {{ind = 5, bg = 6}},
     },
-    ["ud_m16_stock_608"] = {
+    ["stock_608"] = {
         VMBodygroups = {{ind = 5, bg = 7}},
     },
-    ["ud_m16_stock_carbine_ex"] = {
+    ["stock_carbine_ex"] = {
         VMBodygroups = {{ind = 5, bg = 8}},
     },
-    ["ud_m16_stock_carbine_in"] = {
+    ["stock_carbine_in"] = {
         VMBodygroups = {{ind = 5, bg = 9}},
     },
+
     ["ud_m16_stock_wood"] = {
         VMBodygroups = {{ind = 5, bg = 10}},
     },
-
     ["ud_m16_grip_ergo"] = {
         VMBodygroups = {{ind = 6, bg = 1}},
     },
@@ -406,7 +406,7 @@ SWEP.AttachmentElements = {
 
     ["ud_m16_barrel_tactical"] = {
         VMBodygroups = {
-            {ind = 4, bg = 12},
+            {ind = 4, bg = 10},
             {ind = 11, bg = 7}
         },
         AttPosMods = {
@@ -427,7 +427,7 @@ SWEP.AttachmentElements = {
 
     ["ud_m16_barrel_tactical_a4"] = {
         VMBodygroups = {
-            {ind = 4, bg = 14},
+            {ind = 4, bg = 12},
             {ind = 11, bg = 8}
         },
         AttPosMods = {
@@ -476,7 +476,7 @@ SWEP.AttachmentElements = {
     },
     ["ud_m16_barrel_smg"] = {
         VMBodygroups = {
-            {ind = 4, bg = 13},
+            {ind = 4, bg = 11},
             {ind = 11, bg = 10}
         },
         AttPosMods = {
@@ -580,15 +580,6 @@ SWEP.AttachmentElements = {
             {ind = 4, bg = 9},
             {ind = 11, bg = 6}
         },
-        AttPosMods = {
-            [6] = {
-                vpos = Vector(0, 0.8, 20),
-                vang = Angle(90, 0, -90),
-            },
-        }
-    },
-    ["ud_m16_barrel_cursed"] = {
-        VMBodygroups = {{ind = 4, bg = 11}},
         AttPosMods = {
             [6] = {
                 vpos = Vector(0, 0.8, 20),

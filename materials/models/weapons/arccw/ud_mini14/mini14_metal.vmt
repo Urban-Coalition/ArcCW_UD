@@ -7,15 +7,15 @@ VertexLitGeneric
 
 	$basealphaenvmapmask 1
 	"$envmap" "env_cubemap"
-	"$envmaptint" "[.01 .01 .01]"
+	"$envmaptint" "[.02 .02 .02]"
 	"$envmapcontrast" ".4"
 	$envmapfresnel 1
 	$envmapFresnelMinMaxExp "[0 3 2.0]"
 
 	"$phong"     "1"
 	//$phongexponent 17
-	$phongboost 2
-	$phongfresnelranges "[0.3 1.4 1.0]"
+	$phongboost 1
+	$phongfresnelranges "[0.1 0.1 0.1]"
 	"$phongtint"         "[1 1 1.1]" 
 
 	//We still load in an exponent texture for albedo tinting

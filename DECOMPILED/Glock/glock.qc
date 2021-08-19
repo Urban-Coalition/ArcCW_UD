@@ -36,8 +36,9 @@ $cdmaterials "models\weapons\arccw\ud_common"
 
 $texturegroup "skinfamilies"
 {
-    { "glock"  }
-    { "glock_tan"  }
+    { "glock" }
+    { "glock_tan" }
+    { "glock_olive" }
 }
 
 $attachment "1" "glock_flash" 0 0 0 rotate -90 0 0

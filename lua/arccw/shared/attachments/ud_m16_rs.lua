@@ -1,6 +1,6 @@
 att.PrintName = "Flip-up Rear Sight"
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
-att.Description = "A rail-mounted rear sight for flat top receivers. Looks more modern, but that's it."
+att.Description = "A rail-mounted rear sight for flat top receivers.\nLooks more modern, but that's it."
 att.Desc_Pros = {}
 att.Desc_Cons = {}
 att.Desc_Neutrals = {
@@ -14,3 +14,4 @@ att.ExcludeFlags = {"ud_m16_retro"}
 --att.HideIfBlocked = true
 
 att.SortOrder = 1000
+att.Free = true

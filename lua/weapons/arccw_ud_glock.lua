@@ -190,8 +190,10 @@ SWEP.BulletBones = {
 }
 
 SWEP.AttachmentElements = {
-
     ["ud_glock_skin_tan"] = {
+        VMSkin = 1,
+    },
+    ["ud_glock_skin_olive"] = {
         VMSkin = 1,
     },
     ["ud_glock_mag_10"] = {

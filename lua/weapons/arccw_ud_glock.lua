@@ -190,9 +190,11 @@ SWEP.BulletBones = {
 }
 
 SWEP.AttachmentElements = {
-
     ["ud_glock_skin_tan"] = {
         VMSkin = 1,
+    },
+    ["ud_glock_skin_olive"] = {
+        VMSkin = 2,
     },
     ["ud_glock_mag_10"] = {
         VMBodygroups = {{ind = 1, bg = 1}},
@@ -941,7 +943,8 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Ammo Type",
-        Slot = {"go_ammo"},
+        DefaultAttName = "\"FMJ\" Full Metal Jacket",
+        Slot = "ud_ammo",
     },
     {
         PrintName = "Powder Load",

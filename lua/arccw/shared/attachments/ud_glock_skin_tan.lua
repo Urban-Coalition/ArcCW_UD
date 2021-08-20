@@ -6,5 +6,3 @@ att.Desc_Pros = {
 att.Slot = "ud_glock_skin"
 
 att.Free = true
-
-att.ActivateElements = {"ud_glock_skin_tan"}

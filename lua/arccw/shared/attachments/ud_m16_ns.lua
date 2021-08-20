@@ -15,3 +15,5 @@ att.HideIfBlocked = true
 
 att.SortOrder = 999
 att.TrueFlatTop = true
+att.Free = true
+att.Ignore = true

@@ -155,7 +155,7 @@ SWEP.IronSightStruct = {
     CrosshairInSights = false,
 }
 
-SWEP.ActivePos = Vector(0, -2, 0)
+SWEP.ActivePos = Vector(0, -1, 1)
 SWEP.ActiveAng = Angle(0, 0, -3)
 
 SWEP.CustomizePos = Vector(5, -2, -2)
@@ -184,6 +184,7 @@ SWEP.DistantShootSound = path .. "fire_dist.ogg"
 -- Bodygroups --
 
 SWEP.BulletBones = {
+    [2] = "mini14_bullet1", [3] = "mini14_bullet2"
 }
 
 SWEP.AttachmentElements = {
@@ -291,7 +292,7 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = "fire",
-        Time = 18 / 30,
+        Time = 20 / 30,
         ShellEjectAt = 0.01,
         SoundTable = {
             {s = path .. "mech.ogg", t = 0}, -- Not Temporary
@@ -299,7 +300,7 @@ SWEP.Animations = {
     },
     ["fire_empty"] = {
         Source = "fire_empty",
-        Time = 18 / 30,
+        Time = 20 / 30,
         ShellEjectAt = 0.01,
         SoundTable = {
             {s = path .. "mech_last", t = 0}, -- Temporary
@@ -311,7 +312,7 @@ SWEP.Animations = {
     ["reload"] = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Time = 65 / 30,
+        Time = 66 / 30,
         MinProgress = 1.4,
         LastClip1OutTime = 0.9,
         LHIK = true,
@@ -331,9 +332,9 @@ SWEP.Animations = {
     ["reload_empty"] = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Time = 80 / 30,
+        Time = 85 / 30,
         MinProgress = 2.1,
-        LastClip1OutTime = 1.2,
+        LastClip1OutTime = 1,
         LHIK = true,
         LHIKIn = 0.4,
         LHIKEaseIn = 0.4,

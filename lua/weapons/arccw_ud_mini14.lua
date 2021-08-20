@@ -543,7 +543,8 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Ammo Type",
-        Slot = {"go_ammo"},
+        DefaultAttName = "\"FMJ\" Full Metal Jacket",
+        Slot = "ud_ammo",
     },
     {
         PrintName = "Powder Load",

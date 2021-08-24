@@ -624,6 +624,7 @@ SWEP.AttachmentElements = {
 SWEP.Hook_Think = ArcCW.UD.ADSReload
 
 local rottle = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
+local ratel = {path .. "rattle_1.ogg", path .. "rattle_2.ogg", path .. "rattle_3.ogg"}
 
 SWEP.Animations = {
     ["idle"] = {
@@ -650,6 +651,9 @@ SWEP.Animations = {
         Source = "fire",
         Time = 13 / 30,
         ShellEjectAt = 0.01,
+        SoundTable = {
+            {s = path .. "mech.ogg", t = 0}, -- Temporary
+        },
     },
     ["fire_empty"] = {
         Source = "fire_empty",
@@ -770,11 +774,15 @@ SWEP.Animations = {
         LHIKOut = 0.5,
         SoundTable = {
             {s = rottle,  t = 0.0},
+            {s = ratel, t = 0.25},
             {s = path .. "magout.ogg", 	 t = 0.335},
+            {s = ratel, t = 0.5},
             {s = rottle,  t = 0.75},
             {s = path .. "magin.ogg",    t = 1.05},
-            {s = rottle,  t = 1.1},
-            {s = common .. "shoulder.ogg", t = 1.93},
+            {s = ratel, t = 1.1},
+            {s = rottle,  t = 1.15},
+            {s = common .. "grab.ogg", t = 1.81},
+            {s = common .. "shoulder.ogg", t = 1.9},
         },
     },
     ["reload_empty"] = {
@@ -790,11 +798,16 @@ SWEP.Animations = {
         LHIKOut = 0.5,
         SoundTable = {
             {s = rottle,  t = 0.0},
+            {s = ratel, t = 0.25},
             {s = path .. "magout.ogg", 	 t = 0.335},
+            {s = ratel, t = 0.5},
             {s = rottle,  t = 0.75},
             {s = path .. "magin.ogg",    t = 1.05},
+            {s = ratel, t = 1.1},
             {s = rottle,  t = 1.39},
             {s = path .. "boltdrop.ogg", t = 1.82},
+            {s = ratel, t = 1.9},
+            {s = common .. "grab.ogg", t = 2.0},
             {s = common .. "shoulder.ogg", t = 2.15},
         },
     },

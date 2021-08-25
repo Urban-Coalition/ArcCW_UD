@@ -155,7 +155,7 @@ SWEP.IronSightStruct = {
     CrosshairInSights = false,
 }
 
-SWEP.ActivePos = Vector(0, -1, 1)
+SWEP.ActivePos = Vector(-1, -1, 1)
 SWEP.ActiveAng = Angle(0, 0, -3)
 
 SWEP.CustomizePos = Vector(5, -2, -2)
@@ -294,6 +294,7 @@ SWEP.Animations = {
         Source = "fire",
         Time = 20 / 30,
         ShellEjectAt = 0.01,
+        LastClip1OutTime = 0,
         SoundTable = {
             {s = path .. "mech.ogg", t = 0}, -- Not Temporary
         },
@@ -332,7 +333,7 @@ SWEP.Animations = {
     ["reload_empty"] = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Time = 85 / 30,
+        Time = 86 / 30,
         MinProgress = 2.1,
         LastClip1OutTime = 1,
         LHIK = true,
@@ -376,7 +377,7 @@ SWEP.Animations = {
     ["reload_empty_10"] = {
         Source = "reload_empty_10",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Time = 90 / 30,
+        Time = 86 / 30,
         MinProgress = 2.1,
         LastClip1OutTime = 0.7,
         LHIK = true,
@@ -421,7 +422,7 @@ SWEP.Animations = {
     ["reload_empty_30"] = {
         Source = "reload_empty_30",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Time = 90 / 30,
+        Time = 86 / 30,
         MinProgress = 2.3,
         LastClip1OutTime = 0.7,
         LHIK = true,
@@ -465,7 +466,7 @@ SWEP.Animations = {
     ["reload_empty_15_22lr"] = {
         Source = "reload_empty_15_22lr",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Time = 90 / 30,
+        Time = 86 / 30,
         MinProgress = 2.2,
         LastClip1OutTime = 0.7,
         LHIK = true,

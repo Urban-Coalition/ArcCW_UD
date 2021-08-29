@@ -411,7 +411,7 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [3] = {
-                vpos = Vector(0, -0.35, 22.75),
+                vpos = Vector(0, -0.1, 22.75),
                 vang = Angle(90, 0, -90),
             },
             [5] = {
@@ -436,7 +436,7 @@ SWEP.AttachmentElements = {
                 vang = Angle(90, 0, -90),
             },
             [6] = {
-                vpos = Vector(1.4, -0.5, 20),
+                vpos = Vector(1.1, 0, 20),
                 vang = Angle(90, 0, 0),
             },
         }
@@ -449,7 +449,7 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [3] = {
-                vpos = Vector(0, -0.35, 25.5),
+                vpos = Vector(0, 0, 24.5),
                 vang = Angle(90, 0, -90),
             },
             [6] = {
@@ -465,7 +465,7 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [3] = {
-                vpos = Vector(0, -0.35, 20.5),
+                vpos = Vector(0, 0, 20.5),
                 vang = Angle(90, 0, -90),
             },
             [6] = {
@@ -505,7 +505,7 @@ SWEP.AttachmentElements = {
         ]]
         AttPosMods = {
             [3] = {
-                vpos = Vector(0, -0.35, 25.75),
+                vpos = Vector(0, -0.1, 22.5),
                 vang = Angle(90, 0, -90),
             },
             [6] = {
@@ -554,7 +554,7 @@ SWEP.AttachmentElements = {
         ]]
         AttPosMods = {
             [3] = {
-                vpos = Vector(0, -0.35, 10.25),
+                vpos = Vector(0, -0.35, 7),
                 vang = Angle(90, 0, -90),
             },
             [6] = {
@@ -571,6 +571,10 @@ SWEP.AttachmentElements = {
         AttPosMods = {
             [6] = {
                 vpos = Vector(0, 0.8, 20),
+                vang = Angle(90, 0, -90),
+            },
+            [3] = {
+                vpos = Vector(0, -0.35, 30.75),
                 vang = Angle(90, 0, -90),
             },
         }
@@ -614,6 +618,14 @@ SWEP.AttachmentElements = {
             [1] = {
                 vpos = Vector(0, -4, 3),
                 vang = Angle(90, 0, -90),
+            },
+        },
+    },
+    ["bravo_dicks_going_fart"] = {
+        AttPosMods = {
+            [6] = {
+                vpos = Vector(0, -1.05, 10),
+                vang = Angle(90, 0, 90),
             },
         },
     },
@@ -1244,7 +1256,7 @@ SWEP.Attachments = {
         Slot = {"muzzle"},
         Bone = "m16_parent",
         Offset = {
-            vpos = Vector(0, -0.35, 30.75),
+            vpos = Vector(0.025, -0.05, 30.75),
             vang = Angle(90, 0, -90),
         },
         ExcludeFlags = {"sd", "m16_usas"},

@@ -14,5 +14,14 @@ att.Desc_Neutrals = {
 att.Slot = "ud_m16_charm"
 
 att.ActivateElements = {"bravo_dicks_going_fart"}
+att.AdditionalSights = {
+    {
+        Pos = Vector(0, 10, -4), -- relative to where att.Model is placed
+        Ang = Angle(0, 0, -45),
+        GlobalPos = false,
+        GlobalAng = true,
+        Magnification = 1
+    }
+}
 
 att.SortOrder = 1000

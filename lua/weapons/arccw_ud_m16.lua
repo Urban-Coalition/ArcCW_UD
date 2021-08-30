@@ -647,17 +647,35 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "draw",
+        SoundTable = {
+            {s = common .. "raise.ogg", t = 0},
+            {s = common .. "shoulder.ogg", t = 0.15},
+            {s = path .. "rattle_3.ogg", t = 0.2},
+        },
     },
     ["draw_empty"] = {
         Source = "draw_empty",
         Time = 20 / 30,
+        SoundTable = {
+            {s = common .. "raise.ogg", t = 0},
+            {s = common .. "shoulder.ogg", t = 0.15},
+            {s = path .. "rattle_3.ogg", t = 0.2},
+        },
     },
     ["holster"] = {
         Source = "holster",
+        SoundTable = {
+            {s = path .. "rattle_3.ogg", t = 0},
+            {s = common .. "cloth_6.ogg", t = 0.2},
+        },
     },
     ["holster_empty"] = {
         Source = "holster_empty",
         Time = 20 / 30,
+        SoundTable = {
+            {s = path .. "rattle_3.ogg", t = 0},
+            {s = common .. "cloth_6.ogg", t = 0.2},
+        },
     },
     ["fire"] = {
         Source = "fire",

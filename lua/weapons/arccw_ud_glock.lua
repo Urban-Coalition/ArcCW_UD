@@ -452,10 +452,18 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "draw",
+        SoundTable = {
+            {s = path .. "draw.ogg", t = 0}, -- Not Temporary
+            {s = common .. "raise.ogg", t = 0.05},
+        },
     },
     ["draw_empty"] = {
         Source = "draw_empty",
         Time = 12 / 30,
+        SoundTable = {
+            {s = path .. "draw.ogg", t = 0}, -- Not Temporary
+            {s = common .. "raise.ogg", t = 0.05},
+        },
     },
     ["holster"] = {
         Source = "holster",
@@ -464,6 +472,10 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0,
         LHIKOut = 0,
+        SoundTable = {
+            {s = common .. "cloth_2.ogg", t = 0},
+            {s = path .. "holster.ogg", t = 0.2}, -- Not Temporary
+        },
     },
     ["holster_empty"] = {
         Source = "holster_empty",
@@ -473,6 +485,10 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0,
         LHIKOut = 0,
+        SoundTable = {
+            {s = common .. "cloth_2.ogg", t = 0},
+            {s = path .. "holster.ogg", t = 0.2}, -- Not Temporary
+        },
     },
     ["fire"] = {
         Source = "fire",

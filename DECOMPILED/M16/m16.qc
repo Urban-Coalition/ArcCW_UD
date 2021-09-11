@@ -85,11 +85,8 @@ $bodygroup "8" {
 
 $bodygroup "9" {
 	blank
-	//studio "railcover_bottom"
-	//studio "railcover_left"
-	//studio "railcover_quad"
-	//studio "railcover_right"
-	//studio "railcover_top"
+	studio "gasblock_barrel_sight.smd"
+	studio "gasblock_barrelshort_sight.smd"
 }
 
 $bodygroup "10" {

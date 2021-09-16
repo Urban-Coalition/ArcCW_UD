@@ -30,7 +30,7 @@ att.Mult_ShootSpeedMult = 0.95
 --     }
 -- }
 
-att.LHIK = true
+att.LHIK = false
 
 att.Model = "models/weapons/arccw/atts/wood_lhik.mdl"
 

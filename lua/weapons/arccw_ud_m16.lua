@@ -405,7 +405,6 @@ SWEP.AttachmentElements = {
     ["ud_m16_barrel_tactical"] = {
         VMBodygroups = {
             {ind = 4, bg = 10},
-            {ind = 11, bg = 7}
         },
         AttPosMods = {
             [3] = {
@@ -426,7 +425,7 @@ SWEP.AttachmentElements = {
     ["ud_m16_barrel_tactical_a4"] = {
         VMBodygroups = {
             {ind = 4, bg = 12},
-            {ind = 11, bg = 8}
+            {ind = 9, bg = 1}
         },
         AttPosMods = {
             [5] = {
@@ -443,7 +442,6 @@ SWEP.AttachmentElements = {
     ["ud_m16_barrel_m4"] = {
         VMBodygroups = {
             {ind = 4, bg = 1},
-            {ind = 11, bg = 1}
         },
         AttPosMods = {
             [3] = {
@@ -459,7 +457,6 @@ SWEP.AttachmentElements = {
     ["ud_m16_barrel_cqbr"] = {
         VMBodygroups = {
             {ind = 4, bg = 2},
-            {ind = 11, bg = 2}
         },
         AttPosMods = {
             [3] = {
@@ -475,7 +472,6 @@ SWEP.AttachmentElements = {
     ["ud_m16_barrel_smg"] = {
         VMBodygroups = {
             {ind = 4, bg = 11},
-            {ind = 11, bg = 10}
         },
         AttPosMods = {
             [3] = {
@@ -491,7 +487,6 @@ SWEP.AttachmentElements = {
     ["ud_m16_barrel_fpw"] = {
         VMBodygroups = {
             {ind = 4, bg = 3},
-            {ind = 11, bg = 10}
         },
         --[[]
         Override_IronSightStruct = {
@@ -515,7 +510,6 @@ SWEP.AttachmentElements = {
     ["ud_m16_barrel_wood"] = {
         VMBodygroups = {
             {ind = 4, bg = 4},
-            {ind = 11, bg = 3}
         },
         AttPosMods = {
             [3] = {
@@ -527,7 +521,6 @@ SWEP.AttachmentElements = {
     ["ud_m16_barrel_wood_short"] = {
         VMBodygroups = {
             {ind = 4, bg = 5},
-            {ind = 11, bg = 4}
         },
         AttPosMods = {
             [3] = {
@@ -541,7 +534,9 @@ SWEP.AttachmentElements = {
         }
     },
     ["ud_m16_barrel_stub"] = {
-        VMBodygroups = {{ind = 4, bg = 6}, {ind = 11, bg = 11}},
+        VMBodygroups = {
+            {ind = 4, bg = 6},
+        },
         --[[]
         Override_IronSightStruct = {
             Pos = Vector(-1, 4, 0),
@@ -564,7 +559,6 @@ SWEP.AttachmentElements = {
     ["ud_m16_barrel_lmg"] = {
         VMBodygroups = {
             {ind = 4, bg = 8},
-            {ind = 11, bg = 5}
         },
         AttPosMods = {
             [6] = {
@@ -580,7 +574,6 @@ SWEP.AttachmentElements = {
     ["ud_m16_barrel_sd"] = {
         VMBodygroups = {
             {ind = 4, bg = 9},
-            {ind = 11, bg = 6}
         },
         AttPosMods = {
             [6] = {
@@ -596,7 +589,6 @@ SWEP.AttachmentElements = {
             {ind = 4, bg = 7},
             {ind = 5, bg = 1},
             {ind = 2, bg = 6},
-            {ind = 11, bg = 10}
         },
         AttPosMods = {
             --[[
@@ -1136,13 +1128,17 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     end
 
     if wep.Attachments[1].Installed then
+        if barrel == 8 then
+            vm:SetBodygroup(9,2)
+        end
         -- Optic rail
         if flipup then
+            vm:SetBodygroup(9,1)
             vm:SetBodygroup(10, 1)
         elseif vm:GetBodygroup(1) == 1 then
             -- Flat top (ud_m16_upper_flat)
+            vm:SetBodygroup(9,0)
             vm:SetBodygroup(10, 0)
-            vm:SetBodygroup(11, 10)
         --else
             -- Carry handle
             --vm:SetBodygroup(3, 1)
@@ -1190,14 +1186,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     else
         vm:SetBodygroup(8, 0)
     end
-    if wep.Attachments[4].Installed == "ud_m16_receiver_cali" then
-        -- vm:SetBodygroup(0, 2)
-        -- if vm:GetBodygroup(1) == 1 then
-        --     vm:SetBodygroup(1, 5)
-        -- else
-        --     vm:SetBodygroup(1, 4)
-        -- end
-    elseif wep.Attachments[4].Installed == "ud_m16_receiver_usas" then
+    if wep.Attachments[4].Installed == "ud_m16_receiver_usas" then
         vm:SetBodygroup(0, 1)
         if vm:GetBodygroup(1) == 1 then
             vm:SetBodygroup(1, 3)
@@ -1219,20 +1208,15 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         vm:SetBodygroup(0,0)
         vm:SetBodygroup(1,0)
 
-        for k = barrel, barrel do
-            vm:SetBodygroup(11, k)
-            if k >= 9 then --11
-                vm:SetBodygroup(11, 10)
-            end
-        end
-
         if wep.Attachments[1].Installed then
             vm:SetBodygroup(3, 1)
+            if barrel == 8 then
+                vm:SetBodygroup(9,1)
+            end
         end
         if wep.Attachments[4].Installed == "ud_m16_receiver_usas" then
             vm:SetBodygroup(0, 1)
             vm:SetBodygroup(1, 2)
-            vm:SetBodygroup(11, 10)
         elseif wep.Attachments[4].Installed == "ud_m16_receiver_cali" then
             vm:SetBodygroup(0, 2)
             vm:SetBodygroup(1, 4)
@@ -1248,7 +1232,7 @@ SWEP.Attachments = {
         Slot = {"optic","sniper_optic","ud_m16_rs"},
         Bone = "m16_parent",
         Offset = {
-            vpos = Vector(-0.02, -1.65, 3),
+            vpos = Vector(0, -1.9, 3),
             vang = Angle(90, 0, -90),
         },
         VMScale = Vector(1.25, 1.25, 1.25),

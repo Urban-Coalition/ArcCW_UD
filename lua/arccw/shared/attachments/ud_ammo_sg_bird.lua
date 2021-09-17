@@ -3,9 +3,9 @@ att.PrintName = "\"BIRD\" #9 Birdshot"
 att.SortOrder = 4
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = [[Hunting rounds with a wide spread and a very large number of pellets, designed to shoot birds out of the sky.
-While not as generally lethal as buckshot, the loose clump spread makes it easier to hit small targets.]]
+While not generally as lethal as buckshot, the loose clump spread makes it easier to hit small targets.]]
 att.Desc_Pros = {
-    "Extra pellets"
+    "+23 Pellets"
 }
 att.Desc_Cons = {
 }

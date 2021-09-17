@@ -1,4 +1,4 @@
-att.PrintName = "\"JSP\" Jacketed Soft-point"
+att.PrintName = "\"JSP\" Jacketed Soft-Point"
 
 att.SortOrder = 3
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")

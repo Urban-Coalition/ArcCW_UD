@@ -1,4 +1,4 @@
-att.PrintName = "\"AP\" Armor-piercing"
+att.PrintName = "\"AP\" Armor-Piercing"
 
 att.SortOrder = 5
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")

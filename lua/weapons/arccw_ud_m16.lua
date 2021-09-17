@@ -208,6 +208,7 @@ local desg_barr = {
     ["ud_m16_barrel_cqbr"]          =   2, -- cant see the barr 10.5
     --["ud_m16_barrel_sd"]            =   2, -- amcar-s m4 sd     10.5
     ["ud_m16_barrel_stub"]          =   6, -- A BIT OF A STUB   2
+    ["ud_m16_barrel_classic"]           =   10
 }
 
 local desg_rec = {
@@ -284,6 +285,8 @@ SWEP.Hook_NameChange = function(wep, name)
                 alt = "727"
             elseif barrel == 2 then
                 alt = "733"
+            elseif barrel == 10 then
+                alt = "16A1"
             end
         elseif rec == 2 then
             model = "Colt "

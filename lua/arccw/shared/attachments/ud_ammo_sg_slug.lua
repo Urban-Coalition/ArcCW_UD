@@ -21,4 +21,4 @@ att.Mult_DamageMin = .65
 att.Mult_AccuracyMOA = .25
 att.Mult_Penetration = 9
 att.Mult_Range = 1.5
-att.Mult_HipDispersion = 1.5
+att.Mult_HipDispersion = 2

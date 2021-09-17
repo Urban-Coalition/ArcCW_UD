@@ -16,7 +16,7 @@ att.Mult_SightTime = 0.85
 att.Mult_SpeedMult = 1.025
 att.Mult_SightedSpeedMult = 1.1
 
-att.Mult_RPM = 1.242
+att.Mult_RPM = 1.15
 att.Mult_Recoil = 1.5
 att.Mult_AccuracyMOA = 2
 att.Mult_Range = 0.75

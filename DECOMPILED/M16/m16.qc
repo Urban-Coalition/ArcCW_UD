@@ -36,7 +36,7 @@ $bodygroup "4" {
 	studio "m16_barrel_m4.smd" //1
 	studio "m16_barrel_cqbr.smd" //2
 	studio "barrel_fpw.smd" //3
-	studio "barrel_wood.smd" //4
+	studio "barrel_classic.smd" //4
 	studio "barrel_wood_short.smd" //5
 	studio "barrel_stub.smd" //6
 	studio "barrel_usas.smd" //7
@@ -100,6 +100,12 @@ $cdmaterials "models\weapons\arccw\ud_common"
 $cdmaterials "models\weapons\arccw\ud_mini14"
 $cdmaterials "models\weapons\arccw\ud_uzi"
 // $cdmaterials "models\shells\12gauge"
+
+$texturegroup "skinfamilies"
+{
+	{ "m16_barrel_classic" }
+	{ "m16_barrel_classic_wood" }
+}
 
 $attachment "1" "m16_flash" 0 0 0 rotate -90 0 0
 $attachment "2" "brass" 0.00 -0.75 -1.00 rotate -10 140 180

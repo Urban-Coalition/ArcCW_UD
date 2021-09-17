@@ -507,10 +507,22 @@ SWEP.AttachmentElements = {
             },
         }
     },
+    ["ud_m16_barrel_classic"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 4},
+        },
+        AttPosMods = {
+            [3] = {
+                vpos = Vector(0, -0.35, 30.95),
+                vang = Angle(90, 0, -90),
+            }
+        }
+    },
     ["ud_m16_barrel_wood"] = {
         VMBodygroups = {
             {ind = 4, bg = 4},
         },
+        VMSkin = 1,
         AttPosMods = {
             [3] = {
                 vpos = Vector(0, -0.35, 30.95),
@@ -1119,6 +1131,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     elseif barrelatt == "ud_m16_barrel_cqbr" then barrel = 2
     elseif barrelatt == "ud_m16_barrel_sd" then barrel = 6
     elseif barrelatt == "ud_m16_barrel_fpw" then barrel = 10
+    elseif barrelatt == "ud_m16_barrel_classic" then barrel = 3
     elseif barrelatt == "ud_m16_barrel_wood" then barrel = 3
     elseif barrelatt == "ud_m16_barrel_wood_short" then barrel = 4
     elseif barrelatt == "ud_m16_barrel_stub" then barrel = 11
@@ -1126,6 +1139,8 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     elseif barrelatt == "ud_m16_barrel_tactical_a4" then barrel = 8
     elseif barrelatt == "ud_m16_barrel_smg" then barrel = 9
     end
+
+    if barrel != 8 then vm:SetBodygroup(9,0) end
 
     if wep.Attachments[1].Installed then
         if barrel == 8 then

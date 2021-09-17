@@ -362,7 +362,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Ammo Type",
-        DefaultAttName = "#00 Buckshot",
+        DefaultAttName = "\"BUCK\" #00 Buckshot",
         Slot = "ud_ammo_shotgun",
     },
     {

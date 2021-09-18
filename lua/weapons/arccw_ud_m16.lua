@@ -285,8 +285,6 @@ SWEP.Hook_NameChange = function(wep, name)
                 alt = "727"
             elseif barrel == 2 then
                 alt = "733"
-            elseif barrel == 10 then
-                alt = "16A1"
             end
         elseif rec == 2 then
             model = "Colt "

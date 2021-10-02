@@ -130,7 +130,7 @@ SWEP.Primary.Ammo = "buckshot"
 
 SWEP.SpeedMult = 0.92
 SWEP.SightedSpeedMult = 0.6
-SWEP.SightTime = 0.333
+SWEP.SightTime = 0.5
 SWEP.ShootSpeedMult = 0.75
 
 -- Length --
@@ -203,7 +203,7 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = "fire",
-        Time = 23 / 30,
+        Time = 23 / 25,--30,
         ShellEjectAt = 0.01,
         SoundTable = {
             {s = path .. "mech.ogg", t = 0}, -- Not temporary
@@ -212,7 +212,7 @@ SWEP.Animations = {
     },
     ["fire_empty"] = {
         Source = "fire_empty",
-        Time = 23 / 30,
+        Time = 23 / 25,--30,
         ShellEjectAt = 0.01,
         SoundTable = {
             {s = path .. "mech_last.ogg", t = 0}, -- Not temporary

@@ -142,7 +142,7 @@ SWEP.MalfunctionMean = 200
 
 SWEP.SpeedMult = 0.95
 SWEP.SightedSpeedMult = 0.75
-SWEP.SightTime = 0.275
+SWEP.SightTime = 0.35
 SWEP.ShootSpeedMult = 0.95
 
 -- Length --

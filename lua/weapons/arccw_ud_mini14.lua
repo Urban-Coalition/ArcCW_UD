@@ -130,7 +130,7 @@ SWEP.MagID = "mini14"
 
 SWEP.SpeedMult = 0.9
 SWEP.SightedSpeedMult = 0.75
-SWEP.SightTime = 0.333
+SWEP.SightTime = 0.4
 SWEP.ShootSpeedMult = 0.9
 
 -- Length --

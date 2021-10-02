@@ -1,8 +1,8 @@
-att.PrintName = "\"AP\" Armor-Piercing"
+att.PrintName = "\"AP\" Armor-piercing"
 
 att.SortOrder = 5
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
-att.Description = "Ammunition designed to penetrate body armor.\nUsually built around a penetrator of hardened steel, tungsten, or tungsten carbide.\nUpon impact on a hard target, the case is destroyed, but the penetrator continues its motion and penetrates the target.\n\nThe entire projectile is not normally made of the same material as the penetrator because the physical characteristics that make a good penetrator (i.e. extremely tough, hard metal) make the material equally harmful to the barrel of the gun firing the cartridge."
+att.Description = "Ammunition designed to penetrate body armor.\nUsually built around a penetrator of hardened steel, tungsten, or tungsten carbide.\nUpon impact on a hard target, the case is destroyed, but the penetrator continues its motion and penetrates the target."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

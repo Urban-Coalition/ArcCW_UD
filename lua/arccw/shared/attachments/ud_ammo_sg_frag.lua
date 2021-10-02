@@ -15,21 +15,20 @@ att.Slot = "ud_ammo_shotgun"
 att.Mult_Penetration = 0.1
 att.Mult_Damage = 0.5
 att.Mult_DamageMin = 0.5
-att.Mult_AccuracyMOA = .6
-att.Mult_Range = .75
+att.Mult_Range = .5
 att.Mult_HipDispersion = 2.25
 att.Override_Num = 1
 att.Override_Num_Priority = 99
 att.AutoStats = true
 
-function BulletHit(wep,data)
+function BulletHit(wep, data)
     if data.damage then
-        util.BlastDamage(wep,wep:GetOwner(),data.tr.HitPos,150,data.damage)
+        util.BlastDamage(wep, wep:GetOwner(), data.tr.HitPos, 150, data.damage)
 
         local eff = EffectData()
         eff:SetOrigin(data.tr.HitPos)
-        util.Effect("Explosion",eff)
-        util.Decal("Scorch",data.tr.HitPos - data.tr.HitNormal,data.tr.HitPos + data.tr.HitNormal,ents.GetAll())
+        util.Effect("Explosion", eff)
+        util.Decal("Scorch", data.tr.HitPos - data.tr.HitNormal, data.tr.HitPos + data.tr.HitNormal, ents.GetAll())
     end
 end
 

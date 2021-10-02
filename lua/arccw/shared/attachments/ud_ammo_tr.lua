@@ -9,6 +9,7 @@ att.Desc_Cons = {
     "Visible bullet trail"
 }
 att.Desc_Neutrals = {
+    "Requires physical bullets"
 }
 att.Slot = "ud_ammo"
 

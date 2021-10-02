@@ -5,7 +5,7 @@ att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smoo
 att.Description = [[Hunting rounds with a wide spread and a very large number of pellets, designed to shoot birds out of the sky.
 While not generally as lethal as buckshot, the loose clump spread makes it easier to hit small targets.]]
 att.Desc_Pros = {
-    "+23 Pellets"
+    "30 more pellets"
 }
 att.Desc_Cons = {
 }
@@ -15,7 +15,7 @@ att.Slot = "ud_ammo_shotgun"
 
 att.AutoStats = true
 
-att.Override_Num = 31 -- the game can't handle 585 bullets at once :c
+att.Add_Num = 30 -- the game can't handle 585 bullets at once :c
 att.Mult_Damage = .9
 att.Mult_DamageMin = .9
 att.Mult_Recoil = .9

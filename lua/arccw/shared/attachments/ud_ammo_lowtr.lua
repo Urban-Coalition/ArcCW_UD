@@ -1,8 +1,8 @@
-att.PrintName = "\"TR\" Low Ammo Tracers"
+att.PrintName = "\"TR\" Near-empty tracers"
 
 att.SortOrder = 1
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
-att.Description = "Replace the last 5 rounds of the magazine with tracer rounds, providing a visual indication when the magazine is almost empty."
+att.Description = "The last 5 rounds of the magazine are tracer rounds, providing a visual indication when the magazine is almost empty."
 att.Desc_Pros = {
     "Low ammo indication"
 }
@@ -10,6 +10,7 @@ att.Desc_Cons = {
     "Visible bullet trail at low ammo"
 }
 att.Desc_Neutrals = {
+    "Requires physical bullets"
 }
 att.Slot = "ud_ammo"
 
@@ -33,4 +34,4 @@ att.ToggleStats = {
         PrintName = "Yellow",
         Override_PhysTracerProfile = 4
     },
-} -- ripped from GSO lul
+}

@@ -16,7 +16,7 @@ att.Slot = "ud_ammo_shotgun"
 att.AutoStats = true
 
 att.Override_Num = 1
-att.Mult_Damage = .625
+att.Mult_Damage = .65
 att.Mult_DamageMin = .65
 att.Mult_AccuracyMOA = .25
 att.Mult_Penetration = 9

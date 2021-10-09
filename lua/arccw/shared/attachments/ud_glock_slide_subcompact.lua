@@ -10,7 +10,7 @@ att.Description = "Shortest available slide, popular for concealed carry.\nReduc
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
-    "ud.noubs"
+    "uc.noubs"
 }
 att.Desc_Neutrals = {
 }

@@ -10,7 +10,7 @@ att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smoo
 att.Description = "Twin-drum magazine ideal for suppressive fire (a nicer way to say \"mag dump\"). Bulky construction and high ammo capacity substantially increases weight and shifts the weapon's center of balance. Prone to jamming."
 att.Desc_Pros = {}
 att.Desc_Cons = {
-    "ud.jam"
+    "uc.jam"
 }
 att.Desc_Neutrals = {}
 att.Slot = "ud_glock_mag"

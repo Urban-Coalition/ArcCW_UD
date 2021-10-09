@@ -11,7 +11,7 @@ att.Description = "No, using your hacksaw on the barrel is not gunsmithing."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
-    "ud.nofs",
+    "uc.nofs",
 }
 att.Desc_Neutrals = {
 }

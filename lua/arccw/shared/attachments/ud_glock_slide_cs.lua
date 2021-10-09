@@ -8,11 +8,11 @@ end
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = "Custom-made 3 round burst slide, used by various counter-terrorism units and 'agents' around the world. The standard-length magazines are also tweaked for increased capacity."
 att.Desc_Pros = {
-    "ud.3burst",
+    "uc.3burst",
     "ud.glock.cs",
 }
 att.Desc_Cons = {
-    "ud.jam"
+    "uc.jam"
 }
 att.Desc_Neutrals = {
 }

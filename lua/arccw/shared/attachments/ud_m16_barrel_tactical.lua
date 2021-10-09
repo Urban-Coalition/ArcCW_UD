@@ -7,7 +7,7 @@ end
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = "Handguard from the SOPMOD I kit, giving the rifle the ability to better take the attachment of tactical devices or foregrips."
 att.Desc_Pros = {
-    --"ud.auto"
+    --"uc.auto"
 }
 att.Desc_Cons = {
 }

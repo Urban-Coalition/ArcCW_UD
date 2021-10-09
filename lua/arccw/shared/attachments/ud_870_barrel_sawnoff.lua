@@ -10,7 +10,7 @@ att.Description = "Hand-made short barrel with no sights. More agile and has a b
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
-    "ud.nofs",
+    "uc.nofs",
 }
 att.Desc_Neutrals = {
 }

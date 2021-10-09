@@ -435,12 +435,12 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Training Package",
-        Slot = "ud_training",
+        Slot = "uc_tp",
         DefaultAttName = "Basic Training"
     },
     {
         PrintName = "Internals",
-        Slot = "ud_fg", -- Fire group
+        Slot = "uc_fg", -- Fire group
         DefaultAttName = "Standard Internals"
     },
     {

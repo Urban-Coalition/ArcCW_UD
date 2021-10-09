@@ -4,7 +4,7 @@ att.Description = "Why would you attach no sight to your flat top?"
 att.Desc_Pros = {}
 att.Desc_Cons = {}
 att.Desc_Neutrals = {
-    "ud.cosmetic"
+    "uc.cosmetic"
 }
 att.Slot = "ud_m16_rs"
 

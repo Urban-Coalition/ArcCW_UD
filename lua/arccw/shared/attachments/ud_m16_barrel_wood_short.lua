@@ -7,7 +7,7 @@ end
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = "Wooden handguard with short carbine barrel. No such official product has ever been made, so all examples are the result of individual gunsmiths. Performs identically to the M4 barrel."
 att.Desc_Pros = {
-    --"ud.auto"
+    --"uc.auto"
 }
 att.Desc_Cons = {
 }

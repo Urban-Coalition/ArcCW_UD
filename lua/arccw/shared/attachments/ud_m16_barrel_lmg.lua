@@ -8,7 +8,7 @@ att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smoo
 att.Description = "Heavy duty handguard with built-in bipod and foregrip, sporting improved durability and heat dissipation capabilities for sustained automatic fire."
 att.Desc_Pros = {}
 att.Desc_Cons = {
-    "ud.noubs"
+    "uc.noubs"
 }
 att.Desc_Neutrals = {}
 att.Slot = "ud_m16_barrel"

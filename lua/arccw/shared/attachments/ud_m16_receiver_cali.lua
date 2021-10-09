@@ -10,7 +10,7 @@ att.Description = "Straight-pull bolt action receiver for the M16, designed to c
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
-    "ud.manual"
+    "uc.manual"
 }
 att.Desc_Neutrals = {
 }

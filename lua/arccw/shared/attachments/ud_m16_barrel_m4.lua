@@ -7,7 +7,7 @@ end
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = "Carbine length barrel with short handguard. Provides a small increase in firerate while maintaining respectable accuracy and range."
 att.Desc_Pros = {
-    --"ud.auto"
+    --"uc.auto"
 }
 att.Desc_Cons = {
 }

@@ -22,8 +22,8 @@ att.Mult_Sway = 2
 att.Mult_SpeedMult = 0.95
 att.Mult_ShootSpeedMult = 0.9
 
-att.Mult_DrawTime = 1.06
-att.Mult_HolsterTime = 1.06
+att.Mult_DrawTime = 1.15
+att.Mult_HolsterTime = 1.15
 
 att.ActivateElements = {"ud_m16_60_mag"}
 

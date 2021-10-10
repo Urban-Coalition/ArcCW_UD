@@ -126,6 +126,12 @@ SWEP.JumpDispersion = 1000
 SWEP.Primary.Ammo = "smg1"
 SWEP.MagID = "mini14"
 
+SWEP.HeatCapacity = 75
+SWEP.HeatDissipation = 5
+SWEP.HeatDelayTime = 3
+
+SWEP.MalfunctionMean = 100
+
 -- Speed multipliers --
 
 SWEP.SpeedMult = 0.9
@@ -148,7 +154,7 @@ SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-4.294, -3, 2.495),
+    Pos = Vector(-4.305, -3, 2.55),
     Ang = Angle(0, 0, 0),
     Magnification = 1,
     SwitchToSound = "",

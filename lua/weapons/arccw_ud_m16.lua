@@ -95,7 +95,7 @@ SWEP.Num = 1
 SWEP.Firemodes = {
     {
         Mode = -3,
-        RunawayBurst = true,
+        RunawayBurst = false, -- https://en.wikipedia.org/wiki/Burst_mode_(weapons)
     },
     {
         Mode = 1,
@@ -726,8 +726,8 @@ SWEP.Animations = {
         LHIKOut = 0.4 * 0.7,
         SoundTable = {
             {s = path .. "chback.ogg",   t = 0.1},
-            {s = common .. "cloth_4.ogg",  t = 0.5},
-            {s = path .. "chamber.ogg",  t = 0.5},
+            {s = common .. "cloth_4.ogg",  t = 0.2},
+            {s = path .. "chamber.ogg",  t = 0.3},
         },
     },
 

@@ -22,7 +22,7 @@ att.Override_CaseEffectAttachment = 6
 att.Override_Firemodes = {
     {
         Mode = 1,
-        PrintName = "BOLT",
+        PrintName = "fcg.bolt",
     },
     {
         Mode = 0

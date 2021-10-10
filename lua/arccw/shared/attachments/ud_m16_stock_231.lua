@@ -1,12 +1,12 @@
 att.PrintName = "AMCAR 231 Wire Stock"
-att.AbbrevName = "231 Wire Stock"
+att.AbbrevName = "M231 Wire Stock"
 
 if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "M16 M231 Wire Stock"
 end
 
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
-att.Description = "Collapsable wire stock used on the M231 FPW. Very light."
+att.Description = "Wire stock used on the M231 FPW that provides some semblance of recoil control. Can be made even more agile by collapsing, improving point-shooting capabilities at the cost of recoil control.\n\nToggling this stock modifies performance accordingly."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
@@ -18,25 +18,32 @@ att.Slot = "ud_m16_stock"
 att.AutoStats = true
 att.SortOrder = 3
 
-att.Mult_SightTime = 0.85
-att.Mult_HipDispersion = 0.9
-att.Mult_Recoil = 1.2
-att.Mult_RecoilSide = 1.2
-att.Mult_Sway = 1.3
+att.Mult_DrawTime = 0.75
+att.Mult_HolsterTime = 0.75
+
+att.Mult_SightTime = 0.75
+att.Mult_Recoil = 1.25
+att.Mult_Sway = 2
+att.Mult_SpeedMult = 1.025
 
 att.Add_BarrelLength = -4
 
 att.ToggleStats = {
     {
         PrintName = "Extended",
-        ActivateElements = {"stock_231_ex"}
+        ActivateElements = {"stock_231_ex"},
     },
     {
         PrintName = "Collapsed",
-        ActivateElements = {"stock_231_in"}
+        AutoStats = true,
+        ActivateElements = {"stock_231_in"},
+        Mult_HipDispersion = 0.8,
+        Mult_RecoilSide = 1.5,
     },
+    --[[] -- we already have a buffer tube attachment
     {
         PrintName = "Removed",
-        ActivateElements = {"stock_231_tube"}
+        ActivateElements = {"stock_231_tube"},
     },
+    ]]
 }

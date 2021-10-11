@@ -18,7 +18,8 @@ SWEP.CamAttachment = 2
 
 -- Fake name --
 
-SWEP.PrintName = "Fake name"
+SWEP.PrintName = "AMSGL"
+-- (American) Squad Grenade Launcher or something. similar to M16's fake name
 
 -- True name --
 
@@ -27,12 +28,12 @@ SWEP.TrueName = "M79"
 -- Trivia --
 
 SWEP.Trivia_Class = "Grenade Launcher"
-SWEP.Trivia_Desc = "long description explaining that this is indeed a gun"
-SWEP.Trivia_Manufacturer = "Fake manufacturer"
+SWEP.Trivia_Desc = "Single-shot 40mm grenade launcher intended to provide infantry with portable long-range explosive firepower. Accurate, flexible and reliable, it is well-respected among American soldiers."
+SWEP.Trivia_Manufacturer = "Stoner's Legacy Ltd."
 SWEP.Trivia_Calibre = "40×46mm"
 SWEP.Trivia_Mechanism = "Break-action"
 SWEP.Trivia_Country = "USA"
-SWEP.Trivia_Year = 1960
+SWEP.Trivia_Year = 1961
 
 -- Weapon slot --
 
@@ -81,6 +82,7 @@ SWEP.ReducedClipSize = 1
 -- Recoil --
 
 SWEP.Recoil = 4
+SWEP.RecoilSide = 2
 SWEP.RecoilSide = 1
 
 SWEP.RecoilRise = 0.24
@@ -116,8 +118,8 @@ SWEP.NPCWeight = 210
 -- Accuracy --
 
 SWEP.AccuracyMOA = 30
-SWEP.HipDispersion = 400
-SWEP.MoveDispersion = 100
+SWEP.HipDispersion = 500
+SWEP.MoveDispersion = 200
 SWEP.JumpDispersion = 1000
 
 SWEP.Primary.Ammo = "smg1_grenade"
@@ -141,10 +143,11 @@ SWEP.HoldtypeActive = "shotgun"
 SWEP.HoldtypeSights = "ar2"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-3.5, -7, 2.6),
-     Ang = Angle(-0.4, 0, 0),
-     Magnification = 1.1,
-     SwitchToSound = "",
+    Pos = Vector(-3.51, -5, 2.2),
+    Ang = Angle(0, 0, 0),
+    Magnification = 1,
+    SwitchToSound = "",
+    CrosshairInSights = false,
 }
 
 SWEP.HolsterPos = Vector(-0.5, -4, -3)
@@ -278,7 +281,6 @@ SWEP.AttachmentElements = {
     ["m79_nade_incendiary"] = {
         VMBodygroups = {{ind = 1, bg = 5}},
     },
-
     ["m79_nostock"] = {
         VMBodygroups = {{ind = 2, bg = 1}},
     },
@@ -292,7 +294,7 @@ SWEP.Attachments = {
     {
         PrintName = "Optic",
         DefaultAttName = "Iron Sights",
-        Slot = {"optic_lp","optic","sniper_optic"},
+        Slot = {"optic_lp", "optic", "sniper_optic"},
         Bone = "m79_front",
         Offset = {
             vpos = Vector(0, -3.6, 1),
@@ -310,16 +312,6 @@ SWEP.Attachments = {
             vang = Angle(90, 2, -90),
         },
     },
-    -- {
-    --     PrintName = "Muzzle",
-    --     DefaultAttName = "Standard Muzzle",
-    --     Slot = {"choke", "muzzle_shotgun"},
-    --     Bone = "1014_flash",
-    --     Offset = {
-    --         vpos = Vector(-0.03, -0.05, -0.5),
-    --         vang = Angle(90, 0, -90),
-    --     },
-    -- },
     {
         PrintName = "Underbarrel",
         Slot = {"foregrip"},
@@ -345,14 +337,9 @@ SWEP.Attachments = {
         DefaultAttName = "Wooden Stock",
     },
     {
-        PrintName = "Ammo Type",
-        DefaultAttName = "\"BUCK\" #00 Buckshot",
-        Slot = "ud_ammo_gl",
-    },
-    {
-        PrintName = "Powder Load",
-        Slot = "uc_powder",
-        DefaultAttName = "Standard Load"
+        PrintName = "Grenade Type",
+        DefaultAttName = "\"HE\" High-explosive",
+        Slot = "uc_ammo_gl",
     },
     {
         PrintName = "Training Package",

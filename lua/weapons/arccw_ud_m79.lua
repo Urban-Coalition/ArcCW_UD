@@ -62,15 +62,16 @@ SWEP.WorldModelOffset = {
 
 -- Damage parameters --
 
-SWEP.Damage = 50
-SWEP.DamageMin = 50
+SWEP.Damage = 200
+SWEP.DamageMin = 200
 SWEP.Range = 40
-SWEP.RangeMin = 4
+SWEP.RangeMin = 0
+
 SWEP.Num = 1
-SWEP.Penetration = 1
+SWEP.Penetration = 0
 
 SWEP.ShootEntity = "arccw_uc_40mm_he"
-SWEP.MuzzleVelocity = 10000
+SWEP.MuzzleVelocity = 5000
 
 -- Mag size --
 

@@ -202,8 +202,9 @@ SWEP.Animations = {
         LastClip1OutTime = 1.5,
         SoundTable = {
             {s = path .. "open.ogg",  t = 0.3},
-            {s = path .. "remove.ogg",  t = 1},
-            {s = path .. "insert.ogg",  t = 1.6}
+            {s = path .. "remove.ogg",  t = 0.9},
+            {s = path .. "insert.ogg",  t = 2.0},
+            {s = path .. "close.ogg",  t = 2.5},
             -- {
             --     t = 0.6,
             --     e = "muzzleflash_m79",  -- Please add some kind of smoke particle after opening the chamber
@@ -223,8 +224,9 @@ SWEP.Animations = {
         LastClip1OutTime = 1.5,
         SoundTable = {
             {s = path .. "open.ogg",  t = 0.3},
-            {s = path .. "remove.ogg",  t = 1},
-            {s = path .. "insert.ogg",  t = 1.6},
+            {s = path .. "remove.ogg",  t = 0.9},
+            {s = path .. "insert.ogg",  t = 2.0},
+            {s = path .. "close.ogg",  t = 2.5},
             {
                 t = 1, ind = 1, bg = 2, -- Empty shell bodygroup
             },
@@ -244,7 +246,8 @@ SWEP.Animations = {
         LHIKOut = 0.6,
         SoundTable = {
             {s = path .. "open.ogg",  t = 0.3},
-            {s = path .. "remove.ogg",  t = 1.5},
+            {s = path .. "insert.ogg",  t = 1.5},
+            {s = path .. "close.ogg",  t = 2.25},
             -- {
             --     t = 0.6,
             --     e = "muzzleflash_m79",  -- Please add some kind of smoke particle after opening the chamber

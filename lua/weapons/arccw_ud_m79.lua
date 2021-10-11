@@ -68,7 +68,7 @@ SWEP.RangeMin = 4
 SWEP.Num = 1
 SWEP.Penetration = 1
 
-SWEP.ShootEntity = "arccw_lpm32_he" -- Placeholder
+SWEP.ShootEntity = "arccw_udm79_he" -- Placeholder
 SWEP.MuzzleVelocity = 1000000
 
 -- Mag size --
@@ -163,12 +163,11 @@ SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 
 -- Firing sounds --
 
-local path1 = ")^weapons/arccw_ud/870/"
-local path = ")^weapons/arccw_ud/m1014/"
+local path = ")^weapons/arccw_ud/m79/"
 local common = ")^weapons/arccw_ud/common/"
-SWEP.ShootSound = /*path ..*/ "weapons/arccw/m32/lowpolym32_fire1b.ogg" -- Placeholder
+SWEP.ShootSound = path .. "fire.ogg"
 SWEP.ShootSoundSilenced = path .. "fire_supp.ogg"
-SWEP.DistantShootSound = /*path ..*/ "fire_dist.ogg" -- Placeholder
+SWEP.DistantShootSound = path .. "fire_dist.ogg"
 
 -- Animations --
 
@@ -193,19 +192,63 @@ SWEP.Animations = {
         Time = 101 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         LHIK = true,
-        LHIKIn = 0.2,
+        LHIKIn = 0.6,
         LHIKEaseIn = 0.2,
-        LHIKOut = 0,
+        LHIKEaseOut = 0.2,
+        LHIKOut = 0.5,
         LastClip1OutTime = 1.5,
+        SoundTable = {
+            {s = path .. "open.ogg",  t = 0.3},
+            {s = path .. "remove.ogg",  t = 1},
+            {s = path .. "insert.ogg",  t = 1.6}
+            -- {
+            --     t = 0.6,
+            --     e = "muzzleflash_m79",  -- Please add some kind of smoke particle after opening the chamber
+            --     att = nil,
+            --     mag = 100,
+            -- }
+        },
+    },["reload_shotgun"] = {
+        Source = "reload",
+        Time = 101 / 30,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        LHIK = true,
+        LHIKIn = 0.6,
+        LHIKEaseIn = 0.2,
+        LHIKEaseOut = 0.2,
+        LHIKOut = 0.5,
+        LastClip1OutTime = 1.5,
+        SoundTable = {
+            {s = path .. "open.ogg",  t = 0.3},
+            {s = path .. "remove.ogg",  t = 1},
+            {s = path .. "insert.ogg",  t = 1.6},
+            {
+                t = 1, ind = 1, bg = 2, -- Empty shell bodygroup
+            },
+            {
+                t = 1.5, ind = 1, bg = 1,
+            }
+        },
     },
     ["reload_caseless"] = {
         Source = "reload_caseless",
         Time = 101 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         LHIK = true,
-        LHIKIn = 0.2,
+        LHIKIn = 0.7,
         LHIKEaseIn = 0.2,
-        LHIKOut = 0,
+        LHIKEaseOut = 0.2,
+        LHIKOut = 0.5,
+        SoundTable = {
+            {s = path .. "open.ogg",  t = 0.3},
+            {s = path .. "remove.ogg",  t = 1.5},
+            -- {
+            --     t = 0.6,
+            --     e = "muzzleflash_m79",  -- Please add some kind of smoke particle after opening the chamber
+            --     att = nil,
+            --     mag = 100,
+            -- }
+        },
     },
 }
 
@@ -248,7 +291,7 @@ SWEP.Attachments = {
         Slot = {"optic_lp","optic","sniper_optic"},
         Bone = "m79_front",
         Offset = {
-            vpos = Vector(0, -2, 5),
+            vpos = Vector(0, -3.6, 1),
             vang = Angle(90, 2, -90),
         },
         InstalledEles = {"m79_rail"},
@@ -257,6 +300,11 @@ SWEP.Attachments = {
         PrintName = "Barrel",
         DefaultAttName = "Default barrel", -- Placeholder
         Slot = "ud_m79_barrel",
+        Bone = "m79_front",
+        Offset = {
+            vpos = Vector(3.5, -5, -21),
+            vang = Angle(90, 2, -90),
+        },
     },
     -- {
     --     PrintName = "Muzzle",
@@ -273,7 +321,7 @@ SWEP.Attachments = {
         Slot = {"foregrip"},
         Bone = "m79_front",
         Offset = {
-            vpos = Vector(0, 2, 12),
+            vpos = Vector(0, 0.4, 4),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"m79_rail"},

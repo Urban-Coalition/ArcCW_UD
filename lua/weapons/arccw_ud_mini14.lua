@@ -506,7 +506,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Barrel",
-        DefaultAttName = "Default Barrel",
+        DefaultAttName = "20\" Standard Barrel",
         Slot = "ud_mini14_barrel",
     },
     {

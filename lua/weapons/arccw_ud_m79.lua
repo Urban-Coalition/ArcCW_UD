@@ -69,8 +69,8 @@ SWEP.RangeMin = 4
 SWEP.Num = 1
 SWEP.Penetration = 1
 
-SWEP.ShootEntity = "arccw_udm79_he" -- Placeholder
-SWEP.MuzzleVelocity = 1000000
+SWEP.ShootEntity = "arccw_uc_40mm_he"
+SWEP.MuzzleVelocity = 10000
 
 -- Mag size --
 
@@ -338,8 +338,8 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Grenade Type",
-        DefaultAttName = "\"HE\" High-explosive",
-        Slot = "uc_ammo_gl",
+        DefaultAttName = "High-explosive",
+        Slot = "uc_40mm",
     },
     {
         PrintName = "Training Package",

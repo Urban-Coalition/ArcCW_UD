@@ -12,7 +12,7 @@ att.Description = "Twin-drum magazine for the Uzi. Allows for a long period betw
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
-    "ud.jam"
+    "uc.jam"
 }
 att.Desc_Neutrals = {
 }

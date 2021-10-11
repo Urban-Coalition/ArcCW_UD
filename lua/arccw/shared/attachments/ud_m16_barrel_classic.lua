@@ -5,7 +5,7 @@ att.Description = "Classic triangular handguard from the M16A1. It was changed f
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
-    --"ud.semionly"
+    --"uc.semionly"
 }
 att.Desc_Neutrals = {
 }

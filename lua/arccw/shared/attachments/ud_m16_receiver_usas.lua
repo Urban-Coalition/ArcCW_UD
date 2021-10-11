@@ -9,9 +9,11 @@ if GetConVar("arccw_truenames"):GetBool() then
     att.Description = "Total conversion kit that turns the rifle into an automatic combat shotgun, based on the USAS-12."
 end
 
+att.Ignore = true
+
 att.Desc_Pros = {
     "ud.usas",
-    "ud.auto"
+    "uc.auto"
 }
 att.Desc_Cons = {
 }

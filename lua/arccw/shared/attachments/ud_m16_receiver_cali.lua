@@ -10,7 +10,7 @@ att.Description = "Straight-pull bolt action receiver for the M16, designed to c
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
-    "ud.manual"
+    "uc.manual"
 }
 att.Desc_Neutrals = {
 }
@@ -22,7 +22,7 @@ att.Override_CaseEffectAttachment = 6
 att.Override_Firemodes = {
     {
         Mode = 1,
-        PrintName = "BOLT",
+        PrintName = "fcg.bolt",
     },
     {
         Mode = 0
@@ -38,3 +38,4 @@ end
 att.Override_ManualAction = true
 att.Mult_AccuracyMOA = 0.75
 att.Mult_Range = 1.15
+att.Mult_MalfunctionMean = 1.5

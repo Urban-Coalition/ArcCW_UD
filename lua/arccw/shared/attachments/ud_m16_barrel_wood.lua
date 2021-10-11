@@ -5,7 +5,7 @@ att.Description = "Custom wooden handguard created by independent gunsmiths from
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
-    --"ud.semionly"
+    --"uc.semionly"
 }
 att.Desc_Neutrals = {
 }

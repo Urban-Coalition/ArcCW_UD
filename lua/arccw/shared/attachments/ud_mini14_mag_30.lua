@@ -7,7 +7,7 @@ end
 
 att.SortOrder = 30
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
-att.Description = "Extended magazine for the Mini-14. Allows more shots to be taken before reloading."
+att.Description = "Extended magazine for the Mini-14. Despite its similar appearance, this is not a STANAG compatible magazine."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

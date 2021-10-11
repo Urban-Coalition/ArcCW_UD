@@ -18,10 +18,10 @@ att.Slot = "ud_m16_stock"
 att.AutoStats = true
 att.SortOrder = 2
 
-att.Mult_Recoil = 0.9
+att.Mult_Recoil = 0.85
 att.Mult_RecoilSide = 0.75
 att.Mult_SightedSpeedMult = 0.9
-att.Mult_SpeedMult = 0.95
+att.Mult_SpeedMult = 0.975
 att.Mult_Sway = 0.75
 
 att.ActivateElements = {"ud_m16_stock_wood"}

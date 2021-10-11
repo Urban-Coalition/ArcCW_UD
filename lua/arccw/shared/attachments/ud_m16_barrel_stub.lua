@@ -2,11 +2,11 @@ att.PrintName = "2\" Stub Barrel"
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = "Jesus Christ, I think I see the bullet sticking out."
 att.Desc_Pros = {
-    --"ud.auto"
+    --"uc.auto"
 }
 att.Desc_Cons = {
-    "ud.nofs",
-    "ud.noubs"
+    "uc.nofs",
+    "uc.noubs"
 }
 att.Desc_Neutrals = {
 }

@@ -11,7 +11,7 @@ att.Desc_Pros = {
     "ud.glock.subcompact"
 }
 att.Desc_Cons = {
-    "ud.nostocks"
+    "uc.nostocks"
 }
 att.Desc_Neutrals = {
 }

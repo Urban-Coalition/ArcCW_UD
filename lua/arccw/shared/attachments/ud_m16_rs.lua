@@ -4,7 +4,7 @@ att.Description = "A rail-mounted rear sight for flat top receivers.\nLooks more
 att.Desc_Pros = {}
 att.Desc_Cons = {}
 att.Desc_Neutrals = {
-    "ud.cosmetic"
+    "uc.cosmetic"
 }
 att.Slot = "ud_m16_rs"
 

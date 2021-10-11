@@ -7,7 +7,7 @@ end
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = "Integrally suppressed short barrel made by hobbyists. Dampens sound effectively, but fires slower and adds to weapon weight."
 att.Desc_Pros = {
-    --"ud.auto"
+    --"uc.auto"
 }
 att.Desc_Cons = {
 }

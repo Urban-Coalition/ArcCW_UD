@@ -8,11 +8,11 @@ end
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = "A slide with an integrated silencer installed. A slide lock system can prevent the weapon from cycling when fired, reducing its audible report even further."
 att.Desc_Pros = {
-    "ud.invistracer"
+    "uc.invistracer"
 }
 att.Desc_Cons = {
-    --"ud.manual",
-    "ud.nomuzzle"
+    --"uc.manual",
+    "uc.nomuzzle"
 }
 att.Desc_Neutrals = {
     "ud.hushpuppy"

@@ -8,7 +8,7 @@ end
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = "A converted automatic receiver that fires 9x19mm Parabellum rounds. The smaller caliber drastically reduces recoil, but has much less range and is less accurate."
 att.Desc_Pros = {
-    "ud.auto",
+    "uc.auto",
 }
 att.Desc_Cons = {
 }
@@ -22,9 +22,9 @@ att.AutoStats = true
 att.Mult_Damage = 0.88
 att.Mult_DamageMin = 0.88
 att.Mult_Range = 0.4
-att.Mult_Recoil = 0.75
-att.Mult_HipDispersion = 0.75
 att.Mult_ShootSpeedMult = 1.1
+att.Mult_Recoil = 0.5
+att.Mult_HipDispersion = 0.6
 
 --att.Mult_ReloadTime = 0.85
 att.Mult_SightTime = 0.9

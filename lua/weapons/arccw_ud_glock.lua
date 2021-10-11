@@ -108,7 +108,7 @@ SWEP.ProceduralIronFire = false
 
 SWEP.ReloadInSights = true
 
--- NPC -- 
+-- NPC --
 
 SWEP.NPCWeaponType = "weapon_pistol"
 SWEP.NPCWeight = 60
@@ -133,7 +133,7 @@ SWEP.MalfunctionMean = 150
 
 SWEP.SpeedMult = 0.975
 SWEP.SightedSpeedMult = 0.9
-SWEP.SightTime = 0.233
+SWEP.SightTime = 0.35
 SWEP.ShootSpeedMult = 1
 
 -- Length --
@@ -948,7 +948,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Stock",
-        Slot = "go_stock_pistol_bt",
+        Slot = {"uc_stock", "go_stock"},
         DefaultAttName = "No Stock",
         Bone = "glock_parent",
         Offset = {
@@ -960,21 +960,21 @@ SWEP.Attachments = {
     {
         PrintName = "Ammo Type",
         DefaultAttName = "\"FMJ\" Full Metal Jacket",
-        Slot = "ud_ammo",
+        Slot = "uc_ammo",
     },
     {
         PrintName = "Powder Load",
-        Slot = {"ud_powder"},
+        Slot = "uc_powder",
         DefaultAttName = "Standard Load"
     },
     {
         PrintName = "Training Package",
-        Slot = "ud_training",
+        Slot = "uc_tp",
         DefaultAttName = "Basic Training"
     },
     {
         PrintName = "Internals",
-        Slot = "ud_fg", -- Fire group
+        Slot = "uc_fg", -- Fire group
         DefaultAttName = "Standard Internals"
     },
     {

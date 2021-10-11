@@ -95,7 +95,7 @@ SWEP.Num = 1
 SWEP.Firemodes = {
     {
         Mode = -3,
-        RunawayBurst = true,
+        RunawayBurst = false, -- https://en.wikipedia.org/wiki/Burst_mode_(weapons)
     },
     {
         Mode = 1,
@@ -139,7 +139,7 @@ SWEP.MalfunctionMean = 200
 
 SWEP.SpeedMult = 0.925
 SWEP.SightedSpeedMult = 0.75
-SWEP.SightTime = 0.333
+SWEP.SightTime = 0.5
 SWEP.ShootSpeedMult = 0.9
 
 -- Length --
@@ -726,8 +726,8 @@ SWEP.Animations = {
         LHIKOut = 0.4 * 0.7,
         SoundTable = {
             {s = path .. "chback.ogg",   t = 0.1},
-            {s = common .. "cloth_4.ogg",  t = 0.5},
-            {s = path .. "chamber.ogg",  t = 0.5},
+            {s = common .. "cloth_4.ogg",  t = 0.2},
+            {s = path .. "chamber.ogg",  t = 0.3},
         },
     },
 
@@ -1327,21 +1327,21 @@ SWEP.Attachments = {
     {
         PrintName = "Ammo Type",
         DefaultAttName = "\"FMJ\" Full Metal Jacket",
-        Slot = "ud_ammo",
+        Slot = "uc_ammo",
     },
     {
         PrintName = "Powder Load",
-        Slot = {"ud_powder"},
+        Slot = "uc_powder",
         DefaultAttName = "Standard Load"
     },
     {
         PrintName = "Training Package",
-        Slot = "ud_training",
+        Slot = "uc_tp",
         DefaultAttName = "Basic Training"
     },
     {
         PrintName = "Internals",
-        Slot = "ud_fg", -- Fire group
+        Slot = "uc_fg", -- Fire group
         DefaultAttName = "Standard Internals"
     },
     {

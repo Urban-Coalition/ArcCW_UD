@@ -126,11 +126,17 @@ SWEP.JumpDispersion = 1000
 SWEP.Primary.Ammo = "smg1"
 SWEP.MagID = "mini14"
 
+SWEP.HeatCapacity = 75
+SWEP.HeatDissipation = 5
+SWEP.HeatDelayTime = 3
+
+SWEP.MalfunctionMean = 100
+
 -- Speed multipliers --
 
 SWEP.SpeedMult = 0.9
 SWEP.SightedSpeedMult = 0.75
-SWEP.SightTime = 0.333
+SWEP.SightTime = 0.4
 SWEP.ShootSpeedMult = 0.9
 
 -- Length --
@@ -148,7 +154,7 @@ SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-    Pos = Vector(-4.294, -3, 2.495),
+    Pos = Vector(-4.305, -3, 2.55),
     Ang = Angle(0, 0, 0),
     Magnification = 1,
     SwitchToSound = "",
@@ -546,21 +552,21 @@ SWEP.Attachments = {
     {
         PrintName = "Ammo Type",
         DefaultAttName = "\"FMJ\" Full Metal Jacket",
-        Slot = "ud_ammo",
+        Slot = "uc_ammo",
     },
     {
         PrintName = "Powder Load",
-        Slot = {"ud_powder"},
+        Slot = "uc_powder",
         DefaultAttName = "Standard Load"
     },
     {
         PrintName = "Training Package",
-        Slot = "ud_training",
+        Slot = "uc_tp",
         DefaultAttName = "Basic Training"
     },
     {
         PrintName = "Internals",
-        Slot = "ud_fg", -- Fire group
+        Slot = "uc_fg", -- Fire group
         DefaultAttName = "Standard Internals"
     },
     {

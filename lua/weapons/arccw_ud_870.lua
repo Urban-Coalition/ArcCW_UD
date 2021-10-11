@@ -134,7 +134,7 @@ SWEP.Primary.Ammo = "buckshot"
 
 SWEP.SpeedMult = 0.9
 SWEP.SightedSpeedMult = 0.75
-SWEP.SightTime = 0.333
+SWEP.SightTime = 0.4
 SWEP.ShootSpeedMult = 0.75
 
 -- Length --
@@ -435,12 +435,12 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Training Package",
-        Slot = "ud_training",
+        Slot = "uc_tp",
         DefaultAttName = "Basic Training"
     },
     {
         PrintName = "Internals",
-        Slot = "ud_fg", -- Fire group
+        Slot = "uc_fg", -- Fire group
         DefaultAttName = "Standard Internals"
     },
     {

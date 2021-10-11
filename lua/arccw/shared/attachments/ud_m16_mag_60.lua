@@ -5,7 +5,7 @@ att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smoo
 att.Description = "Quad-stacked magazine for the M16. Quite bulky, but provides double the ammo capacity of a typical STANAG magazine. Has a tendency to jam."
 att.Desc_Pros = {}
 att.Desc_Cons = {
-    "ud.jam"
+    "uc.jam"
 }
 att.Desc_Neutrals = {}
 att.Slot = "ud_m16_mag"
@@ -22,8 +22,8 @@ att.Mult_Sway = 2
 att.Mult_SpeedMult = 0.95
 att.Mult_ShootSpeedMult = 0.9
 
-att.Mult_DrawTime = 1.06
-att.Mult_HolsterTime = 1.06
+att.Mult_DrawTime = 1.15
+att.Mult_HolsterTime = 1.15
 
 att.ActivateElements = {"ud_m16_60_mag"}
 

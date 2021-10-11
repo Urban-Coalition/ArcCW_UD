@@ -10,7 +10,7 @@ att.Description = "Civilian barrel for the Uzi, elongated to fit minimum length 
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
-    "ud.semionly"
+    "uc.semionly"
 }
 att.Desc_Neutrals = {
 }

@@ -3,11 +3,11 @@ att.PrintName = "15.6\" FPW Barrel"
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = "Barrel from an M231 Firing Port Weapon. Originally intended to be fired from inside an IFV, the FPW has an insanely high cyclic rate and makes no considerations for recoil, accuracy or heat."
 att.Desc_Pros = {
-    --"ud.auto"
+    --"uc.auto"
 }
 att.Desc_Cons = {
-    "ud.nofs",
-    "ud.overheat"
+    "uc.nofs",
+    "uc.overheat"
 }
 att.Desc_Neutrals = {
 }

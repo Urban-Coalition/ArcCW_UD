@@ -13,7 +13,6 @@ att.AutoStats = true
 
 att.Mult_ReloadTime = 0.78
 --att.Mult_Recoil = 1
---att.Mult_SpeedMult = 1
 
 att.ActivateElements = {"m79_nade_caseless"}
 

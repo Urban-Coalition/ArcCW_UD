@@ -16,8 +16,7 @@ $bodygroup "1" {
 
 $bodygroup "2" {
 	studio "m79_stock_default.smd"
-	studio "m79_stock_standalone.smd"
-	studio "m79_stock_standalone_short.smd"
+	blank
 }
 
 $bodygroup "3" {

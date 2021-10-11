@@ -235,10 +235,10 @@ SWEP.Animations = {
         Time = 101 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         LHIK = true,
-        LHIKIn = 0.7,
+        LHIKIn = 0.74,
         LHIKEaseIn = 0.2,
         LHIKEaseOut = 0.2,
-        LHIKOut = 0.5,
+        LHIKOut = 0.6,
         SoundTable = {
             {s = path .. "open.ogg",  t = 0.3},
             {s = path .. "remove.ogg",  t = 1.5},
@@ -277,6 +277,10 @@ SWEP.AttachmentElements = {
     },
     ["m79_nade_incendiary"] = {
         VMBodygroups = {{ind = 1, bg = 5}},
+    },
+
+    ["m79_nostock"] = {
+        VMBodygroups = {{ind = 2, bg = 1}},
     },
 
     ["m79_rail"] = {

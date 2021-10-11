@@ -166,11 +166,9 @@ SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 
 -- Firing sounds --
 
-local path = ")^weapons/arccw_ud/m79/"
 local common = ")^/arccw_uc/common/"
-SWEP.ShootSound = path .. "fire.ogg"
-SWEP.ShootSoundSilenced = path .. "fire_supp.ogg"
-SWEP.DistantShootSound = path .. "fire_dist.ogg"
+SWEP.ShootSound = common .. "gl_fire.ogg"
+SWEP.DistantShootSound = common .. "gl_fire_dist.ogg"
 
 -- Animations --
 
@@ -202,8 +200,8 @@ SWEP.Animations = {
         LastClip1OutTime = 1.5,
         SoundTable = {
             {s = common .. "breaker_open.ogg",  t = 0.3},
-            {s = path .. "remove.ogg",  t = 0.9},
-            {s = path .. "insert.ogg",  t = 2.0},
+            {s = common .. "gl_remove.ogg",  t = 0.9},
+            {s = common .. "gl_insert.ogg",  t = 2.0},
             {s = common .. "breaker_close.ogg",  t = 2.5},
             -- {
             --     t = 0.6,
@@ -223,10 +221,10 @@ SWEP.Animations = {
         LHIKOut = 0.5,
         LastClip1OutTime = 1.5,
         SoundTable = {
-            {s = path .. "open.ogg",  t = 0.3},
-            {s = path .. "remove.ogg",  t = 0.9},
-            {s = path .. "insert.ogg",  t = 2.0},
-            {s = path .. "close.ogg",  t = 2.5},
+            {s = common .. "breaker_open.ogg",  t = 0.3},
+            {s = common .. "gl_remove.ogg",  t = 0.9},
+            {s = common .. "gl_insert.ogg",  t = 2.0},
+            {s = common .. "breaker_close.ogg",  t = 2.5},
             {
                 t = 1, ind = 1, bg = 2, -- Empty shell bodygroup
             },
@@ -245,9 +243,9 @@ SWEP.Animations = {
         LHIKEaseOut = 0.2,
         LHIKOut = 0.6,
         SoundTable = {
-            {s = path .. "open.ogg",  t = 0.3},
-            {s = path .. "insert.ogg",  t = 1.5},
-            {s = path .. "close.ogg",  t = 2.25},
+            {s = common .. "breaker_open.ogg",  t = 0.3},
+            {s = common .. "gl_insert.ogg",  t = 1.5},
+            {s = common .. "breaker_close.ogg",  t = 2.25},
             -- {
             --     t = 0.6,
             --     e = "muzzleflash_m79",  -- Please add some kind of smoke particle after opening the chamber

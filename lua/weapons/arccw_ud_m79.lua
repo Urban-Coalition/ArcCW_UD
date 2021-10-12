@@ -253,8 +253,11 @@ SWEP.Animations = {
         LHIKEaseOut = 0.2,
         LHIKOut = 0.6,
         SoundTable = {
+            {s = rottle, t = 0},
             {s = common .. "breaker_open.ogg",  t = 0.3},
+            {s = rottle, t = 0.75},
             {s = common .. "gl_insert.ogg",  t = 1.5},
+            {s = rottle, t = 2.0},
             {s = common .. "breaker_close.ogg",  t = 2.25},
             -- {
             --     t = 0.6,

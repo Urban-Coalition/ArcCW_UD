@@ -128,7 +128,7 @@ SWEP.Primary.Ammo = "smg1_grenade"
 -- Speed multipliers --
 
 SWEP.SpeedMult = 0.92
-SWEP.SightedSpeedMult = 0.6
+SWEP.SightedSpeedMult = 0.5
 SWEP.SightTime = 0.5
 SWEP.ShootSpeedMult = 0.75
 
@@ -306,7 +306,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Barrel",
-        DefaultAttName = "Default barrel", -- Placeholder
+        DefaultAttName = "Standard Barrel",
         Slot = "ud_m79_barrel",
         Bone = "m79_front",
         Offset = {
@@ -340,7 +340,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Grenade Type",
-        DefaultAttName = "High-explosive",
+        DefaultAttName = "High Explosive",
         Slot = "uc_40mm",
     },
     {

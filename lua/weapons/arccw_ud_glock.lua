@@ -1,6 +1,6 @@
 SWEP.Base = "arccw_base"
 SWEP.Spawnable = true
-SWEP.Category = "ArcCW - Urban Decay"
+SWEP.Category = "ArcCW - Urban Coalition"
 SWEP.AdminOnly = false
 SWEP.UseHands = true
 
@@ -179,7 +179,7 @@ SWEP.WorldModelOffset = {
 
 local path = ")^weapons/arccw_ud/glock/"
 local path1 = ")^weapons/arccw_ud/uzi/"
-local common = ")^weapons/arccw_ud/common/"
+local common = ")^/arccw_uc/common/"
 SWEP.ShootSound = path .. "fire.ogg"
 SWEP.ShootSoundSilenced = path .. "fire_supp.ogg"
 SWEP.DistantShootSound = path .. "fire_dist.ogg"

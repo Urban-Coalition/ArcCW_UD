@@ -1,6 +1,6 @@
 SWEP.Base = "arccw_base"
 SWEP.Spawnable = true
-SWEP.Category = "ArcCW - Urban Decay"
+SWEP.Category = "ArcCW - Urban Coalition"
 SWEP.AdminOnly = false
 SWEP.UseHands = true
 
@@ -18,7 +18,8 @@ SWEP.CamAttachment = 2
 
 -- Fake name --
 
-SWEP.PrintName = "Fake name"
+SWEP.PrintName = "AMSGL"
+-- (American) Squad Grenade Launcher or something. similar to M16's fake name
 
 -- True name --
 
@@ -27,12 +28,12 @@ SWEP.TrueName = "M79"
 -- Trivia --
 
 SWEP.Trivia_Class = "Grenade Launcher"
-SWEP.Trivia_Desc = "long description explaining that this is indeed a gun"
-SWEP.Trivia_Manufacturer = "Fake manufacturer"
+SWEP.Trivia_Desc = "Single-shot 40mm grenade launcher intended to provide infantry with portable long-range explosive firepower. Accurate, flexible and reliable, it is well-respected among American soldiers."
+SWEP.Trivia_Manufacturer = "Stoner's Legacy Ltd."
 SWEP.Trivia_Calibre = "40×46mm"
 SWEP.Trivia_Mechanism = "Break-action"
 SWEP.Trivia_Country = "USA"
-SWEP.Trivia_Year = 1960
+SWEP.Trivia_Year = 1961
 
 -- Weapon slot --
 
@@ -61,15 +62,16 @@ SWEP.WorldModelOffset = {
 
 -- Damage parameters --
 
-SWEP.Damage = 50
-SWEP.DamageMin = 50
+SWEP.Damage = 200
+SWEP.DamageMin = 200
 SWEP.Range = 40
-SWEP.RangeMin = 4
-SWEP.Num = 1
-SWEP.Penetration = 1
+SWEP.RangeMin = 0
 
-SWEP.ShootEntity = "arccw_udm79_he" -- Placeholder
-SWEP.MuzzleVelocity = 1000000
+SWEP.Num = 1
+SWEP.Penetration = 0
+
+SWEP.ShootEntity = "arccw_uc_40mm_he"
+SWEP.MuzzleVelocity = 5000
 
 -- Mag size --
 
@@ -81,6 +83,7 @@ SWEP.ReducedClipSize = 1
 -- Recoil --
 
 SWEP.Recoil = 4
+SWEP.RecoilSide = 2
 SWEP.RecoilSide = 1
 
 SWEP.RecoilRise = 0.24
@@ -116,8 +119,8 @@ SWEP.NPCWeight = 210
 -- Accuracy --
 
 SWEP.AccuracyMOA = 30
-SWEP.HipDispersion = 400
-SWEP.MoveDispersion = 100
+SWEP.HipDispersion = 500
+SWEP.MoveDispersion = 200
 SWEP.JumpDispersion = 1000
 
 SWEP.Primary.Ammo = "smg1_grenade"
@@ -125,7 +128,7 @@ SWEP.Primary.Ammo = "smg1_grenade"
 -- Speed multipliers --
 
 SWEP.SpeedMult = 0.92
-SWEP.SightedSpeedMult = 0.6
+SWEP.SightedSpeedMult = 0.5
 SWEP.SightTime = 0.5
 SWEP.ShootSpeedMult = 0.75
 
@@ -141,10 +144,11 @@ SWEP.HoldtypeActive = "shotgun"
 SWEP.HoldtypeSights = "ar2"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-3.5, -7, 2.6),
-     Ang = Angle(-0.4, 0, 0),
-     Magnification = 1.1,
-     SwitchToSound = "",
+    Pos = Vector(-3.51, -5, 2.2),
+    Ang = Angle(0, 0, 0),
+    Magnification = 1,
+    SwitchToSound = "",
+    CrosshairInSights = false,
 }
 
 SWEP.HolsterPos = Vector(-0.5, -4, -3)
@@ -163,11 +167,10 @@ SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 
 -- Firing sounds --
 
-local path = ")^weapons/arccw_ud/m79/"
-local common = ")^weapons/arccw_ud/common/"
-SWEP.ShootSound = path .. "fire.ogg"
-SWEP.ShootSoundSilenced = path .. "fire_supp.ogg"
-SWEP.DistantShootSound = path .. "fire_dist.ogg"
+local common = ")^/arccw_uc/common/"
+local rottle = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
+SWEP.ShootSound = common .. "gl_fire.ogg"
+SWEP.DistantShootSound = common .. "gl_fire_dist.ogg"
 
 -- Animations --
 
@@ -198,9 +201,14 @@ SWEP.Animations = {
         LHIKOut = 0.5,
         LastClip1OutTime = 1.5,
         SoundTable = {
-            {s = path .. "open.ogg",  t = 0.3},
-            {s = path .. "remove.ogg",  t = 1},
-            {s = path .. "insert.ogg",  t = 1.6}
+            {s = rottle, t = 0},
+            {s = common .. "breaker_open.ogg",  t = 0.3},
+            {s = common .. "gl_remove.ogg",  t = 0.9},
+            {s = rottle, t = 1.0},
+            {s = common .. "40mm_casing_1.ogg",  t = 1.6},
+            {s = common .. "gl_insert.ogg",  t = 2.0},
+            {s = rottle, t = 2.25},
+            {s = common .. "breaker_close.ogg",  t = 2.5},
             -- {
             --     t = 0.6,
             --     e = "muzzleflash_m79",  -- Please add some kind of smoke particle after opening the chamber
@@ -219,9 +227,14 @@ SWEP.Animations = {
         LHIKOut = 0.5,
         LastClip1OutTime = 1.5,
         SoundTable = {
-            {s = path .. "open.ogg",  t = 0.3},
-            {s = path .. "remove.ogg",  t = 1},
-            {s = path .. "insert.ogg",  t = 1.6},
+            {s = rottle, t = 0},
+            {s = common .. "breaker_open.ogg",  t = 0.3},
+            {s = common .. "gl_remove.ogg",  t = 0.9},
+            {s = rottle, t = 1.0},
+            {s = common .. "40mm_casing_1.ogg",  t = 1.6},
+            {s = common .. "gl_insert.ogg",  t = 2.0},
+            {s = rottle, t = 2.25},
+            {s = common .. "breaker_close.ogg",  t = 2.5},
             {
                 t = 1, ind = 1, bg = 2, -- Empty shell bodygroup
             },
@@ -240,8 +253,12 @@ SWEP.Animations = {
         LHIKEaseOut = 0.2,
         LHIKOut = 0.6,
         SoundTable = {
-            {s = path .. "open.ogg",  t = 0.3},
-            {s = path .. "remove.ogg",  t = 1.5},
+            {s = rottle, t = 0},
+            {s = common .. "breaker_open.ogg",  t = 0.3},
+            {s = rottle, t = 0.75},
+            {s = common .. "gl_insert.ogg",  t = 1.5},
+            {s = rottle, t = 2.0},
+            {s = common .. "breaker_close.ogg",  t = 2.25},
             -- {
             --     t = 0.6,
             --     e = "muzzleflash_m79",  -- Please add some kind of smoke particle after opening the chamber
@@ -278,7 +295,6 @@ SWEP.AttachmentElements = {
     ["m79_nade_incendiary"] = {
         VMBodygroups = {{ind = 1, bg = 5}},
     },
-
     ["m79_nostock"] = {
         VMBodygroups = {{ind = 2, bg = 1}},
     },
@@ -292,7 +308,7 @@ SWEP.Attachments = {
     {
         PrintName = "Optic",
         DefaultAttName = "Iron Sights",
-        Slot = {"optic_lp","optic","sniper_optic"},
+        Slot = {"optic_lp", "optic", "sniper_optic"},
         Bone = "m79_front",
         Offset = {
             vpos = Vector(0, -3.6, 1),
@@ -302,7 +318,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Barrel",
-        DefaultAttName = "Default barrel", -- Placeholder
+        DefaultAttName = "Standard Barrel",
         Slot = "ud_m79_barrel",
         Bone = "m79_front",
         Offset = {
@@ -310,16 +326,6 @@ SWEP.Attachments = {
             vang = Angle(90, 2, -90),
         },
     },
-    -- {
-    --     PrintName = "Muzzle",
-    --     DefaultAttName = "Standard Muzzle",
-    --     Slot = {"choke", "muzzle_shotgun"},
-    --     Bone = "1014_flash",
-    --     Offset = {
-    --         vpos = Vector(-0.03, -0.05, -0.5),
-    --         vang = Angle(90, 0, -90),
-    --     },
-    -- },
     {
         PrintName = "Underbarrel",
         Slot = {"foregrip"},
@@ -345,14 +351,9 @@ SWEP.Attachments = {
         DefaultAttName = "Wooden Stock",
     },
     {
-        PrintName = "Ammo Type",
-        DefaultAttName = "\"BUCK\" #00 Buckshot",
-        Slot = "ud_ammo_gl",
-    },
-    {
-        PrintName = "Powder Load",
-        Slot = "uc_powder",
-        DefaultAttName = "Standard Load"
+        PrintName = "Grenade Type",
+        DefaultAttName = "High Explosive",
+        Slot = "uc_40mm",
     },
     {
         PrintName = "Training Package",

@@ -1,6 +1,6 @@
 SWEP.Base = "arccw_base"
 SWEP.Spawnable = true
-SWEP.Category = "ArcCW - Urban Decay"
+SWEP.Category = "ArcCW - Urban Coalition"
 SWEP.AdminOnly = false
 SWEP.UseHands = true
 
@@ -182,7 +182,7 @@ SWEP.WorldModelOffset = {
 -- Firing sounds --
 
 local path = ")^weapons/arccw_ud/mini14/"
-local common = ")^weapons/arccw_ud/common/"
+local common = ")^/arccw_uc/common/"
 SWEP.ShootSound = path .. "fire.ogg"
 SWEP.ShootSoundSilenced = path .. "fire_supp.ogg"
 SWEP.DistantShootSound = path .. "fire_dist.ogg"
@@ -506,7 +506,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Barrel",
-        DefaultAttName = "Default Barrel",
+        DefaultAttName = "20\" Standard Barrel",
         Slot = "ud_mini14_barrel",
     },
     {

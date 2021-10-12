@@ -1,6 +1,6 @@
 SWEP.Base = "arccw_base"
 SWEP.Spawnable = true
-SWEP.Category = "ArcCW - Urban Decay"
+SWEP.Category = "ArcCW - Urban Coalition"
 SWEP.AdminOnly = false
 SWEP.UseHands = true
 
@@ -145,8 +145,8 @@ SWEP.HoldtypeActive = "shotgun"
 SWEP.HoldtypeSights = "ar2"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-3.05, -1, 1.8),
-     Ang = Angle(-0.4, 0, 0),
+     Pos = Vector(-2.95, 0, 1.7),
+     Ang = Angle(0, 0, -3.9),
      Magnification = 1.1,
      SwitchToSound = "",
 }
@@ -169,7 +169,7 @@ SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 
 local path1 = ")^weapons/arccw_ud/870/"
 local path = ")^weapons/arccw_ud/m1014/"
-local common = ")^weapons/arccw_ud/common/"
+local common = ")^/arccw_uc/common/"
 SWEP.ShootSound = path .. "fire.ogg"
 SWEP.ShootSoundSilenced = path .. "fire_supp.ogg"
 SWEP.DistantShootSound = path .. "fire_dist.ogg"

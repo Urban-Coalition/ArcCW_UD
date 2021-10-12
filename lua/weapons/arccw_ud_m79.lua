@@ -168,6 +168,7 @@ SWEP.BarrelOffsetHip = Vector(2, 0, -2)
 -- Firing sounds --
 
 local common = ")^/arccw_uc/common/"
+local rottle = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
 SWEP.ShootSound = common .. "gl_fire.ogg"
 SWEP.DistantShootSound = common .. "gl_fire_dist.ogg"
 
@@ -200,9 +201,13 @@ SWEP.Animations = {
         LHIKOut = 0.5,
         LastClip1OutTime = 1.5,
         SoundTable = {
+            {s = rottle, t = 0},
             {s = common .. "breaker_open.ogg",  t = 0.3},
             {s = common .. "gl_remove.ogg",  t = 0.9},
+            {s = rottle, t = 1.0},
+            {s = common .. "40mm_casing_1.ogg",  t = 1.6},
             {s = common .. "gl_insert.ogg",  t = 2.0},
+            {s = rottle, t = 2.25},
             {s = common .. "breaker_close.ogg",  t = 2.5},
             -- {
             --     t = 0.6,
@@ -222,9 +227,13 @@ SWEP.Animations = {
         LHIKOut = 0.5,
         LastClip1OutTime = 1.5,
         SoundTable = {
+            {s = rottle, t = 0},
             {s = common .. "breaker_open.ogg",  t = 0.3},
             {s = common .. "gl_remove.ogg",  t = 0.9},
+            {s = rottle, t = 1.0},
+            {s = common .. "40mm_casing_1.ogg",  t = 1.6},
             {s = common .. "gl_insert.ogg",  t = 2.0},
+            {s = rottle, t = 2.25},
             {s = common .. "breaker_close.ogg",  t = 2.5},
             {
                 t = 1, ind = 1, bg = 2, -- Empty shell bodygroup

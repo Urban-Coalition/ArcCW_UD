@@ -1,7 +1,7 @@
 $modelname "weapons\arccw\c_ud_m79.mdl"
  
 $bodygroup "studio" {
-	studio "m79.smd"
+	studio "m79_new.smd"
 	studio "m79_pirategun.smd"
 }
 
@@ -25,6 +25,7 @@ $bodygroup "3" {
 }
 
 $cdmaterials "models\weapons\arccw\ud_m79"
+$cdmaterials "models\weapons\arccw\ud_m79\m79_new"
 $cdmaterials "models\weapons\arccw\ud_m1014"
 $cdmaterials "models\weapons\arccw\ud_common"
 

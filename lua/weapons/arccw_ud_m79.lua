@@ -160,10 +160,8 @@ SWEP.ActiveAng = Angle(0, 0, -5)
 SWEP.CrouchPos = Vector(-4, -2, 0)
 SWEP.CrouchAng = Angle(0, 0, -30)
 
-SWEP.BarrelOffsetHip = Vector(0, 0, -3)
-
-SWEP.BarrelOffsetSighted = Vector(0, 0, -1)
-SWEP.BarrelOffsetHip = Vector(2, 0, -2)
+SWEP.BarrelOffsetSighted = Vector(0, 0, -4)
+SWEP.BarrelOffsetHip = Vector(6, 0, -8)
 
 -- Firing sounds --
 

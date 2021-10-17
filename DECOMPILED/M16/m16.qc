@@ -33,8 +33,8 @@ $bodygroup "3" {
 
 $bodygroup "4" {
 	studio "barrel.smd" //0
-	studio "m16_barrel_m4.smd" //1
-	studio "m16_barrel_cqbr.smd" //2
+	studio "barrel_m4.smd" //1
+	studio "barrel_cqbr.smd" //2
 	studio "barrel_fpw.smd" //3
 	studio "barrel_classic.smd" //4
 	studio "barrel_wood_short.smd" //5

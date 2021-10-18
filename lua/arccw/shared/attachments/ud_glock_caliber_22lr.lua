@@ -18,12 +18,13 @@ att.Slot = "ud_glock_caliber"
 
 att.AutoStats = true
 
-att.Override_Trivia_Calibre = ".22 LR"
+att.Override_Trivia_Calibre = ".22 Long Rifle"
+att.Override_Ammo = "plinking"
 
 att.Mult_Damage = 0.4
 att.Mult_DamageMin = 0.4
 
-att.Mult_Recoil = 0.4
+att.Mult_Recoil = 0.25
 att.Mult_VisualRecoilMult = 0.25
 att.Mult_RPM = 1.5
 att.Mult_Penetration = 0.1

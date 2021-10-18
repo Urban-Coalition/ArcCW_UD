@@ -25,7 +25,7 @@ att.Mult_Sway = 0.75
 att.Mult_Damage = 0.4
 att.Mult_DamageMin = 0.4
 att.Mult_Range = 0.5
-att.Mult_Recoil = 0.4
+att.Mult_Recoil = 0.25
 att.Mult_VisualRecoilMult = 0.25
 att.Mult_RPM = 2
 att.Mult_Penetration = 0.1
@@ -35,7 +35,7 @@ att.Override_ClipSize = 15
 
 att.ActivateElements = {"ud_mini14_15_22lr_mag"}
 
-att.Override_Ammo = "pistol"
+att.Override_Ammo = "plinking"
 att.Override_Trivia_Calibre = ".22 Long Rifle"
 att.Override_ShellModel = "models/weapons/arccw/ud_shells/57.mdl"
 att.Override_ShellScale = 0.8

@@ -38,4 +38,8 @@ att.Override_Firemodes = {
 }
 ]]
 
+att.LHIK = true
+
+att.Model = "models/weapons/arccw/atts/m4_lhik.mdl"
+
 att.ActivateElements = {"ud_m16_m4_barrel"}

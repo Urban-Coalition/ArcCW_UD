@@ -31,9 +31,9 @@ att.Mult_ShootSpeedMult = 1.025
 --     }
 -- }
 
-att.LHIK = false
+att.LHIK = true
 
-att.Model = "models/weapons/arccw/atts/wood_lhik.mdl"
+att.Model = "models/weapons/arccw/atts/classic_lhik.mdl"
 
 att.ActivateElements = {"ud_m16_classic_barrel"}
 -- att.ExcludeFlags = {"m16_auto"}

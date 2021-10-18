@@ -25,6 +25,10 @@ att.Mult_RPM = 1.111
 
 att.Add_BarrelLength = -6
 
+att.LHIK = true
+
+att.Model = "models/weapons/arccw/atts/m4_lhik.mdl"
+
 att.Mult_ShootVol = 0.65
 att.Silencer = true
 att.Override_MuzzleEffect = "muzzleflash_suppressed"

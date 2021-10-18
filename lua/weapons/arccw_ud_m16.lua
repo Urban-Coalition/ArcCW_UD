@@ -22,7 +22,8 @@ SWEP.TracerWidth = 2
 -- Fake name --
 
 SWEP.PrintName = "AMCAR"
--- AMCAR stands for (american) Colt Assault Rifle, not Carbine!!
+-- AMCAR stands for (american) Colt Assault Rifle, not Carbine!! ~Fesiug
+-- shut up retard ~zenith
 
 -- True name --
 
@@ -360,7 +361,6 @@ SWEP.AttachmentElements = {
     ["ud_m16_upper_flat"] = {
         VMBodygroups = {
             {ind = 1, bg = 1},
-            {ind = 10, bg = 1},
             {ind = 3, bg = 3}
         },
     },

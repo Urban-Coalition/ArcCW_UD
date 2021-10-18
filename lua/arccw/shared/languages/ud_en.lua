@@ -5,7 +5,10 @@ L["ud.title"] = "Urban Decay"
 -- Glock
 L["ud.glock.cs"] = "+3 Default magazine capacity"
 L["ud.glock.subcompact"] = "Enables Subcompact attachments"
-L["ud.hushpuppy"] = "Switch to LOCK firemode for manual action, reducing volume and imprecision"
+L["ud.hushpuppy"] = "Switch to slide-lock firemode for manual action, reducing volume and imprecision"
+
+L["fcg.slidelock"] = "Slide-lock"
+L["fcg.slidelock.abbrev"] = "S-LOCK"
 
 -- M16
 L["ud.flattop"] = "Lower optic position"

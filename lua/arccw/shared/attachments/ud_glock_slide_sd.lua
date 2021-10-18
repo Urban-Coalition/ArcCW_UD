@@ -28,6 +28,7 @@ att.Mult_Sway = 1.5
 att.Mult_Range = 1.25
 
 att.Mult_ShootVol = 0.65
+att.Mult_ShootPitch = 1.25
 
 att.Mult_RPM = 0.45
 
@@ -49,14 +50,14 @@ att.Override_Firemodes = {
     },
     {
         Mode = 1,
-        PrintName = "Slide-Lock",
+        PrintName = "fcg.slidelock",
         Override_ManualAction = true,
         Mult_ShootVol = 0.8,
         Mult_AccuracyMOA = 0.75
     },
     {
         Mode = 0,
-        PrintName = "Low",
+        PrintName = "fcg.safe2",
     }
 }
 

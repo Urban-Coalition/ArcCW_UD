@@ -1,7 +1,7 @@
 "VertexLitGeneric"
 {
-	"$basetexture"					"models\drgordon\weapons\bocw_xm177\mercenary_stock"
-	"$bumpmap"					"models\drgordon\weapons\bocw_xm177\mercenary_stock_n"
+	"$basetexture"					"models/weapons/arccw/ud_m16/mercenary_stock"
+	"$bumpmap"					"models/weapons/arccw/ud_m16/mercenary_stock_n"
 
 	"$phong"	"1"
 	"$phongexponent"	"3"

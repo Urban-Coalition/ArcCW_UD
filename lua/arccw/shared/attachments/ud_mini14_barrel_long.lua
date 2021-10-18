@@ -7,7 +7,7 @@ end
 
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.SortOrder = 24
-att.Description = "Lengthened barrel for shooting far-away varmints. More accurate, but slightly more heavy."
+att.Description = "Lengthened barrel for shooting far-away varmints. More accurate, but slightly heavier."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

@@ -85,8 +85,8 @@ $bodygroup "8" {
 
 $bodygroup "9" {
 	blank
-	studio "gasblock_barrel_sight.smd"
-	studio "gasblock_barrel_flat.smd"
+	blank
+	blank
 }
 
 $bodygroup "10" {

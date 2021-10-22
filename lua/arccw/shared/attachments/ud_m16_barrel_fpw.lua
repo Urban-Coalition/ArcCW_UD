@@ -26,15 +26,13 @@ att.Mult_Range = 0.65
 att.Mult_AccuracyMOA = 3
 
 att.Override_Jamming = true
-att.Override_HeatLockout = true
-att.Override_HeatCapacity = 75
-att.Hook_PostOverheat = function(wep)
-    wep:SetHeat(wep:GetHeat() - 20)
-end
+att.Override_HeatLockout = false
+att.Override_HeatCapacity = 180
+att.Override_HeatDissipation = 20
 
 att.A_Hook_Add_SightsDispersion = function(wep, data)
-    if data and !wep.Attachments[1].Installed then
-        data.add = data.add + 100
+    if data and (!wep.Attachments[1].Installed or wep.Attachments[1].Installed == "ud_m16_rs") then
+        data.add = data.add + 50
     end
 end
 
@@ -59,3 +57,17 @@ att.LHIK = true
 att.Model = "models/weapons/arccw/atts/fpw_lhik.mdl"
 
 att.ActivateElements = {"ud_m16_fpw_barrel"}
+
+att.Hook_ModifyRPM = function(wep, delay)
+    local heat = math.Clamp(wep:GetHeat() / wep:GetMaxHeat(), 0, 1)
+    if heat > 0.5 then
+        return delay * (1 + ((heat - 0.5) / 0.5) * 2)
+    end
+end
+
+att.M_Hook_Mult_AccuracyMOA = function(wep, data)
+    local heat = math.Clamp(wep:GetHeat() / wep:GetMaxHeat(), 0, 1)
+    if heat > 0.5 then
+        data.mult = data.mult * (1 + ((heat - 0.5) / 0.5))
+    end
+end

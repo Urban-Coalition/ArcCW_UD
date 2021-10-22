@@ -71,7 +71,7 @@ SWEP.MuzzleVelocity = 400
 -- Mag size --
 
 SWEP.ChamberSize = 1
-SWEP.Primary.ClipSize = 1
+SWEP.Primary.ClipSize = 30
 SWEP.ExtendedClipSize = 40
 SWEP.ReducedClipSize = 20
 

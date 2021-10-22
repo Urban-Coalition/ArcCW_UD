@@ -71,7 +71,7 @@ SWEP.MuzzleVelocity = 400
 -- Mag size --
 
 SWEP.ChamberSize = 1
-SWEP.Primary.ClipSize = 1000
+SWEP.Primary.ClipSize = 1
 SWEP.ExtendedClipSize = 40
 SWEP.ReducedClipSize = 20
 
@@ -763,7 +763,7 @@ SWEP.Animations = {
         SoundTable = {
             {s = path .. "chback.ogg",   t = 0.1},
             {s = common .. "cloth_4.ogg",  t = 0.5},
-            {s = path .. "chamber.ogg",  t = 0.5},
+            {s = path .. "ch_forward_empty.ogg",  t = 0.5},
         },
     },
     ["fix_100"] = {

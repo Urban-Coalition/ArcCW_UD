@@ -55,7 +55,7 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
     pos        =    Vector(-7, 4, -5.8),
-    ang        =    Angle(-6, 0, 180),
+    ang        =    Angle(0, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }
 
@@ -145,8 +145,8 @@ SWEP.HoldtypeActive = "shotgun"
 SWEP.HoldtypeSights = "ar2"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.95, 0, 1.7),
-     Ang = Angle(0, 0, -3.9),
+     Pos = Vector(-3.025, 0, 1.8),
+     Ang = Angle(0, 0, 0),
      Magnification = 1.1,
      SwitchToSound = "",
 }

@@ -94,6 +94,11 @@ $bodygroup "10" {
 	studio "sights_m4a4.smd"
 }
 
+$bodygroup "11" {
+	blank
+	studio "strap_bo1.smd"
+}
+
 $cdmaterials "models\weapons\arccw\ud_m16"
 $cdmaterials "models\weapons\arccw\ud_m1014"
 $cdmaterials "models\weapons\arccw\ud_common"

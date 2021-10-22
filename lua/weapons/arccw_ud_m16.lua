@@ -624,6 +624,11 @@ SWEP.AttachmentElements = {
             },
         },
     },
+    ["ud_m16_strap_bo1"] = {
+        VMBodygroups = {
+            {ind = 11, bg = 1},
+        },
+    },
     ["bravo_dicks_going_fart"] = {
         AttPosMods = {
             [6] = {
@@ -725,7 +730,7 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15 * 0.7,
         LHIKOut = 0.4 * 0.7,
         SoundTable = {
-            {s = path .. "chback.ogg",   t = 0.1},
+            {s = path .. "chback.ogg",   t = 0.05},
             {s = common .. "cloth_4.ogg",  t = 0.2},
             {s = path .. "chamber.ogg",  t = 0.3},
         },
@@ -733,7 +738,7 @@ SWEP.Animations = {
 
     ["fix"] = {
         Source = "fix",
-        Time = 36 / 30,
+        Time = 45 / 30,
         ShellEjectAt = false,
         LHIK = true,
         LHIKIn = 0.3,
@@ -741,14 +746,14 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = path .. "chback.ogg",   t = 0.1},
+            {s = path .. "chback.ogg",   t = 0.05},
             {s = common .. "cloth_4.ogg",  t = 0.5},
             {s = path .. "chamber.ogg",  t = 0.5},
         },
     },
     ["fix_empty"] = {
         Source = "fix_empty",
-        Time = 36 / 30,
+        Time = 45 / 30,
         ShellEjectAt = false,
         LHIK = true,
         LHIKIn = 0.3,
@@ -758,12 +763,12 @@ SWEP.Animations = {
         SoundTable = {
             {s = path .. "chback.ogg",   t = 0.1},
             {s = common .. "cloth_4.ogg",  t = 0.5},
-            {s = path .. "chamber.ogg",  t = 0.5},
+            {s = path .. "ch_forward_empty.ogg",  t = 0.5},
         },
     },
     ["fix_100"] = {
         Source = "fix_100",
-        Time = 36 / 30,
+        Time = 50 / 30,
         ShellEjectAt = false,
         LHIK = true,
         LHIKIn = 0.3,
@@ -778,7 +783,7 @@ SWEP.Animations = {
     },
     ["fix_empty_100"] = {
         Source = "fix_empty_100",
-        Time = 36 / 30,
+        Time = 50 / 30,
         ShellEjectAt = false,
         LHIK = true,
         LHIKIn = 0.3,

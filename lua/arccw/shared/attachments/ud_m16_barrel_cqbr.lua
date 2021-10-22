@@ -1,4 +1,4 @@
-att.PrintName = "10.5\" CAR-15 Barrel"
+att.PrintName = "10\" M4 Commando Barrel"
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = "Short barrel of a length emulating the CAR-15 assault rifle. Technically classified as a submachine gun, it offers relatively high fire rates at the cost of range."
 att.Desc_Pros = {

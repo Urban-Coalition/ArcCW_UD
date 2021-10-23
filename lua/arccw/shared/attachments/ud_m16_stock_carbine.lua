@@ -6,7 +6,7 @@ if GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
-att.Description = "Adjustable combat stock used on the XM177 carbine. When collapsed, it allows the user to maneuver better in close quarters; when extended, it functions similarly to a full stock.\n\nToggling this stock modifies performance accordingly."
+att.Description = "Adjustable combat stock used on the XM177 carbine. When collapsed, it allows the user to move swiftly in close quarters; when extended, it functions similarly to a full stock.\n\nToggling this stock modifies performance accordingly."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
@@ -30,9 +30,9 @@ att.ToggleStats = {
     {
         PrintName = "Collapsed",
         ActivateElements = {"stock_carbine_in"},
-        Mult_SightTime = 0.9,
-        Mult_HipDispersion = 0.85,
-        Mult_RecoilSide = 1.3,
+        Mult_SightedSpeedMult = 1.1,
+        Mult_ShootSpeedMult = 1.1,
+        Mult_RecoilSide = 1.5,
         Add_BarrelLength = -4,
     },
     {

@@ -6,7 +6,7 @@ if GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
-att.Description = "Collapsable combat stock used on the Model 607 SMG. While not very good for point shooting, the stock provides both agility and recoil control when collapsed.\n\nToggling this stock modifies performance accordingly."
+att.Description = "Collapsable combat stock used on the Model 607 SMG. While not very good for point shooting, the stock allows for quick target acquisition when collapsed.\n\nToggling this stock modifies performance accordingly."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
@@ -32,9 +32,9 @@ att.ToggleStats = {
     {
         PrintName = "Collapsed",
         ActivateElements = {"stock_607_in"},
-        Mult_SightTime = 0.85,
-        Mult_RecoilSide = 0.75,
-        Mult_HipDispersion = 1.15,
+        Mult_SightTime = 0.8,
+        Mult_ShootSpeedMult = 1.05,
+        Mult_HipDispersion = 1.2,
         Add_BarrelLength = -4,
     },
     {

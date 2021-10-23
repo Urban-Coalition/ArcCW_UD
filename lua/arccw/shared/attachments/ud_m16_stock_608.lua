@@ -19,10 +19,9 @@ att.AutoStats = true
 att.SortOrder = 4
 
 att.Mult_HipDispersion = 0.75
-att.Mult_MoveDispersion = 0.9
+att.Mult_MoveDispersion = 0.85
 att.Mult_SightTime = 1.15
 att.Mult_Recoil = 1.25
-att.Mult_RecoilSide = 1.25
 att.Mult_Sway = 1.5
 
 att.Add_BarrelLength = 0

@@ -37,8 +37,9 @@ att.ToggleStats = {
         PrintName = "Collapsed",
         AutoStats = true,
         ActivateElements = {"stock_231_in"},
-        Mult_HipDispersion = 0.8,
-        Mult_RecoilSide = 1.5,
+        Mult_HipDispersion = 0.75,
+        Mult_MoveDispersion = 0.75,
+        Mult_RecoilSide = 2,
     },
     --[[] -- we already have a buffer tube attachment
     {

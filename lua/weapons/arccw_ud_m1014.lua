@@ -73,10 +73,13 @@ SWEP.MuzzleVelocity = 200
 
 -- Mag size --
 
-SWEP.ChamberSize = 1
+SWEP.ChamberSize = 2
 SWEP.Primary.ClipSize = 4
 SWEP.ExtendedClipSize = 7
 SWEP.ReducedClipSize = 2
+
+SWEP.ChamberLoadNonEmpty = 2
+SWEP.ChamberLoadEmpty = 1
 
 -- Recoil --
 
@@ -242,6 +245,7 @@ SWEP.Animations = {
             {s = path .. "breechload.ogg",  t = 0.05},
             {s = path .. "breechclose.ogg",  t = 0.7},
         },
+        ForceEmpty = true,
     },
     ["sgreload_insert"] = {
         Source = "sgreload_insert",

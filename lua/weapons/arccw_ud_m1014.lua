@@ -71,6 +71,8 @@ SWEP.DamageType = DMG_BUCKSHOT
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 200
 
+SWEP.HullSize = 1
+
 -- Mag size --
 
 SWEP.ChamberSize = 2

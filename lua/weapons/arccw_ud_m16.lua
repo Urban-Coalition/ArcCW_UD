@@ -746,7 +746,7 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = path .. "chback.ogg",   t = 0.05},
+            {s = path .. "chback.ogg",   t = 0.15},
             {s = common .. "cloth_4.ogg",  t = 0.5},
             {s = path .. "chamber.ogg",  t = 0.5},
         },
@@ -761,7 +761,7 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = path .. "chback.ogg",   t = 0.1},
+            {s = path .. "chback.ogg",   t = 0.15},
             {s = common .. "cloth_4.ogg",  t = 0.5},
             {s = path .. "ch_forward_empty.ogg",  t = 0.5},
         },
@@ -776,9 +776,9 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.4,
         SoundTable = {
-            {s = path .. "chback.ogg",   t = 0.1},
-            {s = common .. "cloth_4.ogg",  t = 0.5},
-            {s = path .. "chamber.ogg",  t = 0.5},
+            {s = path .. "chback.ogg",   t = 0.25},
+            {s = common .. "cloth_4.ogg",  t = 0.75},
+            {s = path .. "chamber.ogg",  t = 0.75},
         },
     },
     ["fix_empty_100"] = {

@@ -1119,7 +1119,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     if wep.Attachments[1].Installed then
         if vm:GetBodygroup(1) == 1 then
             -- Flat rail
-            vm:SetBodygroup(3, 2)
+            vm:SetBodygroup(3, 3)
         else
             -- Raised rail (retro)
             vm:SetBodygroup(3, 1)

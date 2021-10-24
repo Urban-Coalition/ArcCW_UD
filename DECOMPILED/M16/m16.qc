@@ -32,22 +32,29 @@ $bodygroup "3" {
 }
 
 $bodygroup "4" {
-	studio "barrel.smd" //0
-	studio "barrel_m4.smd" //1
-	studio "barrel_cqbr.smd" //2
-	studio "barrel_fpw.smd" //3
-	studio "barrel_classic.smd" //4
-	studio "barrel_wood_short.smd" //5
-	studio "barrel_stub.smd" //6
-	studio "barrel_usas.smd" //7
-	studio "barrel_lmg.smd" //8
-	studio "barrel_sd.smd" //9
-	studio "barrel_tactical.smd" //10
-	studio "barrel_smg.smd" //11
-	studio "barrel_tactical_a4.smd" // 12
+	studio "barrels_new/barrel_20.smd" //0
+	studio "barrels_new/barrel_14.smd" //1
+	studio "barrels_new/barrel_11.smd" //1
 }
 
 $bodygroup "5" {
+	studio "barrels_new/hand_a2.smd" //0
+	studio "barrels_new/hand_a1.smd" //1
+	studio "barrels_new/hand_ris20.smd" //2
+	studio "barrels_new/hand_lmg.smd" //3
+	studio "barrels_new/hand_carbine.smd" //4
+	studio "barrels_new/hand_riscar.smd" //5
+	studio "barrels_new/hand_fpw.smd" //3
+}
+
+$bodygroup "6" {
+	studio "barrels_new/fs_m16.smd" //0
+	studio "barrels_new/gasblock_m16.smd" //1
+	studio "barrels_new/fs_carbine.smd" //2
+	studio "barrels_new/gasblock_carbine.smd" //4
+}
+
+$bodygroup "7" {
 	studio "stock.smd"
 	studio "stock_usas.smd"
 	studio "Stock_231_EX.smd"
@@ -61,14 +68,14 @@ $bodygroup "5" {
 	studio "stock_wood.smd"
 }
 
-$bodygroup "6" {
+$bodygroup "8" {
 	studio "grip.smd"
 	studio "grip_ergo.smd"
 	studio "grip_skel.smd"
 	studio "grip_wood.smd"
 }
 
-$bodygroup "7" {
+$bodygroup "9" {
 	blank
 	studio "rail_fg.smd"
 	studio "rail_fg_stub.smd"
@@ -76,25 +83,25 @@ $bodygroup "7" {
 	studio "rail_fg_wood_short.smd"
 }
 
-$bodygroup "8" {
+$bodygroup "10" {
 	blank
 	studio "clamp_fullsize.smd"
 	studio "clamp_stub.smd"
 	studio "clamp_short.smd"
 }
 
-$bodygroup "9" {
+$bodygroup "11" {
 	blank
 	blank
 	blank
 }
 
-$bodygroup "10" {
+$bodygroup "12" {
 	blank
 	studio "sights_m4a4.smd"
 }
 
-$bodygroup "11" {
+$bodygroup "13" {
 	blank
 	studio "strap_bo1.smd"
 }

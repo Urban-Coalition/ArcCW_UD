@@ -23,8 +23,8 @@ att.Mult_Damage = 0.88
 att.Mult_DamageMin = 0.88
 att.Mult_Range = 0.4
 att.Mult_ShootSpeedMult = 1.1
-att.Mult_Recoil = 0.5
-att.Mult_HipDispersion = 0.6
+att.Mult_Recoil = 0.35
+att.Mult_HipDispersion = 0.85
 
 --att.Mult_ReloadTime = 0.85
 att.Mult_SightTime = 0.9
@@ -33,7 +33,7 @@ att.Override_ClipSize_Priority = -1
 att.Override_ClipSize = 20
 
 att.Mult_AccuracyMOA = 2
---att.Mult_RPM = 0.9
+att.Mult_HeatCapacity = 1.5
 
 att.Override_Firemodes_Priority = 0.5
 att.Override_Firemodes = {

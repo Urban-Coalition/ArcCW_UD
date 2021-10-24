@@ -15,6 +15,7 @@ att.AutoStats = true
 att.Mult_SightTime = 0.85
 att.Mult_SpeedMult = 1.025
 att.Mult_SightedSpeedMult = 1.1
+att.Mult_HipDispersion = 0.7
 
 att.Mult_RPM = 1.15
 att.Mult_Recoil = 1.5
@@ -42,4 +43,4 @@ att.LHIK = true
 
 att.Model = "models/weapons/arccw/atts/m4_lhik.mdl"
 
-att.ActivateElements = {"ud_m16_m4_barrel"}
+att.ActivateElements = {"hg_cqbr", "barrel_11"}

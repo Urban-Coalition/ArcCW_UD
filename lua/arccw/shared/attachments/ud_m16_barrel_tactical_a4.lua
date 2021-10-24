@@ -15,5 +15,4 @@ att.Desc_Neutrals = {
 }
 att.Slot = "ud_m16_barrel"
 
-att.ActivateElements = {"ud_m16_barrel_tactical_a4"}
--- The tactical A4 barrel seems to have been removed!
+att.ActivateElements = {"hg_m16a4_ris"}

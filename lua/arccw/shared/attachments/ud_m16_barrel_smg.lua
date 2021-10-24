@@ -39,6 +39,6 @@ att.Override_Firemodes = {
 }
 ]]
 
-att.ActivateElements = {"ud_m16_barrel_smg"}
+att.ActivateElements = {"hg_smg"}
 att.RequireFlags = {"m16_9mm"}
 att.HideIfBlocked = true

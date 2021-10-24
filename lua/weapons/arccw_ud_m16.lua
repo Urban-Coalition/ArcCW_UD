@@ -77,7 +77,7 @@ SWEP.ReducedClipSize = 20
 
 -- Recoil --
 
-SWEP.Recoil = 0.75
+SWEP.Recoil = 0.7
 SWEP.RecoilSide = 0.3
 
 SWEP.RecoilRise = 0.1
@@ -354,11 +354,11 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 2, bg = 7}},
     },
 
-    ["ud_m16_rail_fg"] = {
-        VMBodygroups = {{ind = 7, bg = 1}},
+    ["rail_fg"] = {
+        VMBodygroups = {{ind = 9, bg = 1}},
     },
 
-    ["ud_m16_upper_flat"] = {
+    ["upper_flat"] = {
         VMBodygroups = {
             {ind = 1, bg = 1},
             {ind = 3, bg = 3}
@@ -366,83 +366,46 @@ SWEP.AttachmentElements = {
     },
 
     ["stock_231_ex"] = {
-        VMBodygroups = {{ind = 5, bg = 2}},
+        VMBodygroups = {{ind = 7, bg = 2}},
     },
     ["stock_231_in"] = {
-        VMBodygroups = {{ind = 5, bg = 3}},
+        VMBodygroups = {{ind = 7, bg = 3}},
     },
     ["stock_231_tube"] = {
-        VMBodygroups = {{ind = 5, bg = 4}},
+        VMBodygroups = {{ind = 7, bg = 4}},
     },
     ["stock_607_ex"] = {
-        VMBodygroups = {{ind = 5, bg = 5}},
+        VMBodygroups = {{ind = 7, bg = 5}},
     },
     ["stock_607_in"] = {
-        VMBodygroups = {{ind = 5, bg = 6}},
+        VMBodygroups = {{ind = 7, bg = 6}},
     },
     ["stock_608"] = {
-        VMBodygroups = {{ind = 5, bg = 7}},
+        VMBodygroups = {{ind = 7, bg = 7}},
     },
     ["stock_carbine_ex"] = {
-        VMBodygroups = {{ind = 5, bg = 8}},
+        VMBodygroups = {{ind = 7, bg = 8}},
     },
     ["stock_carbine_in"] = {
-        VMBodygroups = {{ind = 5, bg = 9}},
+        VMBodygroups = {{ind = 7, bg = 9}},
+    },
+    ["stock_wood"] = {
+        VMBodygroups = {{ind = 7, bg = 10}},
+    },
+    ["grip_ergo"] = {
+        VMBodygroups = {{ind = 8, bg = 1}},
+    },
+    ["grip_skel"] = {
+        VMBodygroups = {{ind = 8, bg = 2}},
+    },
+    ["grip_wood"] = {
+        VMBodygroups = {{ind = 8, bg = 3}},
     },
 
-    ["ud_m16_stock_wood"] = {
-        VMBodygroups = {{ind = 5, bg = 10}},
-    },
-    ["ud_m16_grip_ergo"] = {
-        VMBodygroups = {{ind = 6, bg = 1}},
-    },
-    ["ud_m16_grip_skel"] = {
-        VMBodygroups = {{ind = 6, bg = 2}},
-    },
-    ["ud_m16_grip_wood"] = {
-        VMBodygroups = {{ind = 6, bg = 3}},
-    },
-
-    ["ud_m16_barrel_tactical"] = {
-        VMBodygroups = {
-            {ind = 4, bg = 10},
-        },
-        AttPosMods = {
-            [3] = {
-                vpos = Vector(0, -0.1, 22.75),
-                vang = Angle(90, 0, -90),
-            },
-            [5] = {
-                vpos = Vector(0, 1.25, 12),
-                vang = Angle(90, 0, -90),
-            },
-            [6] = {
-                vpos = Vector(1.4, -0.5, 15),
-                vang = Angle(90, 0, 0),
-            },
-        },
-    },
-
-    ["ud_m16_barrel_tactical_a4"] = {
-        VMBodygroups = {
-            {ind = 4, bg = 12},
-            {ind = 9, bg = 1}
-        },
-        AttPosMods = {
-            [5] = {
-                vpos = Vector(0, 1.25, 12),
-                vang = Angle(90, 0, -90),
-            },
-            [6] = {
-                vpos = Vector(1.1, 0, 20),
-                vang = Angle(90, 0, 0),
-            },
-        }
-    },
-
-    ["ud_m16_barrel_m4"] = {
+    ["barrel_14"] = {
         VMBodygroups = {
             {ind = 4, bg = 1},
+            {ind = 6, bg = 2},
         },
         AttPosMods = {
             [3] = {
@@ -455,13 +418,14 @@ SWEP.AttachmentElements = {
             },
         }
     },
-    ["ud_m16_barrel_cqbr"] = {
+    ["barrel_11"] = {
         VMBodygroups = {
             {ind = 4, bg = 2},
+            {ind = 6, bg = 2},
         },
         AttPosMods = {
             [3] = {
-                vpos = Vector(0, 0, 20.5),
+                vpos = Vector(0, 0, 19.75),
                 vang = Angle(90, 0, -90),
             },
             [6] = {
@@ -470,94 +434,84 @@ SWEP.AttachmentElements = {
             },
         }
     },
-    ["ud_m16_barrel_smg"] = {
-        VMBodygroups = {
-            {ind = 4, bg = 11},
-        },
-        AttPosMods = {
-            [3] = {
-                vpos = Vector(0, -0.35, 15.75),
-                vang = Angle(90, 0, -90),
-            },
-            [6] = {
-                vpos = Vector(0, 0.8, 20),
-                vang = Angle(90, 0, -90),
-            },
-        }
-    },
-    ["ud_m16_barrel_fpw"] = {
+    ["barrel_sd"] = {
         VMBodygroups = {
             {ind = 4, bg = 3},
+            {ind = 6, bg = 4},
+        }
+    },
+    ["barrel_stub"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 4},
+            {ind = 6, bg = 4},
+        }
+    },
+
+    ["hg_m16a4_ris"] = {
+        VMBodygroups = {
+            {ind = 5, bg = 2},
         },
-        --[[]
-        Override_IronSightStruct = {
-            Pos = Vector(-1, 4, 0),
-            Ang = Angle(0, 0, 0),
-            Magnification = 1,
-            CrosshairInSights = true
-        },
-        ]]
         AttPosMods = {
-            [3] = {
-                vpos = Vector(0, -0.1, 22.5),
+            [5] = {
+                vpos = Vector(0, 1.25, 12),
                 vang = Angle(90, 0, -90),
             },
             [6] = {
-                vpos = Vector(0, 0.8, 20),
-                vang = Angle(90, 0, -90),
+                vpos = Vector(1.1, 0, 20),
+                vang = Angle(90, 0, 0),
             },
         }
     },
-    ["ud_m16_barrel_classic"] = {
+    ["hg_m4a1_ris"] = {
         VMBodygroups = {
-            {ind = 4, bg = 4},
+            {ind = 5, bg = 5},
         },
         AttPosMods = {
-            [3] = {
-                vpos = Vector(0, -0.35, 30.95),
-                vang = Angle(90, 0, -90),
-            }
-        }
-    },
-    ["ud_m16_barrel_wood"] = {
-        VMBodygroups = {
-            {ind = 4, bg = 4},
-        },
-        VMSkin = 1,
-        AttPosMods = {
-            [3] = {
-                vpos = Vector(0, -0.35, 30.95),
-                vang = Angle(90, 0, -90),
-            }
-        }
-    },
-    ["ud_m16_barrel_wood_short"] = {
-        VMBodygroups = {
-            {ind = 4, bg = 5},
-        },
-        AttPosMods = {
-            [3] = {
-                vpos = Vector(0, -0.35, 25),
+            [5] = {
+                vpos = Vector(0, 1.25, 12),
                 vang = Angle(90, 0, -90),
             },
             [6] = {
-                vpos = Vector(0, 0.8, 20),
-                vang = Angle(90, 0, -90),
+                vpos = Vector(1.4, -0.5, 15),
+                vang = Angle(90, 0, 0),
             },
+        },
+    },
+    ["hg_m4a1"] = {
+        VMBodygroups = {
+            {ind = 5, bg = 4},
         }
     },
-    ["ud_m16_barrel_stub"] = {
+    ["hg_cqbr"] = {
         VMBodygroups = {
-            {ind = 4, bg = 6},
+            {ind = 5, bg = 4},
+        }
+    },
+    ["hg_smg"] = { -- Doesn't exist yet
+        VMBodygroups = {
+            {ind = 5, bg = 0},
+        }
+    },
+    ["hg_fpw"] = {
+        VMBodygroups = {
+            {ind = 5, bg = 6},
+        }
+    },
+    ["hg_m16a1"] = {
+        VMBodygroups = {
+            {ind = 5, bg = 1},
+        }
+    },
+    ["hg_m16a1_wood"] = {
+        VMBodygroups = {
+            {ind = 5, bg = 1},
         },
-        --[[]
-        Override_IronSightStruct = {
-            Pos = Vector(-1, 4, 0),
-            Ang = Angle(0, 0, 0),
-            Magnification = 1,
-            CrosshairInSights = true
+        VMSkin = 1
+    },
+    ["hg_stub"] = {
+        VMBodygroups = {
+            {ind = 5, bg = 7},
         },
-        ]]
         AttPosMods = {
             [3] = {
                 vpos = Vector(0, -0.35, 7),
@@ -569,24 +523,9 @@ SWEP.AttachmentElements = {
             },
         }
     },
-    ["ud_m16_barrel_lmg"] = {
+    ["hg_lmg"] = {
         VMBodygroups = {
-            {ind = 4, bg = 8},
-        },
-        AttPosMods = {
-            [6] = {
-                vpos = Vector(0, 0.8, 20),
-                vang = Angle(90, 0, -90),
-            },
-            [3] = {
-                vpos = Vector(0, -0.35, 30.75),
-                vang = Angle(90, 0, -90),
-            },
-        }
-    },
-    ["ud_m16_barrel_sd"] = {
-        VMBodygroups = {
-            {ind = 4, bg = 9},
+            {ind = 5, bg = 3},
         },
         AttPosMods = {
             [6] = {
@@ -595,7 +534,47 @@ SWEP.AttachmentElements = {
             },
         }
     },
-    ["ud_m16_receiver_usas"] = {
+    ["hg_sd"] = {
+        VMBodygroups = {
+            {ind = 5, bg = 7},
+            {ind = 4, bg = 3}
+        },
+        AttPosMods = {
+            [6] = {
+                vpos = Vector(0, 0.8, 20),
+                vang = Angle(90, 0, -90),
+            },
+        }
+    },
+    ["ud_m16_upper_charm"] = {
+        AttPosMods = {
+            [1] = {
+                vpos = Vector(0, -4, 3),
+                vang = Angle(90, 0, -90),
+            },
+        },
+    },
+    ["ud_m16_strap_bo1"] = {
+        VMBodygroups = {
+            {ind = 13, bg = 1},
+        },
+    },
+    ["bravo_dicks_going_fart"] = {
+        AttPosMods = {
+            [6] = {
+                vpos = Vector(0, -1.05, 10),
+                vang = Angle(90, 0, 90),
+            },
+        },
+    },
+
+    ---- Cut content
+    ["hg_m4a1_wood"] = {
+        VMBodygroups = {
+            {ind = 5, bg = 4},
+        }
+    },
+    ["hg_usas"] = {
         VMBodygroups = {
             {ind = 0, bg = 1},
             {ind = 1, bg = 2},
@@ -615,27 +594,6 @@ SWEP.AttachmentElements = {
                 vang = Angle(90, 0, -90),
             },
         }
-    },
-    ["ud_m16_upper_charm"] = {
-        AttPosMods = {
-            [1] = {
-                vpos = Vector(0, -4, 3),
-                vang = Angle(90, 0, -90),
-            },
-        },
-    },
-    ["ud_m16_strap_bo1"] = {
-        VMBodygroups = {
-            {ind = 11, bg = 1},
-        },
-    },
-    ["bravo_dicks_going_fart"] = {
-        AttPosMods = {
-            [6] = {
-                vpos = Vector(0, -1.05, 10),
-                vang = Angle(90, 0, 90),
-            },
-        },
     },
 }
 
@@ -1151,102 +1109,45 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     elseif barrelatt == "ud_m16_barrel_smg" then barrel = 9
     end
 
-    if barrel != 8 then vm:SetBodygroup(9,0) end
+    -- M4A4 flip-up sights
+    vm:SetBodygroup(12, flipup and 1 or 0)
+
+    if barrel == 6 then
+        vm:SetBodygroup(6, 4)
+    end
 
     if wep.Attachments[1].Installed then
-        if barrel == 8 then
-            vm:SetBodygroup(9,2)
+        if vm:GetBodygroup(1) == 1 then
+            -- Flat rail
+            vm:SetBodygroup(3, 3)
+        else
+            -- Raised rail (retro)
+            vm:SetBodygroup(3, 1)
         end
-        -- Optic rail
-        if flipup then
-            vm:SetBodygroup(9,1)
-            vm:SetBodygroup(10, 1)
-        elseif vm:GetBodygroup(1) == 1 then
-            -- Flat top (ud_m16_upper_flat)
-            vm:SetBodygroup(9,0)
-            vm:SetBodygroup(10, 0)
-        --else
-            -- Carry handle
-            --vm:SetBodygroup(3, 1)
+        -- Low profile gas block
+        if (!flipup or trueflat) and barrel != 6 then
+            -- this is handled after elements sets bodygroup so we can do this
+            vm:SetBodygroup(6, vm:GetBodygroup(6) + 1)
         end
     else
-        if vm:GetBodygroup(1) == 0 then
-            --Checks if it has carry handle
-            vm:SetBodygroup(10, 0)
-            vm:SetBodygroup(3, 0)
-        end
+        -- no rails
+        vm:SetBodygroup(3, 0)
     end
-    if trueflat then
-        vm:SetBodygroup(10,0)
-    end
-    --[[if barrel == 7 or barrel == 8 then
-        vm:SetBodygroup(7, 0)
-        vm:SetBodygroup(9, 1)
-        vm:SetBodygroup(12, 1)
-        vm:SetBodygroup(13, 1)
-        vm:SetBodygroup(14, 1)
-        if wep.Attachments[5].Installed then
-            vm:SetBodygroup(9,0)
-        end
-        if wep.Attachments[6].Installed then
-            vm:SetBodygroup(12, 0)
-        end
-    else
-        vm:SetBodygroup(9, 0)
-        vm:SetBodygroup(12, 0)
-        vm:SetBodygroup(13, 0)
-        vm:SetBodygroup(14, 0)
-    end]]
-    if wep.Attachments[6].Installed then
-        -- Tactical clamp
+
+    -- Tactical clamp
+    if wep.Attachments[6].Installed and barrel != 8 then
         if barrel == 11 then
             -- Stub
-            vm:SetBodygroup(8, 2)
+            vm:SetBodygroup(10, 2)
         elseif !barrel or barrel == "" or barrel == 3 then
             -- Full length
-            vm:SetBodygroup(8, 1)
+            vm:SetBodygroup(10, 1)
         else
             -- Short
-            vm:SetBodygroup(8, 3)
+            vm:SetBodygroup(10, 3)
         end
     else
-        vm:SetBodygroup(8, 0)
-    end
-    if wep.Attachments[4].Installed == "ud_m16_receiver_usas" then
-        vm:SetBodygroup(0, 1)
-        if vm:GetBodygroup(1) == 1 then
-            vm:SetBodygroup(1, 3)
-        else
-            vm:SetBodygroup(1, 2)
-        end
-        if flipup then
-            vm:SetBodygroup(1, 3)
-            vm:SetBodygroup(10, 1)
-        elseif trueflat or wep.Attachments[1].Installed then
-            vm:SetBodygroup(1, 3)
-            vm:SetBodygroup(10, 0)
-        end
-    elseif barrel == 0 then
-        vm:SetBodygroup(11,0)
-    end
-
-    if wep:GetBuff_Override("KeepRetro") then
-        vm:SetBodygroup(0,0)
-        vm:SetBodygroup(1,0)
-
-        if wep.Attachments[1].Installed then
-            vm:SetBodygroup(3, 1)
-            if barrel == 8 then
-                vm:SetBodygroup(9,1)
-            end
-        end
-        if wep.Attachments[4].Installed == "ud_m16_receiver_usas" then
-            vm:SetBodygroup(0, 1)
-            vm:SetBodygroup(1, 2)
-        elseif wep.Attachments[4].Installed == "ud_m16_receiver_cali" then
-            vm:SetBodygroup(0, 2)
-            vm:SetBodygroup(1, 4)
-        end
+        vm:SetBodygroup(10, 0)
     end
 end
 
@@ -1254,7 +1155,7 @@ SWEP.Attachments = {
     {
         PrintName = "Optic",
         DefaultAttName = "Iron Sights",
-        InstalledEles = {"ud_m16_upper_flat"},
+        InstalledEles = {"upper_flat"},
         Slot = {"optic","sniper_optic","ud_m16_rs"},
         Bone = "m16_parent",
         Offset = {
@@ -1285,7 +1186,7 @@ SWEP.Attachments = {
             vpos = Vector(0.025, -0.05, 30.75),
             vang = Angle(90, 0, -90),
         },
-        ExcludeFlags = {"sd", "m16_usas"},
+        ExcludeFlags = {"sd", "m16_usas", "m16_stub"},
     },
     {
         PrintName = "Receiver",
@@ -1305,8 +1206,8 @@ SWEP.Attachments = {
             vpos = Vector(0, 1.5, 12),
             vang = Angle(90, 0, -90),
         },
-        InstalledEles = {"ud_m16_rail_fg"},
-        ExcludeFlags = {"m16_lmg"},
+        InstalledEles = {"rail_fg"},
+        ExcludeFlags = {"m16_lmg", "m16_stub"},
     },
     {
         PrintName = "Tactical",

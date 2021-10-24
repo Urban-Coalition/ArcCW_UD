@@ -71,6 +71,7 @@ att.Override_ShellScale = 1.7
 att.Override_ShellSounds = ArcCW.ShotgunShellSoundsTable
 
 att.GivesFlags = {"m16_usas"}
+att.ActivateElements = {"hg_usas"}
 
 att.Hook_GetShootSound = function(wep, fsound)
     if fsound == wep.ShootSound or fsound == wep.FirstShootSound then return "weapons/arccw_ud/m1014/fire.ogg" end

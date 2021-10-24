@@ -16,7 +16,7 @@ att.Slot = "ud_m16_barrel"
 att.AutoStats = true
 
 att.Mult_SpeedMult = 0.95
-att.Mult_SightedSpeedMult = 0.75
+att.Mult_SightedSpeedMult = 0.8
 att.Mult_Sway = 1.5
 att.Mult_SightTime = 1.25
 
@@ -24,16 +24,14 @@ att.Mult_RPM = 0.915
 att.Mult_Recoil = 0.7
 att.Mult_RecoilSide = 0.5
 
---att.Mult_HeatDelayTime = 0.5
---att.Mult_HeatDissipation = 1.5
-att.Mult_MalfunctionMean = 1.5
+att.Mult_MalfunctionMean = 2
 
 att.Bipod = true
 att.Override_InBipodPos = Vector(-10, 0, -4)
-att.Mult_BipodDispersion = 0.25
-att.Mult_BipodRecoil = 0.2
+att.Mult_BipodDispersion = 0.2
+att.Mult_BipodRecoil = 0.15
 
-att.ActivateElements = {"ud_m16_barrel_lmg"}
+att.ActivateElements = {"hg_lmg"}
 att.GivesFlags = {"m16_lmg"}
 
 att.LHIK = true

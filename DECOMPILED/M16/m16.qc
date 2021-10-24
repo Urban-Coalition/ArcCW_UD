@@ -54,6 +54,7 @@ $bodygroup "6" {
 	studio "barrels_new/gasblock_m16.smd" //1
 	studio "barrels_new/fs_carbine.smd" //2
 	studio "barrels_new/gasblock_carbine.smd" //4
+	blank
 }
 
 $bodygroup "7" {

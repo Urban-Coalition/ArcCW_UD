@@ -14,6 +14,7 @@ att.Slot = "ud_m16_barrel"
 att.SortOrder = -1
 
 att.AutoStats = true
+att.Hidden = true
 
 --att.Mult_SightTime = 1
 --att.Mult_Recoil = 1
@@ -50,5 +51,5 @@ att.LHIK = true
 
 att.Model = "models/weapons/arccw/atts/stub_lhik.mdl"
 
-att.ActivateElements = {"ud_m16_stub_barrel"}
-att.GivesFlags = {"m16_lmg"}
+att.ActivateElements = {"hg_stub", "barrel_stub"}
+att.GivesFlags = {"m16_stub"}

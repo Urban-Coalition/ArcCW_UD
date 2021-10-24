@@ -49,4 +49,4 @@ att.LHIK = true
 
 att.Model = "models/weapons/arccw/atts/wood_short_lhik.mdl"
 
-att.ActivateElements = {"ud_m16_wood_short_barrel"}
+att.ActivateElements = {"hg_m4a1_wood", "barrel_14"}

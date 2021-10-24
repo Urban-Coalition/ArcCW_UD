@@ -18,23 +18,11 @@ att.Mult_RecoilSide = 1.15
 att.Mult_Recoil = 1.10
 att.Mult_RPM = 1.242
 
-att.Mult_SightedSpeedMult = 1.025
-att.Mult_ShootSpeedMult = 1.025
-
--- att.Override_Firemodes_Priority = -1
--- att.Override_Firemodes = {
---     {
---         Mode = 1,
---     },
---     {
---         Mode = 0
---     }
--- }
+--att.Mult_SightedSpeedMult = 1.025
+--att.Mult_ShootSpeedMult = 1.025
 
 att.LHIK = true
 
 att.Model = "models/weapons/arccw/atts/classic_lhik.mdl"
 
-att.ActivateElements = {"ud_m16_classic_barrel"}
--- att.ExcludeFlags = {"m16_auto"}
--- att.GivesFlags = {"m16_noauto"}
+att.ActivateElements = {"hg_m16a1"}

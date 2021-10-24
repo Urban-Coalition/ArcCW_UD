@@ -36,6 +36,7 @@ $bodygroup "4" {
 	studio "barrels_new/barrel_14.smd" //1
 	studio "barrels_new/barrel_11.smd" //2
 	studio "barrels_old/barrel_SD.smd" //3
+	blank
 }
 
 $bodygroup "5" {
@@ -53,7 +54,7 @@ $bodygroup "6" {
 	studio "barrels_new/fs_m16.smd" //0
 	studio "barrels_new/gasblock_m16.smd" //1
 	studio "barrels_new/fs_carbine.smd" //2
-	studio "barrels_new/gasblock_carbine.smd" //4
+	studio "barrels_new/gasblock_carbine.smd" //3
 	blank
 }
 

@@ -34,7 +34,8 @@ $bodygroup "3" {
 $bodygroup "4" {
 	studio "barrels_new/barrel_20.smd" //0
 	studio "barrels_new/barrel_14.smd" //1
-	studio "barrels_new/barrel_11.smd" //1
+	studio "barrels_new/barrel_11.smd" //2
+	studio "barrels_old/barrel_SD.smd" //3
 }
 
 $bodygroup "5" {
@@ -44,7 +45,8 @@ $bodygroup "5" {
 	studio "barrels_new/hand_lmg.smd" //3
 	studio "barrels_new/hand_carbine.smd" //4
 	studio "barrels_new/hand_riscar.smd" //5
-	studio "barrels_new/hand_fpw.smd" //3
+	studio "barrels_new/hand_fpw.smd" //6
+	blank
 }
 
 $bodygroup "6" {

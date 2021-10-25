@@ -18,4 +18,4 @@ att.Mult_SightedSpeedMult = 1.1
 --att.Mult_Recoil = 1
 --att.Mult_SpeedMult = 1
 
-att.ActivateElements = {"ud_m16_grip_skel"}
+att.ActivateElements = {"grip_skel"}

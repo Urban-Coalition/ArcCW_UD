@@ -16,4 +16,4 @@ att.Mult_SightedSpeedMult = 0.95
 --att.Mult_Recoil = 1
 --att.Mult_SpeedMult = 1
 
-att.ActivateElements = {"ud_m16_grip_wood"}
+att.ActivateElements = {"grip_wood"}

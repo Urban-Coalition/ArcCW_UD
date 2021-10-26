@@ -209,6 +209,9 @@ SWEP.AttachmentElements = {
     ["ud_mini14_mag_15_22lr"] = {
         VMBodygroups = {{ind = 4, bg = 3}},
     },
+	["ud_mini14_mag_30_762"] = {
+        VMBodygroups = {{ind = 4, bg = 6}},
+    },
     ["ud_mini14_rail_optic"] = {
         VMBodygroups = {{ind = 2, bg = 1}},
     },

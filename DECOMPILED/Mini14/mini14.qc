@@ -31,6 +31,7 @@ $bodygroup "4" {
 	studio "mini14_mag_15_22lr.smd"
 	studio "mini14_mag_30_tac.smd"
 	studio "mini14_mag_60.smd"
+	studio "mini14_mag_30_762.smd"
 }
 
 $bodygroup "5" {
@@ -48,6 +49,7 @@ $cdmaterials "models\weapons\arccw\ud_mini14"
 $cdmaterials "models\weapons\arccw\ud_m1014"
 $cdmaterials "models\weapons\arccw\ud_m16"
 $cdmaterials "models\weapons\arccw\ud_common"
+$cdmaterials "models\weapons\arccw\ur_akm"
 
 $attachment "1" "mini14_flash" 0 0 0 rotate -90 0 0
 $attachment "2" "brass" 0 0 -2 rotate -10 140 180

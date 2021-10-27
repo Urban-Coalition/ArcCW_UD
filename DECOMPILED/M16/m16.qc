@@ -89,9 +89,9 @@ $bodygroup "9" {
 
 $bodygroup "10" {
 	blank
-	studio "clamp_fullsize.smd"
-	studio "clamp_stub.smd"
-	studio "clamp_short.smd"
+	studio "barrels_new/clamp_20.smd"
+	studio "barrels_new/clamp_11.smd"
+	studio "barrels_new/clamp_14.smd"
 }
 
 $bodygroup "11" {

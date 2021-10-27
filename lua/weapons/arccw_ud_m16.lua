@@ -360,10 +360,6 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 2, bg = 7}},
     },
 
-    ["rail_fg"] = {
-        VMBodygroups = {{ind = 9, bg = 1}},
-    },
-
     ["upper_flat"] = {
         VMBodygroups = {
             {ind = 1, bg = 1},
@@ -459,7 +455,7 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [5] = {
-                vpos = Vector(0, 1.25, 12),
+                vpos = Vector(-0.1, 1.05, 12),
                 vang = Angle(90, 0, -90),
             },
             [6] = {
@@ -474,7 +470,7 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [5] = {
-                vpos = Vector(0, 1.25, 12),
+                vpos = Vector(-0.1, 1.05, 12),
                 vang = Angle(90, 0, -90),
             },
             [6] = {
@@ -501,6 +497,7 @@ SWEP.AttachmentElements = {
     ["hg_fpw"] = {
         VMBodygroups = {
             {ind = 5, bg = 6},
+            {ind = 6, bg = 4},
         }
     },
     ["hg_m16a1"] = {
@@ -1115,10 +1112,21 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     elseif barrelatt == "ud_m16_barrel_smg" then barrel = 9
     end
 
+    local risbarrel = barrel == 7 or barrel == 8
+
+    if wep.Attachments[5].Installed then
+        vm:SetBodygroup(9,1)
+        if risbarrel then
+            vm:SetBodygroup(9,0)
+        end
+    else
+        vm:SetBodygroup(9,0)
+    end
+
     -- M4A4 flip-up sights
     vm:SetBodygroup(12, flipup and 1 or 0)
 
-    if barrel == 6 then
+    if barrel == 6 or barrel == 10 then
         vm:SetBodygroup(6, 4)
     end
 
@@ -1209,7 +1217,7 @@ SWEP.Attachments = {
         Slot = {"foregrip","ubgl"},
         Bone = "m16_parent",
         Offset = {
-            vpos = Vector(0, 1.5, 12),
+            vpos = Vector(-0.1, 1.25, 12),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"rail_fg"},

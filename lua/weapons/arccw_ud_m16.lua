@@ -217,6 +217,7 @@ local desg_rec = {
     ["ud_m16_receiver_9mm"]         =   2,
     ["ud_m16_receiver_cali"]        =   3,
     ["ud_m16_receiver_usas"]        =   4,
+    ["ud_m16_receiver_semi"]        =   5,
 }
 
 local mftoflat = {
@@ -252,9 +253,11 @@ SWEP.Hook_NameChange = function(wep, name)
         return "Service Carbine"
     end
 
+    --[[]
     if trueNames and wep.Attachments[13].Installed == "ud_fg_civvy" then
         return "AR-15"
     end
+    ]]
 
     local flat = false
     if wep.Attachments[1].Installed or wep.Attachments[14].Installed then flat = true end
@@ -296,6 +299,9 @@ SWEP.Hook_NameChange = function(wep, name)
         elseif rec == 4 then
             model = "USAS"
             alt = "-12"
+        elseif rec == 5 then
+            model = "AR"
+            alt = "-15"
         end
         if barrel == 3 then
             alt = "231 FPW"

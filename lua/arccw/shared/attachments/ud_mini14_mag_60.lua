@@ -32,7 +32,6 @@ att.Mult_DrawTime = 1.15
 att.Mult_HolsterTime = 1.15
 
 att.Override_Malfunction = true
-att.Mult_MalfunctionVariance = 1.25
 
 att.ActivateElements = {"ud_mini14_mag_60"}
 

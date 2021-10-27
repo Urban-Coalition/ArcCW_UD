@@ -37,5 +37,6 @@ end
 
 att.Override_ManualAction = true
 att.Mult_AccuracyMOA = 0.75
-att.Mult_Range = 1.15
+att.Mult_Range = 1.5
+att.Mult_RangeMin = 1.25
 att.Mult_MalfunctionMean = 1.5

@@ -11,7 +11,7 @@ att.Description = "No, using your hacksaw on the barrel is not gunsmithing."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
-    "uc.nofs",
+    --"uc.nofs",
 }
 att.Desc_Neutrals = {
 }
@@ -29,8 +29,10 @@ att.Add_BarrelLength = -8
 
 att.AutoStats = true
 
+--[[]
 att.A_Hook_Add_SightsDispersion = function(wep, data)
     if data and !wep.Attachments[1].Installed then
         data.add = data.add + 100
     end
 end
+]]

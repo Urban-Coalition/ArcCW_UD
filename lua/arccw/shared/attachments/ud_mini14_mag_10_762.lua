@@ -1,13 +1,13 @@
-att.PrintName = "Mini-14 10-Round Flush Mag"
+att.PrintName = "Mini-30 7.62x39mm 10-Round Flush Mag"
 att.AbbrevName = "10-Round Flush Mag"
 
 if !GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "Patriot 809 10-Round Flush Mag"
+    att.PrintName = "Patriot 816 7.62x39mm 10-Round Flush Mag"
 end
 
 att.SortOrder = 10
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
-att.Description = "Low-capacity flush magazine for the Mini-14. The lighter load makes the weapon even more ergonomic."
+att.Description = "Low-capacity flush magazine for the Mini-30. It is much less likely to jam thanks to the low capaacity."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
@@ -23,11 +23,12 @@ att.Mult_ReloadTime = 0.9
 att.Override_ClipSize = 10
 att.Mult_Sway = 0.75
 
+att.Mult_MalfunctionMean = 1.5
+
 att.ActivateElements = {"ud_mini14_mag_10"}
+att.RequireFlags = {"mini14_762"}
+att.HideIfBlocked = true
 
 att.Hook_SelectReloadAnimation = function(wep, anim)
     return anim .. "_10"
 end
-
-att.ExcludeFlags = {"mini14_762", "mini14_22lr"}
-att.HideIfBlocked = true

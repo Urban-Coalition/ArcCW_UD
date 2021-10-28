@@ -24,8 +24,11 @@ att.Override_ClipSize = 30
 att.Mult_Sway = 1.5
 att.Mult_ShootSpeedMult = 0.95
 
-att.ActivateElements = {"ud_mini14_30_mag"}
+att.ActivateElements = {"ud_mini14_mag_30"}
 
 att.Hook_SelectReloadAnimation = function(wep, anim)
     return anim .. "_30"
 end
+
+att.ExcludeFlags = {"mini14_762", "mini14_22lr"}
+att.HideIfBlocked = true

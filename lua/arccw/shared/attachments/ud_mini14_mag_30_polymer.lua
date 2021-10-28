@@ -29,3 +29,6 @@ att.ActivateElements = {"ud_mini14_mag_30_polymer"}
 att.Hook_SelectReloadAnimation = function(wep, anim)
     return anim .. "_30"
 end
+
+att.ExcludeFlags = {"mini14_762", "mini14_22lr"}
+att.HideIfBlocked = true

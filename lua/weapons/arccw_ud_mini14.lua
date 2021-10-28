@@ -527,6 +527,11 @@ SWEP.Attachments = {
         },
     },
     {
+        PrintName = "Receiver",
+        DefaultAttName = "Mini-14 Receiver",
+        Slot = "ud_mini14_receiver",
+    },
+    {
         PrintName = "Underbarrel",
         Slot = {"foregrip"},
         Bone = "mini14_parent",

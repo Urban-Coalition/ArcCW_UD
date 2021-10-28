@@ -29,6 +29,7 @@ $bodygroup "3" {
 	studio "rail_optic.smd"
 	studio "rail_flat_optic.smd"
 	studio "rail_m16_dedicated.smd"
+	studio "rail_optic_colt.smd"
 }
 
 $bodygroup "4" {

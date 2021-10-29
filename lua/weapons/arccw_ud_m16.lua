@@ -489,7 +489,7 @@ SWEP.AttachmentElements = {
     ["hg_fpw"] = {
         VMBodygroups = {
             {ind = 5, bg = 6},
-            {ind = 6, bg = 4},
+            --{ind = 6, bg = 4},
         }
     },
     ["hg_m16a1"] = {
@@ -1126,7 +1126,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     -- M4A4 flip-up sights
     vm:SetBodygroup(12, flipup and 1 or 0)
 
-    if barrel == 6 or taclaser then
+    if barrel == 6 or barrel == 10 or taclaser then
         vm:SetBodygroup(6, 4)
     end
 
@@ -1140,7 +1140,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
             vm:SetBodygroup(1, 1)
             vm:SetBodygroup(3, 3)
             -- Low profile gas block
-            if (!flipup or trueflat) and barrel != 6 then
+            if (!flipup or trueflat) and !(barrel == 10 or barrel == 6) then
                 -- this is handled after elements sets bodygroup so we can do this
                 vm:SetBodygroup(6, vm:GetBodygroup(6) + 1)
             end

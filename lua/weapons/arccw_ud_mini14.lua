@@ -209,7 +209,7 @@ SWEP.AttachmentElements = {
     ["ud_mini14_mag_15_22lr"] = {
         VMBodygroups = {{ind = 4, bg = 3}},
     },
-	["ud_mini14_mag_30_762"] = {
+    ["ud_mini14_mag_30_762"] = {
         VMBodygroups = {{ind = 4, bg = 6}},
     },
     ["ud_mini14_rail_optic"] = {
@@ -224,7 +224,7 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 3, bg = 1}},
         AttPosMods = {
             [3] = {
-                vpos = Vector(0, 0, 5.9),
+                vpos = Vector(0, 0.25, 1.9),
             },
         },
     },
@@ -232,7 +232,7 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 3, bg = 2}},
         AttPosMods = {
             [3] = {
-                vpos = Vector(0, 0, -6),
+                vpos = Vector(0, 0.25, -6),
             },
         },
     },
@@ -240,7 +240,7 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 3, bg = 3}},
         AttPosMods = {
             [3] = {
-                vpos = Vector(0, 0, -10),
+                vpos = Vector(0, 0.25, -9),
             },
         },
     },
@@ -522,9 +522,10 @@ SWEP.Attachments = {
         Slot = {"muzzle"},
         Bone = "mini14_flash",
         Offset = {
-            vpos = Vector(0, 0, -1),
+            vpos = Vector(0, 0.25, -3.5),
             vang = Angle(90, 0, -90),
         },
+        ExcludeFlags = {"nomuzzle"},
     },
     {
         PrintName = "Receiver",
@@ -536,7 +537,7 @@ SWEP.Attachments = {
         Slot = {"foregrip"},
         Bone = "mini14_parent",
         Offset = {
-            vpos = Vector(0, 0.5, 13),
+            vpos = Vector(0, 0, 14),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"ud_mini14_rail_fg"},
@@ -546,7 +547,7 @@ SWEP.Attachments = {
         Slot = {"tac_pistol"},
         Bone = "mini14_parent",
         Offset = {
-            vpos = Vector(0, -1.5, 26.2),
+            vpos = Vector(0, -1.5, 22.3),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"ud_mini14_clamp"},

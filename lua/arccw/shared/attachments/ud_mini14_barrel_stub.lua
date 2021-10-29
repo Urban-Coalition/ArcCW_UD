@@ -12,25 +12,27 @@ att.Desc_Pros = {
 }
 att.Desc_Cons = {
     "uc.nofs",
+    "uc.nomuzzle",
 }
 att.Desc_Neutrals = {
 }
 att.Slot = "ud_mini14_barrel"
 
 att.Mult_SightTime = 0.65
-att.Mult_Recoil = 1.2
+att.Mult_Recoil = 1.25
 att.Mult_AccuracyMOA = 3
-att.Mult_Range = 0.4
+att.Mult_Range = 0.3
 att.Mult_Sway = 0.5
-
-att.Mult_SightedSpeedMult = 1.2
+att.Mult_SightedSpeedMult = 1.25
 
 att.Add_BarrelLength = -8
 
 att.AutoStats = true
 
+att.GivesFlags = {"nomuzzle"}
+
 att.A_Hook_Add_SightsDispersion = function(wep, data)
     if data and !wep.Attachments[1].Installed then
-        data.add = data.add + 100
+        data.add = data.add + 50
     end
 end

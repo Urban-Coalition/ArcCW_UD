@@ -27,3 +27,5 @@ att.Mult_Recoil = 1.25
 -- att.Add_BarrelLength = 32
 
 att.ActivateElements = {"ud_mini14_stock_tactical"}
+
+att.Ignore = true -- where animation

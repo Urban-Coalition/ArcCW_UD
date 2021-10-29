@@ -7,7 +7,7 @@ end
 
 att.SortOrder = 10
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
-att.Description = "Low-capacity flush magazine for the Mini-14. The lighter load makes the weapon even more ergonomic."
+att.Description = "Low-capacity 5.56mm flush magazine. The lighter load makes the weapon even more ergonomic."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

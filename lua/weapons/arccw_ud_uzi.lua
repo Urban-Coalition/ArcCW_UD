@@ -268,6 +268,9 @@ SWEP.AttachmentElements = {
             CrosshairInSights = false
         },
         AttPosMods = {
+            [1] = {
+                vpos = Vector(-0.2, -1.2, -2.5),
+            },
             [3] = {
                 vpos = Vector(0, 0, -5.8),
             },
@@ -284,6 +287,15 @@ SWEP.AttachmentElements = {
         },
     },
 }
+
+SWEP.Hook_ModifyBodygroups = function(wep, data)
+    local vm = data.vm
+    local barrel = wep.Attachments[2].Installed
+
+    if barrel == "ud_uzi_body_micro" and wep.Attachments[1].Installed then
+        vm:SetBodygroup(4, 3)
+    end
+end
 
 -- Animations --
 
@@ -581,7 +593,7 @@ SWEP.Attachments = {
     {
         PrintName = "Optic",
         DefaultAttName = "Iron Sights",
-        Slot = {"optic_lp","optic"},
+        Slot = {"optic_lp"}, -- ,"optic"
         Bone = "uzi_parent",
         Offset = {
             vpos = Vector(-0.2, -1.0, -2.5),

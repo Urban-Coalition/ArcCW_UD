@@ -5,7 +5,7 @@ if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "M16 Model 607 Stock"
 end
 
-att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_m16_stock_607.png", "smooth mips")
 att.Description = "Collapsable combat stock used on the Model 607 SMG. While not very good for point shooting, the stock allows for quick target acquisition when collapsed.\n\nToggling this stock modifies performance accordingly."
 att.Desc_Pros = {
 }

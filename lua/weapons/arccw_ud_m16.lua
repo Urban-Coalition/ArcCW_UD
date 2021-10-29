@@ -361,10 +361,13 @@ SWEP.AttachmentElements = {
     },
 
     ["upper_flat"] = {
+        -- handled by code
+        --[[]
         VMBodygroups = {
             {ind = 1, bg = 1},
             {ind = 3, bg = 3}
         },
+        ]]
     },
 
     ["stock_231_ex"] = {
@@ -1094,6 +1097,7 @@ SWEP.Animations = {
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local flipup = wep.Attachments[1].Installed == "ud_m16_rs"
+    local retro = wep:GetBuff_Override("KeepRetro")
     local trueflat = wep:GetBuff_Override("TrueFlatTop")
     local barrel = 0
     local barrelatt = wep.Attachments[2].Installed
@@ -1131,25 +1135,28 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     end
 
     if wep.Attachments[1].Installed then
-        if vm:GetBodygroup(1) == 1 then
-            -- Flat rail
-            vm:SetBodygroup(3, 3)
-        else
+        if retro then
             -- Raised rail (retro)
+            vm:SetBodygroup(1, 0)
             vm:SetBodygroup(3, 1)
-        end
-        -- Low profile gas block
-        if (!flipup or trueflat) and barrel != 6 then
-            -- this is handled after elements sets bodygroup so we can do this
-            vm:SetBodygroup(6, vm:GetBodygroup(6) + 1)
+        else
+            -- Flat rail
+            vm:SetBodygroup(1, 1)
+            vm:SetBodygroup(3, 3)
+            -- Low profile gas block
+            if (!flipup or trueflat) and barrel != 6 then
+                -- this is handled after elements sets bodygroup so we can do this
+                vm:SetBodygroup(6, vm:GetBodygroup(6) + 1)
+            end
         end
     else
         -- no rails
+        vm:SetBodygroup(1, 0)
         vm:SetBodygroup(3, 0)
     end
 
     -- Tactical clamp
-    if wep.Attachments[6].Installed and barrel != 8 then
+    if wep.Attachments[6].Installed and barrel != 8 and barrel != 6 then
         if barrel == 11 then
             -- Stub
             vm:SetBodygroup(10, 2)

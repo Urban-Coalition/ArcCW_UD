@@ -4,7 +4,9 @@ att.Description = "Give your AN/PEQ a reason to be thin."
 att.Desc_Pros = {}
 att.Desc_Cons = {}
 att.Desc_Neutrals = {
-    "uc.cosmetic"
+    "ud.m16_tl.1",
+    "ud.m16_tl.2",
+    "ud.m16_nors"
 }
 att.Slot = "ud_m16_charm"
 

@@ -334,7 +334,7 @@ SWEP.Hook_NameChange = function(wep, name)
     end
 end
 
-SWEP.DefaultBodyGroups = "000000000000000"
+SWEP.DefaultBodygroups = "000000000000000"
 
 SWEP.AttachmentElements = {
 
@@ -528,7 +528,7 @@ SWEP.AttachmentElements = {
             },
         },
     },
-    ["ud_m16_strap_bo1"] = {
+    ["m16_strap"] = {
         VMBodygroups = {
             {ind = 13, bg = 1},
         },

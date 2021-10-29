@@ -38,6 +38,5 @@ att.ToggleStats = {
     {
         PrintName = "Extended",
         ActivateElements = {"stock_carbine_ex"},
-
     },
 }

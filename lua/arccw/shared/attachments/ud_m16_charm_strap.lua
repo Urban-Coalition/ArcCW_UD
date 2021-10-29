@@ -1,4 +1,5 @@
 att.PrintName = "MACV-SOG Wrapped Sling"
+att.AbbrevName = "Wrapped Sling"
 
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
 att.Description = "Wrap your sling around the weapon to make it look cooler and more commando-like."
@@ -15,4 +16,4 @@ att.AutoStats = true
 att.SortOrder = 1
 att.Free = true
 
-att.ActivateElements = {"ud_m16_strap_bo1"}
+att.ActivateElements = {"m16_strap"}

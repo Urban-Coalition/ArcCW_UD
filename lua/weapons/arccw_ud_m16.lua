@@ -1093,6 +1093,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local flipup = wep.Attachments[1].Installed == "ud_m16_rs"
     local retro = wep:GetBuff_Override("KeepRetro")
     local trueflat = wep:GetBuff_Override("TrueFlatTop")
+    local taclaser = wep:GetBuff_Override("TacLaserPos")
     local barrel = 0
     local short = false
     local barrelatt = wep.Attachments[2].Installed
@@ -1125,7 +1126,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     -- M4A4 flip-up sights
     vm:SetBodygroup(12, flipup and 1 or 0)
 
-    if barrel == 6 or barrel == 10 then
+    if barrel == 6 or taclaser then
         vm:SetBodygroup(6, 4)
     end
 
@@ -1151,7 +1152,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     end
 
     -- Tactical clamp
-    if wep.Attachments[6].Installed and (barrel < 6 or barrel > 8) then
+    if wep.Attachments[6].Installed and (barrel < 6 or barrel > 8) and !taclaser then
         if barrel == 2 or barrel == 11 then
             -- Commando / stub
             vm:SetBodygroup(10, 2)
@@ -1229,6 +1230,7 @@ SWEP.Attachments = {
             vpos = Vector(0, 0.8, 27),
             vang = Angle(90, 0, -90),
         },
+        GivesFlags = {"tac"},
         --InstalledEles = {"ud_m16_clamp_fullsize"}
     },
     {

@@ -22,3 +22,5 @@ att.AdditionalSights = {
 }
 
 att.SortOrder = 1000
+att.TacLaserPos = true
+att.RequireFlags = {"tac"}

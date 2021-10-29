@@ -434,20 +434,14 @@ SWEP.AttachmentElements = {
                 vang = Angle(90, 0, -90),
             },
             [6] = {
-                vpos = Vector(0, 0.8, 20),
-                vang = Angle(90, 0, -90),
+                vpos = Vector(1, 0, 17.9),
+                vang = Angle(90, 0, 0),
             },
         }
     },
     ["barrel_sd"] = {
         VMBodygroups = {
             {ind = 4, bg = 3},
-            {ind = 6, bg = 4},
-        }
-    },
-    ["barrel_stub"] = {
-        VMBodygroups = {
-            {ind = 4, bg = 4},
             {ind = 6, bg = 4},
         }
     },
@@ -477,7 +471,7 @@ SWEP.AttachmentElements = {
                 vang = Angle(90, 0, -90),
             },
             [6] = {
-                vpos = Vector(1.4, -0.5, 15),
+                vpos = Vector(1.1, 0, 14),
                 vang = Angle(90, 0, 0),
             },
         },
@@ -490,12 +484,7 @@ SWEP.AttachmentElements = {
     ["hg_cqbr"] = {
         VMBodygroups = {
             {ind = 5, bg = 4},
-        }
-    },
-    ["hg_smg"] = { -- Doesn't exist yet
-        VMBodygroups = {
-            {ind = 5, bg = 0},
-        }
+        },
     },
     ["hg_fpw"] = {
         VMBodygroups = {
@@ -514,30 +503,9 @@ SWEP.AttachmentElements = {
         },
         VMSkin = 1
     },
-    ["hg_stub"] = {
-        VMBodygroups = {
-            {ind = 5, bg = 7},
-        },
-        AttPosMods = {
-            [3] = {
-                vpos = Vector(0, -0.35, 7),
-                vang = Angle(90, 0, -90),
-            },
-            [6] = {
-                vpos = Vector(1.1, -0.4, 9),
-                vang = Angle(90, 0, 0),
-            },
-        }
-    },
     ["hg_lmg"] = {
         VMBodygroups = {
             {ind = 5, bg = 3},
-        },
-        AttPosMods = {
-            [6] = {
-                vpos = Vector(0, 0.8, 20),
-                vang = Angle(90, 0, -90),
-            },
         }
     },
     ["hg_sd"] = {
@@ -545,9 +513,9 @@ SWEP.AttachmentElements = {
             {ind = 5, bg = 7},
             {ind = 4, bg = 3}
         },
-        AttPosMods = {
+        AttPosMods = { -- no rail, just pretend it's mounted to something
             [6] = {
-                vpos = Vector(0, 0.8, 20),
+                vpos = Vector(0, 0.5, 17.5),
                 vang = Angle(90, 0, -90),
             },
         }
@@ -575,6 +543,32 @@ SWEP.AttachmentElements = {
     },
 
     ---- Cut content
+    ["hg_stub"] = {
+        VMBodygroups = {
+            {ind = 5, bg = 7},
+        },
+        AttPosMods = {
+            [3] = {
+                vpos = Vector(0, -0.35, 7),
+                vang = Angle(90, 0, -90),
+            },
+            [6] = {
+                vpos = Vector(1.1, -0.4, 9),
+                vang = Angle(90, 0, 0),
+            },
+        }
+    },
+    ["barrel_stub"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 4},
+            {ind = 6, bg = 4},
+        }
+    },
+    ["hg_smg"] = {
+        VMBodygroups = {
+            {ind = 5, bg = 0},
+        }
+    },
     ["hg_m4a1_wood"] = {
         VMBodygroups = {
             {ind = 5, bg = 4},
@@ -1100,20 +1094,21 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local retro = wep:GetBuff_Override("KeepRetro")
     local trueflat = wep:GetBuff_Override("TrueFlatTop")
     local barrel = 0
+    local short = false
     local barrelatt = wep.Attachments[2].Installed
 
-    if barrelatt == "ud_m16_barrel_m4" then barrel = 1
+    if barrelatt == "ud_m16_barrel_m4" then barrel = 1 short = true
     elseif barrelatt == "ud_m16_barrel_tactical" then barrel = 7
     elseif barrelatt == "ud_m16_barrel_cqbr" then barrel = 2
-    elseif barrelatt == "ud_m16_barrel_sd" then barrel = 6
-    elseif barrelatt == "ud_m16_barrel_fpw" then barrel = 10
+    elseif barrelatt == "ud_m16_barrel_sd" then barrel = 6 -- specially handled
+    elseif barrelatt == "ud_m16_barrel_fpw" then barrel = 10 short = true
     elseif barrelatt == "ud_m16_barrel_classic" then barrel = 3
     elseif barrelatt == "ud_m16_barrel_wood" then barrel = 3
-    elseif barrelatt == "ud_m16_barrel_wood_short" then barrel = 4
-    elseif barrelatt == "ud_m16_barrel_stub" then barrel = 11
+    elseif barrelatt == "ud_m16_barrel_wood_short" then barrel = 4 short = true
+    elseif barrelatt == "ud_m16_barrel_stub" then barrel = 11 -- specially handled
     elseif barrelatt == "ud_m16_barrel_lmg" then barrel = 5
     elseif barrelatt == "ud_m16_barrel_tactical_a4" then barrel = 8
-    elseif barrelatt == "ud_m16_barrel_smg" then barrel = 9
+    elseif barrelatt == "ud_m16_barrel_smg" then barrel = 9 short = true
     end
 
     local risbarrel = barrel == 7 or barrel == 8
@@ -1156,16 +1151,12 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     end
 
     -- Tactical clamp
-    if wep.Attachments[6].Installed and barrel != 8 and barrel != 6 then
-        if barrel == 11 then
-            -- Stub
+    if wep.Attachments[6].Installed and (barrel < 6 or barrel > 8) then
+        if barrel == 2 or barrel == 11 then
+            -- Commando / stub
             vm:SetBodygroup(10, 2)
-        elseif !barrel or barrel == "" or barrel == 3 then
-            -- Full length
-            vm:SetBodygroup(10, 1)
         else
-            -- Short
-            vm:SetBodygroup(10, 3)
+            vm:SetBodygroup(10, short and 3 or 1)
         end
     else
         vm:SetBodygroup(10, 0)
@@ -1235,7 +1226,7 @@ SWEP.Attachments = {
         Slot = {"tac"},
         Bone = "m16_parent",
         Offset = {
-            vpos = Vector(0, 0.8, 25.4),
+            vpos = Vector(0, 0.8, 27),
             vang = Angle(90, 0, -90),
         },
         --InstalledEles = {"ud_m16_clamp_fullsize"}

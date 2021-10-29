@@ -11,7 +11,7 @@ att.Slot = "ud_m16_grip"
 
 att.AutoStats = true
 
-att.Mult_RecoilSide = 0.9
+att.Mult_RecoilSide = 0.85
 att.Mult_SightedSpeedMult = 0.95
 --att.Mult_Recoil = 1
 --att.Mult_SpeedMult = 1

@@ -26,6 +26,8 @@ att.Mult_Sway = 1.25
 ]]
 att.Mult_Sway = 1.25
 
+att.ToggleSound = "/arccw_uc/common/stockslide.wav"
+
 att.ToggleStats = {
     {
         PrintName = "Collapsed",

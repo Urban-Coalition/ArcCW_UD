@@ -28,6 +28,8 @@ att.Mult_SpeedMult = 1.025
 
 att.Add_BarrelLength = -4
 
+att.ToggleSound = "/arccw_uc/common/stockslide.wav"
+
 att.ToggleStats = {
     {
         PrintName = "Extended",

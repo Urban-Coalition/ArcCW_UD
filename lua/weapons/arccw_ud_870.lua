@@ -290,8 +290,8 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         vm:SetBodygroup(8, 0)
     end
 
-    -- 8rnd tube and sawn off barrel should remove the clamp
-    if vm:GetBodygroup(7) == 1 and vm:GetBodygroup(1) == 2 then
+    -- 8rnd tube and either barrel should remove the clamp
+    if vm:GetBodygroup(7) == 1 and vm:GetBodygroup(1) != 0 then
         vm:SetBodygroup(7, 2)
     end
 end
@@ -349,8 +349,8 @@ SWEP.AttachmentElements = {
     },
     ["ud_870_tube_reduced"] = {
         VMBodygroups = {
-        {ind = 2, bg = 2},
-        {ind = 7, bg = 2}
+            {ind = 2, bg = 2},
+            {ind = 7, bg = 2}
         },
     },
     ["ud_870_tube_ext"] = {

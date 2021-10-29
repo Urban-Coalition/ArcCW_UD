@@ -5,7 +5,7 @@ if GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
-att.Description = "Integrally suppressed short barrel made by hobbyists. Dampens sound effectively, but the suppressor wadds to weapon weight.\nPerformance may degrade with sustained fire."
+att.Description = "Integrally suppressed short barrel made by hobbyists. Dampens sound effectively, but the suppressor adds to weapon weight.\nPerformance may degrade with sustained fire."
 att.Desc_Pros = {
     --"uc.auto"
 }

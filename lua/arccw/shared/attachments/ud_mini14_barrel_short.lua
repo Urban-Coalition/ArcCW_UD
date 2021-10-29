@@ -19,7 +19,7 @@ att.Slot = "ud_mini14_barrel"
 att.Mult_SightTime = 0.8
 att.Mult_Recoil = 1.1
 att.Mult_AccuracyMOA = 1.5
-att.Mult_Range = 0.6
+att.Mult_Range = 0.5
 att.Mult_Sway = 0.75
 
 att.Mult_SightedSpeedMult = 1.1

@@ -1243,6 +1243,7 @@ SWEP.Attachments = {
         PrintName = "Stock",
         Slot = {"ud_m16_stock"},
         DefaultAttName = "Full Stock",
+        DefaultAttIcon= Material("entities/att/acwatt_ud_m16_stock_default.png", "smooth mips"),
         ExcludeFlags = {"m16_usas"},
     },
     {

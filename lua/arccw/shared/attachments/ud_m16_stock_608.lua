@@ -5,7 +5,7 @@ if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "M16 Model 608 Stock"
 end
 
-att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_m16_stock_608.png", "smooth mips")
 att.Description = "Stock used on the Model 608 survival rifle. Essentially an elongated buffer tube with a cap. Improves point shooting abilities."
 att.Desc_Pros = {
 }

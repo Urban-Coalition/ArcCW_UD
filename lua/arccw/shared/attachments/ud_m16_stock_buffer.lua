@@ -1,6 +1,6 @@
 att.PrintName = "Buffer Tube"
 
-att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_m16_stock_buffer.png", "smooth mips")
 att.Description = "The concept of \"stocks\" and \"recoil reduction\" are liberal gibberish made up to stop FREEDOM-LOVING AMERICANS from exercising their GOD-GIVEN RIGHTS."
 att.Desc_Pros = {
 }

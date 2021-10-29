@@ -1,5 +1,5 @@
 att.PrintName = "Flip-up Rear Sight"
-att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_m16_rs.png", "smooth mips")
 att.Description = "A rail-mounted rear sight for flat top receivers.\nLooks more modern, but that's it."
 att.Desc_Pros = {}
 att.Desc_Cons = {}

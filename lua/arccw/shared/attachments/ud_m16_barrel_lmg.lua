@@ -4,7 +4,7 @@ if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "20\" Colt LMG Barrel"
 end
 
-att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_m16_barrel_lmg.png", "smooth mips")
 att.Description = "Heavy duty handguard with built-in bipod and foregrip, sporting improved durability and recoil control for sustained automatic fire."
 att.Desc_Pros = {}
 att.Desc_Cons = {

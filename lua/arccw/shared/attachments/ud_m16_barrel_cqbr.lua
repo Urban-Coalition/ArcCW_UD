@@ -1,5 +1,10 @@
-att.PrintName = "10\" M4 Commando Barrel"
-att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
+att.PrintName = "10\" Commando Barrel"
+
+if GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "10\" M4 Commando Barrel"
+end
+
+att.Icon = Material("entities/att/acwatt_ud_m16_barrel_cqbr.png", "smooth mips")
 att.Description = "Short barrel of a length emulating the CAR-15 assault rifle. Technically classified as a submachine gun, it offers relatively high fire rates at the cost of range."
 att.Desc_Pros = {
     --"uc.auto"

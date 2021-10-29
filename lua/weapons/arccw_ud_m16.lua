@@ -1182,6 +1182,7 @@ SWEP.Attachments = {
     {
         PrintName = "Barrel",
         DefaultAttName = "20\" Standard Barrel",
+        DefaultAttIcon = Material("entities/att/acwatt_ud_m16_barrel_default.png", "smooth mips"),
         Slot = "ud_m16_barrel",
         Bone = "m16_parent",
         Offset = {

@@ -1,7 +1,11 @@
-att.PrintName = "20\" Classic A1 Barrel"
+att.PrintName = "20\" Prototype Barrel"
 
-att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
-att.Description = "Classic triangular handguard from the M16A1. It was changed for a reason as it doesn't have as good of a grip as the A2 Ribbed Handguard, it however can withstand automatic fire much better than the new one."
+if GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "20\" Classic A1 Barrel"
+end
+
+att.Icon = Material("entities/att/acwatt_ud_m16_barrel_classic.png", "smooth mips")
+att.Description = "Classic triangular handguard. Replaced by the more iconic and easier to grip ribbed handguard, this barrel can nevertheless withstand automatic fire a lot better."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

@@ -20,8 +20,8 @@ att.Slot = "ud_m16_receiver"
 att.AutoStats = true
 
 att.Mult_RPM = 600 / 900
-att.Mult_Recoil = 0.9
-att.Mult_AccuracyMOA = 0.5
+att.Mult_Recoil = 0.85
+att.Mult_AccuracyMOA = 0.75
 att.Mult_Range = 1.25
 att.Mult_MoveDispersion = 0.75
 

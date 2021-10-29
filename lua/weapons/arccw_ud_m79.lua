@@ -277,28 +277,30 @@ SWEP.AttachmentElements = {
     ["m79_pirategun"] = {
         VMBodygroups = {{ind = 0, bg = 1}},
     },
-
-    ["m79_nade_1gaugeshell"] = {
-        VMBodygroups = {{ind = 1, bg = 1}},
-    },
-    ["m79_nade_1gaugeshell_empty"] = {
-        VMBodygroups = {{ind = 1, bg = 2}},
-    },
-    ["m79_nade_caseless"] = {
-        VMBodygroups = {{ind = 1, bg = 3}},
-    },
-    ["m79_nade_hornetnest"] = {
-        VMBodygroups = {{ind = 1, bg = 4}},
-    },
-    ["m79_nade_incendiary"] = {
-        VMBodygroups = {{ind = 1, bg = 5}},
-    },
     ["m79_nostock"] = {
         VMBodygroups = {{ind = 2, bg = 1}},
     },
-
     ["m79_rail"] = {
         VMBodygroups = {{ind = 3, bg = 1}},
+    },
+
+    ["40mm_buckshot"] = {
+        VMBodygroups = {{ind = 1, bg = 1}},
+    },
+    ["40mm_buckshot_empty"] = {
+        VMBodygroups = {{ind = 1, bg = 2}},
+    },
+    ["40mm_caseless"] = {
+        VMBodygroups = {{ind = 1, bg = 3}},
+    },
+    ["40mm_hornetnest"] = {
+        VMBodygroups = {{ind = 1, bg = 4}},
+    },
+    ["40mm_incendiary"] = {
+        VMBodygroups = {{ind = 1, bg = 5}},
+    },
+    ["40mm_napalm"] = {
+        VMBodygroups = {{ind = 1, bg = 5}},
     },
 }
 
@@ -315,8 +317,8 @@ SWEP.Attachments = {
         InstalledEles = {"m79_rail"},
     },
     {
-        PrintName = "Barrel",
-        DefaultAttName = "Standard Barrel",
+        PrintName = "Tube",
+        DefaultAttName = "Standard Tube",
         Slot = "ud_m79_barrel",
         Bone = "m79_front",
         Offset = {

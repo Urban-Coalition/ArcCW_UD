@@ -1,8 +1,8 @@
-att.PrintName = "AMSGL Short Barrel"
-att.AbbrevName = "Short Barrel"
+att.PrintName = "AMSGL Short Tube"
+att.AbbrevName = "Short Tube"
 
 if GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "M79 Short Barrel"
+    att.PrintName = "M79 Short Tube"
 end
 
 att.Icon = nil

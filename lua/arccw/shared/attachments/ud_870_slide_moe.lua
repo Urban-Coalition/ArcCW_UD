@@ -6,7 +6,7 @@ if GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
-att.Description = "A lightweight polymer forend. Faster to cycle but harder to grip on, increasing both fire rate and recoil."
+att.Description = "A lightweight polymer forend. Easier to cycle but harder to grip on, increasing both fire rate and recoil."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

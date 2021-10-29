@@ -1,5 +1,5 @@
 att.PrintName = "Skeletonized Grip"
-att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_m16_grip_skel.png", "smooth mips")
 att.Description = "Lightweight grip, marginally reducing weapon weight."
 att.Desc_Pros = {
 }

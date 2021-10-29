@@ -1205,6 +1205,7 @@ SWEP.Attachments = {
     {
         PrintName = "Receiver",
         DefaultAttName = "Standard Receiver",
+        DefaultAttIcon = Material("entities/att/acwatt_ud_m16_receiver_default.png", "smooth mips"),
         Slot = {"ud_m16_receiver"},
         Bone = "m16_parent",
         Offset = {
@@ -1237,19 +1238,21 @@ SWEP.Attachments = {
     {
         PrintName = "Grip Type",
         Slot = {"ud_m16_grip"},
-        DefaultAttName = "A2 Pistol Grip",
+        DefaultAttName = "Standard Grip",
+        DefaultAttIcon = Material("entities/att/acwatt_ud_m16_grip_default.png", "smooth mips"),
     },
     {
         PrintName = "Stock",
         Slot = {"ud_m16_stock"},
         DefaultAttName = "Full Stock",
-        DefaultAttIcon= Material("entities/att/acwatt_ud_m16_stock_default.png", "smooth mips"),
+        DefaultAttIcon = Material("entities/att/acwatt_ud_m16_stock_default.png", "smooth mips"),
         ExcludeFlags = {"m16_usas"},
     },
     {
         PrintName = "Magazine",
         Slot = {"ud_m16_mag"},
         DefaultAttName = "30-Round Mag",
+        DefaultAttIcon = Material("entities/att/acwatt_ud_m16_mag_30.png", "smooth mips"),
     },
     {
         PrintName = "Ammo Type",

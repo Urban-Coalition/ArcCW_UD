@@ -1,5 +1,5 @@
 att.PrintName = "Ergonomic Grip"
-att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_m16_grip_ergo.png", "smooth mips")
 att.Description = "Polymer grip with a comfortable shape, enabling faster handling."
 att.Desc_Pros = {
 }

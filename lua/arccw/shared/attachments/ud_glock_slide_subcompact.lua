@@ -5,7 +5,7 @@ if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "Glock 26 Subcompact Slide"
 end
 
-att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_glock_slide_subcompact.png", "smooth mips")
 att.Description = "Shortest available slide, popular for concealed carry.\nReduced length means less holster to clear and improved handling, but more muzzle rise and terrible effective range."
 att.Desc_Pros = {
 }

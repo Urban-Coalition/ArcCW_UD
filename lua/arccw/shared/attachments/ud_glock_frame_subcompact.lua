@@ -5,7 +5,7 @@ if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "Glock 26 Subcompact Frame"
 end
 
-att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_glock_frame_subcompact.png", "smooth mips")
 att.Description = "A smaller frame that is noticably shorter on the magwell.\nFast to handle, but the smaller grip surface affects recoil control."
 att.Desc_Pros = {
     "ud.glock.subcompact"

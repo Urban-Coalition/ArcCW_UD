@@ -6,7 +6,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.SortOrder = 33
-att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_glock_mag_33.png", "smooth mips")
 att.Description = "Extended stick magazine. Heavier and throws off weapon balance, but does allow you to fire for longer."
 att.Desc_Pros = {}
 att.Desc_Cons = {}

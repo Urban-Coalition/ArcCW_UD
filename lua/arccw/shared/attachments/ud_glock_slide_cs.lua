@@ -5,7 +5,7 @@ if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "G18C Op. CS Slide"
 end
 
-att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_glock_slide_cs.png", "smooth mips")
 att.Description = "Custom-made 3 round burst slide, used by various counter-terrorism units and 'agents' around the world. The standard-length magazines are also tweaked for increased capacity."
 att.Desc_Pros = {
     "uc.3burst",

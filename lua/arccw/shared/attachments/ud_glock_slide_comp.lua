@@ -5,7 +5,7 @@ if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "Glock 17 Competition Slide"
 end
 
-att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_glock_slide_comp.png", "smooth mips")
 att.Description = "Custom slide with side vents and ring sight. Improves sighting time and straightens recoil."
 att.Desc_Pros = {
 }

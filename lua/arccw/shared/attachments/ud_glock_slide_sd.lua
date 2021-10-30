@@ -5,7 +5,7 @@ if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "G17SD Hush Puppy Slide"
 end
 
-att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_glock_slide_sd.png", "smooth mips")
 att.Description = "A slide with an integrated silencer installed. A slide lock system can prevent the weapon from cycling when fired, reducing its audible report even further."
 att.Desc_Pros = {
     "uc.invistracer"

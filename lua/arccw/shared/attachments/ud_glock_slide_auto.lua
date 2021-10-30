@@ -5,7 +5,7 @@ if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "Glock 18C Auto Slide"
 end
 
-att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_glock_slide_auto.png", "smooth mips")
 att.Description = "An automatic slide capable of a very high rate of fire. Compensator cuts at the top improve recoil control, although that does not change the fact that this is a hell of a bullet nozzle."
 att.Desc_Pros = {
     "uc.auto",

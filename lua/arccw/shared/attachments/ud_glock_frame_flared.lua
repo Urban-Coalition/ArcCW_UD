@@ -5,7 +5,7 @@ if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "Glock 17 Flared Frame"
 end
 
-att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_glock_frame_flared.png", "smooth mips")
 att.Description = "Custom frame with a flared magwell to facilitate faster reloads. The extra weight slows down handling by a bit."
 att.Desc_Pros = {
 }

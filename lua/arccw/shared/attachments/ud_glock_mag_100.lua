@@ -6,7 +6,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.SortOrder = 100
-att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_glock_mag_100.png", "smooth mips")
 att.Description = "Twin-drum magazine ideal for suppressive fire (a nicer way to say \"mag dump\"). Bulky construction and high ammo capacity substantially increases weight and shifts the weapon's center of balance. Prone to jamming."
 att.Desc_Pros = {}
 att.Desc_Cons = {

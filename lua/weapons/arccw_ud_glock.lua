@@ -900,11 +900,13 @@ SWEP.Attachments = {
     {
         PrintName = "Slide",
         DefaultAttName = "Standard Slide",
+        DefaultAttIcon = Material("entities/att/acwatt_ud_glock_slide.png", "smooth mips"),
         Slot = "ud_glock_slide",
     },
     {
         PrintName = "Frame",
         DefaultAttName = "Standard Frame",
+        DefaultAttIcon = Material("entities/att/acwatt_ud_glock_frame.png", "smooth mips"),
         Slot = "ud_glock_frame",
     },
     {
@@ -948,6 +950,7 @@ SWEP.Attachments = {
     {
         PrintName = "Magazine",
         Slot = {"ud_glock_mag"},
+        DefaultAttIcon = Material("entities/att/acwatt_ud_glock_mag_17.png", "smooth mips"),
         DefaultAttName = "17-Round Mag",
     },
     {

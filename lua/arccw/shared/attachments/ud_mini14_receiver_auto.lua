@@ -38,6 +38,8 @@ att.Override_Firemodes = {
     }
 }
 
+att.ActivateElements = {"ud_mini14_receiver_auto"}
+
 att.Mult_RPM = 750 / 540
 
 att.Mult_RecoilSide = 1.5

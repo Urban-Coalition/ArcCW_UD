@@ -245,6 +245,19 @@ SWEP.AttachmentElements = {
         },
     },
 
+    ["ud_mini14_receiver_762"] = {
+        TrueNameChange = "Mini-30",
+        NameChange = "Patriot 816"
+    },
+    ["ud_mini14_receiver_auto"] = {
+        TrueNameChange = "AC-556",
+        NameChange = "Patriot ACC"
+    },
+    ["ud_mini14_receiver_22lr"] = {
+        TrueNameChange = "Mini-14 .22 LR",
+        NameChange = "Patriot 822"
+    },
+
     ["ud_mini14_stock_polymer"] = {
         VMBodygroups = {{ind = 1, bg = 1}},
     },

@@ -27,7 +27,7 @@ att.Mult_ShootSpeedMult = 0.9
 att.ActivateElements = {"ud_mini14_mag_30_polymer"}
 
 att.Hook_SelectReloadAnimation = function(wep, anim)
-    return anim .. "_30"
+    return anim .. "_30_tac"
 end
 
 att.ExcludeFlags = {"mini14_762", "mini14_22lr"}

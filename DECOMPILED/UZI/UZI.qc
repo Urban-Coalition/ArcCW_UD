@@ -48,6 +48,7 @@ $bodygroup "6" {
 	studio "uzi_clamp_micro.smd"
 }
 
+
 $cdmaterials "models\weapons\arccw\ud_uzi"
 $cdmaterials "models\weapons\arccw\ud_m1014"
 $cdmaterials "models\weapons\arccw\ud_common"
@@ -59,8 +60,8 @@ $attachment "3" "camera" 0 0 0 rotate 0 0 0
 $surfaceprop "weapon"
  
 $contents "solid"
- 
-$illumposition 0 0 0
+
+$illumposition -3.5 -18.5 -6
 
 $poseparameter "sights" 0 1 loop 0
 

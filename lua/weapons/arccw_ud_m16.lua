@@ -173,7 +173,7 @@ SWEP.CustomizeAng = Angle(15, 25, 0)
 SWEP.CrouchPos = Vector(-2.5, -2, -0.6)
 SWEP.CrouchAng = Angle(0, 0, -14)
 
-SWEP.BarrelOffsetHip = Vector(0, 0, -3)
+SWEP.BarrelOffsetHip = Vector(2, 0, -5)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {

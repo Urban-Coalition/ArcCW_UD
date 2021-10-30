@@ -44,3 +44,5 @@ att.Mult_RecoilSide = 1.5
 att.Mult_HipDispersion = 1.25
 att.Mult_AccuracyMOA = 2
 att.Mult_ShootSpeedMult = 0.85
+att.Mult_MalfunctionMean = 0.75
+att.Mult_MalfunctionVariance = 1.25

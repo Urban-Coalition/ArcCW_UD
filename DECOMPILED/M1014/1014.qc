@@ -32,15 +32,15 @@ $attachment "1" "1014_flash" 0 0 0 rotate -90 0 0
 $attachment "2" "brass" 0 0 0 rotate -10 140 180
 $attachment "3" "camera" 0 0 0 rotate 0 0 0
  
-$surfaceprop "default"
+$surfaceprop "weapon"
  
 $contents "solid"
  
-$illumposition 0 0 0
+$illumposition 1 -1.0 0 "brass"
 
-$bbox 0 0 0 0 0 0
+// $bbox 0 0 0 0 0 0
  
-$cbox 0 0 0 0 0 0
+// $cbox 0 0 0 0 0 0
 
 $poseparameter "sights" 0 1 loop 0
 
@@ -195,3 +195,9 @@ $bonemerge "ValveBiped.Bip01_R_Finger12"
 $bonemerge "ValveBiped.Bip01_R_Finger0"
 $bonemerge "ValveBiped.Bip01_R_Finger01"
 $bonemerge "ValveBiped.Bip01_R_Finger02"
+
+$collisionmodel "c_ud_m1014_physics.smd"
+{
+	$mass 5
+	$masscenter 19.36 -2.22 -5.43
+}

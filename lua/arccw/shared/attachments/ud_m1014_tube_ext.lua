@@ -5,7 +5,7 @@ if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "M4 Super 90 7 Shell Tube"
 end
 
-att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_m1014_tube_ext.png", "smooth mips")
 att.Description = "Extended shell tube that adds weight to the weapon."
 att.Desc_Pros = {}
 att.Desc_Cons = {}

@@ -1,5 +1,5 @@
 att.PrintName = "Collapsed Stock"
-att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_m1014_stock_in.png", "smooth mips")
 att.Description = "Pushing in the collapsable stock makes the weapon significantly shorter, allowing for easier use around corners and making it easier on the move at the cost of less stability."
 att.Desc_Pros = {
 }

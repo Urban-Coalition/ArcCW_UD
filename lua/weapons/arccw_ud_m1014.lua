@@ -314,7 +314,7 @@ SWEP.Attachments = {
     {
         PrintName = "Optic",
         DefaultAttName = "Iron Sights",
-        Slot = {"optic_lp","optic","sniper_optic"},
+        Slot = {"optic_lp", "optic", "sniper_optic"},
         Bone = "1014_parent",
         Offset = {
             vpos = Vector(0, -2, 5),
@@ -324,6 +324,7 @@ SWEP.Attachments = {
     {
         PrintName = "Barrel",
         DefaultAttName = "18.5\" M4 Barrel", --16\" M4 Super 90 SBS Barrel
+        DefaultAttIcon = Material("entities/att/acwatt_ud_m1014_barrel.png", "smooth mips"),
         Slot = "ud_1014_barrel",
     },
     {
@@ -359,11 +360,13 @@ SWEP.Attachments = {
         PrintName = "Stock",
         Slot = {"ud_1014_stock"},
         DefaultAttName = "Extended Stock",
+        DefaultAttIcon = Material("entities/att/acwatt_ud_m1014_stock.png", "smooth mips"),
     },
     {
         PrintName = "Tube Type",
         Slot = {"ud_1014_tube"},
         DefaultAttName = "4 Shell Tube",
+        DefaultAttIcon = Material("entities/att/acwatt_ud_m1014_tube.png", "smooth mips"),
         DefaultEles = {"ud_autoshotgun_tube_short"},
     },
     {

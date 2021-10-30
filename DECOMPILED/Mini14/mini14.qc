@@ -55,15 +55,11 @@ $attachment "1" "mini14_flash" 0 0 0 rotate -90 0 0
 $attachment "2" "brass" 0 0 -2 rotate -10 140 180
 $attachment "3" "camera" 0 0 0 rotate 0 0 0
  
-$surfaceprop "default"
+$surfaceprop "weapon"
  
 $contents "solid"
  
-$illumposition 0 0 0
-
-$bbox 0 0 0 0 0 0
- 
-$cbox 0 0 0 0 0 0
+$illumposition 0 -1 2 "brass"
 
 $poseparameter "sights" 0 1 loop 0
 
@@ -252,6 +248,35 @@ $sequence "unjam" {
 	fps 30
 }
 
+$sequence "reload_60" {
+	"anims\reload_60.smd"
+	"anims\reload_iron_30.smd"
+	fps 30
+	"ACT_VM_RELOAD" 1
+	blend "sights" 0 1
+	snap
+	{ event 5004 0 "Start" }
+	{ event 5004 11 "MagOut" }
+	{ event 5004 29 "MagDrops" }
+	{ event 5004 45 "Magin" }
+	{ event 5004 60 "StockHitsShoulder" }
+}
+
+$sequence "reload_empty_60" {
+	"anims\reload_empty_60.smd"
+	"anims\reload_empty_iron_30.smd"
+	fps 30
+	"ACT_VM_RELOAD" 1
+	blend "sights" 0 1
+	snap
+	{ event 5004 0 "Start" }
+	{ event 5004 11 "MagOut" }
+	{ event 5004 45 "Magin" }
+	{ event 5004 56 "BoltBack" }
+	{ event 5004 61 "BoltForward" }
+	{ event 5004 77 "StockHitsShoulder" }
+}
+
 $bonemerge "ValveBiped.Bip01_Spine4"
 $bonemerge "ValveBiped.Bip01_L_Clavicle"
 $bonemerge "ValveBiped.Bip01_L_UpperArm"
@@ -292,3 +317,8 @@ $bonemerge "ValveBiped.Bip01_R_Finger12"
 $bonemerge "ValveBiped.Bip01_R_Finger0"
 $bonemerge "ValveBiped.Bip01_R_Finger01"
 $bonemerge "ValveBiped.Bip01_R_Finger02"
+
+$collisionmodel "mini14_col.smd"
+{
+	$mass 5
+}

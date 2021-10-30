@@ -32,15 +32,11 @@ $cdmaterials "models\weapons\arccw\ud_common"
 $attachment "1" "m79_barrel" 0 0 0 rotate -90 0 0
 $attachment "2" "camera" 0 0 0 rotate 0 0 0
  
-$surfaceprop "default"
+$surfaceprop "weapon"
  
 $contents "solid"
  
-$illumposition 0 0 0
-
-$bbox 0 0 0 0 0 0
- 
-$cbox 0 0 0 0 0 0
+$illumposition 0 0 -15 "m79_barrel"
 
 $poseparameter "sights" 0 1 loop 0
 
@@ -128,3 +124,8 @@ $bonemerge "ValveBiped.Bip01_R_Finger12"
 $bonemerge "ValveBiped.Bip01_R_Finger0"
 $bonemerge "ValveBiped.Bip01_R_Finger01"
 $bonemerge "ValveBiped.Bip01_R_Finger02"
+
+$collisionmodel "m79_col.smd"
+{
+	$mass 6
+}

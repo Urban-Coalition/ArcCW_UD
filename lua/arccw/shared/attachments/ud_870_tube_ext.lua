@@ -6,7 +6,7 @@ if GetConVar("arccw_truenames"):GetBool() then
 end
 
 
-att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_870_tube_ext.png", "smooth mips")
 att.Description = "Longer shell tube holding more rounds, but increases weapon weight."
 att.Desc_Pros = {}
 att.Desc_Cons = {}

@@ -56,8 +56,8 @@ att.Override_Firemodes = {
         Mult_AccuracyMOA = 0.75
     },
     {
-        Mode = 0,
         PrintName = "fcg.safe2",
+        Mode = 0,
     }
 }
 

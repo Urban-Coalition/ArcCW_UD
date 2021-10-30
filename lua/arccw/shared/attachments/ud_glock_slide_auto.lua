@@ -38,7 +38,7 @@ att.Override_Firemodes = {
         Mode = 1,
     },
     {
-        PrintName = "Low",
+        PrintName = "fcg.safe2",
         Mode = 0,
     }
 }

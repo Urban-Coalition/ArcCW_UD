@@ -31,5 +31,5 @@ att.RequireFlags = {"mini14_762"}
 att.HideIfBlocked = true
 
 att.Hook_SelectReloadAnimation = function(wep, anim)
-    return anim .. "_30"
+    return anim .. "_762"
 end

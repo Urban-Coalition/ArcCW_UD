@@ -59,7 +59,7 @@ $surfaceprop "weapon"
  
 $contents "solid"
 
-$illumposition 21.77 -4.61 -6.45
+$illumposition -4.61 -21.77 -6.45
 
 $cbox 0 0 0 0 0 0
 
@@ -266,6 +266,36 @@ $sequence "reload_60" {
 
 $sequence "reload_empty_60" {
 	"anims\reload_empty_60.smd"
+	"anims\reload_empty_iron_30.smd"
+	fps 30
+	"ACT_VM_RELOAD" 1
+	blend "sights" 0 1
+	snap
+	{ event 5004 0 "Start" }
+	{ event 5004 11 "MagOut" }
+	{ event 5004 45 "Magin" }
+	{ event 5004 56 "BoltBack" }
+	{ event 5004 61 "BoltForward" }
+	{ event 5004 77 "StockHitsShoulder" }
+}
+
+
+$sequence "reload_762" {
+	"anims\reload_762.smd"
+	"anims\reload_iron_30.smd"
+	fps 30
+	"ACT_VM_RELOAD" 1
+	blend "sights" 0 1
+	snap
+	{ event 5004 0 "Start" }
+	{ event 5004 11 "MagOut" }
+	{ event 5004 29 "MagDrops" }
+	{ event 5004 45 "Magin" }
+	{ event 5004 60 "StockHitsShoulder" }
+}
+
+$sequence "reload_empty_762" {
+	"anims\reload_empty_762.smd"
 	"anims\reload_empty_iron_30.smd"
 	fps 30
 	"ACT_VM_RELOAD" 1

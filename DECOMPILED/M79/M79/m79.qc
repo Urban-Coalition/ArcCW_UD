@@ -36,7 +36,7 @@ $surfaceprop "weapon"
  
 $contents "solid"
  
-$illumposition 0 0 0
+$illumposition -3.6 -20 -3.5
 
 $cbox 0 0 0 0 0 0
 

@@ -5,7 +5,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "STAP Wooden Stock"
 end
 
-att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_uzi_stock_solid.png", "smooth mips")
 att.Description = "A solid, non-foldable stock made of wood. Old-fashioned and very sturdy, though less compact."
 att.Desc_Pros = {}
 att.Desc_Cons = {}

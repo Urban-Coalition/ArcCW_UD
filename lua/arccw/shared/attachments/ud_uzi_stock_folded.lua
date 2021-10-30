@@ -1,5 +1,5 @@
 att.PrintName = "Folded Stock"
-att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_uzi_stock_folded.png", "smooth mips")
 att.Description = "Tuck in the folding stock, making the weapon easier to manuver but less controllable."
 att.Desc_Pros = {
 }

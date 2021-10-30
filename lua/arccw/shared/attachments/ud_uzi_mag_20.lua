@@ -6,7 +6,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.SortOrder = 20
-att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_uzi_mag_20.png", "smooth mips")
 att.Description = "Low-capacity flush magazine. The lighter load makes the weapon more ergonomic."
 att.Desc_Pros = {
 }

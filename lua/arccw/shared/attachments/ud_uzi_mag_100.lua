@@ -7,7 +7,7 @@ end
 
 
 att.SortOrder = 100
-att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_uzi_mag_100.png", "smooth mips")
 att.Description = "Twin-drum magazine for the Uzi. Allows for a long period between reloads, but harms the weapon's ergonomics significantly. Prone to jamming."
 att.Desc_Pros = {
 }

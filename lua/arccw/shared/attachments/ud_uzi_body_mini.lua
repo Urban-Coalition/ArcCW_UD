@@ -5,7 +5,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "STAP 8\" Mini Barrel"
 end
 
-att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_uzi_body_mini.png", "smooth mips")
 att.Description = "Compact frame with a higher firerate."
 att.Desc_Pros = {
 }

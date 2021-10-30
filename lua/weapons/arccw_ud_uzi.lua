@@ -605,6 +605,7 @@ SWEP.Attachments = {
     {
         PrintName = "Barrel",
         DefaultAttName = "10\" Standard Barrel",
+        DefaultAttIcon = Material("entities/att/acwatt_ud_uzi_body.png", "smooth mips"),
         Slot = "ud_uzi_frame",
         Bone = "uzi_parent",
         Offset = {
@@ -646,12 +647,14 @@ SWEP.Attachments = {
         PrintName = "Stock",
         Slot = {"ud_uzi_stock"},
         DefaultAttName = "Folding Stock",
+        DefaultAttIcon = Material("entities/att/acwatt_ud_uzi_stock.png", "smooth mips"),
         ExcludeFlags = {"micro"},
     },
     {
         PrintName = "Magazine",
         Slot = {"ud_uzi_mag"},
         DefaultAttName = "32-Round Mag",
+        DefaultAttIcon = Material("entities/att/acwatt_ud_uzi_mag_32.png", "smooth mips"),
     },
     {
         PrintName = "Ammo Type",

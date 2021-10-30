@@ -503,6 +503,12 @@ SWEP.AttachmentElements = {
         },
         VMSkin = 1
     },
+    ["hg_m607"] = {
+        VMBodygroups = {
+            {ind = 5, bg = 1},
+            {ind = 4, bg = 1},
+        }
+    },
     ["hg_lmg"] = {
         VMBodygroups = {
             {ind = 5, bg = 3},

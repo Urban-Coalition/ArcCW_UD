@@ -64,11 +64,11 @@ $surfaceprop "default"
  
 $contents "solid"
  
-$illumposition 0 0 0
+$illumposition 0.6 -0.5 4 "brass"
 
-$bbox 0 0 0 0 0 0
+// $bbox 0 0 0 0 0 0
  
-$cbox 0 0 0 0 0 0
+// $cbox 0 0 0 0 0 0
 
 $poseparameter "sights" 0 1 loop 0
 
@@ -200,3 +200,8 @@ $bonemerge "ValveBiped.Bip01_R_Finger12"
 $bonemerge "ValveBiped.Bip01_R_Finger0"
 $bonemerge "ValveBiped.Bip01_R_Finger01"
 $bonemerge "ValveBiped.Bip01_R_Finger02"
+
+$collisionmodel "870_col.smd"
+{
+	$mass 5
+}

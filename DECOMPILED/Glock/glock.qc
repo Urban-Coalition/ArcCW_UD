@@ -49,7 +49,9 @@ $surfaceprop "weapon"
  
 $contents "solid"
  
-$illumposition 0.25 -0.5 1 "brass"
+$illumposition 0 0 0
+
+$cbox 0 0 0 0 0 0
 
 $poseparameter "sights" 0 1 loop 0
 

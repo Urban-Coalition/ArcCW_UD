@@ -36,7 +36,9 @@ $surfaceprop "weapon"
  
 $contents "solid"
  
-$illumposition 0 0 -15 "m79_barrel"
+$illumposition 0 0 0
+
+$cbox 0 0 0 0 0 0
 
 $poseparameter "sights" 0 1 loop 0
 
@@ -128,4 +130,8 @@ $bonemerge "ValveBiped.Bip01_R_Finger02"
 $collisionmodel "m79_col.smd"
 {
 	$mass 6
+	$inertia 1
+	$damping 0
+	$rotdamping 0
+	$rootbone " "
 }

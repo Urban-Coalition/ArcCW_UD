@@ -64,11 +64,9 @@ $surfaceprop "weapon"
  
 $contents "solid"
  
-$illumposition 0.6 -0.5 4 "brass"
+$illumposition 0 0 0
 
-// $bbox 0 0 0 0 0 0
- 
-// $cbox 0 0 0 0 0 0
+$cbox 0 0 0 0 0 0
 
 $poseparameter "sights" 0 1 loop 0
 
@@ -204,4 +202,8 @@ $bonemerge "ValveBiped.Bip01_R_Finger02"
 $collisionmodel "870_col.smd"
 {
 	$mass 5
+	$inertia 1
+	$damping 0
+	$rotdamping 0
+	$rootbone " "
 }

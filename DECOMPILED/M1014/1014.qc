@@ -36,11 +36,7 @@ $surfaceprop "weapon"
  
 $contents "solid"
  
-$illumposition 1 -1.0 0 "brass"
-
-// $bbox 0 0 0 0 0 0
- 
-// $cbox 0 0 0 0 0 0
+$illumposition 19.03 -0.54 -5.61
 
 $poseparameter "sights" 0 1 loop 0
 
@@ -200,4 +196,8 @@ $collisionmodel "c_ud_m1014_physics.smd"
 {
 	$mass 5
 	$masscenter 19.36 -2.22 -5.43
+	$inertia 1
+	$damping 0
+	$rotdamping 0
+	$rootbone " "
 }

@@ -6,14 +6,15 @@
 - 0ptica: 3D Artist, Texture Artist
 - DoctorHugoSource: 3D Artist
 - TessaKitty: Texture Artist
-- Fesiug:
-- Auriee:
-- Gomez:
+- Fesiug: Programmer
+- Auriee: Graphic Designer
+- Gomez: Texture Artist
 - 8Z: Programmer
 
 # Special Thanks to:
 - Arctic: Former project lead, creator of ArcCW
-- oranche: emotional support (uwu)
+- oranchepopsicle: emotional support (uwu)
+- Partisan: Rifle magdrop sound effect
 
 # Model Sources:
 - M16A2: https://steamcommunity.com/sharedfiles/filedetails/?id=1446623591

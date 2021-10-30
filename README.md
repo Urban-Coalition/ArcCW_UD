@@ -12,7 +12,7 @@ Whethere you are looking for realism, style, or just something that is fun to sh
 
 # Features:
 - 7 High-quality weapons models from the Left 4 Dead 2 workshop
-- Completely original sounds, animations, and attachments
+- Nearly 100% original sounds, animations, and attachments
 - A dizzying array of barrel, receiver and caliber options unique and specific to each weapon.
 - Perks, internals, ammo types, magazines, stocks, you name it, you can customize it.
 - New weapon mechanics - weapon sway and malfunctioning - for that extra realism. Your attachments matter!

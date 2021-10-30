@@ -477,6 +477,51 @@ SWEP.Animations = {
         },
     },
 
+    -- 60 round reloads (?) --
+    ["reload_60"] = {
+        Source = "reload_60",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        Time = 67 / 30,
+        MinProgress = 1.4,
+        LastClip1OutTime = 0.9,
+        LHIK = true,
+        LHIKIn = 0.3,
+        LHIKEaseIn = 0.4,
+        LHIKEaseOut = 0.15,
+        LHIKOut = 0.4,
+        SoundTable = {
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.0},
+            {s = path .. "magout.ogg", 	t = 0.35},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.3},
+            {s = path .. "magin.ogg",   t = 1.10},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 1.4},
+            {s = common .. "shoulder.ogg",  t = 1.85},
+        },
+    },
+    ["reload_empty_60"] = {
+        Source = "reload_empty_60",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        Time = 86 / 30,
+        MinProgress = 2.3,
+        LastClip1OutTime = 0.7,
+        LHIK = true,
+        LHIKIn = 0.4,
+        LHIKEaseIn = 0.4,
+        LHIKEaseOut = 0.15,
+        LHIKOut = 0.4,
+        SoundTable = {
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.0},
+            {s = path .. "magout.ogg", 	t = 0.35},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.3},
+            {s = common .. "rifle_magdrop.ogg",  t = 0.9},
+            {s = path .. "magin.ogg",   t = 1.20},
+            {s = path .. "chback.ogg",  t = 2},
+            {s = path .. "chamber.ogg", t = 2.1},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 2.3},
+            {s = common .. "shoulder.ogg",  t = 2.65},
+        },
+    },
+
     -- 15 22lr Round Reloads --
 
     ["reload_15_22lr"] = {

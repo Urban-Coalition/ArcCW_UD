@@ -319,6 +319,7 @@ SWEP.Attachments = {
     {
         PrintName = "Tube",
         DefaultAttName = "Standard Tube",
+        DefaultAttIcon = Material("entities/att/acwatt_ud_m79_barrel.png", "smooth mips"),
         Slot = "ud_m79_barrel",
         Bone = "m79_front",
         Offset = {
@@ -349,10 +350,12 @@ SWEP.Attachments = {
         PrintName = "Stock",
         Slot = {"ud_m79_stock"},
         DefaultAttName = "Wooden Stock",
+        DefaultAttIcon = Material("entities/att/acwatt_ud_m79_stock.png", "smooth mips"),
     },
     {
         PrintName = "Grenade Type",
         DefaultAttName = "High Explosive",
+        DefaultAttIcon = Material("entities/att/arccw_uc_40mm_generic.png", "smooth mips"),
         Slot = "uc_40mm",
     },
     {

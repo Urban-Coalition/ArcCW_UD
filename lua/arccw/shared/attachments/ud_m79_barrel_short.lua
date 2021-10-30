@@ -5,7 +5,7 @@ if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "M79 Short Tube"
 end
 
-att.Icon = nil
+att.Icon = Material("entities/att/acwatt_ud_m79_barrel_short.png", "smooth mips")
 att.Description = "A reduced length barrel with no front sight.\nNicknamed the 'Pirate Gun' due to its likeliness to a hand cannon, this short barrel improves agility at the cost of precision and projectile range."
 att.Desc_Pros = {
 }

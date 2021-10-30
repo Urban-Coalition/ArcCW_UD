@@ -1,5 +1,5 @@
 att.PrintName = "Sawn-off Stock"
-att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
+att.Icon = nil Material("entities/att/acwatt_ud_m79_stock_sawn.png", "smooth mips")
 att.Description = "Removing the wooden stock and leaving only a grip massively increases the agility of the weapon, but also makes it difficult to fire accurately or controllably."
 att.Desc_Pros = {
 }

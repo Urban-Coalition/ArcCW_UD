@@ -1,4 +1,4 @@
-att.PrintName = "15.6\" FPW Barrel"
+att.PrintName = "14.5\" FPW Barrel"
 
 att.Icon = Material("entities/att/acwatt_ud_m16_barrel_fpw.png", "smooth mips")
 att.Description = "Barrel from an M231 Firing Port Weapon. Originally intended to be fired from inside an IFV, the FPW has an insanely high cyclic rate and makes no considerations for recoil, accuracy or heat."

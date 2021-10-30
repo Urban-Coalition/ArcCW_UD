@@ -5,7 +5,7 @@ if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "Remington 870 12\" Sawn-off Barrel"
 end
 
-att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_870_barrel_sawnoff.png", "smooth mips")
 att.Description = "Hand-made short barrel with no sights. More agile and has a bigger pellet spread."
 att.Desc_Pros = {
 }

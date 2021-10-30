@@ -6,7 +6,7 @@ if not GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.SortOrder = 00
-att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_glock_caliber.png", "smooth mips")
 att.Description = "A plinking cartridge that is easy to handle but not very lethal.\nIts form factor allows more rounds to be stuffed into magazines."
 att.Desc_Pros = {
 }

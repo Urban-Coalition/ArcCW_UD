@@ -912,6 +912,7 @@ SWEP.Attachments = {
     {
         PrintName = "Caliber",
         DefaultAttName = "9x19mm Parabellum",
+        DefaultAttIcon = Material("entities/att/acwatt_ud_glock_caliber.png", "smooth mips"),
         Slot = "ud_glock_caliber",
     },
     {
@@ -998,6 +999,7 @@ SWEP.Attachments = {
     {
         PrintName = "Material",
         DefaultAttName = "Black Polymer",
+        DefaultAttIcon = Material("entities/att/acwatt_ud_glock_material.png", "smooth mips"),
         Slot = "ud_glock_skin",
     },
 }

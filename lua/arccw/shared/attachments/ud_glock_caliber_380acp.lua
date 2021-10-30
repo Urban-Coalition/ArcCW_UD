@@ -6,7 +6,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.SortOrder = 50
-att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_glock_caliber.png", "smooth mips")
 att.Description = "An old and smaller pistol caliber that is somewhat obsolete.\nHas lower recoil but also lower range and weaker stopping power."
 att.Desc_Pros = {
 }

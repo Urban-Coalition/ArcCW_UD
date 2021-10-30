@@ -384,6 +384,7 @@ SWEP.Attachments = {
     {
         PrintName = "Barrel",
         DefaultAttName = "16\" Standard Barrel",
+        DefaultAttIcon = Material("entities/att/acwatt_ud_870_barrel.png", "smooth mips"),
         Slot = "ud_870_barrel",
     },
     {
@@ -399,6 +400,7 @@ SWEP.Attachments = {
     {
         PrintName = "Forend",
         DefaultAttName = "Factory Forend",
+        DefaultAttIcon = Material("entities/att/acwatt_ud_870_slide.png", "smooth mips"),
         Slot = {"ud_870_slide"},
         Bone = "870_slide",
         Offset = {
@@ -428,12 +430,14 @@ SWEP.Attachments = {
     {
         PrintName = "Stock",
         DefaultAttName = "Wooden Stock",
+        DefaultAttIcon = Material("entities/att/acwatt_ud_870_stock.png", "smooth mips"),
         Slot = {"ud_870_stock"},
     },
     {
         PrintName = "Tube Type",
         Slot = {"ud_870_tube"},
         DefaultAttName = "6 Shell Tube",
+        DefaultAttIcon = Material("entities/att/acwatt_ud_870_tube.png", "smooth mips"),
     },
     {
         PrintName = "Ammo Type",

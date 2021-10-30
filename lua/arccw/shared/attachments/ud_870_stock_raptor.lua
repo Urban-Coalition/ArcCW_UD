@@ -6,7 +6,7 @@ if GetConVar("arccw_truenames"):GetBool() then
     att.AbbrevName = "Tac-14 Grip"
 end
 
-att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_870_stock_raptor.png", "smooth mips")
 att.Description = "Stockless polymer grip for when you simply don't care about accuracy or control, and just want the lightest gun possible."
 att.Desc_Pros = {
 }

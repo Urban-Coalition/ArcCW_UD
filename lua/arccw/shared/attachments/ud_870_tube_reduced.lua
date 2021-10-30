@@ -5,7 +5,7 @@ if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "Remington 870 4 Shell Tube"
 end
 
-att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_870_tube_reduced.png", "smooth mips")
 att.Description = "Shortened shell tube holding fewer rounds, but reduces weapon weight."
 att.Desc_Pros = {}
 att.Desc_Cons = {}

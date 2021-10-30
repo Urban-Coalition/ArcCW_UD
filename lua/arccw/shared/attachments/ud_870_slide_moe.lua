@@ -5,7 +5,7 @@ if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "Remington 870 MOE Forend"
 end
 
-att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_870_slide_moe.png", "smooth mips")
 att.Description = "A lightweight polymer forend. Easier to cycle but harder to grip on, increasing both fire rate and recoil."
 att.Desc_Pros = {
 }

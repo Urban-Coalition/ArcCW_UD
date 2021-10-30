@@ -515,10 +515,6 @@ SWEP.AttachmentElements = {
                 vpos = Vector(0, 0, 25),
                 vang = Angle(90, 0, -90),
             },
-            [6] = {
-                vpos = Vector(0, 0.8, 20),
-                vang = Angle(90, 0, -90),
-            },
         }
     },
     ["hg_m605_wood"] = {
@@ -529,10 +525,6 @@ SWEP.AttachmentElements = {
         AttPosMods = {
             [3] = {
                 vpos = Vector(0, 0, 25),
-                vang = Angle(90, 0, -90),
-            },
-            [6] = {
-                vpos = Vector(0, 0.8, 20),
                 vang = Angle(90, 0, -90),
             },
         },

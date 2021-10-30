@@ -339,6 +339,11 @@ SWEP.Animations = {
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.8},
             {s = common .. "shoulder.ogg",  t = 1},
         },
+        LHIK = true,
+        LHIKIn = 0.5,
+        LHIKEaseIn = 0.5,
+        LHIKEaseOut = 0.15,
+        LHIKOut = 0.5,
     },
     -- 20 Round Reloads --
 
@@ -476,7 +481,6 @@ SWEP.Animations = {
             {s = common .. "shoulder.ogg",  t = 2.65},
         },
     },
-
 
     -- 30 polymer Reloads --
 

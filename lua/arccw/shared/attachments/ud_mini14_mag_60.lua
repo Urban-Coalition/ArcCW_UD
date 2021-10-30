@@ -22,7 +22,7 @@ att.AutoStats = true
 att.Override_ClipSize = 60
 
 att.Mult_SightTime = 1.2
-att.Mult_ReloadTime = 1.3
+att.Mult_ReloadTime = 1.5
 att.Mult_Sway = 2
 
 att.Mult_SpeedMult = 0.95
@@ -36,7 +36,7 @@ att.Override_Malfunction = true
 att.ActivateElements = {"ud_mini14_mag_60"}
 
 att.Hook_SelectReloadAnimation = function(wep, anim)
-    return anim .. "_30"
+    return anim .. "_60"
 end
 
 att.ExcludeFlags = {"mini14_762", "mini14_22lr"}

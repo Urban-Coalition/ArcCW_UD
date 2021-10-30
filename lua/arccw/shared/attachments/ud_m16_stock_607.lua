@@ -28,7 +28,7 @@ att.Mult_Sway = 1.25
 
 att.Add_BarrelLength = 0
 
-att.ToggleSound = "/arccw_uc/common/stockslide.wav"
+att.ToggleSound = "arccw_uc/common/stockslide.ogg"
 
 att.ToggleStats = {
     {

@@ -5,7 +5,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "Patriot 809 Sawn-off Stock"
 end
 
-att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_mini14_sawnoff.png", "smooth mips")
 att.Description = "Using your hacksaw on the stock is not gunsmithing either."
 att.Desc_Pros = {
 }

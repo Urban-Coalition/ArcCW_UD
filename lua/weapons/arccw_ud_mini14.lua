@@ -524,6 +524,7 @@ SWEP.Attachments = {
     {
         PrintName = "Barrel",
         DefaultAttName = "20\" Standard Barrel",
+        DefaultAttIcon = Material("entities/att/acwatt_ud_mini14_barrel.png", "smooth mips"),
         Slot = "ud_mini14_barrel",
     },
     {
@@ -540,6 +541,7 @@ SWEP.Attachments = {
     {
         PrintName = "Receiver",
         DefaultAttName = "Mini-14 Receiver",
+        DefaultAttIcon = Material("entities/att/acwatt_ud_mini14_receiver.png", "smooth mips"),
         Slot = "ud_mini14_receiver",
     },
     {
@@ -566,11 +568,13 @@ SWEP.Attachments = {
         PrintName = "Magazine",
         Slot = {"ud_mini14_mag"},
         DefaultAttName = "20-Round Mag",
+        DefaultAttIcon = Material("entities/att/acwatt_ud_mini14_mag_20.png", "smooth mips"),
     },
     {
         PrintName = "Stock",
         Slot = {"ud_mini14_stock"},
         DefaultAttName = "Wooden Stock",
+        DefaultAttIcon = Material("entities/att/acwatt_ud_mini14_stock.png", "smooth mips"),
     },
     {
         PrintName = "Ammo Type",

@@ -5,7 +5,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "Patriot 809 15\" Stub Barrel"
 end
 
-att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_mini14_barrel_stub.png", "smooth mips")
 att.SortOrder = 15
 att.Description = "No, using your hacksaw on the barrel is not gunsmithing."
 att.Desc_Pros = {

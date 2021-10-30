@@ -6,7 +6,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.SortOrder = 30
-att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_mini14_mag_30_polymer.png", "smooth mips")
 att.Description = "Polymer aftermarket extended magazine. The grid texturing and anti-tilt follower makes this magazine easier to load than factory magazines."
 att.Desc_Pros = {
 }

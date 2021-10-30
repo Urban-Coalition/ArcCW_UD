@@ -5,7 +5,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "Patriot 809 18\" Short Barrel"
 end
 
-att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_mini14_barrel_short.png", "smooth mips")
 att.SortOrder = 18
 att.Description = "Compact barrel for popping close-up varmints. More agile but less accurate."
 att.Desc_Pros = {

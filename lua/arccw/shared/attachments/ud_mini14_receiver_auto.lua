@@ -5,7 +5,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "Patriot ACC Automatic Receiver"
 end
 
-att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_mini14_receiver_auto.png", "smooth mips")
 att.Description = "Receiver adapted with a military auto sear and fire selector."
 att.Desc_Pros = {
     "uc.auto"

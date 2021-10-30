@@ -5,7 +5,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "Patriot 809 .22 LR Receiver"
 end
 
-att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_mini14_receiver_22lr.png", "smooth mips")
 att.Description = "Aftermarket .22 Long Rifle conversion for the Mini-14. While the light, weak cartridge has poor stopping power, its recoil is extremely manageable, making it a cinch to follow up shots."
 att.Desc_Pros = {
 }
@@ -59,7 +59,7 @@ att.Hook_GetDistantShootSound = function(wep, distancesound)
 end
 
 local slotinfo = {
-    [7] = {"15-Round Mag", "15-Round Mag", nil},
+    [7] = {"15-Round Mag", "15-Round Mag", Material("entities/att/acwatt_ud_mini14_mag_15_22lr.png", "smooth mips")},
 }
 att.Hook_GetDefaultAttName = function(wep, slot)
     if slotinfo[slot] then

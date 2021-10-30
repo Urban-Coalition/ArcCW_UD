@@ -1,7 +1,7 @@
 att.PrintName = "14.5\" Prototype Barrel"
 
 if GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "14.5\" M607 Barrel"
+    att.PrintName = "14.5\" M605 Barrel"
 end
 
 att.Icon = Material("entities/att/acwatt_ud_m16_barrel_classic.png", "smooth mips")
@@ -29,4 +29,4 @@ att.LHIK = true
 
 att.Model = "models/weapons/arccw/atts/classic_lhik.mdl"
 
-att.ActivateElements = {"hg_m607"}
+att.ActivateElements = {"hg_m605"}

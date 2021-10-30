@@ -316,7 +316,17 @@ SWEP.Animations = {
             {s = path .. "mech_last.ogg", t = 0}, -- Temporary
         },
     },
-
+    ["unjam"] = {
+        Source = "unjam",
+        Time = 40 / 30,
+        SoundTable = {
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.0},
+            {s = path .. "chback.ogg",  t = 0.25},
+            {s = path .. "chamber.ogg", t = 0.35},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.8},
+            {s = common .. "shoulder.ogg",  t = 1},
+        },
+    },
     -- 20 Round Reloads --
 
     ["reload"] = {

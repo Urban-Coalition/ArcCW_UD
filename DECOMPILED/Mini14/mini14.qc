@@ -247,6 +247,11 @@ $sequence "reload_empty_15_22lr" {
 	{ event 5004 77 "StockHitsShoulder" }
 }
 
+$sequence "unjam" {
+	"anims\unjam.smd"
+	fps 30
+}
+
 $bonemerge "ValveBiped.Bip01_Spine4"
 $bonemerge "ValveBiped.Bip01_L_Clavicle"
 $bonemerge "ValveBiped.Bip01_L_UpperArm"

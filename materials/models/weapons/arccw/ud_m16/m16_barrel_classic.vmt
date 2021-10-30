@@ -8,7 +8,7 @@
 	"$phongexponenttexture"	"models\weapons\arccw\ud_m16/polymer/polymer_rough"
 	"$phongboost" "1.5"
 	"$phongalbedotint" 			"1"
-	"$phongfresnelranges" "[.6 1 2]"
+	"$phongfresnelranges" "[1 3 5]"
 	"$halflambert" "1"
 	
 	"$envmap" "env_cubemap"

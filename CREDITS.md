@@ -3,7 +3,8 @@
 - Ma_rv: Animator
 - Partexedd: Animator
 - Aerosun: Graphic Designer
-- 0ptica: Texture Artist
+- 0ptica: 3D Artist, Texture Artist
+- DoctorHugoSource: 3D Artist
 - TessaKitty: Texture Artist
 - Fesiug:
 - Auriee:
@@ -26,3 +27,6 @@
 
 Additional models from:
 - https://steamcommunity.com/sharedfiles/filedetails/?id=2320164491
+- https://steamcommunity.com/sharedfiles/filedetails/?id=2481953512
+- https://gamebanana.com/members/1277445
+- https://www.nexusmods.com/newvegas/mods/50348

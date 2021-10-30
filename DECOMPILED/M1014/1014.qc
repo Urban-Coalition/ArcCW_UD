@@ -35,8 +35,8 @@ $attachment "3" "camera" 0 0 0 rotate 0 0 0
 $surfaceprop "weapon"
  
 $contents "solid"
- 
-$illumposition 19.03 -0.54 -5.61
+
+$illumposition -3 -22 -5
 
 $poseparameter "sights" 0 1 loop 0
 

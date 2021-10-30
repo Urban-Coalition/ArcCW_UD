@@ -1120,6 +1120,7 @@ SWEP.Animations = {
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
+    if !IsValid(vm) then return end
     local flipup = wep.Attachments[1].Installed == "ud_m16_rs"
     local retro = wep:GetBuff_Override("TopMount")
     local trueflat = wep:GetBuff_Override("TrueFlatTop")

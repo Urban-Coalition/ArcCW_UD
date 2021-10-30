@@ -282,6 +282,7 @@ SWEP.Animations = {
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
+    if !IsValid(vm) then return end
     if wep.Attachments[1].Installed then
         vm:SetBodygroup(8, 2)
     elseif wep.Attachments[2].Installed == "ud_870_barrel_long" then

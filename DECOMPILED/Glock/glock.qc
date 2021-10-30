@@ -45,15 +45,11 @@ $attachment "1" "glock_flash" 0 0 0 rotate -90 0 0
 $attachment "2" "brass" 0 0 0 rotate -10 140 180
 $attachment "3" "camera" 0 0 0 rotate 0 0 0
  
-$surfaceprop "default"
+$surfaceprop "weapon"
  
 $contents "solid"
  
-$illumposition 0 0 0
-
-$bbox 0 0 0 0 0 0
- 
-$cbox 0 0 0 0 0 0
+$illumposition 0.25 -0.5 1 "brass"
 
 $poseparameter "sights" 0 1 loop 0
 
@@ -374,3 +370,8 @@ $bonemerge "ValveBiped.Bip01_R_Finger12"
 $bonemerge "ValveBiped.Bip01_R_Finger0"
 $bonemerge "ValveBiped.Bip01_R_Finger01"
 $bonemerge "ValveBiped.Bip01_R_Finger02"
+
+$collisionmodel "glock_col.smd"
+{
+	$mass 3
+}

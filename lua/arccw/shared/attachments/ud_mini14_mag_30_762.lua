@@ -7,7 +7,7 @@ end
 
 att.SortOrder = 30
 att.Icon = Material("entities/att/acwatt_ud_mini14_mag_30_762.png", "smooth mips")
-att.Description = "Effectively an AK magazine with a modified feeding lip, this magazine is proof of gun hobbists' dedication (and lunacy) in search of more dakka."
+att.Description = "Effectively an AK magazine with a modified feeding lip, this magazine is proof of gun hobbyists' dedication (and lunacy) in search of more dakka."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

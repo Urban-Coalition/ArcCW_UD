@@ -38,7 +38,7 @@ att.Override_Firemodes = {
     }
 }
 
-att.Mult_RPM = 700 / 540
+att.Mult_RPM = 750 / 540
 
 att.Mult_RecoilSide = 1.5
 att.Mult_HipDispersion = 1.25

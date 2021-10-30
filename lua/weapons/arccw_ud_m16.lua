@@ -209,7 +209,8 @@ local desg_barr = {
     ["ud_m16_barrel_cqbr"]          =   2, -- cant see the barr 10.5
     --["ud_m16_barrel_sd"]            =   2, -- amcar-s m4 sd     10.5
     ["ud_m16_barrel_stub"]          =   6, -- A BIT OF A STUB   2
-    ["ud_m16_barrel_classic"]           =   10
+    ["ud_m16_barrel_classic"]           =   10,
+    ["ud_m16_barrel_classic_short"]           =   11 -- M605
 }
 
 local desg_rec = {
@@ -260,8 +261,7 @@ SWEP.Hook_NameChange = function(wep, name)
     ]]
 
     local flat = false
-    if wep.Attachments[1].Installed or wep.Attachments[14].Installed then flat = true end
-    if wep:GetBuff_Override("KeepRetro") then flat = false end
+    if (wep.Attachments[1].Installed or wep.Attachments[14].Installed) and !wep:GetBuff_Override("KeepRetro") then flat = true end
 
     if trueNames then
         local model = "M"
@@ -283,7 +283,9 @@ SWEP.Hook_NameChange = function(wep, name)
         if rec == 1 then
             model = "M"
             alt = "16A3"
-            if flat then
+            if barrel == 11 then
+                alt = "605"
+            elseif flat then
                 alt = "4A1"
             elseif barrel == 1 then
                 alt = "727"
@@ -507,7 +509,34 @@ SWEP.AttachmentElements = {
         VMBodygroups = {
             {ind = 5, bg = 1},
             {ind = 4, bg = 1},
+        },
+        AttPosMods = {
+            [3] = {
+                vpos = Vector(0, 0, 24.5),
+                vang = Angle(90, 0, -90),
+            },
+            [6] = {
+                vpos = Vector(0, 0.8, 20),
+                vang = Angle(90, 0, -90),
+            },
         }
+    },
+    ["hg_m605_wood"] = {
+        VMBodygroups = {
+            {ind = 5, bg = 1},
+            {ind = 4, bg = 1},
+        },
+        AttPosMods = {
+            [3] = {
+                vpos = Vector(0, 0, 24.5),
+                vang = Angle(90, 0, -90),
+            },
+            [6] = {
+                vpos = Vector(0, 0.8, 20),
+                vang = Angle(90, 0, -90),
+            },
+        },
+        VMSkin = 1
     },
     ["hg_lmg"] = {
         VMBodygroups = {
@@ -530,6 +559,14 @@ SWEP.AttachmentElements = {
         AttPosMods = {
             [1] = {
                 vpos = Vector(0, -4, 3),
+                vang = Angle(90, 0, -90),
+            },
+        },
+    },
+    ["ud_m16_upper_charm2"] = {
+        AttPosMods = {
+            [1] = {
+                vpos = Vector(0, -4.1, 3.5),
                 vang = Angle(90, 0, -90),
             },
         },
@@ -573,11 +610,6 @@ SWEP.AttachmentElements = {
     ["hg_smg"] = {
         VMBodygroups = {
             {ind = 5, bg = 0},
-        }
-    },
-    ["hg_m4a1_wood"] = {
-        VMBodygroups = {
-            {ind = 5, bg = 4},
         }
     },
     ["hg_usas"] = {
@@ -1097,7 +1129,7 @@ SWEP.Animations = {
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local flipup = wep.Attachments[1].Installed == "ud_m16_rs"
-    local retro = wep:GetBuff_Override("KeepRetro")
+    local retro = wep:GetBuff_Override("TopMount")
     local trueflat = wep:GetBuff_Override("TrueFlatTop")
     local taclaser = wep:GetBuff_Override("TacLaserPos")
     local barrel = 0
@@ -1111,11 +1143,12 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     elseif barrelatt == "ud_m16_barrel_fpw" then barrel = 10 short = true
     elseif barrelatt == "ud_m16_barrel_classic" then barrel = 3
     elseif barrelatt == "ud_m16_barrel_wood" then barrel = 3
-    elseif barrelatt == "ud_m16_barrel_wood_short" then barrel = 4 short = true
+    elseif barrelatt == "ud_m16_barrel_wood_short" then barrel = 4 short = false
     elseif barrelatt == "ud_m16_barrel_stub" then barrel = 11 -- specially handled
     elseif barrelatt == "ud_m16_barrel_lmg" then barrel = 5
     elseif barrelatt == "ud_m16_barrel_tactical_a4" then barrel = 8
     elseif barrelatt == "ud_m16_barrel_smg" then barrel = 9 short = true
+    elseif barrelatt == "ud_m16_barrel_classic_short" then barrel = 12 short = false
     end
 
     local risbarrel = barrel == 7 or barrel == 8
@@ -1140,7 +1173,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         if retro then
             -- Raised rail (retro)
             vm:SetBodygroup(1, 0)
-            vm:SetBodygroup(3, 1)
+            vm:SetBodygroup(3, retro)
         else
             -- Flat rail
             vm:SetBodygroup(1, 1)

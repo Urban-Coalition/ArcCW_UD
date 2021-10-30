@@ -7,7 +7,6 @@ end
 att.Icon = Material("entities/att/acwatt_ud_m16_barrel_tactical.png", "smooth mips")
 att.Description = "Handguard from the SOPMOD I kit, giving the rifle the ability to better take the attachment of tactical devices or foregrips. Functionally identical to the carbine barrel."
 att.Desc_Pros = {
-    --"uc.auto"
 }
 att.Desc_Cons = {
 }
@@ -28,20 +27,6 @@ att.Mult_RPM = 1.111 --0.945
 att.Mult_Sway = 0.85
 
 att.Add_BarrelLength = -4
-
---[[]
-att.Override_Firemodes = {
-    {
-        Mode = 2,
-    },
-    {
-        Mode = 1,
-    },
-    {
-        Mode = 0
-    }
-}
-]]
 
 att.LHIK = true
 

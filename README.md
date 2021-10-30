@@ -25,10 +25,12 @@ Barrel configurations:
 - M16A4 RIS
 - Colt LMG
 - M16A1
-- Fallout "Service Rifle" (A1 wooden handguard)
+- Fallout "Service Rifle" (A1 wooden handguard, 20" barrel)
+- M605 (A1 handguard, 14.5" barrel)
 - M4A1 RIS (M4A4)
 - M4 Carbine
 - M231 FPW
+- Fallout "Service Carbine" (A1 wooden handguard, 14.5" barrel)
 - M4 Commando (CQBR)
 - M16 SD
 

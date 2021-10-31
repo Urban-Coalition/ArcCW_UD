@@ -186,6 +186,7 @@ local common = ")^/arccw_uc/common/"
 SWEP.ShootSound = path .. "fire.ogg"
 SWEP.ShootSoundSilenced = path .. "fire_supp.ogg"
 SWEP.DistantShootSound = path .. "fire_dist.ogg"
+SWEP.DistantShootSoundSilenced = ")^weapons/arccw_ud/m16/fire_sup_dist.ogg"
 
 -- Bodygroups --
 

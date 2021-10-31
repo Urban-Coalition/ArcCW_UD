@@ -956,7 +956,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Stock",
-        Slot = {"uc_stock", "go_stock"},
+        Slot = {"uc_stock", "go_stock_pistol_bt"},
         DefaultAttName = "No Stock",
         Bone = "glock_parent",
         Offset = {

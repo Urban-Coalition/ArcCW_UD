@@ -1,5 +1,5 @@
 att.PrintName = "9\" SMG Barrel"
-att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
+att.Icon = Material("entities/att/obsolete.png", "mips smooth")
 att.Description = "Short barrel for use with a 9mm receiver."
 att.Desc_Pros = {
     --"uc.auto"
@@ -42,3 +42,6 @@ att.Override_Firemodes = {
 att.ActivateElements = {"hg_smg"}
 att.RequireFlags = {"m16_9mm"}
 att.HideIfBlocked = true
+
+att.Description = "OBSOLETE"
+att.Ignore = true

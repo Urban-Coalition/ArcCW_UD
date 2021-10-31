@@ -1,7 +1,7 @@
 att.PrintName = "AMSAS-12 12G Receiver"
 att.AbbrevName = "12G Receiver"
 
-att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
+att.Icon = Material("entities/att/obsolete.png", "mips smooth")
 att.Description = "Total conversion kit that turns the rifle into an automatic combat shotgun."
 
 if GetConVar("arccw_truenames"):GetBool() then
@@ -9,6 +9,7 @@ if GetConVar("arccw_truenames"):GetBool() then
     att.Description = "Total conversion kit that turns the rifle into an automatic combat shotgun, based on the USAS-12."
 end
 
+att.Description = "OBSOLETE"
 att.Ignore = true
 
 att.Desc_Pros = {
@@ -87,9 +88,9 @@ att.Hook_SelectReloadAnimation = function(wep, anim)
 end
 
 local slotinfo = {
-    [2] = {"18\" AMSAS Barrel", "18\" USAR Barrel", nil},
-    [3] = {"Standard Choke", "Standard Choke", nil},
-    [9] = {"10-Round Mag", "10-Round Mag", nil},
+    [2] = {"18\" AMSAS Barrel", "18\" USAR Barrel", att.Icon},
+    [3] = {"Standard Choke", "Standard Choke", att.Icon},
+    [9] = {"10-Round Mag", "10-Round Mag", att.Icon},
 }
 att.Hook_GetDefaultAttName = function(wep, slot)
     if slotinfo[slot] then

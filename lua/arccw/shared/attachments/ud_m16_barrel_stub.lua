@@ -1,6 +1,6 @@
 att.PrintName = "2\" Stub Barrel"
-att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
-att.Description = "Jesus Christ, I think I see the bullet sticking out."
+att.Icon = Material("entities/att/obsolete.png", "mips smooth")
+att.Description = "OBSOLETE" --"Jesus Christ, I think I see the bullet sticking out."
 att.Desc_Pros = {
     --"uc.auto"
 }

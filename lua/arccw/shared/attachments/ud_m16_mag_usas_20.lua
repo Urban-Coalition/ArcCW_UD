@@ -5,10 +5,8 @@ if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "20-Round USAR Drum Mag"
 end
 
-att.Ignore = true
-
 att.SortOrder = -1
-att.Icon = nil -- Material("entities/att/acwatt_lowpolysaiga12extmag.png", "smooth mips")
+att.Icon = Material("entities/att/obsolete.png", "mips smooth")
 att.Description = "Extended drum magazine that offers extra magazine capacity. Almost no legitimate military uses, but makes a fun range toy."
 att.Desc_Pros = {
 }
@@ -42,3 +40,6 @@ att.Hook_SelectFireAnimation = function(wep, anim)
 end
 
 att.RequireFlags = {"m16_usas"}
+
+att.Description = "OBSOLETE"
+att.Ignore = true

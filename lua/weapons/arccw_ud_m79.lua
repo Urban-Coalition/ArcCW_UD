@@ -315,6 +315,7 @@ SWEP.Attachments = {
             vang = Angle(90, 2, -90),
         },
         InstalledEles = {"m79_rail"},
+        ExcludeFlags = {"m79_pirategun"},
     },
     {
         PrintName = "Tube",
@@ -332,19 +333,21 @@ SWEP.Attachments = {
         Slot = {"foregrip"},
         Bone = "m79_front",
         Offset = {
-            vpos = Vector(0, 0.4, 4),
+            vpos = Vector(0, 0.4, 1.25),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"m79_rail"},
+        ExcludeFlags = {"m79_pirategun"},
     },
     {
         PrintName = "Tactical",
         Slot = {"tac_pistol"},
         Bone = "m79_front",
         Offset = {
-            vpos = Vector(0, 1.7, 9.5),
+            vpos = Vector(0.25, 0, 5),
             vang = Angle(90, 0, -90),
         },
+        ExcludeFlags = {"m79_pirategun"},
     },
     {
         PrintName = "Stock",

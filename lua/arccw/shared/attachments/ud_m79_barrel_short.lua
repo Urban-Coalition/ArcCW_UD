@@ -10,7 +10,7 @@ att.Description = "A reduced length barrel with no front sight.\nNicknamed the '
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
-    "uc.nofs"
+    "uc.altnofs"
 }
 att.Desc_Neutrals = {
 }
@@ -42,3 +42,5 @@ att.A_Hook_Add_SightsDispersion = function(wep, data)
 end
 
 att.ActivateElements = {"m79_pirategun"}
+
+att.GivesFlags = {"m79_pirategun"}

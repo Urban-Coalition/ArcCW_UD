@@ -156,7 +156,7 @@ SWEP.HolsterPos = Vector(0.5, -2, 1)
 SWEP.HolsterAng = Angle(-8.5, 8, -10)
 
 SWEP.HoldtypeHolstered = "normal"
-SWEP.HoldtypeActive = "smg"
+SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "smg"
 
 SWEP.IronSightStruct = {
@@ -180,7 +180,7 @@ SWEP.BarrelOffsetHip = Vector(4, 0, -4)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-15.5, 3.5, -5),
+    pos        =    Vector(-16, 3.5, -6),
     ang        =    Angle(-6, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }

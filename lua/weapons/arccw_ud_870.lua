@@ -55,7 +55,7 @@ SWEP.DefaultBodygroups = "000000000"
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-7, 4, -5.8),
+    pos        =    Vector(-8, 4, -5.8),
     ang        =    Angle(-6, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
 }

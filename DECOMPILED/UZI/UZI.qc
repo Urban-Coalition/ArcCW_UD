@@ -318,5 +318,5 @@ $bonemerge "ValveBiped.Bip01_R_Finger02"
 
 $collisionmodel "uzi_col.smd"
 {
-	$mass 4
+	$mass 5
 }

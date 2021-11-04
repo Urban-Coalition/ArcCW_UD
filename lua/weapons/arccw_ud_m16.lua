@@ -1201,7 +1201,7 @@ SWEP.Attachments = {
         PrintName = "Optic",
         DefaultAttName = "Iron Sights",
         InstalledEles = {"upper_flat"},
-        Slot = {"optic","sniper_optic"},
+        Slot = {"optic","sniper_optic","ud_m16_rs"},
         Bone = "m16_parent",
         Offset = {
             vpos = Vector(0, -1.5, 3),
@@ -1209,7 +1209,6 @@ SWEP.Attachments = {
         },
         VMScale = Vector(1.3, 1.3, 1.3),
         ExtraSightDist = 8,
-        MergeSlots = {15}
     },
     {
         PrintName = "Barrel",
@@ -1316,9 +1315,4 @@ SWEP.Attachments = {
             vang = Angle(90, 0, -90),
         },
     },
-    {
-        Hidden = true,
-        Slot = "ud_m16_rs",
-        FreeSlot = true
-    }
 }

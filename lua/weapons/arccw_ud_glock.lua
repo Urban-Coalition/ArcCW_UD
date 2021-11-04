@@ -187,6 +187,7 @@ SWEP.DistantShootSound = path .. "fire_dist.ogg"
 -- Bodygroups --
 
 SWEP.BulletBones = {
+    [2] = "glock_bullet1"
 }
 
 SWEP.AttachmentElements = {
@@ -713,7 +714,7 @@ SWEP.Animations = {
     ["reload_empty"] = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
-        Time = 66 / 30,
+        Time = 65 / 30,
         MinProgress = 1.5,
         LastClip1OutTime = 0.7,
         LHIK = true,
@@ -725,7 +726,7 @@ SWEP.Animations = {
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
             {s = path .. "magrelease.ogg",    t = 0.15, c = ci},
             {s = path .. "magout.ogg",        t = 0.15, c = ci},
-            {s = path .. "magin.ogg",         t = 0.45, c = ci},
+            {s = path .. "magin.ogg",         t = 0.65, c = ci},
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.5},
             {s = common .. "pistol_magdrop.ogg",  t = 0.65},
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 1.25},
@@ -758,7 +759,7 @@ SWEP.Animations = {
     ["reload_empty_10"] = {
         Source = "reload_empty_10",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
-        Time = 66 / 30,
+        Time = 65 / 30,
         MinProgress = 1.5,
         LastClip1OutTime = 0.7,
         LHIK = true,

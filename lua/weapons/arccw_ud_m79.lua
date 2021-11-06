@@ -324,7 +324,7 @@ SWEP.Attachments = {
         Slot = "ud_m79_barrel",
         Bone = "m79_front",
         Offset = {
-            vpos = Vector(3.5, -5, -21),
+            vpos = Vector(3.45, -5.3, -22),
             vang = Angle(90, 2, -90),
         },
     },

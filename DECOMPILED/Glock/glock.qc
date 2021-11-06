@@ -30,6 +30,10 @@ $bodygroup "4" {
 	studio "glock_slide_g26.smd"
 }
 
+$bodygroup "5" {
+	studio "glock_9mm.smd"
+}
+
 $cdmaterials "models\weapons\arccw\ud_glock"
 $cdmaterials "models\weapons\arccw\ud_m1014"
 $cdmaterials "models\weapons\arccw\ud_common"

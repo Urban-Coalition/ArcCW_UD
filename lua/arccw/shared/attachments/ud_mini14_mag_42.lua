@@ -1,4 +1,4 @@
-att.PrintName = "5.56x45mm 42-Round ProMag"
+att.PrintName = "Mini-14 42-Round ProMag"
 att.AbbrevName = "42-Round Polymer Mag"
 
 if !GetConVar("arccw_truenames"):GetBool() then

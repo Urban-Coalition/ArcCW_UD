@@ -146,6 +146,10 @@ SWEP.HoldtypeSights = "ar2"
 SWEP.IronSightStruct = {
     Pos = Vector(-3.51, -5, 2.2),
     Ang = Angle(0, 0, 0),
+    Midpoint = {
+    Pos = Vector(0, 0, 0),
+    Ang = Angle(0, -1, 0),
+    },
     Magnification = 1,
     SwitchToSound = "",
     CrosshairInSights = false,
@@ -154,8 +158,8 @@ SWEP.IronSightStruct = {
 SWEP.HolsterPos = Vector(-0.5, -4, -3)
 SWEP.HolsterAng = Angle(3.5, 7, -20)
 
-SWEP.ActivePos = Vector(0, 1, 1)
-SWEP.ActiveAng = Angle(0, 0, -5)
+SWEP.ActivePos = Vector(0, 0, 0)
+SWEP.ActiveAng = Angle(0, 0, 0)
 
 SWEP.CrouchPos = Vector(-4, -2, 0)
 SWEP.CrouchAng = Angle(0, 0, -30)

@@ -2,7 +2,7 @@ att.PrintName = "Mini-14 42-Round ProMag"
 att.AbbrevName = "42-Round Polymer Mag"
 
 if !GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "42-Round Polymer Mag"
+    att.PrintName = "Patriot 809 42-Round Polymer Mag"
 end
 
 att.SortOrder = 30

@@ -675,7 +675,7 @@ SWEP.Animations = {
         ShellEjectAt = 0.4,
         SoundTable = {
             {s = {common .. "cloth_2.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0, v = 50},
-            {s = path .. "slide_pull.ogg",  t = 0.3, c = ci, v = 50v},
+            {s = path .. "slide_pull.ogg",  t = 0.3, c = ci, v = 50},
             {s = path .. "sliderel_deact.ogg",  t = 0.3, c = ci, v = 50},
         },
         LHIK = true,

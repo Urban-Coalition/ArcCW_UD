@@ -1,7 +1,7 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "handguard/handguard_ar15_adar_wood_v1_LOD0_diff"
-	"$bumpmap" "handguard/handguard_ar15_adar_wood_v1_LOD0_nrm"
+	"$basetexture" "models\weapons\arccw\ud_m16/adar/m16_handguard_adar_d"
+	"$bumpmap" "models\weapons\arccw\ud_m16/adar/m16_handguard_adar_n"
 	"$envmap" "env_cubemap"
 	"$envmaptint" "[ .075 .075 .075 ]"
 	"$envmapfresnel" ".5"
@@ -13,5 +13,5 @@
 	"$phongboost" "1.8"
 	"$phongexponent" "50"
 	"$phongfresnelranges" "[0.22 0.856 20]"
-	"$phongexponenttexture" "handguard/handguard_ar15_adar_wood_v1_LOD0_exponent"
+	"$phongexponenttexture" "models\weapons\arccw\ud_m16/adar/m16_handguard_adar_exp"
 }

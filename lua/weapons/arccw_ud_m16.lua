@@ -30,7 +30,6 @@ SWEP.PrintName = "AMCAR"
 SWEP.TrueName = "M16A2"
 
 -- Trivia --
-
 SWEP.Trivia_Class = "Assault Rifle"
 SWEP.Trivia_Desc = "Third generation of America's iconic military rifle. Army tests showed that soldiers were more likely to hit a target if they fired multiple shots, but were likely to spray in full-auto and fail to hit anything. As a result, they implemented a ratcheted three-round burst system which limited the maximum burst a soldier could fire to three shots. Well-rounded gun with no major downsides."
 SWEP.Trivia_Manufacturer = "Stoner's Legacy Ltd."
@@ -38,6 +37,10 @@ SWEP.Trivia_Calibre = "5.56x45mm NATO"
 SWEP.Trivia_Mechanism = "Gas-Operated Rotating Bolt"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 1959
+
+local origDesc = SWEP.Trivia_Desc
+local m4Desc = "Carbine variant of the M16 rifle. Originally designed in response to design faults in the CAR-15 family, it eventually replaced the M16 across almost every branch of the Army for its favorably low weight and comparable performance. Well-rounded and light, but can become difficult to control without discipline."
+local ncrDesc = "Standard-issue rifle of the New California Republic. Traditionally produced with a semi-automatic receiver, the wooden furniture is easily replaceable and adds additional recoil control for maximum accuracy. Well-rounded gun with no major downsides."
 
 -- Weapon slot --
 
@@ -240,14 +243,22 @@ SWEP.Hook_NameChange = function(wep, name)
     local rec = desg_rec[wep.Attachments[4].Installed] or 0
     local trueNames = GetConVar("arccw_truenames"):GetBool()
 
+    wep.Trivia_Desc = origDesc
+    wep.Trivia_Mechanism = "Gas-Operated Rotating Bolt"
+    wep.Trivia_Country = "USA"
+
     -- service loadouts
     if barrel == 4 then
+        wep.Trivia_Desc = ncrDesc
+        wep.Trivia_Country = "NCR"
         if rec == 2 then
             return "Service SMG"
         end
         return "Service Rifle"
     end
     if barrel == 5 then
+        wep.Trivia_Desc = ncrDesc
+        wep.Trivia_Country = "NCR"
         if rec == 2 then
             return "Service SMG"
         end
@@ -260,8 +271,7 @@ SWEP.Hook_NameChange = function(wep, name)
     end
     ]]
 
-    local flat = false
-    if (wep.Attachments[1].Installed or wep.Attachments[14].Installed) and !wep:GetBuff_Override("KeepRetro") then flat = true end
+    local flat = (wep.Attachments[1].Installed or wep.Attachments[14].Installed) and !wep:GetBuff_Override("KeepRetro")
 
     if trueNames then
         local model = "M"
@@ -273,6 +283,7 @@ SWEP.Hook_NameChange = function(wep, name)
         if barrel <= 2 and barrel > 0 then
             model = "XM"
             alt = "4"
+            wep.Trivia_Desc = m4Desc
             if flat then
                 model = "M"
                 alt = "4 Carbine"
@@ -283,18 +294,27 @@ SWEP.Hook_NameChange = function(wep, name)
         if rec == 1 then
             model = "M"
             alt = "16A3"
+            wep.Trivia_Desc = m4Desc
             if barrel == 11 then
                 alt = "605"
-            elseif flat then
+            elseif flat and barrel ~= 9 and barrel ~= 10 and barrel ~= 0 then
                 alt = "4A1"
             elseif barrel == 1 then
                 alt = "727"
             elseif barrel == 2 then
                 alt = "733"
+            else
+                wep.Trivia_Desc = "Variant of the M16A2 with the original full-automatic trigger group, relegated to niche roles in the US Army. Well-rounded gun with no major downsides."
             end
         elseif rec == 2 then
-            model = "Colt "
-            alt = "SMG"
+            model = "R0"
+            if flat then
+                alt = "991"
+            else
+                alt = "635"
+            end
+            wep.Trivia_Desc = "Submachine gun based on the M16 rifle. Despite its similar appearance, it uses a different mechanism from its parent rifle. More accurate than other submachine guns due to its rifle frame and closed-bolt mechanism."
+            wep.Trivia_Mechanism = "Blowback"
         elseif rec == 3 then
             model = "AR"
             alt = "-15GB"
@@ -304,6 +324,7 @@ SWEP.Hook_NameChange = function(wep, name)
         elseif rec == 5 then
             model = "AR"
             alt = "-15"
+            wep.Trivia_Desc = "AR-15 style rifles are a class of rifles linked to the M16, but with a semi-automatic fire group for the civilian market. Such rifles are controversial due to their use in mass shootings, but nonetheless popular for sporting and home defense. Well-rounded gun with no major downsides."
         end
         if barrel == 3 then
             alt = "231 FPW"

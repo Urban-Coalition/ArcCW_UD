@@ -332,6 +332,7 @@ SWEP.Hook_NameChange = function(wep, name)
             alt = "4 Stub"
         elseif barrel == 8 then
             alt = "16 LSW"
+            wep.Trivia_Desc = "Configuration of the M16 designed for a light machine gun role, used vaguely within the Marine Corps before the adoption of the Minimi. Heavier than the standard platform, but the integral bipod can be deployed onto surfaces for excellent recoil control."
         end
 
         if !silHandled then

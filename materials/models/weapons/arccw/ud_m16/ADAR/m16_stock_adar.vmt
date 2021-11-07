@@ -1,0 +1,17 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "stock/stock_ar15_adar_wood_v1_LOD0_diff"
+	"$bumpmap" "stock/stock_ar15_adar_wood_v1_LOD0_nrm"
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[ .075 .075 .075 ]"
+	"$envmapfresnel" ".5"
+	"$basemapalphaenvmapmask" "1"
+
+	"$phong" "1"
+	"$phongalbedotint" "0"
+
+	"$phongboost" "1.8"
+	"$phongexponent" "50"
+	"$phongfresnelranges" "[0.22 0.856 20]"
+	"$phongexponenttexture" "stock/stock_ar15_adar_wood_v1_LOD0_exponent"
+}

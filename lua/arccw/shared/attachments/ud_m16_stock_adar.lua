@@ -24,6 +24,7 @@ att.Mult_Sway = .65
 att.Mult_Recoil = .75
 att.Mult_SpeedMult = .925
 att.Mult_SightedSpeedMult = .7
+att.Mult_SightTime = 1.05
 
 
 

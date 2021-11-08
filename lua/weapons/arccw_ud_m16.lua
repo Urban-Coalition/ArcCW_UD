@@ -320,6 +320,7 @@ SWEP.Hook_NameChange = function(wep, name)
         elseif rec == 3 then
             model = "AR"
             alt = "-15GB"
+            wep.Trivia_Desc = "AR-15 style rifles are a class of rifles linked to the M16, normally with a semi-automatic fire group for the civilian market. This one, however, has been neutered by authority of the British crown with a manual-action receiver. Bit cringe, innit?"
         elseif rec == 4 then
             model = "USAS"
             alt = "-12"

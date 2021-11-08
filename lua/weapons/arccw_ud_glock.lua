@@ -918,7 +918,7 @@ SWEP.Attachments = {
         Slot = {"muzzle"},
         Bone = "glock_flash",
         Offset = {
-            vpos = Vector(0, 0, 0),
+            vpos = Vector(0, 0, 0.45),
             vang = Angle(90, 0, -90),
         },
         ExcludeFlags = {"sd"},

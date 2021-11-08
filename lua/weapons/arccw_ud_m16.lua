@@ -1286,7 +1286,7 @@ SWEP.Attachments = {
         Slot = {"optic","sniper_optic","ud_m16_rs"},
         Bone = "m16_parent",
         Offset = {
-            vpos = Vector(0, -1.5, 3),
+            vpos = Vector(0, -1.75, 3),
             vang = Angle(90, 0, -90),
         },
         VMScale = Vector(1.3, 1.3, 1.3),
@@ -1309,6 +1309,8 @@ SWEP.Attachments = {
         DefaultAttName = "Standard Muzzle",
         Slot = {"muzzle"},
         Bone = "m16_parent",
+        VMScale = Vector(1.75, 1.5, 1.5),
+        WMScale = Vector(1.75, 1.5, 1.5),
         Offset = {
             vpos = Vector(0.025, -0.05, 30.75),
             vang = Angle(90, 0, -90),

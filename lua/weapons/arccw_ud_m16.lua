@@ -273,7 +273,7 @@ SWEP.Hook_NameChange = function(wep, name)
     end
     ]]
 
-    local flat = (wep.Attachments[1].Installed or wep.Attachments[14].Installed) and !wep:GetBuff_Override("KeepRetro")
+    local flat = (wep.Attachments[1].Installed or wep.Attachments[14].Installed) and !wep:GetBuff_Override("TopMount")
 
     if trueNames then
         local model = "M"

@@ -421,6 +421,15 @@ SWEP.AttachmentElements = {
     ["stock_wood"] = {
         VMBodygroups = {{ind = 7, bg = 10}},
     },
+    ["stock_adar"] = {
+        VMBodygroups = {
+            {ind = 7, bg = 11},
+            {ind = 8, bg = 4}
+        },
+    },
+    ["stock_ru556"] = {
+        VMBodygroups = {{ind = 7, bg = 12}},
+    },
     ["grip_ergo"] = {
         VMBodygroups = {{ind = 8, bg = 1}},
     },
@@ -429,6 +438,13 @@ SWEP.AttachmentElements = {
     },
     ["grip_wood"] = {
         VMBodygroups = {{ind = 8, bg = 3}},
+    },
+
+    ["gasblock_carbine"] = {
+        VMBodygroups = {{ind = 6, bg = 3}},
+    },
+    ["fs_adar"] = {
+        VMBodygroups = {{ind = 6, bg = 4}},
     },
 
     ["barrel_14"] = {
@@ -463,10 +479,20 @@ SWEP.AttachmentElements = {
             },
         }
     },
-    ["barrel_sd"] = {
+    ["barrel_11_ru556"] = {
         VMBodygroups = {
-            {ind = 4, bg = 3},
-            {ind = 6, bg = 4},
+            {ind = 4, bg = 4},
+            {ind = 6, bg = 5},
+        },
+        AttPosMods = {
+            [3] = {
+                vpos = Vector(0, 0, 19.75),
+                vang = Angle(90, 0, -90),
+            },
+            [6] = {
+                vpos = Vector(1, 0, 17.9),
+                vang = Angle(90, 0, 0),
+            },
         }
     },
 
@@ -500,6 +526,21 @@ SWEP.AttachmentElements = {
             },
         },
     },
+    ["hg_ru556"] = {
+        VMBodygroups = {
+            {ind = 5, bg = 7},
+        },
+        AttPosMods = {
+            [5] = {
+                vpos = Vector(-0.1, 1.05, 12),
+                vang = Angle(90, 0, -90),
+            },
+            [6] = {
+                vpos = Vector(1.1, 0, 14),
+                vang = Angle(90, 0, 0),
+            },
+        },
+    },
     ["hg_m4a1"] = {
         VMBodygroups = {
             {ind = 5, bg = 4},
@@ -508,6 +549,11 @@ SWEP.AttachmentElements = {
     ["hg_cqbr"] = {
         VMBodygroups = {
             {ind = 5, bg = 4},
+        },
+    },
+    ["hg_adar"] = {
+        VMBodygroups = {
+            {ind = 5, bg = 8},
         },
     },
     ["hg_fpw"] = {
@@ -559,8 +605,9 @@ SWEP.AttachmentElements = {
     },
     ["hg_sd"] = {
         VMBodygroups = {
-            {ind = 5, bg = 7},
-            {ind = 4, bg = 3}
+            {ind = 5, bg = 9},
+            {ind = 4, bg = 3},
+            {ind = 6, bg = 5}
         },
         AttPosMods = { -- no rail, just pretend it's mounted to something
             [6] = {
@@ -569,6 +616,7 @@ SWEP.AttachmentElements = {
             },
         }
     },
+
     ["ud_m16_upper_charm"] = {
         AttPosMods = {
             [1] = {

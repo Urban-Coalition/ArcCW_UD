@@ -3,6 +3,7 @@ $modelname "weapons\arccw\c_ud_m16.mdl"
 $bodygroup "studio" {
 	studio "base.smd"
 	studio "base_usas.smd"
+	blank
 }
 
 $bodygroup "1" {
@@ -10,6 +11,7 @@ $bodygroup "1" {
 	studio "upper_flat.smd"
 	studio "upper_usas.smd"
 	studio "upper_usas_flat.smd"
+	blank
 }
 
 $bodygroup "2" {
@@ -22,6 +24,7 @@ $bodygroup "2" {
 	studio "mag_usas_10.smd"
 	studio "mag_usas_20.smd"
 	studio "mag_9mm_32.smd"
+	blank
 }
 
 $bodygroup "3" {
@@ -60,7 +63,7 @@ $bodygroup "6" {
 	studio "barrels_new/fs_carbine.smd" //2
 	studio "barrels_new/gasblock_carbine.smd" //3
 	studio "barrels_new/fs_adar.smd" //4
-	blank
+	blank //5
 }
 
 $bodygroup "7" {
@@ -77,6 +80,7 @@ $bodygroup "7" {
 	studio "stock_wood.smd"
 	studio "stock_adar.smd"
 	studio "stock_ru556.smd"
+	blank
 }
 
 $bodygroup "8" {
@@ -84,6 +88,7 @@ $bodygroup "8" {
 	studio "grip_ergo.smd"
 	studio "grip_skel.smd"
 	studio "grip_wood.smd"
+	blank
 }
 
 $bodygroup "9" {

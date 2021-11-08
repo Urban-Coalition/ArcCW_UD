@@ -213,7 +213,9 @@ local desg_barr = {
     --["ud_m16_barrel_sd"]            =   2, -- amcar-s m4 sd     10.5
     ["ud_m16_barrel_stub"]          =   6, -- A BIT OF A STUB   2
     ["ud_m16_barrel_classic"]           =   10,
-    ["ud_m16_barrel_classic_short"]           =   11 -- M605
+    ["ud_m16_barrel_classic_short"]           =   11, -- M605
+    ["ud_m16_barrel_ru556"] = 12,
+    ["ud_m16_barrel_adar"] = 13
 }
 
 local desg_rec = {
@@ -322,8 +324,13 @@ SWEP.Hook_NameChange = function(wep, name)
             model = "USAS"
             alt = "-12"
         elseif rec == 5 then
-            model = "AR"
-            alt = "-15"
+            if flat and barrel == 13 then
+                model = "ADAR "
+                alt = "2-15"
+            else
+                model = "AR"
+                alt = "-15"
+            end
             wep.Trivia_Desc = "AR-15 style rifles are a class of rifles linked to the M16, but with a semi-automatic fire group for the civilian market. Such rifles are controversial due to their use in mass shootings, but nonetheless popular for sporting and home defense. Well-rounded gun with no major downsides."
         end
         if barrel == 3 then
@@ -352,6 +359,8 @@ SWEP.Hook_NameChange = function(wep, name)
             return "AMPAW-9"
         elseif false then
             return "UKCAR .223"
+        elseif false then
+            return "RUCAR 225"
         else
             return "AMCAR"
         end
@@ -1341,6 +1350,7 @@ SWEP.Attachments = {
         Slot = {"ud_m16_grip"},
         DefaultAttName = "Standard Grip",
         DefaultAttIcon = Material("entities/att/acwatt_ud_m16_grip_default.png", "smooth mips"),
+        ExcludeFlags = {"m16_adar"}
     },
     {
         PrintName = "Stock",

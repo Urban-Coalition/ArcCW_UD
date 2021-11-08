@@ -1,11 +1,11 @@
-att.PrintName = "Magpul UBR Stock"
+att.PrintName = "RU556 Fixed-Adjustable Stock"
 att.AbbrevName = "Fixed-Adjustable Stock"
 
 if GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "RU556 Fixed-Adjustable Stock"
+    att.PrintName = "Magpul UBR GEN2 Stock"
 end
 att.Icon = Material("entities/att/acwatt_ud_m16_barrel_m4.png", "smooth mips")
-att.Description = "insert desc here"
+att.Description = "Sliding stock attached from underneath the buffer tube. I don't feel like balancing this right now."
 att.Desc_Pros = {
     --"uc.auto"
 }

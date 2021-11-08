@@ -27,4 +27,6 @@ att.Mult_SpeedMult = 0.95
 
 att.Add_BarrelLength = 4
 
+att.Override_HoldtypeSights = "rpg"
+
 att.ActivateElements = {"ud_870_barrel_long"}

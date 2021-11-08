@@ -30,6 +30,8 @@ att.Mult_ShootSpeedMult = 1.05
 
 att.Override_Ammo = "ar2"
 
+att.Override_Trivia_Calibre = ".50 Beowulf"
+
 att.ActivateElements = {"ud_m16_mag_50beo_10"}
 
 att.Hook_SelectReloadAnimation = function(wep, anim)

@@ -7,32 +7,33 @@ $bodygroup "studio" {
 }
 
 $bodygroup "1" {
-	studio "upper_ch.smd"
-	studio "upper_flat.smd"
-	studio "upper_usas.smd"
-	studio "upper_usas_flat.smd"
-	blank
+	studio "upper_ch.smd" //0
+	studio "upper_flat.smd" //1
+	studio "upper_usas.smd" //2
+	studio "upper_usas_flat.smd" //3
+	blank //4
 }
 
 $bodygroup "2" {
-	studio "mag_30.smd"
-	studio "mag_20.smd"
-	studio "mag_40.smd"
-	studio "mag_60.smd"
-	studio "mag_100.smd"
-	studio "mag_9mm_20.smd"
-	studio "mag_usas_10.smd"
-	studio "mag_usas_20.smd"
-	studio "mag_9mm_32.smd"
-	blank
+	studio "mag_30.smd" //0
+	studio "mag_20.smd" //1
+	studio "mag_40.smd" //2
+	studio "mag_60.smd" //3
+	studio "mag_100.smd" //4
+	studio "mag_9mm_20.smd" //5
+	studio "mag_usas_10.smd" //6
+	studio "mag_usas_20.smd" //7
+	studio "mag_9mm_32.smd" //8
+	blank //9
+	studio "mag_50beo_10.smd" //10
 }
 
 $bodygroup "3" {
-	blank
-	studio "rail_optic.smd"
-	studio "rail_flat_optic.smd"
-	studio "rail_m16_dedicated.smd"
-	studio "rail_optic_colt.smd"
+	blank //0
+	studio "rail_optic.smd" //1
+	studio "rail_flat_optic.smd" //2
+	studio "rail_m16_dedicated.smd" //3
+	studio "rail_optic_colt.smd" //4
 }
 
 $bodygroup "4" {
@@ -64,46 +65,47 @@ $bodygroup "6" {
 	studio "barrels_new/gasblock_carbine.smd" //3
 	studio "barrels_new/fs_adar.smd" //4
 	blank //5
+	studio "barrels_new/gasblock_adar.smd" //6
 }
 
 $bodygroup "7" {
-	studio "stock.smd"
-	studio "stock_usas.smd"
-	studio "Stock_231_EX.smd"
-	studio "Stock_231_IN.smd"
-	studio "Stock_231_TUBE.smd"
-	studio "Stock_607_EX.smd"
-	studio "Stock_607_IN.smd"
-	studio "Stock_608.smd"
-	studio "Stock_Carbine_EX.smd"
-	studio "Stock_Carbine_IN.smd"
-	studio "stock_wood.smd"
-	studio "stock_adar.smd"
-	studio "stock_ru556.smd"
-	blank
+	studio "stock.smd" //0
+	studio "stock_usas.smd" //1
+	studio "Stock_231_EX.smd" //2
+	studio "Stock_231_IN.smd" //3
+	studio "Stock_231_TUBE.smd" //4
+	studio "Stock_607_EX.smd" //5
+	studio "Stock_607_IN.smd" //6
+	studio "Stock_608.smd" //7
+	studio "Stock_Carbine_EX.smd" //8
+	studio "Stock_Carbine_IN.smd" //9
+	studio "stock_wood.smd" //10
+	studio "stock_adar.smd" //11
+	studio "stock_ru556.smd" //12
+	blank //13
 }
 
 $bodygroup "8" {
-	studio "grip.smd"
-	studio "grip_ergo.smd"
-	studio "grip_skel.smd"
-	studio "grip_wood.smd"
+	studio "grip.smd" //0
+	studio "grip_ergo.smd" //1
+	studio "grip_skel.smd" //2
+	studio "grip_wood.smd" //3
 	blank
 }
 
 $bodygroup "9" {
-	blank
-	studio "rail_fg.smd"
-	studio "rail_fg_stub.smd"
-	studio "rail_fg_wood.smd"
-	studio "rail_fg_wood_short.smd"
+	blank //0
+	studio "rail_fg.smd" //1
+	studio "rail_fg_stub.smd" //2
+	studio "rail_fg_wood.smd" //3
+	studio "rail_fg_wood_short.smd" //4
 }
 
 $bodygroup "10" {
-	blank
-	studio "barrels_new/clamp_20.smd"
-	studio "barrels_new/clamp_11.smd"
-	studio "barrels_new/clamp_14.smd"
+	blank //0
+	studio "barrels_new/clamp_20.smd" //1
+	studio "barrels_new/clamp_11.smd" //2
+	studio "barrels_new/clamp_14.smd" //3
 }
 
 $bodygroup "11" {

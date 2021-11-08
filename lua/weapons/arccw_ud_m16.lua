@@ -392,6 +392,9 @@ SWEP.AttachmentElements = {
     ["ud_m16_usas_mag_20"] = {
         VMBodygroups = {{ind = 2, bg = 7}},
     },
+    ["ud_m16_mag_50beo_10"] = {
+        VMBodygroups = {{ind = 2, bg = 10}},
+    },
 
     ["upper_flat"] = {
         -- handled by code

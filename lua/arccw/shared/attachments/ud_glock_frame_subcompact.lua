@@ -23,7 +23,7 @@ att.Mult_DrawTime = 0.75
 att.Mult_HolsterTime = 0.75
 att.Mult_Recoil = 1.15
 att.Mult_SightedSpeedMult = 1.05
-att.Mult_SightTime = 0.9
+att.Mult_SightTime = 0.8
 
 att.ActivateElements = {"ud_glock_frame_subcompact"}
 att.AddFlags = {"ud_glock_frame_subcompact"}

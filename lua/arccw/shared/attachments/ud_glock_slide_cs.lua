@@ -20,9 +20,8 @@ att.Slot = "ud_glock_slide"
 
 att.AutoStats = true
 
---att.Mult_MoveDispersion = 1.4
-att.Mult_HipDispersion = 1.20
-att.Mult_ShootSpeedMult = 0.85
+att.Mult_HipDispersion = 1.15
+att.Mult_ShootSpeedMult = 0.9
 
 att.Override_Malfunction = true
 
@@ -30,7 +29,7 @@ att.Override_Firemodes = {
     {
         Mode = -3,
         Mult_RPM = 3,
-        PostBurstDelay = 0.25,
+        PostBurstDelay = 0.2,
         RunawayBurst = true,
         Override_ShotRecoilTable = {
             [1] = 0.85,
@@ -42,7 +41,7 @@ att.Override_Firemodes = {
         Mode = 1,
     },
     {
-        PrintName = "Low",
+        PrintName = "fcg.safe2",
         Mode = 0,
     }
 }

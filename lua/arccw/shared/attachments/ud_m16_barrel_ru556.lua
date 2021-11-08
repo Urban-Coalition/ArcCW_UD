@@ -32,6 +32,10 @@ att.Mult_Sway = 0.75
 
 att.Add_BarrelLength = -6
 
+att.LHIK = true
+
+att.Model = "models/weapons/arccw/atts/ru556_lhik.mdl"
+
 --[[]
 att.Override_Firemodes = {
     {

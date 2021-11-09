@@ -27,6 +27,7 @@ $bodygroup "3" {
 $cdmaterials "models\weapons\arccw\ud_m79"
 $cdmaterials "models\weapons\arccw\ud_m79\m79_new"
 $cdmaterials "models\weapons\arccw\ud_m1014"
+$cdmaterials "models\weapons\arccw\ud_m16"
 $cdmaterials "models\weapons\arccw\ud_common"
 
 $attachment "1" "m79_barrel" 0 0 0 rotate -90 0 0

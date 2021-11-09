@@ -224,6 +224,7 @@ local desg_rec = {
     ["ud_m16_receiver_cali"]        =   3,
     ["ud_m16_receiver_usas"]        =   4,
     ["ud_m16_receiver_semi"]        =   5,
+    ["ud_m16_receiver_50beo"]        =   5,
 }
 
 local mftoflat = {
@@ -393,7 +394,7 @@ SWEP.AttachmentElements = {
     ["ud_m16_usas_mag_20"] = {
         VMBodygroups = {{ind = 2, bg = 7}},
     },
-    ["ud_m16_mag_50beo_10"] = {
+    ["ud_m16_mag_50beo"] = {
         VMBodygroups = {{ind = 2, bg = 10}},
     },
 

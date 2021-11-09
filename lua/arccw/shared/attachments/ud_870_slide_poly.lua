@@ -25,6 +25,6 @@ att.Mult_RecoilSide = 1.25
 
 att.LHIK = true
 
-att.Model = "models/weapons/arccw/atts/moe_lhik.mdl"
+att.Model = "models/weapons/arccw/atts/poly_lhik.mdl"
 
 att.ActivateElements = {"ud_870_slide_poly"}

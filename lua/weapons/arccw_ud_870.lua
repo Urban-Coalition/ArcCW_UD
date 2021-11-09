@@ -270,9 +270,9 @@ SWEP.Animations = {
         ShellEjectAt = 0.5,
         SoundTable = {
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.5},
-            {s = path .. "rack_1.ogg",  t = 0.5},
-            {s = path .. "eject.ogg",  t = 0.58},
-            {s = path .. "rack_2.ogg",  t = 0.7},
+            {s = path .. "rack_1.ogg",  t = 0.4},
+            {s = path .. "eject.ogg",  t = 0.48},
+            {s = path .. "rack_2.ogg",  t = 0.6},
             {s = common .. "shoulder.ogg",  t = 0.9},
         },
     },
@@ -297,7 +297,7 @@ end
 
 
 SWEP.BulletBones = {
-    [1] = "870_shell1",
+    [0] = "870_shell1",
 }
 
 -- Bodygroups --

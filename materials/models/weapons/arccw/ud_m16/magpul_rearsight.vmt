@@ -1,0 +1,17 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "rear_sight/sight_rear_all_magpul_mbus_gen2_LOD0_diff"
+	"$bumpmap" "rear_sight/sight_rear_all_magpul_mbus_gen2_LOD0_nrm"
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[ .075 .075 .075 ]"
+	"$envmapfresnel" ".5"
+	"$basemapalphaenvmapmask" "1"
+
+	"$phong" "1"
+	"$phongalbedotint" "0"
+
+	"$phongboost" "0.25"
+	"$phongexponent" "12"
+	"$phongfresnelranges" "[1 5 22.5]"
+	"$phongexponenttexture" "rear_sight/sight_rear_all_magpul_mbus_gen2_LOD0_exponent"
+}

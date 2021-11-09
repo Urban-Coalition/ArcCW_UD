@@ -1,10 +1,10 @@
 "VertexLitGeneric"
 {
-	"$basetexture" "models\weapons\arccw\ud_m16\mw19mp5sd_sd"
-	"$bumpmap" "models\weapons\arccw\ud_m16\mw19mp5sd_sd_n"
+	"$basetexture" "models\weapons\arccw\ud_m16\m16_sd_d"
+	"$bumpmap" "models\weapons\arccw\ud_m16\m16_sd_n"
 	
 	"$phong" 		"1"
-	"$phongexponenttexture"	"models\weapons\arccw\ud_m16/m16a2_exp_new"
+//  "$phongexponenttexture"	"models\weapons\arccw\ud_m16/m16a2_exp_new"
 	"$phongboost" "2.5"
 	"$phongalbedotint" 			"1"
 	"$phongfresnelranges" "[1.6 1 2]"

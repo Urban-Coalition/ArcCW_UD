@@ -1,29 +1,30 @@
 att.PrintName = "AMRA1 Classic Receiver"
 att.AbbrevName = "Classic Receiver"
-att.Description = "Authentic receiver of the AMRA1 rifle, most notable for its use throughout the latter half of the Vietnam War. Functions identically to the Automatic Receiver."
+att.Description = "Authentic receiver of the AMRA1 rifle, most notable for its use throughout the latter half of the Vietnam War and seldom seen in the hands of the fortunate. Functions identically to the Automatic Receiver."
 
 if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "M16A1 Classic Receiver"
-    att.Description = "Authentic receiver of the M16A1 rifle, most notable for its use throughout the latter half of the Vietnam War. Functions identically to the Automatic Receiver."
+    att.Description = "Authentic receiver of the M16A1 rifle, most notable for its use throughout the latter half of the Vietnam War and seldom seen in the hands of the fortunate. Functions identically to the Automatic Receiver."
 end
 
 att.Icon = Material("entities/att/acwatt_ud_m16_receiver_auto.png", "smooth mips")
 att.Desc_Pros = {
+    "uc.auto",
+    --"ud.flattop"
 }
 att.Desc_Cons = {
-    "uc.semionly"
 }
 att.Desc_Neutrals = {
 }
 att.Slot = "ud_m16_receiver"
+--att.InvAtt = "ud_m16_receiver_auto"
 
 att.AutoStats = true
 
-att.Mult_RPM = 950 / 900
-att.Mult_Recoil = 0.85
-att.Mult_AccuracyMOA = 0.75
-att.Mult_Range = 1.25
-att.Mult_MoveDispersion = 0.75
+att.Mult_AccuracyMOA = 1.25
+att.Mult_RPM = 0.85
+att.Mult_HipDispersion = 1.125
+att.Mult_ShootSpeedMult = 0.85
 
 att.Override_Firemodes = {
     {

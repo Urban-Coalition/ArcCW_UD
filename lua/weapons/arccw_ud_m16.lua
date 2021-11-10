@@ -225,6 +225,7 @@ local desg_rec = {
     ["ud_m16_receiver_usas"]        =   4,
     ["ud_m16_receiver_semi"]        =   5,
     ["ud_m16_receiver_50beo"]        =   5,
+    ["ud_m16_receiver_a1"]          =   6,
 }
 
 local mftoflat = {
@@ -406,6 +407,11 @@ SWEP.AttachmentElements = {
             {ind = 3, bg = 3}
         },
         ]]
+    },
+    ["upper_classic"] = {
+        VMBodygroups = {
+            {ind = 1, bg = 5},
+        },
     },
 
     ["stock_231_ex"] = {

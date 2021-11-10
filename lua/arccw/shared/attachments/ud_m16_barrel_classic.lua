@@ -20,7 +20,6 @@ att.AutoStats = true
 att.Mult_Sway = 1.10
 att.Mult_RecoilSide = 1.15
 att.Mult_Recoil = 1.10
-att.Mult_RPM = 1.242
 
 --att.Mult_SightedSpeedMult = 1.025
 --att.Mult_ShootSpeedMult = 1.025

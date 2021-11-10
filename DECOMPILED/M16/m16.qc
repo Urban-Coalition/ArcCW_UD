@@ -12,6 +12,7 @@ $bodygroup "1" {
 	studio "upper_usas.smd" //2
 	studio "upper_usas_flat.smd" //3
 	blank //4
+	studio "upper_ch_a1.smd" //5
 }
 
 $bodygroup "2" {
@@ -117,6 +118,7 @@ $bodygroup "11" {
 $bodygroup "12" {
 	blank
 	studio "sights_m4a4.smd"
+	studio "sights_magpul.smd"
 }
 
 $bodygroup "13" {

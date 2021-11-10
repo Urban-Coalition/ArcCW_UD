@@ -1254,7 +1254,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     vm:SetBodygroup(12, flipup and 1 or 0)
 
     if barrel == 6 or barrel == 10 or taclaser then
-        vm:SetBodygroup(6, 4)
+        vm:SetBodygroup(6, 5)
     end
 
     if wep.Attachments[1].Installed then

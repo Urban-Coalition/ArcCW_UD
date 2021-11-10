@@ -660,7 +660,7 @@ SWEP.AttachmentElements = {
     },
     ["m16_strap"] = {
         VMBodygroups = {
-            {ind = 13, bg = 1},
+            {ind = 11, bg = 2},
         },
     },
     ["bravo_dicks_going_fart"] = {

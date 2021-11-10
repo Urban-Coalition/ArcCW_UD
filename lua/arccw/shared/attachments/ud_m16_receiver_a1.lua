@@ -15,6 +15,7 @@ att.Desc_Pros = {
 att.Desc_Cons = {
 }
 att.Desc_Neutrals = {
+    "Triggers the effects of the Classic Rail Mount charm."
 }
 att.Slot = "ud_m16_receiver"
 --att.InvAtt = "ud_m16_receiver_auto"
@@ -38,6 +39,7 @@ att.Override_Firemodes = {
     }
 }
 
-att.GivesFlags = {"m16_auto"}
-att.ExcludeFlags = {"m16_noauto"}
-att.ActivateElements = {"upper_classic"}
+att.GivesFlags = {"m16_auto","m16_retro"}
+att.ExcludeFlags = {"m16_noauto","ud_m16_not_retro"}
+att.ActivateElements = {"upper_classic","ud_m16_upper_charm2"}
+att.TopMount = 4

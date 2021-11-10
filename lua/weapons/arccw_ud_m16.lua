@@ -335,6 +335,9 @@ SWEP.Hook_NameChange = function(wep, name)
                 alt = "-15"
             end
             wep.Trivia_Desc = "AR-15 style rifles are a class of rifles linked to the M16, but with a semi-automatic fire group for the civilian market. Such rifles are controversial due to their use in mass shootings, but nonetheless popular for sporting and home defense. Well-rounded gun with no major downsides."
+        elseif rec == 6 then
+            alt = "16A1"
+            wep.Trivia_Desc = "Second generation of America's iconic military rifle. It was developed to address problems with the original M16, which suffered notoriously frequent jamming that could get its wielder killed. Additions include a forward assist, chrome-lined internals, and a new flash hider that is less likely to get snagged on jungle foliage. Well-rounded, but can become difficult to control without discipline."
         end
         if barrel == 3 then
             alt = "231 FPW"
@@ -364,6 +367,8 @@ SWEP.Hook_NameChange = function(wep, name)
             return "UKCAR .223"
         elseif false then
             return "RUCAR 225"
+        elseif rec == 6 then
+            return "AMRA1"
         else
             return "AMCAR"
         end

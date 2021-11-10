@@ -1,13 +1,13 @@
-att.PrintName = "AMRA1 Automatic Receiver"
+att.PrintName = "AMRA1 Classic Receiver"
 att.AbbrevName = "Classic Receiver"
+att.Description = "Authentic receiver of the AMRA1 rifle, most notable for its use throughout the latter half of the Vietnam War. Functions identically to the Automatic Receiver."
 
 if GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "M16A1 Receiver"
+    att.PrintName = "M16A1 Classic Receiver"
+    att.Description = "Authentic receiver of the M16A1 rifle, most notable for its use throughout the latter half of the Vietnam War. Functions identically to the Automatic Receiver."
 end
 
-att.Description = "old ass recever"
-
-att.Icon = Material("entities/att/acwatt_ud_m16_receiver_semi.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_m16_receiver_auto.png", "smooth mips")
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

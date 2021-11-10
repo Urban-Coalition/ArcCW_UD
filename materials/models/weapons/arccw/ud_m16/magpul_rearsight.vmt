@@ -1,7 +1,7 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "rear_sight/sight_rear_all_magpul_mbus_gen2_LOD0_diff"
-	"$bumpmap" "rear_sight/sight_rear_all_magpul_mbus_gen2_LOD0_nrm"
+	"$basetexture" "models\weapons\arccw\ud_m16\magpul_rearsight_d"
+	"$bumpmap" "models\weapons\arccw\ud_m16\magpul_rearsight_n"
 	"$envmap" "env_cubemap"
 	"$envmaptint" "[ .075 .075 .075 ]"
 	"$envmapfresnel" ".5"
@@ -13,5 +13,5 @@
 	"$phongboost" "0.25"
 	"$phongexponent" "12"
 	"$phongfresnelranges" "[1 5 22.5]"
-	"$phongexponenttexture" "rear_sight/sight_rear_all_magpul_mbus_gen2_LOD0_exponent"
+	"$phongexponenttexture" "models\weapons\arccw\ud_m16\magpul_rearsight_exp"
 }

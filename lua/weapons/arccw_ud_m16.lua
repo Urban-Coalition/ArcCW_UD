@@ -99,6 +99,7 @@ SWEP.Num = 1
 SWEP.Firemodes = {
     {
         Mode = -3,
+        PostBurstDelay = 0.1,
         RunawayBurst = false, -- https://en.wikipedia.org/wiki/Burst_mode_(weapons)
     },
     {
@@ -295,7 +296,7 @@ SWEP.Hook_NameChange = function(wep, name)
         elseif rec == 0 and flat then
             alt = "16A4"
         end
-        if rec == 1 then
+        if rec == 1 or rec == 6 then
             model = "M"
             alt = "16A3"
             wep.Trivia_Desc = m4Desc
@@ -307,6 +308,9 @@ SWEP.Hook_NameChange = function(wep, name)
                 alt = "727"
             elseif barrel == 2 then
                 alt = "733"
+            elseif rec == 6 then
+                alt = "16A1"
+                wep.Trivia_Desc = "Second generation of America's iconic military rifle. Developed to address problems with the original M16, which suffered notoriously frequent jamming that could get its wielder killed. A well-rounded rifle, but difficult to control without trigger discipline - something the A2 model eventually addressed."
             else
                 wep.Trivia_Desc = "Variant of the M16A2 with the original full-automatic trigger group, relegated to niche roles in the US Army. Well-rounded gun with no major downsides."
             end
@@ -335,9 +339,6 @@ SWEP.Hook_NameChange = function(wep, name)
                 alt = "-15"
             end
             wep.Trivia_Desc = "AR-15 style rifles are a class of rifles linked to the M16, but with a semi-automatic fire group for the civilian market. Such rifles are controversial due to their use in mass shootings, but nonetheless popular for sporting and home defense. Well-rounded gun with no major downsides."
-        elseif rec == 6 then
-            alt = "16A1"
-            wep.Trivia_Desc = "Second generation of America's iconic military rifle. It was developed to address problems with the original M16, which suffered notoriously frequent jamming that could get its wielder killed. Additions include a forward assist, chrome-lined internals, and a new flash hider that is less likely to get snagged on jungle foliage. Well-rounded, but can become difficult to control without discipline."
         end
         if barrel == 3 then
             alt = "231 FPW"

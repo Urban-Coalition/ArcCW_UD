@@ -12,7 +12,7 @@ att.Slot = "ud_m16_charm"
 
 att.ActivateElements = {"ud_m16_upper_charm2"}
 att.GivesFlags = {"ud_m16_retro"}
-att.ExcludeFlags = {"ud_m16_not_retro"}
+att.ExcludeFlags = {"ud_m16_not_retro", "ud_m16_a1"}
 att.TopMount = 4
 
 att.SortOrder = 1000

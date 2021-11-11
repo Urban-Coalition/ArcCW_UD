@@ -480,11 +480,11 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [3] = {
-                vpos = Vector(0, 0, 24.5),
+                vpos = Vector(0, -0.05, 24.5),
                 vang = Angle(90, 0, -90),
             },
             [6] = {
-                vpos = Vector(0, 0.8, 20),
+                vpos = Vector(0, 0.8, 22),
                 vang = Angle(90, 0, -90),
             },
         }
@@ -496,7 +496,7 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [3] = {
-                vpos = Vector(0, 0, 19.75),
+                vpos = Vector(0, -0.05, 20.5),
                 vang = Angle(90, 0, -90),
             },
             [6] = {
@@ -1218,7 +1218,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     if !IsValid(vm) then return end
     local flipup = wep.Attachments[1].Installed == "ud_m16_rs"
-    local flipupmagpull = wep.Attachments[1].Installed == "ud_m16_rs_magpull"
+    local flipupmagpull = wep.Attachments[1].Installed == "ud_m16_rs_magpul"
     local retro = (wep:GetBuff_Override("TopMount"))
     local trueflat = wep:GetBuff_Override("TrueFlatTop")
     local taclaser = wep:GetBuff_Override("TacLaserPos")
@@ -1232,6 +1232,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     if barrelatt == "ud_m16_barrel_m4" then barrel = 1 short = true
     elseif barrelatt == "ud_m16_barrel_tactical" then barrel = 7
     elseif barrelatt == "ud_m16_barrel_cqbr" then barrel = 2
+    elseif barrelatt == "ud_m16_barrel_ru556" then barrel = 14
     elseif barrelatt == "ud_m16_barrel_sd" then barrel = 6 -- specially handled
     elseif barrelatt == "ud_m16_barrel_fpw" then barrel = 10 short = true
     elseif barrelatt == "ud_m16_barrel_classic" then barrel = 3
@@ -1242,6 +1243,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     elseif barrelatt == "ud_m16_barrel_tactical_a4" then barrel = 8
     elseif barrelatt == "ud_m16_barrel_smg" then barrel = 9 short = true
     elseif barrelatt == "ud_m16_barrel_classic_short" then barrel = 12 short = false
+    elseif barrelatt == "ud_m16_barrel_adar" then barrel = 13 short = true
     end
 
     if recatt == "ud_m16_receiver_a1" then rec = 1
@@ -1258,7 +1260,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         vm:SetBodygroup(9,0)
     end
 
-    -- M4A4 flip-up sights
+    -- flip-up sights
     vm:SetBodygroup(12, flipupmagpull and 2 or flipup and 1 or 0)
 
     if barrel == 6 or barrel == 10 or taclaser then

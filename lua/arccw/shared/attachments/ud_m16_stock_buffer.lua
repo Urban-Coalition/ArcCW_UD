@@ -11,7 +11,7 @@ att.Desc_Neutrals = {
 att.Slot = "ud_m16_stock"
 
 att.AutoStats = true
-att.SortOrder = 1
+att.SortOrder = -100
 att.Free = true
 
 att.Mult_SpeedMult = 1.05

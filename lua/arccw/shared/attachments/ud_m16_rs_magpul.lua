@@ -1,6 +1,6 @@
-att.PrintName = "Magpull Rear Sight"
+att.PrintName = "Magpul Rear Sight"
 att.Icon = Material("entities/att/acwatt_ud_m16_rs.png", "smooth mips")
-att.Description = "The tactical."
+att.Description = "Aftermarket rear sight for flat top receivers. Functionally identical to other iron sights, but may look more tactical (or mall-ninja, depending on your taste)."
 att.Desc_Pros = {}
 att.Desc_Cons = {}
 att.Desc_Neutrals = {

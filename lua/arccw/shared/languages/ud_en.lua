@@ -19,6 +19,8 @@ L["ud.m16_tl.2"] = "The front sight is removed, and the sight is changed to a po
 L["ud.m16_nors"] = "This disables alternative iron sights."
 L["ud.m16_a1"] = "This receiver has no flat top variant, and will apply a rail mount for optics."
 L["ud.usas"] = "Fire shotgun shells instead of bullets" -- deprecated
+L["ud.m16_fs.1"] = "Keep the front iron sight on the gas block when mounting optics."
+L["ud.m16_fs.2"] = "Certain optics will become obstructed by the front sight."
 
 -- Deprecated
 L["ud.darkrp.cantremove"] = "You can't remove this without a gun license!"

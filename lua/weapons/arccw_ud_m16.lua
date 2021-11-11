@@ -1224,7 +1224,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local barrel = 0
     local short = false
     local barrelatt = wep.Attachments[2].Installed
-    local sling = wep.Attachments[14] == "ud_m16_charm_strap"
+    local fs = wep.Attachments[14].Installed == "ud_m16_charm_fs"
     local recatt = wep.Attachments[4].Installed
     local rec = 0
 
@@ -1278,7 +1278,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
             vm:SetBodygroup(1, 1)
             vm:SetBodygroup(3, 3)
             -- Low profile gas block
-            if (!flipup or trueflat) and !(barrel == 10 or barrel == 6) then
+            if !fs and (!flipup or trueflat) and !(barrel == 10 or barrel == 6) then
                 -- this is handled after elements sets bodygroup so we can do this
                 vm:SetBodygroup(6, vm:GetBodygroup(6) + 1)
             end
@@ -1304,8 +1304,6 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     else
         vm:SetBodygroup(10, 0)
     end
-
-    vm:SetBodygroup(11, sling and 2 or 0)
 end
 
 SWEP.Attachments = {

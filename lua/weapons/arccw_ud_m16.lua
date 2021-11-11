@@ -1217,12 +1217,15 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     if !IsValid(vm) then return end
     local flipup = wep.Attachments[1].Installed == "ud_m16_rs"
-    local retro = wep:GetBuff_Override("TopMount")
+    local retro = (wep:GetBuff_Override("TopMount"))
     local trueflat = wep:GetBuff_Override("TrueFlatTop")
     local taclaser = wep:GetBuff_Override("TacLaserPos")
     local barrel = 0
     local short = false
     local barrelatt = wep.Attachments[2].Installed
+    local sling = wep.Attachments[14] == "ud_m16_charm_strap"
+    local recatt = wep.Attachments[4].Installed
+    local rec = 0
 
     if barrelatt == "ud_m16_barrel_m4" then barrel = 1 short = true
     elseif barrelatt == "ud_m16_barrel_tactical" then barrel = 7
@@ -1237,6 +1240,9 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     elseif barrelatt == "ud_m16_barrel_tactical_a4" then barrel = 8
     elseif barrelatt == "ud_m16_barrel_smg" then barrel = 9 short = true
     elseif barrelatt == "ud_m16_barrel_classic_short" then barrel = 12 short = false
+    end
+
+    if recatt == "ud_m16_receiver_a1" then rec = 1
     end
 
     local risbarrel = barrel == 7 or barrel == 8
@@ -1254,13 +1260,17 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     vm:SetBodygroup(12, flipup and 1 or 0)
 
     if barrel == 6 or barrel == 10 or taclaser then
-        vm:SetBodygroup(6, 4)
+        vm:SetBodygroup(6, 5)
     end
 
     if wep.Attachments[1].Installed then
         if retro then
             -- Raised rail (retro)
-            vm:SetBodygroup(1, 0)
+            if rec == 1 then
+                vm:SetBodygroup(1, 5)
+            else
+                vm:SetBodygroup(1, 0)
+            end
             vm:SetBodygroup(3, retro)
         else
             -- Flat rail
@@ -1274,7 +1284,11 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         end
     else
         -- no rails
-        vm:SetBodygroup(1, 0)
+        if rec == 1 then
+            vm:SetBodygroup(1, 5)
+        else
+            vm:SetBodygroup(1, 0)
+        end
         vm:SetBodygroup(3, 0)
     end
 
@@ -1289,6 +1303,8 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     else
         vm:SetBodygroup(10, 0)
     end
+
+    vm:SetBodygroup(11, sling and 2 or 0)
 end
 
 SWEP.Attachments = {

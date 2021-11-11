@@ -1,10 +1,10 @@
 att.PrintName = "AMRA1 Classic Receiver"
 att.AbbrevName = "Classic Receiver"
-att.Description = "Authentic receiver of the AMRA1 rifle, most notable for its use throughout the latter half of the Vietnam War and seldom seen in the hands of the fortunate. Functions identically to the Automatic Receiver."
+att.Description = "Authentic receiver of the AMRA1 rifle, most notable for its use throughout the latter half of the Vietnam War and seldom wielded by fortunate ones. Functions identically to the Automatic Receiver."
 
 if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "M16A1 Classic Receiver"
-    att.Description = "Authentic receiver of the M16A1 rifle, most notable for its use throughout the latter half of the Vietnam War and seldom seen in the hands of the fortunate. Functions identically to the Automatic Receiver."
+    att.Description = "Authentic receiver of the M16A1 rifle, most notable for its use throughout the latter half of the Vietnam War and seldom wielded by fortunate ones. Functions identically to the Automatic Receiver."
 end
 
 att.Icon = Material("entities/att/acwatt_ud_m16_receiver_auto.png", "smooth mips")
@@ -39,7 +39,7 @@ att.Override_Firemodes = {
     }
 }
 
-att.GivesFlags = {"m16_auto","m16_retro"}
+att.GivesFlags = {"m16_auto","ud_m16_retro"}
 att.ExcludeFlags = {"m16_noauto","ud_m16_not_retro"}
 att.ActivateElements = {"upper_classic","ud_m16_upper_charm2"}
 att.TopMount = 4

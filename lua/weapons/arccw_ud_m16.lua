@@ -1244,6 +1244,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     elseif barrelatt == "ud_m16_barrel_smg" then barrel = 9 short = true
     elseif barrelatt == "ud_m16_barrel_classic_short" then barrel = 12 short = false
     elseif barrelatt == "ud_m16_barrel_adar" then barrel = 13 short = true
+    elseif barrelatt == "ud_m16_barrel_ru556" then barrel = 14 short = true
     end
 
     if recatt == "ud_m16_receiver_a1" then rec = 1
@@ -1281,7 +1282,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
             vm:SetBodygroup(1, 1)
             vm:SetBodygroup(3, 3)
             -- Low profile gas block
-            if !fs and (!(flipup or flipupmagpull) or trueflat) and !(barrel == 10 or barrel == 6) then
+            if barrel ~= 14 and !fs and (!(flipup or flipupmagpull) or trueflat) and !(barrel == 10 or barrel == 6) then
                 -- this is handled after elements sets bodygroup so we can do this
                 vm:SetBodygroup(6, vm:GetBodygroup(6) + 1)
             end

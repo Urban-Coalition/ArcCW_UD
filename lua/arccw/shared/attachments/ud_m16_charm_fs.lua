@@ -10,4 +10,4 @@ att.Desc_Neutrals = {
 att.Slot = "ud_m16_charm"
 
 att.SortOrder = 999
-att.ExcludeFlags = {"ud_m16_a1"}
+att.ExcludeFlags = {"ud_m16_a1","sight_magpul"}

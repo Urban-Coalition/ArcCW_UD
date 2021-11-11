@@ -41,7 +41,7 @@ att.Override_Firemodes = {
     {
         Mode = 2,
     },
-    {
+    {w
         Mode = 1,
     },
     {
@@ -55,3 +55,4 @@ att.Override_Firemodes = {
 att.Model = "models/weapons/arccw/atts/m4_lhik.mdl"]]
 
 att.ActivateElements = {"hg_ru556", "barrel_11_ru556", "gasblock_carbine"}
+att.GivesFlags = {"sight_magpul"}

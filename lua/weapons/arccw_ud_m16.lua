@@ -277,7 +277,7 @@ SWEP.Hook_NameChange = function(wep, name)
     end
     ]]
 
-    local flat = (wep.Attachments[1].Installed or wep.Attachments[14].Installed) and !wep:GetBuff_Override("TopMount")
+    local flat = wep.Attachments[1].Installed and !wep:GetBuff_Override("TopMount")
 
     if trueNames then
         local model = "M"
@@ -1267,6 +1267,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     -- flip-up sights
     vm:SetBodygroup(12, flipupmagpull and 2 or flipup and 1 or 0)
     vm:SetBodygroup(11,(strap and 2 or (flipupmagpull or flipup) and 1) or 0)
+
 
     if barrel == 6 or barrel == 10 or taclaser then
         vm:SetBodygroup(6, 5)

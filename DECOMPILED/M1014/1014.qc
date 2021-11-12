@@ -7,6 +7,8 @@ $bodygroup "studio" {
 $bodygroup "1" {
 	studio "autoshotgun_barrel.smd"
 	studio "autoshotgun_barrel_short.smd"
+	studio "autoshotgun_barrel_sawoff.smd"
+	studio "autoshotgun_barrel_sport.smd"
 }
 
 $bodygroup "2" {

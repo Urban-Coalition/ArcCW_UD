@@ -111,8 +111,6 @@ $bodygroup "10" {
 
 $bodygroup "11" {
 	blank
-	blank
-	blank
 }
 
 $bodygroup "12" {

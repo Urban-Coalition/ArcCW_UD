@@ -41,6 +41,7 @@ SWEP.Trivia_Year = 1959
 local origDesc = SWEP.Trivia_Desc
 local m4Desc = "Carbine variant of the M16 rifle. Originally designed in response to design faults in the CAR-15 family, it eventually replaced the M16 across almost every branch of the Army for its favorably low weight and comparable performance. Well-rounded and light, but can become difficult to control without discipline."
 local ncrDesc = "Standard-issue rifle of the New California Republic. Traditionally produced with a semi-automatic receiver, the wooden furniture is easily replaceable and adds additional recoil control for maximum accuracy. Well-rounded gun with no major downsides."
+local smgDesc = "Submachine gun based on the M16 rifle. Despite its similar appearance, it uses a different mechanism from its parent rifle. More accurate than other submachine guns due to its rifle frame and closed-bolt mechanism."
 
 -- Weapon slot --
 
@@ -310,7 +311,7 @@ SWEP.Hook_NameChange = function(wep, name)
             else
                 alt = "635"
             end
-            wep.Trivia_Desc = "Submachine gun based on the M16 rifle. Despite its similar appearance, it uses a different mechanism from its parent rifle. More accurate than other submachine guns due to its rifle frame and closed-bolt mechanism."
+            wep.Trivia_Desc = smgDesc
             wep.Trivia_Mechanism = "Blowback"
         elseif r_cal == CAL_BLK then
             model = "AR"
@@ -352,8 +353,9 @@ SWEP.Hook_NameChange = function(wep, name)
                 end
             else
                 alt = "4"
+                post = " Carbine"
             end
-            post = " Carbine"
+            wep.Trivia_Desc = m4Desc
         -------------------------------
         -- Auto/Semi Variants
         -------------------------------
@@ -378,6 +380,9 @@ SWEP.Hook_NameChange = function(wep, name)
                 alt = "-15"
                 if r_cal == CAL_9MM then
                     post = " SMG"
+                    wep.Trivia_Desc = smgDesc
+                else
+                    wep.Trivia_Desc = "Carbine variant of the M16 rifle, short enough to be classified as a submachine gun. Its features influenced the US Army's interest in the M4 Carbine, which went on to become their new standard rifle. Due to the small barrel, rifles of this family have high maneuverability but poor range compared to their parent platform."
                 end
             elseif flat and blen < BLEN_20 then
                 alt = "4A1"
@@ -1346,7 +1351,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
             vm:SetBodygroup(1, 1)
             vm:SetBodygroup(3, 3)
             -- Low profile gas block
-            if barrel ~= 14 and !fs and (!flip or trueflat) and !(barrel == 10 or barrel == 6) then
+            if barrel ~= 14 and !fs and (flip == 0 or trueflat) and !(barrel == 10 or barrel == 6) then
                 -- this is handled after elements sets bodygroup so we can do this
                 vm:SetBodygroup(6, vm:GetBodygroup(6) + 1)
             end

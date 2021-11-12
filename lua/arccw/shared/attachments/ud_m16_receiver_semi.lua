@@ -18,6 +18,7 @@ att.Desc_Neutrals = {
 att.Slot = "ud_m16_receiver"
 
 att.AutoStats = true
+att.SortOrder = -1
 
 att.Mult_RPM = 600 / 900
 att.Mult_Recoil = 0.85

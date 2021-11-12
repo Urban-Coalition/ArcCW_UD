@@ -16,7 +16,9 @@ att.Desc_Neutrals = {
 }
 att.Slot = "ud_m16_receiver"
 att.AutoStats = true
-att.SortOrder = -100
+
+att.SortOrder = -5
+
 att.Override_CaseEffectAttachment = 6
 
 att.Mult_PhysBulletMuzzleVelocity = 1.3

@@ -18,6 +18,8 @@ att.Slot = "ud_m16_receiver"
 att.AutoStats = true
 att.HideIfBlocked = true
 
+att.SortOrder = 1
+
 att.Override_ClipSize = 10
 
 att.Mult_Damage = 2.5

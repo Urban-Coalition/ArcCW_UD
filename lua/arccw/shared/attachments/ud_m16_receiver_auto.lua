@@ -20,6 +20,7 @@ att.Slot = "ud_m16_receiver"
 --att.InvAtt = "ud_m16_receiver_auto"
 
 att.AutoStats = true
+att.SortOrder = 5
 
 att.Mult_AccuracyMOA = 1.25
 att.Mult_RPM = 0.85

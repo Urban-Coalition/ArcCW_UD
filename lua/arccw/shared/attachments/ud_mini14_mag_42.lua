@@ -7,7 +7,7 @@ end
 
 att.SortOrder = 30
 att.Icon = Material("entities/att/acwatt_ud_mini14_mag_30_polymer.png", "smooth mips")
-att.Description = "Polymer aftermarket extended magazine. The grid texturing and anti-tilt follower makes this magazine easier to load than factory magazines."
+att.Description = "Polymer aftermarket extended magazine with a generous capacity."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
@@ -18,11 +18,18 @@ att.Slot = "ud_mini14_mag"
 
 att.AutoStats = true
 
-att.Mult_SightTime = 1.1
 att.Override_ClipSize = 42
-att.Mult_Sway = 1.5
-att.Mult_SightedSpeedMult = 0.95
-att.Mult_ShootSpeedMult = 0.9
+
+att.Mult_SightTime = 1.2
+att.Mult_ReloadTime = 1.25
+att.Mult_Sway = 1.75
+
+att.Mult_SpeedMult = 0.975
+att.Mult_ShootSpeedMult = 0.925
+
+
+att.Mult_DrawTime = 1.15
+att.Mult_HolsterTime = 1.15
 
 att.ActivateElements = {"ud_mini14_mag_42"}
 

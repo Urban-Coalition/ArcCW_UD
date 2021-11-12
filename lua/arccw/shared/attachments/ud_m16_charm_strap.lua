@@ -17,3 +17,5 @@ att.SortOrder = 999
 att.Free = true
 
 att.ActivateElements = {"m16_strap"}
+
+att.Ignore = true

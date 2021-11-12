@@ -15,3 +15,5 @@ att.ExcludeFlags = {"ud_m16_retro"}
 
 att.SortOrder = 1000
 att.Free = true
+
+att.M16Sights = 2

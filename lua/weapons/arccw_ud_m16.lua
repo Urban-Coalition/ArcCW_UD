@@ -1219,8 +1219,9 @@ SWEP.Animations = {
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     if !IsValid(vm) then return end
-    local flipup = wep.Attachments[1].Installed == "ud_m16_rs"
-    local flipupmagpull = wep.Attachments[1].Installed == "ud_m16_rs_magpul"
+    local flip = wep:GetBuff_Override("M16Sights") or 0
+    --local flipup = wep.Attachments[1].Installed == "ud_m16_rs"
+    --local flipupmagpull = wep.Attachments[1].Installed == "ud_m16_rs_magpul"
     local retro = (wep:GetBuff_Override("TopMount"))
     local trueflat = wep:GetBuff_Override("TrueFlatTop")
     local taclaser = wep:GetBuff_Override("TacLaserPos")
@@ -1265,8 +1266,8 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     end
 
     -- flip-up sights
-    vm:SetBodygroup(12, flipupmagpull and 2 or flipup and 1 or 0)
-    vm:SetBodygroup(11,(strap and 2 or (flipupmagpull or flipup) and 1) or 0)
+    vm:SetBodygroup(12, flip)
+    vm:SetBodygroup(11, (strap and 2 or flip and 1) or 0)
 
 
     if barrel == 6 or barrel == 10 or taclaser then
@@ -1287,7 +1288,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
             vm:SetBodygroup(1, 1)
             vm:SetBodygroup(3, 3)
             -- Low profile gas block
-            if barrel ~= 14 and !fs and (!(flipup or flipupmagpull) or trueflat) and !(barrel == 10 or barrel == 6) then
+            if barrel ~= 14 and !fs and (!flip or trueflat) and !(barrel == 10 or barrel == 6) then
                 -- this is handled after elements sets bodygroup so we can do this
                 vm:SetBodygroup(6, vm:GetBodygroup(6) + 1)
             end

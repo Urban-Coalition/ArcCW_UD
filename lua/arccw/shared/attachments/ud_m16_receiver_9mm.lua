@@ -18,7 +18,7 @@ att.Slot = "ud_m16_receiver"
 att.SortOrder = -10
 
 att.AutoStats = true
-att.SortOrder = 3
+att.SortOrder = 4
 
 att.Mult_Damage = 0.88
 att.Mult_DamageMin = 0.88

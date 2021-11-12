@@ -1,8 +1,8 @@
 att.PrintName = "AMCAR-NG Automatic Receiver"
-att.AbbrevName = "Sporting Receiver"
+att.AbbrevName = "Sporter Receiver"
 
 if GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "AR-15 Sporting Receiver"
+    att.PrintName = "AR-15 Sporter Receiver"
 end
 
 att.Description = "A semi-automatic receiver sold in civilian markets. Designed for sport shooting, this receiver is more accurate and lightweight."
@@ -21,10 +21,10 @@ att.AutoStats = true
 att.SortOrder = -1
 
 att.Mult_RPM = 600 / 900
-att.Mult_Recoil = 0.85
+att.Mult_Recoil = 0.8
 att.Mult_AccuracyMOA = 0.75
 att.Mult_Range = 1.25
-att.Mult_MoveDispersion = 0.75
+att.Mult_MoveDispersion = 0.5
 
 att.Mult_PhysBulletMuzzleVelocity = 1.15
 

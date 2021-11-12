@@ -20,17 +20,18 @@ att.Slot = "ud_m16_receiver"
 --att.InvAtt = "ud_m16_receiver_auto"
 
 att.AutoStats = true
-att.SortOrder = 3
+att.SortOrder = 4
 
 att.Mult_AccuracyMOA = 1.5
 att.Mult_RPM = 850 / 900
 att.Mult_HipDispersion = 1.2
 att.Mult_ShootSpeedMult = 0.8
 
-att.Mult_DamageMin = 0.75
-att.Mult_RangeMin = 2
-att.Mult_Range = 0.75
+att.Mult_Damage = 1.118
+att.Mult_DamageMin = 0.6
 att.Mult_ShootVol = 105 / 120
+
+att.Mult_HeatDissipation = 1.5
 
 att.Override_PhysBulletMuzzleVelocity = 642
 

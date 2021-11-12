@@ -1,8 +1,8 @@
-att.PrintName = "AMPAW-9 9mm Receiver"
-att.AbbrevName = "9mm Receiver"
+att.PrintName = "AMPAW-9 9x19mm Receiver"
+att.AbbrevName = "9x19mm Receiver"
 
 if GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "R0635 9mm Receiver"
+    att.PrintName = "R0635 9x19mm Receiver"
 end
 
 att.Icon = Material("entities/att/acwatt_ud_m16_receiver_9mm.png", "smooth mips")
@@ -18,7 +18,9 @@ att.Slot = "ud_m16_receiver"
 att.SortOrder = -10
 
 att.AutoStats = true
-att.SortOrder = 4
+att.SortOrder = 3
+
+att.Mult_Penetration = 0.25
 
 att.Mult_Damage = 0.88
 att.Mult_DamageMin = 0.88
@@ -33,7 +35,6 @@ att.Mult_SightTime = 0.9
 att.Override_ClipSize_Priority = -1
 att.Override_ClipSize = 20
 
-att.Mult_AccuracyMOA = 2
 att.Mult_HeatCapacity = 1.5
 
 att.Override_Firemodes_Priority = 0.5

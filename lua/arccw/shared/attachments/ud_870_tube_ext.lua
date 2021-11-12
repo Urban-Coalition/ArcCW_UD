@@ -7,7 +7,7 @@ end
 
 
 att.Icon = Material("entities/att/acwatt_ud_870_tube_ext.png", "smooth mips")
-att.Description = "Longer shell tube holding more rounds, but increases weapon weight."
+att.Description = "An extension of the default shell tube holds more rounds, but increases weapon weight."
 att.Desc_Pros = {}
 att.Desc_Cons = {}
 att.Desc_Neutrals = {}

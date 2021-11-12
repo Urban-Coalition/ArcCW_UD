@@ -6,7 +6,7 @@ if GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.Icon = Material("entities/att/acwatt_ud_870_tube_reduced.png", "smooth mips")
-att.Description = "Shortened shell tube holding fewer rounds, but reduces weapon weight."
+att.Description = "Shortened shell tube that holds fewer rounds, but reduces weapon weight."
 att.Desc_Pros = {}
 att.Desc_Cons = {}
 att.Desc_Neutrals = {}

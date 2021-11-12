@@ -26,4 +26,4 @@ att.Mult_SightedSpeedMult = 1.05
 att.Mult_SightTime = 0.8
 
 att.ActivateElements = {"ud_glock_frame_subcompact"}
-att.AddFlags = {"ud_glock_frame_subcompact"}
+att.GivesFlags = {"ud_glock_frame_subcompact"}

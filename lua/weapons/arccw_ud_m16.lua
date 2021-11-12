@@ -270,11 +270,11 @@ SWEP.Hook_NameChange = function(wep, name)
 
     local x = string.Explode("_", wep.Attachments[2].Installed or "default")
     local hg = x[#x]
-    local blen = barrel_lookup[hg][1]
+    local blen = (barrel_lookup[hg] or barrel_lookup["default"])[1]
 
     local x2 = string.Explode("_", wep.Attachments[4].Installed or "default")
     local rn = x2[#x2]
-    local r_fg, r_cal = unpack(receiver_lookup[rn])
+    local r_fg, r_cal = unpack(receiver_lookup[rn] or barrel_lookup["default"])
 
     wep.Trivia_Desc = origDesc
     wep.Trivia_Mechanism = "Gas-Operated Rotating Bolt"

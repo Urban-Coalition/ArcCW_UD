@@ -1,8 +1,8 @@
-att.PrintName = "AR-15 15-Round Single-stack Mag"
-att.AbbrevName = "15-Round Single-stack Mag"
+att.PrintName = "AR-15 15-Round Pinned Mag"
+att.AbbrevName = "15-Round Pinned Mag"
 att.SortOrder = 15
 att.Icon = Material("entities/att/acwatt_ud_m16_mag_15.png", "smooth mips")
-att.Description = "Aftermarket magazine that loads in a single stack. Carries very few rounds, but is quite easy to load."
+att.Description = "Civilian magazine with capacity restrictions, but is quite easy to load."
 att.Desc_Pros = {}
 att.Desc_Cons = {}
 att.Desc_Neutrals = {}

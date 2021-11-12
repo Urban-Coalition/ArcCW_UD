@@ -29,6 +29,7 @@ att.Mult_Range = 0.75
 att.Mult_Sway = 0.75
 
 att.Add_BarrelLength = -6
+att.Mult_PhysBulletMuzzleVelocity = 0.729167
 
 --[[]
 att.Override_Firemodes = {

@@ -69,7 +69,8 @@ SWEP.Range = 175
 SWEP.Penetration = 12
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
-SWEP.MuzzleVelocity = 400
+SWEP.MuzzleVelocity = 960
+SWEP.PhysBulletMuzzleVelocity = 960
 
 -- Mag size --
 

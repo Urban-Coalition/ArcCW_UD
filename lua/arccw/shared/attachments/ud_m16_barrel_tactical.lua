@@ -27,6 +27,7 @@ att.Mult_RPM = 1.111 --0.945
 att.Mult_Sway = 0.85
 
 att.Add_BarrelLength = -4
+att.Mult_PhysBulletMuzzleVelocity = 0.833333
 
 att.LHIK = true
 

@@ -29,27 +29,9 @@ att.Mult_RPM = 1.111 --0.945
 att.Mult_Sway = 0.8
 
 att.Add_BarrelLength = -4
+att.Mult_PhysBulletMuzzleVelocity = 0.833333
 
 att.LHIK = true
-
 att.Model = "models/weapons/arccw/atts/adar_lhik.mdl"
-
---[[]
-att.Override_Firemodes = {
-    {
-        Mode = 2,
-    },
-    {
-        Mode = 1,
-    },
-    {
-        Mode = 0
-    }
-}
-]]
-
---[[att.LHIK = true
-
-att.Model = "models/weapons/arccw/atts/m4_lhik.mdl"]]
 
 att.ActivateElements = {"hg_adar", "barrel_14", "fs_adar"}

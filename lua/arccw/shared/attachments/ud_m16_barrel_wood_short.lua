@@ -22,6 +22,7 @@ att.Mult_SightedSpeedMult = 0.975
 att.Mult_ShootSpeedMult = 0.975
 
 att.Add_BarrelLength = -4
+att.Mult_PhysBulletMuzzleVelocity = 0.833333
 
 att.LHIK = true
 

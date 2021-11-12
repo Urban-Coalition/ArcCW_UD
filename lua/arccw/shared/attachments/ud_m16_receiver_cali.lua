@@ -19,6 +19,8 @@ att.AutoStats = true
 att.SortOrder = -100
 att.Override_CaseEffectAttachment = 6
 
+att.Mult_PhysBulletMuzzleVelocity = 1.3
+
 att.Override_Firemodes = {
     {
         Mode = 1,

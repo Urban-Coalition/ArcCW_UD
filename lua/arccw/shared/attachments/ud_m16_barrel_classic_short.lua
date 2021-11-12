@@ -26,6 +26,8 @@ att.Mult_Range = 0.85
 att.Mult_RPM = 1.111
 att.Mult_Sway = 0.85
 
+att.Mult_PhysBulletMuzzleVelocity = 0.833333
+
 att.Add_BarrelLength = -4
 
 att.Mult_ShootSpeedMult = 1.05

@@ -31,9 +31,7 @@ att.Mult_RPM = 0.5
 att.Mult_Range = .4
 att.Mult_ShootVol = 1.2
 
--- att.Mult_SpeedMult = 1.025
--- att.Mult_SightedSpeedMult = 1.05
--- att.Mult_ShootSpeedMult = 1.05
+att.Override_PhysBulletMuzzleVelocity = 550
 
 -- yes, .50 beowulf is more of an huge magnum bullet than it is a rifle bullet
 att.Override_Ammo = "357"

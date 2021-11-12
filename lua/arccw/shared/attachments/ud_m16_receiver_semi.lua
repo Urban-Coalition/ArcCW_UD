@@ -25,6 +25,8 @@ att.Mult_AccuracyMOA = 0.75
 att.Mult_Range = 1.25
 att.Mult_MoveDispersion = 0.75
 
+att.Mult_PhysBulletMuzzleVelocity = 1.15
+
 att.Override_Firemodes_Priority = 0.5
 att.Override_Firemodes = {
     {

@@ -35,7 +35,8 @@ att.A_Hook_Add_SightsDispersion = function(wep, data)
     end
 end
 
-att.Add_BarrelLength = -3
+att.Add_BarrelLength = -4
+att.Mult_PhysBulletMuzzleVelocity = 0.729167
 
 att.LHIK = true
 

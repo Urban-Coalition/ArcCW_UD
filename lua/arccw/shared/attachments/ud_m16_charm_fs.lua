@@ -1,5 +1,5 @@
 att.PrintName = "Preserved Front Sight"
-att.Icon = Material("entities/att/acwatt_ud_m16_charm_ch2.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_m16_charm_fs.png", "smooth mips")
 att.Description = "Those irons aren't out of style yet."
 att.Desc_Pros = {}
 att.Desc_Cons = {}

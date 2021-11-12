@@ -7,7 +7,7 @@ if GetConVar("arccw_truenames"):GetBool() then
     att.Description = "Authentic receiver of the M16A1 rifle, notable for its use throughout the latter half of the Vietnam War and seldom wielded by fortunate sons. Notorious for its difficult-to-control high RPM and still non-insignificant feeding failures."
 end
 
-att.Icon = Material("entities/att/acwatt_ud_m16_receiver_auto.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_m16_receiver_a1.png", "smooth mips")
 att.Desc_Pros = {
     "uc.auto"
 }

@@ -1,7 +1,7 @@
 att.PrintName = "14.5\" RUCAR 225 Barrel"
 att.Description = "Wooden handguard used on the Russian RUCAR 255 rifle. The heavier material allows for lower recoil than most handguards of similar length."
 
-att.Icon = Material("entities/att/acwatt_ud_m16_barrel_m4.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_m16_barrel_adar.png", "smooth mips")
 
 if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "14.5\" ADAR 2-15 Barrel"

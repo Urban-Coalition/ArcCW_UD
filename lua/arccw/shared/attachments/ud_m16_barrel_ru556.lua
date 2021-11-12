@@ -1,6 +1,6 @@
 att.PrintName = "10\" RU556 Barrel"
 
-att.Icon = Material("entities/att/acwatt_ud_m16_barrel_m4.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_m16_barrel_ru556.png", "smooth mips")
 att.Description = "Handguard from the RU556 line of AMCAR accessories, featuring a unique barrel shroud. Funcitonally identical to the commando barrel."
 
 if GetConVar("arccw_truenames"):GetBool() then

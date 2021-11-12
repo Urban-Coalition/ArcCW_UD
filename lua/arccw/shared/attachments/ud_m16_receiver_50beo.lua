@@ -7,7 +7,7 @@ end
 
 att.SortOrder = -1
 att.Icon = Material("entities/att/acwatt_ud_m16_receiver_semi.png", "smooth mips")
-att.Description = "Semi-automatic receiver chambered in .50 Beowulf, a gigantic short-range cartridge with poor aerodynamics. Not many rounds can fit in the magazine due to its size."
+att.Description = "Semi-automatic receiver chambered in .50 Beowulf, a gigantic short-range cartridge with terrible ballistic performance. Not many rounds can fit in the magazine due to its size."
 att.Desc_Pros = {}
 att.Desc_Cons = {
     "uc.semionly"
@@ -27,17 +27,20 @@ att.Mult_VisualRecoilMult = 2
 att.Mult_SightTime = 0.9
 att.Mult_ReloadTime = 0.9
 att.Mult_Sway = 0.75
-att.Mult_RPM = 0.6
-att.Mult_Range = .45
+att.Mult_RPM = 0.5
+att.Mult_Range = .4
 att.Mult_ShootVol = 1.2
 
 -- att.Mult_SpeedMult = 1.025
 -- att.Mult_SightedSpeedMult = 1.05
 -- att.Mult_ShootSpeedMult = 1.05
 
-att.Override_Ammo = "ar2"
-
+-- yes, .50 beowulf is more of an huge magnum bullet than it is a rifle bullet
+att.Override_Ammo = "357"
 att.Override_Trivia_Calibre = ".50 Beowulf"
+att.Override_ShellModel = "models/weapons/arccw/ud_shells/9.mdl"
+att.Override_ShellScale = 2
+att.Override_ShellSounds = ArcCW.PistolShellSoundsTable
 
 att.ActivateElements = {"ud_m16_mag_50beo"}
 

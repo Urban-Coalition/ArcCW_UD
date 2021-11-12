@@ -99,6 +99,7 @@ SWEP.Num = 1
 SWEP.Firemodes = {
     {
         Mode = -3,
+        PostBurstDelay = 0.1,
         RunawayBurst = false, -- https://en.wikipedia.org/wiki/Burst_mode_(weapons)
     },
     {
@@ -295,7 +296,7 @@ SWEP.Hook_NameChange = function(wep, name)
         elseif rec == 0 and flat then
             alt = "16A4"
         end
-        if rec == 1 then
+        if rec == 1 or rec == 6 then
             model = "M"
             alt = "16A3"
             wep.Trivia_Desc = m4Desc
@@ -307,6 +308,9 @@ SWEP.Hook_NameChange = function(wep, name)
                 alt = "727"
             elseif barrel == 2 then
                 alt = "733"
+            elseif rec == 6 then
+                alt = "16A1"
+                wep.Trivia_Desc = "Second generation of America's iconic military rifle. Developed to address problems with the original M16, which suffered notoriously frequent jamming that could get its wielder killed. A well-rounded rifle, but difficult to control without trigger discipline - something the A2 model eventually addressed."
             else
                 wep.Trivia_Desc = "Variant of the M16A2 with the original full-automatic trigger group, relegated to niche roles in the US Army. Well-rounded gun with no major downsides."
             end
@@ -335,9 +339,6 @@ SWEP.Hook_NameChange = function(wep, name)
                 alt = "-15"
             end
             wep.Trivia_Desc = "AR-15 style rifles are a class of rifles linked to the M16, but with a semi-automatic fire group for the civilian market. Such rifles are controversial due to their use in mass shootings, but nonetheless popular for sporting and home defense. Well-rounded gun with no major downsides."
-        elseif rec == 6 then
-            alt = "16A1"
-            wep.Trivia_Desc = "Second generation of America's iconic military rifle. It was developed to address problems with the original M16, which suffered notoriously frequent jamming that could get its wielder killed. Additions include a forward assist, chrome-lined internals, and a new flash hider that is less likely to get snagged on jungle foliage. Well-rounded, but can become difficult to control without discipline."
         end
         if barrel == 3 then
             alt = "231 FPW"
@@ -479,11 +480,11 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [3] = {
-                vpos = Vector(0, 0, 24.5),
+                vpos = Vector(0, -0.05, 24.5),
                 vang = Angle(90, 0, -90),
             },
             [6] = {
-                vpos = Vector(0, 0.8, 20),
+                vpos = Vector(0, 0.8, 22),
                 vang = Angle(90, 0, -90),
             },
         }
@@ -495,7 +496,7 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [3] = {
-                vpos = Vector(0, 0, 19.75),
+                vpos = Vector(0, -0.05, 20.5),
                 vang = Angle(90, 0, -90),
             },
             [6] = {
@@ -1217,16 +1218,21 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     if !IsValid(vm) then return end
     local flipup = wep.Attachments[1].Installed == "ud_m16_rs"
-    local retro = wep:GetBuff_Override("TopMount")
+    local flipupmagpull = wep.Attachments[1].Installed == "ud_m16_rs_magpul"
+    local retro = (wep:GetBuff_Override("TopMount"))
     local trueflat = wep:GetBuff_Override("TrueFlatTop")
     local taclaser = wep:GetBuff_Override("TacLaserPos")
     local barrel = 0
     local short = false
     local barrelatt = wep.Attachments[2].Installed
+    local fs = wep.Attachments[14].Installed == "ud_m16_charm_fs"
+    local recatt = wep.Attachments[4].Installed
+    local rec = 0
 
     if barrelatt == "ud_m16_barrel_m4" then barrel = 1 short = true
     elseif barrelatt == "ud_m16_barrel_tactical" then barrel = 7
     elseif barrelatt == "ud_m16_barrel_cqbr" then barrel = 2
+    elseif barrelatt == "ud_m16_barrel_ru556" then barrel = 14
     elseif barrelatt == "ud_m16_barrel_sd" then barrel = 6 -- specially handled
     elseif barrelatt == "ud_m16_barrel_fpw" then barrel = 10 short = true
     elseif barrelatt == "ud_m16_barrel_classic" then barrel = 3
@@ -1237,6 +1243,11 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     elseif barrelatt == "ud_m16_barrel_tactical_a4" then barrel = 8
     elseif barrelatt == "ud_m16_barrel_smg" then barrel = 9 short = true
     elseif barrelatt == "ud_m16_barrel_classic_short" then barrel = 12 short = false
+    elseif barrelatt == "ud_m16_barrel_adar" then barrel = 13 short = true
+    elseif barrelatt == "ud_m16_barrel_ru556" then barrel = 14 short = true
+    end
+
+    if recatt == "ud_m16_receiver_a1" then rec = 1
     end
 
     local risbarrel = barrel == 7 or barrel == 8
@@ -1250,8 +1261,8 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         vm:SetBodygroup(9,0)
     end
 
-    -- M4A4 flip-up sights
-    vm:SetBodygroup(12, flipup and 1 or 0)
+    -- flip-up sights
+    vm:SetBodygroup(12, flipupmagpull and 2 or flipup and 1 or 0)
 
     if barrel == 6 or barrel == 10 or taclaser then
         vm:SetBodygroup(6, 5)
@@ -1260,21 +1271,29 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     if wep.Attachments[1].Installed then
         if retro then
             -- Raised rail (retro)
-            vm:SetBodygroup(1, 0)
+            if rec == 1 then
+                vm:SetBodygroup(1, 5)
+            else
+                vm:SetBodygroup(1, 0)
+            end
             vm:SetBodygroup(3, retro)
         else
             -- Flat rail
             vm:SetBodygroup(1, 1)
             vm:SetBodygroup(3, 3)
             -- Low profile gas block
-            if (!flipup or trueflat) and !(barrel == 10 or barrel == 6) then
+            if barrel ~= 14 and !fs and (!(flipup or flipupmagpull) or trueflat) and !(barrel == 10 or barrel == 6) then
                 -- this is handled after elements sets bodygroup so we can do this
                 vm:SetBodygroup(6, vm:GetBodygroup(6) + 1)
             end
         end
     else
         -- no rails
-        vm:SetBodygroup(1, 0)
+        if rec == 1 then
+            vm:SetBodygroup(1, 5)
+        else
+            vm:SetBodygroup(1, 0)
+        end
         vm:SetBodygroup(3, 0)
     end
 

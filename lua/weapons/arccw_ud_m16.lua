@@ -660,14 +660,15 @@ SWEP.AttachmentElements = {
         },
     },
     ["m16_strap"] = {
-        VMBodygroups = {
-            {ind = 11, bg = 2},
-        },
+        -- VMBodygroups = {
+        --     {ind = 11, bg = 2},
+        -- },
+        -- this strap is cursed
     },
     ["bravo_dicks_going_fart"] = {
         AttPosMods = {
             [6] = {
-                vpos = Vector(0, -1.05, 10),
+                vpos = Vector(0, -1.3, 10),
                 vang = Angle(90, 0, 90),
             },
         },
@@ -1226,6 +1227,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local short = false
     local barrelatt = wep.Attachments[2].Installed
     local fs = wep.Attachments[14].Installed == "ud_m16_charm_fs"
+    local strap = wep.Attachments[14].Installed == "ud_m16_charm_strap"
     local recatt = wep.Attachments[4].Installed
     local rec = 0
 
@@ -1263,6 +1265,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 
     -- flip-up sights
     vm:SetBodygroup(12, flipupmagpull and 2 or flipup and 1 or 0)
+    vm:SetBodygroup(11,(strap and 2 or (flipupmagpull or flipup) and 1) or 0)
 
     if barrel == 6 or barrel == 10 or taclaser then
         vm:SetBodygroup(6, 5)

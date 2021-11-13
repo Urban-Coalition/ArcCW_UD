@@ -223,6 +223,7 @@ local barrel_lookup = {
     ["wood_short"]    = {BLEN_14},
 
     ["cqbr"]          = {BLEN_10},
+    ["cqbr_ris"]      = {BLEN_10},
     ["sd"]            = {BLEN_10},
     ["ru556"]         = {BLEN_10},
 }
@@ -270,7 +271,10 @@ SWEP.Hook_NameChange = function(wep, name)
     local flat = wep.Attachments[1].Installed and !wep:GetBuff_Override("TopMount")
 
     local x = string.Explode("_", wep.Attachments[2].Installed or "default")
-    local hg = x[#x]
+    local hg = x[4]
+    for i = 4, #x - 4 do
+        hg = hg..x[i]
+    end
     local blen = (barrel_lookup[hg] or barrel_lookup["default"])[1]
 
     local x2 = string.Explode("_", wep.Attachments[4].Installed or "default")
@@ -376,11 +380,18 @@ SWEP.Hook_NameChange = function(wep, name)
             elseif hg == "m605" then
                 alt = "605"
             elseif blen == BLEN_10 and !sil then
-                model = "CAR"
-                alt = "-15"
+                if flat then
+                    model = "Mk 18"
+                    alt = " Mod 0"
+                else
+                    model = "CAR"
+                    alt = "-15"
+                end
                 if r_cal == CAL_9MM then
                     post = " SMG"
                     wep.Trivia_Desc = smgDesc
+                elseif flat then
+                    wep.Trivia_Desc = m4Desc
                 else
                     wep.Trivia_Desc = "Carbine variant of the M16 rifle, short enough to be classified as a submachine gun. Its features influenced the US Army's interest in the M4 Carbine, which went on to become their new standard rifle. Due to the small barrel, rifles of this family have high maneuverability but poor range compared to their parent platform."
                 end

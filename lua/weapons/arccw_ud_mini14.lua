@@ -225,7 +225,7 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 3, bg = 1}},
         AttPosMods = {
             [3] = {
-                vpos = Vector(0, 0.25, 1.9),
+                vpos = Vector(0, -2.1, 34),
             },
         },
     },
@@ -233,7 +233,7 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 3, bg = 2}},
         AttPosMods = {
             [3] = {
-                vpos = Vector(0, 0.25, -6),
+                vpos = Vector(0, -2.1, 27),
             },
         },
     },
@@ -241,7 +241,7 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 3, bg = 3}},
         AttPosMods = {
             [3] = {
-                vpos = Vector(0, 0.25, -9),
+                vpos = Vector(0, -2.1, 25),
             },
         },
     },
@@ -688,9 +688,9 @@ SWEP.Attachments = {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
         Slot = {"muzzle"},
-        Bone = "mini14_flash",
+        Bone = "mini14_parent",
         Offset = {
-            vpos = Vector(0, 0.25, -3.5),
+            vpos = Vector(0, -2.1, 29),
             vang = Angle(90, 0, -90),
         },
         ExcludeFlags = {"nomuzzle"},

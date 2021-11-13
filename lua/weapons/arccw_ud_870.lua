@@ -327,7 +327,7 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [3] = {
-                vpos = Vector(0, 0.25, 11.5),
+                vpos = Vector(-0.03, -0.57, 41),
             }
         },
         VMBodygroups = {
@@ -342,7 +342,7 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [3] = {
-                vpos = Vector(0, 0, -5.5),
+                vpos = Vector(-0.03, -0.75, 24),
             }
         },
     },
@@ -390,9 +390,9 @@ SWEP.Attachments = {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
         Slot = {"choke", "muzzle_shotgun"},
-        Bone = "870_flash",
+        Bone = "870_parent",
         Offset = {
-            vpos = Vector(-0.03, -0.05, -0.5),
+            vpos = Vector(-0.03, -0.75, 29),
             vang = Angle(90, 0, -90),
         },
     },

@@ -243,7 +243,7 @@ SWEP.AttachmentElements = {
         TrueNameChange = "Uzi Carbine",
         AttPosMods = {
             [3] = {
-                vpos = Vector(0, 0, 4),
+                vpos = Vector(-0.2, 0.5, 20.8),
             },
         },
     },
@@ -253,7 +253,7 @@ SWEP.AttachmentElements = {
         TrueNameChange = "Mini Uzi",
         AttPosMods = {
             [3] = {
-                vpos = Vector(0, 0, -3.4),
+                vpos = Vector(-0.2, 0.5, 12.8),
             },
         },
     },
@@ -272,7 +272,7 @@ SWEP.AttachmentElements = {
                 vpos = Vector(-0.2, -1.2, -2.5),
             },
             [3] = {
-                vpos = Vector(0, 0, -5.8),
+                vpos = Vector(-0.2, 0.3, 7.8),
             },
         },
     },
@@ -282,7 +282,7 @@ SWEP.AttachmentElements = {
         TrueNameChange = "Uzi Action-B",
         AttPosMods = {
             [3] = {
-                vpos = Vector(0, 0, 8),
+                vpos = Vector(-0.2, 0.5, 23.8),
             },
         },
     },
@@ -617,9 +617,9 @@ SWEP.Attachments = {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
         Slot = {"muzzle"},
-        Bone = "uzi_barrel",
+        Bone = "uzi_parent",
         Offset = {
-            vpos = Vector(0, 0, 0),
+            vpos = Vector(-0.2, 0.5, 14.8),
             vang = Angle(90, 0, -90),
         },
     },

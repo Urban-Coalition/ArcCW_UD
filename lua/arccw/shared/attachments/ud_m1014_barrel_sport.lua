@@ -1,5 +1,5 @@
-att.PrintName = "16.5\" M4 Super 90 Competition Barrel"
-att.AbbrevName = "16.5\" Competition Barrel"
+att.PrintName = "18\" M4 Super 90 Competition Barrel"
+att.AbbrevName = "18\" Competition Barrel"
 att.Icon = Material("entities/att/acwatt_ud_m1014_barrel_short.png", "smooth mips")
 att.Description = "bang bang bang go fast"
 att.Desc_Pros = {

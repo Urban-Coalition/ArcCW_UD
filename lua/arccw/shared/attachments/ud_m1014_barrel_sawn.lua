@@ -1,5 +1,5 @@
-att.PrintName = "11\" M4 Super 90 Sawn-Off Barrel"
-att.AbbrevName = "11\" Sawn-Off Barrel"
+att.PrintName = "13\" M4 Super 90 Sawn-Off Barrel"
+att.AbbrevName = "13\" Sawn-Off Barrel"
 att.Icon = Material("entities/att/acwatt_ud_m1014_barrel_short.png", "smooth mips")
 att.Description = "boy what the hell boy"
 att.Desc_Pros = {

@@ -49,4 +49,4 @@ att.LHIK = true
 
 att.Model = "models/weapons/arccw/atts/m4_lhik.mdl"
 
-att.ActivateElements = {"hg_cqbr", "barrel_11"}
+att.ActivateElements = {"hg_cqbr", "barrel_11", "mount_11"}

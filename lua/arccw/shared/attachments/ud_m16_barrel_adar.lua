@@ -34,4 +34,4 @@ att.Mult_PhysBulletMuzzleVelocity = 0.833333
 att.LHIK = true
 att.Model = "models/weapons/arccw/atts/adar_lhik.mdl"
 
-att.ActivateElements = {"hg_adar", "barrel_14", "fs_adar"}
+att.ActivateElements = {"hg_adar", "barrel_14", "fs_adar", "mount_14"}

@@ -42,7 +42,7 @@ att.LHIK = true
 
 att.Model = "models/weapons/arccw/atts/fpw_lhik.mdl"
 
-att.ActivateElements = {"hg_fpw", "barrel_14"}
+att.ActivateElements = {"hg_fpw", "barrel_14", "mount_14"}
 
 att.Hook_ModifyRPM = function(wep, delay)
     local heat = math.Clamp(wep:GetHeat() / wep:GetMaxHeat(), 0, 1)

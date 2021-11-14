@@ -208,25 +208,40 @@ local BLEN_20 = 3
 local BLEN_14 = 2
 local BLEN_10 = 1
 
+local BTAG_RIS = 1
+local BTAG_NOFS = 2
+local BTAG_NOMNT = 4
+
+local len_clamp_lookup = {
+    [BLEN_20] = 1,
+    [BLEN_14] = 3,
+    [BLEN_10] = 2,
+}
+
 local barrel_lookup = {
     ["default"]       = {BLEN_20},
-    ["tactical_a4"]   = {BLEN_20},
+    ["tactical_a4"]   = {BLEN_20, BTAG_RIS},
     ["lmg"]           = {BLEN_20},
     ["classic"]       = {BLEN_20},
     ["wood"]          = {BLEN_20},
 
     ["classic_short"] = {BLEN_14},
-    ["tactical"]      = {BLEN_14},
+    ["tactical"]      = {BLEN_14, BTAG_RIS},
     ["m4"]            = {BLEN_14},
-    ["fpw"]           = {BLEN_14},
+    ["fpw"]           = {BLEN_14, BTAG_NOFS},
     ["adar"]          = {BLEN_14},
     ["wood_short"]    = {BLEN_14},
 
     ["cqbr"]          = {BLEN_10},
-    ["cqbr_ris"]      = {BLEN_10},
-    ["sd"]            = {BLEN_10},
-    ["ru556"]         = {BLEN_10},
+    ["cqbr_ris"]      = {BLEN_10, BTAG_RIS},
+    ["sd"]            = {BLEN_10, BTAG_NOFS + BTAG_NOMNT},
+    ["ru556"]         = {BLEN_10, BTAG_NOFS + BTAG_NOMNT},
 }
+
+
+local function has_tag(b, t)
+    return bit.band(barrel_lookup[b][2] or 0, t) ~= 0
+end
 
 local FCG_3BST = 0
 local FCG_AUTO = 1
@@ -270,15 +285,10 @@ SWEP.Hook_NameChange = function(wep, name)
     local trueNames = GetConVar("arccw_truenames"):GetBool()
     local flat = wep.Attachments[1].Installed and !wep:GetBuff_Override("TopMount")
 
-    local x = string.Explode("_", wep.Attachments[2].Installed or "default")
-    local hg = x[4]
-    for i = 4, #x - 4 do
-        hg = hg..x[i]
-    end
+    local hg = string.Replace(wep.Attachments[2].Installed or "default", "ud_m16_barrel_", "")
     local blen = (barrel_lookup[hg] or barrel_lookup["default"])[1]
 
-    local x2 = string.Explode("_", wep.Attachments[4].Installed or "default")
-    local rn = x2[#x2]
+    local rn = string.Replace(wep.Attachments[4].Installed or "default", "ud_m16_receiver_", "")
     local r_fg, r_cal = unpack(receiver_lookup[rn] or barrel_lookup["default"])
 
     wep.Trivia_Desc = origDesc
@@ -548,6 +558,23 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 6, bg = 4}},
     },
 
+    ["mount_14"] = {
+        AttPosMods = {
+            [6] = {
+                vpos = Vector(0, 0.8, 22),
+                vang = Angle(90, 0, -90),
+            },
+        },
+    },
+    ["mount_11"] = {
+        AttPosMods = {
+            [6] = {
+                vpos = Vector(1, 0, 17.9),
+                vang = Angle(90, 0, 0),
+            },
+        },
+    },
+
     ["barrel_14"] = {
         VMBodygroups = {
             {ind = 4, bg = 1},
@@ -556,10 +583,6 @@ SWEP.AttachmentElements = {
         AttPosMods = {
             [3] = {
                 vpos = Vector(0, -0.05, 24.5),
-                vang = Angle(90, 0, -90),
-            },
-            [6] = {
-                vpos = Vector(0, 0.8, 22),
                 vang = Angle(90, 0, -90),
             },
         }
@@ -573,10 +596,6 @@ SWEP.AttachmentElements = {
             [3] = {
                 vpos = Vector(0, -0.05, 20.5),
                 vang = Angle(90, 0, -90),
-            },
-            [6] = {
-                vpos = Vector(1, 0, 17.9),
-                vang = Angle(90, 0, 0),
             },
         }
     },
@@ -684,6 +703,10 @@ SWEP.AttachmentElements = {
                 vpos = Vector(0, 0, 25),
                 vang = Angle(90, 0, -90),
             },
+            [6] = { -- also has no rail
+                vpos = Vector(0, 0.8, 22),
+                vang = Angle(90, 0, -90),
+            },
         }
     },
     ["hg_m605_wood"] = {
@@ -694,6 +717,10 @@ SWEP.AttachmentElements = {
         AttPosMods = {
             [3] = {
                 vpos = Vector(0, 0, 25),
+                vang = Angle(90, 0, -90),
+            },
+            [6] = { -- also has no rail
+                vpos = Vector(0, 0.8, 22),
                 vang = Angle(90, 0, -90),
             },
         },
@@ -735,10 +762,9 @@ SWEP.AttachmentElements = {
         },
     },
     ["m16_strap"] = {
-        -- VMBodygroups = {
-        --     {ind = 11, bg = 2},
-        -- },
-        -- this strap is cursed
+        VMBodygroups = {
+             {ind = 13, bg = 1},
+        },
     },
     ["bravo_dicks_going_fart"] = {
         AttPosMods = {
@@ -1294,97 +1320,46 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     if !IsValid(vm) then return end
     local flip = wep:GetBuff_Override("M16Sights") or 0
-    --local flipup = wep.Attachments[1].Installed == "ud_m16_rs"
-    --local flipupmagpull = wep.Attachments[1].Installed == "ud_m16_rs_magpul"
-    local retro = (wep:GetBuff_Override("TopMount"))
-    local trueflat = wep:GetBuff_Override("TrueFlatTop")
+    local retro = wep:GetBuff_Override("TopMount")
     local taclaser = wep:GetBuff_Override("TacLaserPos")
-    local barrel = 0
-    local short = false
-    local barrelatt = wep.Attachments[2].Installed
+
     local fs = wep.Attachments[14].Installed == "ud_m16_charm_fs"
-    local strap = wep.Attachments[14].Installed == "ud_m16_charm_strap"
-    local recatt = wep.Attachments[4].Installed
-    local rec = 0
 
-    if barrelatt == "ud_m16_barrel_m4" then barrel = 1 short = true
-    elseif barrelatt == "ud_m16_barrel_tactical" then barrel = 7
-    elseif barrelatt == "ud_m16_barrel_cqbr" then barrel = 2
-    elseif barrelatt == "ud_m16_barrel_ru556" then barrel = 14
-    elseif barrelatt == "ud_m16_barrel_sd" then barrel = 6 -- specially handled
-    elseif barrelatt == "ud_m16_barrel_fpw" then barrel = 10 short = true
-    elseif barrelatt == "ud_m16_barrel_classic" then barrel = 3
-    elseif barrelatt == "ud_m16_barrel_wood" then barrel = 3
-    elseif barrelatt == "ud_m16_barrel_wood_short" then barrel = 4 short = false
-    elseif barrelatt == "ud_m16_barrel_stub" then barrel = 11 -- specially handled
-    elseif barrelatt == "ud_m16_barrel_lmg" then barrel = 5
-    elseif barrelatt == "ud_m16_barrel_tactical_a4" then barrel = 8
-    elseif barrelatt == "ud_m16_barrel_smg" then barrel = 9 short = true
-    elseif barrelatt == "ud_m16_barrel_classic_short" then barrel = 12 short = false
-    elseif barrelatt == "ud_m16_barrel_adar" then barrel = 13 short = true
-    elseif barrelatt == "ud_m16_barrel_ru556" then barrel = 14 short = true
-    end
+    local hg = string.Replace(wep.Attachments[2].Installed or "default", "ud_m16_barrel_", "")
+    local blen = (barrel_lookup[hg] or barrel_lookup["default"])[1]
 
-    if recatt == "ud_m16_receiver_a1" then rec = 1
-    end
-
-    local risbarrel = barrel == 7 or barrel == 8
-
-    if wep.Attachments[5].Installed then
-        vm:SetBodygroup(9,1)
-        if risbarrel then
-            vm:SetBodygroup(9,0)
-        end
-    else
-        vm:SetBodygroup(9,0)
-    end
-
-    -- flip-up sights
-    vm:SetBodygroup(12, flip)
-    vm:SetBodygroup(11, (strap and 2 or flip and 1) or 0)
-
-
-    if barrel == 6 or barrel == 10 or taclaser then
-        vm:SetBodygroup(6, 5)
-    end
-
+    -- Receiver top and front sight
     if wep.Attachments[1].Installed then
         if retro then
             -- Raised rail (retro)
-            if rec == 1 then
-                vm:SetBodygroup(1, 5)
-            else
-                vm:SetBodygroup(1, 0)
-            end
             vm:SetBodygroup(3, retro)
         else
             -- Flat rail
             vm:SetBodygroup(1, 1)
             vm:SetBodygroup(3, 3)
-            -- Low profile gas block
-            if barrel ~= 14 and !fs and (flip == 0 or trueflat) and !(barrel == 10 or barrel == 6) then
-                -- this is handled after elements sets bodygroup so we can do this
-                vm:SetBodygroup(6, vm:GetBodygroup(6) + 1)
-            end
         end
     else
         -- no rails
-        if rec == 1 then
-            vm:SetBodygroup(1, 5)
-        else
-            vm:SetBodygroup(1, 0)
-        end
         vm:SetBodygroup(3, 0)
     end
 
+    -- Gas block
+    if has_tag(hg, BTAG_NOFS) then
+        vm:SetBodygroup(6, 5)
+    elseif wep.Attachments[1].Installed and !retro and (!fs and flip == 0) then
+        -- this is handled after elements sets bodygroup so we can do this
+        vm:SetBodygroup(6, vm:GetBodygroup(6) + 1)
+    end
+
+    -- Underbarrel rail
+    vm:SetBodygroup(9, (wep.Attachments[5].Installed and !has_tag(hg, BTAG_RIS)) and 1 or 0)
+
+    -- Flip-up sights
+    vm:SetBodygroup(12, flip)
+
     -- Tactical clamp
-    if wep.Attachments[6].Installed and (barrel < 6 or barrel > 8) and !taclaser then
-        if hg == "cqbr" or barrel == 11 then
-            -- Commando / stub
-            vm:SetBodygroup(10, 2)
-        else
-            vm:SetBodygroup(10, short and 3 or 1)
-        end
+    if wep.Attachments[6].Installed and !has_tag(hg, BTAG_RIS) and !has_tag(hg, BTAG_NOMNT) and !taclaser then
+        vm:SetBodygroup(10, len_clamp_lookup[blen])
     else
         vm:SetBodygroup(10, 0)
     end

@@ -1343,6 +1343,11 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         vm:SetBodygroup(3, 0)
     end
 
+    -- .50 Beowulf magazines
+    if wep.Attachments[4].Installed == "ud_m16_receiver_50beo" and !wep.Attachments[9].Installed then
+        vm:SetBodygroup(2, 10)
+    end
+
     -- Gas block
     if has_tag(hg, BTAG_NOFS) then
         vm:SetBodygroup(6, 5)

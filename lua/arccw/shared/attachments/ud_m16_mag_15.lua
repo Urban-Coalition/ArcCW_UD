@@ -10,6 +10,7 @@ att.Slot = "ud_m16_mag"
 
 att.AutoStats = true
 att.HideIfBlocked = true
+att.Ignore = true
 
 att.Override_ClipSize = 15
 

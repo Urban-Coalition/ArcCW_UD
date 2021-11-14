@@ -20,10 +20,10 @@ att.Mult_Sway = 1.5
 att.Mult_SpeedMult = 0.975
 att.Mult_ShootSpeedMult = 0.95
 
-att.ActivateElements = {"ud_m16_40_mag"}
+att.ActivateElements = {"ud_m16_mag_40"}
 
 att.Hook_SelectReloadAnimation = function(wep, anim)
     return anim .. "_40"
 end
 
-att.ExcludeFlags = {"m16_usas", "m16_9mm"}
+att.ExcludeFlags = {"m16_usas", "m16_9mm", "m16_50beo"}

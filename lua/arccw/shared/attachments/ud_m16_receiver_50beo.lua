@@ -20,8 +20,9 @@ att.HideIfBlocked = true
 
 att.SortOrder = 1
 
---att.Override_ClipSize = 10
-att.Mult_ClipSize = 0.3333
+att.Override_ClipSize = 7
+att.Override_ClipSize_Priority = 0.5
+att.BaseClipSize = 7
 
 att.Mult_Damage = 2.5
 att.Mult_Recoil = 3
@@ -30,6 +31,12 @@ att.Mult_VisualRecoilMult = 2
 att.Mult_RPM = 0.5
 att.Mult_Range = .4
 att.Mult_ShootVol = 1.2
+
+att.Mult_SightTime = 0.91
+att.Mult_ReloadTime = 0.87
+att.Mult_Sway = 0.667
+
+att.Mult_SpeedMult = 1.025
 
 att.Override_PhysBulletMuzzleVelocity = 550
 
@@ -63,9 +70,8 @@ att.Hook_GetDistantShootSound = function(wep, distancesound)
     if distancesound == wep.DistantShootSound then return "weapons/arccw_ud/mini14/fire_dist.ogg" end
 end
 
-
---[[]
-att.ActivateElements = {"ud_m16_mag_50beo"}
+-- can't be handled here
+--att.ActivateElements = {"ud_m16_mag_50beo"}
 
 att.Hook_SelectReloadAnimation = function(wep, anim)
     if wep.Attachments[9].Installed == nil then
@@ -74,14 +80,17 @@ att.Hook_SelectReloadAnimation = function(wep, anim)
 end
 
 local slotinfo = {
-    [9] = {"10-Round Mag", "10-Round Mag", Material("entities/att/acwatt_ud_m16_mag_20.png", "smooth mips")},
+    [9] = {"7-Round Mag", "7-Round Mag", Material("entities/att/acwatt_ud_m16_mag_15.png", "smooth mips")},
 }
 att.Hook_GetDefaultAttName = function(wep, slot)
     if slotinfo[slot] then
         return GetConVar("arccw_truenames"):GetBool() and slotinfo[slot][2] or slotinfo[slot][1]
     end
 end
-]]
+att.Hook_GetDefaultAttIcon = function(wep, slot)
+    if slotinfo[slot] then
+        return slotinfo[slot][3]
+    end
+end
 
---att.ExcludeFlags = {"m16_usas", "m16_9mm"}
 att.GivesFlags = {"m16_50beo"}

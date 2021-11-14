@@ -25,7 +25,7 @@ att.Mult_ShootSpeedMult = 0.9
 att.Mult_DrawTime = 1.15
 att.Mult_HolsterTime = 1.15
 
-att.ActivateElements = {"ud_m16_60_mag"}
+att.ActivateElements = {"ud_m16_mag_60"}
 
 --[[]
 att.Override_Jamming = true

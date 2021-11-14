@@ -357,7 +357,7 @@ SWEP.Hook_NameChange = function(wep, name)
         -------------------------------
         -- Barrel Variants
         -------------------------------
-        elseif hg == "m4" then
+        elseif hg == "m4" or hg == "tactical" then
             if r_fg == FCG_AUTO then
                 if !flat then
                     model = "XM"
@@ -367,8 +367,8 @@ SWEP.Hook_NameChange = function(wep, name)
                 end
             else
                 alt = "4"
-                post = " Carbine"
             end
+            post = " Carbine"
             wep.Trivia_Desc = m4Desc
         -------------------------------
         -- Auto/Semi Variants

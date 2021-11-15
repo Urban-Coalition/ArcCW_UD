@@ -310,17 +310,21 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "draw",
+        SoundTable = ArcCW.UD.DrawSounds,
     },
     ["draw_empty"] = {
         Source = "draw_empty",
+        SoundTable = ArcCW.UD.DrawSounds,
     },
     ["holster"] = {
         Source = "holster",
         Time = 0.25,
+        SoundTable = ArcCW.UD.HolsterSounds,
     },
     ["holster_empty"] = {
         Source = "holster_empty",
         Time = 0.25,
+        SoundTable = ArcCW.UD.HolsterSounds,
     },
     ["fire"] = {
         Source = "fire",

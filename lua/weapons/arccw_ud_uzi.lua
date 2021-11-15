@@ -115,8 +115,6 @@ SWEP.ProceduralIronFire = false
 
 SWEP.ReloadInSights = true
 
-SWEP.TriggerDelay = true
-
 -- NPC --
 
 SWEP.NPCWeaponType = "weapon_smg"

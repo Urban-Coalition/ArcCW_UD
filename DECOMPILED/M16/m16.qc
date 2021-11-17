@@ -139,7 +139,7 @@ $texturegroup "skinfamilies"
 
 $attachment "1" "m16_flash" 0 0 0 rotate -90 0 0
 $attachment "2" "brass" 0.00 -0.75 -1.00 rotate -10 140 180
-$attachment "3" "camera" 0 0 0 rotate 0 0 0
+$attachment "3" "camera" 0 0 0 rotate -90 0 0
 $attachment "4" "m16_flash" 0 0 -4 rotate -90 0 0
 $attachment "5" "m16_flash" 0 0 -10 rotate -90 0 0
 

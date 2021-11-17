@@ -55,7 +55,7 @@ $cdmaterials "models\weapons\arccw\ud_common"
 
 $attachment "1" "uzi_barrel" 0 0 0 rotate -90 0 0
 $attachment "2" "brass" 0 1 0 rotate -10 140 180
-$attachment "3" "camera" 0 0 0 rotate 0 0 0
+$attachment "3" "camera" 0 0 0 rotate -90 0 0
  
 $surfaceprop "weapon"
  

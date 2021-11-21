@@ -1353,7 +1353,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         vm:SetBodygroup(6, 5)
     elseif wep.Attachments[1].Installed and !retro and (!fs and flip == 0) then
         -- this is handled after elements sets bodygroup so we can do this
-        vm:SetBodygroup(6, vm:GetBodygroup(6) + 1)
+        vm:SetBodygroup(6, (vm:GetBodygroup(6) or 0) + 1)
     end
 
     -- Underbarrel rail

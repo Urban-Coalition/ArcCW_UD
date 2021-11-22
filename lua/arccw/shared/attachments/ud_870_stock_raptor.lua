@@ -18,19 +18,19 @@ att.Slot = "ud_870_stock"
 
 att.AutoStats = true
 
-att.Mult_SpeedMult = 1.25
-att.Mult_SightTime = 0.65
-att.Mult_SightedSpeedMult = 1.25
-att.Mult_ShootSpeedMult = 1.25
+att.Mult_SpeedMult = 1.05
+att.Mult_SightTime = 0.6
+att.Mult_SightedSpeedMult = 1.2
+att.Mult_ShootSpeedMult = 1.1
 
-att.Mult_DrawTime = 0.5
-att.Mult_HolsterTime = 0.5
+att.Mult_DrawTime = 0.6
+att.Mult_HolsterTime = 0.6
 
-att.Mult_Recoil = 2.15
-att.Mult_RecoilSide = 3.15
+att.Mult_Recoil = 1.75
+att.Mult_RecoilSide = 2
 att.Mult_VisualRecoilMult = 0.5
 
 att.Add_BarrelLength = -4
-att.Mult_Sway = 3.25
+att.Mult_Sway = 3
 
 att.ActivateElements = {"ud_870_stock_raptor"}

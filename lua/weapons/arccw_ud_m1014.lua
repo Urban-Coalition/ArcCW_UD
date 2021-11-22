@@ -85,8 +85,8 @@ SWEP.ChamberLoadEmpty = 1
 
 -- Recoil --
 
-SWEP.Recoil = 4
-SWEP.RecoilSide = 1
+SWEP.Recoil = 2.5
+SWEP.RecoilSide = 2
 
 SWEP.RecoilRise = 0.24
 SWEP.VisualRecoilMult = 1
@@ -135,7 +135,7 @@ SWEP.Primary.Ammo = "buckshot"
 
 SWEP.SpeedMult = 0.92
 SWEP.SightedSpeedMult = 0.6
-SWEP.SightTime = 0.5
+SWEP.SightTime = 0.55
 SWEP.ShootSpeedMult = 0.75
 
 -- Length --

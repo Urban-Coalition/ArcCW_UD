@@ -83,7 +83,7 @@ SWEP.ReducedClipSize = 6
 
 -- Recoil --
 
-SWEP.Recoil = 5
+SWEP.Recoil = 3
 SWEP.RecoilSide = 1
 
 SWEP.RecoilRise = 0.24
@@ -136,7 +136,7 @@ SWEP.Primary.Ammo = "buckshot"
 
 SWEP.SpeedMult = 0.9
 SWEP.SightedSpeedMult = 0.75
-SWEP.SightTime = 0.4
+SWEP.SightTime = 0.5
 SWEP.ShootSpeedMult = 0.75
 
 -- Length --

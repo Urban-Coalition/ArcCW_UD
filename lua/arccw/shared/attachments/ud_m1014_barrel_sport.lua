@@ -5,6 +5,7 @@ att.Description = "Hardened barrel with integral muzzle brake. Abiding by compet
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
+    "uc.nomuzzle"
 }
 att.Desc_Neutrals = {
 }
@@ -14,7 +15,7 @@ att.AutoStats = true
 att.Add_BarrelLength = -1
 
 att.Mult_RecoilSide = 0.75
-att.Mult_Recoil = 0.9
+att.Mult_Recoil = 0.85
 att.Mult_SightTime = 0.9
 att.Mult_Sway = 0.85
 
@@ -22,3 +23,4 @@ att.Mult_RangeMin = 0.5
 att.Mult_RPM = 180 / 220
 
 att.ActivateElements = {"ud_autoshotgun_barrel_sport"}
+att.GivesFlags = {"nomuzzle"}

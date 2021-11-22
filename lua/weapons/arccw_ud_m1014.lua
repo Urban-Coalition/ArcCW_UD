@@ -351,9 +351,10 @@ SWEP.Attachments = {
         Slot = {"choke", "muzzle_shotgun"},
         Bone = "1014_parent",
         Offset = {
-            vpos = Vector(-0.03, -0.7, 30.2),
+            vpos = Vector(-0.03, -0.9, 31),
             vang = Angle(90, 0, -90),
         },
+        ExcludeFlags = {"nomuzzle"}
     },
     {
         PrintName = "Underbarrel",
@@ -418,3 +419,23 @@ SWEP.Attachments = {
         },
     },
 }
+
+local lookup_barrel = {
+    default = 1,
+    ud_m1014_barrel_short = 0,
+}
+
+local lookup_tube = {
+    default = 0,
+    ud_m1014_tube_ext = 1,
+}
+
+SWEP.Hook_ExtraFlags = function(wep, data)
+
+    local barrel = wep.Attachments[2].Installed and lookup_barrel[wep.Attachments[2].Installed] or lookup_barrel["default"]
+    local tube = wep.Attachments[7].Installed and lookup_tube[wep.Attachments[7].Installed] or lookup_tube["default"]
+
+    if barrel < tube then
+        table.insert(data, "nomuzzleblocking")
+    end
+end

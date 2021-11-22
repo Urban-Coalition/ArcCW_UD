@@ -468,3 +468,25 @@ SWEP.Attachments = {
         },
     },
 }
+
+local lookup_barrel = {
+    default = 1,
+    ud_870_barrel_long = 2,
+    ud_870_barrel_sawnoff = 0,
+}
+
+local lookup_tube = {
+    default = 1,
+    ud_870_tube_ext = 2,
+    ud_870_tube_reduced = 0,
+}
+
+SWEP.Hook_ExtraFlags = function(wep, data)
+
+    local barrel = wep.Attachments[2].Installed and lookup_barrel[wep.Attachments[2].Installed] or lookup_barrel["default"]
+    local tube = wep.Attachments[8].Installed and lookup_tube[wep.Attachments[8].Installed] or lookup_tube["default"]
+
+    if barrel < tube then
+        table.insert(data, "nomuzzleblocking")
+    end
+end

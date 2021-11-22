@@ -21,5 +21,4 @@ att.Mult_SightedSpeedMult = 0.8
 att.Mult_SightTime = 1.15
 att.Mult_ReloadTime = 1.1
 
-
 att.ActivateElements = {"ud_870_tube_ext"}

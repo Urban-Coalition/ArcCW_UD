@@ -272,6 +272,10 @@ SWEP.AttachmentElements = {
             [3] = {
                 vpos = Vector(-0.2, 0.3, 7.8),
             },
+            [5] = {
+                vpos = Vector(0, 0, 7),
+                vang = Angle(90, 0, 0),
+            },
         },
     },
     ["ud_uzi_body_civvy"] = {
@@ -292,6 +296,10 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local barrel = wep.Attachments[2].Installed
     if barrel == "ud_uzi_body_micro" and wep.Attachments[1].Installed then
         vm:SetBodygroup(4, 3)
+    end
+    if !IsValid(vm) then return end
+    if barrel == "ud_uzi_body_micro" and wep.Attachments[5].Installed then
+        vm:SetBodygroup(6, 3)
     end
 end
 

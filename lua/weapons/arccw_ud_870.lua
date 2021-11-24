@@ -98,7 +98,7 @@ SWEP.Sway = 0.5
 SWEP.Delay = 60 / 60
 SWEP.Firemodes = {
     {
-        PrintName = "PUMP",
+        PrintName = "fcg.pump",
         Mode = 1,
     },
     {

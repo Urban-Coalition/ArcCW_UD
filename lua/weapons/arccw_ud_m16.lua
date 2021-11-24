@@ -594,7 +594,7 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [3] = {
-                vpos = Vector(0, -0.05, 20.5),
+                vpos = Vector(0, -0.05, 21.5),
                 vang = Angle(90, 0, -90),
             },
         }

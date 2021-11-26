@@ -85,7 +85,7 @@ SWEP.ChamberLoadEmpty = 1
 
 -- Recoil --
 
-SWEP.Recoil = 2.76
+SWEP.Recoil = 2.89
 SWEP.RecoilSide = 2
 
 SWEP.RecoilRise = 0.24

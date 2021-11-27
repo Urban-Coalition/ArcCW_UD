@@ -18,7 +18,7 @@ SWEP.CamAttachment = 3
 
 -- Fake name --
 
-SWEP.PrintName = "FC127"
+SWEP.PrintName = "FC1040"
 
 -- True name --
 
@@ -28,7 +28,7 @@ SWEP.TrueName = "M4 Super 90"
 
 SWEP.Trivia_Class = "Shotgun"
 SWEP.Trivia_Desc = "Semi-automatic shotgun designed for close-quarters urban warfare. Uses an innovative short-stroke gas system that eliminates complex mechanisms found on most gas-operated automatic weapons. Its main use is in destroying locked doors."
-SWEP.Trivia_Manufacturer = "Mauer Armaments"
+SWEP.Trivia_Manufacturer = "Iscapelli Armaments"
 SWEP.Trivia_Calibre = "12 Gauge"
 SWEP.Trivia_Mechanism = "Gas-Operated Rotating Bolt"
 SWEP.Trivia_Country = "Italy"

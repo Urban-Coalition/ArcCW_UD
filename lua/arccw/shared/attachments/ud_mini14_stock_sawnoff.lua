@@ -20,10 +20,17 @@ att.AutoStats = true
 att.Mult_SightTime = 0.75
 att.Mult_DrawTime = 0.75
 att.Mult_HolsterTime = 0.75
+
 att.Mult_Recoil = 1.5
-att.Mult_RecoilSide = 1.5
+att.Mult_RecoilSide = 2
+
 att.Mult_Sway = 2
+
+att.Mult_SightedSpeedMult = 1.2
+att.Mult_ShootSpeedMult = 1.15
 
 att.Add_BarrelLength = -4
 
 att.ActivateElements = {"ud_mini14_stock_sawnoff"}
+
+att.Override_ActivePos = Vector(0.5, 2, 1.5)

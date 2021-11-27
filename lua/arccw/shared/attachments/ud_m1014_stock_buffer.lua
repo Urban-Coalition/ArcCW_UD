@@ -28,3 +28,5 @@ att.Add_BarrelLength = -12
 att.Mult_Sway = 3
 
 att.ActivateElements = {"ud_autoshotgun_stock_buffer"}
+
+att.Override_ActivePos = Vector(0.5, 4, 1.5)

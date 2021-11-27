@@ -30,3 +30,5 @@ att.Mult_DrawTime = 0.5
 att.Mult_HolsterTime = 0.5
 
 att.ActivateElements = {"m79_nostock"}
+
+att.Override_ActivePos = Vector(0.5, 2, 1.5)

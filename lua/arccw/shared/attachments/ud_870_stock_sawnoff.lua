@@ -33,3 +33,5 @@ att.Add_BarrelLength = -4
 att.Mult_Sway = 3
 
 att.ActivateElements = {"ud_870_stock_sawnoff"}
+
+att.Override_ActivePos = Vector(0.5, 4, 1.5)

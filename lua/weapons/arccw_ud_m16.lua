@@ -318,7 +318,7 @@ SWEP.Hook_NameChange = function(wep, name)
         -------------------------------
         -- Caliber Variants
         -------------------------------
-        if r_cal == CAL_9MM and blen > BLEN_10 then
+        if r_cal == CAL_9MM then
             model = "R0"
             if flat then
                 alt = "991"
@@ -397,10 +397,7 @@ SWEP.Hook_NameChange = function(wep, name)
                     model = "CAR"
                     alt = "-15"
                 end
-                if r_cal == CAL_9MM then
-                    post = " SMG"
-                    wep.Trivia_Desc = smgDesc
-                elseif flat then
+                if flat then
                     wep.Trivia_Desc = m4Desc
                 else
                     wep.Trivia_Desc = "Carbine variant of the M16 rifle, short enough to be classified as a submachine gun. Its features influenced the US Army's interest in the M4 Carbine, which went on to become their new standard rifle. Due to the small barrel, rifles of this family have high maneuverability but poor range compared to their parent platform."

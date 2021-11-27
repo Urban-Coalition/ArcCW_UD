@@ -294,12 +294,13 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     if !IsValid(vm) then return end
     local barrel = wep.Attachments[2].Installed
-    if barrel == "ud_uzi_body_micro" and wep.Attachments[1].Installed then
-        vm:SetBodygroup(4, 3)
-    end
-    if !IsValid(vm) then return end
-    if barrel == "ud_uzi_body_micro" and wep.Attachments[5].Installed then
-        vm:SetBodygroup(6, 3)
+    if barrel == "ud_uzi_body_micro" then
+        if wep.Attachments[1].Installed then
+            vm:SetBodygroup(4, 3)
+        end
+        if wep.Attachments[5].Installed then
+            vm:SetBodygroup(6, 3)
+        end
     end
 end
 

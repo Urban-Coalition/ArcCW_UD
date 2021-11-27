@@ -18,7 +18,7 @@ SWEP.CamAttachment = 3
 
 -- Fake name --
 
-SWEP.PrintName = "Skeletonkey"
+SWEP.PrintName = "FC127"
 
 -- True name --
 

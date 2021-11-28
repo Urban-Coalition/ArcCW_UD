@@ -31,7 +31,9 @@ SWEP.TrueName = "Glock 17"
 -- Trivia --
 
 SWEP.Trivia_Class = "Pistol"
-SWEP.Trivia_Desc = "Handgun originally designed by a curtain rod manufacturer to replace the Austrian military's aging arsenal of WW2 handguns. Its design has since become synonymous with the idea of handguns, as its reliable and cost-effective design combined with a switchless trigger safety mechanism gave it a reputation as a weapon of choice for cops and robbers alike around the world."
+SWEP.Trivia_Desc = [[Handgun originally designed by a curtain rod manufacturer for the Austrian military. Its reliable and cost-effective polymer design has since made it one of the most popular and widely used pistols in the world, common in military, police and civilian use alike.
+
+No matter cop or crook, you're probably rocking the Glock.]]
 SWEP.Trivia_Manufacturer = "Next Generation Weapons Inc."
 SWEP.Trivia_Calibre = "9x19mm Parabellum"
 SWEP.Trivia_Mechanism = "Short Recoil"
@@ -58,14 +60,15 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage --
 
-SWEP.Damage = 30 -- 4 shot close range kill
+SWEP.Damage = 30 -- 4 shot close range kill (3 on chest)
 SWEP.DamageMin = 17 -- 5 shot long range kill
 SWEP.RangeMin = 15
-SWEP.Range = 50
+SWEP.Range = 50 -- 4 shot until ~30m
 SWEP.Penetration = 2
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
-SWEP.MuzzleVelocity = 200
+SWEP.MuzzleVelocity = 375
+SWEP.PhysBulletMuzzleVelocity = 375
 
 SWEP.BodyDamageMults = ArcCW.UC.BodyDamageMults
 

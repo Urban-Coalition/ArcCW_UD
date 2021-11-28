@@ -57,16 +57,17 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.DefaultSkin = 0
 
 -- Damage --
--- does the same damage as the M16; it's all 5.56! Range is improved, however, due to a longer barrel
 
 SWEP.Damage = 34 -- 3 shot kill
 SWEP.DamageMin = 20 -- 5 shot kill
-SWEP.RangeMin = 20
-SWEP.Range = 250
-SWEP.Penetration = 8
+SWEP.RangeMin = 60
+SWEP.Range = 250 -- 4 shot until ~180m
+
+SWEP.Penetration = 12
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
-SWEP.MuzzleVelocity = 500
+SWEP.MuzzleVelocity = 990
+SWEP.PhysBulletMuzzleVelocity = 960
 
 SWEP.BodyDamageMults = ArcCW.UC.BodyDamageMults
 

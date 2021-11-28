@@ -58,14 +58,16 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage --
 
-SWEP.Damage = 30 -- 3 shot close range kill
+SWEP.Damage = 30 -- 4 shot close range kill (3 on chest)
 SWEP.DamageMin = 17 -- 6 shot long range kill
 SWEP.RangeMin = 15
-SWEP.Range = 75
+SWEP.Range = 100 -- 4 shot until ~35m
+
 SWEP.Penetration = 3
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
-SWEP.MuzzleVelocity = 300
+SWEP.MuzzleVelocity = 400
+SWEP.PhysBulletMuzzleVelocity = 400
 
 SWEP.BodyDamageMults = ArcCW.UC.BodyDamageMults
 
@@ -157,7 +159,7 @@ SWEP.HolsterAng = Angle(-8.5, 8, -10)
 
 SWEP.HoldtypeHolstered = "normal"
 SWEP.HoldtypeActive = "ar2"
-SWEP.HoldtypeSights = "smg"
+SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
      Pos = Vector(-2.869, -4, 1.95),

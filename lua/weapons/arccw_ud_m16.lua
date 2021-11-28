@@ -65,8 +65,9 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 SWEP.Damage = 34 -- 3 shot kill
 SWEP.DamageMin = 20 -- 5 shot kill
-SWEP.RangeMin = 15
-SWEP.Range = 175
+SWEP.RangeMin = 50
+SWEP.Range = 200 -- 4 shot until ~145m
+
 SWEP.Penetration = 12
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
@@ -84,8 +85,8 @@ SWEP.ReducedClipSize = 20
 
 -- Recoil --
 
-SWEP.Recoil = 0.7
-SWEP.RecoilSide = 0.3
+SWEP.Recoil = 0.5
+SWEP.RecoilSide = 0.25
 
 SWEP.RecoilRise = 0.1
 SWEP.RecoilPunch = 1

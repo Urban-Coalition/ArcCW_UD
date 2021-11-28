@@ -71,7 +71,9 @@ SWEP.DamageType = DMG_BUCKSHOT
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 200
 
-SWEP.HullSize = 1
+SWEP.HullSize = 0.25
+
+SWEP.BodyDamageMults = ArcCW.UC.BodyDamageMults_Shotgun
 
 -- Mag size --
 

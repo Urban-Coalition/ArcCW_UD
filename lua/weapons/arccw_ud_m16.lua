@@ -73,6 +73,8 @@ SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 960
 SWEP.PhysBulletMuzzleVelocity = 960
 
+SWEP.BodyDamageMults = ArcCW.UC.BodyDamageMults
+
 -- Mag size --
 
 SWEP.ChamberSize = 1

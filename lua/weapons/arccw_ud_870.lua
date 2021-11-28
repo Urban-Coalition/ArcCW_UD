@@ -64,7 +64,7 @@ SWEP.WorldModelOffset = {
 
 SWEP.Damage = 20 -- 5 pellets to kill
 SWEP.DamageMin = 13 -- land all 8 pellets to kill
-SWEP.Range = 40
+SWEP.Range = 50
 SWEP.RangeMin = 5
 SWEP.Num = 8
 SWEP.Penetration = 1
@@ -72,7 +72,9 @@ SWEP.DamageType = DMG_BUCKSHOT
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 200
 
-SWEP.HullSize = 1
+SWEP.HullSize = 0.5
+
+SWEP.BodyDamageMults = ArcCW.UC.BodyDamageMults_Shotgun
 
 -- Mag size --
 

@@ -67,6 +67,8 @@ SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 200
 
+SWEP.BodyDamageMults = ArcCW.UC.BodyDamageMults
+
 -- Mag size --
 
 SWEP.ChamberSize = 1
@@ -88,7 +90,7 @@ SWEP.Sway = 1
 
 -- Firerate / Firemodes --
 
-SWEP.Delay = 60 /525
+SWEP.Delay = 60 / 525
 SWEP.Num = 1
 SWEP.Firemodes = {
     {
@@ -118,7 +120,7 @@ SWEP.NPCWeight = 60
 SWEP.AccuracyMOA = 7
 SWEP.HipDispersion = 500
 SWEP.MoveDispersion = 250
-SWEP.JumpDispersion = 500
+SWEP.JumpDispersion = 1000
 
 SWEP.Primary.Ammo = "pistol"
 SWEP.MagID = "glock"

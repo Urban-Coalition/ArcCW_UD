@@ -67,6 +67,8 @@ SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 300
 
+SWEP.BodyDamageMults = ArcCW.UC.BodyDamageMults
+
 -- Mag size --
 
 SWEP.ChamberSize = 0
@@ -125,7 +127,7 @@ SWEP.NPCWeight = 60
 SWEP.AccuracyMOA = 6
 SWEP.HipDispersion = 400
 SWEP.MoveDispersion = 100
-SWEP.JumpDispersion = 800
+SWEP.JumpDispersion = 1000
 
 SWEP.Primary.Ammo = "pistol"
 SWEP.MagID = "uzi"

@@ -68,6 +68,8 @@ SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 500
 
+SWEP.BodyDamageMults = ArcCW.UC.BodyDamageMults
+
 -- Mag size --
 
 SWEP.ChamberSize = 1

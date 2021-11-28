@@ -24,12 +24,12 @@ att.Override_ClipSize = 7
 att.Override_ClipSize_Priority = 0.5
 att.BaseClipSize = 7
 
-att.Mult_Damage = 2.5
+att.Mult_Damage = 2.2
 att.Mult_Recoil = 3
 att.Mult_RecoilSide = 2
 att.Mult_VisualRecoilMult = 2
 att.Mult_RPM = 0.5
-att.Mult_Range = .4
+att.Mult_Range = 0.25
 att.Mult_ShootVol = 1.2
 
 att.Mult_SightTime = 0.91

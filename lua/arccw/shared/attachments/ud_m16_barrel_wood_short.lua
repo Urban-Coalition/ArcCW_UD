@@ -14,7 +14,7 @@ att.Slot = "ud_m16_barrel"
 att.AutoStats = true
 
 att.Mult_AccuracyMOA = 1.5
-att.Mult_Range = 0.85
+att.Mult_Range = 0.75
 att.Mult_RPM = 1.111
 att.Mult_Sway = 0.75
 

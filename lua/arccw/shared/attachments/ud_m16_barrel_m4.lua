@@ -23,7 +23,7 @@ att.Mult_HipDispersion = 0.85
 
 att.Mult_Recoil = 1.25
 att.Mult_AccuracyMOA = 1.5
-att.Mult_Range = 0.85
+att.Mult_Range = 0.75
 att.Mult_RPM = 1.111 --0.945
 att.Mult_Sway = 0.85
 

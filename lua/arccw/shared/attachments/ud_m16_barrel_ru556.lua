@@ -27,7 +27,7 @@ att.Mult_HipDispersion = 0.7
 att.Mult_RPM = 1.15
 att.Mult_Recoil = 1.5
 att.Mult_AccuracyMOA = 2
-att.Mult_Range = 0.75
+att.Mult_Range = 0.5
 att.Mult_Sway = 0.75
 
 att.Add_BarrelLength = -6

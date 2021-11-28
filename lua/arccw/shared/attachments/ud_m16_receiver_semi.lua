@@ -23,7 +23,7 @@ att.SortOrder = -1
 att.Mult_RPM = 600 / 900
 att.Mult_Recoil = 0.8
 att.Mult_AccuracyMOA = 0.75
-att.Mult_Range = 1.25
+att.Mult_Range = 1.15
 att.Mult_MoveDispersion = 0.5
 
 att.Mult_PhysBulletMuzzleVelocity = 1.15

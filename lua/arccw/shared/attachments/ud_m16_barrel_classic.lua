@@ -5,7 +5,7 @@ if GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.Icon = Material("entities/att/acwatt_ud_m16_barrel_classic.png", "smooth mips")
-att.Description = "Classic triangular handguard. Replaced by the more iconic and easier to grip ribbed handguard, this barrel can nevertheless withstand automatic fire a lot better."
+att.Description = "Classic triangular handguard. In comparison to the modern \"ribbed\" handguard, it is more comfortable to hold but has a tendency to slip."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
@@ -17,10 +17,10 @@ att.Slot = "ud_m16_barrel"
 
 att.AutoStats = true
 
-att.Mult_RecoilSide = 1.15
-att.Mult_Recoil = 1.10
+att.Mult_RecoilSide = 1.2
+att.Mult_Recoil = 1.1
 
-att.Mult_ShootSpeedMult = 1.075
+att.Mult_SightTime = .9
 
 att.LHIK = true
 

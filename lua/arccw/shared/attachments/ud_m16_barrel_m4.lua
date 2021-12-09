@@ -7,7 +7,6 @@ end
 att.Icon = Material("entities/att/acwatt_ud_m16_barrel_m4.png", "smooth mips")
 att.Description = "Carbine length barrel with short handguard. Provides a small increase in firerate while maintaining respectable accuracy and range."
 att.Desc_Pros = {
-    --"uc.auto"
 }
 att.Desc_Cons = {
 }

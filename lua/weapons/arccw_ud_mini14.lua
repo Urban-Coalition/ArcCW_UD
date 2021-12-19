@@ -33,7 +33,7 @@ SWEP.Trivia_Class = "Semi-Automatic Rifle"
 SWEP.Trivia_Desc = "Autoloading rifle designed for better accuracy than competing models. Possesses a more classical operation compared to its contemporaries. Due to its appearance, it is sometimes exempted from gun control laws targeting \"Assault Weapons\" despite its identical ability to kill. This has helped it find success despite its higher cost and non-standard magazine well."
 SWEP.Trivia_Manufacturer = "Rifles International"
 SWEP.Trivia_Calibre = "5.56x45mm NATO"
-SWEP.Trivia_Mechanism = "Rotating Bolt"
+SWEP.Trivia_Mechanism = "Gas-Operated Rotating Bolt"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 1973
 

@@ -30,7 +30,7 @@ SWEP.Trivia_Class = "Shotgun"
 SWEP.Trivia_Desc = "Classic pump-action shotgun, renowned for its high quality parts and assembly. A simple firearm with a simple purpose. Marketed primarily to civilians for use in hunting game and self-defense, but it has found popularity among police departments for a relatively innocuous appearance and ability to accept custom loaded less-lethal shells."
 SWEP.Trivia_Manufacturer = "Mauer Armaments"
 SWEP.Trivia_Calibre = "12 Gauge"
-SWEP.Trivia_Mechanism = "Pump-Action"
+SWEP.Trivia_Mechanism = "Pump Action"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 1950
 

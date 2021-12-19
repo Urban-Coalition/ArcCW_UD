@@ -19,6 +19,8 @@ att.Slot = "ud_glock_slide"
 
 att.AutoStats = true
 
+att.Override_Trivia_Class = "Machine Pistol"
+
 --att.Mult_SightTime = 1
 --att.Mult_Recoil = 1
 --att.Mult_SpeedMult = 1

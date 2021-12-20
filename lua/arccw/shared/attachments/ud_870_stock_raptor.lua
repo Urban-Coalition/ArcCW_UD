@@ -35,4 +35,4 @@ att.Mult_Sway = 3
 
 att.ActivateElements = {"ud_870_stock_raptor"}
 
-att.Override_ActivePos = Vector(0.5, 4, 1.5)
+att.Override_ActivePos = Vector(0.5, 5, 0.5)

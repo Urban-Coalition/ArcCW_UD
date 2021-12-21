@@ -637,7 +637,7 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [5] = {
-                vpos = Vector(-0.1, 1.05, 12),
+                vpos = Vector(0, 1.4, 12),
                 vang = Angle(90, 0, -90),
             },
             [6] = {
@@ -1425,7 +1425,7 @@ SWEP.Attachments = {
         Slot = {"foregrip","ubgl"},
         Bone = "m16_parent",
         Offset = {
-            vpos = Vector(-0.1, 1.25, 12),
+            vpos = Vector(0, 1.25, 12),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"rail_fg"},

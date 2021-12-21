@@ -162,6 +162,16 @@ SWEP.IronSightStruct = {
      ViewModelFOV = 55,
 }
 
+SWEP.ExtraIrons = {
+    {
+        Pos = Vector(-2.55, -1.5, 1),
+        Ang = Angle(1.75, 0, -15),
+        Magnification = 1,
+        ViewModelFOV = 55,
+        CrosshairInSights = true,
+    }
+}
+
 SWEP.ActivePos = Vector(0.2, -1, 2)
 SWEP.ActiveAng = Angle(0, 0, -5)
 

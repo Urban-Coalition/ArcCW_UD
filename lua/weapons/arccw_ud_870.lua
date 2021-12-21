@@ -333,7 +333,7 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [3] = {
-                vpos = Vector(-0.03, -0.57, 41),
+                vpos = Vector(-0.03, -0.65, 42.5),
             }
         },
         VMBodygroups = {
@@ -348,7 +348,7 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [3] = {
-                vpos = Vector(-0.03, -0.75, 24),
+                vpos = Vector(-0.03, -0.9, 22),
             }
         },
     },

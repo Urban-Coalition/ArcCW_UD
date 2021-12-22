@@ -30,7 +30,7 @@ SWEP.TrueName = "M79"
 SWEP.Trivia_Class = "Grenade Launcher"
 SWEP.Trivia_Desc = "Single-shot 40mm grenade launcher intended to provide infantry with portable long-range explosive firepower. Accurate, flexible and reliable, it is well-respected among American soldiers."
 SWEP.Trivia_Manufacturer = "Stoner's Legacy Ltd."
-SWEP.Trivia_Calibre = "40×46mm"
+SWEP.Trivia_Calibre = "40x46mm"
 SWEP.Trivia_Mechanism = "Break-action"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 1961
@@ -215,8 +215,8 @@ SWEP.Animations = {
             {s = common .. "breaker_close.ogg",  t = 2.5},
             -- {
             --     t = 0.6,
-            --     e = "muzzleflash_m79",  -- Please add some kind of smoke particle after opening the chamber
-            --     att = nil,
+            --     e = "RagdollImpact",  -- Please add some kind of smoke particle after opening the chamber
+            --     att = 1,
             --     mag = 100,
             -- }
         },
@@ -374,8 +374,8 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Internals",
-        Slot = "uc_fg", -- Fire group
-        DefaultAttName = "Standard Internals"
+        Slot = "uc_fg_singleshot", -- Fire group
+        DefaultAttName = "Standard Internals",
     },
     {
         PrintName = "Charm",

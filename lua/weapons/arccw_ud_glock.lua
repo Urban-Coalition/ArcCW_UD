@@ -889,7 +889,7 @@ SWEP.Animations = {
 SWEP.AutosolveSourceSeq = "idle"
 
 SWEP.Hook_TranslateAnimation = function(wep, anim)
-    if wep.Attachments[9].Installed and (anim == "fire" or anim == "fire_empty") then
+    if wep.Attachments[8].Installed and (anim == "fire" or anim == "fire_empty") then
         return anim .. "_stock"
     end
 end
@@ -940,18 +940,6 @@ SWEP.Attachments = {
         VMScale = Vector(0.8, 0.8, 0.8)
     },
     {
-        PrintName = "Underbarrel",
-        Slot = {"foregrip"},
-        Bone = "glock_parent",
-        Offset = {
-            vpos = Vector(0, -1.3, 5),
-            vang = Angle(90, 0, -90),
-        },
-        MergeSlots = {7},
-        ExcludeFlags = {"ud_glock_slide_subcompact"}
-    },
-    {
-        Hidden = true,
         PrintName = "Tactical",
         Slot = {"tac_pistol"},
         Bone = "glock_parent",
@@ -959,7 +947,19 @@ SWEP.Attachments = {
             vpos = Vector(0, -1.3, 5),
             vang = Angle(90, 0, -90),
         },
+        --MergeSlots = {7},
+        ExcludeFlags = {"ud_glock_slide_subcompact"}
     },
+    -- {
+    --     Hidden = true,
+    --     PrintName = "Tactical",
+    --     Slot = {"tac_pistol"},
+    --     Bone = "glock_parent",
+    --     Offset = {
+    --         vpos = Vector(0, -1.3, 5),
+    --         vang = Angle(90, 0, -90),
+    --     },
+    -- },
     {
         PrintName = "Magazine",
         Slot = {"ud_glock_mag"},

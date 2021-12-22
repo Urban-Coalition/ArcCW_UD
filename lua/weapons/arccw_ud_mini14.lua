@@ -695,7 +695,10 @@ SWEP.Attachments = {
         Offset = {
             vpos = Vector(0, -2.1, 29),
             vang = Angle(90, 0, -90),
+            wpos = vpos,
         },
+        VMScale = Vector(1.5,1.5,1.5),
+        WMScale = VMScale,
         ExcludeFlags = {"nomuzzle"},
     },
     {

@@ -149,8 +149,8 @@ SWEP.ExtraSightDist = 20
 -- Ironsights / Customization / Poses --
 
 SWEP.HoldtypeHolstered = "passive"
-SWEP.HoldtypeActive = "shotgun"
-SWEP.HoldtypeSights = "ar2"
+SWEP.HoldtypeActive = "ar2"
+SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
      Pos = Vector(-2.99, -1, 2),

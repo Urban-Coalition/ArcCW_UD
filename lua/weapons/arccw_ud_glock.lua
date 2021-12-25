@@ -253,7 +253,7 @@ SWEP.AttachmentElements = {
         TrueNameChange = "Glock 17L",
         AttPosMods = {
             [5] = {
-                vpos = Vector(0, 0, 1),
+                vpos = Vector(0, 0, 1.5),
                 vang = Angle(90, 0, -90),
             }
         }
@@ -263,10 +263,16 @@ SWEP.AttachmentElements = {
         NameChange = "GEN3 Auto",
         TrueNameChange = "Glock 18C",
     },
-    ["ud_glock_slide_subompact"] = {
+    ["ud_glock_slide_subcompact"] = {
         VMBodygroups = {{ind = 3, bg = 8}},
         NameChange = "GEN3K",
         TrueNameChange = "Glock 26",
+        AttPosMods = {
+            [5] = {
+                vpos = Vector(0, 0, -0.5),
+                vang = Angle(90, 0, -90),
+            }
+        }
     },
     ["ud_glock_slide_cs"] = {
         VMBodygroups = {{ind = 3, bg = 6}},
@@ -279,7 +285,7 @@ SWEP.AttachmentElements = {
         TrueNameChange = "Glock 17XXXL",
         AttPosMods = {
             [5] = {
-                vpos = Vector(0, 0, 9),
+                vpos = Vector(0, 0, 11.2),
                 vang = Angle(90, 0, -90),
             }
         }
@@ -933,7 +939,7 @@ SWEP.Attachments = {
         Slot = {"muzzle"},
         Bone = "glock_flash",
         Offset = {
-            vpos = Vector(0, 0, 0.45),
+            vpos = Vector(0, 0, 0.0),
             vang = Angle(90, 0, -90),
         },
         ExcludeFlags = {"sd"},

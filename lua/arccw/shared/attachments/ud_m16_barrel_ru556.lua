@@ -4,7 +4,8 @@ att.Icon = Material("entities/att/acwatt_ud_m16_barrel_ru556.png", "smooth mips"
 att.Description = "Handguard from the RU556 line of AMCAR accessories, featuring a unique barrel shroud. Funcitonally identical to the commando barrel."
 
 if GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "10\" M-LOK Barrel"
+    att.PrintName = "10\" M-LOK® Barrel"
+    att.AbbrevName = "10\" M-LOK Barrel"
     att.Description = "Short handguard from the M-LOK line of AR-15 accessories, featuring a unique barrel shroud. Funcitonally identical to the commando barrel."
 end
 

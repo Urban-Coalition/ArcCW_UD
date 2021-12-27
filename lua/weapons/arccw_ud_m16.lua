@@ -1433,7 +1433,11 @@ SWEP.Attachments = {
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"rail_fg"},
-        ExcludeFlags = {"m16_lmg", "m16_stub"},
+        ExcludeFlags = {"m16_lmg", "m16_stub"}, 
+        SlideAmount = {
+            vmin = Vector(0, 1.25, 12.5),
+            vmax = Vector(0, 1.25, 9),
+        },
     },
     {
         PrintName = "Tactical",

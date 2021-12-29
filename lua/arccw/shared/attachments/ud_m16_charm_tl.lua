@@ -13,8 +13,8 @@ att.Slot = "ud_m16_charm"
 att.ActivateElements = {"bravo_dicks_going_fart"}
 att.AdditionalSights = {
     {
-        Pos = Vector(0, 22.5, -4),
-        Ang = Angle(0, 0, -45),
+        Pos = Vector(0, 20, -6),
+        Ang = Angle(0, 0, -25),
         GlobalPos = false,
         GlobalAng = true,
         Magnification = 1

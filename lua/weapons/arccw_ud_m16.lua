@@ -200,6 +200,7 @@ SWEP.ShootSound = {path .. "auto1.ogg", path .. "auto2.ogg", path .. "auto3.ogg"
 SWEP.DistantShootSound = path .. "dist.ogg"
 SWEP.ShootSoundSilenced = path .. "fire_sup.ogg"
 SWEP.DistantShootSoundSilenced = path .. "fire_sup_dist.ogg"
+SWEP.ShootDrySound = path .. "dryfire.ogg"
 
 -- Bodygroups --
 

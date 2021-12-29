@@ -13,6 +13,7 @@ $bodygroup "1" {
 	studio "upper_usas_flat.smd" //3
 	blank //4
 	studio "upper_ch_a1.smd" //5
+	studio "upper_ch_modern.smd" //6
 }
 
 $bodygroup "2" {

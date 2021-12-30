@@ -59,9 +59,8 @@ att.Override_PhysBulletMuzzleVelocity = 396 / 0.833333
 att.Override_Ammo = "pistol"
 att.Override_Trivia_Calibre = "9x19mm Parabellum"
 att.Override_Trivia_Class = "Submachine Gun"
-att.Override_ShellModel = "models/weapons/arccw/ud_shells/9.mdl"
---att.Override_ShellMaterial = "models/weapons/arcticcw/shell_9mm"
-att.Override_ShellScale = 1.4
+att.Override_ShellModel = "models/weapons/arccw/uc_shells/9x19.mdl"
+att.Override_ShellScale = 1
 att.Override_ShellSounds = ArcCW.PistolShellSoundsTable
 
 att.Hook_GetShootSound = function(wep, fsound)

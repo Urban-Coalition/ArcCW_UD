@@ -46,8 +46,8 @@ att.Mult_HeatDissipation = 0.25
 -- yes, .50 beowulf is more of an huge magnum bullet than it is a rifle bullet
 att.Override_Ammo = "357"
 att.Override_Trivia_Calibre = ".50 Beowulf"
-att.Override_ShellModel = "models/weapons/arccw/ud_shells/9.mdl"
-att.Override_ShellScale = 2
+att.Override_ShellModel = "models/weapons/arccw/uc_shells/50beo.mdl"
+att.Override_ShellScale = 1
 att.Override_ShellSounds = ArcCW.PistolShellSoundsTable
 
 att.Override_Firemodes_Priority = 0.5

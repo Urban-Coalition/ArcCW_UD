@@ -35,6 +35,9 @@ att.Mult_HeatDissipation = 1.5
 
 att.Override_PhysBulletMuzzleVelocity = 642
 
+att.Override_ShellModel = "models/weapons/arccw/uc_shells/300blk.mdl"
+att.Override_ShellScale = 1
+
 att.Override_Firemodes = {
     {
         Mode = 2,

@@ -25,6 +25,9 @@ att.Mult_Damage = 0.9
 att.Mult_DamageMin = 0.9
 att.Mult_Recoil = 0.65
 
+att.Override_ShellModel = "models/weapons/arccw/uc_shells/357sig.mdl"
+att.Override_ShellScale = 1
+
 att.Hook_GetShootSound = function(wep, sound)
     if wep:GetBuff_Override("Silencer") then
         return "weapons/arccw_ud/glock/fire_supp_380.ogg"

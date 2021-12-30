@@ -25,7 +25,8 @@ att.Mult_AccuracyMOA = 0.5
 att.Mult_Recoil = 1.15
 
 att.Mult_ClipSize = 0.9
-att.Override_ShellScale = 1.5
+att.Override_ShellModel = "models/weapons/arccw/uc_shells/357sig.mdl"
+att.Override_ShellScale = 1
 
 att.Hook_GetShootSound = function(wep, sound)
     if wep:GetBuff_Override("Silencer") then

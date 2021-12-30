@@ -37,8 +37,8 @@ att.GivesFlags = {"mini14_22lr"}
 
 att.Override_Ammo = "plinking"
 att.Override_Trivia_Calibre = ".22 Long Rifle"
-att.Override_ShellModel = "models/weapons/arccw/ud_shells/57.mdl"
-att.Override_ShellScale = 0.8
+att.Override_ShellModel = "models/weapons/arccw/uc_shells/22lr.mdl"
+att.Override_ShellScale = 1
 att.Override_ShellSounds = ArcCW.TinyShellSoundsTable
 
 att.Hook_SelectReloadAnimation = function(wep, anim)

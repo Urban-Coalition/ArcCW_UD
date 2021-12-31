@@ -195,6 +195,7 @@ SWEP.FirstShootSound = path .. "fire.ogg"
 SWEP.ShootSound = path .. "fire_auto.ogg"
 SWEP.ShootSoundSilenced = path1 .. "fire_supp.ogg"
 SWEP.DistantShootSound = path .. "fire_dist.ogg"
+SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"
 SWEP.ShootDrySound = path .. "dryfire.ogg"
 
 -- Bodygroups --

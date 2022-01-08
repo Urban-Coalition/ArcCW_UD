@@ -770,7 +770,7 @@ SWEP.AttachmentElements = {
     ["bravo_dicks_going_fart"] = {
         AttPosMods = {
             [6] = {
-                vpos = Vector(0, -1.3, 10),
+                vpos = Vector(0, -1.3, 12),
                 vang = Angle(90, 0, 90),
             },
         },
@@ -1436,7 +1436,7 @@ SWEP.Attachments = {
         InstalledEles = {"rail_fg"},
         ExcludeFlags = {"m16_lmg", "m16_stub"}, 
         SlideAmount = {
-            vmin = Vector(0, 1.25, 12.5),
+            vmin = Vector(0, 1.25, 15.5),
             vmax = Vector(0, 1.25, 9),
         },
     },

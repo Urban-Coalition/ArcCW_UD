@@ -172,6 +172,17 @@ SWEP.IronSightStruct = {
      Magnification = 1.1,
      SwitchToSound = "",
 }
+--[[SWEP.ExtraIrons = {
+    {
+        Pos = Vector(-3, -1.5, -1),
+        Ang = Angle(1.75, 0, -15),
+        Magnification = 1,
+        ViewModelFOV = 55,
+        GlobalAng = true,
+        GlobalPos = false,
+        CrosshairInSights = true,
+    }
+}]]
 
 SWEP.ActivePos = Vector(0.33, 0, 1)
 SWEP.ActiveAng = Angle(0, 0, -3)
@@ -627,8 +638,8 @@ SWEP.AttachmentElements = {
                 vang = Angle(90, 0, -90),
             },
             [6] = {
-                vpos = Vector(1.1, 0, 20),
-                vang = Angle(90, 0, 0),
+                vpos = Vector(0.25, -1.4, 12),
+                vang = Angle(90, 0, 90),
             },
         }
     },
@@ -642,8 +653,8 @@ SWEP.AttachmentElements = {
                 vang = Angle(90, 0, -90),
             },
             [6] = {
-                vpos = Vector(1.1, 0, 14),
-                vang = Angle(90, 0, 0),
+                vpos = Vector(0.25, -1.4, 12),
+                vang = Angle(90, 0, 90),
             },
         },
     },
@@ -770,7 +781,7 @@ SWEP.AttachmentElements = {
     ["bravo_dicks_going_fart"] = {
         AttPosMods = {
             [6] = {
-                vpos = Vector(0, -1.3, 12),
+                vpos = Vector(0.25, -1.4, 12),
                 vang = Angle(90, 0, 90),
             },
         },

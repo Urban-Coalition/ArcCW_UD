@@ -653,8 +653,8 @@ SWEP.AttachmentElements = {
                 vang = Angle(90, 0, -90),
             },
             [6] = {
-                vpos = Vector(0.25, -1.4, 12),
-                vang = Angle(90, 0, 90),
+                vpos = Vector(-1.154, -.2, 14),
+                vang = Angle(90, 0, 180),
             },
         },
     },
@@ -786,7 +786,7 @@ SWEP.AttachmentElements = {
             },
         },
     },
-
+    
     ---- Cut content
     ["hg_stub"] = {
         VMBodygroups = {

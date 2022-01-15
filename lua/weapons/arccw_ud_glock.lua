@@ -160,6 +160,8 @@ SWEP.IronSightStruct = {
      Ang = Angle(0.3, 0, 0),
      Magnification = 1,
      ViewModelFOV = 55,
+     SwitchToSound = ratel, -- sound that plays when switching to this sight
+     SwitchFromSound = ratel
 }
 
 SWEP.ExtraIrons = {
@@ -466,6 +468,8 @@ SWEP.Hook_Think = ArcCW.UD.ADSReload
 
 -- CHAN_ITEM doesn't sound too right
 local ci = CHAN_AUTO
+local ratel = {path .. "pistol_rattle_1.ogg", path .. "pistol_rattle_2.ogg", path .. "pistol_rattle_3.ogg"}
+local rottle = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
 
 SWEP.Animations = {
     ["idle"] = {
@@ -649,7 +653,7 @@ SWEP.Animations = {
         Time = 40 / 30,
         ShellEjectAt = false,
         SoundTable = {
-            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
+            {s = rattel, t = 0},
             {s = path .. "slide_pull.ogg",  t = 0.5, c = ci},
             {s = path .. "sliderel_deact.ogg",  t = 0.5, c = ci},
             {s = path .. "slide_rel.ogg",        t = 0.8, c = ci},
@@ -665,7 +669,7 @@ SWEP.Animations = {
         Time = 40 / 30,
         ShellEjectAt = false,
         SoundTable = {
-            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
+            {s = rattel, t = 0},
             {s = path .. "sliderel_deact.ogg",  t = 0.5, c = ci},
             {s = path .. "slide_pull.ogg",  t = 0.5, c = ci},
         },
@@ -681,7 +685,7 @@ SWEP.Animations = {
         Time = 32 / 30,
         ShellEjectAt = 0.4,
         SoundTable = {
-            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0, v = 50},
+            {s = rottle, t = 0, v = 50},
             {s = path .. "slide_pull.ogg",  t = 0.3, c = ci, v = 50},
             {s = path .. "sliderel_deact.ogg",  t = 0.3, c = ci, v = 50},
             {s = path .. "slide_rel.ogg",        t = 0.55, c = ci, v = 50},
@@ -697,7 +701,7 @@ SWEP.Animations = {
         Time = 32 / 30,
         ShellEjectAt = 0.4,
         SoundTable = {
-            {s = {common .. "cloth_2.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0, v = 50},
+            {s = rottle, t = 0, v = 50},
             {s = path .. "slide_pull.ogg",  t = 0.3, c = ci, v = 50},
             {s = path .. "sliderel_deact.ogg",  t = 0.3, c = ci, v = 50},
         },
@@ -722,12 +726,13 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.3,
         SoundTable = {
-            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
-            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.3},
+            {s = rottle, t = 0},
+            {s = rattel, t = 0.3},
             {s = path .. "magrelease.ogg",    t = 0.3, c = ci},
             {s = path .. "magout.ogg",        t = 0.3, c = ci},
+            {s = rattel, t = 0.35},
             {s = path .. "magin.ogg",         t = 0.4, c = ci},
-            {s = {common .. "cloth_2.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.5},
+            {s = rottle, t = 0.5},
         },
     },
     ["reload_empty"] = {
@@ -742,13 +747,13 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.3,
         SoundTable = {
-            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
+            {s = rattel, t = 0},
             {s = path .. "magrelease.ogg",    t = 0.15, c = ci},
             {s = path .. "magout.ogg",        t = 0.15, c = ci},
             {s = path .. "magin.ogg",         t = 0.55, c = ci},
-            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.5},
+            {s = rattel, t = 0.5},
             {s = common .. "pistol_magdrop.ogg",  t = 0.65},
-            {s = {common .. "cloth_2.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 1.15},
+            {s = rottle, t = 1.15},
             {s = path .. "chamber.ogg",      t = 1.45, c = ci},
         },
     },
@@ -767,12 +772,12 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.3,
         SoundTable = {
-            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
-            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.3},
+            {s = rattel, t = 0},
+            {s = rattel, t = 0.3},
             {s = path .. "magrelease.ogg",    t = 0.3, c = ci},
             {s = path .. "magout.ogg",        t = 0.3, c = ci},
             {s = path .. "magin.ogg",         t = 0.4, c = ci},
-            {s = {common .. "cloth_2.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.65},
+            {s = rottle, t = 0.65},
         },
     },
     ["reload_empty_10"] = {
@@ -787,13 +792,13 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.3,
         SoundTable = {
-            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
+            {s = rattel, t = 0},
             {s = path .. "magrelease.ogg",    t = 0.15, c = ci},
             {s = path .. "magout.ogg",        t = 0.15, c = ci},
             {s = path .. "magin.ogg",         t = 0.45, c = ci},
-            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.5},
+            {s = rattel, t = 0.5},
             {s = common .. "pistol_magdrop.ogg",  t = 0.65},
-            {s = {common .. "cloth_2.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.9},
+            {s = rottle, t = 0.9},
             {s = path .. "chamber.ogg",      t = 1.45, c = ci},
         },
     },
@@ -812,12 +817,12 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.3,
         SoundTable = {
-            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
-            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.3},
+            {s = rattel, t = 0},
+            {s = rattel, t = 0.3},
             {s = path .. "magrelease.ogg",    t = 0.4, c = ci},
             {s = path .. "magout.ogg",        t = 0.4, c = ci},
             {s = path .. "magin.ogg",         t = 0.52, c = ci},
-            {s = {common .. "cloth_2.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.75},
+            {s = rottle, t = 0.75},
         },
     },
     ["reload_empty_33"] = {
@@ -832,13 +837,13 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.3,
         SoundTable = {
-            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
+            {s = rattel, t = 0},
             {s = path .. "magrelease.ogg",    t = 0.16, c = ci},
             {s = path .. "magout.ogg",        t = 0.16, c = ci},
             {s = path .. "magin.ogg",         t = 0.5, c = ci},
-            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.5},
+            {s = rattel, t = 0.5},
             {s = common .. "pistol_magdrop.ogg",  t = 0.65},
-            {s = {common .. "cloth_2.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 1.3},
+            {s = rottle, t = 1.3},
             {s = path .. "chamber.ogg",      t = 1.46, c = ci},
         },
     },
@@ -857,14 +862,14 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.3,
         SoundTable = {
-            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
+            {s = rattel, t = 0},
             {s = path .. "magrelease.ogg",    t = 0.3, c = ci},
             {s = path .. "magout.ogg",        t = 0.3, c = ci},
             {s = path1 .. "magout.ogg",        t = 0.3, c = ci},
-            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.7},
+            {s = rattel, t = 0.7},
             {s = path .. "magin.ogg",         t = 0.7, c = ci},
             {s = path1 .. "magin.ogg",         t = 0.7, c = ci},
-            {s = {common .. "cloth_2.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 1.1},
+            {s = rottle, t = 1.1},
         },
     },
     ["reload_empty_100"] = {
@@ -879,17 +884,17 @@ SWEP.Animations = {
         LHIKEaseOut = 0.15,
         LHIKOut = 0.3,
         SoundTable = {
-            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
+            {s = rattel, t = 0},
             {s = path .. "magrelease.ogg",      t = 0.12, c = ci},
             {s = path .. "magout.ogg",        t = 0.12, c = ci},
             {s = path1 .. "magout.ogg",          t = 0.12, c = ci},
             {s = path .. "magin.ogg",           t = 0.5, c = ci},
             {s = path1 .. "magin.ogg",           t = 0.5, c = ci},
             {s = common .. "magdrop.ogg",  t = 0.65},
-            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.7},
+            {s = rattel, t = 0.7},
             {s = path .. "sliderel_deact.ogg",  t = 1.35, c = ci},
             {s = path .. "chamber.ogg",        t = 1.6, c = ci},
-            {s = {common .. "cloth_2.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 1.6},
+            {s = rottle, t = 1.6},
         },
     },
 }

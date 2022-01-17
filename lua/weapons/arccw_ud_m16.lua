@@ -762,6 +762,10 @@ SWEP.AttachmentElements = {
             [1] = {
                 vpos = Vector(0, -4, 3),
                 vang = Angle(90, 0, -90),
+                SlideAmount = {
+                    vmin = Vector(0, -4, 3 - 1.5),
+                    vmax = Vector(0, -4, 3 + 2.5),
+                }
             },
         },
     },
@@ -770,6 +774,10 @@ SWEP.AttachmentElements = {
             [1] = {
                 vpos = Vector(0, -4.1, 3.5),
                 vang = Angle(90, 0, -90),
+                SlideAmount = {
+                    vmin = Vector(0, -4.1, 3.5 - 2),
+                    vmax = Vector(0, -4.1, 3.5 + 1.5),
+                }
             },
         },
     },
@@ -786,7 +794,7 @@ SWEP.AttachmentElements = {
             },
         },
     },
-    
+
     ---- Cut content
     ["hg_stub"] = {
         VMBodygroups = {
@@ -795,7 +803,7 @@ SWEP.AttachmentElements = {
         AttPosMods = {
             [3] = {
                 vpos = Vector(0, -0.35, 7),
-                vang = Angle(90, 0, -90),
+                vang = Angle(90, 0, -90)
             },
             [6] = {
                 vpos = Vector(1.1, -0.4, 9),
@@ -1394,8 +1402,8 @@ SWEP.Attachments = {
         VMScale = Vector(1, 1, 1),
         ExtraSightDist = 8,
         SlideAmount = {
-            vmin = Vector(0, -1.75, 3-2),
-            vmax = Vector(0, -1.75, 3+2),
+            vmin = Vector(0, -1.75, 3 - 2),
+            vmax = Vector(0, -1.75, 3 + 2),
         },
     },
     {
@@ -1443,7 +1451,7 @@ SWEP.Attachments = {
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"rail_fg"},
-        ExcludeFlags = {"m16_lmg", "m16_stub"}, 
+        ExcludeFlags = {"m16_lmg", "m16_stub"},
         SlideAmount = {
             vmin = Vector(0, 1.25, 15.5),
             vmax = Vector(0, 1.25, 9),

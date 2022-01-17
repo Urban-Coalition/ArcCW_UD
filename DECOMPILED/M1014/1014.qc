@@ -27,6 +27,12 @@ $bodygroup "4" {
 	studio "autoshotgun_stock_buffer.smd"
 }
 
+$bodygroup "5" {
+	studio "autoshotgun_supp_8.smd"
+	studio "autoshotgun_supp_4.smd"
+	blank
+}
+
 $cdmaterials "models\weapons\arccw\ud_m1014"
 $cdmaterials "models\weapons\arccw\ud_common"
 

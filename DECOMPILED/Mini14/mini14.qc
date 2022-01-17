@@ -45,6 +45,12 @@ $bodygroup "6" {
 	studio "mini14_clamp_short.smd"
 }
 
+$bodygroup "7" {
+	studio "mini14_flashhider_long.smd"
+	studio "mini14_flashhider_short.smd"
+	blank
+}
+
 $cdmaterials "models\weapons\arccw\ud_mini14"
 $cdmaterials "models\weapons\arccw\ud_m1014"
 $cdmaterials "models\weapons\arccw\ud_m16"

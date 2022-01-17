@@ -125,6 +125,13 @@ $bodygroup "13" {
 	studio "strap_bo1.smd"
 }
 
+$bodygroup "14" {
+    blank
+	studio "barrels_new/flashhider_20.smd" //0
+	studio "barrels_new/flashhider_14.smd" //1
+	studio "barrels_new/flashhider_11.smd" //2
+}
+
 $cdmaterials "models\weapons\arccw\ud_m16"
 $cdmaterials "models\weapons\arccw\ud_m1014"
 $cdmaterials "models\weapons\arccw\ud_common"

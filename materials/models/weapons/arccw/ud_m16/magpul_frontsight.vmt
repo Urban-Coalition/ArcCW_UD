@@ -1,21 +1,19 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models\weapons\arccw\ud_m16\magpul_frontsight_d"
-	"$bumpmap" "models\weapons\arccw\ud_m16\magpul_frontsight_n"
+	"$basetexture" "models\weapons\arc9\ud_m16\magpul_frontsight_d"
+	"$bumpmap" "models\weapons\arc9\ud_m16\magpul_frontsight_n"
 	"$normalmapalphaenvmapmask" 	1
-	
+    
+	"$phongwarptexture"			"models\weapons\arccw\ud_stalol\phongwarp_metal"
+
+
+	"$blendTintByBaseAlpha" "1"
 	"$phong" 		"1"
-	"$phongexponenttexture" "models\weapons\arccw\ud_m16\magpul_frontsight_exp"
-	"$phongboost" "1.5"
+	"$phongexponenttexture"	"models\weapons\arc9\ud_m16\magpul_frontsight_exp"
+	"$phongboost" "4"
 	"$phongalbedotint" 			"1"
 	"$phongfresnelranges" "[.6 1 2]"
-	"$halflambert" "1"
-	
 	"$envmap" "env_cubemap"
-	"$envmapfresnel" 			"1"
-	"$envmapFresnelMinMaxExp" "[0 5 .4]"
-	"$envmaptint" "[.1 .1  .1]"
-	
-	"$ambientocclusion" "1"
+	"$envmaptint" "[0.05 0.05 0.05]"
 	"$nocull" "1"
 }

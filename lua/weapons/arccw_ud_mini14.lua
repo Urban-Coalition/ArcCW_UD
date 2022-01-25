@@ -669,6 +669,28 @@ SWEP.Animations = {
     },
 }
 
+SWEP.Hook_ModifyBodygroups = function(wep,data)
+    local vm = data.vm
+    if !IsValid(vm) then return end
+
+    local atts = wep.Attachments
+    local barr = string.Replace(atts[2].Installed or "default","ud_mini14_barrel_","")
+    local muzz = atts[3].Installed
+    local tac = atts[6].Installed
+
+    if muzz or barr == "stub" or barr == "default" then
+        vm:SetBodygroup(7,2)
+    elseif barr == "short" then
+        vm:SetBodygroup(7,1)
+    elseif barr == "long" then
+        vm:SetBodygroup(7,0)
+    end
+
+    if !tac then
+       vm:SetBodygroup(6,0)
+    end
+end
+
 SWEP.Attachments = {
     {
         PrintName = "Optic",

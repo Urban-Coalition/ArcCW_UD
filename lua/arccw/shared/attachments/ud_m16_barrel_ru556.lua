@@ -1,12 +1,12 @@
 att.PrintName = "10\" RU556 Barrel"
 
 att.Icon = Material("entities/att/acwatt_ud_m16_barrel_ru556.png", "smooth mips")
-att.Description = "Handguard from the RU556 line of AMCAR accessories, featuring a unique barrel shroud. Funcitonally identical to the commando barrel."
+att.Description = "Handguard from the RU556 line of AMCAR accessories, featuring a unique barrel shroud. The thin aluminum frame has extremely low weight."
 
 if GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "10\" M-LOK® Barrel"
+    att.PrintName = "10\" M-LOK Barrel"
     att.AbbrevName = "10\" M-LOK Barrel"
-    att.Description = "Short handguard from the M-LOK line of AR-15 accessories, featuring a unique barrel shroud. Funcitonally identical to the commando barrel."
+    att.Description = "Short handguard from the M-LOK line of AR-15 accessories, featuring a unique barrel shroud. The thin aluminum frame has extremely low weight."
 end
 
 att.Desc_Pros = {
@@ -19,17 +19,17 @@ att.Desc_Neutrals = {
 att.Slot = "ud_m16_barrel"
 
 att.AutoStats = true
--- needs balancing
-att.Mult_SightTime = 0.85
-att.Mult_SpeedMult = 1.025
-att.Mult_SightedSpeedMult = 1.1
-att.Mult_HipDispersion = 0.7
+
+att.Mult_SightTime = 0.75
+att.Mult_SpeedMult = 1.05
+att.Mult_SightedSpeedMult = 1.2
+att.Mult_HipDispersion = 0.8
 
 att.Mult_RPM = 1.15
-att.Mult_Recoil = 1.5
+att.Mult_Recoil = 1.75
 att.Mult_AccuracyMOA = 2
 att.Mult_Range = 0.5
-att.Mult_Sway = 0.75
+att.Mult_Sway = 0.7
 
 att.Add_BarrelLength = -6
 att.Mult_PhysBulletMuzzleVelocity = 0.729167

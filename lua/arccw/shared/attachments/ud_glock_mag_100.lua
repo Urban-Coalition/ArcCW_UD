@@ -19,7 +19,7 @@ att.AutoStats = true
 
 att.Mult_SpeedMult = 0.95
 att.Mult_SightTime = 1.2
-att.Mult_ReloadTime = 1.25
+att.Mult_ReloadTime = 1.5
 att.Override_ClipSize = 100
 
 att.Mult_HipDispersion = 1.5

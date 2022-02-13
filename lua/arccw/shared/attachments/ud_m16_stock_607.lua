@@ -38,6 +38,7 @@ att.ToggleStats = {
         Mult_ShootSpeedMult = 1.05,
         Mult_HipDispersion = 1.2,
         Add_BarrelLength = -4,
+        Override_ActivePos = Vector(0.33, -1, 1),
     },
     {
         PrintName = "Extended",

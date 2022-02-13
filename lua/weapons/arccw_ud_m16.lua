@@ -382,8 +382,9 @@ SWEP.Hook_NameChange = function(wep, name)
                 end
             else
                 alt = "4"
+                post = " Carbine"
             end
-            post = " Carbine"
+            --post = " Carbine"
             wep.Trivia_Desc = m4Desc
         -------------------------------
         -- Auto/Semi Variants

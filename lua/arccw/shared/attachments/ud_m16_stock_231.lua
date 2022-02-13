@@ -1,5 +1,5 @@
 att.PrintName = "AMCAR 231 Wire Stock"
-att.AbbrevName = "M231 Wire Stock"
+att.AbbrevName = "Wire Stock"
 
 if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "M16 M231 Wire Stock"
@@ -42,6 +42,7 @@ att.ToggleStats = {
         Mult_HipDispersion = 0.75,
         Mult_MoveDispersion = 0.75,
         Mult_RecoilSide = 2,
+        Override_ActivePos = Vector(0.33, -1, 1),
     },
     --[[] -- we already have a buffer tube attachment
     {

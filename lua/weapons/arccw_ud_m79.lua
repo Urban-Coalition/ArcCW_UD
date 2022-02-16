@@ -113,7 +113,7 @@ SWEP.ProceduralIronFire = false
 
 -- NPC --
 
-SWEP.NPCWeaponType = "weapon_shotgun"
+SWEP.NPCWeaponType = "weapon_rpg"
 SWEP.NPCWeight = 210
 
 -- Accuracy --

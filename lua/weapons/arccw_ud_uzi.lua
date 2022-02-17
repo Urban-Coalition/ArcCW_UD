@@ -648,7 +648,8 @@ SWEP.Attachments = {
             vpos = Vector(-0.2, 2.4, 8),
             vang = Angle(90, 0, -90),
         },
-        InstalledEles = {"ud_uzi_rail_fg"}
+        InstalledEles = {"ud_uzi_rail_fg"},
+        ExcludeFlags = {"micro"}
     },
     {
         PrintName = "Tactical",

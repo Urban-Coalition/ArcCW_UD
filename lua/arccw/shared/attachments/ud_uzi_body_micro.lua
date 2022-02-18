@@ -10,7 +10,8 @@ att.Description = "Extremely compact frame that turns this sub-machine gun into 
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
-    "uc.nostocks"
+    "uc.nostocks",
+    "uc.noubs"
 }
 att.Desc_Neutrals = {
 }

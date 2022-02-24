@@ -10,10 +10,11 @@
 	"$blendTintByBaseAlpha" "1"
 	"$phong" 		"1"
 	"$phongexponenttexture"	"models\weapons\arccw\ud_m16\magpul_rearsight_exp"
-	"$phongboost" "4"
+	"$phongboost" "20"
+	"$phongexponent"	        "10"
 	"$phongalbedotint" 			"1"
 	"$phongfresnelranges" "[.6 1 2]"
 	"$envmap" "env_cubemap"
-	"$envmaptint" "[.015 .015 .015]"
+	"$envmaptint" "[.005 .005 .005]"
 	"$nocull" "1"
 }

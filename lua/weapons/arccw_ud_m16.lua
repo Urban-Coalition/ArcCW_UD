@@ -582,7 +582,7 @@ SWEP.AttachmentElements = {
     ["mount_11"] = {
         AttPosMods = {
             [6] = {
-                vpos = Vector(1, 0, 17.9),
+                vpos = Vector(1, -0.1, 17.9),
                 vang = Angle(90, 0, 0),
             },
         },
@@ -623,7 +623,7 @@ SWEP.AttachmentElements = {
                 vang = Angle(90, 0, -90),
             },
             [6] = {
-                vpos = Vector(1, 0, 17.9),
+                vpos = Vector(1.15, 0, 17.9),
                 vang = Angle(90, 0, 0),
             },
         }
@@ -639,7 +639,7 @@ SWEP.AttachmentElements = {
                 vang = Angle(90, 0, -90),
             },
             [6] = {
-                vpos = Vector(1.1, 0, 20),
+                vpos = Vector(1.41, -.1, 20),
                 vang = Angle(90, 0, 0),
             },
         }
@@ -654,7 +654,7 @@ SWEP.AttachmentElements = {
                 vang = Angle(90, 0, -90),
             },
             [6] = {
-                vpos = Vector(-1.154, -.2, 14),
+                vpos = Vector(-1.41, -.2, 14),
                 vang = Angle(90, 0, 180),
             },
         },
@@ -717,7 +717,7 @@ SWEP.AttachmentElements = {
                 vang = Angle(90, 0, -90),
             },
             [6] = { -- also has no rail
-                vpos = Vector(0, 0.8, 22),
+                vpos = Vector(0, 0.9, 22.2),
                 vang = Angle(90, 0, -90),
             },
         }
@@ -752,7 +752,7 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = { -- no rail, just pretend it's mounted to something
             [6] = {
-                vpos = Vector(0, 0.5, 17.5),
+                vpos = Vector(0, 0.7, 17.5),
                 vang = Angle(90, 0, -90),
             },
         }

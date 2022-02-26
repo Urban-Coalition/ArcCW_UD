@@ -1279,7 +1279,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     -- Gas block
     if has_tag(hg, BTAG_NOFS) then
         vm:SetBodygroup(6, 5)
-    elseif wep.Attachments[1].Installed and !retro and (!fs and flip == 0) then
+    elseif wep.Attachments[1].Installed and !retro and !fs then
         -- this is handled after elements sets bodygroup so we can do this
         vm:SetBodygroup(6, (vm:GetBodygroup(6) or 0) + 1)
     end

@@ -267,7 +267,6 @@ local CAL_556 = 0
 local CAL_9MM = 1
 local CAL_BLK = 2
 local CAL_BEO = 3
-local CAL_12G = 4
 
 local receiver_lookup = {
     ["default"]     = {FCG_3BST, CAL_556},
@@ -278,7 +277,6 @@ local receiver_lookup = {
     ["300blk"]      = {FCG_AUTO, CAL_BLK},
     ["9mm"]         = {FCG_AUTO, CAL_9MM},
 
-    ["usas"]        = {FCG_SEMI, CAL_12G},
     ["50beo"]       = {FCG_SEMI, CAL_BEO},
     ["semi"]        = {FCG_SEMI, CAL_556},
 
@@ -347,9 +345,6 @@ SWEP.Hook_NameChange = function(wep, name)
             alt = "-15"
             post = " .300 BLK"
             wep.Trivia_Desc = "Aftermarket automatic variant of the M16 rifle. The .300 Blackout cartridge has a ballistic performance more akin to the 7.62x39mm Soviet cartridge, with a similarly sized projectile but shorter effective range."
-        elseif r_cal == CAL_12G then
-            model = "USAS"
-            alt = "-12"
         -------------------------------
         -- Bolt/Semi Variants
         -------------------------------
@@ -494,13 +489,10 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 2, bg = 5}},
     },
     ["ud_m16_9mm_mag_32"] = {
-        VMBodygroups = {{ind = 2, bg = 8}},
-    },
-    ["ud_m16_usas_mag_20"] = {
-        VMBodygroups = {{ind = 2, bg = 7}},
+        VMBodygroups = {{ind = 2, bg = 6}},
     },
     ["ud_m16_mag_50beo"] = {
-        VMBodygroups = {{ind = 2, bg = 10}},
+        VMBodygroups = {{ind = 2, bg = 8}},
     },
 
     ["upper_flat"] = {
@@ -514,45 +506,45 @@ SWEP.AttachmentElements = {
     },
     ["upper_classic"] = {
         VMBodygroups = {
-            {ind = 1, bg = 5},
+            {ind = 1, bg = 3},
         },
     },
 
     ["stock_231_ex"] = {
-        VMBodygroups = {{ind = 7, bg = 2}},
+        VMBodygroups = {{ind = 7, bg = 1}},
     },
     ["stock_231_in"] = {
-        VMBodygroups = {{ind = 7, bg = 3}},
+        VMBodygroups = {{ind = 7, bg = 2}},
     },
     ["stock_231_tube"] = {
-        VMBodygroups = {{ind = 7, bg = 4}},
+        VMBodygroups = {{ind = 7, bg = 3}},
     },
     ["stock_607_ex"] = {
-        VMBodygroups = {{ind = 7, bg = 5}},
+        VMBodygroups = {{ind = 7, bg = 4}},
     },
     ["stock_607_in"] = {
-        VMBodygroups = {{ind = 7, bg = 6}},
+        VMBodygroups = {{ind = 7, bg = 5}},
     },
     ["stock_608"] = {
-        VMBodygroups = {{ind = 7, bg = 7}},
+        VMBodygroups = {{ind = 7, bg = 6}},
     },
     ["stock_carbine_ex"] = {
-        VMBodygroups = {{ind = 7, bg = 8}},
+        VMBodygroups = {{ind = 7, bg = 7}},
     },
     ["stock_carbine_in"] = {
-        VMBodygroups = {{ind = 7, bg = 9}},
+        VMBodygroups = {{ind = 7, bg = 8}},
     },
     ["stock_wood"] = {
-        VMBodygroups = {{ind = 7, bg = 10}},
+        VMBodygroups = {{ind = 7, bg = 9}},
     },
     ["stock_adar"] = {
         VMBodygroups = {
-            {ind = 7, bg = 11},
+            {ind = 7, bg = 10},
             {ind = 8, bg = 4}
         },
     },
     ["stock_ru556"] = {
-        VMBodygroups = {{ind = 7, bg = 12}},
+        VMBodygroups = {{ind = 7, bg = 11}},
     },
     ["grip_ergo"] = {
         VMBodygroups = {{ind = 8, bg = 1}},
@@ -823,27 +815,6 @@ SWEP.AttachmentElements = {
             {ind = 5, bg = 0},
         }
     },
-    ["hg_usas"] = {
-        VMBodygroups = {
-            {ind = 0, bg = 1},
-            {ind = 1, bg = 2},
-            {ind = 4, bg = 7},
-            {ind = 5, bg = 1},
-            {ind = 2, bg = 6},
-        },
-        AttPosMods = {
-            --[[
-            [1] = {
-                vpos = Vector(0, -4, 3),
-                vang = Angle(90, 0, -90),
-            },
-            ]]
-            [6] = {
-                vpos = Vector(0, 0.8, 20),
-                vang = Angle(90, 0, -90),
-            },
-        }
-    },
 }
 
 -- Animations --
@@ -903,19 +874,6 @@ SWEP.Animations = {
     ["fire_empty"] = {
         Source = "fire_empty",
         Time = 13 / 30,
-        ShellEjectAt = 0.01,
-        SoundTable = {
-            {s = path .. "mech_last.ogg", t = 0}, -- Temporary
-        },
-    },
-    ["fire_usas"] = {
-        Source = "fire_usas",
-        Time = 20 / 30,
-        ShellEjectAt = 0.01,
-    },
-    ["fire_empty_usas"] = {
-        Source = "fire_empty_usas",
-        Time = 20 / 30,
         ShellEjectAt = 0.01,
         SoundTable = {
             {s = path .. "mech_last.ogg", t = 0}, -- Temporary
@@ -1284,63 +1242,14 @@ SWEP.Animations = {
             {s = common .. "shoulder.ogg", t = 2.15},
         },
     },
-
-    -- 20 USAS Reloads --
-
-    ["reload_usas_20"] = {
-        Source = "reload_empty_usas_20",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Time = 71 / 30,
-        MinProgress = 2.5,
-        LastClip1OutTime = 0.7,
-        LHIK = true,
-        LHIKIn = 0.4,
-        LHIKEaseIn = 0.4,
-        LHIKEaseOut = 0.15,
-        LHIKOut = 0.4,
-        SoundTable = {
-            {s = rottle, t = 0.0},
-            {s = path .. "magout.ogg", 	 t = 0.2},
-            {s = rottle, t = 0.75},
-            {s = path .. "magin.ogg",    t = 1.05},
-            {s = rottle, t = 1.75},
-            {s = path .. "usas_chback.ogg",   t = 1.9},
-            {s = common .. "cloth_4.ogg",  t = 2.0},
-            {s = path .. "usas_chamber.ogg",  t = 2.2},
-            {s = common .. "shoulder.ogg", t = 2.6},
-        },
-    },
-    ["reload_empty_usas_20"] = {
-        Source = "reload_empty_usas_20",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Time = 86 / 30,
-        MinProgress = 2.5,
-        LastClip1OutTime = 0.7,
-        LHIK = true,
-        LHIKIn = 0.4,
-        LHIKEaseIn = 0.4,
-        LHIKEaseOut = 0.15,
-        LHIKOut = 0.4,
-        SoundTable = {
-            {s = rottle, t = 0.0},
-            {s = path .. "magout.ogg", 	 t = 0.2},
-            {s = rottle, t = 0.75},
-            {s = path .. "magin.ogg",    t = 1.05},
-            {s = rottle, t = 1.75},
-            {s = path .. "usas_chback.ogg",   t = 1.9},
-            {s = common .. "cloth_4.ogg",  t = 2.0},
-            {s = path .. "usas_chamber.ogg",  t = 2.14},
-            {s = common .. "shoulder.ogg", t = 2.55},
-        },
-    },
 }
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     if !IsValid(vm) then return end
-    local flip = wep:GetBuff_Override("M16Sights") or 0
     local retro = wep:GetBuff_Override("TopMount")
     local taclaser = wep:GetBuff_Override("TacLaserPos")
+    local muzz = wep.Attachments[3].Installed
 
     local fs = wep.Attachments[14].Installed == "ud_m16_charm_fs"
 
@@ -1355,7 +1264,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         else
             -- Flat rail
             vm:SetBodygroup(1, 1)
-            vm:SetBodygroup(3, 3)
+            vm:SetBodygroup(3, 2)
         end
     else
         -- no rails
@@ -1364,7 +1273,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
 
     -- .50 Beowulf magazines
     if wep.Attachments[4].Installed == "ud_m16_receiver_50beo" and !wep.Attachments[9].Installed then
-        vm:SetBodygroup(2, 10)
+        vm:SetBodygroup(2, 8)
     end
 
     -- Gas block
@@ -1379,13 +1288,26 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     vm:SetBodygroup(9, (wep.Attachments[5].Installed and !has_tag(hg, BTAG_RIS)) and 1 or 0)
 
     -- Flip-up sights
-    vm:SetBodygroup(12, flip)
+    --vm:SetBodygroup(12, flip)
 
     -- Tactical clamp
     if wep.Attachments[6].Installed and !has_tag(hg, BTAG_RIS) and !has_tag(hg, BTAG_NOMNT) and !taclaser then
         vm:SetBodygroup(10, len_clamp_lookup[blen])
     else
         vm:SetBodygroup(10, 0)
+    end
+
+    -- Default flash hider
+    if muzz then
+        vm:SetBodygroup(11,0)
+    else
+        if blen == BLEN_10 then
+            vm:SetBodygroup(11,3)
+        elseif blen == BLEN_14 then
+            vm:SetBodygroup(11,2)
+        else
+            vm:SetBodygroup(11,1)
+        end
     end
 end
 
@@ -1417,7 +1339,6 @@ SWEP.Attachments = {
             vpos = Vector(2.8, -4.2, -11.5),
             vang = Angle(90, 0, -90),
         },
-        ExcludeFlags = {"m16_usas"},
     },
     {
         PrintName = "Muzzle",
@@ -1430,7 +1351,7 @@ SWEP.Attachments = {
             vpos = Vector(0.025, -0.05, 30.85),
             vang = Angle(90, 0, -90),
         },
-        ExcludeFlags = {"sd", "m16_usas", "m16_stub"},
+        ExcludeFlags = {"sd", "m16_stub"},
     },
     {
         PrintName = "Receiver",
@@ -1481,7 +1402,6 @@ SWEP.Attachments = {
         Slot = {"ud_m16_stock"},
         DefaultAttName = "Full Stock",
         DefaultAttIcon = Material("entities/att/acwatt_ud_m16_stock_default.png", "smooth mips"),
-        ExcludeFlags = {"m16_usas"},
     },
     {
         PrintName = "Magazine",

@@ -20,4 +20,4 @@ att.Free = true
 att.IronSight = true
 att.Model = "models/weapons/arccw/atts/sig_rs.mdl"
 att.ModelOffset = Vector(-2,0,0)
-att.ModelScale = Vector(.88,.88,.88)
+att.ModelScale = Vector(.8,.8,.8)

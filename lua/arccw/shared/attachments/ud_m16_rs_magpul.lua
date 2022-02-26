@@ -16,4 +16,8 @@ att.ExcludeFlags = {"ud_m16_retro"}
 att.SortOrder = 1000
 att.Free = true
 
-att.M16Sights = 2
+--att.M16Sights = 2
+att.IronSight = true
+att.Model = "models/weapons/arccw/atts/magpul_rs.mdl"
+att.ModelOffset = Vector(-2,0,0)
+att.ModelScale = Vector(.88,.88,.88)

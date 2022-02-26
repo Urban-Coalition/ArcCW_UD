@@ -1250,6 +1250,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local retro = wep:GetBuff_Override("TopMount")
     local taclaser = wep:GetBuff_Override("TacLaserPos")
     local muzz = wep.Attachments[3].Installed
+    local rs = wep:GetBuff_Override("IronSight")
 
     local fs = wep.Attachments[14].Installed == "ud_m16_charm_fs"
 
@@ -1279,7 +1280,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     -- Gas block
     if has_tag(hg, BTAG_NOFS) then
         vm:SetBodygroup(6, 5)
-    elseif wep.Attachments[1].Installed and !retro and !fs then
+    elseif wep.Attachments[1].Installed and !retro and !fs and !rs then
         -- this is handled after elements sets bodygroup so we can do this
         vm:SetBodygroup(6, (vm:GetBodygroup(6) or 0) + 1)
     end

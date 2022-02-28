@@ -744,7 +744,7 @@ SWEP.Animations = {
         SoundTable = {
             {s = rattel, t = 0},
             {s = path .. "magrelease.ogg",    t = 0.15, c = ci},
-            {s = path .. "magout_partial.ogg",        t = 0.15, c = ci},
+            {s = path .. "magout_empty.ogg",        t = 0.15, c = ci},
             {s = path .. "magin_new.ogg",         t = 0.55, c = ci},
             {s = rattel, t = 0.5},
             {s = common .. "pistol_magdrop.ogg",  t = 0.65},
@@ -769,8 +769,8 @@ SWEP.Animations = {
         SoundTable = {
             {s = rattel, t = 0},
             {s = rattel, t = 0.3},
-            {s = path .. "magrelease.ogg",    t = 0.3, c = ci},
-            {s = path .. "magout_partial",        t = 0.3, c = ci},
+            {s = path .. "magrelease.ogg",    t = 0.2, c = ci},
+            {s = path .. "magout_partial.ogg",        t = 0.2, c = ci},
             {s = path .. "magin_new.ogg",         t = 0.4, c = ci},
             {s = rottle, t = 0.65},
         },
@@ -789,12 +789,12 @@ SWEP.Animations = {
         SoundTable = {
             {s = rattel, t = 0},
             {s = path .. "magrelease.ogg",    t = 0.15, c = ci},
-            {s = path .. "magout_empty.ogg",        t = 0.15, c = ci},
+            {s = path .. "magout_empty.ogg",        t = 0.1, c = ci},
             {s = path .. "magin_new.ogg",         t = 0.45, c = ci},
             {s = rattel, t = 0.5},
             {s = common .. "pistol_magdrop.ogg",  t = 0.65},
             {s = rottle, t = 0.9},
-            {s = path .. "chamber.ogg",      t = 1.45, c = ci},
+            {s = path .. "chamber.ogg",      t = 1.35, c = ci},
         },
     },
 

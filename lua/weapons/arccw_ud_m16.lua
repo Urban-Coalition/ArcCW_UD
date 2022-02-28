@@ -1247,13 +1247,13 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     if !IsValid(vm) then return end
     local retro = wep:GetBuff_Override("TopMount")
     local taclaser = wep:GetBuff_Override("TacLaserPos")
-    local muzz = wep.Attachments[3].Installed
     local rs = wep:GetBuff_Override("IronSight")
 
     local fs = wep.Attachments[14].Installed == "ud_m16_charm_fs"
 
     local hg = string.Replace(wep.Attachments[2].Installed or "default", "ud_m16_barrel_", "")
     local blen = (barrel_lookup[hg] or barrel_lookup["default"])[1]
+    local muzz = wep.Attachments[3].Installed or hg == "sd"
 
     -- Receiver top and front sight
     if wep.Attachments[1].Installed then

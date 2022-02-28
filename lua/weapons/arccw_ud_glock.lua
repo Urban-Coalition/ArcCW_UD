@@ -197,9 +197,9 @@ SWEP.WorldModelOffset = {
 local path = ")^weapons/arccw_ud/glock/"
 local path1 = ")^weapons/arccw_ud/uzi/"
 local common = ")^/arccw_uc/common/"
-SWEP.ShootSound = path .. "fire.ogg"
+SWEP.ShootSound = {path .. "fire-01.ogg", path .. "fire-02.ogg", path .. "fire-03.ogg", path .. "fire-04.ogg", path .. "fire-05.ogg", path .. "fire-06.ogg"} -- Maybe Not Placeholder
 SWEP.ShootSoundSilenced = path .. "fire_supp.ogg"
-SWEP.DistantShootSound = path .. "fire_dist.ogg"
+SWEP.DistantShootSound = {path .. "fire-dist-01.ogg", path .. "fire-dist-02.ogg", path .. "fire-dist-03.ogg", path .. "fire-dist-04.ogg", path .. "fire-dist-05.ogg", path .. "fire-dist-06.ogg"} -- Maybe Not Placeholder
 SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"
 SWEP.ShootDrySound = path .. "dryfire.ogg"
 
@@ -522,9 +522,7 @@ SWEP.Animations = {
         Source = "fire",
         Time = 16 / 30,
         ShellEjectAt = 0.03,
-        SoundTable = {
-            {s = path .. "mech.ogg", t = 0}, -- Not Temporary
-        },
+        SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0.03 }},
     },
     ["fire_empty"] = {
         Source = "fire_empty",
@@ -538,9 +536,7 @@ SWEP.Animations = {
         Source = "fire_stock",
         Time = 16 / 30,
         ShellEjectAt = 0.03,
-        SoundTable = {
-            {s = path .. "mech.ogg", t = 0}, -- Not Temporary
-        },
+        SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0.03 }},
     },
     ["fire_empty_stock"] = {
         Source = "fire_empty_stock",
@@ -561,9 +557,9 @@ SWEP.Animations = {
         ShellEjectAt = false,
         SoundTable = {
             {s = path .. "magtap.ogg",    t = 0.18, c = ci},
-            {s = path .. "slide_pull.ogg",  t = 0.5, c = ci},
+            {s = path .. "slide_pull_new.ogg",  t = 0.5, c = ci},
             {s = path .. "sliderel_deact.ogg",  t = 0.5, c = ci},
-            {s = path .. "slide_rel.ogg",        t = 0.7, c = ci},
+            {s = path .. "slide_rel_new.ogg",        t = 0.7, c = ci},
         },
         LHIK = true,
         LHIKIn = 0.2,
@@ -577,7 +573,7 @@ SWEP.Animations = {
         ShellEjectAt = false,
         SoundTable = {
             {s = path .. "magtap.ogg",    t = 0.18, c = ci},
-            {s = path .. "slide_pull.ogg",  t = 0.5, c = ci},
+            {s = path .. "slide_pull_new.ogg",  t = 0.5, c = ci},
             {s = path .. "sliderel_deact.ogg",  t = 0.5, c = ci},
         },
         LHIK = true,
@@ -592,9 +588,9 @@ SWEP.Animations = {
         ShellEjectAt = false,
         SoundTable = {
             {s = path .. "magtap.ogg",    t = 0.18, c = ci},
-            {s = path .. "slide_pull.ogg",  t = 0.5, c = ci},
+            {s = path .. "slide_pull_new.ogg",  t = 0.5, c = ci},
             {s = path .. "sliderel_deact.ogg",  t = 0.5, c = ci},
-            {s = path .. "slide_rel.ogg",        t = 0.7, c = ci},
+            {s = path .. "slide_rel_new.ogg",        t = 0.7, c = ci},
         },
         LHIK = true,
         LHIKIn = 0.2,
@@ -608,7 +604,7 @@ SWEP.Animations = {
         ShellEjectAt = false,
         SoundTable = {
             {s = path .. "magtap.ogg",    t = 0.18, c = ci},
-            {s = path .. "slide_pull.ogg",  t = 0.5, c = ci},
+            {s = path .. "slide_pull_new.ogg",  t = 0.5, c = ci},
             {s = path .. "sliderel_deact.ogg",  t = 0.5, c = ci},
         },
         LHIK = true,
@@ -623,9 +619,9 @@ SWEP.Animations = {
         ShellEjectAt = false,
         SoundTable = {
             {s = path .. "magtap.ogg",    t = 0.18, c = ci},
-            {s = path .. "slide_pull.ogg",  t = 0.5, c = ci},
+            {s = path .. "slide_pull_new.ogg",  t = 0.5, c = ci},
             {s = path .. "sliderel_deact.ogg",  t = 0.5, c = ci},
-            {s = path .. "slide_rel.ogg",        t = 0.7, c = ci},
+            {s = path .. "slide_rel_new.ogg",        t = 0.7, c = ci},
         },
         LHIK = true,
         LHIKIn = 0.2,
@@ -639,7 +635,7 @@ SWEP.Animations = {
         ShellEjectAt = false,
         SoundTable = {
             {s = path .. "magtap.ogg",    t = 0.18, c = ci},
-            {s = path .. "slide_pull.ogg",  t = 0.5, c = ci},
+            {s = path .. "slide_pull_new.ogg",  t = 0.5, c = ci},
             {s = path .. "sliderel_deact.ogg",  t = 0.5, c = ci},
         },
         LHIK = true,
@@ -654,9 +650,9 @@ SWEP.Animations = {
         ShellEjectAt = false,
         SoundTable = {
             {s = rattel, t = 0},
-            {s = path .. "slide_pull.ogg",  t = 0.5, c = ci},
+            {s = path .. "slide_pull_new.ogg",  t = 0.5, c = ci},
             {s = path .. "sliderel_deact.ogg",  t = 0.5, c = ci},
-            {s = path .. "slide_rel.ogg",        t = 0.8, c = ci},
+            {s = path .. "slide_rel_new.ogg",        t = 0.8, c = ci},
         },
         LHIK = true,
         LHIKIn = 0.2,
@@ -671,7 +667,7 @@ SWEP.Animations = {
         SoundTable = {
             {s = rattel, t = 0},
             {s = path .. "sliderel_deact.ogg",  t = 0.5, c = ci},
-            {s = path .. "slide_pull.ogg",  t = 0.5, c = ci},
+            {s = path .. "slide_pull_new.ogg",  t = 0.5, c = ci},
         },
         LHIK = true,
         LHIKIn = 0.2,
@@ -686,9 +682,9 @@ SWEP.Animations = {
         ShellEjectAt = 0.4,
         SoundTable = {
             {s = rottle, t = 0, v = 50},
-            {s = path .. "slide_pull.ogg",  t = 0.3, c = ci, v = 50},
+            {s = path .. "slide_pull_new.ogg",  t = 0.3, c = ci, v = 50},
             {s = path .. "sliderel_deact.ogg",  t = 0.3, c = ci, v = 50},
-            {s = path .. "slide_rel.ogg",        t = 0.55, c = ci, v = 50},
+            {s = path .. "slide_rel_new.ogg",        t = 0.55, c = ci, v = 50},
         },
         LHIK = true,
         LHIKIn = 0.2,
@@ -702,7 +698,7 @@ SWEP.Animations = {
         ShellEjectAt = 0.4,
         SoundTable = {
             {s = rottle, t = 0, v = 50},
-            {s = path .. "slide_pull.ogg",  t = 0.3, c = ci, v = 50},
+            {s = path .. "slide_pull_new.ogg",  t = 0.3, c = ci, v = 50},
             {s = path .. "sliderel_deact.ogg",  t = 0.3, c = ci, v = 50},
         },
         LHIK = true,
@@ -728,10 +724,9 @@ SWEP.Animations = {
         SoundTable = {
             {s = rottle, t = 0},
             {s = rattel, t = 0.3},
-            {s = path .. "magrelease.ogg",    t = 0.3, c = ci},
-            {s = path .. "magout.ogg",        t = 0.3, c = ci},
+            {s = path .. "magout_partial.ogg",        t = 0.3, c = ci},
             {s = rattel, t = 0.35},
-            {s = path .. "magin.ogg",         t = 0.4, c = ci},
+            {s = path .. "magin_new.ogg",         t = 0.5, c = ci},
             {s = rottle, t = 0.5},
         },
     },
@@ -749,8 +744,8 @@ SWEP.Animations = {
         SoundTable = {
             {s = rattel, t = 0},
             {s = path .. "magrelease.ogg",    t = 0.15, c = ci},
-            {s = path .. "magout.ogg",        t = 0.15, c = ci},
-            {s = path .. "magin.ogg",         t = 0.55, c = ci},
+            {s = path .. "magout_partial.ogg",        t = 0.15, c = ci},
+            {s = path .. "magin_new.ogg",         t = 0.55, c = ci},
             {s = rattel, t = 0.5},
             {s = common .. "pistol_magdrop.ogg",  t = 0.65},
             {s = rottle, t = 1.15},
@@ -775,8 +770,8 @@ SWEP.Animations = {
             {s = rattel, t = 0},
             {s = rattel, t = 0.3},
             {s = path .. "magrelease.ogg",    t = 0.3, c = ci},
-            {s = path .. "magout.ogg",        t = 0.3, c = ci},
-            {s = path .. "magin.ogg",         t = 0.4, c = ci},
+            {s = path .. "magout_partial",        t = 0.3, c = ci},
+            {s = path .. "magin_new.ogg",         t = 0.4, c = ci},
             {s = rottle, t = 0.65},
         },
     },
@@ -794,8 +789,8 @@ SWEP.Animations = {
         SoundTable = {
             {s = rattel, t = 0},
             {s = path .. "magrelease.ogg",    t = 0.15, c = ci},
-            {s = path .. "magout.ogg",        t = 0.15, c = ci},
-            {s = path .. "magin.ogg",         t = 0.45, c = ci},
+            {s = path .. "magout_empty.ogg",        t = 0.15, c = ci},
+            {s = path .. "magin_new.ogg",         t = 0.45, c = ci},
             {s = rattel, t = 0.5},
             {s = common .. "pistol_magdrop.ogg",  t = 0.65},
             {s = rottle, t = 0.9},
@@ -820,8 +815,8 @@ SWEP.Animations = {
             {s = rattel, t = 0},
             {s = rattel, t = 0.3},
             {s = path .. "magrelease.ogg",    t = 0.4, c = ci},
-            {s = path .. "magout.ogg",        t = 0.4, c = ci},
-            {s = path .. "magin.ogg",         t = 0.52, c = ci},
+            {s = path .. "magout_partial.ogg",        t = 0.4, c = ci},
+            {s = path .. "magin_new.ogg",         t = 0.52, c = ci},
             {s = rottle, t = 0.75},
         },
     },
@@ -839,8 +834,8 @@ SWEP.Animations = {
         SoundTable = {
             {s = rattel, t = 0},
             {s = path .. "magrelease.ogg",    t = 0.16, c = ci},
-            {s = path .. "magout.ogg",        t = 0.16, c = ci},
-            {s = path .. "magin.ogg",         t = 0.5, c = ci},
+            {s = path .. "magout_empty.ogg",        t = 0.16, c = ci},
+            {s = path .. "magin_new.ogg",         t = 0.5, c = ci},
             {s = rattel, t = 0.5},
             {s = common .. "pistol_magdrop.ogg",  t = 0.65},
             {s = rottle, t = 1.3},
@@ -865,10 +860,8 @@ SWEP.Animations = {
             {s = rattel, t = 0},
             {s = path .. "magrelease.ogg",    t = 0.3, c = ci},
             {s = path .. "magout.ogg",        t = 0.3, c = ci},
-            {s = path1 .. "magout.ogg",        t = 0.3, c = ci},
             {s = rattel, t = 0.7},
             {s = path .. "magin.ogg",         t = 0.7, c = ci},
-            {s = path1 .. "magin.ogg",         t = 0.7, c = ci},
             {s = rottle, t = 1.1},
         },
     },
@@ -887,10 +880,8 @@ SWEP.Animations = {
             {s = rattel, t = 0},
             {s = path .. "magrelease.ogg",      t = 0.12, c = ci},
             {s = path .. "magout.ogg",        t = 0.12, c = ci},
-            {s = path1 .. "magout.ogg",          t = 0.12, c = ci},
             {s = path .. "magin.ogg",           t = 0.5, c = ci},
-            {s = path1 .. "magin.ogg",           t = 0.5, c = ci},
-            {s = common .. "magdrop.ogg",  t = 0.65},
+            {s = common .. "magdrop.ogg",  t = 0.55},
             {s = rattel, t = 0.7},
             {s = path .. "sliderel_deact.ogg",  t = 1.35, c = ci},
             {s = path .. "chamber.ogg",        t = 1.6, c = ci},

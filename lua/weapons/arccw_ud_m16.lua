@@ -206,9 +206,11 @@ SWEP.WorldModelOffset = {
 
 local path = ")^weapons/arccw_ud/m16/"
 local common = ")^/arccw_uc/common/"
---SWEP.FirstShootSound = path .. "first.ogg"
-SWEP.ShootSound = {path .. "fire-01.ogg", path .. "fire-02.ogg", path .. "fire-03.ogg", path .. "fire-04.ogg", path .. "fire-05.ogg", path .. "fire-06.ogg"} -- Maybe Not Placeholder
-SWEP.DistantShootSound = {path .. "fire-dist-01.ogg", path .. "fire-dist-02.ogg", path .. "fire-dist-03.ogg", path .. "fire-dist-04.ogg", path .. "fire-dist-05.ogg", path .. "fire-dist-06.ogg"} -- Maybe Not Placeholder
+SWEP.FirstShootSound = path .. "first.ogg"
+--SWEP.ShootSound = {path .. "fire-01.ogg", path .. "fire-02.ogg", path .. "fire-03.ogg", path .. "fire-04.ogg", path .. "fire-05.ogg", path .. "fire-06.ogg"} -- Maybe Not Placeholder
+--SWEP.DistantShootSound = {path .. "fire-dist-01.ogg", path .. "fire-dist-02.ogg", path .. "fire-dist-03.ogg", path .. "fire-dist-04.ogg", path .. "fire-dist-05.ogg", path .. "fire-dist-06.ogg"} -- Maybe Not Placeholder
+SWEP.ShootSound = {path .. "auto1.ogg", path .. "auto2.ogg", path .. "auto3.ogg", path .. "auto4.ogg"}
+SWEP.DistantShootSound = path .. "dist.ogg"
 SWEP.ShootSoundSilenced = path .. "fire_sup.ogg"
 SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"
 SWEP.ShootDrySound = path .. "dryfire.ogg"

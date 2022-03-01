@@ -1,8 +1,8 @@
-att.PrintName = "Uzi 40-Round Extended Mag"
-att.AbbrevName = "40-Round Extended Mag"
+att.PrintName = "Uzi 22-Round Extended Mag"
+att.AbbrevName = "22-Round Extended Mag"
 
 if !GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "IAL-9 40-Round Extended Mag"
+    att.PrintName = "IAL-9 22-Round Extended Mag"
 end
 
 att.SortOrder = 40
@@ -22,7 +22,8 @@ att.Mult_SightTime = 1.08
 --att.Mult_Recoil = 0.9
 att.Mult_ReloadTime = 1.12
 --att.Mult_SpeedMult = 0.9
-att.Override_ClipSize = 40
+att.Override_ClipSize = 22
+att.Override_ClipSize_Priority = 2
 att.Mult_Sway = 1.15
 
 att.ActivateElements = {"ud_uzi_41_mag"}
@@ -31,5 +32,5 @@ att.Hook_SelectReloadAnimation = function(wep, anim)
     return anim .. "_41"
 end
 
-att.ExcludeFlags = {"uzi_45"}
+att.RequireFlags = {"uzi_45"}
 att.HideIfBlocked = true

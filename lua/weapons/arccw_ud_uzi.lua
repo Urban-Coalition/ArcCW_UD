@@ -22,7 +22,7 @@ SWEP.TracerWidth = 2
 
 -- Fake name --
 
-SWEP.PrintName = "STAP-9"
+SWEP.PrintName = "IAL-9"
 
 -- True name --
 
@@ -215,6 +215,12 @@ SWEP.AttachmentElements = {
     ["ud_uzi_mag_100"] = {
         VMBodygroups = {{ind = 2, bg = 3}},
     },
+    ["ud_uzi_mag_45_10"] = {
+        VMBodygroups = {{ind = 2, bg = 1}},
+    },
+    ["ud_uzi_mag_45_22"] = {
+        VMBodygroups = {{ind = 2, bg = 2}},
+    },
 
     ["ud_uzi_rail_optic"] = {
         VMBodygroups = {{ind = 4, bg = 2}},
@@ -243,7 +249,7 @@ SWEP.AttachmentElements = {
 
     ["ud_uzi_body_carbine"] = {
         VMBodygroups = {{ind = 1, bg = 1}},
-        NameChange = "CarP-9",
+        NameChange = "IAL-C9",
         TrueNameChange = "Uzi Carbine",
         AttPosMods = {
             [3] = {
@@ -253,7 +259,7 @@ SWEP.AttachmentElements = {
     },
     ["ud_uzi_body_mini"] = {
         VMBodygroups = {{ind = 1, bg = 2}},
-        NameChange = "MeP-9",
+        NameChange = "IAL-S9",
         TrueNameChange = "Mini Uzi",
         AttPosMods = {
             [3] = {
@@ -263,7 +269,7 @@ SWEP.AttachmentElements = {
     },
     ["ud_uzi_body_micro"] = {
         VMBodygroups = {{ind = 1, bg = 3},{ind = 4, bg = 1},{ind = 3, bg = 4}},
-        NameChange = "MiP-9G",
+        NameChange = "IAL-M9",
         TrueNameChange = "Micro Uzi",
         Override_IronSightStruct = {
             Pos = Vector(-2.869, 0, 2.3),
@@ -286,7 +292,7 @@ SWEP.AttachmentElements = {
     },
     ["ud_uzi_body_civvy"] = {
         VMBodygroups = {{ind = 1, bg = 4}},
-        NameChange = "CarP-9 Model GB",
+        NameChange = "IAL-C9 Model GB",
         TrueNameChange = "Uzi Action-B",
         AttPosMods = {
             [3] = {
@@ -629,6 +635,12 @@ SWEP.Attachments = {
             vpos = Vector(2.6, -3.7, -17.3),
             vang = Angle(90, 0, -90),
         },
+    },
+    {
+        PrintName = "Caliber",
+        DefaultAttName = "9x19mm Parabellum",
+        DefaultAttIcon = Material("entities/att/acwatt_ud_glock_caliber.png", "smooth mips"),
+        Slot = "ud_uzi_caliber",
     },
     {
         PrintName = "Muzzle",

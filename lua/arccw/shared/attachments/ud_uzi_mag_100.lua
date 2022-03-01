@@ -39,3 +39,6 @@ att.Mult_MalfunctionVariance = 1.5
 att.Hook_SelectReloadAnimation = function(wep, anim)
     return anim .. "_100"
 end
+
+att.ExcludeFlags = {"uzi_45"}
+att.HideIfBlocked = true

@@ -252,7 +252,7 @@ SWEP.AttachmentElements = {
         NameChange = "IAL-C9",
         TrueNameChange = "Uzi Carbine",
         AttPosMods = {
-            [3] = {
+            [4] = {
                 vpos = Vector(-0.2, 0.5, 20.8),
             },
         },
@@ -262,7 +262,7 @@ SWEP.AttachmentElements = {
         NameChange = "IAL-S9",
         TrueNameChange = "Mini Uzi",
         AttPosMods = {
-            [3] = {
+            [4] = {
                 vpos = Vector(-0.2, 0.5, 12.8),
             },
         },
@@ -281,10 +281,10 @@ SWEP.AttachmentElements = {
             [1] = {
                 vpos = Vector(-0.2, -1.2, -2.5),
             },
-            [3] = {
+            [4] = {
                 vpos = Vector(-0.2, 0.3, 7.8),
             },
-            [5] = {
+            [6] = {
                 vpos = Vector(0, 0, 7),
                 vang = Angle(90, 0, 0),
             },
@@ -295,7 +295,7 @@ SWEP.AttachmentElements = {
         NameChange = "IAL-C9 Model GB",
         TrueNameChange = "Uzi Action-B",
         AttPosMods = {
-            [3] = {
+            [4] = {
                 vpos = Vector(-0.2, 0.5, 23.8),
             },
         },

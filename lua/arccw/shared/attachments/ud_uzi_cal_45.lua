@@ -32,6 +32,12 @@ att.Hook_GetShootSound = function(wep, sound)
     end
 end
 
+att.Hook_GetDefaultAttName = function(wep, slot)
+    if slot == 8 then
+        return "16-Round Mag"
+    end
+end
+
 att.Hook_GetDistantShootSound = function(wep, distancesound)
     if distancesound == wep.DistantShootSoundSilenced then
         return false

@@ -1,0 +1,17 @@
+ // ESCAPE FROM TARKOV TACTICAL REALISM WITH HARDCORE GAMEPLAY auto converter  by darcu   mal0 mode
+"VertexLitGeneric"
+{
+	"$basetexture" "models/weapons/arccw/ud_m16/sight_rear_all_sig_flip_up_LOD0_diff"
+	"$bumpmap" "models/weapons/arccw/ud_m16/sight_rear_all_sig_flip_up_LOD0_nrm"
+	"$phongexponenttexture" "models/weapons/arccw/ud_m16/sight_rear_all_sig_flip_up_LOD0_gloss"
+	"$phong" "1"
+	"$phongboost" "10"
+	"$phongalbedotint" "1"
+	"$phongfresnelranges" "[1 5 22.5]"
+    "$envmap" "env_cubemap"
+    "$envmaptint" "[0.01 0.01 0.01]"
+    "$envmapfresnel" "0.1"
+    "$normalmapalphaenvmapmask" "0"
+    "$basemapalphaenvmapmask" "1"
+	"$color2" "[1.5 1.5 1.5]"
+}

@@ -905,7 +905,7 @@ SWEP.Attachments = {
         Slot = {"optic_lp"},
         Bone = "glock_slide",
         Offset = {
-            vpos = Vector(0, -0.7, -0.15),
+            vpos = Vector(0, -0.55, -0.15),
             vang = Angle(90, 0, -90),
         },
         CorrectivePos = Vector(0, 0, 0.05),

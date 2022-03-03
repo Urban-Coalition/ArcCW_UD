@@ -33,7 +33,7 @@ SWEP.TrueName = "Glock 17"
 SWEP.Trivia_Class = "Pistol"
 SWEP.Trivia_Desc = [[Handgun originally designed by a curtain rod manufacturer for the Austrian military. Its reliable and cost-effective polymer design has since made it one of the most popular and widely used pistols in the world, common in military, police and civilian use alike.
 
-No matter cop or crook, you're probably rocking the Glock.]]
+Great backup weapon due to its quick draw and sight times, but a relatively low damage output makes it a less than ideal primary.]]
 SWEP.Trivia_Manufacturer = "Next Generation Weapons Inc."
 SWEP.Trivia_Calibre = "9x19mm Parabellum"
 SWEP.Trivia_Mechanism = "Short Recoil"

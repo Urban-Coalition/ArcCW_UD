@@ -30,7 +30,9 @@ SWEP.TrueName = "Mini-14"
 -- Trivia --
 
 SWEP.Trivia_Class = "Semi-Automatic Rifle"
-SWEP.Trivia_Desc = "Autoloading rifle designed for better accuracy than competing models. Possesses a more classical operation compared to its contemporaries. Due to its appearance, it is sometimes exempted from gun control laws targeting \"Assault Weapons\" despite its identical ability to kill. This has helped it find success despite its higher cost and non-standard magazine well."
+SWEP.Trivia_Desc = [[Autoloading rifle designed for better accuracy than competing models. Due to its appearance, it is sometimes exempted from gun control laws targeting \"Assault Weapons\" despite its identical ability to kill. This has helped it find success despite its higher cost and non-standard magazine well.
+
+While it can perform well in close-quarters combat, its high accuracy excels in mid-range engagements.]]
 SWEP.Trivia_Manufacturer = "Rifles International"
 SWEP.Trivia_Calibre = "5.56x45mm NATO"
 SWEP.Trivia_Mechanism = "Gas-Operated Rotating Bolt"

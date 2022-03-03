@@ -27,7 +27,9 @@ SWEP.TrueName = "M4 Super 90"
 -- Trivia --
 
 SWEP.Trivia_Class = "Shotgun"
-SWEP.Trivia_Desc = "Semi-automatic shotgun designed for close-quarters urban warfare. Uses an innovative short-stroke gas system that eliminates complex mechanisms found on most gas-operated automatic weapons. Its main use is in destroying locked doors."
+SWEP.Trivia_Desc = [[Semi-automatic shotgun designed for close-quarters urban warfare. Uses an innovative short-stroke gas system that eliminates complex mechanisms found on most gas-operated automatic weapons. Its main use is in destroying locked doors.
+
+Devastating damage output, but control is required to avoid spending more time reloading than fighting.]]
 SWEP.Trivia_Manufacturer = "Iscapelli Armaments"
 SWEP.Trivia_Calibre = "12 Gauge"
 SWEP.Trivia_Mechanism = "Gas-Operated Rotating Bolt"

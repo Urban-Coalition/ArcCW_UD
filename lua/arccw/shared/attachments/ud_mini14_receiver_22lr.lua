@@ -33,7 +33,8 @@ att.Mult_ShootSpeedMult = 1.2
 att.Override_ClipSize = 15
 
 att.ActivateElements = {"ud_mini14_mag_15_22lr", "ud_mini14_receiver_22lr"}
-att.GivesFlags = {"mini14_22lr"}
+att.GivesFlags = {"mini14_22lr","cal_subsonic"}
+att.ExcludeFlags = {"powder_subsonic"}
 
 att.Override_Ammo = "plinking"
 att.Override_Trivia_Calibre = ".22 Long Rifle"

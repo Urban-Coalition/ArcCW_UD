@@ -46,4 +46,5 @@ att.Hook_GetDistantShootSound = function(wep, distancesound)
     end
 end
 
-att.GivesFlags = {"uzi_45"}
+att.GivesFlags = {"uzi_45","cal_subsonic"}
+att.ExcludeFlags = {"powder_subsonic"}

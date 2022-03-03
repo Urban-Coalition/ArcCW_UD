@@ -67,6 +67,5 @@ att.Hook_GetDistantShootSound = function(wep, distancesound)
     if distancesound == wep.DistantShootSound then return path .. "fire_dist.ogg" end
 end
 
-att.ExcludeFlags = {
-    "subsonic"
-    }
+att.GivesFlags = {"cal_subsonic"}
+att.ExcludeFlags = {"powder_subsonic"}

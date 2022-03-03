@@ -48,3 +48,7 @@ att.Hook_GetDistantShootSound = function(wep, distancesound)
     if distancesound == wep.DistantShootSound then
         return "weapons/arccw_ud/glock/fire_dist_22.ogg" end
 end
+
+att.ExcludesFlags = {
+    "subsonic"
+    }

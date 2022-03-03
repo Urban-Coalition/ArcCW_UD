@@ -11,6 +11,7 @@ att.Slot = "ud_uzi_stock"
 
 att.AutoStats = true
 att.Free = true
+att.IgnorePickX = true
 att.SortOrder = 2
 
 att.Mult_Recoil = 1.15

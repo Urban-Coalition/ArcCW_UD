@@ -11,6 +11,7 @@ att.Slot = "ud_1014_stock"
 
 att.AutoStats = true
 att.Free = true
+att.IgnorePickX = true
 
 att.Mult_Recoil = 1.1
 att.Mult_RecoilSide = 1.25

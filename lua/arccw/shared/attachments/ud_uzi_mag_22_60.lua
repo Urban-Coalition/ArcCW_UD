@@ -1,8 +1,8 @@
-att.PrintName = "Uzi 25-Round Extended Mag"
-att.AbbrevName = "25-Round Extended Mag"
+att.PrintName = "Uzi 60-Round Extended Mag"
+att.AbbrevName = "60-Round Extended Mag"
 
 if !GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "IAL-9 25-Round Extended Mag"
+    att.PrintName = "IAL-9 60-Round Extended Mag"
 end
 
 att.SortOrder = 40
@@ -21,7 +21,7 @@ att.AutoStats = true
 att.Mult_SightTime = 1.15
 att.Mult_ReloadTime = 1.15
 att.Mult_SpeedMult = 0.9
-att.Override_ClipSize = 25
+att.Override_ClipSize = 60
 att.Override_ClipSize_Priority = 2
 att.Mult_Sway = 1.15
 

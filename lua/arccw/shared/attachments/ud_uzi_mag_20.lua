@@ -30,5 +30,5 @@ att.Hook_SelectReloadAnimation = function(wep, anim)
     return anim .. "_16"
 end
 
-att.ExcludeFlags = {"uzi_45"}
+att.ExcludeFlags = {"uzi_45","uzi_22"}
 att.HideIfBlocked = true

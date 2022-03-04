@@ -1,8 +1,8 @@
-att.PrintName = "Uzi .22LR Conversion"
-att.AbbrevName = ".22LR"
+att.PrintName = "Uzi .22 LR Conversion"
+att.AbbrevName = ".22 LR"
 
 if !GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "IAL-9 .22LR Conversion"
+    att.PrintName = "IAL-9 .22 LR Conversion"
 end
 att.Slot = "ud_uzi_caliber"
 
@@ -41,5 +41,5 @@ att.Hook_GetDistantShootSound = function(wep, distancesound)
     end
 end
 
-att.GivesFlags = {"uzi_22"}
-att.GivesFlags = {"cal_subsonic","powder_subsonic"}
+att.GivesFlags = {"uzi_22","cal_subsonic"}
+att.ExcludeFlags = {"powder_subsonic"}

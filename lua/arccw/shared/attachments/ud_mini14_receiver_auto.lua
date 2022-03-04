@@ -17,6 +17,7 @@ att.Desc_Neutrals = {
 att.Slot = "ud_mini14_receiver"
 
 att.AutoStats = true
+att.Override_Trivia_Class = "Assault Rifle"
 
 att.Override_Firemodes = {
     {

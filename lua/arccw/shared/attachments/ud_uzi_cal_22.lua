@@ -23,7 +23,11 @@ att.Mult_Range = 0.75
 att.Mult_Recoil = 0.25
 att.Mult_RecoilSide = 0.25
 att.Mult_RPM = 1.25
-att.Override_ClipSize = 48
+att.Mult_ClipSize = 1.5
+
+att.Override_ShellModel = "models/weapons/arccw/uc_shells/22lr.mdl"
+att.Override_ShellScale = 1
+att.Override_ShellSounds = ArcCW.TinyShellSoundsTable
 
 att.Hook_GetShootSound = function(wep, sound)
     if wep:GetBuff_Override("Silencer") then

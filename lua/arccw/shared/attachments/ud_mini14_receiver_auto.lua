@@ -38,6 +38,8 @@ att.Override_Firemodes = {
     }
 }
 
+att.Override_Trivia_Class = "Assault Rifle"
+
 att.ActivateElements = {"ud_mini14_receiver_auto"}
 
 att.Mult_RPM = 750 / 540

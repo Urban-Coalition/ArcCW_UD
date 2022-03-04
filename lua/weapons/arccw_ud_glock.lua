@@ -1017,5 +1017,6 @@ SWEP.Attachments = {
         DefaultAttName = "Black Polymer",
         DefaultAttIcon = Material("entities/att/acwatt_ud_glock_material.png", "smooth mips"),
         Slot = "ud_glock_skin",
+        FreeSlot = true,
     },
 }

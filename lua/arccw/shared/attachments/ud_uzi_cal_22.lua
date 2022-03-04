@@ -23,9 +23,9 @@ att.Mult_Range = 0.75
 att.Mult_Recoil = 0.25
 att.Mult_RecoilSide = 0.25
 att.Mult_RPM = 1.25
-att.Override_ClipSize = 48
+att.Override_ClipSize = 19
 att.Override_ClipSize_Priority = 0.5
-att.BaseClipSize = 48
+att.BaseClipSize = 19
 
 att.Override_ShellModel = "models/weapons/arccw/uc_shells/22lr.mdl"
 att.Override_ShellScale = 1

@@ -226,6 +226,11 @@ SWEP.Animations = {
             {s = path .. "rack_2.ogg",  t = 0.2},
         },
     },
+    ["fix"] = {
+        Source = "fix",
+        Time = 77 / 30,
+        ShellEjectAt = 1.9, // zenit pls sound this :DDD
+    },
     ["sgreload_start"] = {
         Source = "sgreload_start",
         Time = 16 / 30,

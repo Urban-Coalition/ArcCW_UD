@@ -98,6 +98,14 @@ $sequence "cycle" {
 	fadeout 0
 }
 
+$sequence "fix" "newJam.smd" {
+	blend "sights" 0 1
+	fps 30
+	"ACT_VM_IDLE" 1
+	fadein 0.2
+	fadeout 0.5
+}
+
 $sequence "draw" "anims\draw.smd" {
 	fps 30
 	"ACT_VM_DRAW" 1

@@ -230,6 +230,17 @@ SWEP.Animations = {
         Source = "fix",
         Time = 77 / 30,
         ShellEjectAt = 1.9, // zenit pls sound this :DDD
+        SoundTable = {
+            {s = path .. "eject.ogg", t = 0, v = 25},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.5},
+            {s = common .. "pistol_rattle_2.ogg",  t = .8},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 1},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 1.5},
+            {s = path .. "eject.ogg",  t = 1.7},
+            {s = path .. "rack_1.ogg",  t = 1.825},
+            {s = path .. "eject.ogg",  t = 1.9},
+            {s = path .. "rack_2.ogg",  t = 2.025},
+        }
     },
     ["sgreload_start"] = {
         Source = "sgreload_start",

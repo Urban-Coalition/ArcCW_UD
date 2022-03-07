@@ -391,6 +391,10 @@ SWEP.AttachmentElements = {
     ["ud_870_stock_raptor"] = {
         VMBodygroups = {{ind = 4, bg = 3}},
     },
+
+    ["ud_870_skin_clean"] = {
+        VMSkin = 1
+    },
 }
 
 SWEP.Attachments = {
@@ -488,6 +492,12 @@ SWEP.Attachments = {
             vang = Angle(90, 0, -90),
         },
     },
+    {
+        PrintName = "Skin",
+        Slot = "ud_870_skin",
+        DefaultAttName = "Worn Nickel",
+        FreeSlot = true
+    }
 }
 
 local lookup_barrel = {

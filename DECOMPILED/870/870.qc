@@ -26,6 +26,7 @@ $bodygroup "4" {
 	studio "shotgun_stock_poly.smd"
 	studio "shotgun_stock_sawnoff.smd"
 	studio "shotgun_stock_polyshort.smd"
+	studio "shotgun_stock_polyshort_wood.smd"
 }
 
 $bodygroup "5" {
@@ -37,7 +38,7 @@ $bodygroup "6" {
 	studio "shotgun_slide_wood.smd"
 	studio "shotgun_slide_moe.smd"
 	studio "shotgun_slide_long.smd"
-	studio "shotgun_slide_long_wood.smd"
+	studio "shotgun_slide_poly.smd"
 }
 
 $bodygroup "7" {
@@ -55,6 +56,13 @@ $bodygroup "8" {
 $cdmaterials "models\weapons\arccw\ud_870"
 $cdmaterials "models\weapons\arccw\ud_m1014"
 $cdmaterials "models\weapons\arccw\ud_common"
+
+$texturegroup "skinfamilies"
+{
+	{ "870"}
+	{ "870_clean"}
+}
+
 
 $attachment "1" "870_flash" 0 0 0 rotate -90 0 0
 $attachment "2" "brass" 0 0 0 rotate -10 140 180
@@ -98,7 +106,7 @@ $sequence "cycle" {
 	fadeout 0
 }
 
-$sequence "fix" "newJam.smd" {
+$sequence "fix" "anims\newJam.smd" {
 	blend "sights" 0 1
 	fps 30
 	"ACT_VM_IDLE" 1

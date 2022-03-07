@@ -153,8 +153,8 @@ SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.99, -1, 2),
-     Ang = Angle(0, 0, 0),
+     Pos = Vector(-3.04, -1.5, 2),
+     Ang = Angle(0.1, 0, 0),
      Magnification = 1.1,
      SwitchToSound = "",
 }
@@ -334,10 +334,10 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 6, bg = 1}},
     },
     ["ud_870_slide_long"] = {
-        VMBodygroups = {{ind = 6, bg = 3}},
+        VMBodygroups = {{ind = 6, bg = 2}},
     },
     ["ud_870_slide_poly"] = {
-        VMBodygroups = {{ind = 6, bg = 2}},
+        VMBodygroups = {{ind = 6, bg = 3}},
     },
     ["ud_shotgun_rail_fg"] = {
         VMBodygroups = {{ind = 3, bg = 1}},
@@ -390,6 +390,10 @@ SWEP.AttachmentElements = {
     },
     ["ud_870_stock_raptor"] = {
         VMBodygroups = {{ind = 4, bg = 3}},
+    },
+
+    ["ud_870_skin_clean"] = {
+        VMSkin = 1
     },
 }
 
@@ -488,6 +492,12 @@ SWEP.Attachments = {
             vang = Angle(90, 0, -90),
         },
     },
+    {
+        PrintName = "Skin",
+        Slot = "ud_870_skin",
+        DefaultAttName = "Worn Nickel",
+        FreeSlot = true
+    }
 }
 
 local lookup_barrel = {

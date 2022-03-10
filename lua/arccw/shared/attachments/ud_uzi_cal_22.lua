@@ -25,7 +25,7 @@ att.Mult_RecoilSide = 0.25
 att.Mult_RPM = 1.25
 att.Override_ClipSize = 48
 att.Override_ClipSize_Priority = 0.5
-att.BaseClipSize = 48
+att.Mult_ClipSize = 1.2
 
 att.Override_ShellModel = "models/weapons/arccw/uc_shells/22lr.mdl"
 att.Override_ShellScale = 1
@@ -47,5 +47,5 @@ att.Hook_GetDistantShootSound = function(wep, distancesound)
     end
 end
 
-att.GivesFlags = {"uzi_22","cal_subsonic"}
+att.GivesFlags = {"cal_subsonic"}
 att.ExcludeFlags = {"powder_subsonic"}

@@ -18,13 +18,14 @@ att.Override_Ammo = "plinking"
 att.AutoStats = true
 
 att.Mult_Damage = 0.4
-att.Mult_RangeMin = 0.4
-att.Mult_Range = 0.75
+att.Mult_DamageMin = 0.4
+
 att.Mult_Recoil = 0.25
-att.Mult_RecoilSide = 0.25
-att.Mult_RPM = 1.25
-att.Override_ClipSize = 48
-att.Override_ClipSize_Priority = 0.5
+att.Mult_VisualRecoilMult = 0.25
+att.Mult_RPM = 1.5
+att.Mult_Penetration = 0.1
+att.Mult_ShootSpeedMult = 1.2
+
 att.Mult_ClipSize = 1.2
 
 att.Override_ShellModel = "models/weapons/arccw/uc_shells/22lr.mdl"

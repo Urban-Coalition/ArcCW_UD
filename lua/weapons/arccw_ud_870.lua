@@ -324,6 +324,8 @@ SWEP.BulletBones = {
     [0] = "870_shell1",
 }
 
+SWEP.DefaultSkin = 1
+
 -- Bodygroups --
 
 SWEP.AttachmentElements = {
@@ -392,8 +394,8 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 4, bg = 3}},
     },
 
-    ["ud_870_skin_clean"] = {
-        VMSkin = 1
+    ["ud_870_skin_dirty"] = {
+        VMSkin = 0
     },
 }
 
@@ -495,7 +497,7 @@ SWEP.Attachments = {
     {
         PrintName = "Skin",
         Slot = "ud_870_skin",
-        DefaultAttName = "Worn Nickel",
+        DefaultAttName = "Polished Steel",
         FreeSlot = true
     }
 }

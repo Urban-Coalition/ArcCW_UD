@@ -1,5 +1,5 @@
-att.PrintName = "Polished Steel"
+att.PrintName = "Worn Nickel"
 att.Icon = Material("", "smooth mips")
-att.Description = "Tidy up the imperfections."
+att.Description = "Been through a lot, yet ready for more."
 att.Desc_Neutrals = {"uc.cosmetic"}
 att.Slot = "ud_870_skin"

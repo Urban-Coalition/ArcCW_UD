@@ -980,6 +980,7 @@ SWEP.Animations = {
             {s = ratel, t = 0.25},
             {s = path .. "magout.ogg", 	 t = 0.335},
             {s = ratel, t = 0.5},
+            {s = common .. "magpouch.ogg", t = 0.7},
             {s = path .. "magin.ogg",    t = 1.05},
             {s = ratel, t = 1.1},
             {s = rottle,  t = 1.15},
@@ -1003,6 +1004,7 @@ SWEP.Animations = {
             {s = ratel, t = 0.25},
             {s = path .. "magout.ogg", 	 t = 0.335},
             {s = ratel, t = 0.5},
+            {s = common .. "magpouch.ogg", t = 0.6},
             {s = common .. "rifle_magdrop.ogg",  t = 0.8},
             {s = path .. "magin.ogg",    t = 1.05},
             {s = ratel, t = 1.1},
@@ -1030,6 +1032,7 @@ SWEP.Animations = {
         SoundTable = {
             {s = rottle,  t = 0.0},
             {s = path .. "magout.ogg", 	 t = 0.35},
+            {s = common .. "magpouch.ogg", t = 0.7},
             {s = rottle,  t = 0.75},
             {s = path .. "magin.ogg",    t = 0.95},
             {s = rottle,  t = 1.1},
@@ -1050,6 +1053,7 @@ SWEP.Animations = {
         SoundTable = {
             {s = rottle, t = 0.0},
             {s = path .. "magout.ogg", 	 t = 0.2},
+            {s = common .. "magpouch.ogg", t = 0.6},
             {s = rottle, t = 0.75},
             {s = common .. "rifle_magdrop.ogg",  t = 0.8},
             {s = path .. "magin.ogg",    t = 0.95},
@@ -1075,6 +1079,7 @@ SWEP.Animations = {
         SoundTable = {
             {s = rottle, t = 0.0},
             {s = path .. "magout.ogg", 	 t = 0.35},
+            {s = common .. "magpouch.ogg", t = 0.7},
             {s = rottle, t = 0.75},
             {s = path .. "magin.ogg",    t = 1.05},
             {s = rottle, t = 1.1},
@@ -1095,6 +1100,7 @@ SWEP.Animations = {
         SoundTable = {
             {s = rottle,  t = 0.0},
             {s = path .. "magout.ogg", 	 t = 0.35},
+            {s = common .. "magpouch.ogg", t = 0.6},
             {s = rottle,  t = 0.75},
             {s = common .. "rifle_magdrop.ogg",  t = 0.8},
             {s = path .. "magin.ogg",    t = 1.05},
@@ -1120,6 +1126,7 @@ SWEP.Animations = {
         SoundTable = {
             {s = rottle, t = 0.0},
             {s = path .. "magout.ogg", 	 t = 0.35},
+            {s = common .. "magpouch.ogg", t = 0.7},
             {s = rottle, t = 0.75},
             {s = path .. "magin.ogg",    t = 1.1},
             {s = rottle, t = 1.1},
@@ -1140,6 +1147,7 @@ SWEP.Animations = {
         SoundTable = {
             {s = rottle, t = 0.0},
             {s = path .. "magout.ogg", 	 t = 0.35},
+            {s = common .. "magpouch.ogg", t = 0.6},
             {s = rottle, t = 0.75},
             {s = common .. "rifle_magdrop.ogg",  t = 0.8},
             {s = path .. "magin.ogg",    t = 1.1},
@@ -1214,10 +1222,12 @@ SWEP.Animations = {
         LHIKOut = 0.5,
         SoundTable = {
             {s = rottle, t = 0.0},
+            {s = common .. "magpouch.ogg", t = 0.15},
             {s = "weapons/arccw_ud/uzi/" .. "magout.ogg", 	 t = 16 / 30},
             {s = rottle, t = 0.75},
             {s = "weapons/arccw_ud/uzi/" .. "magin.ogg",    t = 27 / 30},
             {s = rottle, t = 1.1},
+            {s = common .. "magpouchin.ogg", t = 1.55},
             {s = common .. "shoulder.ogg", t = 1.93},
         },
     },
@@ -1235,6 +1245,7 @@ SWEP.Animations = {
         SoundTable = {
             {s = rottle, t = 0.0},
             {s = "weapons/arccw_ud/uzi/" .. "magout.ogg", 	 t = 0.2},
+            {s = common .. "magpouch.ogg", t = 0.65},
             {s = rottle, t = 0.75},
             {s = "weapons/arccw_ud/uzi/" .. "magin.ogg",    t = 0.98},
             {s = rottle, t = 1.39},

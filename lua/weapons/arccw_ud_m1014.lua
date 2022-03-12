@@ -56,9 +56,10 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-7, 4.5, -8),
+    pos        =    Vector(-6.75, 4, -7.5),
     ang        =    Angle(0, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
+    scale = 1
 }
 
 -- Damage parameters --
@@ -297,7 +298,7 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 1, bg = 1}},
         AttPosMods = {
             [3] = {
-                vpos = Vector(-0.03, -0.75, 22.2),
+                vpos = Vector(-0.02, -0.785, 23.8),
             }
         },
     },
@@ -313,7 +314,7 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 1, bg = 2}},
         AttPosMods = {
             [3] = {
-                vpos = Vector(-0.03, -0.75, 22.2),
+                vpos = Vector(-0.02, -0.785, 32.5),
             }
         },
     },
@@ -371,7 +372,7 @@ SWEP.Attachments = {
         Slot = {"choke", "muzzle_shotgun"},
         Bone = "1014_parent",
         Offset = {
-            vpos = Vector(-0.03, -0.9, 31),
+            vpos = Vector(-0.02, -0.785, 30.2),
             vang = Angle(90, 0, -90),
         },
         ExcludeFlags = {"nomuzzle"}

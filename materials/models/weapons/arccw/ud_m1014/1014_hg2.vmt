@@ -1,0 +1,16 @@
+"VertexLitGeneric"
+{
+	"$basetexture"					"models\weapons\arccw\ud_m1014\1014_hg2"
+	"$bumpmap"					"models\weapons\arccw\ud_m1014\1014_hg2_n"
+
+	"$phong"	"1"
+	"$phongexponent"	"3"
+	"$phongalbedotint"	"1"
+	"$phongboost"	"0.5"
+	"$phongfresnelranges"	"[1 1 1]"
+        "$phongdisablehalflambert"  "1"
+
+        "$halflambert"                 "0"
+        "$nodecal"                     "0"
+        "$ambientocclusion"         "1"
+}

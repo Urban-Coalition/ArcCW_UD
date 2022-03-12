@@ -34,3 +34,5 @@ att.A_Hook_Add_SightsDispersion = function(wep, data)
         data.add = data.add + 50
     end
 end
+
+att.Ignore = true

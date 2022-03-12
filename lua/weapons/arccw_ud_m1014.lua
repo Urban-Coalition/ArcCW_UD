@@ -154,8 +154,8 @@ SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-3.025, 0, 1.8),
-     Ang = Angle(0, 0, 0),
+     Pos = Vector(-3.03, 0, 1.55),
+     Ang = Angle(0.4, 0.01, 0),
      Magnification = 1.1,
      SwitchToSound = "",
 }
@@ -293,9 +293,6 @@ SWEP.BulletBones = {
 -- Bodygroups --
 
 SWEP.AttachmentElements = {
-    ["ud_autoshotgun_rail_fg"] = {
-        VMBodygroups = {{ind = 3, bg = 1}},
-    },
     ["ud_autoshotgun_barrel_short"] = {
         VMBodygroups = {{ind = 1, bg = 1}},
         AttPosMods = {
@@ -313,7 +310,7 @@ SWEP.AttachmentElements = {
         },
     },
     ["ud_autoshotgun_barrel_sport"] = {
-        VMBodygroups = {{ind = 1, bg = 3}},
+        VMBodygroups = {{ind = 1, bg = 2}},
         AttPosMods = {
             [3] = {
                 vpos = Vector(-0.03, -0.75, 22.2),
@@ -321,16 +318,33 @@ SWEP.AttachmentElements = {
         },
     },
     ["ud_autoshotgun_tube_short"] = {
-        VMBodygroups = {{ind = 2, bg = 1}},
+        VMBodygroups = {
+            {ind = 2, bg = 1},
+            {ind = 4, bg = 1},
+        },
     },
     ["ud_autoshotgun_tube_long"] = {
         VMBodygroups = {{ind = 2, bg = 0}},
     },
+
     ["ud_autoshotgun_stock_in"] = {
-        VMBodygroups = {{ind = 4, bg = 1}},
+        VMBodygroups = {{ind = 3, bg = 1}},
     },
     ["ud_autoshotgun_stock_buffer"] = {
-        VMBodygroups = {{ind = 4, bg = 2}},
+        VMBodygroups = {{ind = 3, bg = 2}},
+    },
+    ["ud_autoshotgun_stock_sport"] = {
+        VMBodygroups = {
+            {ind = 3, bg = 3},
+            {ind = 6, bg = 1},
+        },
+    },
+
+    ["ud_m1014_handguard_sport"] = {
+        VMBodygroups = {{ind = 5, bg = 2}},
+    },
+    ["ud_autoshotgun_rail_fg"] = {
+        VMBodygroups = {{ind = 5, bg = 1}},
     },
 }
 
@@ -364,7 +378,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Underbarrel",
-        Slot = {"foregrip"},
+        Slot = {"foregrip","ud_1014_handguard"},
         Bone = "1014_parent",
         Offset = {
             vpos = Vector(0, 2, 12),

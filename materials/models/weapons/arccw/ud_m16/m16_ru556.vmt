@@ -15,18 +15,12 @@
 
 // phong (convar: mat_phong "bool")
 	"$phong"					"1" // bool -- phong enabler, have this on 1 if you have a central neural system
-	"$phongboost"				"2" // float -- phong intensity coefficient on top of normal map's alpha (aka phong mask)
+	"$phongboost"				"9" // float -- phong intensity coefficient on top of normal map's alpha (aka phong mask)
 	"$phongfresnelranges"		"[.6 1 2]" // vector -- phong fresnel ranges, default are [0 0.5 1]
 	"$phongalbedotint" 			"1" // bool -- enables basetexture tinting of the phong's color but masks it with phongexponent's green channel
-	"$phongexponent"	        "60"
-
-// rimlight (convar: mat_rimlight "bool")
-	"$rimlight"					"1" // bool -- rimlight enabler, doesn't have to be on, use if needed
-	"$rimmask"					"1" // bool -- rimlight masking through exponent's alpha channel (use alpha vtf format)
-	"$rimlightboost"			"0.4" // float -- rimlight intensity coefficient
-	"$rimlightexponent"			"20" // float -- rimlight exponent
+	"$phongexponent"	        "20"
 
 // envmap (convar: mat_specular "bool")
 	"$envmap"					"env_cubemap" // string -- path to envmap or envmap entity name
-	"$envmaptint"				"[ 0.001 0.001 0.001 ]" // vector -- rgb tinting of the envmap: all dimentions should be equal, ideally
+	"$envmaptint" "[.015 .015 .015]"// vector -- rgb tinting of the envmap: all dimentions should be equal, ideally
 }

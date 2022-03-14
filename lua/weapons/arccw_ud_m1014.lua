@@ -317,6 +317,11 @@ SWEP.AttachmentElements = {
                 vpos = Vector(-0.02, -0.785, 32.5),
             }
         },
+        Override_IronSightStruct = {
+            Pos = Vector(-3.035, 0, 1.516),
+            Ang = Angle(.9, -.015, 0),
+            Magnification = 1.1
+        },
     },
     ["ud_autoshotgun_tube_short"] = {
         VMBodygroups = {

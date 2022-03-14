@@ -15,6 +15,7 @@ att.ExcludeFlags = {"ud_m16_retro"}
 
 att.SortOrder = 1000
 att.Free = true
+att.IgnorePickX = true
 
 --att.M16Sights = 1
 att.IronSight = true

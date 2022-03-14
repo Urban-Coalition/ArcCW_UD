@@ -361,8 +361,12 @@ SWEP.Attachments = {
         Slot = {"optic_lp", "optic", "sniper_optic"},
         Bone = "1014_parent",
         Offset = {
-            vpos = Vector(0, -2, 5),
+            vpos = Vector(0, -2, 3.5),
             vang = Angle(90, 2, -90),
+        },
+        SlideAmount = {
+            vmin = Vector(0, -2, 2),
+            vmax = Vector(0, -2, 5)
         },
     },
     {

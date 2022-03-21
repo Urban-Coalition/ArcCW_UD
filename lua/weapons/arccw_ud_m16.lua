@@ -827,6 +827,23 @@ local rottle = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "clo
 local ratel = {common .. "rattle1.ogg", common .. "rattle2.ogg", common .. "rattle3.ogg"}
 
 SWEP.Animations = {
+    ["ready"] = {
+        Source = "fix",
+        Time = 45 / 30,
+        LHIK = true,
+        LHIKIn = 0.3,
+        LHIKEaseIn = 0.4,
+        LHIKEaseOut = 0.15,
+        LHIKOut = 0.4,
+        SoundTable = {
+            {s = common .. "raise.ogg", t = 0},
+            {s = common .. "rattle.ogg", t = 0.2},
+            {s = path .. "chback.ogg",   t = 0.15},
+            {s = common .. "cloth_4.ogg",  t = 0.5},
+            {s = path .. "chamber.ogg",  t = 0.5},
+        },
+        ProcDraw = true,
+    },
     ["idle"] = {
         Source = "idle",
     },

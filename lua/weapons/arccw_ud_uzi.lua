@@ -321,6 +321,24 @@ end
 SWEP.Hook_Think = ArcCW.UD.ADSReload
 
 SWEP.Animations = {
+    ["ready"] = {
+        Source = "fix",
+        Time = 40 / 30,
+        ShellEjectAt = false,
+        LHIK = true,
+        LHIKIn = 0.4,
+        LHIKEaseIn = 0.4,
+        LHIKEaseOut = 0.15,
+        LHIKOut = 0.4,
+        SoundTable = {
+            {s = common .. "raise.ogg", t = 0},
+            {s = common .. "rattle.ogg", t = 0.2},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.15},
+            {s = path .. "chback.ogg",         t = 0.3, c = ci},
+            {s = path .. "chforward.ogg",         t = 0.65, c = ci},
+        },
+        ProcDraw = true,
+    },
     ["idle"] = {
         Source = "idle",
     },

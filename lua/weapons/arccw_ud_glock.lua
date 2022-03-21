@@ -472,6 +472,25 @@ local ratel = {path .. "pistol_rattle_1.ogg", path .. "pistol_rattle_2.ogg", pat
 local rottle = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
 
 SWEP.Animations = {
+    ["ready"] = {
+        Source = "fix_100",
+        Time = 40 / 30,
+        ShellEjectAt = false,
+        SoundTable = {
+            {s = path .. "draw.ogg", t = 0}, -- Not Temporary
+            {s = common .. "raise.ogg", t = 0.05},
+            {s = rattel, t = 0},
+            {s = path .. "slide_pull_new.ogg",  t = 0.5, c = ci},
+            {s = path .. "sliderel_deact.ogg",  t = 0.5, c = ci},
+            {s = path .. "slide_rel_new.ogg",        t = 0.8, c = ci},
+        },
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKEaseIn = 0.1,
+        LHIKEaseOut = 0.1,
+        LHIKOut = 0.2,
+        ProcDraw = true,
+    },
     ["idle"] = {
         Source = "idle",
     },

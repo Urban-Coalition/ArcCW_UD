@@ -288,6 +288,24 @@ SWEP.AttachmentElements = {
 SWEP.Hook_Think = ArcCW.UD.ADSReload
 
 SWEP.Animations = {
+    ["ready"] = {
+        Source = "unjam",
+        Time = 40 / 30,
+        SoundTable = {
+            {s = common .. "raise.ogg", t = 0},
+            {s = common .. "rattle.ogg", t = 0.2},
+            {s = path .. "chback.ogg",  t = 0.25},
+            {s = path .. "chamber.ogg", t = 0.35},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.8},
+            {s = common .. "shoulder.ogg",  t = 1},
+        },
+        LHIK = true,
+        LHIKIn = 0.5,
+        LHIKEaseIn = 0.5,
+        LHIKEaseOut = 0.15,
+        LHIKOut = 0.5,
+        ProcDraw = true,
+    },
     ["idle"] = {
         Source = "idle",
     },
@@ -296,10 +314,12 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "draw",
+        SoundTable = ArcCW.UD.DrawSounds,
     },
     ["draw_empty"] = {
         Source = "draw_empty",
         Time = 12 / 30,
+        SoundTable = ArcCW.UD.DrawSounds,
     },
     ["holster"] = {
         Source = "holster",
@@ -308,6 +328,7 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0,
         LHIKOut = 0,
+        SoundTable = ArcCW.UD.HolsterSounds,
     },
     ["holster_empty"] = {
         Source = "holster_empty",
@@ -317,6 +338,7 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0,
         LHIKOut = 0,
+        SoundTable = ArcCW.UD.HolsterSounds,
     },
     ["fire"] = {
         Source = "fire",
@@ -348,6 +370,7 @@ SWEP.Animations = {
         LHIKEaseIn = 0.5,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.5,
+        ShellEjectAt = .35,
     },
     -- 20 Round Reloads --
 

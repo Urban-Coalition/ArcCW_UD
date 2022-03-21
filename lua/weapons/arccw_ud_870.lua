@@ -184,6 +184,22 @@ SWEP.ShootDrySound = path .. "dryfire.ogg"
 SWEP.Hook_Think = ArcCW.UD.ADSReload
 
 SWEP.Animations = {
+    ["ready"] = {
+        Source = "sgreload_finish_empty",
+        Time = 37 / 30,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKEaseOut = 1.2,
+        LHIKOut = 1.4,
+        SoundTable = {
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.5},
+            {s = path .. "rack_1.ogg",  t = 0.4},
+            {s = path .. "rack_2.ogg",  t = 0.6},
+            {s = common .. "shoulder.ogg",  t = 0.9},
+        },
+        ProcDraw = true,
+    },
     ["idle"] = {
         Source = "idle",
     },

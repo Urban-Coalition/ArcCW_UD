@@ -20,14 +20,17 @@ att.AutoStats = true
 
 att.Override_Trivia_Calibre = ".45 ACP"
 
-att.Mult_Damage = 1.25
+att.Mult_Damage = 1.5
+att.Mult_DamageMin = 0.88
 
 att.Mult_RangeMin = 0.5
 att.Mult_Recoil = 1.5
 att.Mult_RecoilSide = 1.5
-att.Mult_MalfunctionMean = 0.75
+att.Mult_MalfunctionMean = 0.6
 
 att.Mult_ClipSize = 0.76
+
+att.Mult_RPM = 0.7619
 
 
 att.Hook_GetShootSound = function(wep, sound)

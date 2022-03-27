@@ -7,7 +7,7 @@ end
 
 att.SortOrder = 50
 att.Icon = Material("entities/att/acwatt_ud_glock_caliber.png", "smooth mips")
-att.Description = "An old and smaller pistol caliber that is somewhat obsolete.\nHas lower recoil but also lower range and weaker stopping power."
+att.Description = "An old and smaller pistol caliber that is somewhat obsolete.\nHas lower recoil and reduced effective range."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
@@ -20,8 +20,7 @@ att.AutoStats = true
 
 att.Override_Trivia_Calibre = ".380 ACP"
 
-att.Mult_Range = 0.75
-att.Mult_Damage = 0.9
+att.Mult_Range = 0.8
 att.Mult_DamageMin = 0.9
 att.Mult_Recoil = 0.65
 

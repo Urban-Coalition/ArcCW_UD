@@ -64,8 +64,8 @@ SWEP.WorldModelOffset = {
 
 -- Damage parameters --
 
-SWEP.Damage = 20 -- 5 pellets to kill
-SWEP.DamageMin = 10 -- land 10 pellets to kill
+SWEP.Damage = 18 -- 6 pellets to kill
+SWEP.DamageMin = 10 -- 10 pellets to kill
 SWEP.Range = 40
 SWEP.RangeMin = 4
 SWEP.Num = 8

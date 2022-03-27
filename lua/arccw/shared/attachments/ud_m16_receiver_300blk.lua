@@ -27,8 +27,8 @@ att.Mult_RPM = 850 / 900
 att.Mult_HipDispersion = 1.2
 att.Mult_ShootSpeedMult = 0.8
 
-att.Mult_Damage = 1.118
-att.Mult_DamageMin = 0.6
+att.Mult_Damage = 1.17
+att.Mult_DamageMin = 0.75
 att.Mult_ShootVol = 105 / 120
 
 att.Mult_HeatDissipation = 1.5

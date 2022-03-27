@@ -63,7 +63,7 @@ SWEP.DefaultSkin = 0
 SWEP.Damage = 34 -- 3 shot kill
 SWEP.DamageMin = 20 -- 5 shot kill
 SWEP.RangeMin = 50
-SWEP.Range = 450 -- 4 shot until ~305m
+SWEP.Range = 400 -- 4 shot until ~275m
 
 SWEP.Penetration = 12
 SWEP.DamageType = DMG_BULLET

@@ -25,4 +25,4 @@ att.SortOrder = 998
 att.TacLaserPos = true
 att.RequireFlags = {"tac"}
 
-att.Ignore = true
+--att.Ignore = true

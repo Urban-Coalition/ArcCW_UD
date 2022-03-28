@@ -1,7 +1,7 @@
 att.PrintName = "KKM Precision Compensator"
 att.AbbrevName = "KKM Compensator"
 att.Icon = Material("entities/att/kkm.png", "mips smooth")
-att.Description = "write here something about roland special idk A muzzle device that redirects propellant gasses to the sides to reduce the recoil of the gun."
+att.Description = "Weapon-exclusive compensator that redirects propellant gasses to reduce weapon recoil.\nHighly effective, but reduces weapon cyclic rate."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
@@ -20,12 +20,13 @@ att.OffsetAng = Angle(0, 0, 0)
 
 att.IsMuzzleDevice = true
 
-att.Mult_Recoil = .75
-att.Mult_RecoilSide = .8
+att.Mult_Recoil = 0.7
+att.Mult_RecoilSide = 0.8
 
-att.Add_BarrelLength = 1.5
+att.Add_BarrelLength = 2
 att.Mult_SightTime = 1.1
-att.Mult_Sway = 1.2
+att.Mult_Sway = 1.15
+att.Mult_RPM = 0.85
 att.Mult_ShootVol = 1.2
 
 att.AttachSound = "arccw_uc/common/gunsmith/suppressor_thread.ogg"

@@ -151,6 +151,9 @@ SWEP.ExtraSightDist = 7
 SWEP.HolsterPos = Vector(-0.5, -2, -1)
 SWEP.HolsterAng = Angle(3.5, 7, -20)
 
+SWEP.HolsterPos = Vector(-1, -2, 3)
+SWEP.HolsterAng = Angle(-15.5, 2, -7)
+
 SWEP.HoldtypeHolstered = "normal"
 SWEP.HoldtypeActive = "pistol"
 SWEP.HoldtypeSights = "revolver"

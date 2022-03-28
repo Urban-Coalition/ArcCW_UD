@@ -29,6 +29,7 @@ att.Mult_ShootSpeedMult = 0.8
 
 att.Mult_Damage = 1.17
 att.Mult_DamageMin = 0.75
+att.Mult_Penetration = 10 / 14
 att.Mult_ShootVol = 105 / 120
 
 att.Mult_HeatDissipation = 1.5

@@ -22,6 +22,7 @@ att.Override_Trivia_Calibre = ".45 ACP"
 
 att.Mult_Damage = 1.5
 att.Mult_DamageMin = 0.88
+att.Mult_Penetration = 9 / 6
 
 att.Mult_RangeMin = 0.5
 att.Mult_Recoil = 1.5

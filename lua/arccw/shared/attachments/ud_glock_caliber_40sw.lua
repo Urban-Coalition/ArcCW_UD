@@ -23,6 +23,7 @@ att.Override_Trivia_Calibre = ".40 S&W"
 att.Mult_DamageMin = 1.35
 att.Mult_RangeMin = 0.5
 att.Mult_Recoil = 1.15
+att.Mult_Penetration = 8 / 6
 
 att.Mult_ClipSize = .9
 att.Override_ShellModel = "models/weapons/arccw/uc_shells/40sw.mdl"

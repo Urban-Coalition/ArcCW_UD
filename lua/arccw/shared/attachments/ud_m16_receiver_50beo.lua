@@ -31,6 +31,7 @@ att.Mult_VisualRecoilMult = 2
 att.Mult_RPM = 0.5
 att.Mult_Range = 0.25
 att.Mult_ShootVol = 1.2
+att.Mult_Penetration = 12 / 14
 
 att.Mult_SightTime = 0.91
 att.Mult_ReloadTime = 0.87

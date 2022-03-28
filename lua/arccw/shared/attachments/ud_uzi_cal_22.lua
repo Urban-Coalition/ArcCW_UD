@@ -17,13 +17,14 @@ att.Override_Ammo = "plinking"
 
 att.AutoStats = true
 
-att.Mult_Damage = 0.4
-att.Mult_DamageMin = 0.4
+att.Mult_Damage = 12 / 30
+att.Mult_DamageMin = 7 / 17
+att.Mult_Penetration = 3 / 6
+
 
 att.Mult_Recoil = 0.25
 att.Mult_VisualRecoilMult = 0.25
 att.Mult_RPM = 1.5
-att.Mult_Penetration = 0.1
 att.Mult_ShootSpeedMult = 1.2
 
 att.Mult_ClipSize = 1.2

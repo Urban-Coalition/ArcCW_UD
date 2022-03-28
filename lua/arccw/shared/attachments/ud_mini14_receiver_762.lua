@@ -30,6 +30,7 @@ att.Mult_HipDispersion = 1.5
 att.Mult_Damage = 1.5
 att.Mult_DamageMin = 1.5
 att.Mult_Range = 2
+att.Mult_Penetration = 16 / 14
 
 att.Override_Malfunction = true
 att.Mult_MalfunctionVariance = 1.5

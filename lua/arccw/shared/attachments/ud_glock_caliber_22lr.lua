@@ -23,6 +23,7 @@ att.Override_Ammo = "plinking"
 
 att.Mult_Damage = 0.4
 att.Mult_DamageMin = 0.4
+att.Mult_Penetration = 3 / 6
 
 att.Mult_Recoil = 0.25
 att.Mult_VisualRecoilMult = 0.25

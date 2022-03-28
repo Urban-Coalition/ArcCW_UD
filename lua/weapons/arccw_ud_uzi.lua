@@ -63,7 +63,7 @@ SWEP.DamageMin = 17 -- 6 shot long range kill
 SWEP.RangeMin = 15
 SWEP.Range = 100 -- 4 shot until ~35m
 
-SWEP.Penetration = 3
+SWEP.Penetration = 6
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 400

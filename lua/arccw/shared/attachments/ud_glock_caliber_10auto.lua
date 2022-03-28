@@ -22,6 +22,7 @@ att.Override_Trivia_Calibre = "10mm Auto"
 
 att.Mult_Damage = 1.15
 att.Mult_DamageMin = 1.15
+att.Mult_Penetration = 8 / 6
 
 att.Mult_Recoil = 1.25
 att.Mult_RecoilSide = 1.25

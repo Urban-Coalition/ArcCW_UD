@@ -260,7 +260,7 @@ SWEP.Animations = {
     ["fire_jammed"] = {
         Source = "fire_jam",
         Time = 23 / 25,--30,
-        ShellEjectAt = nil,
+        ShellEjectAt = false,
         SoundTable = {
             {s = path .. "mech.ogg", t = 0}, -- Not temporary
             --{s = path1 .. "eject.ogg", t = 0}, -- Not temporary

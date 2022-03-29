@@ -78,6 +78,13 @@ SWEP.HullSize = 0.25
 
 SWEP.BodyDamageMults = ArcCW.UC.BodyDamageMults_Shotgun
 
+-- Jamming --
+
+SWEP.Malfunction = true
+SWEP.MalfunctionJam = true
+SWEP.MalfunctionPostFire = true
+SWEP.MalfunctionTakeRound = false
+
 -- Mag size --
 
 SWEP.ChamberSize = 2
@@ -175,6 +182,7 @@ SWEP.BarrelOffsetHip = Vector(3, 0, -4.5)
 
 -- Firing sounds --
 
+local path2 = ")^weapons/arccw_ud/m16/"
 local path1 = ")^weapons/arccw_ud/870/"
 local path = ")^weapons/arccw_ud/m1014/"
 local common = ")^/arccw_uc/common/"
@@ -183,6 +191,9 @@ SWEP.ShootSoundSilenced = path .. "fire_supp.ogg"
 SWEP.DistantShootSound = path .. "fire_dist.ogg"
 SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"
 SWEP.ShootDrySound = path .. "dryfire.ogg"
+
+local rottle = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
+local ratel = {common .. "rattle1.ogg", common .. "rattle2.ogg", common .. "rattle3.ogg"}
 
 -- Animations --
 
@@ -231,7 +242,7 @@ SWEP.Animations = {
     ["fire"] = {
         Source = "fire",
         Time = 23 / 25,--30,
-        ShellEjectAt = 0.01,
+        ShellEjectAt = .01,
         SoundTable = {
             {s = path .. "mech.ogg", t = 0}, -- Not temporary
             {s = path1 .. "eject.ogg", t = 0}, -- Not temporary
@@ -249,25 +260,37 @@ SWEP.Animations = {
     ["fire_jammed"] = {
         Source = "fire_jam",
         Time = 23 / 25,--30,
-        ShellEjectAt = false,
+        ShellEjectAt = nil,
         SoundTable = {
             {s = path .. "mech.ogg", t = 0}, -- Not temporary
-            {s = path1 .. "eject.ogg", t = 0}, -- Not temporary
+            --{s = path1 .. "eject.ogg", t = 0}, -- Not temporary
         },
     },
-    ["fix"] = {
+    ["unjam"] = {
         Source = "jam_fix",
         Time = 70 / 30,
-        ShellEjectAt = false,
+        ShellEjectAt = 1.25,
         LHIK = true,
-       -- SoundTable = ArcCW.UD.DrawSounds, (someone do this pls)
+        SoundTable = {
+            {s = rottle, t = 0},
+            {s = path2 .. "grab.ogg", t = .7},
+            {s = path2 .. "usas_chback.ogg", t = 1.1},
+            {s = path .. "breechclose.ogg", t = 1.2},
+            {s = rottle, t = 1.5},
+        },
     },
-    ["fix_empty"] = {
+    ["unjam_empty"] = {
         Source = "jam_fix_empty",
         Time = 70 / 30,
-        ShellEjectAt = false,
+        ShellEjectAt = 1.5,
         LHIK = true,
-       -- SoundTable = ArcCW.UD.DrawSounds, (someone do this pls also!!)
+        SoundTable = {
+            {s = rottle, t = 0},
+            {s = path2 .. "grab.ogg", t = .7},
+            {s = path2 .. "usas_chback.ogg", t = 1.1},
+            --{s = path .. "breechclose.ogg", t = 1.2},
+            {s = rottle, t = 1.5},
+        },
     },
     ["sgreload_start"] = {
         Source = "sgreload_start",

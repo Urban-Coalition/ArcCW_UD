@@ -71,6 +71,14 @@ $sequence "idle_empty" "anims\idle_empty.smd" {
 	node "Ready"
 }
 
+$sequence "idle_jammed" "anims\idle_jammed.smd" {
+	fps 30
+	"ACT_VM_IDLE" 1
+	loop
+	snap
+	node "Ready"
+}
+
 $sequence "fire" {
 	"anims\fire.smd"
 	"anims\fire_iron.smd"
@@ -84,6 +92,16 @@ $sequence "fire" {
 $sequence "fire_empty" {
 	"anims\fire_empty.smd"
 	"anims\fire_iron_empty.smd"
+	blend "sights" 0 1
+	fps 30
+	"ACT_VM_PRIMARYATTACK" 1
+	fadein 0.007
+	fadeout 0.007
+}
+
+$sequence "fire_jam" {
+	"anims\fire_jam.smd"
+	"anims\fire_iron_jam.smd"
 	blend "sights" 0 1
 	fps 30
 	"ACT_VM_PRIMARYATTACK" 1
@@ -107,6 +125,14 @@ $sequence "draw_empty" "anims\draw_empty.smd" {
 	{ event 5004 15 "StockHitsShoulder" }
 }
 
+$sequence "draw_jammed" "anims\draw_jammed.smd" {
+	fps 30
+	"ACT_VM_DRAW" 1
+	snap
+	{ event 5004 0 "Starts" }
+	{ event 5004 15 "StockHitsShoulder" }
+}
+
 $sequence "holster" "anims\holster.smd" {
 	fps 30
 	"ACT_VM_HOLSTER" 1
@@ -116,6 +142,24 @@ $sequence "holster" "anims\holster.smd" {
 $sequence "holster_empty" "anims\holster_empty.smd" {
 	fps 30
 	"ACT_VM_HOLSTER" 1
+	snap
+}
+
+$sequence "holster_jammed" "anims\holster_jammed.smd" {
+	fps 30
+	"ACT_VM_HOLSTER" 1
+	snap
+}
+
+$sequence "jam_fix" "anims\jam_fix.smd" {
+	fps 30
+	"ACT_VM_RELOAD" 1
+	snap
+}
+
+$sequence "jam_fix_empty" "anims\jam_fix_empty.smd" {
+	fps 30
+	"ACT_VM_RELOAD" 1
 	snap
 }
 

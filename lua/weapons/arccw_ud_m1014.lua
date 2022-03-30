@@ -195,6 +195,9 @@ SWEP.Animations = {
     ["idle_empty"] = {
         Source = "idle_empty",
     },
+    ["idle_jammed"] = {
+        Source = "idle_jammed",
+    },
     ["draw"] = {
         Source = "draw",
         Time = 20 / 30,
@@ -205,6 +208,11 @@ SWEP.Animations = {
         Time = 20 / 30,
         SoundTable = ArcCW.UD.DrawSounds,
     },
+    ["draw_jammed"] = {
+        Source = "draw_jammed",
+        Time = 20 / 30,
+        SoundTable = ArcCW.UD.DrawSounds,
+    },
     ["holster"] = {
         Source = "holster",
         Time = 20 / 30,
@@ -212,6 +220,11 @@ SWEP.Animations = {
     },
     ["holster_empty"] = {
         Source = "holster_empty",
+        Time = 20 / 30,
+        SoundTable = ArcCW.UD.HolsterSounds,
+    },
+    ["holster_jammed"] = {
+        Source = "holster_jammed",
         Time = 20 / 30,
         SoundTable = ArcCW.UD.HolsterSounds,
     },
@@ -232,6 +245,29 @@ SWEP.Animations = {
             {s = path .. "mech_last.ogg", t = 0}, -- Not temporary
             {s = path1 .. "eject.ogg", t = 0}, -- Not temporary
         },
+    },
+    ["fire_jammed"] = {
+        Source = "fire_jam",
+        Time = 23 / 25,--30,
+        ShellEjectAt = false,
+        SoundTable = {
+            {s = path .. "mech.ogg", t = 0}, -- Not temporary
+            {s = path1 .. "eject.ogg", t = 0}, -- Not temporary
+        },
+    },
+    ["fix"] = {
+        Source = "jam_fix",
+        Time = 70 / 30,
+        ShellEjectAt = false,
+        LHIK = true,
+       -- SoundTable = ArcCW.UD.DrawSounds, (someone do this pls)
+    },
+    ["fix_empty"] = {
+        Source = "jam_fix_empty",
+        Time = 70 / 30,
+        ShellEjectAt = false,
+        LHIK = true,
+       -- SoundTable = ArcCW.UD.DrawSounds, (someone do this pls also!!)
     },
     ["sgreload_start"] = {
         Source = "sgreload_start",

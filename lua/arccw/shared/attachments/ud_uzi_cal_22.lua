@@ -20,7 +20,7 @@ att.AutoStats = true
 att.Mult_Damage = 12 / 30
 att.Mult_DamageMin = 7 / 17
 att.Mult_Penetration = 3 / 6
-
+att.Override_PhysBulletMuzzleVelocity = 370
 
 att.Mult_Recoil = 0.25
 att.Mult_VisualRecoilMult = 0.25

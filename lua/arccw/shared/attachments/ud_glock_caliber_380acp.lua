@@ -24,6 +24,7 @@ att.Mult_Range = 0.8
 att.Mult_DamageMin = 0.9
 att.Mult_Recoil = 0.65
 att.Mult_Penetration = 3 / 6
+att.Override_PhysBulletMuzzleVelocity = 312
 
 att.Override_ShellModel = "models/weapons/arccw/uc_shells/357sig.mdl"
 att.Override_ShellScale = 1
@@ -40,3 +41,6 @@ att.Hook_GetDistantShootSound = function(wep, distancesound)
     if distancesound == wep.DistantShootSound then
         return "weapons/arccw_ud/glock/fire_dist_380.ogg" end
 end
+
+att.GivesFlags = {"cal_subsonic"}
+att.ExcludeFlags = {"powder_subsonic"}

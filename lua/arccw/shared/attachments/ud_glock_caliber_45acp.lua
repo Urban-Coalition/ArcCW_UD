@@ -28,6 +28,7 @@ att.Mult_RangeMin = 0.5
 att.Mult_Recoil = 1.5
 att.Mult_RecoilSide = 1.5
 att.Mult_MalfunctionMean = 0.6
+att.Override_PhysBulletMuzzleVelocity = 320
 
 att.Mult_ClipSize = 0.76
 

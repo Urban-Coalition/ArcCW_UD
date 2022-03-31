@@ -30,6 +30,7 @@ att.Mult_VisualRecoilMult = 0.25
 att.Mult_RPM = 1.5
 att.Mult_Penetration = 0.1
 att.Mult_ShootSpeedMult = 1.2
+att.Override_PhysBulletMuzzleVelocity = 370
 
 att.Mult_ClipSize = 1.2
 
@@ -49,6 +50,3 @@ att.Hook_GetDistantShootSound = function(wep, distancesound)
     if distancesound == wep.DistantShootSound then
         return "weapons/arccw_ud/glock/fire_dist_22.ogg" end
 end
-
-att.GivesFlags = {"cal_subsonic"}
-att.ExcludeFlags = {"powder_subsonic"}

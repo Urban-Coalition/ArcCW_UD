@@ -57,6 +57,7 @@ SWEP.WorldModel = "models/weapons/arccw/c_ud_mini14.mdl"
 SWEP.ViewModelFOV = 70
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.DefaultSkin = 0
+SWEP.DefaultPoseParams = {["grip"] = 0}
 
 -- Damage --
 

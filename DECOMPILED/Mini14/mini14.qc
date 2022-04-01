@@ -69,7 +69,9 @@ $illumposition -4.61 -21.77 -6.45
 
 $cbox 0 0 0 0 0 0
 
+// poseparams stolen from arctic code, thank you!
 $poseparameter "sights" 0 1 loop 0
+$poseparameter "grip" 0 1 loop 0
 
 $sequence "idle" "anims\idle.smd" {
 	fps 30
@@ -77,6 +79,18 @@ $sequence "idle" "anims\idle.smd" {
 	loop
 	snap
 	node "Ready"
+}
+
+$sequence "grip" {
+	"anims/idle.smd"
+	"anims/idle_grip.smd"
+	subtract "idle" 0
+	autoplay
+	blend "grip" 0 1
+	blendwidth 2
+	delta
+	fadein 0.2
+	fadeout 0.2
 }
 
 $sequence "idle_empty" "anims\idle_empty.smd" {

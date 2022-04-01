@@ -5,7 +5,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "Patriot 809 Folding Stock"
 end
 
-att.Icon = Material("entities/att/obsolete.png", "mips smooth") --Material("entities/att/acwatt_ud_mini14_stock_tactical_wood.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_mini14_stock_tactical_wood.png", "smooth mips")
 att.Description = "A lightweight body replacement that improves weapon agility."
 att.Desc_Pros = {
 }
@@ -28,4 +28,4 @@ att.Mult_Recoil = 1.25
 
 att.ActivateElements = {"ud_mini14_stock_tactical"}
 
-att.Ignore = true -- where animation
+att.Ignore = false

@@ -266,16 +266,20 @@ SWEP.AttachmentElements = {
 
     ["ud_mini14_stock_polymer"] = {
         VMBodygroups = {{ind = 1, bg = 1}},
+        VMPoseParams = {["grip"] = 0}
     },
     ["ud_mini14_stock_sawnoff"] = {
         VMBodygroups = {{ind = 1, bg = 2}},
+        VMPoseParams = {["grip"] = 0}
     },
     ["ud_mini14_stock_tactical"] = {
         VMBodygroups = {{ind = 1, bg = 4}},
+        VMPoseParams = {["grip"] = 1}
     },
     ["ud_mini14_stock_tactical_polymer"] = {
         VMBodygroups = {{ind = 1, bg = 3}},
         VMSkin = 1,
+        VMPoseParams = {["grip"] = 1}
     },
 
     ["ud_mini14_clamp"] = {

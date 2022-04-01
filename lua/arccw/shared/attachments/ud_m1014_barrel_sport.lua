@@ -5,7 +5,6 @@ att.Description = "Hardened barrel with slightly increased length, designed for 
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
-    "uc.nomuzzle"
 }
 att.Desc_Neutrals = {
 }
@@ -19,7 +18,8 @@ att.Mult_Recoil = 0.9
 att.Mult_SightTime = 1.15
 att.Mult_Sway = 1.2
 
-att.Mult_RangeMin = 1.25
+att.Mult_AccuracyMOA = 0.9
+att.Mult_RangeMin = 2
 att.Mult_RPM = 180 / 220
 
 att.ActivateElements = {"ud_autoshotgun_barrel_sport"}

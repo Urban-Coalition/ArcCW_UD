@@ -61,6 +61,7 @@ SWEP.WorldModelOffset = {
     bone    =    "ValveBiped.Bip01_R_Hand",
     scale = 1
 }
+SWEP.DefaultPoseParams = {["grip"] = 0}
 
 -- Damage parameters --
 
@@ -344,6 +345,139 @@ SWEP.Animations = {
             {s = common .. "shoulder.ogg",  t = 0.4},
         },
     },
+
+    -- stock animla below 
+
+    ["idle_stock"] = {
+        Source = "idle_stock",
+    },
+    ["idle_empty_stock"] = {
+        Source = "idle_empty_stock",
+    },
+    ["idle_jammed_stock"] = {
+        Source = "idle_jammed_stock",
+    },
+    ["draw_stock"] = {
+        Source = "draw_stock",
+        Time = 20 / 30,
+        SoundTable = ArcCW.UD.DrawSounds,
+    },
+    ["draw_empty_stock"] = {
+        Source = "draw_empty_stock",
+        Time = 20 / 30,
+        SoundTable = ArcCW.UD.DrawSounds,
+    },
+    ["draw_jammed_stock"] = {
+        Source = "draw_jammed_stock",
+        Time = 20 / 30,
+        SoundTable = ArcCW.UD.DrawSounds,
+    },
+    ["holster_stock"] = {
+        Source = "holster_stock",
+        Time = 20 / 30,
+        SoundTable = ArcCW.UD.HolsterSounds,
+    },
+    ["holster_empty_stock"] = {
+        Source = "holster_empty_stock",
+        Time = 20 / 30,
+        SoundTable = ArcCW.UD.HolsterSounds,
+    },
+    ["holster_jammed_stock"] = {
+        Source = "holster_jammed_stock",
+        Time = 20 / 30,
+        SoundTable = ArcCW.UD.HolsterSounds,
+    },
+    ["fire_stock"] = {
+        Source = "fire_stock",
+        Time = 23 / 25,--30,
+        ShellEjectAt = .01,
+        SoundTable = {
+            {s = path .. "mech.ogg", t = 0}, -- Not temporary
+            {s = path1 .. "eject.ogg", t = 0}, -- Not temporary
+        },
+    },
+    ["fire_empty_stock"] = {
+        Source = "fire_empty_stock",
+        Time = 23 / 25,--30,
+        ShellEjectAt = 0.01,
+        SoundTable = {
+            {s = path .. "mech_last.ogg", t = 0}, -- Not temporary
+            {s = path1 .. "eject.ogg", t = 0}, -- Not temporary
+        },
+    },
+    ["fire_jammed_stock"] = {
+        Source = "fire_jam_stock",
+        Time = 23 / 25,--30,
+        ShellEjectAt = false,
+        SoundTable = {
+            {s = path .. "mech.ogg", t = 0}, -- Not temporary
+            --{s = path1 .. "eject.ogg", t = 0}, -- Not temporary
+        },
+    },
+    ["unjam_stock"] = {
+        Source = "jam_fix_stock",
+        Time = 60 / 30,
+        ShellEjectAt = 1.1,
+        LHIK = true,
+        SoundTable = {
+            {s = rottle, t = 0},
+            {s = path2 .. "grab.ogg", t = .4},
+            {s = path2 .. "usas_chback.ogg", t = 0.8},
+            {s = path .. "breechclose.ogg", t = 0.9},
+            {s = rottle, t = 1.2},
+        },
+    },
+    ["unjam_empty_stock"] = {
+        Source = "jam_fix_empty_stock",
+        Time = 60 / 30,
+        ShellEjectAt = 1.1,
+        LHIK = true,
+        SoundTable = {
+            {s = rottle, t = 0},
+            {s = path2 .. "grab.ogg", t = .4},
+            {s = path2 .. "usas_chback.ogg", t = 0.8},
+            --{s = path .. "breechclose.ogg", t = 1.2},
+            {s = rottle, t = 1.2},
+        },
+    },
+    ["sgreload_start_stock"] = {
+        Source = "sgreload_start_stock",
+        Time = 16 / 30,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKEaseIn = 0.2,
+        LHIKOut = 0,
+    },
+    ["sgreload_start_empty_stock"] = {
+        Source = "sgreload_start_empty_stock",
+        Time = 40 / 30,
+        MinProgress = 1,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKOut = 0,
+        TPAnimStartTime = 0.5,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        SoundTable = {
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
+            {s = path .. "breechload.ogg",  t = 0.05},
+            {s = path .. "breechclose.ogg",  t = 0.7},
+        },
+        ForceEmpty = true,
+    },
+    ["sgreload_finish_stock"] = {
+        Source = "sgreload_finish_stock",
+        Time = 22 / 30,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKEaseOut = 0.3,
+        LHIKOut = 0.6,
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
+        TPAnimStartTime = 0.8,
+        SoundTable = {
+            {s = common .. "shoulder.ogg",  t = 0.4},
+        },
+    },
 }
 
 SWEP.BulletBones = {
@@ -394,15 +528,18 @@ SWEP.AttachmentElements = {
 
     ["ud_autoshotgun_stock_in"] = {
         VMBodygroups = {{ind = 3, bg = 1}},
+        VMPoseParams = {["grip"] = 0}
     },
     ["ud_autoshotgun_stock_buffer"] = {
         VMBodygroups = {{ind = 3, bg = 2}},
+        VMPoseParams = {["grip"] = 0}
     },
     ["ud_autoshotgun_stock_sport"] = {
         VMBodygroups = {
             {ind = 3, bg = 3},
             {ind = 6, bg = 1},
         },
+        VMPoseParams = {["grip"] = 1}
     },
 
     ["ud_m1014_handguard_sport"] = {

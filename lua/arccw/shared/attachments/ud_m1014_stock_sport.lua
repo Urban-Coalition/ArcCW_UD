@@ -19,3 +19,7 @@ att.Mult_DrawTime = 1.25
 att.Mult_HolsterTime = 1.25
 
 att.ActivateElements = {"ud_autoshotgun_stock_sport"}
+
+att.Hook_TranslateAnimation = function(wep, anim) 
+    return anim .. "_stock"
+end 

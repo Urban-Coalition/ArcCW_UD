@@ -208,7 +208,151 @@ $sequence "sgreload_finish" {
 	{ event 5004 17 "StockHitsShoulder" }
 }
 
+// stock animations start
 
+$sequence "idle_stock" "anims\idle_stock.smd" {
+	fps 30
+	"ACT_VM_IDLE" 1
+	loop
+	snap
+	node "Ready"
+}
+
+$sequence "idle_empty_stock" "anims\idle_empty_stock.smd" {
+	fps 30
+	"ACT_VM_IDLE" 1
+	loop
+	snap
+	node "Ready"
+}
+
+$sequence "idle_jammed_stock" "anims\idle_jammed_stock.smd" {
+	fps 30
+	"ACT_VM_IDLE" 1
+	loop
+	snap
+	node "Ready"
+}
+
+$sequence "fire_stock" {
+	"anims\fire_stock.smd"
+	"anims\fire_iron_stock.smd"
+	blend "sights" 0 1
+	fps 30
+	"ACT_VM_PRIMARYATTACK" 1
+	fadein 0.007
+	fadeout 0.007
+}
+
+$sequence "fire_empty_stock" {
+	"anims\fire_empty_stock.smd"
+	"anims\fire_iron_empty_stock.smd"
+	blend "sights" 0 1
+	fps 30
+	"ACT_VM_PRIMARYATTACK" 1
+	fadein 0.007
+	fadeout 0.007
+}
+
+$sequence "fire_jam_stock" {
+	"anims\fire_jam_stock.smd"
+	"anims\fire_iron_jam_stock.smd"
+	blend "sights" 0 1
+	fps 30
+	"ACT_VM_PRIMARYATTACK" 1
+	fadein 0.007
+	fadeout 0.007
+}
+
+$sequence "draw_stock" "anims\draw_stock.smd" {
+	fps 30
+	"ACT_VM_DRAW" 1
+	snap
+	{ event 5004 0 "Starts" }
+	{ event 5004 15 "StockHitsShoulder" }
+}
+
+$sequence "draw_empty_stock" "anims\draw_empty_stock.smd" {
+	fps 30
+	"ACT_VM_DRAW" 1
+	snap
+	{ event 5004 0 "Starts" }
+	{ event 5004 15 "StockHitsShoulder" }
+}
+
+$sequence "draw_jammed_stock" "anims\draw_jammed_stock.smd" {
+	fps 30
+	"ACT_VM_DRAW" 1
+	snap
+	{ event 5004 0 "Starts" }
+	{ event 5004 15 "StockHitsShoulder" }
+}
+
+$sequence "holster_stock" "anims\holster_stock.smd" {
+	fps 30
+	"ACT_VM_HOLSTER" 1
+	snap
+}
+
+$sequence "holster_empty_stock" "anims\holster_empty_stock.smd" {
+	fps 30
+	"ACT_VM_HOLSTER" 1
+	snap
+}
+
+$sequence "holster_jammed_stock" "anims\holster_jammed_stock.smd" {
+	fps 30
+	"ACT_VM_HOLSTER" 1
+	snap
+}
+
+$sequence "jam_fix_stock" "anims\jam_fix_stock.smd" {
+	fps 30
+	"ACT_VM_RELOAD" 1
+	snap
+}
+
+$sequence "jam_fix_empty_stock" "anims\jam_fix_empty_stock.smd" {
+	fps 30
+	"ACT_VM_RELOAD" 1
+	snap
+}
+
+$sequence "sgreload_start_stock" {
+	"anims\sgreload_start_stock.smd"
+	"anims\sgreload_start_iron_stock.smd"
+	fps 30
+	"ACT_VM_RELOAD" 1
+	blend "sights" 0 1
+	snap
+	{ event 5004 0 "Starts" }
+	{ event 5004 10 "ReadjustsGun" }
+}
+
+$sequence "sgreload_start_empty_stock" {
+	"anims\sgreload_start_empty_stock.smd"
+	"anims\sgreload_start_empty_iron_stock.smd"
+	fps 30
+	"ACT_VM_RELOAD" 1
+	blend "sights" 0 1
+	snap
+	{ event 5004 0 "Starts" }
+	{ event 5004 17 "ShellGoesInChamber" }
+	{ event 5004 27 "BoltReleases" }
+}
+
+$sequence "sgreload_finish_stock" {
+	"anims\sgreload_end_stock.smd"
+	"anims\sgreload_end_iron_stock.smd"
+	fps 30
+	"ACT_VM_RELOAD" 1
+	blend "sights" 0 1
+	snap
+	{ event 5004 6 "HandGrabsGrip" }
+	{ event 5004 17 "StockHitsShoulder" }
+}
+
+// stock animations end
 
 $bonemerge "ValveBiped.Bip01_Spine4"
 $bonemerge "ValveBiped.Bip01_L_Clavicle"

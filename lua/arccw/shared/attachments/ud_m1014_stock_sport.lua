@@ -15,5 +15,7 @@ att.Mult_Recoil = .8
 att.Mult_Sway = .8
 
 att.Mult_SightedSpeedMult = .85
+att.Mult_DrawTime = 1.25
+att.Mult_HolsterTime = 1.25
 
 att.ActivateElements = {"ud_autoshotgun_stock_sport"}

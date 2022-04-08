@@ -12,8 +12,8 @@ att.Slot = "ud_1014_handguard"
 att.AutoStats = true
 att.SortOrder = 999
 
-att.Mult_SightTime = .85
-att.Mult_Sway = 1.15
-att.Mult_ShootSpeedMult = .75
+att.Mult_SightTime = 0.85
+att.Mult_ShootSpeedMult = 0.9
+att.Mult_SightedSpeedMult = 0.9
 
 att.ActivateElements = {"ud_m1014_handguard_sport"}

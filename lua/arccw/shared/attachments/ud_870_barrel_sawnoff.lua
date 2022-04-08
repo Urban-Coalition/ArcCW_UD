@@ -27,6 +27,8 @@ att.Mult_Sway = 0.5
 att.Mult_SightTime = 0.75
 att.Mult_SpeedMult = 1.05
 
+att.Mult_HipDispersion = 0.75
+
 att.Add_BarrelLength = -4
 
 att.A_Hook_Add_SightsDispersion = function(wep, data)

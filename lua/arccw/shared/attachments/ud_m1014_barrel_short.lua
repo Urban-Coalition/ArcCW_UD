@@ -21,6 +21,8 @@ att.Mult_SightTime = 0.75
 att.Mult_SpeedMult = 1.025
 att.Mult_ShootSpeedMult = 1.1
 
+att.Mult_HipDispersion = 0.75
+
 att.Add_BarrelLength = -4
 
 att.ActivateElements = {"ud_autoshotgun_barrel_short"}

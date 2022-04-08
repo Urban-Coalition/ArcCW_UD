@@ -26,6 +26,8 @@ att.Mult_Sway = 1.5
 att.Mult_SightTime = 1.25
 att.Mult_SpeedMult = 0.95
 
+att.Mult_HipDispersion = 1.25
+
 att.Add_BarrelLength = 4
 
 --att.Override_HoldtypeSights = "rpg"

@@ -22,5 +22,7 @@ att.Mult_AccuracyMOA = 0.9
 att.Mult_RangeMin = 2
 att.Mult_RPM = 180 / 220
 
+att.Mult_HipDispersion = 1.15
+
 att.ActivateElements = {"ud_autoshotgun_barrel_sport"}
 --att.GivesFlags = {"nomuzzle"}

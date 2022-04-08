@@ -1014,6 +1014,7 @@ SWEP.Attachments = {
     {
         PrintName = "Ammo Type",
         DefaultAttName = "\"FMJ\" Full Metal Jacket",
+        DefaultAttIcon = Material("entities/att/arccw_uc_ammo_generic.png", "mips smooth"),
         Slot = "uc_ammo",
     },
     {

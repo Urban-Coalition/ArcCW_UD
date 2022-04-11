@@ -19,8 +19,8 @@ $bodygroup "2" {
 	studio "mag_40.smd" //2
 	studio "mag_60.smd" //3
 	studio "mag_100.smd" //4
-	studio "mag_9mm_20.smd" //5
-	studio "mag_9mm_32.smd" //6
+	studio "m16_mag_9mm_20.smd" //5
+	studio "m16_mag_9mm_32.smd" //6
 	blank //7
 	studio "mag_50beo_10.smd" //8
 }

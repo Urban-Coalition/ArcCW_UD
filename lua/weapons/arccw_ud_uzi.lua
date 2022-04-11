@@ -139,6 +139,7 @@ SWEP.HeatDissipation = 15
 SWEP.HeatDelayTime = 3
 
 SWEP.MalfunctionMean = 200
+SWEP.MalfunctionTakeRound = false
 
 -- Speed multipliers --
 

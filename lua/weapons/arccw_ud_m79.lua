@@ -322,6 +322,7 @@ SWEP.Attachments = {
         },
         InstalledEles = {"m79_rail"},
         ExcludeFlags = {"m79_pirategun"},
+        ExtraSightDist = 5,
     },
     {
         PrintName = "Tube",

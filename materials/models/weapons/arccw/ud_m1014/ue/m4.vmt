@@ -5,10 +5,12 @@
 	"$phongexponenttexture"			"models/weapons/arccw/ud_m1014/ue/m4_e"
 
 	"$envmap"						"env_cubemap"
-	"$envmaptint"					"[.25 .25 .25]"
+	"$envmaptint"					"[.01 .01 .01]"
 
 	"$phong"						"1"
-	"$phongboost"					"100"
+	"$phongboost"					"23"
+	"$phongwarptexture"			    "models\weapons\arccw\ud_stalol\phongwarp_metal"
 	"$phongfresnelranges"			"[0.25 0.5 1]"
 	"$phongalbedotint"				"1"
+	"$phongexponent"                "8"
 }

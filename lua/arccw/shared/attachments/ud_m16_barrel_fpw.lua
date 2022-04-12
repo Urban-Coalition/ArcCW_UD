@@ -16,7 +16,7 @@ att.AutoStats = true
 
 att.Mult_SightTime = 0.85
 
-att.Mult_RPM = 1.601
+att.Mult_RPM = 1.361
 att.Mult_Recoil = 1.25
 att.Mult_RecoilSide = 1.5
 att.Mult_Range = 0.65

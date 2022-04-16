@@ -9,7 +9,7 @@
 	"$phongalbedotint" "1"
 	"$phongfresnelranges" "[1 5 22.5]"
     "$envmap" "env_cubemap"
-    "$envmaptint" "[0.01 0.01 0.01]"
+    "$envmaptint" "[0.05 0.05 0.05]"
     "$envmapfresnel" "0.1"
     "$normalmapalphaenvmapmask" "0"
     "$basemapalphaenvmapmask" "1"

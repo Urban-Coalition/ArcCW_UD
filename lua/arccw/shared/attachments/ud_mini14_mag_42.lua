@@ -39,3 +39,5 @@ end
 
 att.ExcludeFlags = {"mini14_762", "mini14_22lr"}
 att.HideIfBlocked = true
+
+att.Ignore = true

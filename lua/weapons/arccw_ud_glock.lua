@@ -55,7 +55,7 @@ end
 
 SWEP.ViewModel = "models/weapons/arccw/c_ud_glock.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_ud_glock.mdl"
-SWEP.ViewModelFOV = 60
+SWEP.ViewModelFOV = 70
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage --

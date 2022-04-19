@@ -1,26 +1,26 @@
-"VertexLitGeneric"
+VertexlitGeneric
 {
-// maps
-	"$basetexture"				"models\weapons\arccw\uc_shared/RU556/m16_ru556_d" // string -- main texture
-	"$bumpmap"					"models\weapons\arccw\uc_shared/RU556/m16_ru556_n" // string -- normal map texture (bump map for brushes)
-	"$phongexponenttexture"		"models\weapons\arccw\uc_shared/RU556/m16_ru556_s" // string -- phong exponent texture (contains info for other shaders)
-
-	"$phongwarptexture"			"models/weapons/arccw/ud_stalol\phongwarp_metal" // string -- phong gradient texture: 256x16 texture where x:0 = unlit, x:256 = fully lit (default is a perfect 0-256 black to white gradient)
-	"$nocull"					"1"
-	"$halflambert"              "1"
+	"$basetexture" 	"models\weapons\arccw\uc_shared/RU556/m16_ru556_d"
 	
-// map interp
-    "$color2"					"[1 1 1]" // vector -- rgb tinting of the basetexture
-	"$blendTintByBaseAlpha"		"1" // bool -- uses base texture's alpha channel to mask color2's effect
+	"$phong" 1
+	"$phongexponenttexture"     "models\weapons\arccw\uc_shared/RU556/m16_ru556_s"
+	"$phongwarptexture"			"models/weapons/arccw/ud_stalol\phongwarp_metal"
+	"$phongboost"               "3"
+	"$phongfresnelranges"       "[.6 1 2]"
+	"$phongexponent"            "18"
 
-// phong (convar: mat_phong "bool")
-	"$phong"					"1" // bool -- phong enabler, have this on 1 if you have a central neural system
-	"$phongboost"				"9" // float -- phong intensity coefficient on top of normal map's alpha (aka phong mask)
-	"$phongfresnelranges"		"[.6 1 2]" // vector -- phong fresnel ranges, default are [0 0.5 1]
-	"$phongalbedotint" 			"1" // bool -- enables basetexture tinting of the phong's color but masks it with phongexponent's green channel
-	"$phongexponent"	        "20"
+	"$color2"					"[1 1 1]"
+	"$blendTintByBaseAlpha"		"1" 
+	"$nocull"                   "1"
 
-// envmap (convar: mat_specular "bool")
-	"$envmap"					"env_cubemap" // string -- path to envmap or envmap entity name
-	"$envmaptint" "[.015 .015 .015]"// vector -- rgb tinting of the envmap: all dimentions should be equal, ideally
+	"$rimlight"					"1"
+	"$rimmask"					"1"
+	"$rimlightboost"			"0.3"
+	"$rimlightexponent"			"5"
+	
+	"$envmap" "env_cubemap"
+	"$normalmapalphaenvmapmask" "1"
+	"$envmaptint"               "[ 0.03 0.03 0.03 ]"
+				
+	"$bumpmap"                  "models\weapons\arccw\uc_shared/RU556/m16_ru556_n"
 }

@@ -1,21 +1,27 @@
-"VertexlitGeneric"
+VertexlitGeneric
 {
-	"$basetexture" "models/weapons/arccw/ud_uzi/uzi_color"
-	"$bumpmap" "models/weapons/arccw/ud_uzi/uzi_normal"
-	"$normalmapalphaenvmapmask" 	1
+	"$basetexture" 	"models/weapons/arccw/ud_uzi/uzi_color"
 	
-	"$phong" 		"1"
-	"$phongexponent" "9"
-	"$phongboost" "1"
-	"$phongalbedotint" 			"1"
-	"$phongfresnelranges" "[.6 1 2]"
-	"$halflambert" "1"
+	"$phong" 1
+	"$phongexponenttexture"     "models/weapons/arccw/ud_uzi/uzi_rough"
+	"$phongwarptexture"			"models/weapons/arccw/ud_stalol\phongwarp_metal"
+	"$phongboost"               "13"
+	"$phongfresnelranges"       "[1 3 8]"
+	"$phongexponent"            "15"
+	"$phongalbedotint"		    "1"
+	"$phongalbedoboost" 	    "14"
+
+	"$color2"					"[.8 .8 .8]"
+	"$blendTintByBaseAlpha"		"1" 
+
+	"$rimlight"					"1"
+	"$rimmask"					"1"
+	"$rimlightboost"			"0.3"
+	"$rimlightexponent"			"5"
 	
 	"$envmap" "env_cubemap"
-	"$envmapfresnel" 			"1"
-    "$envmapFresnelMinMaxExp" "[0 5 .4]"
-	"$envmaptint" "[.05 .05  .05]"
-	
-	"$ambientocclusion" "1"
-	"$nocull" "1"
+	"$normalmapalphaenvmapmask" "1"
+	"$envmaptint"               "[ 0.03 0.03 0.03 ]"
+				
+	"$bumpmap"                  "models/weapons/arccw/ud_uzi/uzi_normal"
 }

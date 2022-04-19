@@ -2,7 +2,7 @@
 {
 	"$basetexture" "models\weapons\arccw\ud_m79\m79_new\m79_color"
 	"$bumpmap" "models\weapons\arccw\ud_m79\m79_new\m79_normal"
-	"$normalmapalphaenvmapmask" 	1
+	"$normalmapalphaenvmapmask" 	"1"
 	
 	"$phong" 		"1"
 	"$phongexponent" "10"

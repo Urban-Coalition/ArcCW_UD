@@ -37,15 +37,7 @@ $bodygroup "4" {
 $bodygroup "5" {
 	blank
 	studio "uzi_rail_fg.smd"
-	studio "uzi_rail_fg_mini.smd"
 	studio "uzi_rail_fg_micro.smd"
-}
-
-$bodygroup "6" {
-	blank
-	studio "uzi_clamp.smd"
-	studio "uzi_clamp_mini.smd"
-	studio "uzi_clamp_micro.smd"
 }
 
 

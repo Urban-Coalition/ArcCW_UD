@@ -40,9 +40,13 @@ $bodygroup "5" {
 	studio "uzi_rail_fg_micro.smd"
 }
 
+$bodygroup "6" {
+	blank
+	studio "uzi_rail_tactical.smd"
+}
+
 
 $cdmaterials "models\weapons\arccw\ud_uzi"
-$cdmaterials "models\weapons\arccw\ud_m1014"
 $cdmaterials "models\weapons\arccw\ud_common"
 
 $attachment "1" "uzi_barrel" 0 0 0 rotate -90 0 0

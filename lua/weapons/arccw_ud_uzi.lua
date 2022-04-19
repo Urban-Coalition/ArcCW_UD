@@ -686,7 +686,7 @@ SWEP.Attachments = {
         Slot = {"foregrip"},
         Bone = "uzi_parent",
         Offset = {
-            vpos = Vector(-0.2, 2.4, 8),
+            vpos = Vector(-0.2, 1.85, 6.9), -- nice
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"ud_uzi_rail_fg"},

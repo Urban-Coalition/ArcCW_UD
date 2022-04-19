@@ -58,7 +58,7 @@ end
 
 SWEP.ViewModel = "models/weapons/arccw/c_ud_m16.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_ud_m16.mdl"
-SWEP.ViewModelFOV = 70
+SWEP.ViewModelFOV = 80
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage --

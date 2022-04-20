@@ -59,13 +59,10 @@ ArcCW.UD.InnyOuty = function(wep)
         end
 
         vol = vol / t_influ
-        print(vol)
-        print(1-vol)
         if wep.DistantShootSoundOutdoors then
             for _, snd in ipairs(wep.DistantShootSoundOutdoors) do
                 wep:StopSound(snd)
             end
-
             if math.max(0.15, vol) != 0.15 then
                 wep:EmitSound(wep.DistantShootSoundOutdoors[math.random(1, #wep.DistantShootSoundOutdoors)], 75, 100, (vol) * wep.DistantShootSoundOutdoorsVolume or 1, CHAN_AUTO)
             end

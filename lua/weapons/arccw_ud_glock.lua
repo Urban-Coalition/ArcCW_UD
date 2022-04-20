@@ -203,9 +203,15 @@ local path1 = ")^weapons/arccw_ud/uzi/"
 local common = ")^/arccw_uc/common/"
 SWEP.ShootSound = {path .. "fire-01.ogg", path .. "fire-02.ogg", path .. "fire-03.ogg", path .. "fire-04.ogg", path .. "fire-05.ogg", path .. "fire-06.ogg"} -- Maybe Not Placeholder
 SWEP.ShootSoundSilenced = path .. "fire_supp.ogg"
-SWEP.DistantShootSound = {path .. "fire-dist-01.ogg", path .. "fire-dist-02.ogg", path .. "fire-dist-03.ogg", path .. "fire-dist-04.ogg", path .. "fire-dist-05.ogg", path .. "fire-dist-06.ogg"} -- Maybe Not Placeholder
+SWEP.DistantShootSound = nil
 SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"
 SWEP.ShootDrySound = path .. "dryfire.ogg"
+
+SWEP.DistantShootSoundOutdoors = {path .. "fire-dist-01.ogg", path .. "fire-dist-02.ogg", path .. "fire-dist-03.ogg", path .. "fire-dist-04.ogg", path .. "fire-dist-05.ogg", path .. "fire-dist-06.ogg"}
+SWEP.DistantShootSoundIndoors = nil
+SWEP.DistantShootSoundOutdoorsVolume = 1
+SWEP.DistantShootSoundIndoorsVolume = 1
+SWEP.Hook_AddShootSound = ArcCW.UD.InnyOuty
 
 -- Bodygroups --
 

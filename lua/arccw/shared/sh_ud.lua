@@ -10,13 +10,13 @@ end
 -- right forward up
 local traces = {
     {   -- Up
-        -- This is done exclusively pointed upwards. --Distance = Vector(0, 0, 1024),
-        Influence = 3,
+        -- This is done exclusively pointed upwards. -- Distance = Vector(0, 0, 1024),
+        Influence = 1.5,
     },
-    {   -- Forward
+    --[[{   -- Forward
         Distance = Vector(0, 1024, 0),
         Influence = 1,
-    },
+    },]]
     {   -- Right
         Distance = Vector(768, 768, 0),
         Influence = 0.5,
@@ -36,7 +36,7 @@ ArcCW.UD.InnyOuty = function(wep)
         local vol = 0
         local wo = wep:GetOwner()
         local wop = wo:EyePos()
-        local woa = wo:EyeAngles()
+        local woa = Angle(0, wo:EyeAngles().y, 0)
         local t_influ = 0
 
         for _, tin in ipairs(traces) do
@@ -45,7 +45,7 @@ ArcCW.UD.InnyOuty = function(wep)
             if _ != 1 then
                 offset = offset + (tin.Distance.x * woa:Right())
                 offset = offset + (tin.Distance.y * woa:Forward())
-                offset = offset + (tin.Distance.z * woa:Up())
+                -- No-one shoots Zs. -- offset = offset + (tin.Distance.z * woa:Up())
             else -- Specific skytrace
                 offset = offset + (vector_up*1024)
             end
@@ -60,17 +60,23 @@ ArcCW.UD.InnyOuty = function(wep)
 
         vol = vol / t_influ
         print(vol)
+        print(1-vol)
         if wep.DistantShootSoundOutdoors then
             for _, snd in ipairs(wep.DistantShootSoundOutdoors) do
                 wep:StopSound(snd)
             end
-            wep:EmitSound(wep.DistantShootSoundOutdoors[math.random(1, #wep.DistantShootSoundOutdoors)], 75, 100, (vol) * wep.DistantShootSoundOutdoorsVolume or 1, CHAN_AUTO)
+
+            if math.max(0.15, vol) != 0.15 then
+                wep:EmitSound(wep.DistantShootSoundOutdoors[math.random(1, #wep.DistantShootSoundOutdoors)], 75, 100, (vol) * wep.DistantShootSoundOutdoorsVolume or 1, CHAN_AUTO)
+            end
         end
         if wep.DistantShootSoundIndoors then
             for _, snd in ipairs(wep.DistantShootSoundIndoors) do
                 wep:StopSound(snd)
             end
-            wep:EmitSound(wep.DistantShootSoundIndoors[math.random(1, #wep.DistantShootSoundIndoors)], 75, 100, (1-vol) * wep.DistantShootSoundIndoorsVolume or 1, CHAN_AUTO)
+            if math.min(0.85, vol) != 0.85 then
+                wep:EmitSound(wep.DistantShootSoundIndoors[math.random(1, #wep.DistantShootSoundIndoors)], 75, 100, (1-vol) * wep.DistantShootSoundIndoorsVolume or 1, CHAN_AUTO)
+            end
         end
 
     end

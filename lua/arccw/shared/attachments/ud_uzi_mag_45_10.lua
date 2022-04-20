@@ -1,8 +1,8 @@
-att.PrintName = "Uzi 10-Round Flush Mag"
-att.AbbrevName = "10-Round Flush Mag"
+att.PrintName = "Uzi 12-Round Flush Mag"
+att.AbbrevName = "12-Round Flush Mag"
 
 if !GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "IAL-9 10-Round Flush Mag"
+    att.PrintName = "IAL-9 12-Round Flush Mag"
 end
 
 att.SortOrder = 20
@@ -20,7 +20,7 @@ att.AutoStats = true
 
 att.Mult_SightTime = 0.9
 att.Mult_ReloadTime = 0.85
-att.Override_ClipSize = 10
+att.Override_ClipSize = 12
 att.Override_ClipSize_Priority = 2
 att.Mult_Sway = 0.75
 att.Mult_ShootSpeedMult = 1.1

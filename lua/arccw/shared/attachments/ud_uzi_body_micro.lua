@@ -41,6 +41,7 @@ att.LHIK = true
 att.Override_HoldtypeActive = "pistol"
 att.Override_HoldtypeSights = "revolver"
 att.Override_Trivia_Class = "Machine Pistol"
+att.Override_Trivia_Mechanism = "Blowback"
 
 att.Model = "models/weapons/arccw/atts/mini_lhik.mdl"
 

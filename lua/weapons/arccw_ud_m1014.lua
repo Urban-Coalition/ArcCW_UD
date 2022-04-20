@@ -56,8 +56,8 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-6.6, 4, -7.7),
-    ang        =    Angle(0, 0, 180),
+    pos        =    Vector(-6.6, 4, -7.2),
+    ang        =    Angle(-4, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
     scale = 0.9
 }
@@ -557,12 +557,12 @@ SWEP.Attachments = {
         Slot = {"optic_lp", "optic", "sniper_optic"},
         Bone = "1014_parent",
         Offset = {
-            vpos = Vector(0, -2, 3.5),
+            vpos = Vector(-0.025, -2, 3.5),
             vang = Angle(90, 2, -90),
         },
         SlideAmount = {
-            vmin = Vector(0, -2, 2),
-            vmax = Vector(0, -2, 5)
+            vmin = Vector(-0.025, -2, 2),
+            vmax = Vector(-0.025, -2, 5)
         },
     },
     {

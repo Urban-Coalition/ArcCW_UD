@@ -420,7 +420,7 @@ SWEP.Attachments = {
     {
         PrintName = "Optic",
         DefaultAttName = "Iron Sights",
-        Slot = {"optic_lp","optic","sniper_optic"},
+        Slot = {"optic_lp","optic","optic_sniper"},
         Bone = "870_parent",
         Offset = {
             vpos = Vector(0, -1.8, 3),

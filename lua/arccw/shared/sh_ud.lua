@@ -59,23 +59,21 @@ ArcCW.UD.InnyOuty = function(wep)
         end
 
         vol = vol / t_influ
-        print(vol)
-        print(1-vol)
+        print(vol, 1-vol)
         if wep.DistantShootSoundOutdoors then
             for _, snd in ipairs(wep.DistantShootSoundOutdoors) do
-                wep:StopSound(snd)
+                EmitSound( snd, wop, -1, CHAN_AUTO, 1, 75, SND_STOP, 100 )
             end
-
             if math.max(0.15, vol) != 0.15 then
-                wep:EmitSound(wep.DistantShootSoundOutdoors[math.random(1, #wep.DistantShootSoundOutdoors)], 75, 100, (vol) * wep.DistantShootSoundOutdoorsVolume or 1, CHAN_AUTO)
+                EmitSound( wep.DistantShootSoundOutdoors[math.random(1, #wep.DistantShootSoundOutdoors)], wop, -1, CHAN_AUTO, (vol) * wep.DistantShootSoundOutdoorsVolume or 1, 75, 0, 100 )
             end
         end
         if wep.DistantShootSoundIndoors then
             for _, snd in ipairs(wep.DistantShootSoundIndoors) do
-                wep:StopSound(snd)
+                EmitSound( snd, wop, -1, CHAN_AUTO, 1, 75, SND_STOP, 100 )
             end
             if math.min(0.85, vol) != 0.85 then
-                wep:EmitSound(wep.DistantShootSoundIndoors[math.random(1, #wep.DistantShootSoundIndoors)], 75, 100, (1-vol) * wep.DistantShootSoundIndoorsVolume or 1, CHAN_AUTO)
+                EmitSound( wep.DistantShootSoundIndoors[math.random(1, #wep.DistantShootSoundIndoors)], wop, -1, CHAN_AUTO, (vol) * wep.DistantShootSoundIndoorsVolume or 1, 75, 0, 100 )
             end
         end
 

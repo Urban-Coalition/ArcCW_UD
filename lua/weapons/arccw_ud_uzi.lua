@@ -264,7 +264,7 @@ SWEP.AttachmentElements = {
         TrueNameChange = "Mini Uzi",
         AttPosMods = {
             [4] = {
-                vpos = Vector(-0.2, 0.5, 12.8),
+                vpos = Vector(-0.2, 0.5, 11.8),
             },
         },
     },
@@ -273,21 +273,21 @@ SWEP.AttachmentElements = {
         NameChange = "IAL-M9",
         TrueNameChange = "Micro Uzi",
         Override_IronSightStruct = {
-            Pos = Vector(-2.869, 0, 2.3),
-            Ang = Angle(-0.95, 0.035, 0),
+            Pos = Vector(-2.869, 3, 1.95),
+            Ang = Angle(-0, 0.035, 0),
             Magnification = 1,
             CrosshairInSights = false
         },
         AttPosMods = {
             [1] = {
-                vpos = Vector(-0.2, -1.2, -2.5),
+                vpos = Vector(-0.2, -1.8, -1.5),
             },
             [4] = {
                 vpos = Vector(-0.2, 0.3, 7.8),
             },
             [6] = {
-                vpos = Vector(0, 0, 7),
-                vang = Angle(90, 0, 0),
+                vpos = Vector(-0.25, 1.4, 6),
+                vang = Angle(90, 0, -90),
             },
         },
     },
@@ -311,8 +311,9 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         if wep.Attachments[1].Installed then
             vm:SetBodygroup(4, 3)
         end
-        if wep.Attachments[5].Installed then
-            vm:SetBodygroup(6, 3)
+        if wep.Attachments[6].Installed then
+            vm:SetBodygroup(6, 0)
+            vm:SetBodygroup(5, 2)
         end
     end
 end
@@ -644,10 +645,10 @@ SWEP.Attachments = {
     {
         PrintName = "Optic",
         DefaultAttName = "Iron Sights",
-        Slot = {"optic_lp"}, -- ,"optic"
+        Slot = {"optic_lp","optic"}, -- ,"optic"
         Bone = "uzi_parent",
         Offset = {
-            vpos = Vector(-0.2, -1.0, -2.5),
+            vpos = Vector(-0.2, -1.6, -1),
             vang = Angle(90, 0, -90),
         },
         VMScale = Vector(1, 1, 1),
@@ -685,7 +686,7 @@ SWEP.Attachments = {
         Slot = {"foregrip"},
         Bone = "uzi_parent",
         Offset = {
-            vpos = Vector(-0.2, 2.4, 8),
+            vpos = Vector(-0.2, 1.85, 6.9), -- nice
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"ud_uzi_rail_fg"},
@@ -696,8 +697,8 @@ SWEP.Attachments = {
         Slot = {"tac_pistol"},
         Bone = "uzi_parent",
         Offset = {
-            vpos = Vector(0.3, 0.9, 12.5),
-            vang = Angle(90, 0, -45),
+            vpos = Vector(-1.35, 0.9,5.8),
+            vang = Angle(90, 0, 180),
         },
         InstalledEles = {"ud_uzi_clamp"}
     },

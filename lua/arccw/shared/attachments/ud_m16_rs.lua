@@ -20,5 +20,5 @@ att.IgnorePickX = true
 --att.M16Sights = 1
 att.IronSight = true
 att.Model = "models/weapons/arccw/atts/sig_rs.mdl"
-att.ModelOffset = Vector(-2,0,0)
-att.ModelScale = Vector(.8,.8,.8)
+att.ModelOffset = Vector(-2, 0, 0)
+att.ModelScale = Vector(.94, .99, .99)

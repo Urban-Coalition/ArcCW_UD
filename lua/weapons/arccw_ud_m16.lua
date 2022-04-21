@@ -216,6 +216,12 @@ SWEP.ShootSoundSilenced = path .. "fire_sup.ogg"
 SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"
 SWEP.ShootDrySound = path .. "dryfire.ogg"
 
+SWEP.DistantShootSoundOutdoors = nil
+SWEP.DistantShootSoundIndoors = nil
+SWEP.DistantShootSoundOutdoorsVolume = 0.2
+SWEP.DistantShootSoundIndoorsVolume = 1
+SWEP.Hook_AddShootSound = ArcCW.UD.InnyOuty
+
 -- Bodygroups --
 
 SWEP.BulletBones = {
@@ -1346,7 +1352,7 @@ SWEP.Attachments = {
         PrintName = "Optic",
         DefaultAttName = "Iron Sights",
         InstalledEles = {"upper_flat"},
-        Slot = {"optic","sniper_optic","ud_m16_rs"},
+        Slot = {"optic","optic_sniper","ud_m16_rs"},
         Bone = "m16_parent",
         Offset = {
             vpos = Vector(0, -1.75, 3),

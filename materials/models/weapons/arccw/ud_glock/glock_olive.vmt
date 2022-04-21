@@ -21,4 +21,6 @@ VertexLitGeneric
 	"$rimlightexponent" 	"66"	
 	"$rimlightboost"	"0.6"
 	"$rimmask" 	"1"
+
+	$color2 "[2 2 2]"
 }

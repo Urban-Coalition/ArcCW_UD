@@ -8,6 +8,8 @@ att.Desc_Neutrals = {
     "ud.m16_fs.2",
 }
 att.Slot = "ud_m16_charm"
+att.Free = true
+att.IgnorePickX = true
 
 att.SortOrder = 999
 att.ExcludeFlags = {"ud_m16_a1","sight_magpul"}

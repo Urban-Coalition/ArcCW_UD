@@ -19,6 +19,10 @@ att.IgnorePickX = true
 
 --att.M16Sights = 1
 att.IronSight = true
+att.Override_IronSightStruct = {
+    Pos = Vector(-2.81, 6, 0.2),
+    Ang = Angle(0.92, 0, 0),
+    Magnification = 1.1,}
 att.Model = "models/weapons/arccw/atts/sig_rs.mdl"
 att.ModelOffset = Vector(-2, 0, 0)
 att.ModelScale = Vector(.94, .99, .99)

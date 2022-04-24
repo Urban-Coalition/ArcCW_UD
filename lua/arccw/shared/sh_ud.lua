@@ -71,6 +71,7 @@ ArcCW.UD.InnyOuty = function(wep)
             end
 
             vol = vol / t_influ
+            vol = math.ease.InOutCubic(vol)
             if dso then
                 for _, snd in ipairs(dso) do
                     wep:StopSound(snd)

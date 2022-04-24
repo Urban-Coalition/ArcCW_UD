@@ -103,3 +103,46 @@ ArcCW.UD.HolsterSounds = {
     {s = common .. "rattle.ogg", t = 0},
     {s = common .. "cloth_6.ogg", t = 0.2},
 }
+
+if CLIENT then
+	matproxy.Add( {
+		name = "UC_ShellColor",
+		init = function( self, mat, values )
+			--self.envMin = values.min
+			--self.envMax = values.max
+			self.col = Vector()
+		end,
+		bind = function( self, mat, ent )
+            local swent = ent
+            if IsValid(swent) then
+                local herg = color_white
+                local r = 255
+                local g = 255
+                local b = 255
+                if swent:IsWeapon() and swent.ArcCW then
+                    herg = swent:GetBuff_Override("Override_UC_ShellColor") or swent.UC_ShellColor or herg
+                    r = herg.r or 255
+                    g = herg.g or 255
+                    b = herg.b or 255
+                elseif IsValid(swent:GetOwner()) and IsValid(swent:GetOwner():GetActiveWeapon()) and swent:GetOwner():GetActiveWeapon().ArcCW then
+                    swent = swent:GetOwner():GetActiveWeapon()
+                    herg = swent:GetBuff_Override("Override_UC_ShellColor") or swent.UC_ShellColor or herg
+                    r = herg.r or 255
+                    g = herg.g or 255
+                    b = herg.b or 255
+                elseif swent then
+                    herg = swent.UC_ShellColor or herg
+                    r = herg.r or 255
+                    g = herg.g or 255
+                    b = herg.b or 255
+                end
+
+                self.col.x = r/255
+                self.col.y = g/255
+                self.col.z = b/255
+                mat:SetVector( "$color2", self.col )
+            end
+		end
+	} )
+
+end

@@ -38,9 +38,20 @@ att.Hook_GetShootSound = function(wep, sound)
     end
 end
 
-att.Hook_GetDistantShootSound = function(wep, distancesound)
-    if distancesound == wep.DistantShootSound then
-        return "weapons/arccw_ud/glock/fire_dist_40.ogg" end
+att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
+    if wep:GetBuff_Override("Silencer") then
+        return { "weapons/arccw_ud/glock/fire_dist_40.ogg" }
+    else
+        return { "weapons/arccw_ud/glock/fire_dist_40.ogg" }
+    end
+end
+
+att.Hook_GetDistantShootSoundIndoors = function(wep, distancesound)
+    if wep:GetBuff_Override("Silencer") then
+        return { "npc/stalker/go_alert2.wav" }
+    else
+        return { "npc/stalker/go_alert2.wav" }
+    end
 end
 
 att.GivesFlags = {"cal_subsonic"}

@@ -41,25 +41,18 @@ att.Hook_GetShootSound = function(wep, sound)
     end
 end
 
-att.Hook_GetDistantShootSound = function(wep, distancesound)
-    if distancesound == wep.DistantShootSound then
-        return "weapons/arccw_ud/glock/fire_dist_10.ogg" end
+att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
+    if wep:GetBuff_Override("Silencer") then
+        return { "weapons/arccw_ud/glock/fire_dist_10.ogg" }
+    else
+        return { "weapons/arccw_ud/glock/fire_dist_10.ogg" }
+    end
 end
 
---[[
-att.Override_ClipSize = 15
-att.Override_ClipSize_Priority = -1
-local slotinfo = {
-    [7] = {"15-Round Mag", "15-Round Mag", nil},
-}
-att.Hook_GetDefaultAttName = function(wep, slot)
-    if slotinfo[slot] then
-        return GetConVar("arccw_truenames"):GetBool() and slotinfo[slot][2] or slotinfo[slot][1]
+att.Hook_GetDistantShootSoundIndoors = function(wep, distancesound)
+    if wep:GetBuff_Override("Silencer") then
+        -- return { "arccw_uo/frag/explosion-close-01.ogg", "arccw_uo/frag/explosion-close-02.ogg" }
+    else
+        -- return { "arccw_uo/frag/explosion-close-01.ogg", "arccw_uo/frag/explosion-close-02.ogg" }
     end
 end
-att.Hook_GetDefaultAttIcon = function(wep, slot)
-    if slotinfo[slot] then
-        return slotinfo[slot][3]
-    end
-end
-]]

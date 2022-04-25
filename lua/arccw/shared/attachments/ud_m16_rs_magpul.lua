@@ -19,6 +19,10 @@ att.IgnorePickX = true
 
 --att.M16Sights = 2
 att.IronSight = true
+att.Override_IronSightStruct = {
+    Pos = Vector(-2.81, 6, 0.5),
+    Ang = Angle(0.6, 0, 0),
+    Magnification = 1.1,}
 att.Model = "models/weapons/arccw/atts/magpul_rs.mdl"
 att.ModelOffset = Vector(-2, 0, 0)
-att.ModelScale = Vector(.8, .8, .8)
+att.ModelScale = Vector(0.875, 0.875, 0.875)

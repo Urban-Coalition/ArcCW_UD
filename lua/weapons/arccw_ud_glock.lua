@@ -976,6 +976,11 @@ SWEP.Attachments = {
         DefaultAttName = "Standard Slide",
         DefaultAttIcon = Material("entities/att/acwatt_ud_glock_slide.png", "smooth mips"),
         Slot = "ud_glock_slide",
+        Bone = "glock_flash",
+        Offset = {
+            vpos = Vector(2.3, -1.5, -31.5), -- Op. CS slide
+            vang = Angle(90, 0, -90),
+        },
     },
     {
         PrintName = "Frame",

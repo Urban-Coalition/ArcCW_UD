@@ -20,6 +20,9 @@ att.Slot = "ud_glock_slide"
 
 att.AutoStats = true
 
+att.LHIK = true
+att.Model = "models/weapons/arccw/atts/classic_lhik.mdl"
+
 att.Mult_HipDispersion = 1.15
 att.Mult_ShootSpeedMult = 0.9
 

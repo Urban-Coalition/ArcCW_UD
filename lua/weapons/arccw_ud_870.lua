@@ -155,8 +155,8 @@ SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-3.04, 5, 2),
-     Ang = Angle(0.1, 0, 0),
+     Pos = Vector(-3.04, -3, 2.08),
+     Ang = Angle(0, 0, 0),
      Magnification = 1.1,
      SwitchToSound = "",
 }
@@ -365,8 +365,8 @@ SWEP.AttachmentElements = {
     },
     ["ud_870_barrel_long"] = {
         Override_IronSightStruct = {
-            Pos = Vector(-3.05, -1, 1.95),
-            Ang = Angle(0, 0, 0),
+            Pos = Vector(-3.04, -3, 1.95),
+            Ang = Angle(0.1, 0, 0),
             Magnification = 1.1,
             CrosshairInSights = false
         },

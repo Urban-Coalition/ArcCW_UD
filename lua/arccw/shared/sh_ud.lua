@@ -8,15 +8,17 @@ ArcCW.UD.ADSReload = function(wep)
 end
 
 -- right forward up
-local traces = {
+local traces1 = {
     {   -- Up
-        -- This is done exclusively pointed upwards. -- Distance = Vector(0, 0, 1024),
+        Distance = Vector(0, 0, 1024),
         Influence = 1,
     },
-    --[[{   -- Forward
-        Distance = Vector(0, 1024, 0),
+}
+local traces2 = {
+    {   -- Up
+        Distance = Vector(0, 0, 1024),
         Influence = 1,
-    },]]
+    },
     {   -- Right
         Distance = Vector(768, 768, 0),
         Influence = 0.5,
@@ -26,13 +28,95 @@ local traces = {
         Influence = 0.5,
     },
 }
+local traces3 = {
+    {   -- Up
+        Distance = Vector(0, 0, 1024),
+        Influence = 1,
+    },
+    {   -- Up Forward
+        Distance = Vector(0, 1024, 384),
+        Influence = 1,
+    },
+    {   -- Up Back
+        Distance = Vector(0, -1024, 384),
+        Influence = 1,
+    },
+    {   -- Forward
+        Distance = Vector(0, 1024, 0),
+        Influence = 1,
+    },
+    {   -- Right
+        Distance = Vector(768, 768, 0),
+        Influence = 0.5,
+    },
+    {   -- Left
+        Distance = Vector(-768, 768, 0),
+        Influence = 0.5,
+    },
+}
+local traces4 = {
+    {   -- Up
+        Distance = Vector(0, 0, 1024),
+        Influence = 1,
+    },
+    {   -- Up Forward
+        Distance = Vector(0, 1024, 384),
+        Influence = 1,
+    },
+    {   -- Up Back
+        Distance = Vector(0, -1024, 384),
+        Influence = 1,
+    },
+    {   -- Forward
+        Distance = Vector(0, 1024, 0),
+        Influence = 1,
+    },
+    {   -- Back
+        Distance = Vector(0, -1024, 0),
+        Influence = 0.5,
+    },
+    {   -- Right
+        Distance = Vector(768, 768, 0),
+        Influence = 0.5,
+    },
+    {   -- Left
+        Distance = Vector(-768, 768, 0),
+        Influence = 0.5,
+    },
+    {   -- Left Back
+        Distance = Vector(-768, -768, 0),
+        Influence = 0.5,
+    },
+    {   -- Right Back
+        Distance = Vector(768, -768, 0),
+        Influence = 0.5,
+    },
+}
+
 local tracebase = {
     start = 0,
     endpos = 0,
     filter = NULL,
 }
+local choice = {
+    [1] = traces1,
+    [2] = traces2,
+    [3] = traces3,
+    [4] = traces4,
+}
+if game.SinglePlayer() and SERVER then
+    util.AddNetworkString("ArcCW_UC_InnyOuty")
+elseif game.SinglePlayer() and CLIENT then
+    net.Receive("ArcCW_UC_InnyOuty", function(len, ply)
+        ArcCW.UD.InnyOuty(net.ReadEntity())
+    end)
+end
 ArcCW.UD.InnyOuty = function(wep)
-    if (game.SinglePlayer() and SERVER) or (!game.SinglePlayer() and CLIENT and wep:GetOwner() == LocalPlayer()) then
+    if (game.SinglePlayer() and SERVER) then
+        net.Start("ArcCW_UC_InnyOuty")
+            net.WriteEntity(wep)
+        net.Send(wep:GetOwner())
+    elseif (CLIENT and wep:GetOwner() == LocalPlayer()) then
         if wep.DistantShootSoundOutdoors and wep.DistantShootSoundIndoors then
             local dso = wep.DistantShootSoundOutdoors
             local dsi = wep.DistantShootSoundIndoors
@@ -50,17 +134,31 @@ ArcCW.UD.InnyOuty = function(wep)
             local wop = wo:EyePos()
             local woa = Angle(0, wo:EyeAngles().y, 0)
             local t_influ = 0
+            local option = GetConVar("arccw_uc_disttrace"):GetInt()
 
-            for _, tin in ipairs(traces) do
+            local fps = 1 / ( RealFrameTime() )
+            if option > 0 then
+                option = choice[option]
+            else
+                if fps > 100 then
+                    option = 4
+                elseif fps > 40 then
+                    option = 3
+                else
+                    option = 2
+                end
+                if GetConVar("developer"):GetInt() > 0 then print("perf" .. option) end
+                option = choice[option]
+            end
+
+            for _, tin in ipairs( option ) do
                 tracebase.start = wop
                 offset = Vector()
-                if _ != 1 then
+                --if !tin.AngleUp then--_ != 1 then
                     offset = offset + (tin.Distance.x * woa:Right())
                     offset = offset + (tin.Distance.y * woa:Forward())
-                    -- No-one shoots Zs. -- offset = offset + (tin.Distance.z * woa:Up())
-                else -- Specific skytrace
-                    offset = offset + (vector_up*1024)
-                end
+                    offset = offset + (tin.Distance.z * woa:Up())
+                --end
                 tracebase.endpos = wop + offset
                 tracebase.filter = wo
                 t_influ = t_influ + (tin.Influence or 1)
@@ -71,6 +169,7 @@ ArcCW.UD.InnyOuty = function(wep)
             end
 
             vol = vol / t_influ
+            if GetConVar("developer"):GetInt() > 0 then print(vol) end
             --vol = math.ease.InOutCubic(vol)
             if dso then
                 for _, snd in ipairs(dso) do
@@ -145,5 +244,22 @@ if CLIENT then
             end
 		end
 	} )
+
+    CreateClientConVar("arccw_uc_disttrace", 0, true, false, "Mode for traces", 1, 4)
+	local function menu_uc(panel)
+        panel:AddControl( "header", { description = "This menu contains options for configuring Urban Coalition weapons and items." } )
+		local combobox = panel:ComboBox( "Trace count", "arccw_uc_disttrace" )--vgui.Create( "DComboBox", panel )
+        combobox:SetSortItems( false )
+		combobox:AddChoice( "Automatic",            0 )
+		combobox:AddChoice( "1-way (performance, not recommended)",  1 )
+		combobox:AddChoice( "3-way (default)",      2 )
+		combobox:AddChoice( "6-way (expensive)",    3 )
+		combobox:AddChoice( "9-way (absurd)",       4 )
+        panel:ControlHelp( "How accurate should the weapon tail calculation be for when used outdoors or indoors?" )
+	end
+
+    hook.Add("PopulateToolMenu", "ARC9_MenuOptions", function()
+        spawnmenu.AddToolMenuOption("Options", "ArcCW", "ArcCW_UC", "Urban Coalition", "", "", menu_uc)
+    end)
 
 end

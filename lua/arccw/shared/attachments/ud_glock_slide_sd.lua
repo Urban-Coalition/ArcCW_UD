@@ -62,7 +62,7 @@ att.Override_Firemodes = {
 }
 
 att.Override_TracerNum = 0
-att.Override_PhysTracerProfile = 0
+att.Override_PhysTracerProfile = 7
 
 att.Hook_TranslateAnimation = function(wep, anim)
     if not wep:GetBuff_Override("Override_ManualAction") then return end

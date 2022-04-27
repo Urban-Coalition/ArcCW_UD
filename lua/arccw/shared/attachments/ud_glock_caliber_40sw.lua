@@ -48,9 +48,9 @@ end
 
 att.Hook_GetDistantShootSoundIndoors = function(wep, distancesound)
     if wep:GetBuff_Override("Silencer") then
-         -- return { "arccw_uo/frag/explosion-close-01.ogg", "arccw_uo/frag/explosion-close-02.ogg" }
+        return { "npc/stalker/go_alert2.wav" }
     else
-         -- return { "arccw_uo/frag/explosion-close-01.ogg", "arccw_uo/frag/explosion-close-02.ogg" }
+        return { "npc/stalker/go_alert2.wav" }
     end
 end
 

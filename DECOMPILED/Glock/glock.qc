@@ -248,6 +248,21 @@ $sequence "reload_empty" {
 	{ event 5004 61 "Back2Idle" }
 }
 
+$sequence "reload_empty_fesiug" {
+	"anims_fesiug\reload_empty.smd"
+	"anims_fesiug\reload_empty_iron.smd"
+	fps 30
+	"ACT_VM_RELOAD" 1
+	blend "sights" 0 1
+	snap
+	{ event 5004 0 "Starts" }
+	{ event 5004 9 "MagOut" }
+	{ event 5004 30 "MagInFail" }
+	{ event 5004 36 "MagIn" }
+	{ event 5004 50 "SlideCloses" }
+	{ event 5004 61 "Back2Idle" }
+}
+
 $sequence "reload_10" {
 	"anims\reload_10.smd"
 	"anims\reload_iron_10.smd"

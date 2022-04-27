@@ -49,10 +49,18 @@ att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
     end
 end
 
+local path = ")^weapons/arccw_ud/glock/"
 att.Hook_GetDistantShootSoundIndoors = function(wep, distancesound)
     if wep:GetBuff_Override("Silencer") then
         -- return { "arccw_uo/frag/explosion-close-01.ogg", "arccw_uo/frag/explosion-close-02.ogg" }
     else
-        -- return { "arccw_uo/frag/explosion-close-01.ogg", "arccw_uo/frag/explosion-close-02.ogg" }
+        return {
+            path .. "fire-dist-int-heavy-01.ogg",
+            path .. "fire-dist-int-heavy-02.ogg",
+            path .. "fire-dist-int-heavy-03.ogg",
+            path .. "fire-dist-int-heavy-04.ogg",
+            path .. "fire-dist-int-heavy-05.ogg",
+            path .. "fire-dist-int-heavy-06.ogg"
+        }
     end
 end

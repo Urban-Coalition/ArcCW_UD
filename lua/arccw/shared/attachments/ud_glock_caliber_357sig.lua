@@ -31,7 +31,7 @@ att.Override_ShellScale = 1
 
 att.Hook_GetShootSound = function(wep, sound)
     if wep:GetBuff_Override("Silencer") then
-        return "weapons/arccw_ud/glock/fire_supp_357.ogg"
+        -- fallback to script
     else
         return "weapons/arccw_ud/glock/fire_357.ogg"
     end
@@ -39,7 +39,7 @@ end
 
 att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
     if wep:GetBuff_Override("Silencer") then
-        return { "weapons/arccw_ud/glock/fire_dist_357.ogg" }
+        -- fallback to script
     else
         return { "weapons/arccw_ud/glock/fire_dist_357.ogg" }
     end
@@ -47,8 +47,8 @@ end
 
 att.Hook_GetDistantShootSoundIndoors = function(wep, distancesound)
     if wep:GetBuff_Override("Silencer") then
-        -- return { "arccw_uo/frag/explosion-close-01.ogg", "arccw_uo/frag/explosion-close-02.ogg" }
+        -- fallback to script
     else
-        -- return { "arccw_uo/frag/explosion-close-01.ogg", "arccw_uo/frag/explosion-close-02.ogg" }
+        -- fallback to script
     end
 end

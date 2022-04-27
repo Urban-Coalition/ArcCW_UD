@@ -245,7 +245,7 @@ if CLIENT then
 		end
 	} )
 
-    CreateClientConVar("arccw_uc_disttrace", 0, true, false, "Mode for traces", 1, 4)
+    CreateClientConVar("arccw_uc_disttrace", 0, true, false, "Mode for traces", 0, 4)
 	local function menu_uc(panel)
         panel:AddControl( "header", { description = "This menu contains options for configuring Urban Coalition weapons and items." } )
 		local combobox = panel:ComboBox( "Trace count", "arccw_uc_disttrace" )--vgui.Create( "DComboBox", panel )

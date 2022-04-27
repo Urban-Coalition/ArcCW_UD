@@ -200,7 +200,7 @@ local ratel = {common .. "rattle1.ogg", common .. "rattle2.ogg", common .. "ratt
 
 -- Animations --
 
-SWEP.Hook_Think = ArcCW.UD.ADSReload
+SWEP.Hook_Think = ArcCW.UC.ADSReload
 
 SWEP.Animations = {
     ["idle"] = {

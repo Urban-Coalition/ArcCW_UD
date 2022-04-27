@@ -177,7 +177,7 @@ SWEP.DistantShootSound = common .. "gl_fire_dist.ogg"
 
 -- Animations --
 
-SWEP.Hook_Think = ArcCW.UD.ADSReload
+SWEP.Hook_Think = ArcCW.UC.ADSReload
 
 SWEP.Animations = {
     ["idle"] = {

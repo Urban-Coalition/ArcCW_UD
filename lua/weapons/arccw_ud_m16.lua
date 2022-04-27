@@ -210,7 +210,7 @@ SWEP.DistantShootSoundOutdoors = nil
 SWEP.DistantShootSoundIndoors = nil
 SWEP.DistantShootSoundOutdoorsVolume = 0.2
 SWEP.DistantShootSoundIndoorsVolume = 1
-SWEP.Hook_AddShootSound = ArcCW.UD.InnyOuty
+SWEP.Hook_AddShootSound = ArcCW.UC.InnyOuty
 
 -- Bodygroups --
 
@@ -818,7 +818,7 @@ SWEP.AttachmentElements = {
 
 -- Animations --
 
-SWEP.Hook_Think = ArcCW.UD.ADSReload
+SWEP.Hook_Think = ArcCW.UC.ADSReload
 
 local rottle = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
 local ratel = {common .. "rattle1.ogg", common .. "rattle2.ogg", common .. "rattle3.ogg"}

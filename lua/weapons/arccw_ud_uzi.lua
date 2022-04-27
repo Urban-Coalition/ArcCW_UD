@@ -321,7 +321,7 @@ end
 
 -- Animations --
 
-SWEP.Hook_Think = ArcCW.UD.ADSReload
+SWEP.Hook_Think = ArcCW.UC.ADSReload
 
 SWEP.Animations = {
     ["ready"] = {

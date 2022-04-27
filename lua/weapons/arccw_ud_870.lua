@@ -183,7 +183,7 @@ SWEP.DistantShootSound = path .. "fire_dist.ogg"
 SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"
 SWEP.ShootDrySound = path .. "dryfire.ogg"
 
-SWEP.Hook_Think = ArcCW.UD.ADSReload
+SWEP.Hook_Think = ArcCW.UC.ADSReload
 
 SWEP.Animations = {
     ["ready"] = {

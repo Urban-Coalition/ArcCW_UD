@@ -229,7 +229,7 @@ SWEP.DistantShootSoundIndoorsSilenced = {
 }
 SWEP.DistantShootSoundOutdoorsVolume = 1
 SWEP.DistantShootSoundIndoorsVolume = 1
-SWEP.Hook_AddShootSound = ArcCW.UD.InnyOuty
+SWEP.Hook_AddShootSound = ArcCW.UC.InnyOuty
 
 -- Bodygroups --
 
@@ -492,7 +492,7 @@ end
 
 -- Animations --
 
-SWEP.Hook_Think = ArcCW.UD.ADSReload
+SWEP.Hook_Think = ArcCW.UC.ADSReload
 
 -- CHAN_ITEM doesn't sound too right
 local ci = CHAN_AUTO

@@ -796,6 +796,28 @@ SWEP.Animations = {
             {s = rottle, t = 1.9},
         },
     },
+    ["reload_empty_flared"] = {
+        Source = "reload_empty",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
+        Time = 65 / 30,
+        MinProgress = 1.5,
+        LastClip1OutTime = 0.7,
+        LHIK = true,
+        LHIKIn = 0.2,
+        LHIKEaseIn = 0.2,
+        LHIKEaseOut = 0.15,
+        LHIKOut = 0.3,
+        SoundTable = {
+            {s = rattel, t = 0},
+            {s = path .. "magout_empty.ogg",        t = 0.13, c = ci},
+            {s = common .. "magpouch_pull_small.ogg", t = 0.35},
+            {s = path .. "magin_new.ogg",         t = 0.55, c = ci},
+            {s = rattel, t = 0.5},
+            {s = common .. "pistol_magdrop.ogg",  t = 0.65},
+            {s = rottle, t = 1.15},
+            {s = path .. "chamber.ogg",      t = 1.39, c = ci},
+        },
+    },
 
     -- 10 Round Reloads --
 

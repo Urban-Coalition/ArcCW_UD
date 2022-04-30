@@ -4,7 +4,7 @@ att.Icon = Material("entities/arc9_att_fs_colta2.png", "mips smooth")
 att.Description = [[A2 style rail-mounted rear sight for picatinny rails.]]
 att.SortOrder = 1
 
-ATT.Model = "models/weapons/arc9/atts/colt_fs.mdl"
+att.Model = "models/weapons/arc9/atts/colt_fs.mdl"
 att.ModelScale = Vector(0.9, 0.9, 0.9)
 att.Slot = {"ud_m16_fs"}
 att.RequireFlags = {"ud_m16_rscompatible"}

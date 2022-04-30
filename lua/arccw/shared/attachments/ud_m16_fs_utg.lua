@@ -9,4 +9,4 @@ att.ModelScale = Vector(0.9, 0.9, 0.9)
 att.Slot = {"ud_m16_fs"}
 att.RequireFlags = {"ud_m16_rscompatible"}
 att.GivesFlags = {"ud_m16_rs"}
-att.Ignore = true
+att.Ignore = false

@@ -633,6 +633,10 @@ SWEP.AttachmentElements = {
                 vpos = Vector(1.41, -.1, 20),
                 vang = Angle(90, 0, 0),
             },
+            [15] = {
+                vpos = Vector(0, -1.75, 21.75), -- 21.75 or 15.75
+                vang = Angle(90, 0, -90),
+            },
         }
     },
     ["hg_m4a1_ris"] = {
@@ -647,6 +651,10 @@ SWEP.AttachmentElements = {
             [6] = {
                 vpos = Vector(-1.41, -.2, 14),
                 vang = Angle(90, 0, 180),
+            },
+            [15] = {
+                vpos = Vector(0, -1.75, 15.75), -- 21.75 or 15.75
+                vang = Angle(90, 0, -90),
             },
         },
     },
@@ -1276,7 +1284,9 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local taclaser = wep:GetBuff_Override("TacLaserPos")
     local rs = wep:GetBuff_Override("IronSight")
 
-    local fs = wep.Attachments[14].Installed == "ud_m16_charm_fs"
+    local thing1 = wep:CheckFlags({}, {"ud_m16_rs"})
+
+    local fs = ( wep.Attachments[14].Installed == "ud_m16_charm_fs" )
 
     local hg = string.Replace(wep.Attachments[2].Installed or "default", "ud_m16_barrel_", "")
     local blen = (barrel_lookup[hg] or barrel_lookup["default"])[1]
@@ -1303,7 +1313,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     end
 
     -- Gas block
-    if has_tag(hg, BTAG_NOFS) then
+    if has_tag(hg, BTAG_NOFS) or thing1 then
         vm:SetBodygroup(6, 5)
     elseif wep.Attachments[1].Installed and !retro and !fs and !rs then
         -- this is handled after elements sets bodygroup so we can do this
@@ -1464,6 +1474,18 @@ SWEP.Attachments = {
         Bone = "m16_parent",
         Offset = {
             vpos = Vector(0.6, 1, 5),
+            vang = Angle(90, 0, -90),
+        },
+        MergeSlots = {15}
+    },
+    {
+        PrintName = "RS",
+        Slot = {"ud_m16_fs"},
+        FreeSlot = true,
+        Hidden = true,
+        Bone = "m16_parent",
+        Offset = {
+            vpos = Vector(0, -1.75, 21.75), -- 21.75 or 15.75
             vang = Angle(90, 0, -90),
         },
     },

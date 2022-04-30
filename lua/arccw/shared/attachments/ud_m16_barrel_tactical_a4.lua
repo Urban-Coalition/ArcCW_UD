@@ -16,3 +16,4 @@ att.Desc_Neutrals = {
 att.Slot = "ud_m16_barrel"
 
 att.ActivateElements = {"hg_m16a4_ris"}
+att.GivesFlags = {"ud_m16_rscompatible"}

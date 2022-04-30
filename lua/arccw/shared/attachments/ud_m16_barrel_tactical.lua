@@ -34,3 +34,4 @@ att.LHIK = true
 att.Model = "models/weapons/arccw/atts/tactical_lhik.mdl"
 
 att.ActivateElements = {"hg_m4a1_ris", "barrel_14"}
+att.GivesFlags = {"ud_m16_rscompatible"}

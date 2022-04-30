@@ -30,6 +30,7 @@ att.Mult_Sway = 0.75
 
 att.Add_BarrelLength = -6
 att.Mult_PhysBulletMuzzleVelocity = 0.729167
+att.GivesFlags = {"ud_m16_rscompatible"}
 
 --[[]
 att.Override_Firemodes = {

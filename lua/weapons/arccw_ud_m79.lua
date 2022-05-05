@@ -205,11 +205,13 @@ SWEP.Animations = {
         LHIKEaseOut = 0.2,
         LHIKOut = 0.5,
         LastClip1OutTime = 1.5,
+        MinProgress = 2.2,
         SoundTable = {
             {s = rottle, t = 0},
             {s = common .. "breaker_open.ogg",  t = 0.3},
             {s = common .. "gl_remove.ogg",  t = 0.9},
             {s = rottle, t = 1.0},
+            {s = common .. "magpouch.ogg", t = 1.4},
             {s = common .. "40mm_casing_1.ogg",  t = 1.6},
             {s = common .. "gl_insert.ogg",  t = 2.0},
             {s = rottle, t = 2.25},

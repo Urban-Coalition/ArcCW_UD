@@ -24,7 +24,7 @@ hook.Add( "PopulateWeapons", "UC_AddWeaponContent", function( pnlContent, tree, 
 	end
 
 	for classname, weapondata in pairs( AllUCWeapons ) do
-		local pack = weapondata.UC_CategoryPack or "Unknown"
+		local pack = weapondata.UC_CategoryPack or "_Unknown"
 		if pack then
 			if !AllUCWeaponsByPack[pack] then AllUCWeaponsByPack[pack] = {} end
 			table.insert(AllUCWeaponsByPack[pack], classname)
@@ -55,7 +55,7 @@ hook.Add( "PopulateWeapons", "UC_AddWeaponContent", function( pnlContent, tree, 
 
 		for pack, class in SortedPairs( AllUCWeaponsByPack ) do
 			local label = vgui.Create("ContentHeader", NodeToUse)
-			label:SetText(pack)
+			label:SetText( string.Right( pack, #pack-1 ) )
 			self.PropPanel:Add(label)
 
 			local weapondata = AllUCWeapons[class]

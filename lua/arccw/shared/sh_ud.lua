@@ -58,9 +58,10 @@ hook.Add( "PopulateWeapons", "UC_AddWeaponContent", function( pnlContent, tree, 
 			label:SetText( string.Right( pack, #pack-1 ) )
 			self.PropPanel:Add(label)
 
-			local weapondata = AllUCWeapons[class]
-			for k, ent in SortedPairsByMemberValue( class, "PrintName" ) do
-				local ent = AllUCWeapons[ent]
+			local alphabeticallist = {}
+			for _, k in pairs(class) do table.insert(alphabeticallist, {AllUCWeapons[k], PrintName = AllUCWeapons[k].PrintName}) end
+			for k, ent in SortedPairsByMemberValue( alphabeticallist, "PrintName" ) do
+				local ent = ent[1]
 				CreateUCWeapon( self.PropPanel, {
 					nicename	= ent.PrintName or ent.ClassName,
 					spawnname	= ent.ClassName,

@@ -162,8 +162,11 @@ SWEP.IronSightStruct = {
      SwitchToSound = "",
 }
 
-SWEP.HolsterPos = Vector(-0.5, -4, -2)
-SWEP.HolsterAng = Angle(3.5, 7, -20)
+SWEP.HolsterPos = Vector(2, 0, -2)
+SWEP.HolsterAng = Angle(-5.5, 20, -20)
+
+SWEP.SprintPos = Vector(-0.5, -4, -2)
+SWEP.SprintAng = Angle(3.5, 7, -20)
 
 SWEP.ActivePos = Vector(0, 0, 0)
 SWEP.ActiveAng = Angle(0, 0, 0)

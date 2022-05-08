@@ -154,8 +154,11 @@ SWEP.ExtraSightDist = 7
 
 -- Ironsights / Customization / Poses --
 
-SWEP.HolsterPos = Vector(-0.5, -4, -3)
-SWEP.HolsterAng = Angle(3.5, 7, -20)
+SWEP.HolsterPos = Vector(2, 0, -2)
+SWEP.HolsterAng = Angle(-5.5, 20, -20)
+
+SWEP.SprintPos = Vector(-0.5, -4, -2)
+SWEP.SprintAng = Angle(3.5, 7, -20)
 
 SWEP.HoldtypeHolstered = "passive"
 SWEP.HoldtypeActive = "ar2"
@@ -233,7 +236,7 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 3, bg = 1}},
         AttPosMods = {
             [3] = {
-                vpos = Vector(0, -2.15, 36.45),
+                vpos = Vector(0, -2.15, 34.5),
             },
         },
     },
@@ -241,7 +244,7 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 3, bg = 2}},
         AttPosMods = {
             [3] = {
-                vpos = Vector(0, -2.15, 29.3),
+                vpos = Vector(0, -2.15, 27.5),
             },
         },
     },
@@ -761,7 +764,7 @@ SWEP.Attachments = {
         Slot = {"muzzle"},
         Bone = "mini14_parent",
         Offset = {
-            vpos = Vector(0, -2.15, 31.1),
+            vpos = Vector(0, -2.15, 30),
             vang = Angle(90, 0, -90),
             wpos = vpos,
         },

@@ -83,7 +83,7 @@ function CreateUCWeapon( container, obj )
 	local icon = vgui.Create( "UCWepSel", container )
 	icon:SetContentType( "weapon" )
 	icon:SetSpawnName( obj.spawnname )
-	icon:SetName( obj.nicename )
+	icon:SetName( obj.nicename, obj.spawnname )
 	icon:SetMaterial( obj.material )
 	icon:SetAdminOnly( obj.admin )
 	icon:SetColor( Color( 135, 206, 250, 255 ) )
@@ -123,6 +123,21 @@ end
 
 if CLIENT then
 
+surface.CreateFont( "UCWepSel", {
+	font = "Bahnschrift",
+	size = 36,
+	weight = 0,
+	blursize = 0,
+	antialias = true,
+} )
+surface.CreateFont( "UCWepSel_Shadow", {
+	font = "Bahnschrift",
+	size = 36,
+	weight = 0,
+	blursize = 10,
+	antialias = true,
+} )
+
 local PANEL = {}
 
 local matOverlay_Normal = Material( "gui/ContentIcon-normal.png" )
@@ -156,8 +171,8 @@ end
 function PANEL:Init()
 
 	self:SetPaintBackground( false )
-	local sw, sh = self:GetParent():GetSize()
-	self:SetSize( 128, 128 ) -- TODO: get real long n har. nvm
+	local sw, sh = self:GetParent():GetParent():GetParent():GetSize()
+	self:SetSize( 384, 128 ) -- TODO: get real long n har. nvm
 	self:SetText( "" )
 	self:SetDoubleClickingEnabled( false )
 
@@ -166,22 +181,31 @@ function PANEL:Init()
 	self.Image:SetSize( 128 - 6, 128 - 6 )
 	self.Image:SetVisible( false )
 
+	self.Label2 = self:Add( "DLabel" )
+	self.Label2:SetWidth( 384 )
+	self.Label2:SetTall( 32 )
+	self.Label2:SetFont("UCWepSel")
+	self.Label2:SetX(self.Label2:GetX()+(128+16)+2)
+	self.Label2:SetY(self.Label2:GetY()+(64-24)+2)
+	self.Label2:SetTextColor( Color(0, 0, 0, 127) )
+
 	self.Label = self:Add( "DLabel" )
-	self.Label:Dock( BOTTOM )
-	self.Label:SetTall( 18 )
-	self.Label:SetContentAlignment( 5 )
-	self.Label:DockMargin( 4, 0, 4, 6 )
+	self.Label:SetWidth( 384 )
+	self.Label:SetTall( 32 )
+	self.Label:SetFont("UCWepSel")
+	self.Label:SetX(self.Label:GetX()+(128+16))
+	self.Label:SetY(self.Label:GetY()+(64-24))
 	self.Label:SetTextColor( color_white )
-	self.Label:SetExpensiveShadow( 1, Color( 0, 0, 0, 200 ) )
 
 	self.Border = 0
 
 end
 
-function PANEL:SetName( name )
+function PANEL:SetName( name, spname )
 
-	self:SetTooltip( name )
+	self:SetTooltip( name .. "\n" .. spname )
 	self.Label:SetText( name )
+	self.Label2:SetText( name )
 	self.m_NiceName = name
 
 end
@@ -203,7 +227,7 @@ function PANEL:SetMaterial( name )
 
 	-- Couldn't find any material.. just return
 	if ( !mat || mat:IsError() ) then
-		return
+		mat = Material( "entities/ucepicfail.png" )
 	end
 
 	self.Image:SetMaterial( mat )
@@ -244,6 +268,22 @@ function PANEL:Paint( w, h )
 		end
 	end
 
+	surface.SetDrawColor( 255, 255, 255, 255 )
+
+	if ( !dragndrop.IsDragging() && ( self:IsHovered() || self.Depressed || self:IsChildHovered() ) ) then
+
+		surface.SetMaterial( Material( "entities/uchover.png" ) )
+		surface.DrawTexturedRect( self.Border, self.Border, w, h )
+		--surface.SetMaterial( matOverlay_Hovered )
+		--self.Label:Hide()
+
+	else
+
+		--surface.SetMaterial( matOverlay_Normal )
+		--self.Label:Show()
+
+	end
+
 	render.PushFilterMag( TEXFILTER.ANISOTROPIC )
 	render.PushFilterMin( TEXFILTER.ANISOTROPIC )
 
@@ -252,21 +292,7 @@ function PANEL:Paint( w, h )
 	render.PopFilterMin()
 	render.PopFilterMag()
 
-	surface.SetDrawColor( 255, 255, 255, 255 )
-
-	if ( !dragndrop.IsDragging() && ( self:IsHovered() || self.Depressed || self:IsChildHovered() ) ) then
-
-		surface.SetMaterial( matOverlay_Hovered )
-		self.Label:Hide()
-
-	else
-
-		surface.SetMaterial( matOverlay_Normal )
-		self.Label:Show()
-
-	end
-
-	surface.DrawTexturedRect( self.Border, self.Border, w-self.Border*2, h-self.Border*2 )
+	--surface.DrawTexturedRect( self.Border, self.Border, w-self.Border*2, h-self.Border*2 )
 
 	if ( self:GetAdminOnly() ) then
 		surface.SetMaterial( matOverlay_AdminOnly )
@@ -326,7 +352,7 @@ function PANEL:Copy()
 
 	copy:SetContentType( self:GetContentType() )
 	copy:SetSpawnName( self:GetSpawnName() )
-	copy:SetName( self.m_NiceName )
+	copy:SetName( self.m_NiceName, self:GetSpawnName() )
 	copy:SetMaterial( self.m_MaterialName )
 	copy:SetNPCWeapon( self:GetNPCWeapon() )
 	copy:SetAdminOnly( self:GetAdminOnly() )

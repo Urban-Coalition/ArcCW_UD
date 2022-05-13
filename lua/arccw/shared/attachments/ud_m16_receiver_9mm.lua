@@ -22,8 +22,8 @@ att.SortOrder = 3
 
 att.Mult_Penetration = 6 / 14
 
-att.Mult_Damage = 0.88
-att.Mult_DamageMin = 0.88
+att.Mult_Damage = 30 / 34
+att.Mult_DamageMin = 17 / 20
 att.Mult_Range = 0.4
 att.Mult_ShootSpeedMult = 1.1
 att.Mult_Recoil = 0.35

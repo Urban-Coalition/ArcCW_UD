@@ -985,12 +985,13 @@ SWEP.Attachments = {
         Slot = {"optic_lp"},
         Bone = "glock_slide",
         Offset = {
-            vpos = Vector(0, -0.55, -0.15),
+            vpos = Vector(-0.025, -0.4, -0.2),
             vang = Angle(90, 0, -90),
         },
-        CorrectivePos = Vector(0, 0, 0.05),
-        VMScale = Vector(1, 1, 1),
-        WMScale = Vector(1.25, 1.25, 1.25),
+        CorrectivePos = Vector(0, 0, 0.02),
+        VMScale = Vector(.9, .9, .9),
+        WMScale = VMScale,
+        --WMScale = Vector(1.25, 1.25, 1.25),
         --InstalledEles = {"ud_glock_rail_optic"},
     },
     {

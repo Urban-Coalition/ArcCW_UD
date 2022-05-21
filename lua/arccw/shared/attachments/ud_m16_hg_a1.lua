@@ -4,14 +4,14 @@ if GetConVar("arccw_truenames"):GetBool() then
 end
 att.AbbrevName = "Triangular Handguard"
 
-att.Description = "Classic handguard issued with the rifle's original models. In comparison to the modern \"ribbed\" handguard, it is more comfortable to hold but prone to slipping."
+att.Description = "Classic handguard issued with the rifle's original models.\nIn comparison to the modern \"ribbed\" handguard, it is more comfortable to hold but prone to slipping."
 att.Slot = "ud_m16_hg"
 att.AutoStats = true
 
 att.Mult_RecoilSide = 1.35
 att.Mult_Recoil = 1.15
 
-att.Mult_SightTime = .9
+att.Mult_SightTime = .875
 att.Mult_HipDispersion = .85
 
 att.LHIK = true

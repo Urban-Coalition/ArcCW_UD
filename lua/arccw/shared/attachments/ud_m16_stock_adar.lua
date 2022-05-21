@@ -31,7 +31,7 @@ att.ActivateElements = {"stock_adar"}
 att.GivesFlags = {"m16_adar"}
 
 local slotinfo = {
-    [7] = {"Intergral Grip", "Integral Grip", att.Icon},
+    [9] = {"Intergral Grip", "Integral Grip", att.Icon},
 }
 att.Hook_GetDefaultAttName = function(wep, slot)
     if slotinfo[slot] then

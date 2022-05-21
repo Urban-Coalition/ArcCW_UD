@@ -16,7 +16,7 @@ att.Free = true
 
 att.Mult_SpeedMult = 1.05
 
-att.Mult_SightTime = 0.5
+att.Mult_SightTime = 0.75
 att.Mult_DrawTime = 0.6
 att.Mult_HolsterTime = 0.6
 

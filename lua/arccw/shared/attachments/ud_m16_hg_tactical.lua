@@ -14,5 +14,5 @@ att.SortOrder = 99
 att.Free = true
 att.IgnorePickX = true
 
-att.ActivateElements = {"hg_tactical"}
+att.ActivateElements = {"mount_tactical"}
 att.GivesFlags = {"ud_m16_rscompatible"}

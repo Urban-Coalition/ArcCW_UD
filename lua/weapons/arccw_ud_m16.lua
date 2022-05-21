@@ -547,7 +547,7 @@ SWEP.AttachmentElements = {
 
     ["mount_14"] = {
         AttPosMods = {
-            [6] = {
+            [8] = {
                 vpos = Vector(0, 0.8, 22),
                 vang = Angle(90, 0, -90),
             },
@@ -555,11 +555,19 @@ SWEP.AttachmentElements = {
     },
     ["mount_11"] = {
         AttPosMods = {
-            [6] = {
+            [8] = {
                 vpos = Vector(1, -0.1, 17.9),
                 vang = Angle(90, 0, 0),
             },
         },
+    },
+    ["mount_tactical"] = {
+        AttPosMods = {
+            [8] = {
+                vpos = Vector(-1.41, -.2, 14),
+                vang = Angle(90, 0, 180),
+            },
+        }
     },
 
     ["barrel_14"] = {
@@ -778,7 +786,7 @@ SWEP.AttachmentElements = {
     },
     ["bravo_dicks_going_fart"] = {
         AttPosMods = {
-            [6] = {
+            [8] = {
                 vpos = Vector(0.25, -1.4, 12),
                 vang = Angle(90, 0, 90),
             },

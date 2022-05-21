@@ -12,5 +12,7 @@ att.Slot = "ud_m16_hg"
 att.SortOrder = 99
 
 att.Free = true
+att.IgnorePickX = true
 
 att.ActivateElements = {"hg_tactical"}
+att.GivesFlags = {"ud_m16_rscompatible"}

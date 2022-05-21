@@ -17,7 +17,7 @@ att.AutoStats = true
 att.Mult_SightTime = 0.85
 
 att.Mult_RPM = 1.361
-att.Mult_Recoil = 1.25
+att.Mult_Recoil = 1.25 / 1.1
 att.Mult_RecoilSide = 1.5
 att.Mult_Range = 0.65
 --att.Mult_Sway = 1.25
@@ -26,7 +26,7 @@ att.Mult_HipDispersion = 0.85
 
 att.Override_Jamming = true
 att.Override_HeatLockout = false
-att.Override_HeatCapacity = 180
+att.Override_HeatCapacity = 120
 att.Override_HeatDissipation = 20
 
 att.A_Hook_Add_SightsDispersion = function(wep, data)
@@ -35,7 +35,7 @@ att.A_Hook_Add_SightsDispersion = function(wep, data)
     end
 end
 
-att.Add_BarrelLength = -4
+att.Add_BarrelLength = -6
 att.Mult_PhysBulletMuzzleVelocity = 0.729167
 
 att.LHIK = true

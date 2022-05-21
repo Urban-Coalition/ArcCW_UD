@@ -21,6 +21,7 @@ att.AutoStats = true
 att.SortOrder = 3
 
 att.Mult_Penetration = 6 / 14
+att.Mult_RPM = 1 / .85
 
 att.Mult_Damage = 30 / 34
 att.Mult_DamageMin = 17 / 20

@@ -1,9 +1,9 @@
-att.PrintName = "10\" Stoner Commando Barrel"
+att.PrintName = "10.5\" Stoner Commando Barrel"
 if GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "10\" CAR-15 Commando Barrel"
+    att.PrintName = "10.5\" CAR-15 Commando Barrel"
 end
 
-att.AbbrevName = "10\" Commando Barrel"
+att.AbbrevName = "10.5\" Commando Barrel"
 att.Description = "Short barrel, technically classified as a submachine gun barrel. Offers high fire rates at the cost of range."
 att.Slot = "ud_m16_blen"
 
@@ -24,3 +24,4 @@ att.Add_BarrelLength = -10
 att.Mult_PhysBulletMuzzleVelocity = 0.729167
 
 att.ActivateElements = {"barrel_11","mount_11"}
+att.GivesFlags = {"blen_11","barrel_short"}

@@ -27,3 +27,4 @@ att.Model = "models/weapons/arccw/atts/m4_lhik.mdl"
 att.DroppedModel = "models/items/boxsrounds.mdl"
 
 att.ActivateElements = {"barrel_14","mount_14"}
+att.GivesFlags = {"blen_14","barrel_short"}

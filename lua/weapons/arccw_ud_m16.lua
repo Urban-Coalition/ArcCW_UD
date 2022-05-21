@@ -880,6 +880,11 @@ SWEP.Animations = {
     },
     ["holster"] = {
         Source = "holster",
+        LHIK = true,
+        LHIKIn = 0.3,
+        LHIKEaseIn = 0.4,
+        LHIKEaseOut = 0.15,
+        LHIKOut = 0.4,
         SoundTable = {
             {s = ratel, t = 0},
             {s = common .. "cloth_6.ogg", t = 0.2},
@@ -888,6 +893,11 @@ SWEP.Animations = {
     ["holster_empty"] = {
         Source = "holster_empty",
         Time = 20 / 30,
+        LHIK = true,
+        LHIKIn = 0.3,
+        LHIKEaseIn = 0.4,
+        LHIKEaseOut = 0.15,
+        LHIKOut = 0.4,
         SoundTable = {
             {s = ratel, t = 0},
             {s = common .. "cloth_6.ogg", t = 0.2},

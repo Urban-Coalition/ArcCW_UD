@@ -16,3 +16,6 @@ att.Mult_SpeedMult = 1.05
 att.Mult_SightedSpeedMult = 1.2
 att.Mult_HipDispersion = 1.1
 att.Mult_Recoil = 1.175
+
+att.LHIK = true
+att.Model = "models/weapons/arccw/atts/ru556_lhik.mdl"

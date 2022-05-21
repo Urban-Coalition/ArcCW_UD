@@ -5,7 +5,7 @@ if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "M16A3 Automatic Receiver"
 end
 
-att.Description = "A receiver that allows automatic fire. Comes in semi-auto-safe configuration."
+att.Description = "A fire control group that supports fully automatic fire. Comes in semi-auto-safe configuration."
 
 att.Icon = Material("entities/att/acwatt_ud_m16_receiver_auto.png", "smooth mips")
 att.Desc_Pros = {

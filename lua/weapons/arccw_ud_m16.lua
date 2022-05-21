@@ -275,183 +275,184 @@ local supp_fcg_lookup = {
     [FCG_SEMI] = "SS",
     [FCG_BOLT] = "SM",
 }
-
+--[[
 SWEP.Hook_NameChange = function(wep, name)
-    -- local trueNames = GetConVar("arccw_truenames"):GetBool()
-    -- local flat = wep.Attachments[1].Installed and !wep:GetBuff_Override("TopMount")
+    
+    local trueNames = GetConVar("arccw_truenames"):GetBool()
+    local flat = wep.Attachments[1].Installed and !wep:GetBuff_Override("TopMount")
 
-    -- local hg = string.Replace(wep.Attachments[2].Installed or "default", "ud_m16_barrel_", "")
-    -- local blen = (hg_lookup[hg] or hg_lookup["default"])
+    local hg = string.Replace(wep.Attachments[2].Installed or "default", "ud_m16_barrel_", "")
+    local blen = (hg_lookup[hg] or hg_lookup["default"])
 
-    -- local rn = string.Replace(wep.Attachments[4].Installed or "default", "ud_m16_receiver_", "")
-    -- local r_fg, r_cal = unpack(receiver_lookup[rn] or hg_lookup["default"])
+    local rn = string.Replace(wep.Attachments[4].Installed or "default", "ud_m16_receiver_", "")
+    local r_fg, r_cal = unpack(receiver_lookup[rn] or hg_lookup["default"])
 
-    -- wep.Trivia_Desc = origDesc
-    -- wep.Trivia_Mechanism = "Gas-Operated Rotating Bolt"
-    -- wep.Trivia_Country = "USA"
+    wep.Trivia_Desc = origDesc
+    wep.Trivia_Mechanism = "Gas-Operated Rotating Bolt"
+    wep.Trivia_Country = "USA"
 
-    -- -- service loadouts
-    -- if hg == "wood" or hg == "wood_short" then
-    --     wep.Trivia_Desc = ncrDesc
-    --     wep.Trivia_Country = "New California Republic"
-    --     if r_cal == CAL_9MM then
-    --         return "Service SMG"
-    --     elseif blen == BLEN_14 then
-    --         return "Service Carbine"
-    --     end
-    --     return "Service Rifle"
-    -- end
+    -- service loadouts
+    if hg == "wood" or hg == "wood_short" then
+        wep.Trivia_Desc = ncrDesc
+        wep.Trivia_Country = "New California Republic"
+        if r_cal == CAL_9MM then
+            return "Service SMG"
+        elseif blen == BLEN_14 then
+            return "Service Carbine"
+        end
+        return "Service Rifle"
+    end
 
-    -- if trueNames then
-    --     local model = "M"
-    --     local alt = "16A2"
-    --     local post = ""
+    if trueNames then
+        local model = "M"
+        local alt = "16A2"
+        local post = ""
 
-    --     local sil = wep:GetBuff_Override("SDBarrel")
-    --     local silHandled = !sil
+        local sil = wep:GetBuff_Override("SDBarrel")
+        local silHandled = !sil
 
-    --     -------------------------------
-    --     -- Caliber Variants
-    --     -------------------------------
-    --     if r_cal == CAL_9MM then
-    --         model = "R0"
-    --         if flat then
-    --             alt = "991"
-    --         else
-    --             alt = "635"
-    --         end
-    --         wep.Trivia_Desc = smgDesc
-    --         wep.Trivia_Mechanism = "Blowback"
-    --     elseif r_cal == CAL_BLK then
-    --         model = "AR"
-    --         alt = "-15"
-    --         post = " .300 BLK"
-    --         wep.Trivia_Desc = "Aftermarket automatic variant of the M16 rifle. The .300 Blackout cartridge has a ballistic performance more akin to the 7.62x39mm Soviet cartridge, with a similarly sized projectile but shorter effective range."
-    --     -------------------------------
-    --     -- Bolt/Semi Variants
-    --     -------------------------------
-    --     elseif r_fg == FCG_BOLT then
-    --         model = "AR"
-    --         alt = "-15"
-    --         post = "GB"
-    --         wep.Trivia_Desc = "AR-15 style rifles are a class of rifles linked to the M16, normally with a semi-automatic fire group for the civilian market. This one, however, has been neutered by authority of the British crown with a manual-action receiver. Bit cringe, innit?"
-    --     elseif r_fg == FCG_SEMI then
-    --         model = "AR"
-    --         alt = "-15"
-    --         wep.Trivia_Desc = "Semi-automatic variant of the M16 series of rifles, produced for the civilian market. Wildly popular in the United States, this rifle can be seen in the hands of hobbyists, hunters and mass shooters alike. Well-rounded gun with no major downsides."
-    --         if r_cal == CAL_BEO then
-    --             post = " .50 Beowulf"
-    --             wep.Trivia_Desc = "Aftermarket semi-automatic variant of the M16 rifle firing an oversized magnum cartridge. Provides extremely high stopping power at close range."
-    --         elseif flat and hg == "adar" then
-    --             model = "ADAR "
-    --             alt = "2-15"
-    --         end
-    --     -------------------------------
-    --     -- Barrel Variants
-    --     -------------------------------
-    --     elseif hg == "m4" or hg == "tactical" then
-    --         if r_fg == FCG_AUTO then
-    --             if !flat then
-    --                 model = "XM"
-    --                 alt = "4"
-    --             else
-    --                 alt = "4A1"
-    --             end
-    --         else
-    --             alt = "4"
-    --             post = " Carbine"
-    --         end
-    --         --post = " Carbine"
-    --         wep.Trivia_Desc = m4Desc
-    --     -------------------------------
-    --     -- Auto/Semi Variants
-    --     -------------------------------
-    --     elseif r_fg == FCG_3BST and !sil then
-    --         if blen == BLEN_10 then
-    --             post = " Commando"
-    --         elseif flat then
-    --             alt = "16A4"
-    --             wep.Trivia_Desc = "Fourth and the most recent generation of the M16 rifle. Notable changes include a flat top and RIS handguard allowing for easy installation of optics and other attachments. Well-rounded gun with no major downsides."
-    --         end
-    --     elseif r_fg == FCG_AUTO then
-    --         model = "M"
-    --         alt = "16A3"
-    --         wep.Trivia_Desc = m4Desc
-    --         if hg == "tactical_a4" and flat then
-    --             model = "R0"
-    --             alt = "901"
-    --         elseif hg == "m605" then
-    --             alt = "605"
-    --         elseif blen == BLEN_10 and !sil then
-    --             if flat then
-    --                 model = "Mk 18"
-    --                 alt = " Mod 0"
-    --             else
-    --                 model = "CAR"
-    --                 alt = "-15"
-    --             end
-    --             if flat then
-    --                 wep.Trivia_Desc = m4Desc
-    --             else
-    --                 wep.Trivia_Desc = "Carbine variant of the M16 rifle, short enough to be classified as a submachine gun. Its features influenced the US Army's interest in the M4 Carbine, which went on to become their new standard rifle. Due to the small barrel, rifles of this family have high maneuverability but poor range compared to their parent platform."
-    --             end
-    --         elseif flat and blen < BLEN_20 then
-    --             alt = "4A1"
-    --         elseif rn == "a1" then
-    --             alt = "16A1"
-    --             wep.Trivia_Desc = "Second generation of America's iconic military rifle. Developed to address problems with the original M16, which suffered notoriously frequent jamming that could get its wielder killed. A well-rounded rifle, but difficult to control without trigger discipline - something the A2 model eventually addressed."
-    --         else
-    --             wep.Trivia_Desc = "Variant of the M16A2 with the original full-automatic trigger group, relegated to niche roles in the US Army. Well-rounded gun with no major downsides."
-    --         end
-    --     end
+        -------------------------------
+        -- Caliber Variants
+        -------------------------------
+        if r_cal == CAL_9MM then
+            model = "R0"
+            if flat then
+                alt = "991"
+            else
+                alt = "635"
+            end
+            wep.Trivia_Desc = smgDesc
+            wep.Trivia_Mechanism = "Blowback"
+        elseif r_cal == CAL_BLK then
+            model = "AR"
+            alt = "-15"
+            post = " .300 BLK"
+            wep.Trivia_Desc = "Aftermarket automatic variant of the M16 rifle. The .300 Blackout cartridge has a ballistic performance more akin to the 7.62x39mm Soviet cartridge, with a similarly sized projectile but shorter effective range."
+        -------------------------------
+        -- Bolt/Semi Variants
+        -------------------------------
+        elseif r_fg == FCG_BOLT then
+            model = "AR"
+            alt = "-15"
+            post = "GB"
+            wep.Trivia_Desc = "AR-15 style rifles are a class of rifles linked to the M16, normally with a semi-automatic fire group for the civilian market. This one, however, has been neutered by authority of the British crown with a manual-action receiver. Bit cringe, innit?"
+        elseif r_fg == FCG_SEMI then
+            model = "AR"
+            alt = "-15"
+            wep.Trivia_Desc = "Semi-automatic variant of the M16 series of rifles, produced for the civilian market. Wildly popular in the United States, this rifle can be seen in the hands of hobbyists, hunters and mass shooters alike. Well-rounded gun with no major downsides."
+            if r_cal == CAL_BEO then
+                post = " .50 Beowulf"
+                wep.Trivia_Desc = "Aftermarket semi-automatic variant of the M16 rifle firing an oversized magnum cartridge. Provides extremely high stopping power at close range."
+            elseif flat and hg == "adar" then
+                model = "ADAR "
+                alt = "2-15"
+            end
+        -------------------------------
+        -- Barrel Variants
+        -------------------------------
+        elseif hg == "m4" or hg == "tactical" then
+            if r_fg == FCG_AUTO then
+                if !flat then
+                    model = "XM"
+                    alt = "4"
+                else
+                    alt = "4A1"
+                end
+            else
+                alt = "4"
+                post = " Carbine"
+            end
+            --post = " Carbine"
+            wep.Trivia_Desc = m4Desc
+        -------------------------------
+        -- Auto/Semi Variants
+        -------------------------------
+        elseif r_fg == FCG_3BST and !sil then
+            if blen == BLEN_10 then
+                post = " Commando"
+            elseif flat then
+                alt = "16A4"
+                wep.Trivia_Desc = "Fourth and the most recent generation of the M16 rifle. Notable changes include a flat top and RIS handguard allowing for easy installation of optics and other attachments. Well-rounded gun with no major downsides."
+            end
+        elseif r_fg == FCG_AUTO then
+            model = "M"
+            alt = "16A3"
+            wep.Trivia_Desc = m4Desc
+            if hg == "tactical_a4" and flat then
+                model = "R0"
+                alt = "901"
+            elseif hg == "m605" then
+                alt = "605"
+            elseif blen == BLEN_10 and !sil then
+                if flat then
+                    model = "Mk 18"
+                    alt = " Mod 0"
+                else
+                    model = "CAR"
+                    alt = "-15"
+                end
+                if flat then
+                    wep.Trivia_Desc = m4Desc
+                else
+                    wep.Trivia_Desc = "Carbine variant of the M16 rifle, short enough to be classified as a submachine gun. Its features influenced the US Army's interest in the M4 Carbine, which went on to become their new standard rifle. Due to the small barrel, rifles of this family have high maneuverability but poor range compared to their parent platform."
+                end
+            elseif flat and blen < BLEN_20 then
+                alt = "4A1"
+            elseif rn == "a1" then
+                alt = "16A1"
+                wep.Trivia_Desc = "Second generation of America's iconic military rifle. Developed to address problems with the original M16, which suffered notoriously frequent jamming that could get its wielder killed. A well-rounded rifle, but difficult to control without trigger discipline - something the A2 model eventually addressed."
+            else
+                wep.Trivia_Desc = "Variant of the M16A2 with the original full-automatic trigger group, relegated to niche roles in the US Army. Well-rounded gun with no major downsides."
+            end
+        end
 
-    --     if hg == "lmg" and r_fg < FCG_SEMI  then
-    --         --alt = string.Left(alt, #alt == 3 and #alt or 2)
-    --         model = "Colt"
-    --         alt = " LMG"
-    --         wep.Trivia_Desc = "Configuration of the M16 designed for a light machine gun role, used vaguely within the Marine Corps before the adoption of the Minimi. Heavier than the standard platform, but the integral bipod can be deployed onto surfaces for excellent recoil control."
-    --     elseif hg == "fpw" then
-    --         model = "M"
-    --         alt = "231 FPW"
-    --         if r_cal == CAL_9MM then
-    --             post = " 9mm"
-    --         end
-    --     end
+        if hg == "lmg" and r_fg < FCG_SEMI  then
+            --alt = string.Left(alt, #alt == 3 and #alt or 2)
+            model = "Colt"
+            alt = " LMG"
+            wep.Trivia_Desc = "Configuration of the M16 designed for a light machine gun role, used vaguely within the Marine Corps before the adoption of the Minimi. Heavier than the standard platform, but the integral bipod can be deployed onto surfaces for excellent recoil control."
+        elseif hg == "fpw" then
+            model = "M"
+            alt = "231 FPW"
+            if r_cal == CAL_9MM then
+                post = " 9mm"
+            end
+        end
 
-    --     if !silHandled then
-    --         if supp_cal_lookup[r_cal] then
-    --             alt = supp_cal_lookup[r_cal]
-    --             silHandled = true
-    --         end
-    --         if supp_fcg_lookup[r_fg] then
-    --             alt = supp_fcg_lookup[r_fg]
-    --             silHandled = true
-    --         end
-    --         if !silHandled then alt = alt .. "-S" end
-    --     end
+        if !silHandled then
+            if supp_cal_lookup[r_cal] then
+                alt = supp_cal_lookup[r_cal]
+                silHandled = true
+            end
+            if supp_fcg_lookup[r_fg] then
+                alt = supp_fcg_lookup[r_fg]
+                silHandled = true
+            end
+            if !silHandled then alt = alt .. "-S" end
+        end
 
-    --     return model .. alt .. post
-    -- else
-    --     -- work on this in a few
-    --     if false then
-    --         return "AMCAR-NG"
-    --     elseif false then
-    --         return "AMSAS-12"
-    --     elseif false then
-    --         return "AMPAW-9"
-    --     elseif false then
-    --         return "UKCAR .223"
-    --     elseif false then
-    --         return "RUCAR 225"
-    --     elseif false then
-    --         return "AMRA1"
-    --     else
-    --         return "AMCAR"
-    --     end
-    -- end
+        return model .. alt .. post
+    else
+        -- work on this in a few
+        if false then
+            return "AMCAR-NG"
+        elseif false then
+            return "AMSAS-12"
+        elseif false then
+            return "AMPAW-9"
+        elseif false then
+            return "UKCAR .223"
+        elseif false then
+            return "RUCAR 225"
+        elseif false then
+            return "AMRA1"
+        else
+            return "AMCAR"
+        end
+    end
 end
-
-SWEP.DefaultBodygroups = "000000000010000"
+]]
+SWEP.DefaultBodygroups = "000000000000100"
 
 SWEP.AttachmentElements = {
 
@@ -1399,6 +1400,80 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         vm:SetBodygroup(2, 8)
     end
 end
+
+SWEP.Hook_NameChange = function(wep, name)
+    local trueNames = GetConVar("arccw_truenames"):GetBool()
+    local flat = wep.Attachments[1].Installed and !wep:GetBuff_Override("TopMount")
+
+    local barrel = string.Replace(wep.Attachments[2].Installed or "20in","ud_m16_barrel_","")
+    local barr = barrLookup[barrel]
+    local hg = string.Replace(wep.Attachments[3].Installed or "default","ud_m16_hg_","")
+    local upr = string.Replace(wep.Attachments[5].Installed or "default","ud_m16_receiver_","")
+    local lwr = string.Replace(wep.Attachments[6].Installed or "default","ud_m16_receiver_","")
+
+    if upr == "9mm" then
+        if flat then
+            return trueNames and "R0991" or "AMSMG"
+        end
+        return trueNames and "R0635" or "AMSMG"
+    elseif upr == "50beo" then
+        return trueNames and "AR-15 .50" or "AMCAR-NG .50"
+    elseif upr == "300blk" then
+        return trueNames and "AR-15 .300" or "AMCAR-300"
+
+    elseif lwr == "auto" then
+        if barr == 0 then
+            if hg == "lmg" then
+                return trueNames and "Colt LMG" or "AMSAW"
+            elseif flat and hg == "tactical" then
+                return trueNames and "R0901" or "AMR-A"
+            end
+            return trueNames and "M16A3" or "AMR-A"
+        elseif barr == 1 then
+            if flat then
+                return trueNames and "M4A1" or "CAR-4"
+            end
+            return trueNames and "XM4" or "CAR-4"
+        else
+            if flat then
+                return trueNames and "Mk 18 Mod 0" or "M4A4"
+            end
+            return trueNames and "CAR-15" or "Stoner Commando"
+        end
+    elseif lwr == "semi" then
+        if hg == "wood" then
+            if barr == 0 then
+                return "Service Rifle"
+            end
+            return "Service Carbine"
+        end
+        return trueNames and "AR-15" or "AMCAR-NG"
+    elseif lwr == "a1" then
+        if barr == 0 then
+            return trueNames and "M16A1" or "AMRA1"
+        elseif barr == 1 then
+            return trueNames and "M605" or "AMRA1 Prototype"
+        end
+        return trueNames and "CAR-15" or "Stoner Commando"
+    elseif lwr == "fpw" then
+        return trueNames and "M231 FPW" or "AMFPW"
+    elseif lwr == "cali" then
+        return trueNames and "AR-15GB" or "UKCAR"
+    else
+        if barr == 0 and flat then
+            return trueNames and "M16A4" or "AMR-4"
+        elseif barr == 1 then
+            return trueNames and "M4 Carbine" or "AMCAR"
+        elseif barr == 2 then
+            return trueNames and "M16 Commando" or "AMCAR"
+        end
+    end
+
+
+    return trueNames and "M16A2" or "AMCAR"
+end
+
+
 
 SWEP.Attachments = {
     {

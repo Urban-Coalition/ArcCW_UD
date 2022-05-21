@@ -476,6 +476,9 @@ SWEP.AttachmentElements = {
     ["ud_m16_mag_50beo"] = {
         VMBodygroups = {{ind = 2, bg = 8}},
     },
+    ["ud_m16_mag_50beo_12"] = {
+        VMBodygroups = {{ind = 2, bg = 0}},
+    },
 
     ["upper_flat"] = {
         -- handled by code
@@ -1372,6 +1375,11 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         end
     else
         vm:SetBodygroup(10,0)
+    end
+
+    -- .50 Beowulf magazines
+    if wep.Attachments[4].Installed == "ud_m16_receiver_50beo" and !wep.Attachments[9].Installed then
+        vm:SetBodygroup(2, 8)
     end
 end
 

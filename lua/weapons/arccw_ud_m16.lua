@@ -1326,7 +1326,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     -- Gas block
     if barrel == "fpw" then
         vm:SetBodygroup(6,5)
-    elseif optic then
+    else
         local gbPos = hgLookup[hg][3]
         local flat = (gbPos == 3 or (optic and wep.Attachments[16].Installed ~= "ud_m16_charm_fs") and !wep:GetBuff_Override("IronSight")) and 1 or 0
 

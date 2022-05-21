@@ -1,5 +1,5 @@
 att.PrintName = "AMCAR-NG Automatic Receiver"
-att.AbbrevName = "Sporter Receiver"
+att.AbbrevName = "Sporter Lower"
 
 if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "AR-15 Sporter Receiver"
@@ -15,7 +15,7 @@ att.Desc_Cons = {
 }
 att.Desc_Neutrals = {
 }
-att.Slot = "ud_m16_receiver"
+att.Slot = "ud_m16_fcg"
 
 att.AutoStats = true
 att.SortOrder = -1

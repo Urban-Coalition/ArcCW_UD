@@ -1,8 +1,8 @@
-att.PrintName = "AMCAR-NG .50 Beowulf Receiver"
-att.AbbrevName = ".50 Beowulf Receiver"
+att.PrintName = "AMCAR-NG .50 Beowulf Upper Receiver"
+att.AbbrevName = ".50 Beowulf Upper"
 
 if GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "AR-15 .50 Beowulf Receiver"
+    att.PrintName = "AR-15 .50 Beowulf Upper Receiver"
 end
 
 att.SortOrder = -1
@@ -81,7 +81,7 @@ att.Hook_SelectReloadAnimation = function(wep, anim)
 end
 
 local slotinfo = {
-    [9] = {"7-Round Mag", "7-Round Mag", Material("entities/att/acwatt_ud_m16_mag_15.png", "smooth mips")},
+    [11] = {"7-Round Mag", "7-Round Mag", Material("entities/att/acwatt_ud_m16_mag_15.png", "smooth mips")},
 }
 att.Hook_GetDefaultAttName = function(wep, slot)
     if slotinfo[slot] then
@@ -94,4 +94,4 @@ att.Hook_GetDefaultAttIcon = function(wep, slot)
     end
 end
 
-att.GivesFlags = {"m16_50beo"}
+att.GivesFlags = {"m16_50beo","m16_nolower"}

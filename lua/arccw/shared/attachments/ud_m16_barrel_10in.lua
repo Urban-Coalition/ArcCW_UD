@@ -1,6 +1,6 @@
 att.PrintName = "10.5\" Stoner Commando Barrel"
 if GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "10.5\" CAR-15 Commando Barrel"
+    att.PrintName = "10.5\" Colt Commando Barrel"
 end
 
 att.AbbrevName = "10.5\" Commando Barrel"
@@ -25,3 +25,4 @@ att.Mult_PhysBulletMuzzleVelocity = 0.729167
 
 att.ActivateElements = {"barrel_11","mount_11"}
 att.GivesFlags = {"blen_11","barrel_short"}
+att.ExcludeFlags = {"hg_no11"}

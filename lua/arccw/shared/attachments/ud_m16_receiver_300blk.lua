@@ -1,15 +1,15 @@
-att.PrintName = "AMCAR .300 BLK Receiver"
-att.AbbrevName = ".300 BLK Receiver"
+att.PrintName = "AMCAR .300 Blackout Upper Receiver"
+att.AbbrevName = ".300 BLK Upper"
 
 if GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "AR-15 .300 BLK Receiver"
+    att.PrintName = "AR-15 .300 Blackout Upper Receiver"
 end
 
 att.Description = "Automatic receiver modified to take the .300 Blackout cartridge. While identical to 5.56x45mm in diameter, this cartridge carries a much larger projectile, which improves stopping power at the cost of ballistic performance."
 
 att.Icon = Material("entities/att/acwatt_ud_m16_receiver_auto.png", "smooth mips")
 att.Desc_Pros = {
-    "uc.auto",
+    --"uc.auto",
     --"ud.flattop"
 }
 att.Desc_Cons = {
@@ -39,17 +39,17 @@ att.Override_PhysBulletMuzzleVelocity = 310
 att.Override_ShellModel = "models/weapons/arccw/uc_shells/300blk.mdl"
 att.Override_ShellScale = 1
 
-att.Override_Firemodes = {
-    {
-        Mode = 2,
-    },
-    {
-        Mode = 1,
-    },
-    {
-        Mode = 0
-    }
-}
+-- att.Override_Firemodes = {
+--     {
+--         Mode = 2,
+--     },
+--     {
+--         Mode = 1,
+--     },
+--     {
+--         Mode = 0
+--     }
+-- }
 
 att.GivesFlags = {"m16_auto"}
 att.ExcludeFlags = {"m16_noauto"}

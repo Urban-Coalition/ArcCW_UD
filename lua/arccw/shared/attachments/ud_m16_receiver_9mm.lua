@@ -1,14 +1,14 @@
-att.PrintName = "AMPAW-9 9x19mm Receiver"
-att.AbbrevName = "9x19mm Receiver"
+att.PrintName = "AMPAW-9 9x19mm Upper Receiver"
+att.AbbrevName = "9x19mm Upper"
 
 if GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "R0635 9x19mm Receiver"
+    att.PrintName = "R0635 9x19mm Upper Receiver"
 end
 
 att.Icon = Material("entities/att/acwatt_ud_m16_receiver_9mm.png", "smooth mips")
 att.Description = "A converted automatic receiver that fires 9x19mm Parabellum rounds. The smaller caliber drastically reduces recoil, but has much less range and is less accurate."
 att.Desc_Pros = {
-    "uc.auto",
+    --"uc.auto",
 }
 att.Desc_Cons = {
 }
@@ -38,17 +38,17 @@ att.Override_ClipSize = 20
 att.Mult_HeatCapacity = 1.5
 
 att.Override_Firemodes_Priority = 0.5
-att.Override_Firemodes = {
-    {
-        Mode = 2,
-    },
-    {
-        Mode = 1,
-    },
-    {
-        Mode = 0
-    }
-}
+-- att.Override_Firemodes = {
+--     {
+--         Mode = 2,
+--     },
+--     {
+--         Mode = 1,
+--     },
+--     {
+--         Mode = 0
+--     }
+-- }
 
 att.GivesFlags = {"m16_auto", "m16_9mm"}
 att.ExcludeFlags = {"m16_noauto"}
@@ -73,7 +73,7 @@ att.Hook_GetDistantShootSound = function(wep, distancesound)
 end
 
 local slotinfo = {
-    [9] = {"20-Round Mag", "20-Round Mag", Material("entities/att/acwatt_ud_m16_9mm_20.png", "smooth mips")},
+    [11] = {"20-Round Mag", "20-Round Mag", Material("entities/att/acwatt_ud_m16_9mm_20.png", "smooth mips")},
 }
 att.Hook_GetDefaultAttName = function(wep, slot)
     if slotinfo[slot] then

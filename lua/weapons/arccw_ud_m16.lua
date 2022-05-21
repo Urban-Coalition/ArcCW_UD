@@ -586,6 +586,18 @@ SWEP.AttachmentElements = {
             },
         }
     },
+    ["barrel_fpw"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 2},
+            {ind = 6, bg = 5},
+        },
+        AttPosMods = {
+            [4] = {
+                vpos = Vector(0, -0.07, 21.3),
+                vang = Angle(90, 0, -90),
+            },
+        }
+    },
     ["barrel_11_ru556"] = {
         VMBodygroups = {
             {ind = 4, bg = 4},
@@ -764,11 +776,6 @@ SWEP.AttachmentElements = {
             },
         },
     },
-    ["m16_strap"] = {
-        VMBodygroups = {
-             {ind = 13, bg = 1},
-        },
-    },
     ["bravo_dicks_going_fart"] = {
         AttPosMods = {
             [6] = {
@@ -804,6 +811,11 @@ SWEP.AttachmentElements = {
         VMBodygroups = {
             {ind = 5, bg = 0},
         }
+    },
+    ["m16_strap"] = {
+        VMBodygroups = {
+             {ind = 13, bg = 1},
+        },
     },
 }
 
@@ -1261,27 +1273,39 @@ SWEP.Animations = {
 }
 
 local hgLookup = {
-    ["default"]     = {0,4},
-    ["tactical"]    = {2,5},
-    ["a1"]          = {1,1},
-    ["lmg"]          = {3,3},
-    ["fpw"]          = {6,6},
-    ["ru556"]          = {7,7},
-    ["adar"]          = {8,8},
+    ["default"]     = {0,4,0},
+    ["tactical"]    = {2,5,0},
+    ["a1"]          = {1,1,1},
+    ["lmg"]          = {3,3,1},
+    ["fpw"]          = {6,6,0},
+    ["ru556"]          = {7,7,3},
+    ["adar"]          = {8,8,2},
+}
+-- Structure: 20in appearance, 14/11in appearance, gas block mode
+-- Gas block modes: 0 standard, 1 always at 20" position, 2 at ADAR position when short, 3 always LP
+
+local barrLookup = {
+    ["20in"] = 0,
+    ["14in"] = 1,
+    ["fpw"] = 1,
+    ["10in"] = 2,
 }
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     if !IsValid(vm) then return end
     
-    local barr = string.Replace(wep.Attachments[2].Installed or "20in","ud_m16_barrel_","")
+    local barrel = string.Replace(wep.Attachments[2].Installed or "20in","ud_m16_barrel_","")
+    local barr = barrLookup[barrel]
     local hg = string.Replace(wep.Attachments[3].Installed or "default","ud_m16_hg_","")
 
-    local muzz = wep.Attachments[4].Installed ~= nil
-    local laser = wep.Attachments[8].Installed ~= nil
+    local optic = wep.Attachments[1].Installed
+    local muzz = wep.Attachments[4].Installed
+    local laser = wep.Attachments[8].Installed
     local retro = wep:GetBuff_Override("TopMount")
 
-    if wep.Attachments[1].Installed then
+    -- Retro rail
+    if optic then
         if retro then
             -- Raised rail (retro)
             vm:SetBodygroup(3, retro)
@@ -1292,17 +1316,34 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         end
     end
 
-
-    if barr == "20in" then
+    -- Dynamic handguard
+    if barr == 0 then
         vm:SetBodygroup(5,hgLookup[hg][1])
     else
         vm:SetBodygroup(5,hgLookup[hg][2])
     end
 
+    -- Gas block
+    if barrel == "fpw" then
+        vm:SetBodygroup(6,5)
+    elseif optic then
+        local gbPos = hgLookup[hg][3]
+        local flat = (gbPos == 3 or (optic and wep.Attachments[16].Installed ~= "ud_m16_charm_fs") and !wep:GetBuff_Override("IronSight")) and 1 or 0
+
+        if gbPos == 1 or barr == 0 then
+            vm:SetBodygroup(6,0 + flat)
+        elseif gbPos == 2 then
+            vm:SetBodygroup(6,4 + flat * 2)
+        else
+            vm:SetBodygroup(6,2 + flat)
+        end
+    end
+
+    -- Default flash hider
     if !muzz then
-        if barr == "20in" then
+        if barr == 0 then
             vm:SetBodygroup(11,1)
-        elseif barr == "14in" then
+        elseif barr == 1 then
             vm:SetBodygroup(11,2)
         else
             vm:SetBodygroup(11,3)
@@ -1311,10 +1352,11 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         vm:SetBodygroup(11,0)
     end
     
+    -- Tactical clamp
     if laser and hg ~= "tactical" then
-        if barr == "20in" then
+        if barr == 0 then
             vm:SetBodygroup(10,1)
-        elseif barr == "14in" then
+        elseif barr == 1 then
             vm:SetBodygroup(10,3)
         else
             vm:SetBodygroup(10,2)
@@ -1388,6 +1430,7 @@ SWEP.Attachments = {
             vpos = Vector(2.8, -4.2, -11.5),
             vang = Angle(90, 0, -90),
         },
+        ExcludeFlags = {"ud_m16_a1"}
     },
     {
         PrintName = "Lower Receiver",
@@ -1399,6 +1442,7 @@ SWEP.Attachments = {
             vpos = Vector(2.8, -4.2, -11.5),
             vang = Angle(90, 0, -90),
         },
+        ExcludeFlags = {"m16_nolower"}
     },
     {
         PrintName = "Underbarrel",

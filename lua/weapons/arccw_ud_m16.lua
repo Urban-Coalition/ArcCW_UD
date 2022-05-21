@@ -893,6 +893,13 @@ SWEP.Animations = {
             {s = common .. "cloth_6.ogg", t = 0.2},
         },
     },
+    ["trigger"] = {
+        Source = "idle",
+        MinProgress = .1,
+        SoundTable = {
+            {s = ")^weapons/arccw_ud/uzi/prefire.ogg",         t = 0, c = ci},
+        },
+    },
     ["fire"] = {
         Source = "fire",
         Time = 13 / 30,
@@ -1336,11 +1343,11 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     end
 
     -- Gas block
-    if barrel == "fpw" then
+    if wep.Attachments[6].Installed == "ud_m16_receiver_fpw" and barr > 0 then
         vm:SetBodygroup(6,5)
     else
         local gbPos = hgLookup[hg][3]
-        local flat = (gbPos == 3 or (optic and wep.Attachments[16].Installed ~= "ud_m16_charm_fs") and !wep:GetBuff_Override("IronSight")) and 1 or 0
+        local flat = (gbPos == 3 or wep.Attachments[6].Installed == "ud_m16_receiver_fpw" or (optic and wep.Attachments[16].Installed ~= "ud_m16_charm_fs") and !wep:GetBuff_Override("IronSight")) and 1 or 0
 
         if gbPos == 1 or barr == 0 then
             vm:SetBodygroup(6,0 + flat)

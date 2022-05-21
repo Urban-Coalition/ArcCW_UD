@@ -16,6 +16,7 @@ att.Mult_HipDispersion = .85
 
 att.LHIK = true
 att.Model = "models/weapons/arccw/atts/classic_lhik.mdl"
+att.DroppedModel = "models/items/boxsrounds.mdl"
 
 att.ActivateElements = {"hg_m16a1"}
 att.GivesFlags = {"hg_no11"}

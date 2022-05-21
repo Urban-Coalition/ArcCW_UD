@@ -41,7 +41,7 @@ SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 1959
 
 local origDesc = SWEP.Trivia_Desc
-local m4Desc = "Carbine variant of the M16 rifle. Originally designed in response to design faults in the CAR-15 family, it eventually replaced the M16 across almost every branch of the Army for its favorably low weight and comparable performance. Well-rounded and light, but can become difficult to control without discipline."
+local m4Desc = "Carbine variant of the M16 rifle. Originally designed in response to design faults in the CAR-15 family, it eventually replaced the M16 across almost every branch of the Army for its favorably low weight and comparable performance. Since then, it has become the most iconic and widespread of America's service rifles.\n\nLight and versatile, but requires discipline to control."
 local ncrDesc = "Standard-issue rifle of the New California Republic. Traditionally produced with a semi-automatic receiver, the wooden furniture is easily replaceable and adds additional recoil control for maximum accuracy. Well-rounded gun with no major downsides."
 local smgDesc = "Submachine gun based on the M16 rifle. Despite its similar appearance, it uses a different mechanism from its parent rifle. More accurate than other submachine guns due to its rifle frame and closed-bolt mechanism."
 

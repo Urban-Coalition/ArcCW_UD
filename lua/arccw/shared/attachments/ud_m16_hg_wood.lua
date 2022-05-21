@@ -18,3 +18,4 @@ att.DroppedModel = "models/items/boxsrounds.mdl"
 
 att.ActivateElements = {"hg_m16a1_wood"}
 att.GivesFlags = {"hg_no11"}
+att.ExcludeFlags = {"blen_11"}

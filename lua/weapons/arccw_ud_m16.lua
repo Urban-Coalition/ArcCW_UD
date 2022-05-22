@@ -505,6 +505,9 @@ SWEP.AttachmentElements = {
             {ind = 1, bg = 3},
         },
     },
+    ["rail_fg"] = {
+        VMBodygroups = {{ind = 9, bg = 1}}
+    },
 
     ["stock_231_ex"] = {
         VMBodygroups = {{ind = 7, bg = 1}},
@@ -1334,15 +1337,16 @@ local barrLookup = {
 
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
+    local atts = wep.Attachments
     if !IsValid(vm) then return end
     
-    local barrel = string.Replace(wep.Attachments[2].Installed or "20in","ud_m16_barrel_","")
+    local barrel = string.Replace(atts[2].Installed or "20in","ud_m16_barrel_","")
     local barr = barrLookup[barrel]
-    local hg = string.Replace(wep.Attachments[3].Installed or "default","ud_m16_hg_","")
+    local hg = string.Replace(atts[3].Installed or "default","ud_m16_hg_","")
 
-    local optic = wep.Attachments[1].Installed
-    local muzz = wep.Attachments[4].Installed or barrel == "sd"
-    local laser = wep.Attachments[8].Installed
+    local optic = atts[1].Installed
+    local muzz = atts[4].Installed or barrel == "sd"
+    local laser = atts[8].Installed
     local retro = wep:GetBuff_Override("TopMount")
 
     -- Retro rail
@@ -1367,11 +1371,11 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     end
 
     -- Gas block
-    if barrel == "sd" or (wep.Attachments[6].Installed == "ud_m16_receiver_fpw" and barr > 0) then
+    if barrel == "sd" or (atts[6].Installed == "ud_m16_receiver_fpw" and barr > 0) then
         vm:SetBodygroup(6,5)
     else
         local gbPos = hgLookup[hg][3]
-        local flat = (gbPos == 3 or wep.Attachments[6].Installed == "ud_m16_receiver_fpw" or (optic and wep.Attachments[16].Installed ~= "ud_m16_charm_fs") and !wep:GetBuff_Override("IronSight")) and 1 or 0
+        local flat = (gbPos == 3 or atts[6].Installed == "ud_m16_receiver_fpw" or (optic and atts[16].Installed ~= "ud_m16_charm_fs") and !wep:GetBuff_Override("IronSight")) and 1 or 0
 
         if gbPos == 1 or barr == 0 then
             vm:SetBodygroup(6,0 + flat)
@@ -1408,21 +1412,27 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         vm:SetBodygroup(10,0)
     end
 
+    -- Disable tac rail element with tac hg
+    if hg == "tactical" and atts[7].Installed then
+        vm:SetBodygroup(9,0)
+    end
+
     -- .50 Beowulf magazines
-    if wep.Attachments[5].Installed == "ud_m16_receiver_50beo" and !wep.Attachments[11].Installed then
+    if atts[5].Installed == "ud_m16_receiver_50beo" and !att[11].Installed then
         vm:SetBodygroup(2, 8)
     end
 end
 
 SWEP.Hook_NameChange = function(wep, name)
     local trueNames = GetConVar("arccw_truenames"):GetBool()
-    local flat = wep.Attachments[1].Installed and !wep:GetBuff_Override("TopMount")
+    local atts = wep.Attachments
+    local flat = atts[1].Installed and !wep:GetBuff_Override("TopMount")
 
-    local barrel = string.Replace(wep.Attachments[2].Installed or "20in","ud_m16_barrel_","")
+    local barrel = string.Replace(atts[2].Installed or "20in","ud_m16_barrel_","")
     local barr = barrLookup[barrel]
-    local hg = string.Replace(wep.Attachments[3].Installed or "default","ud_m16_hg_","")
-    local upr = string.Replace(wep.Attachments[5].Installed or "default","ud_m16_receiver_","")
-    local lwr = string.Replace(wep.Attachments[6].Installed or "default","ud_m16_receiver_","")
+    local hg = string.Replace(atts[3].Installed or "default","ud_m16_hg_","")
+    local upr = string.Replace(atts[5].Installed or "default","ud_m16_receiver_","")
+    local lwr = string.Replace(atts[6].Installed or "default","ud_m16_receiver_","")
 
     if upr == "9mm" then
         if flat then

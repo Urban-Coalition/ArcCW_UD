@@ -1475,8 +1475,10 @@ SWEP.Hook_NameChange = function(wep, name)
                 return "Service Rifle"
             end
             return "Service Carbine"
-        elseif hg == "adar" and barr == 1 and flat then
+        elseif flat and hg == "adar" then
             return trueNames and "ADAR 2-15" or "RUCAR 225"
+        elseif barr > 0 then
+            return trueNames and "AR-15 SBR" or "RAYCAR-NG SBR"
         end
         return trueNames and "AR-15" or "RAYCAR-NG"
     elseif lwr == "a1" then

@@ -1447,7 +1447,7 @@ SWEP.Attachments = {
             vpos = Vector(0, -1.75, 21.75), -- 21.75 or 15.75
             vang = Angle(90, 0, -90),
         },
-        ExcludeFlags = {"m16_mlok"}
+        ExcludeFlags = {"sight_magpul"}
     },
     {
         PrintName = "Charm",

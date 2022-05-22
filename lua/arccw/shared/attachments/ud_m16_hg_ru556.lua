@@ -20,4 +20,4 @@ att.Mult_Recoil = 1.175
 att.LHIK = true
 att.Model = "models/weapons/arccw/atts/ru556_lhik.mdl"
 att.DroppedModel = "models/items/boxsrounds.mdl"
-att.GivesFlags = {"m16_mlok"}
+att.GivesFlags = {"sight_magpul"}

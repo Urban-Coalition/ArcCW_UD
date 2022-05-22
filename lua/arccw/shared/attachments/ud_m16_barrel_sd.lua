@@ -14,7 +14,7 @@ att.Desc_Cons = {
 }
 att.Desc_Neutrals = {
 }
-att.Slot = "ud_m16_barrel"
+att.Slot = "ud_m16_blen"
 
 att.AutoStats = true
 

@@ -23,7 +23,7 @@ SWEP.TracerWidth = 2
 
 -- Fake name --
 
-SWEP.PrintName = "AMCAR"
+SWEP.PrintName = "RAYCAR"
 -- AMCAR stands for (american) Colt Assault Rifle, not Carbine!! ~Fesiug
 -- shut up retard ~zenith
 
@@ -33,7 +33,7 @@ SWEP.TrueName = "M16A2"
 
 -- Trivia --
 SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = "Third generation of America's iconic military rifle. Army tests showed that soldiers were more likely to hit a target if they fired multiple shots, but were likely to spray in full-auto and fail to hit anything. As a result, they implemented a ratcheted three-round burst system which limited the maximum burst a soldier could fire to three shots. Well-rounded gun with no major downsides."
+SWEP.Trivia_Desc = "Third generation of America's iconic military rifle. Army tests showed that soldiers were more likely to hit a target if they fired multiple shots, but were likely to spray in full-auto and fail to hit anything. As a result, they implemented a ratcheted three-round burst system which limited the maximum burst a soldier could fire to three shots.\n\nWell-rounded gun with no major downsides."
 SWEP.Trivia_Manufacturer = "Stoner's Legacy Ltd."
 SWEP.Trivia_Calibre = "5.56x45mm NATO"
 SWEP.Trivia_Mechanism = "Gas-Operated Rotating Bolt"
@@ -42,8 +42,17 @@ SWEP.Trivia_Year = 1959
 
 local origDesc = SWEP.Trivia_Desc
 local m4Desc = "Carbine variant of the M16 rifle. Originally designed in response to design faults in the CAR-15 family, it eventually replaced the M16 across almost every branch of the Army for its favorably low weight and comparable performance. Since then, it has become the most iconic and widespread of America's service rifles.\n\nLight and versatile, but requires discipline to control."
-local ncrDesc = "Standard-issue rifle of the New California Republic. Traditionally produced with a semi-automatic receiver, the wooden furniture is easily replaceable and adds additional recoil control for maximum accuracy. Well-rounded gun with no major downsides."
+local ncrDesc = "Standard-issue rifle of the New California Republic. Traditionally produced with a semi-automatic receiver, the wooden furniture is more readily replaceable and adds additional recoil control for maximum accuracy.\n\nWell-rounded gun with no major downsides."
 local smgDesc = "Submachine gun based on the M16 rifle. Despite its similar appearance, it uses a different mechanism from its parent rifle. More accurate than other submachine guns due to its rifle frame and closed-bolt mechanism."
+local blkDesc = "Aftermarket automatic variant of the M16 rifle. The .300 Blackout cartridge has a ballistic performance more akin to the 7.62x39mm Soviet cartridge, with a similarly sized projectile but shorter effective range."
+local gbDesc = "AR-15 style rifles are a class of rifles linked to the M16, normally with a semi-automatic fire group for the civilian market. This one, however, has been neutered by authority of the British crown with a manual-action receiver. Bit cringe, innit?"
+local arDesc = "Semi-automatic variant of the M16 series of rifles, produced for the civilian market. Wildly popular in the United States, this rifle can be seen in the hands of hobbyists, hunters and mass shooters alike.\n\nWell-rounded gun with no major downsides."
+local beoDesc = "Aftermarket semi-automatic variant of the M16 rifle firing an oversized magnum cartridge. Provides extremely high stopping power at close range."
+local carDesc = "Carbine variant of the M16 rifle, short enough to be classified as a submachine gun. Its features influenced the US Army's interest in the M4 Carbine, which went on to become their new standard rifle. Due to the small barrel, rifles of this family have high maneuverability but poor range compared to their parent platform."
+local a1Desc = "Second generation of America's iconic military rifle. Developed to address problems with the original M16, which suffered notoriously frequent jamming that could get its wielder killed.\n\nA well-rounded rifle, but difficult to control without trigger discipline - something the A2 model eventually addressed."
+local a3Desc = "Variant of the M16A2 with the original full-automatic trigger group, relegated to niche roles in the US Army. Well-rounded gun with no major downsides."
+local lmgDesc = "Configuration of the M16 designed for a light machine gun role, used vaguely within the Marine Corps before the adoption of the Minimi. Heavier than the standard platform, but the integral bipod can be deployed onto surfaces for excellent recoil control."
+
 
 -- Weapon slot --
 
@@ -1315,6 +1324,7 @@ local hgLookup = {
 -- Gas block modes: 0 standard, 1 always at 20" position, 2 at ADAR position when short, 3 always LP
 
 local barrLookup = {
+    ["sd"] = -1,
     ["20in"] = 0,
     ["14in"] = 1,
     ["fpw"] = 1,
@@ -1330,7 +1340,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local hg = string.Replace(wep.Attachments[3].Installed or "default","ud_m16_hg_","")
 
     local optic = wep.Attachments[1].Installed
-    local muzz = wep.Attachments[4].Installed
+    local muzz = wep.Attachments[4].Installed or barrel == "sd"
     local laser = wep.Attachments[8].Installed
     local retro = wep:GetBuff_Override("TopMount")
 
@@ -1347,14 +1357,16 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     end
 
     -- Dynamic handguard
-    if barr == 0 then
+    if barr == -1 then
+        vm:SetBodygroup(5,9)
+    elseif barr == 0 then
         vm:SetBodygroup(5,hgLookup[hg][1])
     else
         vm:SetBodygroup(5,hgLookup[hg][2])
     end
 
     -- Gas block
-    if wep.Attachments[6].Installed == "ud_m16_receiver_fpw" and barr > 0 then
+    if barrel == "sd" or (wep.Attachments[6].Installed == "ud_m16_receiver_fpw" and barr > 0) then
         vm:SetBodygroup(6,5)
     else
         local gbPos = hgLookup[hg][3]
@@ -1417,9 +1429,9 @@ SWEP.Hook_NameChange = function(wep, name)
         end
         return trueNames and "R0635" or "AMSMG"
     elseif upr == "50beo" then
-        return trueNames and "AR-15 .50" or "AMCAR-NG .50"
+        return trueNames and "AR-15 .50" or "RAYCAR-NG .50"
     elseif upr == "300blk" then
-        return trueNames and "AR-15 .300" or "AMCAR-300"
+        return trueNames and "AR-15 .300" or "RAYCAR-300"
 
     elseif lwr == "auto" then
         if barr == 0 then
@@ -1447,7 +1459,7 @@ SWEP.Hook_NameChange = function(wep, name)
             end
             return "Service Carbine"
         end
-        return trueNames and "AR-15" or "AMCAR-NG"
+        return trueNames and "AR-15" or "RAYCAR-NG"
     elseif lwr == "a1" then
         if barr == 0 then
             return trueNames and "M16A1" or "AMRA1"
@@ -1463,14 +1475,14 @@ SWEP.Hook_NameChange = function(wep, name)
         if barr == 0 and flat then
             return trueNames and "M16A4" or "AMR-4"
         elseif barr == 1 then
-            return trueNames and "M4 Carbine" or "AMCAR"
+            return trueNames and "M4 Carbine" or "RAYCAR"
         elseif barr == 2 then
-            return trueNames and "M16 Commando" or "AMCAR"
+            return trueNames and "M16 Commando" or "RAYCAR"
         end
     end
 
 
-    return trueNames and "M16A2" or "AMCAR"
+    return trueNames and "M16A2" or "RAYCAR"
 end
 
 
@@ -1515,6 +1527,7 @@ SWEP.Attachments = {
             vpos = Vector(2.8, -4.2, -11.5),
             vang = Angle(90, 0, -90),
         },
+        ExcludeFlags = {"sd"}
     },
     {
         PrintName = "Muzzle",

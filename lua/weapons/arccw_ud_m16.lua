@@ -365,7 +365,7 @@ SWEP.AttachmentElements = {
                 vpos = Vector(0, -0.07, 24.75),
                 vang = Angle(90, 0, -90),
             },
-            [17] = {
+            [16] = {
                 vpos = Vector(0, -1.75, 16), -- 21.75 or 15.75
                 vang = Angle(90, 0, -90),
             },
@@ -381,7 +381,7 @@ SWEP.AttachmentElements = {
                 vpos = Vector(0, -0.07, 20.75),
                 vang = Angle(90, 0, -90),
             },
-            [17] = {
+            [16] = {
                 vpos = Vector(0, -1.75, 16), -- 21.75 or 15.75
                 vang = Angle(90, 0, -90),
             },
@@ -1123,6 +1123,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local optic = atts[1].Installed
     local muzz = atts[4].Installed or barrel == "sd"
     local laser = atts[8].Installed
+    local fs = atts[16].Installed
     local retro = wep:GetBuff_Override("TopMount")
 
     -- Retro rail
@@ -1151,7 +1152,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         vm:SetBodygroup(6,5)
     else
         local gbPos = hgLookup[hg][3]
-        local flat = (gbPos == 3 or atts[6].Installed == "ud_m16_receiver_fpw" or atts[17].Installed or (optic and atts[16].Installed ~= "ud_m16_charm_fs") and !wep:GetBuff_Override("IronSight") and !wep:GetBuff_Override("TopMount")) and 1 or 0
+        local flat = (gbPos == 3 or atts[6].Installed == "ud_m16_receiver_fpw" or (fs and fs ~= "ud_m16_charm_fs") or (optic and fs ~= "ud_m16_charm_fs") and !wep:GetBuff_Override("IronSight") and !wep:GetBuff_Override("TopMount")) and 1 or 0
 
         if gbPos == 1 or barr == 0 then
             vm:SetBodygroup(6,0 + flat)
@@ -1446,6 +1447,7 @@ SWEP.Attachments = {
             vpos = Vector(0, -1.75, 21.75), -- 21.75 or 15.75
             vang = Angle(90, 0, -90),
         },
+        ExcludeFlags = {"m16_mlok"}
     },
     {
         PrintName = "Charm",

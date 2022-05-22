@@ -581,8 +581,9 @@ SWEP.AttachmentElements = {
     ["mount_tactical"] = {
         AttPosMods = {
             [8] = {
-                vpos = Vector(-1.41, -.2, 14),
-                vang = Angle(90, 0, 180),
+                vpos = Vector(1.41, -.2, 15.5),
+                vang = Angle(90, 0, 0),
+                wang = Angle(90, 0, 0),
             },
         }
     },
@@ -601,7 +602,7 @@ SWEP.AttachmentElements = {
     },
     ["barrel_11"] = {
         VMBodygroups = {
-            {ind = 4, bg = 2},
+            {ind = 4, bg = 4},
             {ind = 6, bg = 2},
         },
         AttPosMods = {
@@ -770,7 +771,7 @@ SWEP.AttachmentElements = {
             {ind = 6, bg = 5}
         },
         AttPosMods = { -- no rail, just pretend it's mounted to something
-            [6] = {
+            [8] = {
                 vpos = Vector(0, 0.7, 17.5),
                 vang = Angle(90, 0, -90),
             },

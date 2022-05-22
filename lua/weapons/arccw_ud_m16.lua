@@ -598,6 +598,10 @@ SWEP.AttachmentElements = {
                 vpos = Vector(0, -0.07, 25.4),
                 vang = Angle(90, 0, -90),
             },
+            [17] = {
+                vpos = Vector(0, -1.75, 16), -- 21.75 or 15.75
+                vang = Angle(90, 0, -90),
+            },
         }
     },
     ["barrel_11"] = {
@@ -608,6 +612,10 @@ SWEP.AttachmentElements = {
         AttPosMods = {
             [4] = {
                 vpos = Vector(0, -0.07, 21.3),
+                vang = Angle(90, 0, -90),
+            },
+            [17] = {
+                vpos = Vector(0, -1.75, 16), -- 21.75 or 15.75
                 vang = Angle(90, 0, -90),
             },
         }
@@ -1372,7 +1380,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     end
 
     -- Gas block
-    if barrel == "sd" or (atts[6].Installed == "ud_m16_receiver_fpw" and barr > 0) then
+    if barrel == "sd" or (atts[6].Installed == "ud_m16_receiver_fpw" and barr > 0) or atts[17].Installed then
         vm:SetBodygroup(6,5)
     else
         local gbPos = hgLookup[hg][3]

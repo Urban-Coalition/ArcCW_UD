@@ -7,10 +7,11 @@ end
 
 att.SortOrder = -1
 att.Icon = Material("entities/att/acwatt_ud_m16_receiver_semi.png", "smooth mips")
-att.Description = "Semi-automatic receiver chambered in .50 Beowulf, a gigantic short-range cartridge with terrible ballistic performance. It can load single-stack into standard AR-15 magazines at a lower capacity."
+att.Description = "Semi-automatic receiver chambered in .50 Beowulf, a gigantic short-range cartridge with terrible ballistic performance. It can load single-stack into standard AR-15 magazines at a lower capacity.\nThe rifle is unable to handle the massive pressure at anything more than semi-automatic fire."
 att.Desc_Pros = {}
 att.Desc_Cons = {
-    "uc.semionly"
+    "ud.m16.50beo",
+    "uc.semionly",
 }
 att.Desc_Neutrals = {}
 att.Slot = "ud_m16_receiver"

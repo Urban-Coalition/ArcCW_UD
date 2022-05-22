@@ -25,7 +25,7 @@ att.Mult_Recoil = 1.25
 att.Mult_AccuracyMOA = 1.25
 att.Mult_RPM = 1.111
 
-att.Add_BarrelLength = -6
+att.Add_BarrelLength = -10
 att.Mult_PhysBulletMuzzleVelocity = 0.78125
 
 att.LHIK = true

@@ -41,7 +41,7 @@ SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 1959
 
 local origDesc = SWEP.Trivia_Desc
-local m4Desc = "Carbine variant of the M16 rifle. Originally designed in response to design faults in the CAR-15 family, it eventually replaced the M16 across much of the Army for its favorably low weight and comparable performance. It has since become one of the most iconic and widespread of America's service rifles in the modern era.\n\nLight and versatile, but requires discipline to control."
+local m4Desc = "Carbine variant of the M16 rifle. Originally designed in response to design faults in the CAR-15 family, it eventually replaced the M16 across much of the Army for its favorably low weight and comparable performance. The M4 variant has since become one of the most iconic and widespread American service rifles in the modern era.\n\nLight and versatile, but requires discipline to control."
 local ncrDesc = "Standard-issue rifle of the New California Republic. Traditionally produced with a semi-automatic receiver, the wooden furniture is more readily replaceable and adds additional recoil control for maximum accuracy.\n\nWell-rounded gun with no major downsides."
 local smgDesc = "Submachine gun based on the M16 rifle. Despite its similar appearance, it uses a different mechanism from its parent rifle. More accurate than other submachine guns due to its rifle frame and closed-bolt mechanism."
 local blkDesc = "Aftermarket automatic variant of the M16 rifle. The .300 Blackout cartridge has a ballistic performance more akin to the 7.62x39mm Soviet cartridge, with a similarly sized projectile but shorter effective range."
@@ -1436,6 +1436,7 @@ SWEP.Hook_NameChange = function(wep, name)
     local lwr = string.Replace(atts[6].Installed or "default","ud_m16_receiver_","")
 
     if upr == "9mm" then
+        wep.Trivia_Desc = smgDesc
         if flat then
             return trueNames and "R0991" or "AMSMG"
         end
@@ -1445,52 +1446,64 @@ SWEP.Hook_NameChange = function(wep, name)
     if lwr == "auto" then
         if barr == 0 then
             if hg == "lmg" then
+                wep.Trivia_Desc = lmgDesc
                 return trueNames and "Colt LMG" or "AMSAW"
             elseif flat and hg == "tactical" then
                 return trueNames and "R0901" or "AMR-A"
             end
+            wep.Trivia_Desc = a3Desc
             return trueNames and "M16A3" or "AMR-A"
         elseif barr == 1 then
+            wep.Trivia_Desc = m4Desc
             if flat then
                 return trueNames and "M4A1" or "CAR-4"
             end
             return trueNames and "XM4" or "CAR-4"
         else
             if flat then
+                wep.Trivia_Desc = m4Desc
                 return trueNames and "Mk 18 Mod 0" or "M4A4"
             end
+            wep.Trivia_Desc = carDesc
             return trueNames and "CAR-15" or "Stoner Commando"
         end
     elseif lwr == "semi" or upr == "50beo" then
         if hg == "wood" then
+            wep.Trivia_Desc = ncrDesc
             if barr == 0 then
                 return "Service Rifle"
             end
             return "Service Carbine"
         end
+        wep.Trivia_Desc = arDesc
         return trueNames and "AR-15" or "RAYCAR-NG"
     elseif lwr == "a1" then
+        wep.Trivia_Desc = a1Desc
         if barr == 0 then
             return trueNames and "M16A1" or "AMRA1"
         elseif barr == 1 then
             return trueNames and "M605" or "AMRA1 Prototype"
         end
+        wep.Trivia_Desc = carDesc
         return trueNames and "CAR-15" or "Stoner Commando"
     elseif lwr == "fpw" then
         return trueNames and "M231 FPW" or "AMFPW"
     elseif lwr == "cali" then
+        wep.Trivia_Desc = ukDesc
         return trueNames and "AR-15GB" or "UKCAR"
     else
+        wep.Trivia_Desc = origDesc
         if barr == 0 and flat then
             return trueNames and "M16A4" or "AMR-4"
         elseif barr == 1 then
+            wep.Trivia_Desc = m4Desc
             return trueNames and "M4 Carbine" or "RAYCAR"
         elseif barr == 2 then
             return trueNames and "M16 Commando" or "RAYCAR"
         end
     end
 
-
+    wep.Trivia_Desc = origDesc
     return trueNames and "M16A2" or "RAYCAR"
 end
 

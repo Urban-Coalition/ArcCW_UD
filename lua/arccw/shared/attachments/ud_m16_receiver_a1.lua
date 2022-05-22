@@ -21,7 +21,7 @@ att.Slot = "ud_m16_fcg"
 --att.InvAtt = "ud_m16_receiver_auto"
 
 att.AutoStats = true
-att.SortOrder = 4.5
+att.SortOrder = -6
 
 att.Override_Malfunction = true
 

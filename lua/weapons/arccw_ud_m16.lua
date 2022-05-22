@@ -201,7 +201,7 @@ SWEP.WorldModelOffset = {
     pos        =    Vector(-7.3, 4, -7.5),
     ang        =    Angle(-6, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
-    scale = 0.9
+    scale = 0.85
 }
 
 -- Firing sounds --

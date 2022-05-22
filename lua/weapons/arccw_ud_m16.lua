@@ -1419,7 +1419,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     end
 
     -- .50 Beowulf magazines
-    if atts[5].Installed == "ud_m16_receiver_50beo" and !att[11].Installed then
+    if atts[5].Installed == "ud_m16_receiver_50beo" and !atts[11].Installed then
         vm:SetBodygroup(2, 8)
     end
 end

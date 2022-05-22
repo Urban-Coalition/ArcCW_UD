@@ -1445,13 +1445,13 @@ SWEP.Hook_NameChange = function(wep, name)
 
     if lwr == "auto" then
         if barr == 0 then
+            wep.Trivia_Desc = a3Desc
             if hg == "lmg" then
                 wep.Trivia_Desc = lmgDesc
                 return trueNames and "Colt LMG" or "AMSAW"
             elseif flat and hg == "tactical" then
                 return trueNames and "R0901" or "AMR-A"
             end
-            wep.Trivia_Desc = a3Desc
             return trueNames and "M16A3" or "AMR-A"
         elseif barr == 1 then
             wep.Trivia_Desc = m4Desc
@@ -1460,11 +1460,11 @@ SWEP.Hook_NameChange = function(wep, name)
             end
             return trueNames and "XM4" or "CAR-4"
         else
+            wep.Trivia_Desc = carDesc
             if flat then
                 wep.Trivia_Desc = m4Desc
                 return trueNames and "Mk 18 Mod 0" or "M4A4"
             end
-            wep.Trivia_Desc = carDesc
             return trueNames and "CAR-15" or "Stoner Commando"
         end
     elseif lwr == "semi" or upr == "50beo" then
@@ -1491,6 +1491,7 @@ SWEP.Hook_NameChange = function(wep, name)
         wep.Trivia_Desc = carDesc
         return trueNames and "CAR-15" or "Stoner Commando"
     elseif lwr == "fpw" then
+        wep.Trivia_Desc = m4Desc
         return trueNames and "M231 FPW" or "AMFPW"
     elseif lwr == "cali" then
         wep.Trivia_Desc = ukDesc

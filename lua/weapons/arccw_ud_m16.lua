@@ -1449,7 +1449,7 @@ SWEP.Attachments = {
         MergeSlots = {17}
     },
     {
-        PrintName = "RS",
+        PrintName = "Front Sight",
         Slot = {"ud_m16_fs"},
         FreeSlot = true,
         Hidden = true,

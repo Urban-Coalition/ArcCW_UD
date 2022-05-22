@@ -1,8 +1,10 @@
-att.PrintName = "KAC Flip-Up Rear Sight"
-att.AbbrevName = "RS - KAC"
+att.PrintName = "KAC Flip-Up Front Sight"
+att.AbbrevName = "KAC Front Sight"
 att.Icon = Material("entities/arc9_att_rs_kac.png", "mips smooth")
-att.Description = [[Removable rear sight made by Knight's Armament Company. Designed to be mounted on flat top rifles.]]
+att.Description = [[Removable front sight made by Knight's Armament Company. Designed to be mounted on forend rails.]]
+att.Desc_Neutrals = {"uc.cosmetic"}
 att.SortOrder = 1
+att.IgnorePickX = true
 
 att.Model = "models/weapons/arc9/atts/kac_fs.mdl"
 att.ModelScale = Vector(0.9, 0.9, 0.9)

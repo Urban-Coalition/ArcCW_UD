@@ -7,7 +7,7 @@ att.Desc_Neutrals = {
     "ud.m16_fs.1",
     "ud.m16_fs.2",
 }
-att.Slot = "ud_m16_charm"
+att.Slot = "ud_m16_fs"
 att.Free = true
 att.IgnorePickX = true
 

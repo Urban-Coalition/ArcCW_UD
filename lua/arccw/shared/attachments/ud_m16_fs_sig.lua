@@ -1,8 +1,10 @@
-att.PrintName = "SIG Flip-Up Rear Sight"
-att.AbbrevName = "RS - SIG"
+att.PrintName = "SIG Flip-Up Front Sight"
+att.AbbrevName = "SIG Front Sight"
 att.Icon = Material("entities/arc9_att_rs_sig.png", "mips smooth")
-att.Description = [[Removable rear sight made by SIG Sauer. Designed to be mounted on flat top rifles.]]
+att.Description = [[Removable front sight made by SIG Sauer. Designed to be mounted on forend rails.]]
+att.Desc_Neutrals = {"uc.cosmetic"}
 att.SortOrder = 1
+att.IgnorePickX = true
 
 att.Model = "models/weapons/arc9/atts/sig_fs.mdl"
 att.ModelScale = Vector(0.9, 0.9, 0.9)

@@ -1468,14 +1468,16 @@ SWEP.Hook_NameChange = function(wep, name)
             return trueNames and "CAR-15" or "Stoner Commando"
         end
     elseif lwr == "semi" or upr == "50beo" then
+        wep.Trivia_Desc = arDesc
         if hg == "wood" then
             wep.Trivia_Desc = ncrDesc
             if barr == 0 then
                 return "Service Rifle"
             end
             return "Service Carbine"
+        elseif hg == "adar" and barr == 1 and flat then
+            return trueNames and "ADAR 2-15" or "RUCAR 225"
         end
-        wep.Trivia_Desc = arDesc
         return trueNames and "AR-15" or "RAYCAR-NG"
     elseif lwr == "a1" then
         wep.Trivia_Desc = a1Desc

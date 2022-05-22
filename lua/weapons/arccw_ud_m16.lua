@@ -1438,6 +1438,16 @@ SWEP.Attachments = {
         DefaultAttName = "Standard Internals"
     },
     {
+        PrintName = "Front Sight",
+        Slot = {"ud_m16_fs"},
+        FreeSlot = true,
+        Bone = "m16_parent",
+        Offset = {
+            vpos = Vector(0, -1.75, 21.75), -- 21.75 or 15.75
+            vang = Angle(90, 0, -90),
+        },
+    },
+    {
         PrintName = "Charm",
         Slot = {"charm", "fml_charm", "ud_m16_charm"},
         FreeSlot = true,
@@ -1446,17 +1456,6 @@ SWEP.Attachments = {
             vpos = Vector(0.6, 1, 5),
             vang = Angle(90, 0, -90),
         },
-        MergeSlots = {17}
-    },
-    {
-        PrintName = "Front Sight",
-        Slot = {"ud_m16_fs"},
-        FreeSlot = true,
-        Hidden = true,
-        Bone = "m16_parent",
-        Offset = {
-            vpos = Vector(0, -1.75, 21.75), -- 21.75 or 15.75
-            vang = Angle(90, 0, -90),
-        },
+        -- MergeSlots = {17}
     },
 }

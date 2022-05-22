@@ -1428,12 +1428,9 @@ SWEP.Hook_NameChange = function(wep, name)
             return trueNames and "R0991" or "AMSMG"
         end
         return trueNames and "R0635" or "AMSMG"
-    elseif upr == "50beo" then
-        return trueNames and "AR-15 .50" or "RAYCAR-NG .50"
-    elseif upr == "300blk" then
-        return trueNames and "AR-15 .300" or "RAYCAR-300"
+    end
 
-    elseif lwr == "auto" then
+    if lwr == "auto" then
         if barr == 0 then
             if hg == "lmg" then
                 return trueNames and "Colt LMG" or "AMSAW"
@@ -1452,7 +1449,7 @@ SWEP.Hook_NameChange = function(wep, name)
             end
             return trueNames and "CAR-15" or "Stoner Commando"
         end
-    elseif lwr == "semi" then
+    elseif lwr == "semi" or upr == "50beo" then
         if hg == "wood" then
             if barr == 0 then
                 return "Service Rifle"

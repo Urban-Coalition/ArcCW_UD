@@ -54,7 +54,8 @@ att.GivesFlags = {"m16_auto"}
 att.ExcludeFlags = {"m16_noauto"}
 -- att.ActivateElements = {"ud_m16_upper_flat"}
 
-att.Override_Trivia_Calibre = ".300 Blackout"
+att.Override_Trivia_Calibre = ".300 AAC Blackout"
+att.AddSuffix = " .300"
 
 local path = "weapons/arccw_ud/m16/"
 

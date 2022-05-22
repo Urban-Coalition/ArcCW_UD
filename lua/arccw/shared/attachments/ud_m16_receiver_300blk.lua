@@ -9,8 +9,7 @@ att.Description = "Automatic receiver modified to take the .300 Blackout cartrid
 
 att.Icon = Material("entities/att/acwatt_ud_m16_receiver_auto.png", "smooth mips")
 att.Desc_Pros = {
-    --"uc.auto",
-    --"ud.flattop"
+    "uc.subsonic"
 }
 att.Desc_Cons = {
 }
@@ -65,7 +64,9 @@ att.Hook_GetShootSound = function(wep, fsound)
 end
 
 att.Hook_GetDistantShootSound = function(wep, distancesound)
-    if distancesound == wep.DistantShootSound then return path .. "fire_dist.ogg" end
+    if distancesound == wep.DistantShootSoundSilenced then
+        return false
+    elseif distancesound == wep.DistantShootSound then return path .. "fire_dist.ogg" end
 end
 
 att.GivesFlags = {"cal_subsonic"}

@@ -23,6 +23,10 @@ att.Mult_Sway = 0.75
 att.Add_BarrelLength = -10
 att.Mult_PhysBulletMuzzleVelocity = 0.729167
 
+att.LHIK = true
+att.Model = "models/weapons/arccw/atts/m4_lhik.mdl"
+att.DroppedModel = "models/items/boxsrounds.mdl"
+
 att.ActivateElements = {"barrel_11","mount_11"}
 att.GivesFlags = {"blen_11","barrel_short"}
 att.ExcludeFlags = {"hg_no11"}

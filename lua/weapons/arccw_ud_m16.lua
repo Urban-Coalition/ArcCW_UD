@@ -1414,10 +1414,10 @@ SWEP.Attachments = {
         InstalledEles = {"stock_231_tube"},
         Bone = "m16_parent",
         Offset = {
-            vpos = Vector(0.025, 0, -2.25),
+            vpos = Vector(0, -0.1, -3.25),
             vang = Angle(90, 0, -90),
         },
-        VMScale = Vector(1.15, 1.15, 1.15),
+        VMScale = Vector(1.1, 1.1, 1.1),
         WMScale = VMScale,
     },
     {

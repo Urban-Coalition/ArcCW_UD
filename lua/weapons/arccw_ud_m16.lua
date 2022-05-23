@@ -1152,7 +1152,8 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         vm:SetBodygroup(6,5)
     else
         local gbPos = hgLookup[hg][3]
-        local flat = !wep:GetBuff_Override("TopMount") and (gbPos == 3 or atts[6].Installed == "ud_m16_receiver_fpw" or (fs and fs ~= "ud_m16_charm_fs") or (optic and fs ~= "ud_m16_charm_fs") and !wep:GetBuff_Override("IronSight")) and 1 or 0
+        local lwr = atts[6].Installed
+        local flat = !(wep:GetBuff_Override("TopMount") and lwr ~= "ud_m16_receiver_fpw") and (gbPos == 3 or lwr == "ud_m16_receiver_fpw" or (fs and fs ~= "ud_m16_charm_fs") or (optic and fs ~= "ud_m16_charm_fs") and !wep:GetBuff_Override("IronSight")) and 1 or 0
 
         if gbPos == 1 or barr == 0 then
             vm:SetBodygroup(6,0 + flat)

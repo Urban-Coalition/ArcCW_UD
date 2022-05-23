@@ -1407,9 +1407,18 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Stock",
-        Slot = {"ud_m16_stock"},
+        Slot = {"ud_m16_stock","go_stock"},
         DefaultAttName = "Full Stock",
         DefaultAttIcon = Material("entities/att/acwatt_ud_m16_stock_default.png", "smooth mips"),
+        -- GSO support
+        InstalledEles = {"stock_231_tube"},
+        Bone = "m16_parent",
+        Offset = {
+            vpos = Vector(0.025, 0, -2.25),
+            vang = Angle(90, 0, -90),
+        },
+        VMScale = Vector(1.15, 1.15, 1.15),
+        WMScale = VMScale,
     },
     {
         PrintName = "Magazine",

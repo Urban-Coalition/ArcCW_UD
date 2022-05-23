@@ -24,5 +24,5 @@ att.Override_IronSightStruct = {
     Ang = Angle(1.15, 0, 0),
     Magnification = 1.1,}
 att.Model = "models/weapons/arccw/atts/colt_ch.mdl"
-att.ModelOffset = Vector(-2.5, 0, 0)
+att.ModelOffset = Vector(-2.2, 0, 0)
 att.ModelScale = Vector(.94, .99, .99)

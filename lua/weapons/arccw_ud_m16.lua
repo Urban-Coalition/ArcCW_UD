@@ -1153,8 +1153,8 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     else
         local gbPos = hgLookup[hg][3]
         local lwr = atts[6].Installed
-        local flat = (gbPos == 3 or (!(wep:GetBuff_Override("TopMount") and lwr ~= "ud_m16_receiver_fpw") 
-            and (lwr == "ud_m16_receiver_fpw" or (fs and fs ~= "ud_m16_charm_fs") or (optic and fs ~= "ud_m16_charm_fs") 
+        local flat = (gbPos == 3 or (fs and fs ~= "ud_m16_charm_fs") or (!(wep:GetBuff_Override("TopMount") and lwr ~= "ud_m16_receiver_fpw") 
+            and (lwr == "ud_m16_receiver_fpw" or (optic and fs ~= "ud_m16_charm_fs") 
             and !wep:GetBuff_Override("IronSight")))) and 1 or 0
 
         if gbPos == 1 or barr == 0 then
@@ -1366,7 +1366,7 @@ SWEP.Attachments = {
             vpos = Vector(2.8, -4.2, -11.5),
             vang = Angle(90, 0, -90),
         },
-        --ExcludeFlags = {"ud_m16_a1"}
+        ExcludeFlags = {"ud_m16_fpw"}
     },
     {
         PrintName = "Lower Receiver",

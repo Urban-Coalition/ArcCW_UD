@@ -33,6 +33,7 @@ att.Mult_Range = 0.9
 --att.Mult_Sway = 1.25
 att.Mult_AccuracyMOA = 4 / 3
 att.Mult_HipDispersion = 0.85
+att.Override_ChamberSize = 0
 
 att.Override_TriggerDelay = true
 att.Override_Malfunction = true

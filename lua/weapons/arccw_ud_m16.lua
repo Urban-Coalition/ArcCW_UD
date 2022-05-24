@@ -1258,7 +1258,11 @@ SWEP.Hook_NameChange = function(wep, name)
         elseif flat and hg == "adar" then
             return trueNames and "ADAR 2-15" or "RUCAR 225"
         elseif barr > 0 then
-            return trueNames and "AR-15 SBR" or "RAYCAR-NG SBR"
+            if barr == 2 and atts[10].Installed == "ud_m16_stock_buffer" then
+                return trueNames and "AR-15 Pistol" or "RAYCAR-NG Pistol"
+            else
+                return trueNames and "AR-15 SBR" or "RAYCAR-NG SBR"
+            end
         end
         return trueNames and "AR-15" or "RAYCAR-NG"
     elseif lwr == "a1" then
@@ -1415,10 +1419,10 @@ SWEP.Attachments = {
         InstalledEles = {"stock_231_tube"},
         Bone = "m16_parent",
         Offset = {
-            vpos = Vector(0, -0.1, -3.25),
+            vpos = Vector(-0.02, 0, -3.25),
             vang = Angle(90, 0, -90),
         },
-        VMScale = Vector(1.1, 1.1, 1.1),
+        VMScale = Vector(1.16, 1.16, 1.16),
         WMScale = VMScale,
     },
     {

@@ -1216,7 +1216,9 @@ SWEP.Hook_NameChange = function(wep, name)
 
     if upr == "9mm" then
         wep.Trivia_Desc = smgDesc
-        if flat then
+        if lwr == "semi" then
+            return trueNames and "AR-15 9mm" or "RAYCAR-NG 9mm"
+        elseif flat then
             return trueNames and "R0991" or "AMSMG"
         end
         return trueNames and "R0635" or "AMSMG"
@@ -1426,7 +1428,6 @@ SWEP.Attachments = {
             vang = Angle(90, 0, -90),
         },
         VMScale = Vector(1.16, 1.16, 1.16),
-        WMScale = VMScale,
     },
     {
         PrintName = "Magazine",

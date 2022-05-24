@@ -1,10 +1,10 @@
-att.PrintName = "AMRA1 Classic Receiver Package"
-att.AbbrevName = "Classic Package"
-att.Description = "Authentic upper and lower receiver of the AMRA1 rifle, notable for its use throughout the latter half of the Vietnam War and seldom wielded by fortunate sons. Notorious for its difficult-to-control high RPM and still non-insignificant feeding failures."
+att.PrintName = "AMRA1 Classic Upper Receiver"
+att.AbbrevName = "Classic Upper"
+att.Description = "Authentic upper receiver of the AMRA1 rifle, notable for its use throughout the latter half of the Vietnam War and seldom wielded by fortunate sons. Notorious for its difficult-to-control high RPM and still non-insignificant feeding failures."
 
 if GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "M16A1 Classic Receiver Package"
-    att.Description = "Authentic upper and lower receiver of the M16A1 rifle, notable for its use throughout the latter half of the Vietnam War and seldom wielded by fortunate sons. Notorious for its difficult-to-control high RPM and still non-insignificant feeding failures."
+    att.PrintName = "M16A1 Classic Upper Receiver"
+    att.Description = "Authentic upper receiver of the M16A1 rifle, notable for its use throughout the latter half of the Vietnam War and seldom wielded by fortunate sons. Notorious for its difficult-to-control high RPM and still non-insignificant feeding failures."
 end
 
 att.Icon = Material("entities/att/acwatt_ud_m16_receiver_a1.png", "smooth mips")
@@ -17,7 +17,7 @@ att.Desc_Cons = {
 att.Desc_Neutrals = {
     "ud.m16_a1"
 }
-att.Slot = "ud_m16_fcg"
+att.Slot = "ud_m16_receiver"
 --att.InvAtt = "ud_m16_receiver_auto"
 
 att.AutoStats = true

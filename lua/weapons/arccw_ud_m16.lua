@@ -1221,6 +1221,16 @@ SWEP.Hook_NameChange = function(wep, name)
     end
 
     if lwr == "auto" then
+        if upr == "a1" then
+            wep.Trivia_Desc = a1Desc
+            if barr == 0 then
+                return trueNames and "M16A1" or "AMRA1"
+            elseif barr == 1 then
+                return trueNames and "M605" or "AMRA1 Prototype"
+            end
+            wep.Trivia_Desc = carDesc
+            return trueNames and "CAR-15" or "Stoner Commando"
+        end
         if barr == 0 then
             wep.Trivia_Desc = a3Desc
             if hg == "lmg" then
@@ -1265,15 +1275,6 @@ SWEP.Hook_NameChange = function(wep, name)
             end
         end
         return trueNames and "AR-15" or "RAYCAR-NG"
-    elseif lwr == "a1" then
-        wep.Trivia_Desc = a1Desc
-        if barr == 0 then
-            return trueNames and "M16A1" or "AMRA1"
-        elseif barr == 1 then
-            return trueNames and "M605" or "AMRA1 Prototype"
-        end
-        wep.Trivia_Desc = carDesc
-        return trueNames and "CAR-15" or "Stoner Commando"
     elseif lwr == "fpw" then
         wep.Trivia_Desc = m4Desc
         return trueNames and "M231 FPW" or "AMFPW"
@@ -1363,7 +1364,7 @@ SWEP.Attachments = {
             vpos = Vector(2.8, -4.2, -11.5),
             vang = Angle(90, 0, -90),
         },
-        ExcludeFlags = {"ud_m16_a1"}
+        --ExcludeFlags = {"ud_m16_a1"}
     },
     {
         PrintName = "Lower Receiver",

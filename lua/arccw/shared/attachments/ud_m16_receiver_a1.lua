@@ -9,7 +9,7 @@ end
 
 att.Icon = Material("entities/att/acwatt_ud_m16_receiver_a1.png", "smooth mips")
 att.Desc_Pros = {
-    "uc.auto"
+    --"uc.auto"
 }
 att.Desc_Cons = {
     "uc.jam"
@@ -25,21 +25,21 @@ att.SortOrder = -6
 
 att.Override_Malfunction = true
 
-att.Mult_AccuracyMOA = 1.5
-att.Mult_HipDispersion = 1.25
-att.Mult_ShootSpeedMult = 0.8
+att.Mult_AccuracyMOA = 1.25
+att.Mult_HipDispersion = 1.125
 
-att.Override_Firemodes = {
-    {
-        Mode = 2,
-    },
-    {
-        Mode = 1,
-    },
-    {
-        Mode = 0
-    }
-}
+-- att.Override_Firemodes = {
+--     {
+--         Mode = 2,
+--     },
+--     {
+--         Mode = 1,
+--     },
+--     {
+--         Mode = 0
+--     }
+-- }
+att.Mult_RPM = 900 / 765
 
 att.GivesFlags = {"m16_auto", "ud_m16_retro", "ud_m16_a1"}
 att.ExcludeFlags = {"m16_noauto","ud_m16_not_retro"}

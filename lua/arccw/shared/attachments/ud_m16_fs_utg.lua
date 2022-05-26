@@ -12,3 +12,5 @@ att.Slot = {"ud_m16_fs"}
 att.RequireFlags = {"ud_m16_rscompatible"}
 att.GivesFlags = {"ud_m16_rs"}
 att.Ignore = false
+
+att.FrontSight = 1

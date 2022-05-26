@@ -49,7 +49,7 @@ local ukDesc = "AR-15 style rifles are a class of rifles linked to the M16, norm
 local arDesc = "Semi-automatic variant of the M16 series of rifles, produced for the civilian market. Wildly popular in the United States, this rifle can be seen in the hands of hobbyists, hunters and mass shooters alike.\n\nWell-rounded gun with no major downsides."
 local beoDesc = "Aftermarket semi-automatic variant of the M16 rifle firing an oversized magnum cartridge. Provides extremely high stopping power at close range."
 local carDesc = "Carbine variant of the M16 rifle, short enough to be classified as a submachine gun. Its features influenced the US Army's interest in the M4 Carbine, which went on to become their new standard rifle. Due to the small barrel, rifles of this family have high maneuverability but poor range compared to their parent platform."
-local a1Desc = "Second generation of America's iconic military rifle. Developed to address problems with the original M16, which suffered notoriously frequent jamming that could get its wielder killed. The revised model developed a positive reputation with those who used it, and is now a universal symbol of the Vietnam War.\n\nA well-rounded rifle, but difficult to control without trigger discipline - something the A2 model eventually addressed."
+local a1Desc = "Second generation of America's iconic military rifle. Developed to address problems with the original M16, which suffered notoriously frequent jamming that could get its wielder killed. The revised model evolved a positive reputation with those who used it, and is now a universal symbol of the Vietnam War.\n\nA well-rounded rifle, but difficult to control without trigger discipline - something the A2 model eventually addressed."
 local a3Desc = "Variant of the M16A2 with the original full-automatic trigger group, relegated to niche roles in the US Army. Well-rounded gun with no major downsides."
 local lmgDesc = "Configuration of the M16 designed for a light machine gun role, used vaguely within the Marine Corps before the adoption of the Minimi. Heavier than the standard platform, but the integral bipod can be deployed onto surfaces for excellent recoil control."
 
@@ -1153,9 +1153,11 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     else
         local gbPos = hgLookup[hg][3]
         local lwr = atts[6].Installed
-        local flat = (gbPos == 3 or (fs and fs ~= "ud_m16_charm_fs") or (!(wep:GetBuff_Override("TopMount") and lwr ~= "ud_m16_receiver_fpw") 
-            and (lwr == "ud_m16_receiver_fpw" or (optic and fs ~= "ud_m16_charm_fs") 
-            and !wep:GetBuff_Override("IronSight")))) and 1 or 0
+        local flat = (
+            (optic and fs ~= "ud_m16_charm_fs" and !(wep:GetBuff_Override("IronSight") or wep:GetBuff_Override("TopMount")))
+            or wep:GetBuff_Override("FrontSight")
+            or atts[6].Installed == "ud_m16_receiver_fpw"
+        ) and 1 or 0
 
         if gbPos == 1 or barr == 0 then
             vm:SetBodygroup(6,0 + flat)

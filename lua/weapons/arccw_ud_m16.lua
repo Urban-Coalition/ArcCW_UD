@@ -1222,7 +1222,7 @@ SWEP.Hook_NameChange = function(wep, name)
         if lwr == "semi" then
             return trueNames and "AR-15 9mm" or "RAYCAR-NG 9mm"
         elseif flat then
-            return trueNames and "R0991" or "AMSMG"
+            return trueNames and "R0991" or "RAYSMG"
         end
         return trueNames and "R0635" or "AMSMG"
     end
@@ -1277,9 +1277,13 @@ SWEP.Hook_NameChange = function(wep, name)
         elseif barr > 0 then
             if barr == 2 and atts[10].Installed == "ud_m16_stock_buffer" then
                 return trueNames and "AR-15 Pistol" or "RAYCAR-NG Pistol"
+            elseif upr == "a1" and barr == 1 then
+                return trueNames and "CRXM177E2B" or "AMR1P"
             else
                 return trueNames and "AR-15 SBR" or "RAYCAR-NG SBR"
             end
+        elseif upr == "a1" then
+            return trueNames and "CRM16A1" or "AMR1S"
         end
         return trueNames and "AR-15" or "RAYCAR-NG"
     elseif lwr == "fpw" then

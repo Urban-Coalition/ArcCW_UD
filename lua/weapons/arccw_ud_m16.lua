@@ -820,7 +820,8 @@ SWEP.Animations = {
             {s = ratel, t = 1.1},
             {s = rottle,  t = 1.15},
             {s = common .. "grab.ogg", t = 1.81},
-            {s = common .. "shoulder.ogg", t = 1.9},
+            {s = common .. "rattle_b2i_rifle.ogg", t = 1.7},
+            {s = common .. "shoulder.ogg", t = 1.8},
         },
     },
     ["reload_empty"] = {
@@ -847,7 +848,8 @@ SWEP.Animations = {
             {s = path .. "boltdrop.ogg", t = 1.85},
             {s = ratel, t = 1.9},
             {s = common .. "grab.ogg", t = 2.0},
-            {s = common .. "shoulder.ogg", t = 2.15},
+            {s = common .. "rattle_b2i_rifle.ogg", t = 2.0},
+            {s = common .. "shoulder.ogg", t = 2.1},
         },
     },
 

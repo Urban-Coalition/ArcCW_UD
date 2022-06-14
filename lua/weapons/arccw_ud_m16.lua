@@ -208,18 +208,42 @@ SWEP.WorldModelOffset = {
 
 local path = ")^weapons/arccw_ud/m16/"
 local common = ")^/arccw_uc/common/"
-SWEP.FirstShootSound = path .. "first.ogg"
---SWEP.ShootSound = {path .. "fire-01.ogg", path .. "fire-02.ogg", path .. "fire-03.ogg", path .. "fire-04.ogg", path .. "fire-05.ogg", path .. "fire-06.ogg"} -- Maybe Not Placeholder
---SWEP.DistantShootSound = {path .. "fire-dist-01.ogg", path .. "fire-dist-02.ogg", path .. "fire-dist-03.ogg", path .. "fire-dist-04.ogg", path .. "fire-dist-05.ogg", path .. "fire-dist-06.ogg"} -- Maybe Not Placeholder
-SWEP.ShootSound = {path .. "auto1.ogg", path .. "auto2.ogg", path .. "auto3.ogg", path .. "auto4.ogg"}
-SWEP.DistantShootSound = path .. "dist.ogg"
-SWEP.ShootSoundSilenced = path .. "fire_sup.ogg"
+SWEP.ShootSound = {
+    path .. "fire-01.ogg",
+    path .. "fire-02.ogg",
+    path .. "fire-03.ogg",
+    path .. "fire-04.ogg",
+    path .. "fire-05.ogg",
+    path .. "fire-06.ogg"
+}
+SWEP.ShootSoundSilenced = path .. "fire_supp.ogg"
+SWEP.DistantShootSound = nil
 SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"
 SWEP.ShootDrySound = path .. "dryfire.ogg"
 
-SWEP.DistantShootSoundOutdoors = nil
-SWEP.DistantShootSoundIndoors = nil
-SWEP.DistantShootSoundOutdoorsVolume = 0.2
+SWEP.DistantShootSoundOutdoors = {
+    path .. "fire-dist-01.ogg",
+    path .. "fire-dist-02.ogg",
+    path .. "fire-dist-03.ogg",
+    path .. "fire-dist-04.ogg",
+    path .. "fire-dist-05.ogg",
+    path .. "fire-dist-06.ogg"
+}
+SWEP.DistantShootSoundIndoors = {
+    path .. "fire-dist-int-01.ogg",
+    path .. "fire-dist-int-02.ogg",
+    path .. "fire-dist-int-03.ogg",
+    path .. "fire-dist-int-04.ogg",
+    path .. "fire-dist-int-05.ogg",
+    path .. "fire-dist-int-06.ogg"
+}
+SWEP.DistantShootSoundOutdoorsSilenced = {
+    common .. "sup_tail.ogg"
+}
+SWEP.DistantShootSoundIndoorsSilenced = {
+    common .. "sup_tail.ogg"
+}
+SWEP.DistantShootSoundOutdoorsVolume = 1
 SWEP.DistantShootSoundIndoorsVolume = 1
 SWEP.Hook_AddShootSound = ArcCW.UC.InnyOuty
 

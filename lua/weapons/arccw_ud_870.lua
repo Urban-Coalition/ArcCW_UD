@@ -183,9 +183,29 @@ local path = ")^weapons/arccw_ud/870/"
 local common = ")^/arccw_uc/common/"
 SWEP.ShootSound = path .. "fire.ogg"
 SWEP.ShootSoundSilenced = path .. "fire_supp.ogg"
-SWEP.DistantShootSound = path .. "fire_dist.ogg"
-SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"
+--[[SWEP.DistantShootSound = path .. "fire_dist.ogg"
+SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"]]
 SWEP.ShootDrySound = path .. "dryfire.ogg"
+SWEP.DistantShootSoundOutdoors = {
+    path .. "fire_dist.ogg",
+}
+SWEP.DistantShootSoundIndoors = {
+    common .. "fire-dist-int-shotgun-01.ogg",
+    common .. "fire-dist-int-shotgun-02.ogg",
+    common .. "fire-dist-int-shotgun-03.ogg",
+    common .. "fire-dist-int-shotgun-04.ogg",
+    common .. "fire-dist-int-shotgun-05.ogg",
+    common .. "fire-dist-int-shotgun-06.ogg"
+}
+SWEP.DistantShootSoundOutdoorsSilenced = {
+    common .. "sup_tail.ogg"
+}
+SWEP.DistantShootSoundIndoorsSilenced = {
+    common .. "sup_tail.ogg"
+}
+SWEP.DistantShootSoundOutdoorsVolume = 1
+SWEP.DistantShootSoundIndoorsVolume = 1
+SWEP.Hook_AddShootSound = ArcCW.UC.InnyOuty
 
 SWEP.Hook_Think = ArcCW.UC.ADSReload
 

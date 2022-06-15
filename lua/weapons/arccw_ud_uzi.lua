@@ -200,7 +200,7 @@ SWEP.ShootSoundSilenced = path1 .. "fire_supp.ogg"
 SWEP.ShootDrySound = path .. "dryfire.ogg"
 
 SWEP.DistantShootSoundOutdoors = {
-    path .. "fire-dist.ogg",
+    path .. "fire_dist.ogg",
 }
 SWEP.DistantShootSoundIndoors = {
     common .. "fire-dist-int-pistol-01.ogg",

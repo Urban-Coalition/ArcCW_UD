@@ -197,9 +197,28 @@ local common = ")^/arccw_uc/common/"
 SWEP.FirstShootSound = path .. "fire.ogg"
 SWEP.ShootSound = path .. "fire_auto.ogg"
 SWEP.ShootSoundSilenced = path1 .. "fire_supp.ogg"
-SWEP.DistantShootSound = path .. "fire_dist.ogg"
-SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"
 SWEP.ShootDrySound = path .. "dryfire.ogg"
+
+SWEP.DistantShootSoundOutdoors = {
+    path .. "fire-dist.ogg",
+}
+SWEP.DistantShootSoundIndoors = {
+    common .. "fire-dist-int-pistol-01.ogg",
+    common .. "fire-dist-int-pistol-02.ogg",
+    common .. "fire-dist-int-pistol-03.ogg",
+    common .. "fire-dist-int-pistol-04.ogg",
+    common .. "fire-dist-int-pistol-05.ogg",
+    common .. "fire-dist-int-pistol-06.ogg"
+}
+SWEP.DistantShootSoundOutdoorsSilenced = {
+    common .. "sup_tail.ogg"
+}
+SWEP.DistantShootSoundIndoorsSilenced = {
+    common .. "sup_tail.ogg"
+}
+SWEP.DistantShootSoundOutdoorsVolume = 1
+SWEP.DistantShootSoundIndoorsVolume = 1
+SWEP.Hook_AddShootSound = ArcCW.UC.InnyOuty
 
 -- Bodygroups --
 

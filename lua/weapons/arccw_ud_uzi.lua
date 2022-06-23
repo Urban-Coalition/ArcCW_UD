@@ -410,7 +410,7 @@ SWEP.Animations = {
         Source = "fire_empty",
         Time = 13 / 30,
         ShellEjectAt = 0.03,
-        SoundTable = {{ s = path .. "prefire.ogg", t = 0 }},
+        SoundTable = {{ s = path .. "chforward.ogg", t = 0 }},
     },
 
     ["trigger"] = {

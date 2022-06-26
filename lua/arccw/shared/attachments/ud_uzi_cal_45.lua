@@ -6,7 +6,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
 end
 att.Slot = "ud_uzi_caliber"
 
-att.Icon = Material("entities/att/acwatt_ud_glock_caliber.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_uc_cal_45acp.png", "smooth mips")
 att.Description = "A large cartridge that increases close-range stopping power substantially, but greatly reduces magazine capacity. The subsonic rounds are very quiet when suppressed."
 att.Desc_Pros = {
     "No distant firing sound when suppressed"

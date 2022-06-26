@@ -705,7 +705,7 @@ SWEP.Attachments = {
     {
         PrintName = "Caliber",
         DefaultAttName = "9x19mm Parabellum",
-        DefaultAttIcon = Material("entities/att/acwatt_ud_glock_caliber.png", "smooth mips"),
+        DefaultAttIcon = Material("entities/att/acwatt_uc_cal_9mm.png", "smooth mips"),
         Slot = "ud_uzi_caliber",
     },
     {

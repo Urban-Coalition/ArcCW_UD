@@ -215,12 +215,12 @@ SWEP.DistantShootSoundOutdoors = {
     path .. "fire-dist-06.ogg"
 }
 SWEP.DistantShootSoundIndoors = {
-    common .. "fire-dist-int-pistol-01.ogg",
-    common .. "fire-dist-int-pistol-02.ogg",
-    common .. "fire-dist-int-pistol-03.ogg",
-    common .. "fire-dist-int-pistol-04.ogg",
-    common .. "fire-dist-int-pistol-05.ogg",
-    common .. "fire-dist-int-pistol-06.ogg"
+    path .. "fire-dist-int-01.ogg",
+    path .. "fire-dist-int-02.ogg",
+    path .. "fire-dist-int-03.ogg",
+    path .. "fire-dist-int-04.ogg",
+    path .. "fire-dist-int-05.ogg",
+    path .. "fire-dist-int-06.ogg"
 }
 SWEP.DistantShootSoundOutdoorsSilenced = {
     common .. "sup_tail.ogg"
@@ -368,6 +368,8 @@ local desg_cal = {
     ["ud_glock_caliber_45acp"] = 4,
     ["ud_glock_caliber_22lr"] = 5,
     ["ud_glock_caliber_380acp"] = 6,
+    ["ud_glock_caliber_460"] = 7,
+    ["ud_glock_caliber_50gi"] = 8,
 }
 
 SWEP.Hook_NameChange = function(wep,name)
@@ -430,6 +432,18 @@ SWEP.Hook_NameChange = function(wep,name)
                     mid = "28"
                 else
                     mid = "25"
+                end
+            elseif caliber == 7 then
+                if barrel == 8 then
+                    mid = "30"
+                else
+                    mid = "21"
+                end
+            elseif caliber == 8 then
+                if barrel == 8 then
+                    mid = "30"
+                else
+                    mid = "21"
                 end
             end
         end
@@ -1014,7 +1028,7 @@ SWEP.Attachments = {
     {
         PrintName = "Caliber",
         DefaultAttName = "9x19mm Parabellum",
-        DefaultAttIcon = Material("entities/att/acwatt_ud_glock_caliber.png", "smooth mips"),
+        DefaultAttIcon = Material("entities/att/acwatt_uc_cal_9mm.png", "smooth mips"),
         Slot = "ud_glock_caliber",
     },
     {

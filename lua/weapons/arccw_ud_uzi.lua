@@ -410,7 +410,7 @@ SWEP.Animations = {
         Source = "fire_empty",
         Time = 13 / 30,
         ShellEjectAt = 0.03,
-        SoundTable = {{ s = path .. "prefire.ogg", t = 0 }},
+        SoundTable = {{ s = path .. "chforward.ogg", t = 0 }},
     },
 
     ["trigger"] = {
@@ -669,8 +669,8 @@ SWEP.Animations = {
             {s = common .. "magdrop.ogg",  t = 1.0},
             {s = path .. "magin.ogg",         t = 1.15, c = ci},
             {s = common .. "cloth_4.ogg",  t = 1.65},
-            {s = path .. "chback.ogg",         t = 2.25, c = ci},
-            {s = path .. "chforward.ogg",         t = 2.1, c = ci},
+            {s = path .. "chback.ogg",         t = 2.0, c = ci},
+            {s = path .. "chforward.ogg",         t = 2.25, c = ci},
             {s = common .. "shoulder.ogg",  t = 2.7},
         },
     },

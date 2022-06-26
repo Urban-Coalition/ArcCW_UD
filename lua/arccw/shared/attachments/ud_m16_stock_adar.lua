@@ -21,7 +21,7 @@ att.Slot = "ud_m16_stock"
 att.AutoStats = true
 
 att.Mult_Sway = 0.5
-att.Mult_Recoil = 0.75
+att.Mult_Recoil = 0.85
 att.Mult_RecoilSide = 0.75
 att.Mult_SpeedMult = .95
 att.Mult_SightedSpeedMult = .8

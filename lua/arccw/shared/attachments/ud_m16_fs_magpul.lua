@@ -1,6 +1,6 @@
 att.PrintName = "Magpul Flip-Up Front Sight"
 att.AbbrevName = "Magpul Front Sight"
-att.Icon = Material("entities/arc9_att_rs_magpul.png", "mips smooth")
+att.Icon = Material("entities/arc9_att_fs_magpul.png", "mips smooth")
 att.Description = [[Removable front sight made by Magpul. Designed to be mounted on forend rails.]]
 att.Desc_Neutrals = {"uc.cosmetic"}
 att.SortOrder = 1

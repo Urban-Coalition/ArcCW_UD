@@ -1,6 +1,6 @@
 att.PrintName = "KAC Flip-Up Front Sight"
 att.AbbrevName = "KAC Front Sight"
-att.Icon = Material("entities/arc9_att_rs_kac.png", "mips smooth")
+att.Icon = Material("entities/arc9_att_fs_kac.png", "mips smooth")
 att.Description = [[Removable front sight made by Knight's Armament Company. Designed to be mounted on forend rails.]]
 att.Desc_Neutrals = {"uc.cosmetic"}
 att.SortOrder = 1

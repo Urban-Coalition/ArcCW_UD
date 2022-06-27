@@ -1,6 +1,6 @@
 att.PrintName = "SIG Flip-Up Front Sight"
 att.AbbrevName = "SIG Front Sight"
-att.Icon = Material("entities/arc9_att_rs_sig.png", "mips smooth")
+att.Icon = Material("entities/arc9_att_fs_sig.png", "mips smooth")
 att.Description = [[Removable front sight made by SIG Sauer. Designed to be mounted on forend rails.]]
 att.Desc_Neutrals = {"uc.cosmetic"}
 att.SortOrder = 1

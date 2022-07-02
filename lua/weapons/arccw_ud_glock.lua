@@ -245,6 +245,9 @@ SWEP.AttachmentElements = {
     ["ud_glock_skin_olive"] = {
         VMSkin = 2,
     },
+    ["ud_glock_skin_custom"] = {
+        VMSkin = 3,
+    },
     ["ud_glock_mag_10"] = {
         VMBodygroups = {{ind = 1, bg = 1}},
         AttPosMods = {

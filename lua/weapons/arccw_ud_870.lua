@@ -440,6 +440,9 @@ SWEP.AttachmentElements = {
     ["ud_870_skin_dirty"] = {
         VMSkin = 0
     },
+    ["ud_870_skin_custom"] = {
+        VMSkin = 3
+    },
 }
 
 SWEP.Attachments = {

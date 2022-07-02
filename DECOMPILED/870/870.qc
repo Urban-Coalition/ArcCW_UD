@@ -59,8 +59,9 @@ $cdmaterials "models\weapons\arccw\ud_common"
 
 $texturegroup "skinfamilies"
 {
-	{ "870"}
-	{ "870_clean"}
+	{ "870" }
+	{ "870_clean" }
+	{ "870_custom" }
 }
 
 

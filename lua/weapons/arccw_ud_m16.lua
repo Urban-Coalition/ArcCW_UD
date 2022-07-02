@@ -1366,7 +1366,7 @@ SWEP.Attachments = {
         WMScale = Vector(1.1, 1.1, 1.1),
         ExtraSightDist = 4,
         SlideAmount = {
-            vmin = Vector(0, -1.75, 3 - 2),
+            vmin = Vector(0, -1.75, 3 - 3),
             vmax = Vector(0, -1.75, 3 + 2),
         },
     },

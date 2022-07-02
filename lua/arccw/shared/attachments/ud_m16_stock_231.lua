@@ -18,36 +18,30 @@ att.Slot = "ud_m16_stock"
 att.AutoStats = true
 att.SortOrder = 3
 
-att.Mult_DrawTime = 0.75
-att.Mult_HolsterTime = 0.75
-
 att.Mult_SightTime = 0.75
 att.Mult_Recoil = 1.25
-att.Mult_Sway = 2
-att.Mult_SpeedMult = 1.025
 
 att.Add_BarrelLength = -4
 
+att.Mult_DrawTime = 0.75
+att.Mult_HolsterTime = 0.75
+
 att.ToggleSound = "arccw_uc/common/stockslide.ogg"
 
+att.ToggleLockDefault = true
 att.ToggleStats = {
     {
         PrintName = "Extended",
+        AutoStats = true,
         ActivateElements = {"stock_231_ex"},
     },
     {
         PrintName = "Collapsed",
         AutoStats = true,
-        ActivateElements = {"stock_231_in"},
         Mult_HipDispersion = 0.75,
         Mult_MoveDispersion = 0.75,
         Mult_RecoilSide = 2,
+        ActivateElements = {"stock_231_in"},
         Override_ActivePos = Vector(0.33, -1, 1),
     },
-    --[[] -- we already have a buffer tube attachment
-    {
-        PrintName = "Removed",
-        ActivateElements = {"stock_231_tube"},
-    },
-    ]]
 }

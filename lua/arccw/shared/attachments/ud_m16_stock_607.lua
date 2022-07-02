@@ -18,30 +18,24 @@ att.Slot = "ud_m16_stock"
 att.AutoStats = true
 att.SortOrder = 5
 
---[[]
-att.Mult_SightTime = 0.95
-att.Mult_HipDispersion = 1.15
-att.Mult_RecoilSide = 0.9
-att.Mult_Sway = 1.1
-]]
-att.Mult_Sway = 1.25
-
-att.Add_BarrelLength = 0
+att.Add_BarrelLength = -4
+att.Mult_Sway = 0.75
 
 att.ToggleSound = "arccw_uc/common/stockslide.ogg"
 
+att.ToggleLockDefault = true
 att.ToggleStats = {
     {
-        PrintName = "Collapsed",
-        ActivateElements = {"stock_607_in"},
-        Mult_SightTime = 0.8,
-        Mult_ShootSpeedMult = 1.05,
-        Mult_HipDispersion = 1.2,
-        Add_BarrelLength = -4,
-        Override_ActivePos = Vector(0.33, -1, 1),
+        PrintName = "Extended",
+        AutoStats = true,
+        ActivateElements = {"stock_607_ex"},
     },
     {
-        PrintName = "Extended",
-        ActivateElements = {"stock_607_ex"}
+        PrintName = "Collapsed",
+        AutoStats = true,
+        ActivateElements = {"stock_607_in"},
+        Mult_SightTime = 0.8,
+        Mult_HipDispersion = 1.25,
+        Override_ActivePos = Vector(0.33, -1, 1),
     },
 }

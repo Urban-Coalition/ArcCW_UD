@@ -37,7 +37,7 @@ att.ToggleStats = {
         AutoStats = true,
         ActivateElements = {"stock_carbine_in"},
         Mult_RecoilSide = 1.5,
-        Mult_SightedSpeedMult = 1.1,
+        Mult_SightedSpeedMult = 1.15,
         Override_ActivePos = Vector(0.33, -1, 1),
     },
 }

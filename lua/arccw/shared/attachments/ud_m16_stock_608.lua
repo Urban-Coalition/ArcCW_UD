@@ -1,5 +1,5 @@
 att.PrintName = "AMCAR 608 Stock"
-att.AbbrevName = "M608 Stock"
+att.AbbrevName = "M608 Cap Stock"
 
 if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "M16 Model 608 Stock"

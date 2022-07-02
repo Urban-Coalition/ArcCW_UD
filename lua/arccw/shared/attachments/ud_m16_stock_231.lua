@@ -38,8 +38,8 @@ att.ToggleStats = {
     {
         PrintName = "Collapsed",
         AutoStats = true,
-        Mult_HipDispersion = 0.75,
-        Mult_MoveDispersion = 0.75,
+        Mult_HipDispersion = 0.6,
+        Mult_MoveDispersion = 0.6,
         Mult_RecoilSide = 2,
         ActivateElements = {"stock_231_in"},
         Override_ActivePos = Vector(0.33, -1, 1),

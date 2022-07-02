@@ -71,7 +71,6 @@ hook.Add( "PopulateWeapons", "UC_AddWeaponContent", function( pnlContent, tree, 
                     uc_manu = ent.Trivia_Manufacturer,
                     uc_year = ent.Trivia_Year,
                     uc_cali = ent.Trivia_Calibre,
-                    uc_desc = ent.Trivia_Description,
                 } )
             end
 
@@ -88,7 +87,7 @@ function CreateUCWeapon( container, obj )
     local icon = vgui.Create( "UCWepSel", container )
     icon:SetContentType( "weapon" )
     icon:SetSpawnName( obj.spawnname )
-    icon:SetName( obj.nicename, obj.spawnname, { manu = obj.uc_manu, year = obj.uc_year, cali = obj.uc_cali, desc = obj.uc_desc } )
+    icon:SetName( obj.nicename, obj.spawnname, { manu = obj.uc_manu, year = obj.uc_year, cali = obj.uc_cali } )
     icon:SetMaterial( obj.material )
     icon:SetAdminOnly( obj.admin )
     icon:SetColor( Color( 135, 206, 250, 255 ) )
@@ -206,7 +205,6 @@ function PANEL:SetName( name, spname, other )
     self.WEP_MANU = other.manu
     self.WEP_YEAR = other.year
     self.WEP_CALI = other.cali
-    self.WEP_DESC = other.desc
     --self.Label:SetText( name )
     --self.Label2:SetText( name )
     self.m_NiceName = name

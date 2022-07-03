@@ -21,26 +21,32 @@ att.Mult_SightTime = 0.8
 att.Mult_ReloadTime = 0.85
 att.Mult_Sway = 0.75
 
-att.Mult_Damage = 0.4
-att.Mult_DamageMin = 0.4
+att.Mult_Damage = 0.35 --ArcCW.UC.StdDmg["22lr"].max / ArcCW.UC.StdDmg["556"].max
+att.Mult_DamageMin = 0.35 --ArcCW.UC.StdDmg["22lr"].min / ArcCW.UC.StdDmg["556"].min
+att.Mult_Penetration =  0.15 --ArcCW.UC.StdDmg["22lr"].pen / ArcCW.UC.StdDmg["556"].pen
+
 att.Mult_Range = 0.5
 att.Mult_Recoil = 0.25
 att.Mult_VisualRecoilMult = 0.25
 att.Mult_RPM = 1000 / 540
-att.Mult_Penetration = 2 / 14
 att.Mult_ShootSpeedMult = 1.2
 
 att.Override_ClipSize = 15
 
 att.ActivateElements = {"ud_mini14_mag_15_22lr", "ud_mini14_receiver_22lr"}
-att.GivesFlags = {"mini14_22lr","cal_subsonic"}
-att.ExcludeFlags = {"powder_subsonic"}
+att.GivesFlags = {"mini14_22lr"}
+
+-- att.GivesFlags = {"mini14_22lr","cal_subsonic"}
+-- att.ExcludeFlags = {"powder_subsonic"}
 
 att.Override_Ammo = "plinking"
 att.Override_Trivia_Calibre = ".22 Long Rifle"
 att.Override_ShellModel = "models/weapons/arccw/uc_shells/22lr.mdl"
 att.Override_ShellScale = 1
 att.Override_ShellSounds = ArcCW.TinyShellSoundsTable
+
+att.Override_PhysTracerProfile = "uc_plinking"
+att.Override_PhysBulletMuzzleVelocity = 370
 
 att.Hook_SelectReloadAnimation = function(wep, anim)
     return anim .. "_15_22lr"

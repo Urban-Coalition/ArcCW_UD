@@ -7,9 +7,9 @@ end
 att.Slot = "ud_uzi_caliber"
 
 att.Icon = Material("entities/att/acwatt_uc_cal_45acp.png", "smooth mips")
-att.Description = "A large cartridge that increases close-range stopping power substantially, but greatly reduces magazine capacity. The subsonic rounds are very quiet when suppressed."
+att.Description = "A large cartridge that increases close-range stopping power substantially, but greatly reduces magazine capacity."
 att.Desc_Pros = {
-    "No distant firing sound when suppressed"
+    "uc.subsonic"
 }
 
 att.Override_Trivia_Calibre = ".45 ACP"
@@ -51,6 +51,3 @@ att.Hook_GetDefaultAttName = function(wep, slot)
         return "16-Round Mag"
     end
 end
-
-att.GivesFlags = {"uzi_45","cal_subsonic"}
-att.ExcludeFlags = {"powder_subsonic"}

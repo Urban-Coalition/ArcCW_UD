@@ -74,12 +74,12 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage --
 
-SWEP.Damage = 34 -- 3 shot kill
-SWEP.DamageMin = 20 -- 5 shot kill
+SWEP.Damage = ArcCW.UC.StdDmg["556"].max
+SWEP.DamageMin = ArcCW.UC.StdDmg["556"].min
 SWEP.RangeMin = 50
 SWEP.Range = 350 -- 4 shot until ~250m
 
-SWEP.Penetration = 14
+SWEP.Penetration = ArcCW.UC.StdDmg["556"].pen
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 960

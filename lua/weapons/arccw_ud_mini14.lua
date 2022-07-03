@@ -63,12 +63,12 @@ SWEP.DefaultPoseParams = {["grip"] = 0}
 
 -- Damage --
 
-SWEP.Damage = 34 -- 3 shot kill
-SWEP.DamageMin = 20 -- 5 shot kill
+SWEP.Damage = ArcCW.UC.StdDmg["556"].max
+SWEP.DamageMin = ArcCW.UC.StdDmg["556"].min
 SWEP.RangeMin = 50
 SWEP.Range = 400 -- 4 shot until ~275m
 
-SWEP.Penetration = 14
+SWEP.Penetration = ArcCW.UC.StdDmg["556"].pen
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 990

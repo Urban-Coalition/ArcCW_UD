@@ -21,16 +21,18 @@ att.AutoStats = true
 att.Override_Trivia_Calibre = ".22 Long Rifle"
 att.Override_Ammo = "plinking"
 
-att.Mult_Damage = 0.4
-att.Mult_DamageMin = 0.4
-att.Mult_Penetration = 3 / 6
+att.Mult_Damage = ArcCW.UC.StdDmg["22lr"].max / ArcCW.UC.StdDmg["9mm"].max
+att.Mult_DamageMin = ArcCW.UC.StdDmg["22lr"].min / ArcCW.UC.StdDmg["9mm"].min
+att.Mult_Penetration =  ArcCW.UC.StdDmg["22lr"].pen / ArcCW.UC.StdDmg["9mm"].pen
 
 att.Mult_Recoil = 0.25
 att.Mult_VisualRecoilMult = 0.25
 att.Mult_RPM = 1.5
 att.Mult_Penetration = 0.1
 att.Mult_ShootSpeedMult = 1.2
-att.Override_PhysBulletMuzzleVelocity = 370
+
+att.Override_PhysTracerProfile = "uc_plinking"
+att.Mult_PhysBulletMuzzleVelocity = 325 / 375
 
 att.Mult_ClipSize = 1.2
 
@@ -49,6 +51,7 @@ end
 att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
     if wep:GetBuff_Override("Silencer") then
         -- fallback to script
+        return
     else
         return { "weapons/arccw_ud/glock/fire_dist_22.ogg" }
     end
@@ -58,6 +61,7 @@ local path = ")^weapons/arccw_ud/glock/"
 att.Hook_GetDistantShootSoundIndoors = function(wep, distancesound)
     if wep:GetBuff_Override("Silencer") then
         -- fallback to script
+        return
     else
         return {
             path .. "fire-dist-int-light-01.ogg",

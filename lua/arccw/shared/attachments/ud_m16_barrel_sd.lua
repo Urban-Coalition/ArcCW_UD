@@ -13,6 +13,7 @@ att.Desc_Cons = {
     "uc.overheat"
 }
 att.Desc_Neutrals = {
+    "uc.supptail"
 }
 att.Slot = "ud_m16_blen"
 
@@ -26,7 +27,7 @@ att.Mult_AccuracyMOA = 1.25
 att.Mult_RPM = 1.111
 
 att.Add_BarrelLength = -10
-att.Mult_PhysBulletMuzzleVelocity = 0.78125
+att.Mult_PhysBulletMuzzleVelocity = 0.78
 
 att.LHIK = true
 
@@ -43,9 +44,9 @@ att.ActivateElements = {"hg_sd"}
 att.Override_Jamming = true
 att.Override_HeatLockout = false
 att.Override_HeatFix = false
-att.Override_HeatCapacity = 150
-att.Override_HeatDelayTime = 0.2
-att.Override_HeatDissipation = 5
+att.Override_HeatCapacity = 90
+att.Override_HeatDelayTime = 2
+att.Override_HeatDissipation = 7.5
 
 att.Hook_ModifyRPM = function(wep, delay)
     local heat = math.Clamp(wep:GetHeat() / wep:GetMaxHeat(), 0, 1)
@@ -70,5 +71,11 @@ att.M_Hook_Mult_AccuracyMOA = function(wep, data)
     local heat = math.Clamp(wep:GetHeat() / wep:GetMaxHeat(), 0, 1)
     if heat > 0.5 then
         data.mult = data.mult * (1 + ((heat - 0.5) / 0.5))
+    end
+end
+
+att.Hook_GetDistantShootSound = function(wep, distancesound)
+    if distancesound == wep.DistantShootSoundSilenced and wep:GetBuff("PhysBulletMuzzleVelocity") < ArcCW.UC.SubsonicThreshold then
+        return false
     end
 end

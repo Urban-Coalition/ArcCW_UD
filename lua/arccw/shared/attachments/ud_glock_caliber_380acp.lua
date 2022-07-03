@@ -24,7 +24,7 @@ att.Mult_Range = 0.8
 att.Mult_DamageMin = 0.9
 att.Mult_Recoil = 0.65
 att.Mult_Penetration = 3 / 6
-att.Override_PhysBulletMuzzleVelocity = 312
+att.Mult_PhysBulletMuzzleVelocity = 310 / 375
 
 att.Override_ShellModel = "models/weapons/arccw/uc_shells/357sig.mdl"
 att.Override_ShellScale = 1

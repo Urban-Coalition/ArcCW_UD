@@ -11,5 +11,5 @@ att.Mult_HeatCapacity = 160 / 120
 att.Mult_Recoil = 1.1
 
 att.LHIK = true
-att.Model = "models/weapons/arccw/atts/fpw_lhik.mdl"
+att.Model = "models/weapons/arccw/atts/m4_lhik.mdl"
 att.DroppedModel = "models/items/boxsrounds.mdl"

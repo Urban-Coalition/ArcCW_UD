@@ -179,13 +179,13 @@ SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.81, 0, 0.85),
+     Pos = Vector(-2.81, 0, 1.3),
      Ang = Angle(0, 0, 0),
      Magnification = 1.1,
      SwitchToSound = "",
 }
 
-SWEP.ActivePos = Vector(0.33, 0, 1)
+SWEP.ActivePos = Vector(0.33, -2, 1)
 SWEP.ActiveAng = Angle(0, 0, -3)
 
 SWEP.CustomizePos = Vector(5, -2, -2)
@@ -1362,12 +1362,10 @@ SWEP.Attachments = {
             vpos = Vector(0, -1.75, 3),
             vang = Angle(90, 0, -90),
         },
-        VMScale = Vector(1.1, 1.1, 1.1),
-        WMScale = Vector(1.1, 1.1, 1.1),
         ExtraSightDist = 4,
         SlideAmount = {
-            vmin = Vector(0, -1.75, 3 - 3),
-            vmax = Vector(0, -1.75, 3 + 2),
+            vmin = Vector(-0.03, -1.55, 3 - 3),
+            vmax = Vector(-0.03, -1.55, 3 + 2),
         },
     },
     {

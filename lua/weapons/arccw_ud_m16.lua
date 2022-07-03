@@ -387,7 +387,7 @@ SWEP.AttachmentElements = {
     ["mount_tactical"] = {
         AttPosMods = {
             [8] = {
-                vpos = Vector(1.41, -.2, 15.5),
+                vpos = Vector(1, -.35, 11.5),
                 vang = Angle(90, 0, 0),
                 wang = Angle(90, 0, 0),
             },
@@ -401,11 +401,11 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [4] = {
-                vpos = Vector(0, -0.07, 24.75),
+                vpos = Vector(0, -0.4, 18.75),
                 vang = Angle(90, 0, -90),
             },
             [16] = {
-                vpos = Vector(0, -1.75, 16), -- 21.75 or 15.75
+                vpos = Vector(0, -1.65, 12.5), -- 21.75 or 15.75
                 vang = Angle(90, 0, -90),
             },
         }
@@ -417,11 +417,11 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [4] = {
-                vpos = Vector(0, -0.07, 20.75),
+                vpos = Vector(0, -0.4, 17),
                 vang = Angle(90, 0, -90),
             },
             [16] = {
-                vpos = Vector(0, -1.75, 16), -- 21.75 or 15.75
+                vpos = Vector(0, -1.65, 12.5), -- 21.75 or 15.75
                 vang = Angle(90, 0, -90),
             },
         }
@@ -1364,8 +1364,8 @@ SWEP.Attachments = {
         },
         ExtraSightDist = 4,
         SlideAmount = {
-            vmin = Vector(-0.03, -1.55, 3 - 3),
-            vmax = Vector(-0.03, -1.55, 3 + 2),
+            vmin = Vector(-0.03, -1.6, 3 - 3),
+            vmax = Vector(-0.03, -1.6, 3 + 2),
         },
     },
     {
@@ -1399,7 +1399,7 @@ SWEP.Attachments = {
         VMScale = Vector(1.25, 1.25, 1.25),
         WMScale = VMScale,
         Offset = {
-            vpos = Vector(0.025, -0.05, 30.25),
+            vpos = Vector(0.025, -.4, 24.25),
             vang = Angle(90, 0, -90),
         },
         ExcludeFlags = {"sd", "m16_stub"},
@@ -1433,14 +1433,14 @@ SWEP.Attachments = {
         Slot = {"foregrip","ubgl"},
         Bone = "m16_parent",
         Offset = {
-            vpos = Vector(0, 1.25, 12),
+            vpos = Vector(0, 6, 11),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"rail_fg"},
         ExcludeFlags = {"m16_lmg", "m16_stub"},
         SlideAmount = {
-            vmin = Vector(0, 1.25, 15.5),
-            vmax = Vector(0, 1.25, 9),
+            vmin = Vector(0, .6, 14),
+            vmax = Vector(0, .6, 8),
         },
     },
     {
@@ -1508,7 +1508,7 @@ SWEP.Attachments = {
         FreeSlot = true,
         Bone = "m16_parent",
         Offset = {
-            vpos = Vector(0, -1.75, 21.75), -- 21.75 or 15.75
+            vpos = Vector(0, -1.65, 16.75), -- 21.75 or 15.75
             vang = Angle(90, 0, -90),
         },
         ExcludeFlags = {"sight_magpul"}

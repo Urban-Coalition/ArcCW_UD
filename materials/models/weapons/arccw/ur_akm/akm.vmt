@@ -1,0 +1,16 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/arccw/ur_akm/akm_color"
+	"$bumpmap" "models/weapons/arccw/ur_akm/akm_normals"
+	"$normalmapalphaenvmapmask" 	1
+	
+	"$phong" 		"1"
+	"$phongexponenttexture"	"models/weapons/arccw/ur_akm/akm_exp"
+//	"$phongexponent" "15"
+	"$phongboost" "1"
+	"$phongfresnelranges" "[.6 1 2]"
+	
+	"$envmap" "env_cubemap"
+	"$envmapfresnel" 			"1"
+	"$envmaptint" "[.04 .04 .04]"
+}

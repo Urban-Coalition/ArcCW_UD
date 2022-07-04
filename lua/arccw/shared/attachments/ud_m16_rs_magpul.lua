@@ -25,5 +25,5 @@ att.Override_IronSightStruct = {
     Magnification = 1.1
 }
 att.Model = "models/weapons/arccw/atts/magpul_rs.mdl"
-att.ModelOffset = Vector(-1.5, -0.035, 0)
+att.ModelOffset = Vector(-1.5, -0.005, 0)
 att.ModelScale = Vector(0.87, 0.87, 0.87)

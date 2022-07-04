@@ -387,8 +387,8 @@ SWEP.AttachmentElements = {
     ["mount_tactical"] = {
         AttPosMods = {
             [8] = {
-                vpos = Vector(1, -.35, 11.5),
-                vang = Angle(90, 0, 0),
+                vpos = Vector(-1, -.35, 11.5),
+                vang = Angle(-90, 180, 0),
                 wang = Angle(90, 0, 0),
             },
         }
@@ -934,7 +934,7 @@ SWEP.Animations = {
             {s = common .. "rifle_magdrop.ogg",  t = 0.8},
             {s = path .. "magin.ogg",    t = 0.95},
             {s = rottle, t = 1.39},
-            {s = path .. "boltdrop.ogg", t = 1.77},
+            {s = path .. "chamber_press.ogg", t = 1.77},
             {s = common .. "shoulder.ogg", t = 2.13},
         },
     },
@@ -1125,7 +1125,7 @@ SWEP.Animations = {
             {s = rottle, t = 0.75},
             {s = "weapons/arccw_ud/uzi/" .. "magin.ogg",    t = 0.98},
             {s = rottle, t = 1.39},
-            {s = path .. "boltdrop.ogg", t = 56 / 30},
+            {s = path .. "chamber_press.ogg", t = 56 / 30},
             {s = common .. "shoulder.ogg", t = 2.15},
         },
     },
@@ -1259,25 +1259,27 @@ SWEP.Hook_NameChange = function(wep, name)
     local lwr = string.Replace(atts[6].Installed or "default","ud_m16_receiver_","")
 
     if upr == "9mm" then
+        local sd = (barr == -1)
         wep.Trivia_Desc = smgDesc
         if lwr == "semi" then
-            return trueNames and "AR-15 9mm" or "RAYCAR-NG 9mm"
+            return trueNames and "AR-15 9mm" or "RAYSSMG"
         elseif flat then
-            return trueNames and "R0991" or "RAYSMG"
+            return trueNames and "R0991" or (sd and "AMSSMG-9NG") or "AMPAW-9NG"
         end
-        return trueNames and "R0635" or "AMSMG"
+        return trueNames and "R0635" or (sd and "AMSSMG-9") or "AMPAW-9"
+        
     end
 
     if lwr == "auto" then
         if upr == "a1" then
             wep.Trivia_Desc = a1Desc
             if barr == 0 then
-                return trueNames and "M16A1" or "AMRA1"
+                return trueNames and "M16A1" or "AMR-A1"
             elseif barr == 1 then
-                return trueNames and "M605" or "AMRA1 Prototype"
+                return trueNames and "M605" or "AMR-A1 Prototype"
             end
             wep.Trivia_Desc = carDesc
-            return trueNames and "CAR-15" or "Stoner Commando"
+            return trueNames and "CAR-15" or "AMR-ACC"
         end
         if barr == 0 then
             wep.Trivia_Desc = a3Desc
@@ -1285,25 +1287,25 @@ SWEP.Hook_NameChange = function(wep, name)
                 wep.Trivia_Desc = lmgDesc
                 return trueNames and "Colt LMG" or "AMSAW"
             elseif flat and hg == "tactical" then
-                return trueNames and "R0901" or "AMR-A"
+                return trueNames and "R0901" or "AMR-A0"
             end
-            return trueNames and "M16A3" or "AMR-A"
+            return trueNames and "M16A3" or "AMR-A0"
         elseif barr == 1 then
             wep.Trivia_Desc = m4Desc
             if flat then
-                return trueNames and "M4A1" or "CAR-4"
+                return trueNames and "M4A1" or "AMCAR-NG1"
             end
-            return trueNames and "XM4" or "CAR-4"
+            return trueNames and "XM4" or "AMCAR-NG0"
         else
             wep.Trivia_Desc = carDesc
             if flat then
                 wep.Trivia_Desc = m4Desc
                 if upr == "300blk" then
-                    return trueNames and "Mk 18" or "M4A4"
+                    return trueNames and "Mk 18" or "AMCAR-C300"
                 end
-                return trueNames and "Mk 18 Mod 0" or "M4A4"
+                return trueNames and "Mk 18 Mod 0" or "AMCAR-CNG"
             end
-            return trueNames and "CAR-15" or "Stoner Commando"
+            return trueNames and "CAR-15" or "AMCAR-C"
         end
     elseif lwr == "semi" or upr == "50beo" then
         wep.Trivia_Desc = arDesc
@@ -1364,8 +1366,8 @@ SWEP.Attachments = {
         },
         ExtraSightDist = 4,
         SlideAmount = {
-            vmin = Vector(-0.03, -1.6, 3 - 3),
-            vmax = Vector(-0.03, -1.6, 3 + 2),
+            vmin = Vector(0, -1.6, 3 - 3),
+            vmax = Vector(0, -1.6, 3 + 2),
         },
     },
     {

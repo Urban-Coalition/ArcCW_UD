@@ -18,13 +18,11 @@ att.Free = true
 att.IgnorePickX = true
 
 att.MountPositionOverride = 0.59
---att.M16Sights = 1
 att.IronSight = true
 att.Override_IronSightStruct = {
     Pos = Vector(-2.80, 0, 1.11),
     Ang = Angle(0.4, 0, 0),
-    Magnification = 1.1,
-    --ViewModelFOV = 20
+    Magnification = 1.1
 }
 att.Model = "models/weapons/arccw/atts/colt_ch.mdl"
 att.ModelOffset = Vector(-2.2, -0.034, 0)

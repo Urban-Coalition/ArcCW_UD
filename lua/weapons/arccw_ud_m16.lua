@@ -179,7 +179,7 @@ SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.80, 0, 1.3),
+     Pos = Vector(-2.815, 0, 1.3),
      Ang = Angle(0, 0, 0),
      Magnification = 1.1,
      SwitchToSound = "",
@@ -1439,8 +1439,8 @@ SWEP.Attachments = {
         InstalledEles = {"rail_fg"},
         ExcludeFlags = {"m16_lmg", "m16_stub"},
         SlideAmount = {
-            vmin = Vector(0, .6, 14),
-            vmax = Vector(0, .6, 8),
+            vmin = Vector(0, .65, 11.5),
+            vmax = Vector(0, .65, 7.5),
         },
     },
     {

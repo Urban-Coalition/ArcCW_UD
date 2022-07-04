@@ -9,10 +9,9 @@ att.Slot = "ud_m16_hg"
 att.AutoStats = true
 
 att.Mult_RecoilSide = 1.35
-att.Mult_Recoil = 1.15
 
-att.Mult_SightTime = .875
-att.Mult_HipDispersion = .85
+att.Mult_SightTime = 0.9
+att.Mult_HipDispersion = 0.9
 
 att.LHIK = true
 att.Model = "models/weapons/arccw/atts/classic_lhik.mdl"

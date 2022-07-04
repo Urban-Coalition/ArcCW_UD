@@ -379,7 +379,7 @@ SWEP.AttachmentElements = {
     ["mount_11"] = {
         AttPosMods = {
             [8] = {
-                vpos = Vector(1, -0.1, 17.9),
+                vpos = Vector(0.6, -0.3, 14.2),
                 vang = Angle(90, 0, 0),
             },
         },
@@ -598,8 +598,8 @@ SWEP.AttachmentElements = {
                 vpos = Vector(0, -4, 3),
                 vang = Angle(90, 0, -90),
                 SlideAmount = {
-                    vmin = Vector(0, -4, 3 - 1.5),
-                    vmax = Vector(0, -4, 3 + 2.5),
+                    vmin = Vector(0, -3.4, 3 - 1.5),
+                    vmax = Vector(0, -3.4, 3 + 1.5),
                 }
             },
         },
@@ -610,8 +610,8 @@ SWEP.AttachmentElements = {
                 vpos = Vector(0, -4.1, 3.5),
                 vang = Angle(90, 0, -90),
                 SlideAmount = {
-                    vmin = Vector(0, -4.1, 3.5 - 2),
-                    vmax = Vector(0, -4.1, 3.5 + 1.5),
+                    vmin = Vector(0, -3.5, 3.5 - 2),
+                    vmax = Vector(0, -3.5, 3.5 + 1),
                 }
             },
         },
@@ -1156,7 +1156,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     local atts = wep.Attachments
     if !IsValid(vm) then return end
-    
+
     local barrel = string.Replace(atts[2].Installed or "20in","ud_m16_barrel_","")
     local barr = barrLookup[barrel]
     local hg = string.Replace(atts[3].Installed or "default","ud_m16_hg_","")
@@ -1202,11 +1202,11 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         ) and 1 or 0
 
         if gbPos == 1 or barr == 0 then
-            vm:SetBodygroup(6,0 + flat)
+            vm:SetBodygroup(6, 0 + flat)
         elseif gbPos == 2 then
-            vm:SetBodygroup(6,4 + flat * 2)
+            vm:SetBodygroup(6, 4 + flat * 2)
         else
-            vm:SetBodygroup(6,2 + flat)
+            vm:SetBodygroup(6, 2 + flat)
         end
     end
 
@@ -1222,7 +1222,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     else
         vm:SetBodygroup(11,0)
     end
-    
+
     -- Tactical clamp
     if laser and hg ~= "tactical" then
         if barr == 0 then
@@ -1267,7 +1267,7 @@ SWEP.Hook_NameChange = function(wep, name)
             return trueNames and "R0991" or (sd and "AMSSMG-9NG") or "AMPAW-9NG"
         end
         return trueNames and "R0635" or (sd and "AMSSMG-9") or "AMPAW-9"
-        
+
     end
 
     if lwr == "auto" then
@@ -1366,8 +1366,8 @@ SWEP.Attachments = {
         },
         ExtraSightDist = 4,
         SlideAmount = {
-            vmin = Vector(0, -1.6, 3 - 3),
-            vmax = Vector(0, -1.6, 3 + 2),
+            vmin = Vector(0, -1.6, 3 - 2),
+            vmax = Vector(0, -1.6, 3 + 1),
         },
     },
     {
@@ -1398,10 +1398,10 @@ SWEP.Attachments = {
         DefaultAttName = "Standard Muzzle",
         Slot = {"muzzle"},
         Bone = "m16_parent",
-        VMScale = Vector(1.25, 1.25, 1.25),
+        VMScale = Vector(1, 1, 1),
         WMScale = VMScale,
         Offset = {
-            vpos = Vector(0.025, -.4, 24.25),
+            vpos = Vector(0.025, -.4, 24),
             vang = Angle(90, 0, -90),
         },
         ExcludeFlags = {"sd", "m16_stub"},
@@ -1450,7 +1450,7 @@ SWEP.Attachments = {
         Slot = {"tac"},
         Bone = "m16_parent",
         Offset = {
-            vpos = Vector(0, 0.8, 27),
+            vpos = Vector(0, 0.3, 21.25),
             vang = Angle(90, 0, -90),
         },
         GivesFlags = {"tac"},
@@ -1506,7 +1506,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Front Sight",
-        Slot = {"ud_m16_fs"},
+        Slot = {"ud_m16_fs", "ud_m16_charm"},
         FreeSlot = true,
         Bone = "m16_parent",
         Offset = {
@@ -1517,7 +1517,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Charm",
-        Slot = {"charm", "fml_charm", "ud_m16_charm"},
+        Slot = {"charm", "fml_charm"}, -- "ud_m16_charm"
         FreeSlot = true,
         Bone = "m16_parent",
         Offset = {

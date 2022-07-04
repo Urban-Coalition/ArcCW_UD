@@ -7,7 +7,7 @@ att.SortOrder = 1
 att.IgnorePickX = true
 
 att.Model = "models/weapons/arc9/atts/sig_fs.mdl"
-att.ModelScale = Vector(0.9, 0.9, 0.9)
+att.ModelScale = Vector(0.7, 0.7, 0.7)
 att.Slot = {"ud_m16_fs"}
 att.RequireFlags = {"ud_m16_rscompatible"}
 att.GivesFlags = {"ud_m16_rs"}

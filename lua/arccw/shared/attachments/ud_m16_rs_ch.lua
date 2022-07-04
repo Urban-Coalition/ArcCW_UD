@@ -17,13 +17,15 @@ att.SortOrder = 1000
 att.Free = true
 att.IgnorePickX = true
 
-att.MountPositionOverride = 0.56
+att.MountPositionOverride = 0.59
 --att.M16Sights = 1
 att.IronSight = true
 att.Override_IronSightStruct = {
-    Pos = Vector(-2.81, 0, 0.48),
-    Ang = Angle(0.75, 0, 0),
-    Magnification = 1.1,}
+    Pos = Vector(-2.80, 0, 1.11),
+    Ang = Angle(0.4, 0, 0),
+    Magnification = 1.1,
+    --ViewModelFOV = 20
+}
 att.Model = "models/weapons/arccw/atts/colt_ch.mdl"
-att.ModelOffset = Vector(-2.2, 0, 0)
-att.ModelScale = Vector(.92, .92, .92)
+att.ModelOffset = Vector(-2.2, -0.034, 0)
+att.ModelScale = Vector(.78, .78, .78)

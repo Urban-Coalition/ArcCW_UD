@@ -42,6 +42,6 @@ att.ToggleStats = {
         Mult_MoveDispersion = 0.6,
         Mult_RecoilSide = 2,
         ActivateElements = {"stock_231_in"},
-        Override_ActivePos = Vector(0.33, -3, 1),
+        Override_ActivePos = Vector(0.33, -3, 1.33),
     },
 }

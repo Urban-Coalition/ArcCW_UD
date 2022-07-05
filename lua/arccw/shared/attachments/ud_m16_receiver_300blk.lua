@@ -66,7 +66,14 @@ att.Hook_GetShootSound = function(wep, sound) -- Temporary
     if wep:GetBuff_Override("Silencer") then
         -- fallback to script
     else
-        return {path .. "fire-300-01.ogg", path .. "fire-300-02.ogg", path .. "fire-300-03.ogg", path .. "fire-300-04.ogg", path .. "fire-300-05.ogg", path .. "fire-300-06.ogg"}
+        return {
+            path .. "fire-300-01.ogg",
+            path .. "fire-300-02.ogg",
+            path .. "fire-300-03.ogg",
+            path .. "fire-300-04.ogg",
+            path .. "fire-300-05.ogg",
+            path .. "fire-300-06.ogg"
+        }
     end
 end
 

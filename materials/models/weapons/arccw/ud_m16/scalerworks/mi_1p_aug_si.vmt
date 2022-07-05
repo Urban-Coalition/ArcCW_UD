@@ -1,0 +1,17 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\weapons\arccw\ud_m16\scalerworks\T_1P_AUG_D"
+	"$bumpmap" "models\weapons\arccw\ud_m16\scalerworks\T_1P_AUG_N"
+	"$phongexponenttexture" "models\weapons\arccw\ud_m16\scalerworks\T_1P_AUG_M"
+	$color2					"[0.8 0.8 0.8]"
+	$phong						1
+	$phongexponent				15
+	$phongboost					4
+	$phongfresnelranges			"[0.4 0.25 1]"
+	$phongtint					"[0.6 0.6 0.6]"
+	$rimlight 1
+	$rimmask 1
+	$rimlightexponent       30
+	$rimlightboost          0.5
+	"$normalmapalphaenvmapmask" 	"1"
+}

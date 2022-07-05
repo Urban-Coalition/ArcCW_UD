@@ -23,6 +23,7 @@ $bodygroup "2" {
 	studio "m16_mag_9mm_32.smd" //6
 	blank //7
 	studio "mag_50beo_10.smd" //8
+	studio "pmag.smd" //9
 }
 
 $bodygroup "3" {
@@ -36,7 +37,7 @@ $bodygroup "4" {
 	studio "barrels_new/barrel_20.smd" //0
 	studio "barrels_new/barrel_14.smd" //1
 	studio "barrels_new/barrel_11.smd" //2
-	studio "barrels_old/barrel_SD.smd" //3
+	studio "barrel_sd.smd" //3
 	studio "barrels_new/barrel_11_ru556.smd" //4
 	blank
 }

@@ -269,10 +269,10 @@ SWEP.Animations = {
     ["fire"] = {
         Source = "fire",
         Time = 23 / 25,--30,
-        ShellEjectAt = .01,
+        ShellEjectAt = 0.01,
         SoundTable = {
             {s = path .. "mech.ogg", t = 0}, -- Not temporary
-            {s = path1 .. "eject.ogg", t = 0}, -- Not temporary
+            {s = path1 .. "eject.ogg", t = 0.01}, -- Not temporary
         },
     },
     ["fire_empty"] = {
@@ -281,7 +281,7 @@ SWEP.Animations = {
         ShellEjectAt = 0.01,
         SoundTable = {
             {s = path .. "mech_last.ogg", t = 0}, -- Not temporary
-            {s = path1 .. "eject.ogg", t = 0}, -- Not temporary
+            {s = path1 .. "eject.ogg", t = 0.01}, -- Not temporary
         },
     },
     ["fire_jammed"] = {
@@ -302,6 +302,7 @@ SWEP.Animations = {
             {s = rottle, t = 0},
             {s = path2 .. "grab.ogg", t = .4},
             {s = path2 .. "usas_chback.ogg", t = 0.8},
+            {s = path1 .. "eject.ogg", t = 1.1},
             {s = path .. "breechclose.ogg", t = 0.9},
             {s = rottle, t = 1.2},
         },
@@ -315,6 +316,7 @@ SWEP.Animations = {
             {s = rottle, t = 0},
             {s = path2 .. "grab.ogg", t = .4},
             {s = path2 .. "usas_chback.ogg", t = 0.8},
+            {s = path1 .. "eject.ogg", t = 1.1},
             --{s = path .. "breechclose.ogg", t = 1.2},
             {s = rottle, t = 1.2},
         },
@@ -416,10 +418,10 @@ SWEP.Animations = {
     ["fire_stock"] = {
         Source = "fire_stock",
         Time = 23 / 25,--30,
-        ShellEjectAt = .01,
+        ShellEjectAt = 0.01,
         SoundTable = {
             {s = path .. "mech.ogg", t = 0}, -- Not temporary
-            {s = path1 .. "eject.ogg", t = 0}, -- Not temporary
+            {s = path1 .. "eject.ogg", t = 0.01}, -- Not temporary
         },
     },
     ["fire_empty_stock"] = {
@@ -428,7 +430,7 @@ SWEP.Animations = {
         ShellEjectAt = 0.01,
         SoundTable = {
             {s = path .. "mech_last.ogg", t = 0}, -- Not temporary
-            {s = path1 .. "eject.ogg", t = 0}, -- Not temporary
+            {s = path1 .. "eject.ogg", t = 0.01}, -- Not temporary
         },
     },
     ["fire_jammed_stock"] = {
@@ -449,6 +451,7 @@ SWEP.Animations = {
             {s = rottle, t = 0},
             {s = path2 .. "grab.ogg", t = .4},
             {s = path2 .. "usas_chback.ogg", t = 0.8},
+            {s = path1 .. "eject.ogg", t = 1.1},
             {s = path .. "breechclose.ogg", t = 0.9},
             {s = rottle, t = 1.2},
         },
@@ -462,6 +465,7 @@ SWEP.Animations = {
             {s = rottle, t = 0},
             {s = path2 .. "grab.ogg", t = .4},
             {s = path2 .. "usas_chback.ogg", t = 0.8},
+            {s = path1 .. "eject.ogg", t = 1.1},
             --{s = path .. "breechclose.ogg", t = 1.2},
             {s = rottle, t = 1.2},
         },

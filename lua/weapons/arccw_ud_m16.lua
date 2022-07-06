@@ -471,7 +471,7 @@ SWEP.AttachmentElements = {
                 vpos = Vector(1.41, -.1, 20),
                 vang = Angle(90, 0, 0),
             },
-            [15] = {
+            [16] = {
                 vpos = Vector(0, -1.75, 21.75), -- 21.75 or 15.75
                 vang = Angle(90, 0, -90),
             },
@@ -590,6 +590,10 @@ SWEP.AttachmentElements = {
         AttPosMods = { -- no rail, just pretend it's mounted to something
             [8] = {
                 vpos = Vector(0, 0.7, 17.5),
+                vang = Angle(90, 0, -90),
+            },
+            [16] = {
+                vpos = Vector(0, -1.65, 11.5), -- 21.75 or 15.75
                 vang = Angle(90, 0, -90),
             },
         }
@@ -883,7 +887,7 @@ SWEP.Animations = {
             {s = path .. "magout.ogg", 	 t = 0.335},
             {s = ratel, t = 0.5},
             {s = common .. "magpouch.ogg", t = 0.6},
-            {s = common .. "rifle_magdrop.ogg",  t = 0.8},
+            {s = common .. "rifle_magdrop.ogg",  t = 0.65},
             {s = path .. "magin.ogg",    t = 0.95},
             {s = ratel, t = 1.1},
             {s = rottle,  t = 1.39},
@@ -940,7 +944,7 @@ SWEP.Animations = {
             {s = common .. "magpouch.ogg", t = 0.6},
             {s = rottle, t = 0.75},
             {s = ratel, t = 0.9},
-            {s = common .. "rifle_magdrop.ogg",  t = 0.8},
+            {s = common .. "rifle_magdrop.ogg",  t = 0.65},
             {s = path .. "magin.ogg",    t = 0.95},
             {s = rottle, t = 1.39},
             {s = ratel, t = 1.4},
@@ -1017,10 +1021,10 @@ SWEP.Animations = {
         SoundTable = {
             {s = rottle,  t = 0.0},
             {s = ratel, t = 0.25},
-            {s = path .. "magout.ogg", 	 t = 0.335},
+            {s = path .. "pmagout.ogg", 	 t = 0.335},
             {s = ratel, t = 0.5},
             {s = common .. "magpouch.ogg", t = 0.7},
-            {s = path .. "magin.ogg",    t = 0.97},
+            {s = path .. "pmagin.ogg",    t = 0.97},
             {s = ratel, t = 1.1},
             {s = rottle,  t = 1.15},
             {s = common .. "grab.ogg", t = 1.81},
@@ -1042,11 +1046,11 @@ SWEP.Animations = {
         SoundTable = {
             {s = rottle,  t = 0.0},
             {s = ratel, t = 0.25},
-            {s = path .. "magout.ogg", 	 t = 0.335},
+            {s = path .. "pmagout.ogg", 	 t = 0.335},
             {s = ratel, t = 0.5},
             {s = common .. "magpouch.ogg", t = 0.6},
-            {s = common .. "rifle_magdrop.ogg",  t = 0.8},
-            {s = path .. "magin.ogg",    t = 0.95},
+            {s = common .. "rifle_magdrop_p.ogg",  t = 0.65},
+            {s = path .. "pmagin.ogg",    t = 0.95},
             {s = ratel, t = 1.1},
             {s = rottle,  t = 1.39},
             {s = path .. "boltdrop.ogg", t = 1.76},

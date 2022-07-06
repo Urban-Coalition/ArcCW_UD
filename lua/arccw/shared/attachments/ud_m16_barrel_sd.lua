@@ -36,7 +36,7 @@ att.Model = "models/weapons/arccw/atts/m4_lhik.mdl"
 att.Mult_ShootVol = 0.65
 att.Silencer = true
 att.Override_MuzzleEffect = "muzzleflash_suppressed"
-att.GivesFlags = {"sd","sight_magpul"}
+att.GivesFlags = {"sd","ud_m16_rscompatible"}
 att.SDBarrel = true
 
 att.ActivateElements = {"hg_sd"}

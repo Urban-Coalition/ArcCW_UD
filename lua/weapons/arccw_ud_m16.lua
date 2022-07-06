@@ -812,35 +812,6 @@ SWEP.Animations = {
             {s = path .. "ch_forward_empty.ogg",  t = 0.5},
         },
     },
-    ["fix_100"] = {
-        Source = "fix_100",
-        Time = 50 / 30,
-        ShellEjectAt = false,
-        LHIK = true,
-        LHIKIn = 0.3,
-        LHIKEaseIn = 0.4,
-        LHIKEaseOut = 0.15,
-        LHIKOut = 0.4,
-        SoundTable = {
-            {s = path .. "chback.ogg",   t = 0.25},
-            {s = common .. "cloth_4.ogg",  t = 0.75},
-            {s = path .. "chamber.ogg",  t = 0.75},
-        },
-    },
-    ["fix_empty_100"] = {
-        Source = "fix_empty_100",
-        Time = 50 / 30,
-        ShellEjectAt = false,
-        LHIK = true,
-        LHIKIn = 0.3,
-        LHIKEaseIn = 0.4,
-        LHIKEaseOut = 0.15,
-        LHIKOut = 0.4,
-        SoundTable = {
-            {s = path .. "chback.ogg",   t = 0.1},
-            {s = common .. "cloth_4.ogg",  t = 0.5},
-            {s = path .. "chamber.ogg",  t = 0.5},
-        },
     },
 
     -- 30 Round Reloads --

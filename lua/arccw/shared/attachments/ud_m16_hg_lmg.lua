@@ -39,4 +39,4 @@ att.ExcludeFlags = {"blen_11"}
 att.LHIK = true
 
 att.Model = "models/weapons/arccw/atts/lmg_lhik.mdl"
-att.ModelOffset = Vector(2.2, 0, 0)
+att.ModelOffset = Vector(-0.1, 0, 0)

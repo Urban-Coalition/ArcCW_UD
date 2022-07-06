@@ -812,7 +812,6 @@ SWEP.Animations = {
             {s = path .. "ch_forward_empty.ogg",  t = 0.5},
         },
     },
-    },
 
     -- 30 Round Reloads --
 

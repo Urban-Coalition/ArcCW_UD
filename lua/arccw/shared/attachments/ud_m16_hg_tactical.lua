@@ -14,5 +14,9 @@ att.SortOrder = 99
 att.Free = true
 att.IgnorePickX = true
 
+att.LHIK = true
+att.Model = "models/weapons/arccw/atts/tactical_lhik.mdl"
+att.DroppedModel = "models/items/boxsrounds.mdl"
+
 att.ActivateElements = {"mount_tactical"}
 att.GivesFlags = {"ud_m16_rscompatible"}

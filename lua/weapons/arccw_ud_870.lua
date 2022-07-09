@@ -328,13 +328,13 @@ SWEP.Animations = {
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
     if !IsValid(vm) then return end
-    if wep.Attachments[1].Installed then
-        vm:SetBodygroup(8, 2)
-    elseif wep.Attachments[2].Installed == "ud_870_barrel_long" then
-        vm:SetBodygroup(8, 1)
-    else
-        vm:SetBodygroup(8, 0)
-    end
+    -- if wep.Attachments[1].Installed then
+    --     vm:SetBodygroup(8, 2)
+    -- elseif wep.Attachments[2].Installed == "ud_870_barrel_long" then
+    --     vm:SetBodygroup(8, 1)
+    -- else
+    --     vm:SetBodygroup(8, 0)
+    -- end
 
     -- 8rnd tube and either barrel should remove the clamp
     if vm:GetBodygroup(7) == 1 and vm:GetBodygroup(1) != 0 then
@@ -352,6 +352,22 @@ SWEP.DefaultSkin = 1
 -- Bodygroups --
 
 SWEP.AttachmentElements = {
+    ["ud_870_optic_ringsight"] = {
+        VMBodygroups = {
+            {ind = 8, bg = 1},
+        },
+        Override_IronSightStruct = {
+            Pos = Vector(-3.04, -3, 1.95),
+            Ang = Angle(0.1, 0, 0),
+            Magnification = 1.1,
+            CrosshairInSights = false
+        },
+    },
+    ["optic_rail"] = {
+        VMBodygroups = {
+            {ind = 8, bg = 2},
+        }
+    },
     ["ud_shotgun_rail_fg"] = {
         VMBodygroups = {{ind = 3, bg = 1}},
     },
@@ -368,19 +384,12 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 3, bg = 1}},
     },
     ["ud_870_barrel_long"] = {
-        Override_IronSightStruct = {
-            Pos = Vector(-3.04, -3, 1.95),
-            Ang = Angle(0.1, 0, 0),
-            Magnification = 1.1,
-            CrosshairInSights = false
-        },
         AttPosMods = {
             [3] = {
                 vpos = Vector(-0.03, -0.65, 42.5),
             }
         },
         VMBodygroups = {
-            {ind = 8, bg = 1},
             {ind = 1, bg = 1},
         },
     },
@@ -426,13 +435,14 @@ SWEP.Attachments = {
     {
         PrintName = "Optic",
         DefaultAttName = "Iron Sights",
-        Slot = {"optic_lp","optic","optic_sniper"},
+        Slot = {"optic_lp","optic","optic_sniper","ud_870_optic"},
         Bone = "870_parent",
         Offset = {
             vpos = Vector(0, -1.8, 3),
             vang = Angle(90, 2, -90),
         },
         VMScale = Vector(1.15,1.15,1.15),
+        InstalledEles = {"optic_rail"}
     },
     {
         PrintName = "Barrel",

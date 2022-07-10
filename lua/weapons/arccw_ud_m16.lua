@@ -23,7 +23,7 @@ SWEP.TracerWidth = 2
 
 -- Fake name --
 
-SWEP.PrintName = "AMCAR"
+SWEP.PrintName = "RAYCAR-0"
 -- AMCAR stands for (american) Colt Assault Rifle, not Carbine!! ~Fesiug
 -- shut up retard ~zenith
 
@@ -33,17 +33,32 @@ SWEP.TrueName = "M16A2"
 
 -- Trivia --
 SWEP.Trivia_Class = "Assault Rifle"
-SWEP.Trivia_Desc = "Third generation of America's iconic military rifle. Army tests showed that soldiers were more likely to hit a target if they fired multiple shots, but were likely to spray in full-auto and fail to hit anything. As a result, they implemented a ratcheted three-round burst system which limited the maximum burst a soldier could fire to three shots. Well-rounded gun with no major downsides."
-SWEP.Trivia_Manufacturer = "Stoner's Legacy Ltd."
+SWEP.Trivia_Desc = "Third generation of America's iconic military rifle. Army tests showed that soldiers were more likely to hit a target if they fired multiple shots, but were likely to spray in full-auto and fail to hit anything. As a result, they implemented a ratcheted three-round burst system which limited the maximum burst a soldier could fire to three shots.\n\nWell-rounded gun with no major downsides."
+SWEP.Trivia_Manufacturer = "Rayter Arms Industries"
 SWEP.Trivia_Calibre = "5.56x45mm NATO"
 SWEP.Trivia_Mechanism = "Gas-Operated Rotating Bolt"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 1959
 
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+    SWEP.Trivia_Manufacturer = "Stoner's Legacy Ltd."
+end
+
 local origDesc = SWEP.Trivia_Desc
-local m4Desc = "Carbine variant of the M16 rifle. Originally designed in response to design faults in the CAR-15 family, it eventually replaced the M16 across almost every branch of the Army for its favorably low weight and comparable performance. Well-rounded and light, but can become difficult to control without discipline."
-local ncrDesc = "Standard-issue rifle of the New California Republic. Traditionally produced with a semi-automatic receiver, the wooden furniture is easily replaceable and adds additional recoil control for maximum accuracy. Well-rounded gun with no major downsides."
+local m4Desc = "Carbine variant of the M16 rifle. Originally designed in response to design faults in the CAR-15 family, it eventually replaced the M16 across much of the Army for its favorably low weight and comparable performance. The M4 variant has since become one of the most iconic and widespread American service rifles in the modern era.\n\nLight and versatile, but requires discipline to control."
+local ncrDesc = "Standard-issue rifle of the New California Republic. Traditionally produced with a semi-automatic receiver, the wooden furniture is more readily replaceable and adds additional recoil control for maximum accuracy.\n\nWell-rounded gun with no major downsides."
 local smgDesc = "Submachine gun based on the M16 rifle. Despite its similar appearance, it uses a different mechanism from its parent rifle. More accurate than other submachine guns due to its rifle frame and closed-bolt mechanism."
+local blkDesc = "Aftermarket automatic variant of the M16 rifle. The .300 Blackout cartridge has a ballistic performance more akin to the 7.62x39mm Soviet cartridge, with a similarly sized projectile but shorter effective range."
+local ukDesc = "AR-15 style rifles are a class of rifles linked to the M16, normally with a semi-automatic fire group for the civilian market. This one, however, has been neutered by authority of the British crown with a manual-action receiver. Bit cringe, innit?"
+local arDesc = "Semi-automatic variant of the M16 series of rifles, produced for the civilian market. Wildly popular in the United States, this rifle can be seen in the hands of hobbyists, hunters and mass shooters alike.\n\nWell-rounded gun with no major downsides."
+local beoDesc = "Aftermarket semi-automatic variant of the M16 rifle firing an oversized magnum cartridge. Provides extremely high stopping power at close range."
+local carDesc = "Carbine variant of the M16 rifle, short enough to be classified as a submachine gun. Its features influenced the US Army's interest in the M4 Carbine, which went on to become their new standard rifle. Due to the small barrel, rifles of this family have high maneuverability but poor range compared to their parent platform."
+local a1Desc = "Second generation of America's iconic military rifle. Developed to address problems with the original M16, which suffered notoriously frequent jamming that could get its wielder killed. The revised model evolved a positive reputation with those who used it, and is now a universal symbol of the Vietnam War.\n\nA well-rounded rifle, but difficult to control without trigger discipline - something the A2 model eventually addressed."
+local a3Desc = "Variant of the M16A2 with the original full-automatic trigger group, relegated to niche roles in the US Army. Well-rounded gun with no major downsides."
+local lmgDesc = "Configuration of the M16 designed for a light machine gun role, used vaguely within the Marine Corps before the adoption of the Minimi. Heavier than the standard platform, but the integral bipod can be deployed onto surfaces for excellent recoil control."
+local patriotDesc = "An assault pistol developed for The Boss. The feeder mechanism inside the drum magazine forms an \"∞\" shape.\n\nThe bottomless magazine more than makes up for the awkwardness of the configuration."
 
 -- Weapon slot --
 
@@ -65,12 +80,12 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage --
 
-SWEP.Damage = 34 -- 3 shot kill
-SWEP.DamageMin = 20 -- 5 shot kill
+SWEP.Damage = ArcCW.UC.StdDmg["556"].max
+SWEP.DamageMin = ArcCW.UC.StdDmg["556"].min
 SWEP.RangeMin = 50
 SWEP.Range = 350 -- 4 shot until ~250m
 
-SWEP.Penetration = 14
+SWEP.Penetration = ArcCW.UC.StdDmg["556"].pen
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 960
@@ -170,13 +185,13 @@ SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.81, 0, 0.85),
+     Pos = Vector(-2.815, 0, 1.3),
      Ang = Angle(0, 0, 0),
      Magnification = 1.1,
      SwitchToSound = "",
 }
 
-SWEP.ActivePos = Vector(0.33, 0, 1)
+SWEP.ActivePos = Vector(0.33, -2, 1.33)
 SWEP.ActiveAng = Angle(0, 0, -3)
 
 SWEP.CustomizePos = Vector(5, -2, -2)
@@ -189,27 +204,67 @@ SWEP.BarrelOffsetHip = Vector(2, 0, -5)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-8, 4, -7.5),
+    pos        =    Vector(-8.1, 4, -6.5),
     ang        =    Angle(-6, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
+    --scale = .85
 }
 
 -- Firing sounds --
 
 local path = ")^weapons/arccw_ud/m16/"
 local common = ")^/arccw_uc/common/"
-SWEP.FirstShootSound = path .. "first.ogg"
---SWEP.ShootSound = {path .. "fire-01.ogg", path .. "fire-02.ogg", path .. "fire-03.ogg", path .. "fire-04.ogg", path .. "fire-05.ogg", path .. "fire-06.ogg"} -- Maybe Not Placeholder
---SWEP.DistantShootSound = {path .. "fire-dist-01.ogg", path .. "fire-dist-02.ogg", path .. "fire-dist-03.ogg", path .. "fire-dist-04.ogg", path .. "fire-dist-05.ogg", path .. "fire-dist-06.ogg"} -- Maybe Not Placeholder
-SWEP.ShootSound = {path .. "auto1.ogg", path .. "auto2.ogg", path .. "auto3.ogg", path .. "auto4.ogg"}
-SWEP.DistantShootSound = path .. "dist.ogg"
-SWEP.ShootSoundSilenced = path .. "fire_sup.ogg"
-SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"
+
+SWEP.ShootSound = {
+    path .. "fire-01.ogg",
+    path .. "fire-02.ogg",
+    path .. "fire-03.ogg",
+    path .. "fire-04.ogg",
+    path .. "fire-05.ogg",
+    path .. "fire-06.ogg"
+}
+SWEP.FirstShootSoundSilenced = {
+    path .. "fire-first-sup-01.ogg",
+    path .. "fire-first-sup-02.ogg",
+    path .. "fire-first-sup-03.ogg",
+    path .. "fire-first-sup-04.ogg",
+    path .. "fire-first-sup-05.ogg"
+}
+SWEP.ShootSoundSilenced = {
+    path .. "fire-sup-01.ogg",
+    path .. "fire-sup-02.ogg",
+    path .. "fire-sup-03.ogg",
+    path .. "fire-sup-04.ogg",
+    path .. "fire-sup-05.ogg"
+}
+
+SWEP.DistantShootSound = nil
+SWEP.DistantShootSoundSilenced = nil
 SWEP.ShootDrySound = path .. "dryfire.ogg"
 
-SWEP.DistantShootSoundOutdoors = nil
-SWEP.DistantShootSoundIndoors = nil
-SWEP.DistantShootSoundOutdoorsVolume = 0.2
+SWEP.DistantShootSoundOutdoors = {
+    path .. "fire-dist-01.ogg",
+    path .. "fire-dist-02.ogg",
+    path .. "fire-dist-03.ogg",
+    path .. "fire-dist-04.ogg",
+    path .. "fire-dist-05.ogg",
+    path .. "fire-dist-06.ogg"
+}
+SWEP.DistantShootSoundIndoors = {
+    common .. "fire-dist-int-rifle-01.ogg",
+    common .. "fire-dist-int-rifle-02.ogg",
+    common .. "fire-dist-int-rifle-03.ogg",
+    common .. "fire-dist-int-rifle-04.ogg",
+    common .. "fire-dist-int-rifle-05.ogg",
+    common .. "fire-dist-int-rifle-06.ogg"
+}
+SWEP.DistantShootSoundOutdoorsSilenced = {
+    common .. "sup_tail.ogg"
+}
+SWEP.DistantShootSoundIndoorsSilenced = {
+    common .. "sup_tail.ogg"
+}
+SWEP.DistantShootSoundOutdoorsVolume = 1
 SWEP.DistantShootSoundIndoorsVolume = 1
 SWEP.Hook_AddShootSound = ArcCW.UC.InnyOuty
 
@@ -219,257 +274,7 @@ SWEP.BulletBones = {
     [2] = "m16_bullets1",    [3] = "m16_bullets2"
 }
 
-local BLEN_20 = 3
-local BLEN_14 = 2
-local BLEN_10 = 1
-
-local BTAG_RIS = 1
-local BTAG_NOFS = 2
-local BTAG_NOMNT = 4
-
-local len_clamp_lookup = {
-    [BLEN_20] = 1,
-    [BLEN_14] = 3,
-    [BLEN_10] = 2,
-}
-
-local barrel_lookup = {
-    ["default"]       = {BLEN_20},
-    ["tactical_a4"]   = {BLEN_20, BTAG_RIS},
-    ["lmg"]           = {BLEN_20},
-    ["classic"]       = {BLEN_20},
-    ["wood"]          = {BLEN_20},
-
-    ["classic_short"] = {BLEN_14},
-    ["tactical"]      = {BLEN_14, BTAG_RIS},
-    ["m4"]            = {BLEN_14},
-    ["fpw"]           = {BLEN_14, BTAG_NOFS},
-    ["adar"]          = {BLEN_14},
-    ["wood_short"]    = {BLEN_14},
-
-    ["cqbr"]          = {BLEN_10},
-    ["cqbr_ris"]      = {BLEN_10, BTAG_RIS},
-    ["sd"]            = {BLEN_10, BTAG_NOFS + BTAG_NOMNT},
-    ["ru556"]         = {BLEN_10, BTAG_NOFS + BTAG_NOMNT},
-}
-
-
-local function has_tag(b, t)
-    return bit.band(barrel_lookup[b][2] or 0, t) ~= 0
-end
-
-local FCG_3BST = 0
-local FCG_AUTO = 1
-local FCG_SEMI = 2
-local FCG_BOLT = 3
-
-local CAL_556 = 0
-local CAL_9MM = 1
-local CAL_BLK = 2
-local CAL_BEO = 3
-
-local receiver_lookup = {
-    ["default"]     = {FCG_3BST, CAL_556},
-    ["altburst"]    = {FCG_3BST, CAL_556},
-
-    ["auto"]        = {FCG_AUTO, CAL_556},
-    ["a1"]          = {FCG_AUTO, CAL_556},
-    ["300blk"]      = {FCG_AUTO, CAL_BLK},
-    ["9mm"]         = {FCG_AUTO, CAL_9MM},
-
-    ["50beo"]       = {FCG_SEMI, CAL_BEO},
-    ["semi"]        = {FCG_SEMI, CAL_556},
-
-    ["cali"]        = {FCG_BOLT, CAL_556},
-}
-
-local supp_cal_lookup = {
-    [CAL_9MM] = "SSMG",
-}
-
-local supp_fcg_lookup = {
-    [FCG_AUTO] = "SA",
-    [FCG_3BST] = "SB",
-    [FCG_SEMI] = "SS",
-    [FCG_BOLT] = "SM",
-}
-
-SWEP.Hook_NameChange = function(wep, name)
-    local trueNames = GetConVar("arccw_truenames"):GetBool()
-    local flat = wep.Attachments[1].Installed and !wep:GetBuff_Override("TopMount")
-
-    local hg = string.Replace(wep.Attachments[2].Installed or "default", "ud_m16_barrel_", "")
-    local blen = (barrel_lookup[hg] or barrel_lookup["default"])[1]
-
-    local rn = string.Replace(wep.Attachments[4].Installed or "default", "ud_m16_receiver_", "")
-    local r_fg, r_cal = unpack(receiver_lookup[rn] or barrel_lookup["default"])
-
-    wep.Trivia_Desc = origDesc
-    wep.Trivia_Mechanism = "Gas-Operated Rotating Bolt"
-    wep.Trivia_Country = "USA"
-
-    -- service loadouts
-    if hg == "wood" or hg == "wood_short" then
-        wep.Trivia_Desc = ncrDesc
-        wep.Trivia_Country = "New California Republic"
-        if r_cal == CAL_9MM then
-            return "Service SMG"
-        elseif blen == BLEN_14 then
-            return "Service Carbine"
-        end
-        return "Service Rifle"
-    end
-
-    if trueNames then
-        local model = "M"
-        local alt = "16A2"
-        local post = ""
-
-        local sil = wep:GetBuff_Override("SDBarrel")
-        local silHandled = !sil
-
-        -------------------------------
-        -- Caliber Variants
-        -------------------------------
-        if r_cal == CAL_9MM then
-            model = "R0"
-            if flat then
-                alt = "991"
-            else
-                alt = "635"
-            end
-            wep.Trivia_Desc = smgDesc
-            wep.Trivia_Mechanism = "Blowback"
-        elseif r_cal == CAL_BLK then
-            model = "AR"
-            alt = "-15"
-            post = " .300 BLK"
-            wep.Trivia_Desc = "Aftermarket automatic variant of the M16 rifle. The .300 Blackout cartridge has a ballistic performance more akin to the 7.62x39mm Soviet cartridge, with a similarly sized projectile but shorter effective range."
-        -------------------------------
-        -- Bolt/Semi Variants
-        -------------------------------
-        elseif r_fg == FCG_BOLT then
-            model = "AR"
-            alt = "-15"
-            post = "GB"
-            wep.Trivia_Desc = "AR-15 style rifles are a class of rifles linked to the M16, normally with a semi-automatic fire group for the civilian market. This one, however, has been neutered by authority of the British crown with a manual-action receiver. Bit cringe, innit?"
-        elseif r_fg == FCG_SEMI then
-            model = "AR"
-            alt = "-15"
-            wep.Trivia_Desc = "Semi-automatic variant of the M16 series of rifles, produced for the civilian market. Wildly popular in the United States, this rifle can be seen in the hands of hobbyists, hunters and mass shooters alike. Well-rounded gun with no major downsides."
-            if r_cal == CAL_BEO then
-                post = " .50 Beowulf"
-                wep.Trivia_Desc = "Aftermarket semi-automatic variant of the M16 rifle firing an oversized magnum cartridge. Provides extremely high stopping power at close range."
-            elseif flat and hg == "adar" then
-                model = "ADAR "
-                alt = "2-15"
-            end
-        -------------------------------
-        -- Barrel Variants
-        -------------------------------
-        elseif hg == "m4" or hg == "tactical" then
-            if r_fg == FCG_AUTO then
-                if !flat then
-                    model = "XM"
-                    alt = "4"
-                else
-                    alt = "4A1"
-                end
-            else
-                alt = "4"
-                post = " Carbine"
-            end
-            --post = " Carbine"
-            wep.Trivia_Desc = m4Desc
-        -------------------------------
-        -- Auto/Semi Variants
-        -------------------------------
-        elseif r_fg == FCG_3BST and !sil then
-            if blen == BLEN_10 then
-                post = " Commando"
-            elseif flat then
-                alt = "16A4"
-                wep.Trivia_Desc = "Fourth and the most recent generation of the M16 rifle. Notable changes include a flat top and RIS handguard allowing for easy installation of optics and other attachments. Well-rounded gun with no major downsides."
-            end
-        elseif r_fg == FCG_AUTO then
-            model = "M"
-            alt = "16A3"
-            wep.Trivia_Desc = m4Desc
-            if hg == "tactical_a4" and flat then
-                model = "R0"
-                alt = "901"
-            elseif hg == "m605" then
-                alt = "605"
-            elseif blen == BLEN_10 and !sil then
-                if flat then
-                    model = "Mk 18"
-                    alt = " Mod 0"
-                else
-                    model = "CAR"
-                    alt = "-15"
-                end
-                if flat then
-                    wep.Trivia_Desc = m4Desc
-                else
-                    wep.Trivia_Desc = "Carbine variant of the M16 rifle, short enough to be classified as a submachine gun. Its features influenced the US Army's interest in the M4 Carbine, which went on to become their new standard rifle. Due to the small barrel, rifles of this family have high maneuverability but poor range compared to their parent platform."
-                end
-            elseif flat and blen < BLEN_20 then
-                alt = "4A1"
-            elseif rn == "a1" then
-                alt = "16A1"
-                wep.Trivia_Desc = "Second generation of America's iconic military rifle. Developed to address problems with the original M16, which suffered notoriously frequent jamming that could get its wielder killed. A well-rounded rifle, but difficult to control without trigger discipline - something the A2 model eventually addressed."
-            else
-                wep.Trivia_Desc = "Variant of the M16A2 with the original full-automatic trigger group, relegated to niche roles in the US Army. Well-rounded gun with no major downsides."
-            end
-        end
-
-        if hg == "lmg" and r_fg < FCG_SEMI  then
-            --alt = string.Left(alt, #alt == 3 and #alt or 2)
-            model = "Colt"
-            alt = " LMG"
-            wep.Trivia_Desc = "Configuration of the M16 designed for a light machine gun role, used vaguely within the Marine Corps before the adoption of the Minimi. Heavier than the standard platform, but the integral bipod can be deployed onto surfaces for excellent recoil control."
-        elseif hg == "fpw" then
-            model = "M"
-            alt = "231 FPW"
-            if r_cal == CAL_9MM then
-                post = " 9mm"
-            end
-        end
-
-        if !silHandled then
-            if supp_cal_lookup[r_cal] then
-                alt = supp_cal_lookup[r_cal]
-                silHandled = true
-            end
-            if supp_fcg_lookup[r_fg] then
-                alt = supp_fcg_lookup[r_fg]
-                silHandled = true
-            end
-            if !silHandled then alt = alt .. "-S" end
-        end
-
-        return model .. alt .. post
-    else
-        -- work on this in a few
-        if false then
-            return "AMCAR-NG"
-        elseif false then
-            return "AMSAS-12"
-        elseif false then
-            return "AMPAW-9"
-        elseif false then
-            return "UKCAR .223"
-        elseif false then
-            return "RUCAR 225"
-        elseif false then
-            return "AMRA1"
-        else
-            return "AMCAR"
-        end
-    end
-end
-
-SWEP.DefaultBodygroups = "000000000000000"
+SWEP.DefaultBodygroups = "000000000000100"
 
 SWEP.AttachmentElements = {
 
@@ -478,6 +283,9 @@ SWEP.AttachmentElements = {
     },
     ["ud_m16_mag_40"] = {
         VMBodygroups = {{ind = 2, bg = 2}},
+    },
+    ["ud_m16_pmag"] = {
+        VMBodygroups = {{ind = 2, bg = 9}},
     },
     ["ud_m16_mag_60"] = {
         VMBodygroups = {{ind = 2, bg = 3}},
@@ -494,6 +302,9 @@ SWEP.AttachmentElements = {
     ["ud_m16_mag_50beo"] = {
         VMBodygroups = {{ind = 2, bg = 8}},
     },
+    ["ud_m16_mag_50beo_12"] = {
+        VMBodygroups = {{ind = 2, bg = 0}},
+    },
 
     ["upper_flat"] = {
         -- handled by code
@@ -508,6 +319,9 @@ SWEP.AttachmentElements = {
         VMBodygroups = {
             {ind = 1, bg = 3},
         },
+    },
+    ["rail_fg"] = {
+        VMBodygroups = {{ind = 9, bg = 1}}
     },
 
     ["stock_231_ex"] = {
@@ -565,7 +379,7 @@ SWEP.AttachmentElements = {
 
     ["mount_14"] = {
         AttPosMods = {
-            [6] = {
+            [8] = {
                 vpos = Vector(0, 0.8, 22),
                 vang = Angle(90, 0, -90),
             },
@@ -573,11 +387,20 @@ SWEP.AttachmentElements = {
     },
     ["mount_11"] = {
         AttPosMods = {
-            [6] = {
-                vpos = Vector(1, -0.1, 17.9),
+            [8] = {
+                vpos = Vector(0.6, -0.3, 14.2),
                 vang = Angle(90, 0, 0),
             },
         },
+    },
+    ["mount_tactical"] = {
+        AttPosMods = {
+            [8] = {
+                vpos = Vector(-1, -.35, 11.5),
+                vang = Angle(-90, 180, 0),
+                wang = Angle(90, 0, 0),
+            },
+        }
     },
 
     ["barrel_14"] = {
@@ -586,19 +409,39 @@ SWEP.AttachmentElements = {
             {ind = 6, bg = 2},
         },
         AttPosMods = {
-            [3] = {
-                vpos = Vector(0, -0.07, 25.4),
+            [4] = {
+                vpos = Vector(0, -0.4, 18.75),
+                vang = Angle(90, 0, -90),
+            },
+            [16] = {
+                vpos = Vector(0, -1.65, 12.5), -- 21.75 or 15.75
                 vang = Angle(90, 0, -90),
             },
         }
     },
     ["barrel_11"] = {
         VMBodygroups = {
-            {ind = 4, bg = 2},
+            {ind = 4, bg = 4},
             {ind = 6, bg = 2},
         },
         AttPosMods = {
-            [3] = {
+            [4] = {
+                vpos = Vector(0, -0.4, 17),
+                vang = Angle(90, 0, -90),
+            },
+            [16] = {
+                vpos = Vector(0, -1.65, 12.5), -- 21.75 or 15.75
+                vang = Angle(90, 0, -90),
+            },
+        }
+    },
+    ["barrel_fpw"] = {
+        VMBodygroups = {
+            {ind = 4, bg = 2},
+            {ind = 6, bg = 5},
+        },
+        AttPosMods = {
+            [4] = {
                 vpos = Vector(0, -0.07, 21.3),
                 vang = Angle(90, 0, -90),
             },
@@ -634,7 +477,7 @@ SWEP.AttachmentElements = {
                 vpos = Vector(1.41, -.1, 20),
                 vang = Angle(90, 0, 0),
             },
-            [15] = {
+            [16] = {
                 vpos = Vector(0, -1.75, 21.75), -- 21.75 or 15.75
                 vang = Angle(90, 0, -90),
             },
@@ -751,8 +594,12 @@ SWEP.AttachmentElements = {
             {ind = 6, bg = 5}
         },
         AttPosMods = { -- no rail, just pretend it's mounted to something
-            [6] = {
+            [8] = {
                 vpos = Vector(0, 0.7, 17.5),
+                vang = Angle(90, 0, -90),
+            },
+            [16] = {
+                vpos = Vector(0, -1.65, 11.5), -- 21.75 or 15.75
                 vang = Angle(90, 0, -90),
             },
         }
@@ -764,8 +611,8 @@ SWEP.AttachmentElements = {
                 vpos = Vector(0, -4, 3),
                 vang = Angle(90, 0, -90),
                 SlideAmount = {
-                    vmin = Vector(0, -4, 3 - 1.5),
-                    vmax = Vector(0, -4, 3 + 2.5),
+                    vmin = Vector(0, -3.4, 3 - 1.5),
+                    vmax = Vector(0, -3.4, 3 + 1.5),
                 }
             },
         },
@@ -776,20 +623,15 @@ SWEP.AttachmentElements = {
                 vpos = Vector(0, -4.1, 3.5),
                 vang = Angle(90, 0, -90),
                 SlideAmount = {
-                    vmin = Vector(0, -4.1, 3.5 - 2),
-                    vmax = Vector(0, -4.1, 3.5 + 1.5),
+                    vmin = Vector(0, -3.5, 3.5 - 2),
+                    vmax = Vector(0, -3.5, 3.5 + 1),
                 }
             },
         },
     },
-    ["m16_strap"] = {
-        VMBodygroups = {
-             {ind = 13, bg = 1},
-        },
-    },
     ["bravo_dicks_going_fart"] = {
         AttPosMods = {
-            [6] = {
+            [8] = {
                 vpos = Vector(0.25, -1.4, 12),
                 vang = Angle(90, 0, 90),
             },
@@ -822,6 +664,11 @@ SWEP.AttachmentElements = {
         VMBodygroups = {
             {ind = 5, bg = 0},
         }
+    },
+    ["m16_strap"] = {
+        VMBodygroups = {
+             {ind = 13, bg = 1},
+        },
     },
 }
 
@@ -875,6 +722,11 @@ SWEP.Animations = {
     },
     ["holster"] = {
         Source = "holster",
+        LHIK = true,
+        LHIKIn = 0.3,
+        LHIKEaseIn = 0.4,
+        LHIKEaseOut = 0.15,
+        LHIKOut = 0.4,
         SoundTable = {
             {s = ratel, t = 0},
             {s = common .. "cloth_6.ogg", t = 0.2},
@@ -883,9 +735,21 @@ SWEP.Animations = {
     ["holster_empty"] = {
         Source = "holster_empty",
         Time = 20 / 30,
+        LHIK = true,
+        LHIKIn = 0.3,
+        LHIKEaseIn = 0.4,
+        LHIKEaseOut = 0.15,
+        LHIKOut = 0.4,
         SoundTable = {
             {s = ratel, t = 0},
             {s = common .. "cloth_6.ogg", t = 0.2},
+        },
+    },
+    ["trigger"] = {
+        Source = "idle",
+        MinProgress = .1,
+        SoundTable = {
+            {s = ")^weapons/arccw_ud/uzi/prefire.ogg",         t = 0, c = ci},
         },
     },
     ["fire"] = {
@@ -954,36 +818,6 @@ SWEP.Animations = {
             {s = path .. "ch_forward_empty.ogg",  t = 0.5},
         },
     },
-    ["fix_100"] = {
-        Source = "fix_100",
-        Time = 50 / 30,
-        ShellEjectAt = false,
-        LHIK = true,
-        LHIKIn = 0.3,
-        LHIKEaseIn = 0.4,
-        LHIKEaseOut = 0.15,
-        LHIKOut = 0.4,
-        SoundTable = {
-            {s = path .. "chback.ogg",   t = 0.25},
-            {s = common .. "cloth_4.ogg",  t = 0.75},
-            {s = path .. "chamber.ogg",  t = 0.75},
-        },
-    },
-    ["fix_empty_100"] = {
-        Source = "fix_empty_100",
-        Time = 50 / 30,
-        ShellEjectAt = false,
-        LHIK = true,
-        LHIKIn = 0.3,
-        LHIKEaseIn = 0.4,
-        LHIKEaseOut = 0.15,
-        LHIKOut = 0.4,
-        SoundTable = {
-            {s = path .. "chback.ogg",   t = 0.1},
-            {s = common .. "cloth_4.ogg",  t = 0.5},
-            {s = path .. "chamber.ogg",  t = 0.5},
-        },
-    },
 
     -- 30 Round Reloads --
 
@@ -1004,11 +838,12 @@ SWEP.Animations = {
             {s = path .. "magout.ogg", 	 t = 0.335},
             {s = ratel, t = 0.5},
             {s = common .. "magpouch.ogg", t = 0.7},
-            {s = path .. "magin.ogg",    t = 1.05},
+            {s = path .. "magin.ogg",    t = 0.97},
             {s = ratel, t = 1.1},
             {s = rottle,  t = 1.15},
             {s = common .. "grab.ogg", t = 1.81},
-            {s = common .. "shoulder.ogg", t = 1.9},
+            {s = common .. "rattle_b2i_rifle.ogg", t = 1.7},
+            {s = common .. "shoulder.ogg", t = 1.8},
         },
     },
     ["reload_empty"] = {
@@ -1028,14 +863,15 @@ SWEP.Animations = {
             {s = path .. "magout.ogg", 	 t = 0.335},
             {s = ratel, t = 0.5},
             {s = common .. "magpouch.ogg", t = 0.6},
-            {s = common .. "rifle_magdrop.ogg",  t = 0.8},
-            {s = path .. "magin.ogg",    t = 1.05},
+            {s = common .. "rifle_magdrop.ogg",  t = 0.65},
+            {s = path .. "magin.ogg",    t = 0.95},
             {s = ratel, t = 1.1},
             {s = rottle,  t = 1.39},
-            {s = path .. "boltdrop.ogg", t = 1.85},
+            {s = path .. "boltdrop.ogg", t = 1.76},
             {s = ratel, t = 1.9},
             {s = common .. "grab.ogg", t = 2.0},
-            {s = common .. "shoulder.ogg", t = 2.15},
+            {s = common .. "rattle_b2i_rifle.ogg", t = 2.0},
+            {s = common .. "shoulder.ogg", t = 2.1},
         },
     },
 
@@ -1054,12 +890,16 @@ SWEP.Animations = {
         LHIKOut = 0.5,
         SoundTable = {
             {s = rottle,  t = 0.0},
+            {s = ratel, t = 0.1},
             {s = path .. "magout.ogg", 	 t = 0.35},
             {s = common .. "magpouch.ogg", t = 0.7},
             {s = rottle,  t = 0.75},
+            {s = ratel, t = 0.9},
             {s = path .. "magin.ogg",    t = 0.95},
             {s = rottle,  t = 1.1},
-            {s = common .. "shoulder.ogg", t = 1.925},
+            {s = ratel, t = 1.125},
+            {s = common .. "rattle_b2i_rifle.ogg", t = 1.65},
+            {s = common .. "shoulder.ogg", t = 1.75},
         },
     },
     ["reload_empty_20"] = {
@@ -1075,13 +915,17 @@ SWEP.Animations = {
         LHIKOut = 0.5,
         SoundTable = {
             {s = rottle, t = 0.0},
-            {s = path .. "magout.ogg", 	 t = 0.2},
+            {s = ratel, t = 0.1},
+            {s = path .. "magout.ogg", 	 t = 0.3},
             {s = common .. "magpouch.ogg", t = 0.6},
             {s = rottle, t = 0.75},
-            {s = common .. "rifle_magdrop.ogg",  t = 0.8},
+            {s = ratel, t = 0.9},
+            {s = common .. "rifle_magdrop.ogg",  t = 0.65},
             {s = path .. "magin.ogg",    t = 0.95},
             {s = rottle, t = 1.39},
-            {s = path .. "boltdrop.ogg", t = 1.77},
+            {s = ratel, t = 1.4},
+            {s = path .. "chamber_press.ogg", t = 1.725},
+            {s = common .. "rattle_b2i_rifle.ogg", t = 1.95},
             {s = common .. "shoulder.ogg", t = 2.13},
         },
     },
@@ -1101,12 +945,16 @@ SWEP.Animations = {
         LHIKOut = 0.6,
         SoundTable = {
             {s = rottle, t = 0.0},
+            {s = ratel, t = 0.1},
             {s = path .. "magout.ogg", 	 t = 0.35},
             {s = common .. "magpouch.ogg", t = 0.7},
             {s = rottle, t = 0.75},
+            {s = ratel, t = 0.8},
             {s = path .. "magin.ogg",    t = 1.05},
             {s = rottle, t = 1.1},
-            {s = common .. "shoulder.ogg", t = 1.85},
+            {s = ratel, t = 1.25},
+            {s = common .. "rattle_b2i_rifle.ogg", t = 1.65},
+            {s = common .. "shoulder.ogg", t = 1.75},
         },
     },
     ["reload_empty_40"] = {
@@ -1132,6 +980,63 @@ SWEP.Animations = {
             {s = common .. "shoulder.ogg", t = 2.2},
         },
     },
+
+    -- PMAG Plastic mag reload --
+
+    ["reload_pmag"] = {
+        Source = "reload",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        Time = 71 / 30,
+        MinProgress = 1.5,
+        LastClip1OutTime = 0.9,
+        LHIK = true,
+        LHIKIn = 0.4,
+        LHIKEaseIn = 0.4,
+        LHIKEaseOut = 0.3,
+        LHIKOut = 0.5,
+        SoundTable = {
+            {s = rottle,  t = 0.0},
+            {s = ratel, t = 0.25},
+            {s = path .. "pmagout.ogg", 	 t = 0.335},
+            {s = ratel, t = 0.5},
+            {s = common .. "magpouch.ogg", t = 0.7},
+            {s = path .. "pmagin.ogg",    t = 0.97},
+            {s = ratel, t = 1.1},
+            {s = rottle,  t = 1.15},
+            {s = common .. "grab.ogg", t = 1.81},
+            {s = common .. "rattle_b2i_rifle.ogg", t = 1.7},
+            {s = common .. "shoulder.ogg", t = 1.8},
+        },
+    },
+    ["reload_empty_pmag"] = {
+        Source = "reload_empty",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        Time = 79 / 30,
+        MinProgress = 2,
+        LastClip1OutTime = 0.7,
+        LHIK = true,
+        LHIKIn = 0.4,
+        LHIKEaseIn = 0.4,
+        LHIKEaseOut = 0.3,
+        LHIKOut = 0.5,
+        SoundTable = {
+            {s = rottle,  t = 0.0},
+            {s = ratel, t = 0.25},
+            {s = path .. "pmagout.ogg", 	 t = 0.335},
+            {s = ratel, t = 0.5},
+            {s = common .. "magpouch.ogg", t = 0.6},
+            {s = common .. "rifle_magdrop_p.ogg",  t = 0.65},
+            {s = path .. "pmagin.ogg",    t = 0.95},
+            {s = ratel, t = 1.1},
+            {s = rottle,  t = 1.39},
+            {s = path .. "boltdrop.ogg", t = 1.76},
+            {s = ratel, t = 1.9},
+            {s = common .. "grab.ogg", t = 2.0},
+            {s = common .. "rattle_b2i_rifle.ogg", t = 2.0},
+            {s = common .. "shoulder.ogg", t = 2.1},
+        },
+    },
+
 
     -- 60 Round Reloads --
 
@@ -1272,29 +1177,50 @@ SWEP.Animations = {
             {s = rottle, t = 0.75},
             {s = "weapons/arccw_ud/uzi/" .. "magin.ogg",    t = 0.98},
             {s = rottle, t = 1.39},
-            {s = path .. "boltdrop.ogg", t = 56 / 30},
+            {s = path .. "chamber_press.ogg", t = 56 / 30},
             {s = common .. "shoulder.ogg", t = 2.15},
         },
     },
 }
 
+local hgLookup = {
+    ["default"]     = {0,4,0},
+    ["tactical"]    = {2,5,0},
+    ["a1"]          = {1,1,1},
+    ["wood"]          = {1,1,1},
+    ["lmg"]          = {3,3,1},
+    ["fpw"]          = {6,6,2},
+    ["ru556"]          = {7,7,3},
+    ["adar"]          = {8,8,2},
+}
+-- Structure: 20in appearance, 14/11in appearance, gas block mode
+-- Gas block modes: 0 standard, 1 always at 20" position, 2 at ADAR position when short, 3 always LP
+
+local barrLookup = {
+    ["sd"] = -1,
+    ["20in"] = 0,
+    ["14in"] = 1,
+    ["fpw"] = 1,
+    ["10in"] = 2,
+}
+
 SWEP.Hook_ModifyBodygroups = function(wep, data)
     local vm = data.vm
+    local atts = wep.Attachments
     if !IsValid(vm) then return end
+
+    local barrel = string.Replace(atts[2].Installed or "20in","ud_m16_barrel_","")
+    local barr = barrLookup[barrel]
+    local hg = string.Replace(atts[3].Installed or "default","ud_m16_hg_","")
+
+    local optic = atts[1].Installed
+    local muzz = atts[4].Installed or barrel == "sd"
+    local laser = atts[8].Installed
+    local fs = atts[16].Installed
     local retro = wep:GetBuff_Override("TopMount")
-    local taclaser = wep:GetBuff_Override("TacLaserPos")
-    local rs = wep:GetBuff_Override("IronSight")
 
-    local thing1 = wep:CheckFlags({}, {"ud_m16_rs"})
-
-    local fs = ( wep.Attachments[14].Installed == "ud_m16_charm_fs" )
-
-    local hg = string.Replace(wep.Attachments[2].Installed or "default", "ud_m16_barrel_", "")
-    local blen = (barrel_lookup[hg] or barrel_lookup["default"])[1]
-    local muzz = wep.Attachments[3].Installed or hg == "sd"
-
-    -- Receiver top and front sight
-    if wep.Attachments[1].Installed then
+    -- Retro rail
+    if optic then
         if retro then
             -- Raised rail (retro)
             vm:SetBodygroup(3, retro)
@@ -1303,50 +1229,274 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
             vm:SetBodygroup(1, 1)
             vm:SetBodygroup(3, 2)
         end
-    else
-        -- no rails
-        vm:SetBodygroup(3, 0)
     end
 
-    -- .50 Beowulf magazines
-    if wep.Attachments[4].Installed == "ud_m16_receiver_50beo" and !wep.Attachments[9].Installed then
-        vm:SetBodygroup(2, 8)
+    -- Dynamic handguard
+    if barr == -1 then
+        vm:SetBodygroup(5,9)
+    elseif barr == 0 then
+        vm:SetBodygroup(5,hgLookup[hg][1])
+    else
+        vm:SetBodygroup(5,hgLookup[hg][2])
     end
 
     -- Gas block
-    if has_tag(hg, BTAG_NOFS) or thing1 then
-        vm:SetBodygroup(6, 5)
-    elseif wep.Attachments[1].Installed and !retro and !fs and !rs then
-        -- this is handled after elements sets bodygroup so we can do this
-        vm:SetBodygroup(6, (vm:GetBodygroup(6) or 0) + 1)
-    end
-
-    -- Underbarrel rail
-    vm:SetBodygroup(9, (wep.Attachments[5].Installed and !has_tag(hg, BTAG_RIS)) and 1 or 0)
-
-    -- Flip-up sights
-    --vm:SetBodygroup(12, flip)
-
-    -- Tactical clamp
-    if wep.Attachments[6].Installed and !has_tag(hg, BTAG_RIS) and !has_tag(hg, BTAG_NOMNT) and !taclaser then
-        vm:SetBodygroup(10, len_clamp_lookup[blen])
+    if barrel == "sd" or (atts[6].Installed == "ud_m16_receiver_fpw" and barr > 0) then
+        vm:SetBodygroup(6,5)
     else
-        vm:SetBodygroup(10, 0)
+        local gbPos = hgLookup[hg][3]
+        local lwr = atts[6].Installed
+        local flat = (
+            gbPos == 3
+            or wep:GetBuff_Override("FrontSight")
+            or atts[6].Installed == "ud_m16_receiver_fpw"
+            or (optic and fs ~= "ud_m16_charm_fs" and !(wep:GetBuff_Override("IronSight") or wep:GetBuff_Override("TopMount")))
+        ) and 1 or 0
+
+        if gbPos == 1 or barr == 0 then
+            vm:SetBodygroup(6, 0 + flat)
+        elseif gbPos == 2 then
+            vm:SetBodygroup(6, 4 + flat * 2)
+        else
+            vm:SetBodygroup(6, 2 + flat)
+        end
     end
 
     -- Default flash hider
-    if muzz then
-        vm:SetBodygroup(11,0)
-    else
-        if blen == BLEN_10 then
-            vm:SetBodygroup(11,3)
-        elseif blen == BLEN_14 then
+    if !muzz then
+        if barr == 0 then
+            vm:SetBodygroup(11,1)
+        elseif barr == 1 then
             vm:SetBodygroup(11,2)
         else
-            vm:SetBodygroup(11,1)
+            vm:SetBodygroup(11,3)
         end
+    else
+        vm:SetBodygroup(11,0)
+    end
+
+    -- Tactical clamp
+    if laser and hg ~= "tactical" then
+        if barr == 0 then
+            vm:SetBodygroup(10,1)
+        elseif barr == 1 then
+            vm:SetBodygroup(10,3)
+        else
+            vm:SetBodygroup(10,2)
+        end
+    else
+        vm:SetBodygroup(10,0)
+    end
+
+    -- Disable tac rail element with tac hg
+    if hg == "tactical" and atts[7].Installed then
+        vm:SetBodygroup(9,0)
+    end
+
+    -- .50 Beowulf magazines
+    if atts[5].Installed == "ud_m16_receiver_50beo" and !atts[11].Installed then
+        vm:SetBodygroup(2, 8)
     end
 end
+
+-- RAYCAR-0, rifle barrel
+local bar0_fake = "First variation of the RAYCAR rifle. Tests showed that users were more likely to hit a target if they fired multiple shots, but were likely to spray in full-auto and fail to hit anything. As a result, a ratcheted three-round burst system was implemented which limited the maximum burst a user could fire to three shots.\n\nWell-rounded gun with no major downsides."
+
+-- RAYCAR-1, carbine barrel
+local bar1_fake = "Second variation of the RAYCAR rifle. It eventually replaced the RAYCAR-0 across much of the Army for its favorably low weight and comparable performance. The -1 variant has since become one of the most iconic and widespread American service rifles in the modern era.\n\nLight and versatile, but requires discipline to control."
+
+-- RAYCAR-2, commando barrel
+local bar2_fake = "Third variation of the RAYCAR rifle. Developed with assistance from the Navy, the \"commando\" barrel allows for the weapon to be very compact, even short enough to be classified as a submachine gun, enhancing usability in vehicles and in enclosed spaces.\n\nVery lightweight and manuverable, but with very aggressive recoil to match."
+
+-- RAYPAW :3
+local smgDesc_fake = "Submachine gun based on the RAYCAR rifle. Despite its similar appearance, it uses a different mechanism from its parent rifle.\n\nMore accurate than other submachine guns due to its rifle frame and closed-bolt mechanism."
+
+-- RBY50
+local beoDesc_fake = "Aftermarket semi-automatic variant of the RAYCAR rifle firing an oversized magnum cartridge.\n\nProvides extremely high stopping power at close range."
+
+-- RBY300
+local blkDesc_fake = "Aftermarket automatic variant of the RAYCAR rifle. The .300 Blackout cartridge has a ballistic performance more akin to the 7.62x39mm Soviet cartridge, with a similarly sized projectile but shorter effective range.\n\nSlightly more inaccurate, made up with a higher stopping power and a subsonic projectile."
+
+-- UKCAR
+local ukDesc_fake = "Normally, RAYCAR style rifles are imported with a semi-automatic fire group for the civilian market. This one, however, has been neutered by authority of the British crown with a manual-action receiver.\n\nBit cringe, innit?"
+
+-- RAYSAW
+local lmgDesc_fake = "Configuration of the RAYCAR designed for a light machine gun role, used vaguely within the Marine Corps before the adoption of the Minimi.\n\nHeavier than the standard platform, but the integral bipod can be deployed onto surfaces for excellent recoil control."
+
+-- Fallout barrel or sumn idk
+local ncrDesc_fake = "Standard-issue rifle of the New California Republic. Traditionally produced with a semi-automatic receiver, the wooden furniture is more readily replaceable and adds additional recoil control for maximum accuracy.\n\nWell-rounded gun with no major downsides."
+
+-- Patriot easter egg. Is it overpowered? I don't think so, a configuration like this is already pretty uncontrollable and imprecise as is, and overheating is the new magazine.
+local a1, a2 = {}, {"patr1", "patr2", "patr3", "patr4", "patr5"}
+SWEP.O_Hook_Override_BottomlessClip = function(wep, data)
+    if wep:CheckFlags(a1, a2) then
+        data.current = true
+    end
+end
+
+
+SWEP.Hook_NameChange = function(wep, name)
+    local trueNames = GetConVar("arccw_truenames"):GetBool()
+    local atts = wep.Attachments
+    local flat = atts[1].Installed and !wep:GetBuff_Override("TopMount")
+
+    local barrel = string.Replace(atts[2].Installed or "20in","ud_m16_barrel_","")
+    local barr = barrLookup[barrel]
+    local hg = string.Replace(atts[3].Installed or "default","ud_m16_hg_","")
+    local upr = string.Replace(atts[5].Installed or "default","ud_m16_receiver_","")
+    local lwr = string.Replace(atts[6].Installed or "default","ud_m16_receiver_","")
+
+    if wep:CheckFlags(a1, a2) then -- Patriot configuration
+        wep.Trivia_Desc = patriotDesc
+        return "The Patriot"
+    elseif !trueNames then -- Custom lore-based fake names
+        local pre = (lwr == "auto" and "AM" or "RAY")
+        if upr == "9mm" then
+            local sd = (barr == -1)
+            wep.Trivia_Desc = smgDesc_fake
+            if flat then
+                return (sd and pre .. "SSMG-NG") or pre .. "PAW-" .. barr .. "NG"
+            end
+            return (sd and pre .. "SSMG") or pre .. "PAW-" .. barr
+        elseif upr == "50beo" then
+            wep.Trivia_Desc = beoDesc_fake
+            return "RBY"--50"
+        elseif upr == "300blk" then
+            wep.Trivia_Desc = blkDesc_fake
+            return "RBY"--300"
+        elseif lwr == "fpw" then
+            wep.Trivia_Desc = bar1_fake
+            return pre .. "FPW"
+        elseif lwr == "cali" then
+            wep.Trivia_Desc = ukDesc_fake
+            return "UKCAR"
+        else
+            if barr == 0 then
+                if hg == "lmg" then
+                    wep.Trivia_Desc = lmgDesc_fake
+                    return pre .. "SAW" .. (flat and "-NG" or "")
+                elseif flat then
+                    return pre .. "CAR-0NG"
+                else
+                    wep.Trivia_Desc = bar0_fake
+                    return pre .. "CAR-0"
+                end
+            elseif barr == 1 then
+                wep.Trivia_Desc = bar1_fake
+                if flat then
+                    return pre .. "CAR-1NG"
+                end
+                return pre .. "CAR-1"
+            elseif barr == 2 then
+                wep.Trivia_Desc = bar2_fake
+                if flat then
+                    return pre .. "CAR-2NG"
+                end
+                return pre .. "CAR-2"
+            end
+        end
+
+        wep.Trivia_Desc = bar0_fake
+        return pre .. "CAR-0"
+
+    else
+
+        if upr == "9mm" then
+            local sd = (barr == -1)
+            wep.Trivia_Desc = smgDesc
+            if lwr == "semi" then
+                return "AR-15 9mm"
+            elseif flat then
+                return "R0991"
+            end
+            return "R0635"
+
+        end
+
+        if lwr == "auto" then
+            if upr == "a1" then
+                wep.Trivia_Desc = a1Desc
+                if barr == 0 then
+                    return "M16A1"
+                elseif barr == 1 then
+                    return "M605"
+                end
+                wep.Trivia_Desc = carDesc
+                return "CAR-15"
+            end
+            if barr == 0 then
+                wep.Trivia_Desc = a3Desc
+                if hg == "lmg" then
+                    wep.Trivia_Desc = lmgDesc
+                    return "Colt LMG"
+                elseif flat and hg == "tactical" then
+                    return "R0901"
+                end
+                return "M16A3"
+            elseif barr == 1 then
+                wep.Trivia_Desc = m4Desc
+                if flat then
+                    return "M4A1"
+                end
+                return "XM4"
+            else
+                wep.Trivia_Desc = carDesc
+                if flat then
+                    wep.Trivia_Desc = m4Desc
+                    if upr == "300blk" then
+                        return "Mk 18"
+                    end
+                    return "Mk 18 Mod 0"
+                end
+                return "CAR-15"
+            end
+        elseif lwr == "semi" or upr == "50beo" then
+            wep.Trivia_Desc = arDesc
+            if hg == "wood" then
+                wep.Trivia_Desc = ncrDesc
+                if barr == 0 then
+                    return "Service Rifle"
+                end
+                return "Service Carbine"
+            elseif flat and hg == "adar" then
+                return "ADAR 2-15"
+            elseif barr > 0 then
+                if barr == 2 and atts[10].Installed == "ud_m16_stock_buffer" then
+                    return "AR-15 Pistol"
+                elseif upr == "a1" and barr == 1 then
+                    return "CRXM177E2B"
+                else
+                    return "AR-15 SBR"
+                end
+            elseif upr == "a1" then
+                return "CRM16A1"
+            end
+            return "AR-15"
+        elseif lwr == "fpw" then
+            wep.Trivia_Desc = m4Desc
+            return "M231 FPW"
+        elseif lwr == "cali" then
+            wep.Trivia_Desc = ukDesc
+            return "AR-15GB"
+        else
+            wep.Trivia_Desc = origDesc
+            if barr == 0 and flat then
+                return "M16A4"
+            elseif barr == 1 then
+                wep.Trivia_Desc = m4Desc
+                return "M4 Carbine"
+            elseif barr == 2 then
+                return "M16 Commando"
+            end
+        end
+
+        wep.Trivia_Desc = origDesc
+        return "M16A2"
+
+    end
+end
+
+
 
 SWEP.Attachments = {
     {
@@ -1359,19 +1509,17 @@ SWEP.Attachments = {
             vpos = Vector(0, -1.75, 3),
             vang = Angle(90, 0, -90),
         },
-        VMScale = Vector(1.1, 1.1, 1.1),
-        WMScale = Vector(1.1, 1.1, 1.1),
         ExtraSightDist = 4,
         SlideAmount = {
-            vmin = Vector(0, -1.75, 3 - 2),
-            vmax = Vector(0, -1.75, 3 + 2),
+            vmin = Vector(0, -1.6, 3 - 2),
+            vmax = Vector(0, -1.6, 3 + 1),
         },
     },
     {
         PrintName = "Barrel",
         DefaultAttName = "20\" Standard Barrel",
         DefaultAttIcon = Material("entities/att/acwatt_ud_m16_barrel_default.png", "smooth mips"),
-        Slot = "ud_m16_barrel",
+        Slot = "ud_m16_blen",
         Bone = "m16_parent",
         Offset = {
             vpos = Vector(2.8, -4.2, -11.5),
@@ -1379,21 +1527,33 @@ SWEP.Attachments = {
         },
     },
     {
+        PrintName = "Handguard",
+        DefaultAttName = "Ribbed Handguard",
+        DefaultAttIcon = Material("entities/att/acwatt_ud_m16_barrel_default.png", "smooth mips"),
+        Slot = "ud_m16_hg",
+        Bone = "m16_parent",
+        Offset = {
+            vpos = Vector(2.8, -4.2, -11.5),
+            vang = Angle(90, 0, -90),
+        },
+        ExcludeFlags = {"sd"}
+    },
+    {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
         Slot = {"muzzle"},
         Bone = "m16_parent",
-        VMScale = Vector(1.25, 1.25, 1.25),
+        VMScale = Vector(1, 1, 1),
         WMScale = VMScale,
         Offset = {
-            vpos = Vector(0.025, -0.05, 30.85),
+            vpos = Vector(0.025, -.4, 24),
             vang = Angle(90, 0, -90),
         },
         ExcludeFlags = {"sd", "m16_stub"},
     },
     {
-        PrintName = "Receiver",
-        DefaultAttName = "Standard Receiver",
+        PrintName = "Upper Receiver",
+        DefaultAttName = "5.56x45mm Upper",
         DefaultAttIcon = Material("entities/att/acwatt_ud_m16_receiver_default.png", "smooth mips"),
         Slot = {"ud_m16_receiver"},
         Bone = "m16_parent",
@@ -1401,20 +1561,33 @@ SWEP.Attachments = {
             vpos = Vector(2.8, -4.2, -11.5),
             vang = Angle(90, 0, -90),
         },
+        ExcludeFlags = {"ud_m16_fpw"}
+    },
+    {
+        PrintName = "Lower Receiver",
+        DefaultAttName = "Burst Lower",
+        DefaultAttIcon = Material("entities/att/acwatt_ud_m16_receiver_default.png", "smooth mips"),
+        Slot = {"ud_m16_fcg"},
+        Bone = "m16_parent",
+        Offset = {
+            vpos = Vector(2.8, -4.2, -11.5),
+            vang = Angle(90, 0, -90),
+        },
+        ExcludeFlags = {"m16_nolower"}
     },
     {
         PrintName = "Underbarrel",
         Slot = {"foregrip","ubgl"},
         Bone = "m16_parent",
         Offset = {
-            vpos = Vector(0, 1.25, 12),
+            vpos = Vector(0, 6, 11),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"rail_fg"},
         ExcludeFlags = {"m16_lmg", "m16_stub"},
         SlideAmount = {
-            vmin = Vector(0, 1.25, 15.5),
-            vmax = Vector(0, 1.25, 9),
+            vmin = Vector(0, .65, 11.5),
+            vmax = Vector(0, .65, 7.5),
         },
     },
     {
@@ -1422,7 +1595,7 @@ SWEP.Attachments = {
         Slot = {"tac"},
         Bone = "m16_parent",
         Offset = {
-            vpos = Vector(0, 0.8, 27),
+            vpos = Vector(0, 0.3, 21.25),
             vang = Angle(90, 0, -90),
         },
         GivesFlags = {"tac"},
@@ -1437,9 +1610,17 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Stock",
-        Slot = {"ud_m16_stock"},
+        Slot = {"ud_m16_stock","go_stock"},
         DefaultAttName = "Full Stock",
         DefaultAttIcon = Material("entities/att/acwatt_ud_m16_stock_default.png", "smooth mips"),
+        -- GSO support
+        InstalledEles = {"stock_231_tube"},
+        Bone = "m16_parent",
+        Offset = {
+            vpos = Vector(-0.02, 0, -3.25),
+            vang = Angle(90, 0, -90),
+        },
+        VMScale = Vector(1.16, 1.16, 1.16),
     },
     {
         PrintName = "Magazine",
@@ -1469,25 +1650,25 @@ SWEP.Attachments = {
         DefaultAttName = "Standard Internals"
     },
     {
+        PrintName = "Front Sight",
+        Slot = {"ud_m16_fs", "ud_m16_charm"},
+        FreeSlot = true,
+        Bone = "m16_parent",
+        Offset = {
+            vpos = Vector(0, -1.65, 16.75), -- 21.75 or 15.75
+            vang = Angle(90, 0, -90),
+        },
+        ExcludeFlags = {"sight_magpul"}
+    },
+    {
         PrintName = "Charm",
-        Slot = {"charm", "fml_charm", "ud_m16_charm"},
+        Slot = {"charm", "fml_charm"}, -- "ud_m16_charm"
         FreeSlot = true,
         Bone = "m16_parent",
         Offset = {
             vpos = Vector(0.6, 1, 5),
             vang = Angle(90, 0, -90),
         },
-        MergeSlots = {15}
-    },
-    {
-        PrintName = "RS",
-        Slot = {"ud_m16_fs"},
-        FreeSlot = true,
-        Hidden = true,
-        Bone = "m16_parent",
-        Offset = {
-            vpos = Vector(0, -1.75, 21.75), -- 21.75 or 15.75
-            vang = Angle(90, 0, -90),
-        },
+        -- MergeSlots = {17}
     },
 }

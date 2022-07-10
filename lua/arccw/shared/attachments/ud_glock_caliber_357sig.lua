@@ -6,7 +6,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.SortOrder = 90
-att.Icon = Material("entities/att/acwatt_ud_glock_caliber.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_uc_cal_357sig.png", "smooth mips")
 att.Description = "A law-enforcement caliber well-known for its accuracy."
 att.Desc_Pros = {
 }
@@ -23,7 +23,8 @@ att.Override_Trivia_Calibre = ".357 SIG"
 att.Mult_Damage = 1.1
 att.Mult_AccuracyMOA = 0.5
 att.Mult_Recoil = 1.15
-att.Override_PhysBulletMuzzleVelocity = 410
+
+att.Mult_PhysBulletMuzzleVelocity = 410 / 375
 
 att.Mult_ClipSize = 0.9
 att.Override_ShellModel = "models/weapons/arccw/uc_shells/357sig.mdl"

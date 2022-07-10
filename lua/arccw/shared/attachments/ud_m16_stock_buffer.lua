@@ -16,7 +16,7 @@ att.Free = true
 
 att.Mult_SpeedMult = 1.05
 
-att.Mult_SightTime = 0.5
+att.Mult_SightTime = 0.75
 att.Mult_DrawTime = 0.6
 att.Mult_HolsterTime = 0.6
 
@@ -30,5 +30,6 @@ att.Add_BarrelLength = -8
 att.Mult_Sway = 3
 
 att.ActivateElements = {"stock_231_tube"}
+att.GivesFlags = {"patr4"}
 
-att.Override_ActivePos = Vector(1.5, 1.5, 1.5)
+att.Override_ActivePos = Vector(0.33, -4, 1.33)

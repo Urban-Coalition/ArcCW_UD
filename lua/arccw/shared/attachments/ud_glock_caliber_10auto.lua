@@ -6,7 +6,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.SortOrder = 80
-att.Icon = Material("entities/att/acwatt_ud_glock_caliber.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_uc_cal_10mm.png", "smooth mips")
 att.Description = "The FBI's preferred caliber of choice.\nSignificantly more powerful, but weapon handling suffers."
 att.Desc_Pros = {
 }
@@ -28,7 +28,7 @@ att.Mult_Recoil = 1.25
 att.Mult_RecoilSide = 1.25
 att.Mult_ReloadTime = 1.15
 att.Mult_MalfunctionMean = 0.75
-att.Override_PhysBulletMuzzleVelocity = 400
+att.Mult_PhysBulletMuzzleVelocity = 400 / 375
 
 att.Mult_ClipSize = 0.9
 att.Override_ShellScale = 1

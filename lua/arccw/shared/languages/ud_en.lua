@@ -23,6 +23,9 @@ L["ud.m16_altburst.2"] = "This receiver fires the entire burst with one trigger 
 L["ud.usas"] = "Fire shotgun shells instead of bullets" -- deprecated
 L["ud.m16_fs.1"] = "Keep the front iron sight on the gas block when mounting optics."
 L["ud.m16_fs.2"] = "Certain optics will become obstructed by the front sight."
+L["ud.m16.fpw1"] = "No semi-automatic mode"
+L["ud.m16.fpw2"] = "+0.1s Trigger delay"
+L["ud.m16.50beo"] = "Disables Lower Receiver attachments"
 
 -- Deprecated
 L["ud.darkrp.cantremove"] = "You can't remove this without a gun license!"

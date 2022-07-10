@@ -15,7 +15,8 @@ att.Desc_Cons = {
     "uc.nomuzzle"
 }
 att.Desc_Neutrals = {
-    "ud.hushpuppy"
+    "ud.hushpuppy",
+    "uc.supptail"
 }
 att.Slot = "ud_glock_slide"
 
@@ -30,7 +31,9 @@ att.Mult_Range = 1.25
 att.Mult_ShootVol = 0.65
 att.Mult_ShootPitch = 1.25
 
-att.Mult_RPM = 0.45
+att.Mult_PhysBulletMuzzleVelocity = 0.85
+
+att.Mult_RPM = 0.55
 
 --att.Override_ManualAction = true
 
@@ -72,5 +75,11 @@ att.Hook_TranslateAnimation = function(wep, anim)
         if wep:GetNeedCycle() then
             return "idle"
         end
+    end
+end
+
+att.Hook_GetDistantShootSound = function(wep, distancesound)
+    if distancesound == wep.DistantShootSoundSilenced and wep:GetBuff("PhysBulletMuzzleVelocity") < ArcCW.UC.SubsonicThreshold then
+        return false
     end
 end

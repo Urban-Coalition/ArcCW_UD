@@ -1,11 +1,11 @@
 att.PrintName = "AMCAR-NG Automatic Receiver"
-att.AbbrevName = "Automatic Receiver"
+att.AbbrevName = "Automatic Lower"
 
 if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "M16A3 Automatic Receiver"
 end
 
-att.Description = "A receiver that allows automatic fire. Comes in semi-auto-safe configuration."
+att.Description = "A fire control group that supports fully automatic fire. Comes in semi-auto-safe configuration."
 
 att.Icon = Material("entities/att/acwatt_ud_m16_receiver_auto.png", "smooth mips")
 att.Desc_Pros = {
@@ -16,7 +16,7 @@ att.Desc_Cons = {
 }
 att.Desc_Neutrals = {
 }
-att.Slot = "ud_m16_receiver"
+att.Slot = "ud_m16_fcg"
 --att.InvAtt = "ud_m16_receiver_auto"
 
 att.AutoStats = true

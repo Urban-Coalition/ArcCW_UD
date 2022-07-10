@@ -6,10 +6,9 @@ if !GetConVar("arccw_truenames"):GetBool() then
 end
 att.Slot = "ud_uzi_caliber"
 
-att.Icon = Material("entities/att/acwatt_ud_glock_caliber.png", "smooth mips")
-att.Description = "A smaller cartridge that increases the fire rate and magazine capacity, as well as reduced recoil at the cost of greatly reduced damage and range. The subsonic rounds are very quiet when suppressed."
+att.Icon = Material("entities/att/acwatt_uc_cal_22lr.png", "smooth mips")
+att.Description = "A smaller cartridge that increases the fire rate and magazine capacity, as well as reduced recoil at the cost of greatly reduced damage and range."
 att.Desc_Pros = {
-    "No distant firing sound when suppressed"
 }
 
 att.Override_Trivia_Calibre = ".22 Long Rifle"
@@ -17,10 +16,12 @@ att.Override_Ammo = "plinking"
 
 att.AutoStats = true
 
-att.Mult_Damage = 12 / 30
-att.Mult_DamageMin = 7 / 17
-att.Mult_Penetration = 3 / 6
-att.Override_PhysBulletMuzzleVelocity = 370
+att.Mult_Damage = ArcCW.UC.StdDmg["22lr"].max / ArcCW.UC.StdDmg["9mm"].max
+att.Mult_DamageMin = ArcCW.UC.StdDmg["22lr"].min / ArcCW.UC.StdDmg["9mm"].min
+att.Mult_Penetration =  ArcCW.UC.StdDmg["22lr"].pen / ArcCW.UC.StdDmg["9mm"].pen
+
+att.Override_PhysTracerProfile = "uc_plinking"
+att.Override_PhysBulletMuzzleVelocity = 365
 
 att.Mult_Recoil = 0.25
 att.Mult_VisualRecoilMult = 0.25
@@ -48,6 +49,3 @@ att.Hook_GetDistantShootSound = function(wep, distancesound)
         return "weapons/arccw_ud/glock/fire_dist_22.ogg"
     end
 end
-
-att.GivesFlags = {"cal_subsonic"}
-att.ExcludeFlags = {"powder_subsonic"}

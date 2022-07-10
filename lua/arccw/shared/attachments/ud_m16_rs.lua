@@ -17,12 +17,13 @@ att.SortOrder = 1000
 att.Free = true
 att.IgnorePickX = true
 
---att.M16Sights = 1
+att.MountPositionOverride = 0.5
 att.IronSight = true
 att.Override_IronSightStruct = {
-    Pos = Vector(-2.82, 0, 0.24),
-    Ang = Angle(1.2, 0, 0),
-    Magnification = 1.1,}
+    Pos = Vector(-2.80, 0, 0.85),
+    Ang = Angle(1.05, 0, 0),
+    Magnification = 1.1
+}
 att.Model = "models/weapons/arccw/atts/sig_rs.mdl"
-att.ModelOffset = Vector(-2, 0, 0)
-att.ModelScale = Vector(.94, .99, .99)
+att.ModelOffset = Vector(-2, -0.002, 0)
+att.ModelScale = Vector(.86, .86, .86)

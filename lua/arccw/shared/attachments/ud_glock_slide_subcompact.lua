@@ -26,6 +26,8 @@ att.Mult_Sway = 0.75
 att.Mult_HipDispersion = 0.85
 att.Mult_SightTime = 0.85
 
+att.Mult_PhysBulletMuzzleVelocity = 0.9
+
 att.Mult_AccuracyMOA = 1.5
 att.Mult_Range = 0.75
 att.Mult_Recoil = 1.25

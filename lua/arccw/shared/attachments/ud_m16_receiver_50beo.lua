@@ -1,16 +1,17 @@
-att.PrintName = "AMCAR-NG .50 Beowulf Receiver"
-att.AbbrevName = ".50 Beowulf Receiver"
+att.PrintName = "AMCAR-NG .50 Beowulf Upper Receiver"
+att.AbbrevName = ".50 Beowulf Upper"
 
 if GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "AR-15 .50 Beowulf Receiver"
+    att.PrintName = "AR-15 .50 Beowulf Upper Receiver"
 end
 
 att.SortOrder = -1
 att.Icon = Material("entities/att/acwatt_ud_m16_receiver_semi.png", "smooth mips")
-att.Description = "Semi-automatic receiver chambered in .50 Beowulf, a gigantic short-range cartridge with terrible ballistic performance. It can load single-stack into standard AR-15 magazines at a lower capacity."
+att.Description = "Semi-automatic receiver chambered in .50 Beowulf, a gigantic short-range cartridge with terrible ballistic performance. It can load single-stack into standard AR-15 magazines at a lower capacity.\nThe rifle is unable to handle the massive pressure at anything more than semi-automatic fire."
 att.Desc_Pros = {}
 att.Desc_Cons = {
-    "uc.semionly"
+    "ud.m16.50beo",
+    "uc.semionly",
 }
 att.Desc_Neutrals = {}
 att.Slot = "ud_m16_receiver"
@@ -47,6 +48,7 @@ att.Mult_HeatDissipation = 0.25
 -- yes, .50 beowulf is more of an huge magnum bullet than it is a rifle bullet
 att.Override_Ammo = "357"
 att.Override_Trivia_Calibre = ".50 Beowulf"
+att.AddSuffix = " .50"
 att.Override_ShellModel = "models/weapons/arccw/uc_shells/50beo.mdl"
 att.Override_ShellScale = 1
 att.Override_ShellSounds = ArcCW.PistolShellSoundsTable
@@ -81,7 +83,7 @@ att.Hook_SelectReloadAnimation = function(wep, anim)
 end
 
 local slotinfo = {
-    [9] = {"7-Round Mag", "7-Round Mag", Material("entities/att/acwatt_ud_m16_mag_15.png", "smooth mips")},
+    [11] = {"7-Round Mag", "7-Round Mag", Material("entities/att/acwatt_ud_m16_mag_15.png", "smooth mips")},
 }
 att.Hook_GetDefaultAttName = function(wep, slot)
     if slotinfo[slot] then
@@ -94,4 +96,4 @@ att.Hook_GetDefaultAttIcon = function(wep, slot)
     end
 end
 
-att.GivesFlags = {"m16_50beo"}
+att.GivesFlags = {"m16_50beo","m16_nolower"}

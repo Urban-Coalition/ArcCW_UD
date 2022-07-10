@@ -58,9 +58,10 @@ SWEP.DefaultBodygroups = "000000000"
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-8, 4, -5.8),
+    pos        =    Vector(-8, 4, -6.1),
     ang        =    Angle(-6, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
+    scale = .85
 }
 
 -- Damage parameters --
@@ -183,9 +184,30 @@ local path = ")^weapons/arccw_ud/870/"
 local common = ")^/arccw_uc/common/"
 SWEP.ShootSound = path .. "fire.ogg"
 SWEP.ShootSoundSilenced = path .. "fire_supp.ogg"
-SWEP.DistantShootSound = path .. "fire_dist.ogg"
-SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"
+--[[SWEP.DistantShootSound = path .. "fire_dist.ogg"
+SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"]]
 SWEP.ShootDrySound = path .. "dryfire.ogg"
+
+SWEP.DistantShootSoundOutdoors = {
+    path .. "fire_dist.ogg",
+}
+SWEP.DistantShootSoundIndoors = {
+    common .. "fire-dist-int-shotgun-01.ogg",
+    common .. "fire-dist-int-shotgun-02.ogg",
+    common .. "fire-dist-int-shotgun-03.ogg",
+    common .. "fire-dist-int-shotgun-04.ogg",
+    common .. "fire-dist-int-shotgun-05.ogg",
+    common .. "fire-dist-int-shotgun-06.ogg"
+}
+SWEP.DistantShootSoundOutdoorsSilenced = {
+    common .. "sup_tail.ogg"
+}
+SWEP.DistantShootSoundIndoorsSilenced = {
+    common .. "sup_tail.ogg"
+}
+SWEP.DistantShootSoundOutdoorsVolume = 1
+SWEP.DistantShootSoundIndoorsVolume = 1
+SWEP.Hook_AddShootSound = ArcCW.UC.InnyOuty
 
 SWEP.Hook_Think = ArcCW.UC.ADSReload
 
@@ -236,6 +258,7 @@ SWEP.Animations = {
     ["fire"] = {
         Source = "fire",
         Time = 23 / 30,
+        SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }},
     },
     ["cycle"] = {
         Source = "cycle",
@@ -245,8 +268,8 @@ SWEP.Animations = {
         SoundTable = {
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
             {s = path .. "rack_1.ogg",  t = 0},
-            {s = path .. "eject.ogg",  t = 0.075},
-            {s = path .. "rack_2.ogg",  t = 0.2},
+            {s = path .. "eject.ogg",  t = 0.1},
+            {s = path .. "rack_2.ogg",  t = 0.15},
         },
     },
     ["fix"] = {
@@ -318,8 +341,8 @@ SWEP.Animations = {
         SoundTable = {
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.5},
             {s = path .. "rack_1.ogg",  t = 0.4},
-            {s = path .. "eject.ogg",  t = 0.48},
-            {s = path .. "rack_2.ogg",  t = 0.6},
+            {s = path .. "eject.ogg",  t = 0.5},
+            {s = path .. "rack_2.ogg",  t = 0.525},
             {s = common .. "shoulder.ogg",  t = 0.9},
         },
     },
@@ -428,6 +451,9 @@ SWEP.AttachmentElements = {
 
     ["ud_870_skin_dirty"] = {
         VMSkin = 0
+    },
+    ["ud_870_skin_custom"] = {
+        VMSkin = 3
     },
 }
 

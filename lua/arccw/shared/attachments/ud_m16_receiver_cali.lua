@@ -1,8 +1,8 @@
-att.PrintName = "UKCAR .223 Receiver"
-att.AbbrevName = "Manual Receiver"
+att.PrintName = "UKCAR .223 Lower Receiver"
+att.AbbrevName = "Manual Lower"
 
 if GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "AR-15GB .223 Receiver"
+    att.PrintName = "AR-15GB .223 Lower Receiver"
 end
 
 att.Icon = Material("entities/att/acwatt_ud_m16_receiver_cali.png", "smooth mips")
@@ -14,7 +14,7 @@ att.Desc_Cons = {
 }
 att.Desc_Neutrals = {
 }
-att.Slot = "ud_m16_receiver"
+att.Slot = "ud_m16_fcg"
 att.AutoStats = true
 
 att.SortOrder = -5

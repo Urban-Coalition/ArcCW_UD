@@ -1,5 +1,5 @@
 att.PrintName = "AMCAR Cam-lock Burst Receiver"
-att.AbbrevName = "Alt. Burst Receiver"
+att.AbbrevName = "Alt. Burst Lower"
 
 if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "M16A2 Cam-lock Burst Receiver"
@@ -16,7 +16,7 @@ att.Desc_Cons = {
 att.Desc_Neutrals = {
     "ud.m16_altburst.2"
 }
-att.Slot = "ud_m16_receiver"
+att.Slot = "ud_m16_fcg"
 
 att.AutoStats = true
 att.Free = true
@@ -28,7 +28,7 @@ att.Override_Firemodes = {
     {
         Mode = -3,
         PostBurstDelay = 0.08,
-        Mult_Recoil = 0.9,
+        Mult_Recoil = 0.95,
         RunawayBurst = true, -- https://en.wikipedia.org/wiki/Burst_mode_(weapons)
     },
     {

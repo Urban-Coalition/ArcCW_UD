@@ -6,7 +6,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.SortOrder = 100
-att.Icon = Material("entities/att/acwatt_ud_glock_caliber.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_uc_cal_40s&w.png", "smooth mips")
 att.Description = "Law-enforcement caliber with a slightly larger bullet and shorter case.\nRetains damage over distance better than other calibers."
 att.Desc_Pros = {
 }
@@ -24,7 +24,8 @@ att.Mult_DamageMin = 1.35
 att.Mult_RangeMin = 0.5
 att.Mult_Recoil = 1.15
 att.Mult_Penetration = 8 / 6
-att.Override_PhysBulletMuzzleVelocity = 300
+
+att.Mult_PhysBulletMuzzleVelocity = 300 / 375
 
 att.Mult_ClipSize = .9
 att.Override_ShellModel = "models/weapons/arccw/uc_shells/40sw.mdl"

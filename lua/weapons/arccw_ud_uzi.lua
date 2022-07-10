@@ -60,12 +60,13 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage --
 
-SWEP.Damage = 30 -- 4 shot close range kill (3 on chest)
-SWEP.DamageMin = 17 -- 6 shot long range kill
+SWEP.Damage = ArcCW.UC.StdDmg["9mm"].max
+SWEP.DamageMin = ArcCW.UC.StdDmg["9mm"].min
+SWEP.Penetration = ArcCW.UC.StdDmg["9mm"].pen
+
 SWEP.RangeMin = 15
 SWEP.Range = 100 -- 4 shot until ~35m
 
-SWEP.Penetration = 6
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 400
@@ -107,6 +108,7 @@ SWEP.Firemodes = {
     },
     {
         Mode = 1,
+        Mult_TriggerDelayTime = 1,
     },
     {
         Mode = 0,
@@ -194,12 +196,44 @@ SWEP.WorldModelOffset = {
 local path = ")^weapons/arccw_ud/uzi/"
 local path1 = ")^weapons/arccw_ud/glock/"
 local common = ")^/arccw_uc/common/"
-SWEP.FirstShootSound = path .. "fire.ogg"
-SWEP.ShootSound = path .. "fire_auto.ogg"
+--SWEP.FirstShootSound = path .. "fire.ogg"
+--SWEP.ShootSound = path .. "fire_auto.ogg"
 SWEP.ShootSoundSilenced = path1 .. "fire_supp.ogg"
-SWEP.DistantShootSound = path .. "fire_dist.ogg"
-SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"
 SWEP.ShootDrySound = path .. "dryfire.ogg"
+
+SWEP.ShootSound = {
+    path .. "fire-01.ogg",
+    path .. "fire-02.ogg",
+    path .. "fire-03.ogg",
+    path .. "fire-04.ogg",
+    path .. "fire-05.ogg",
+    path .. "fire-06.ogg"
+}
+SWEP.DistantShootSoundOutdoors = {
+    path .. "fire-dist-01.ogg",
+    path .. "fire-dist-02.ogg",
+    path .. "fire-dist-03.ogg",
+    path .. "fire-dist-04.ogg",
+    path .. "fire-dist-05.ogg",
+    path .. "fire-dist-06.ogg"
+}
+SWEP.DistantShootSoundIndoors = {
+    common .. "fire-dist-int-pistol-01.ogg",
+    common .. "fire-dist-int-pistol-02.ogg",
+    common .. "fire-dist-int-pistol-03.ogg",
+    common .. "fire-dist-int-pistol-04.ogg",
+    common .. "fire-dist-int-pistol-05.ogg",
+    common .. "fire-dist-int-pistol-06.ogg"
+}
+SWEP.DistantShootSoundOutdoorsSilenced = {
+    common .. "sup_tail.ogg"
+}
+SWEP.DistantShootSoundIndoorsSilenced = {
+    common .. "sup_tail.ogg"
+}
+SWEP.DistantShootSoundOutdoorsVolume = 1
+SWEP.DistantShootSoundIndoorsVolume = 0.5
+SWEP.Hook_AddShootSound = ArcCW.UC.InnyOuty
 
 -- Bodygroups --
 
@@ -371,11 +405,13 @@ SWEP.Animations = {
         Source = "fire",
         Time = 13 / 30,
         ShellEjectAt = 0.03,
+        SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg"}, t = 0 }},
     },
     ["fire_empty"] = {
         Source = "fire_empty",
         Time = 13 / 30,
         ShellEjectAt = 0.03,
+        SoundTable = {{ s = path .. "chforward.ogg", t = 0 }},
     },
 
     ["trigger"] = {
@@ -490,7 +526,7 @@ SWEP.Animations = {
             {s = common .. "magdrop_smg.ogg",  t = 1.0},
             {s = path .. "magin.ogg",         t = 1.1, c = ci},
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 1.25},
-            {s = path .. "chback.ogg",         t = 1.947, c = ci},
+            {s = path .. "chback.ogg",         t = 1.935, c = ci},
             {s = path .. "chforward.ogg",         t = 2.15, c = ci},
             {s = common .. "shoulder.ogg",  t = 2.6},
         },
@@ -634,8 +670,8 @@ SWEP.Animations = {
             {s = common .. "magdrop.ogg",  t = 1.0},
             {s = path .. "magin.ogg",         t = 1.15, c = ci},
             {s = common .. "cloth_4.ogg",  t = 1.65},
-            {s = path .. "chback.ogg",         t = 2.25, c = ci},
-            {s = path .. "chforward.ogg",         t = 2.1, c = ci},
+            {s = path .. "chback.ogg",         t = 2.0, c = ci},
+            {s = path .. "chforward.ogg",         t = 2.25, c = ci},
             {s = common .. "shoulder.ogg",  t = 2.7},
         },
     },
@@ -670,7 +706,7 @@ SWEP.Attachments = {
     {
         PrintName = "Caliber",
         DefaultAttName = "9x19mm Parabellum",
-        DefaultAttIcon = Material("entities/att/acwatt_ud_glock_caliber.png", "smooth mips"),
+        DefaultAttIcon = Material("entities/att/acwatt_uc_cal_9mm.png", "smooth mips"),
         Slot = "ud_uzi_caliber",
     },
     {

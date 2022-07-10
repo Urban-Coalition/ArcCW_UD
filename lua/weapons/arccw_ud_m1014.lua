@@ -195,9 +195,29 @@ local path = ")^weapons/arccw_ud/m1014/"
 local common = ")^/arccw_uc/common/"
 SWEP.ShootSound = path .. "fire.ogg"
 SWEP.ShootSoundSilenced = path .. "fire_supp.ogg"
-SWEP.DistantShootSound = path .. "fire_dist.ogg"
-SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"
+--[[SWEP.DistantShootSound = path .. "fire_dist.ogg"
+SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"]]
 SWEP.ShootDrySound = path .. "dryfire.ogg"
+SWEP.DistantShootSoundOutdoors = {
+    path .. "fire_dist.ogg",
+}
+SWEP.DistantShootSoundIndoors = {
+    common .. "fire-dist-int-shotgun-01.ogg",
+    common .. "fire-dist-int-shotgun-02.ogg",
+    common .. "fire-dist-int-shotgun-03.ogg",
+    common .. "fire-dist-int-shotgun-04.ogg",
+    common .. "fire-dist-int-shotgun-05.ogg",
+    common .. "fire-dist-int-shotgun-06.ogg"
+}
+SWEP.DistantShootSoundOutdoorsSilenced = {
+    common .. "sup_tail.ogg"
+}
+SWEP.DistantShootSoundIndoorsSilenced = {
+    common .. "sup_tail.ogg"
+}
+SWEP.DistantShootSoundOutdoorsVolume = 1
+SWEP.DistantShootSoundIndoorsVolume = 1
+SWEP.Hook_AddShootSound = ArcCW.UC.InnyOuty
 
 local rottle = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
 local ratel = {common .. "rattle1.ogg", common .. "rattle2.ogg", common .. "rattle3.ogg"}
@@ -249,10 +269,10 @@ SWEP.Animations = {
     ["fire"] = {
         Source = "fire",
         Time = 23 / 25,--30,
-        ShellEjectAt = .01,
+        ShellEjectAt = 0.01,
         SoundTable = {
             {s = path .. "mech.ogg", t = 0}, -- Not temporary
-            {s = path1 .. "eject.ogg", t = 0}, -- Not temporary
+            {s = path1 .. "eject.ogg", t = 0.01}, -- Not temporary
         },
     },
     ["fire_empty"] = {
@@ -261,7 +281,7 @@ SWEP.Animations = {
         ShellEjectAt = 0.01,
         SoundTable = {
             {s = path .. "mech_last.ogg", t = 0}, -- Not temporary
-            {s = path1 .. "eject.ogg", t = 0}, -- Not temporary
+            {s = path1 .. "eject.ogg", t = 0.01}, -- Not temporary
         },
     },
     ["fire_jammed"] = {
@@ -282,6 +302,7 @@ SWEP.Animations = {
             {s = rottle, t = 0},
             {s = path2 .. "grab.ogg", t = .4},
             {s = path2 .. "usas_chback.ogg", t = 0.8},
+            {s = path1 .. "eject.ogg", t = 1.1},
             {s = path .. "breechclose.ogg", t = 0.9},
             {s = rottle, t = 1.2},
         },
@@ -295,6 +316,7 @@ SWEP.Animations = {
             {s = rottle, t = 0},
             {s = path2 .. "grab.ogg", t = .4},
             {s = path2 .. "usas_chback.ogg", t = 0.8},
+            {s = path1 .. "eject.ogg", t = 1.1},
             --{s = path .. "breechclose.ogg", t = 1.2},
             {s = rottle, t = 1.2},
         },
@@ -396,10 +418,10 @@ SWEP.Animations = {
     ["fire_stock"] = {
         Source = "fire_stock",
         Time = 23 / 25,--30,
-        ShellEjectAt = .01,
+        ShellEjectAt = 0.01,
         SoundTable = {
             {s = path .. "mech.ogg", t = 0}, -- Not temporary
-            {s = path1 .. "eject.ogg", t = 0}, -- Not temporary
+            {s = path1 .. "eject.ogg", t = 0.01}, -- Not temporary
         },
     },
     ["fire_empty_stock"] = {
@@ -408,7 +430,7 @@ SWEP.Animations = {
         ShellEjectAt = 0.01,
         SoundTable = {
             {s = path .. "mech_last.ogg", t = 0}, -- Not temporary
-            {s = path1 .. "eject.ogg", t = 0}, -- Not temporary
+            {s = path1 .. "eject.ogg", t = 0.01}, -- Not temporary
         },
     },
     ["fire_jammed_stock"] = {
@@ -429,6 +451,7 @@ SWEP.Animations = {
             {s = rottle, t = 0},
             {s = path2 .. "grab.ogg", t = .4},
             {s = path2 .. "usas_chback.ogg", t = 0.8},
+            {s = path1 .. "eject.ogg", t = 1.1},
             {s = path .. "breechclose.ogg", t = 0.9},
             {s = rottle, t = 1.2},
         },
@@ -442,6 +465,7 @@ SWEP.Animations = {
             {s = rottle, t = 0},
             {s = path2 .. "grab.ogg", t = .4},
             {s = path2 .. "usas_chback.ogg", t = 0.8},
+            {s = path1 .. "eject.ogg", t = 1.1},
             --{s = path .. "breechclose.ogg", t = 1.2},
             {s = rottle, t = 1.2},
         },

@@ -6,10 +6,10 @@ if !GetConVar("arccw_truenames"):GetBool() then
 end
 att.Slot = "ud_uzi_caliber"
 
-att.Icon = Material("entities/att/acwatt_ud_glock_caliber.png", "smooth mips")
-att.Description = "A large cartridge that increases close-range stopping power substantially, but greatly reduces magazine capacity. The subsonic rounds are very quiet when suppressed."
+att.Icon = Material("entities/att/acwatt_uc_cal_45acp.png", "smooth mips")
+att.Description = "A large cartridge that increases close-range stopping power substantially, but greatly reduces magazine capacity."
 att.Desc_Pros = {
-    "No distant firing sound when suppressed"
+    "uc.subsonic"
 }
 
 att.Override_Trivia_Calibre = ".45 ACP"
@@ -28,11 +28,21 @@ att.Mult_RecoilSide = 1.5
 att.Mult_RPM = 0.83
 att.Override_ClipSize = 16
 
-att.Hook_GetShootSound = function(wep, sound)
+local path = ")^weapons/arccw_ud/uzi/"
+
+att.Hook_GetShootSound = function(wep, sound) -- Temporary
     if wep:GetBuff_Override("Silencer") then
-        return "weapons/arccw_ud/glock/fire_supp_45.ogg" -- Placeholder
+        return "weapons/arccw_ud/glock/fire_supp.ogg"
     else
-        return "weapons/arccw_ud/glock/fire_45.ogg" -- Placeholder
+        return {path .. "fire-45-01.ogg", path .. "fire-45-02.ogg", path .. "fire-45-03.ogg", path .. "fire-45-04.ogg", path .. "fire-45-05.ogg", path .. "fire-45-06.ogg"}
+    end
+end
+
+att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
+    if wep:GetBuff_Override("Silencer") then
+        -- fallback to script
+    else
+        return {path .. "fire-45-dist-01.ogg", path .. "fire-45-dist-02.ogg", path .. "fire-45-dist-03.ogg", path .. "fire-45-dist-04.ogg", path .. "fire-45-dist-05.ogg", path .. "fire-45-dist-06.ogg"}
     end
 end
 
@@ -41,14 +51,3 @@ att.Hook_GetDefaultAttName = function(wep, slot)
         return "16-Round Mag"
     end
 end
-
-att.Hook_GetDistantShootSound = function(wep, distancesound)
-    if distancesound == wep.DistantShootSoundSilenced then
-        return false
-    elseif distancesound == wep.DistantShootSound then
-        return "weapons/arccw_ud/glock/fire_dist_45.ogg"
-    end
-end
-
-att.GivesFlags = {"uzi_45","cal_subsonic"}
-att.ExcludeFlags = {"powder_subsonic"}

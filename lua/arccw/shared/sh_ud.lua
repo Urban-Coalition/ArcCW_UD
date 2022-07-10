@@ -66,7 +66,11 @@ hook.Add( "PopulateWeapons", "UC_AddWeaponContent", function( pnlContent, tree, 
                     nicename	= ent.PrintName or ent.ClassName,
                     spawnname	= ent.ClassName,
                     material	= ent.IconOverride or "entities/" .. ent.ClassName .. ".png",
-                    admin		= ent.AdminOnly
+                    admin		= ent.AdminOnly,
+
+                    uc_manu = ent.Trivia_Manufacturer,
+                    uc_year = ent.Trivia_Year,
+                    uc_cali = ent.Trivia_Calibre,
                 } )
             end
 
@@ -83,7 +87,7 @@ function CreateUCWeapon( container, obj )
     local icon = vgui.Create( "UCWepSel", container )
     icon:SetContentType( "weapon" )
     icon:SetSpawnName( obj.spawnname )
-    icon:SetName( obj.nicename, obj.spawnname )
+    icon:SetName( obj.nicename, obj.spawnname, { manu = obj.uc_manu, year = obj.uc_year, cali = obj.uc_cali } )
     icon:SetMaterial( obj.material )
     icon:SetAdminOnly( obj.admin )
     icon:SetColor( Color( 135, 206, 250, 255 ) )
@@ -130,11 +134,20 @@ surface.CreateFont( "UCWepSel", {
     blursize = 0,
     antialias = true,
 } )
-surface.CreateFont( "UCWepSel_Shadow", {
-    font = "Bahnschrift",
-    size = 36,
+
+surface.CreateFont( "UCWepSel2", {
+    font = "Bahnschrift Light",
+    size = 17,
     weight = 0,
-    blursize = 10,
+    blursize = 0,
+    antialias = true,
+} )
+
+surface.CreateFont( "UCWepSel3", {
+    font = "Bahnschrift Light",
+    size = 13,
+    weight = 0,
+    blursize = 0,
     antialias = true,
 } )
 
@@ -181,31 +194,19 @@ function PANEL:Init()
     self.Image:SetSize( 128 - 6, 128 - 6 )
     self.Image:SetVisible( false )
 
-    self.Label2 = self:Add( "DLabel" )
-    self.Label2:SetWidth( 384 )
-    self.Label2:SetTall( 40 )
-    self.Label2:SetFont("UCWepSel")
-    self.Label2:SetX(self.Label2:GetX()+(128+16)+2)
-    self.Label2:SetY(self.Label2:GetY()+(64-24)+2)
-    self.Label2:SetTextColor( Color(0, 0, 0, 127) )
-
-    self.Label = self:Add( "DLabel" )
-    self.Label:SetWidth( 384 )
-    self.Label:SetTall( 40 )
-    self.Label:SetFont("UCWepSel")
-    self.Label:SetX(self.Label:GetX()+(128+16))
-    self.Label:SetY(self.Label:GetY()+(64-24))
-    self.Label:SetTextColor( color_white )
-
     self.Border = 0
 
 end
 
-function PANEL:SetName( name, spname )
+function PANEL:SetName( name, spname, other )
 
     self:SetTooltip( name .. "\n" .. spname )
-    self.Label:SetText( name )
-    self.Label2:SetText( name )
+    self.WEP_NAME = name
+    self.WEP_MANU = other.manu
+    self.WEP_YEAR = other.year
+    self.WEP_CALI = other.cali
+    --self.Label:SetText( name )
+    --self.Label2:SetText( name )
     self.m_NiceName = name
 
 end
@@ -276,12 +277,65 @@ function PANEL:Paint( w, h )
         surface.DrawTexturedRect( self.Border, self.Border, w, h )
         --surface.SetMaterial( matOverlay_Hovered )
         --self.Label:Hide()
-
     else
-
         --surface.SetMaterial( matOverlay_Normal )
         --self.Label:Show()
+    end
 
+    local c_w, c_s = Color( 255, 255, 255, 200 ), Color( 0, 0, 0, 127 )
+
+    -- Name
+    if assert(self.WEP_NAME, "Holy balls no weapon name??") then
+        surface.SetFont("UCWepSel")
+
+        surface.SetTextPos( (128+16)+2, (50-24)+2 )
+        surface.SetTextColor( c_s )
+        surface.DrawText(self.WEP_NAME or "idk")
+
+        surface.SetTextPos( (128+16), (50-24) )
+        surface.SetTextColor( color_white )
+        surface.DrawText(self.WEP_NAME or "idk")
+    end
+
+    local ya = false
+    if self.WEP_MANU then
+        -- Manufacturer
+        surface.SetFont("UCWepSel2")
+
+        surface.SetTextPos( (128+16)+2, (50-24+32)+2 )
+        surface.SetTextColor( c_s )
+        surface.DrawText(self.WEP_MANU or "idk")
+
+        surface.SetTextPos( (128+16), (50-24+32) )
+        surface.SetTextColor( c_w )
+        surface.DrawText(self.WEP_MANU or "idk")
+        ya = true
+    end
+
+    if self.WEP_CALI then
+        -- Caliber
+        surface.SetFont("UCWepSel3")
+
+        surface.SetTextPos( (128+16)+2, (50-24+32+(ya and 16 or 0))+2 )
+        surface.SetTextColor( c_s )
+        surface.DrawText(self.WEP_CALI or "idk")
+
+        surface.SetTextPos( (128+16), (50-24+32+(ya and 16 or 0)) )
+        surface.SetTextColor( c_w )
+        surface.DrawText(self.WEP_CALI or "idk")
+    end
+
+    if self.WEP_YEAR then
+        -- Year
+        surface.SetFont("UCWepSel3")
+
+        surface.SetTextPos( (128+16)+2, (50-31)+2 )
+        surface.SetTextColor( c_s )
+        surface.DrawText(self.WEP_YEAR or "9999")
+
+        surface.SetTextPos( (128+16), (50-31) )
+        surface.SetTextColor( c_w )
+        surface.DrawText(self.WEP_YEAR or "9999")
     end
 
     render.PushFilterMag( TEXFILTER.ANISOTROPIC )

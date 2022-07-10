@@ -62,11 +62,12 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage --
 
-SWEP.Damage = 30 -- 4 shot close range kill (3 on chest)
-SWEP.DamageMin = 17 -- 5 shot long range kill
+SWEP.Damage = ArcCW.UC.StdDmg["9mm"].max -- 4 shot close range kill (3 on chest)
+SWEP.DamageMin = ArcCW.UC.StdDmg["9mm"].min -- 5 shot long range kill
+SWEP.Penetration = ArcCW.UC.StdDmg["9mm"].pen
+
 SWEP.RangeMin = 15
 SWEP.Range = 50 -- 4 shot until ~35m
-SWEP.Penetration = 6
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 375
@@ -215,12 +216,12 @@ SWEP.DistantShootSoundOutdoors = {
     path .. "fire-dist-06.ogg"
 }
 SWEP.DistantShootSoundIndoors = {
-    path .. "fire-dist-int-01.ogg",
-    path .. "fire-dist-int-02.ogg",
-    path .. "fire-dist-int-03.ogg",
-    path .. "fire-dist-int-04.ogg",
-    path .. "fire-dist-int-05.ogg",
-    path .. "fire-dist-int-06.ogg"
+    common .. "fire-dist-int-pistol-01.ogg",
+    common .. "fire-dist-int-pistol-02.ogg",
+    common .. "fire-dist-int-pistol-03.ogg",
+    common .. "fire-dist-int-pistol-04.ogg",
+    common .. "fire-dist-int-pistol-05.ogg",
+    common .. "fire-dist-int-pistol-06.ogg"
 }
 SWEP.DistantShootSoundOutdoorsSilenced = {
     common .. "sup_tail.ogg"
@@ -244,6 +245,9 @@ SWEP.AttachmentElements = {
     },
     ["ud_glock_skin_olive"] = {
         VMSkin = 2,
+    },
+    ["ud_glock_skin_custom"] = {
+        VMSkin = 3,
     },
     ["ud_glock_mag_10"] = {
         VMBodygroups = {{ind = 1, bg = 1}},
@@ -368,6 +372,8 @@ local desg_cal = {
     ["ud_glock_caliber_45acp"] = 4,
     ["ud_glock_caliber_22lr"] = 5,
     ["ud_glock_caliber_380acp"] = 6,
+    ["ud_glock_caliber_460"] = 7,
+    ["ud_glock_caliber_50gi"] = 8,
 }
 
 SWEP.Hook_NameChange = function(wep,name)
@@ -430,6 +436,18 @@ SWEP.Hook_NameChange = function(wep,name)
                     mid = "28"
                 else
                     mid = "25"
+                end
+            elseif caliber == 7 then
+                if barrel == 8 then
+                    mid = "30"
+                else
+                    mid = "21"
+                end
+            elseif caliber == 8 then
+                if barrel == 8 then
+                    mid = "30"
+                else
+                    mid = "21"
                 end
             end
         end
@@ -1014,7 +1032,7 @@ SWEP.Attachments = {
     {
         PrintName = "Caliber",
         DefaultAttName = "9x19mm Parabellum",
-        DefaultAttIcon = Material("entities/att/acwatt_ud_glock_caliber.png", "smooth mips"),
+        DefaultAttIcon = Material("entities/att/acwatt_uc_cal_9mm.png", "smooth mips"),
         Slot = "ud_glock_caliber",
     },
     {

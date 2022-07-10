@@ -1,9 +1,9 @@
-att.PrintName = "Express-12 20\" Long Barrel"
-att.AbbrevName = "20\" Long Barrel"
+att.PrintName = "Express-12 30\" Long Barrel"
+att.AbbrevName = "30\" Long Barrel"
 
 if GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "Remington 870 20\" Wingmaster Barrel"
-    att.AbbrevName = "20\" Wingmaster Barrel"
+    att.PrintName = "Remington 870 30\" Wingmaster Barrel"
+    att.AbbrevName = "30\" Wingmaster Barrel"
 end
 
 att.Icon = Material("entities/att/acwatt_ud_870_barrel_long.png", "smooth mips")

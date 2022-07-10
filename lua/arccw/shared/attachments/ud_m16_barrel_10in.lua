@@ -1,4 +1,4 @@
-att.PrintName = "10.5\" Stoner Commando Barrel"
+att.PrintName = "10.5\" RAYCAR-2 Commando Barrel"
 if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "10.5\" Colt Commando Barrel"
 end
@@ -28,5 +28,5 @@ att.Model = "models/weapons/arccw/atts/tactical_lhik.mdl"
 att.DroppedModel = "models/items/boxsrounds.mdl"
 
 att.ActivateElements = {"barrel_11","mount_11"}
-att.GivesFlags = {"blen_11","barrel_short"}
+att.GivesFlags = {"blen_11","barrel_short", "patr1"}
 att.ExcludeFlags = {"hg_no11"}

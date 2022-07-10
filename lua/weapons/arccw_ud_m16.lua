@@ -23,7 +23,7 @@ SWEP.TracerWidth = 2
 
 -- Fake name --
 
-SWEP.PrintName = "RAYCAR"
+SWEP.PrintName = "RAYCAR-0"
 -- AMCAR stands for (american) Colt Assault Rifle, not Carbine!! ~Fesiug
 -- shut up retard ~zenith
 
@@ -34,11 +34,17 @@ SWEP.TrueName = "M16A2"
 -- Trivia --
 SWEP.Trivia_Class = "Assault Rifle"
 SWEP.Trivia_Desc = "Third generation of America's iconic military rifle. Army tests showed that soldiers were more likely to hit a target if they fired multiple shots, but were likely to spray in full-auto and fail to hit anything. As a result, they implemented a ratcheted three-round burst system which limited the maximum burst a soldier could fire to three shots.\n\nWell-rounded gun with no major downsides."
-SWEP.Trivia_Manufacturer = "Stoner's Legacy Ltd."
+SWEP.Trivia_Manufacturer = "Rayter Arms Industries"
 SWEP.Trivia_Calibre = "5.56x45mm NATO"
 SWEP.Trivia_Mechanism = "Gas-Operated Rotating Bolt"
 SWEP.Trivia_Country = "USA"
 SWEP.Trivia_Year = 1959
+
+
+if GetConVar("arccw_truenames"):GetBool() then
+    SWEP.PrintName = SWEP.TrueName
+    SWEP.Trivia_Manufacturer = "Stoner's Legacy Ltd."
+end
 
 local origDesc = SWEP.Trivia_Desc
 local m4Desc = "Carbine variant of the M16 rifle. Originally designed in response to design faults in the CAR-15 family, it eventually replaced the M16 across much of the Army for its favorably low weight and comparable performance. The M4 variant has since become one of the most iconic and widespread American service rifles in the modern era.\n\nLight and versatile, but requires discipline to control."
@@ -52,7 +58,7 @@ local carDesc = "Carbine variant of the M16 rifle, short enough to be classified
 local a1Desc = "Second generation of America's iconic military rifle. Developed to address problems with the original M16, which suffered notoriously frequent jamming that could get its wielder killed. The revised model evolved a positive reputation with those who used it, and is now a universal symbol of the Vietnam War.\n\nA well-rounded rifle, but difficult to control without trigger discipline - something the A2 model eventually addressed."
 local a3Desc = "Variant of the M16A2 with the original full-automatic trigger group, relegated to niche roles in the US Army. Well-rounded gun with no major downsides."
 local lmgDesc = "Configuration of the M16 designed for a light machine gun role, used vaguely within the Marine Corps before the adoption of the Minimi. Heavier than the standard platform, but the integral bipod can be deployed onto surfaces for excellent recoil control."
-
+local patriotDesc = "An assault pistol developed for The Boss. The feeder mechanism inside the drum magazine forms an \"∞\" shape.\n\nThe bottomless magazine more than makes up for the awkwardness of the configuration."
 
 -- Weapon slot --
 
@@ -1293,6 +1299,42 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     end
 end
 
+-- RAYCAR-0, rifle barrel
+local bar0_fake = "First variation of the RAYCAR rifle. Tests showed that users were more likely to hit a target if they fired multiple shots, but were likely to spray in full-auto and fail to hit anything. As a result, a ratcheted three-round burst system was implemented which limited the maximum burst a user could fire to three shots.\n\nWell-rounded gun with no major downsides."
+
+-- RAYCAR-1, carbine barrel
+local bar1_fake = "Second variation of the RAYCAR rifle. It eventually replaced the RAYCAR-0 across much of the Army for its favorably low weight and comparable performance. The -1 variant has since become one of the most iconic and widespread American service rifles in the modern era.\n\nLight and versatile, but requires discipline to control."
+
+-- RAYCAR-2, commando barrel
+local bar2_fake = "Third variation of the RAYCAR rifle. Developed with assistance from the Navy, the \"commando\" barrel allows for the weapon to be very compact, even short enough to be classified as a submachine gun, enhancing usability in vehicles and in enclosed spaces.\n\nVery lightweight and manuverable, but with very aggressive recoil to match."
+
+-- RAYPAW :3
+local smgDesc_fake = "Submachine gun based on the RAYCAR rifle. Despite its similar appearance, it uses a different mechanism from its parent rifle.\n\nMore accurate than other submachine guns due to its rifle frame and closed-bolt mechanism."
+
+-- RBY50
+local beoDesc_fake = "Aftermarket semi-automatic variant of the RAYCAR rifle firing an oversized magnum cartridge.\n\nProvides extremely high stopping power at close range."
+
+-- RBY300
+local blkDesc_fake = "Aftermarket automatic variant of the RAYCAR rifle. The .300 Blackout cartridge has a ballistic performance more akin to the 7.62x39mm Soviet cartridge, with a similarly sized projectile but shorter effective range.\n\nSlightly more inaccurate, made up with a higher stopping power and a subsonic projectile."
+
+-- UKCAR
+local ukDesc_fake = "Normally, RAYCAR style rifles are imported with a semi-automatic fire group for the civilian market. This one, however, has been neutered by authority of the British crown with a manual-action receiver.\n\nBit cringe, innit?"
+
+-- RAYSAW
+local lmgDesc_fake = "Configuration of the RAYCAR designed for a light machine gun role, used vaguely within the Marine Corps before the adoption of the Minimi.\n\nHeavier than the standard platform, but the integral bipod can be deployed onto surfaces for excellent recoil control."
+
+-- Fallout barrel or sumn idk
+local ncrDesc_fake = "Standard-issue rifle of the New California Republic. Traditionally produced with a semi-automatic receiver, the wooden furniture is more readily replaceable and adds additional recoil control for maximum accuracy.\n\nWell-rounded gun with no major downsides."
+
+-- Patriot easter egg. Is it overpowered? I don't think so, a configuration like this is already pretty uncontrollable and imprecise as is, and overheating is the new magazine.
+local a1, a2 = {}, {"patr1", "patr2", "patr3", "patr4", "patr5"}
+SWEP.O_Hook_Override_BottomlessClip = function(wep, data)
+    if wep:CheckFlags(a1, a2) then
+        data.current = true
+    end
+end
+
+
 SWEP.Hook_NameChange = function(wep, name)
     local trueNames = GetConVar("arccw_truenames"):GetBool()
     local atts = wep.Attachments
@@ -1304,97 +1346,154 @@ SWEP.Hook_NameChange = function(wep, name)
     local upr = string.Replace(atts[5].Installed or "default","ud_m16_receiver_","")
     local lwr = string.Replace(atts[6].Installed or "default","ud_m16_receiver_","")
 
-    if upr == "9mm" then
-        local sd = (barr == -1)
-        wep.Trivia_Desc = smgDesc
-        if lwr == "semi" then
-            return trueNames and "AR-15 9mm" or "RAYSSMG"
-        elseif flat then
-            return trueNames and "R0991" or (sd and "AMSSMG-9NG") or "AMPAW-9NG"
-        end
-        return trueNames and "R0635" or (sd and "AMSSMG-9") or "AMPAW-9"
-
-    end
-
-    if lwr == "auto" then
-        if upr == "a1" then
-            wep.Trivia_Desc = a1Desc
-            if barr == 0 then
-                return trueNames and "M16A1" or "AMR-A1"
-            elseif barr == 1 then
-                return trueNames and "M605" or "AMR-A1 Prototype"
-            end
-            wep.Trivia_Desc = carDesc
-            return trueNames and "CAR-15" or "AMR-ACC"
-        end
-        if barr == 0 then
-            wep.Trivia_Desc = a3Desc
-            if hg == "lmg" then
-                wep.Trivia_Desc = lmgDesc
-                return trueNames and "Colt LMG" or "AMSAW"
-            elseif flat and hg == "tactical" then
-                return trueNames and "R0901" or "AMR-A0"
-            end
-            return trueNames and "M16A3" or "AMR-A0"
-        elseif barr == 1 then
-            wep.Trivia_Desc = m4Desc
+    if wep:CheckFlags(a1, a2) then -- Patriot configuration
+        wep.Trivia_Desc = patriotDesc
+        return "The Patriot"
+    elseif !truenames then -- Custom lore-based fake names
+        local pre = (lwr == "auto" and "AM" or "RAY")
+        if upr == "9mm" then
+            local sd = (barr == -1)
+            wep.Trivia_Desc = smgDesc_fake
             if flat then
-                return trueNames and "M4A1" or "AMCAR-NG1"
+                return (sd and pre .. "SSMG-NG") or pre .. "PAW-" .. barr .. "NG"
             end
-            return trueNames and "XM4" or "AMCAR-NG0"
+            return (sd and pre .. "SSMG") or pre .. "PAW-" .. barr
+        elseif upr == "50beo" then
+            wep.Trivia_Desc = beoDesc_fake
+            return "RBY"--50"
+        elseif upr == "300blk" then
+            wep.Trivia_Desc = blkDesc_fake
+            return "RBY"--300"
+        elseif lwr == "fpw" then
+            wep.Trivia_Desc = bar1_fake
+            return pre .. "FPW"
+        elseif lwr == "cali" then
+            wep.Trivia_Desc = ukDesc_fake
+            return "UKCAR"
         else
-            wep.Trivia_Desc = carDesc
-            if flat then
-                wep.Trivia_Desc = m4Desc
-                if upr == "300blk" then
-                    return trueNames and "Mk 18" or "AMCAR-C300"
-                end
-                return trueNames and "Mk 18 Mod 0" or "AMCAR-CNG"
-            end
-            return trueNames and "CAR-15" or "AMCAR-C"
-        end
-    elseif lwr == "semi" or upr == "50beo" then
-        wep.Trivia_Desc = arDesc
-        if hg == "wood" then
-            wep.Trivia_Desc = ncrDesc
             if barr == 0 then
-                return "Service Rifle"
+                if hg == "lmg" then
+                    wep.Trivia_Desc = lmgDesc_fake
+                    return pre .. "SAW" .. (flat and "-NG" or "")
+                elseif flat then
+                    return pre .. "CAR-0NG"
+                else
+                    wep.Trivia_Desc = bar0_fake
+                    return pre .. "CAR-0"
+                end
+            elseif barr == 1 then
+                wep.Trivia_Desc = bar1_fake
+                if flat then
+                    return pre .. "CAR-1NG"
+                end
+                return pre .. "CAR-1"
+            elseif barr == 2 then
+                wep.Trivia_Desc = bar2_fake
+                if flat then
+                    return pre .. "CAR-2NG"
+                end
+                return pre .. "CAR-2"
             end
-            return "Service Carbine"
-        elseif flat and hg == "adar" then
-            return trueNames and "ADAR 2-15" or "RUCAR 225"
-        elseif barr > 0 then
-            if barr == 2 and atts[10].Installed == "ud_m16_stock_buffer" then
-                return trueNames and "AR-15 Pistol" or "RAYCAR-NG Pistol"
-            elseif upr == "a1" and barr == 1 then
-                return trueNames and "CRXM177E2B" or "AMR1P"
-            else
-                return trueNames and "AR-15 SBR" or "RAYCAR-NG SBR"
-            end
-        elseif upr == "a1" then
-            return trueNames and "CRM16A1" or "AMR1S"
         end
-        return trueNames and "AR-15" or "RAYCAR-NG"
-    elseif lwr == "fpw" then
-        wep.Trivia_Desc = m4Desc
-        return trueNames and "M231 FPW" or "AMFPW"
-    elseif lwr == "cali" then
-        wep.Trivia_Desc = ukDesc
-        return trueNames and "AR-15GB" or "UKCAR"
-    else
-        wep.Trivia_Desc = origDesc
-        if barr == 0 and flat then
-            return trueNames and "M16A4" or "AMR-4"
-        elseif barr == 1 then
-            wep.Trivia_Desc = m4Desc
-            return trueNames and "M4 Carbine" or "RAYCAR"
-        elseif barr == 2 then
-            return trueNames and "M16 Commando" or "RAYCAR"
-        end
-    end
 
-    wep.Trivia_Desc = origDesc
-    return trueNames and "M16A2" or "RAYCAR"
+        wep.Trivia_Desc = bar0_fake
+        return pre .. "CAR-0"
+
+    else
+
+        if upr == "9mm" then
+            local sd = (barr == -1)
+            wep.Trivia_Desc = smgDesc
+            if lwr == "semi" then
+                return "AR-15 9mm"
+            elseif flat then
+                return "R0991"
+            end
+            return "R0635"
+
+        end
+
+        if lwr == "auto" then
+            if upr == "a1" then
+                wep.Trivia_Desc = a1Desc
+                if barr == 0 then
+                    return "M16A1"
+                elseif barr == 1 then
+                    return "M605"
+                end
+                wep.Trivia_Desc = carDesc
+                return "CAR-15"
+            end
+            if barr == 0 then
+                wep.Trivia_Desc = a3Desc
+                if hg == "lmg" then
+                    wep.Trivia_Desc = lmgDesc
+                    return "Colt LMG"
+                elseif flat and hg == "tactical" then
+                    return "R0901"
+                end
+                return "M16A3"
+            elseif barr == 1 then
+                wep.Trivia_Desc = m4Desc
+                if flat then
+                    return "M4A1"
+                end
+                return "XM4"
+            else
+                wep.Trivia_Desc = carDesc
+                if flat then
+                    wep.Trivia_Desc = m4Desc
+                    if upr == "300blk" then
+                        return "Mk 18"
+                    end
+                    return "Mk 18 Mod 0"
+                end
+                return "CAR-15"
+            end
+        elseif lwr == "semi" or upr == "50beo" then
+            wep.Trivia_Desc = arDesc
+            if hg == "wood" then
+                wep.Trivia_Desc = ncrDesc
+                if barr == 0 then
+                    return "Service Rifle"
+                end
+                return "Service Carbine"
+            elseif flat and hg == "adar" then
+                return "ADAR 2-15"
+            elseif barr > 0 then
+                if barr == 2 and atts[10].Installed == "ud_m16_stock_buffer" then
+                    return "AR-15 Pistol"
+                elseif upr == "a1" and barr == 1 then
+                    return "CRXM177E2B"
+                else
+                    return "AR-15 SBR"
+                end
+            elseif upr == "a1" then
+                return "CRM16A1"
+            end
+            return "AR-15"
+        elseif lwr == "fpw" then
+            wep.Trivia_Desc = m4Desc
+            return "M231 FPW"
+        elseif lwr == "cali" then
+            wep.Trivia_Desc = ukDesc
+            return "AR-15GB"
+        else
+            wep.Trivia_Desc = origDesc
+            if barr == 0 and flat then
+                return "M16A4"
+            elseif barr == 1 then
+                wep.Trivia_Desc = m4Desc
+                return "M4 Carbine"
+            elseif barr == 2 then
+                return "M16 Commando"
+            end
+        end
+
+        wep.Trivia_Desc = origDesc
+        return "M16A2"
+
+    end
 end
 
 

@@ -60,7 +60,7 @@ att.Override_Firemodes = {
 
 att.Override_ChamberSize = 0
 
-att.GivesFlags = {"m16_auto", "ud_m16_retro", "ud_m16_fpw", "sight_magpul"}
+att.GivesFlags = {"m16_auto", "ud_m16_retro", "ud_m16_fpw", "sight_magpul", "patr3"}
 att.ExcludeFlags = {"m16_noauto","ud_m16_not_retro"}
 att.ActivateElements = {"upper_classic","ud_m16_upper_charm2"}
 att.TopMount = 3

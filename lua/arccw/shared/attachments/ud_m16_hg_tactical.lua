@@ -1,4 +1,4 @@
-att.PrintName = "AU RIS Forearm Grip" -- "Armorers United"
+att.PrintName = "RAYCAR TACTICS Forend Assembly" -- "Armorers United" ?? WHO
 if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "KAC RAS Forend Assembly"
 end

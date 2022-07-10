@@ -1,4 +1,4 @@
-att.PrintName = "10\" AMCAR-S Barrel"
+att.PrintName = "10\" Suppressed Barrel"
 
 if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "10\" M16 SD Barrel"

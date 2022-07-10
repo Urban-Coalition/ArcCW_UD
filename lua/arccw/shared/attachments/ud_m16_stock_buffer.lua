@@ -30,5 +30,6 @@ att.Add_BarrelLength = -8
 att.Mult_Sway = 3
 
 att.ActivateElements = {"stock_231_tube"}
+att.GivesFlags = {"patr4"}
 
 att.Override_ActivePos = Vector(0.33, -4, 1.33)

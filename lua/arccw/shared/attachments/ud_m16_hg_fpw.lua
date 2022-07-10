@@ -13,3 +13,5 @@ att.Mult_Recoil = 1.1
 att.LHIK = true
 att.Model = "models/weapons/arccw/atts/m4_lhik.mdl"
 att.DroppedModel = "models/items/boxsrounds.mdl"
+
+att.GivesFlags = {"patr2"}

@@ -1349,7 +1349,7 @@ SWEP.Hook_NameChange = function(wep, name)
     if wep:CheckFlags(a1, a2) then -- Patriot configuration
         wep.Trivia_Desc = patriotDesc
         return "The Patriot"
-    elseif !truenames then -- Custom lore-based fake names
+    elseif !trueNames then -- Custom lore-based fake names
         local pre = (lwr == "auto" and "AM" or "RAY")
         if upr == "9mm" then
             local sd = (barr == -1)

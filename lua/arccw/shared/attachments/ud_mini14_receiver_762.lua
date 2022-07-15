@@ -36,7 +36,7 @@ att.Override_Malfunction = true
 att.Mult_MalfunctionVariance = 1.5
 
 att.Override_Ammo = "ar2"
-att.Override_Trivia_Calibre = "7.62x39mm"
+att.Override_Trivia_Calibre = "7.62x39mm Soviet"
 att.Override_ShellModel = "models/weapons/arccw/uc_shells/762x39.mdl"
 att.Override_ShellScale = 1
 

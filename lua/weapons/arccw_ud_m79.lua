@@ -175,6 +175,8 @@ local common = ")^/arccw_uc/common/"
 local path = ")^/arccw_uc/common/40mm/"
 local rottle = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
 
+--SWEP.Hook_AddShootSound = ArcCW.UC.InnyOuty
+
 SWEP.ShootSound = {
     path .. "fire-01.ogg",
     path .. "fire-02.ogg",
@@ -183,7 +185,15 @@ SWEP.ShootSound = {
     path .. "fire-05.ogg",
     path .. "fire-06.ogg"
 }
-SWEP.DistantShootSoundOutdoors = {
+SWEP.DistantShootSound = {
+    path .. "fire-dist-01.ogg",
+    path .. "fire-dist-02.ogg",
+    path .. "fire-dist-03.ogg",
+    path .. "fire-dist-04.ogg",
+    path .. "fire-dist-05.ogg",
+    path .. "fire-dist-06.ogg"
+}
+--[[SWEP.DistantShootSoundOutdoors = {
     path .. "fire-dist-01.ogg",
     path .. "fire-dist-02.ogg",
     path .. "fire-dist-03.ogg",
@@ -198,7 +208,7 @@ SWEP.DistantShootSoundIndoors = {
     common .. "fire-dist-int-shotgun-04.ogg",
     common .. "fire-dist-int-shotgun-05.ogg",
     common .. "fire-dist-int-shotgun-06.ogg"
-}
+}]]
 
 -- Animations --
 

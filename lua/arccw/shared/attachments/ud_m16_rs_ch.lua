@@ -17,7 +17,7 @@ att.SortOrder = 1000
 att.Free = true
 att.IgnorePickX = true
 
-att.MountPositionOverride = 0.59
+att.MountPositionOverride = 0.64
 att.IronSight = true
 att.Override_IronSightStruct = {
     Pos = Vector(-2.80, 0, 1.11),

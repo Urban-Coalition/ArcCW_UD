@@ -553,6 +553,19 @@ SWEP.AttachmentElements = {
         },
         VMSkin = 1
     },
+    ["uc_ubgl_m203"] = {
+        VMElements = {
+            {
+                Model = "models/weapons/arccw/atts/m203iron.mdl",
+                Bone = "m16_parent",
+                Scale = Vector(1, 1, 1),
+                Offset = {
+                    pos = Vector(0, -1.2, 14.9),
+                    ang = Angle(90, 0, -90),
+                }
+            }
+        },
+    },
     ["hg_m605"] = {
         VMBodygroups = {
             {ind = 5, bg = 1},
@@ -1583,7 +1596,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Underbarrel",
-        Slot = {"foregrip","ubgl"},
+        Slot = "foregrip",
         Bone = "m16_parent",
         Offset = {
             vpos = Vector(0, 6, 11),
@@ -1595,6 +1608,7 @@ SWEP.Attachments = {
             vmin = Vector(0, .65, 11.5),
             vmax = Vector(0, .65, 7.5),
         },
+		MergeSlots = {18},
     },
     {
         PrintName = "Tactical",
@@ -1677,4 +1691,13 @@ SWEP.Attachments = {
         },
         -- MergeSlots = {17}
     },
+    {
+        PrintName = "M203 slot",
+        Slot = "ubgl",
+        Bone = "m16_parent",
+        Offset = {
+            vpos = Vector(0, -0.4, 7.2),
+            vang = Angle(90, 0, -90),
+        },
+    }
 }

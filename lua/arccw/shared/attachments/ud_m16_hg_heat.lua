@@ -13,7 +13,7 @@ att.Mult_RecoilSide = 1.35
 att.Mult_SightTime = 0.9
 att.Mult_HipDispersion = 0.9
 
-att.LHIK = true
+att.LHIK = false
 att.Model = "models/weapons/arccw/atts/classic_lhik.mdl"
 att.DroppedModel = "models/items/boxsrounds.mdl"
 

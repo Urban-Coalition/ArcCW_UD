@@ -1194,7 +1194,7 @@ local hgLookup = {
     ["wood"]          = {1,1,1},
     ["lmg"]          = {3,3,1},
     ["fpw"]          = {6,6,2},
-    ["ru556"]          = {7,7,3},
+    ["ru556"]          = {7,7,2},
     ["adar"]          = {8,8,2},
 }
 -- Structure: 20in appearance, 14/11in appearance, gas block mode

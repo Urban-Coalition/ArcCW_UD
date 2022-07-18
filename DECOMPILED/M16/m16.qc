@@ -2,7 +2,6 @@ $modelname "weapons\arccw\c_ud_m16.mdl"
  
 $bodygroup "studio" {
 	studio "base.smd"
-	blank
 }
 
 $bodygroup "1" {
@@ -53,6 +52,8 @@ $bodygroup "5" {
 	studio "barrels_new/hand_ru556.smd" //7
 	studio "barrels_new/hand_adar.smd" //8
 	blank
+	studio "barrels_new/hand_heat.smd" //10
+	studio "barrels_new/hand_m203.smd" //11
 }
 
 $bodygroup "6" {

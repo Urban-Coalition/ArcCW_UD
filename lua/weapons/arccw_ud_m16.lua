@@ -515,6 +515,10 @@ SWEP.AttachmentElements = {
                 vpos = Vector(1.1, 0, 14),
                 vang = Angle(90, 0, 0),
             },
+            [16] = {
+                vpos = Vector(0, -1.65, 12.5), -- 21.75 or 15.75
+                vang = Angle(90, 0, -90),
+            },
         },
     },
     ["hg_m4a1"] = {

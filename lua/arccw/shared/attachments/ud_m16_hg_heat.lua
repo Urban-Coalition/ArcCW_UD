@@ -1,10 +1,11 @@
-att.PrintName = "Prototype Heatshield Handguard"
+att.AbbrevName = "Heatshield Handguard"
+
+att.PrintName = "Heatshield Handguard"
+att.Description = "Heatshield handguard used on grenadier variants of the M16."
 if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "M16A1 Heatshield Handguard"
+	att.Description = "Heatshield handguard used on grenadier variants of the RAYCAR."
 end
-att.AbbrevName = "PLACEHOLDER Heatshield Handguard"
-
-att.Description = "Placeholder grenadier/heatshield handguard."
 att.Slot = "ud_m16_hg"
 att.AutoStats = true
 

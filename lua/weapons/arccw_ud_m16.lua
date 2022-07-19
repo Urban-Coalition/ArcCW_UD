@@ -1699,5 +1699,6 @@ SWEP.Attachments = {
             vpos = Vector(0, -0.4, 7.2),
             vang = Angle(90, 0, -90),
         },
+        Hidden = true,
     }
 }

@@ -553,7 +553,7 @@ SWEP.AttachmentElements = {
         },
         VMSkin = 1
     },
-    ["uc_ubgl_m203"] = {
+    ["ud_m16_hg_heat"] = {
         VMElements = {
             {
                 Model = "models/weapons/arccw/atts/m203iron.mdl",

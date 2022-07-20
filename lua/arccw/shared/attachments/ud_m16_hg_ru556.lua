@@ -21,3 +21,4 @@ att.LHIK = true
 att.Model = "models/weapons/arccw/atts/ru556_lhik.mdl"
 att.DroppedModel = "models/items/boxsrounds.mdl"
 att.GivesFlags = {"ud_m16_rscompatible"}
+att.ActivateElements = {"hg_ru556"}

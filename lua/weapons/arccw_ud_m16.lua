@@ -697,6 +697,16 @@ SWEP.AttachmentElements = {
 
 SWEP.Hook_Think = ArcCW.UC.ADSReload
 
+local sr_pmag = {
+	[path .. "magout.ogg"] = path .. "pmagout.ogg",
+	[path .. "magin.ogg"] = path .. "pmagin.ogg",
+}
+
+local pmag1, pmag2 = {}, {"ud_m16_pmag"}
+SWEP.Hook_TranslateSound = function(wep, data)
+	if wep:CheckFlags(pmag1, pmag2) and sr_pmag[data] then return sr_pmag[data] end
+end
+
 local rottle = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
 local ratel = {common .. "rattle1.ogg", common .. "rattle2.ogg", common .. "rattle3.ogg"}
 
@@ -1001,63 +1011,6 @@ SWEP.Animations = {
             {s = common .. "shoulder.ogg", t = 2.2},
         },
     },
-
-    -- PMAG Plastic mag reload --
-
-    ["reload_pmag"] = {
-        Source = "reload",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Time = 71 / 30,
-        MinProgress = 1.5,
-        LastClip1OutTime = 0.9,
-        LHIK = true,
-        LHIKIn = 0.4,
-        LHIKEaseIn = 0.4,
-        LHIKEaseOut = 0.3,
-        LHIKOut = 0.5,
-        SoundTable = {
-            {s = rottle,  t = 0.0},
-            {s = ratel, t = 0.25},
-            {s = path .. "pmagout.ogg", 	 t = 0.335},
-            {s = ratel, t = 0.5},
-            {s = common .. "magpouch.ogg", t = 0.7},
-            {s = path .. "pmagin.ogg",    t = 0.97},
-            {s = ratel, t = 1.1},
-            {s = rottle,  t = 1.15},
-            {s = common .. "grab.ogg", t = 1.81},
-            {s = common .. "rattle_b2i_rifle.ogg", t = 1.7},
-            {s = common .. "shoulder.ogg", t = 1.8},
-        },
-    },
-    ["reload_empty_pmag"] = {
-        Source = "reload_empty",
-        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Time = 79 / 30,
-        MinProgress = 2,
-        LastClip1OutTime = 0.7,
-        LHIK = true,
-        LHIKIn = 0.4,
-        LHIKEaseIn = 0.4,
-        LHIKEaseOut = 0.3,
-        LHIKOut = 0.5,
-        SoundTable = {
-            {s = rottle,  t = 0.0},
-            {s = ratel, t = 0.25},
-            {s = path .. "pmagout.ogg", 	 t = 0.335},
-            {s = ratel, t = 0.5},
-            {s = common .. "magpouch.ogg", t = 0.6},
-            {s = common .. "rifle_magdrop_p.ogg",  t = 0.65},
-            {s = path .. "pmagin.ogg",    t = 0.95},
-            {s = ratel, t = 1.1},
-            {s = rottle,  t = 1.39},
-            {s = path .. "boltdrop.ogg", t = 1.76},
-            {s = ratel, t = 1.9},
-            {s = common .. "grab.ogg", t = 2.0},
-            {s = common .. "rattle_b2i_rifle.ogg", t = 2.0},
-            {s = common .. "shoulder.ogg", t = 2.1},
-        },
-    },
-
 
     -- 60 Round Reloads --
 

@@ -20,8 +20,4 @@ att.HideIfBlocked = true
 
 att.ActivateElements = {"ud_m16_pmag"}
 
-att.Hook_SelectReloadAnimation = function(wep, anim) -- this is so red mountian man can make plasticc soudn
-    return anim .. "_pmag"
-end
-
 att.ExcludeFlags = {"m16_usas", "m16_9mm", "m16_50beo"}

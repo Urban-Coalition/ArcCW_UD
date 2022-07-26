@@ -79,7 +79,7 @@ att.Hook_TranslateAnimation = function(wep, anim)
 end
 
 att.Hook_GetDistantShootSound = function(wep, distancesound)
-    if distancesound == wep.DistantShootSoundSilenced and wep:GetBuff("PhysBulletMuzzleVelocity") < ArcCW.UC.SubsonicThreshold then
+    if wep:GetBuff("PhysBulletMuzzleVelocity") < ArcCW.UC.SubsonicThreshold then
         return false
     end
 end

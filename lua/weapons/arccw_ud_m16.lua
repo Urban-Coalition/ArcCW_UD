@@ -1166,11 +1166,11 @@ local hgLookup = {
     ["wood"]          = {1,1,1},
     ["lmg"]          = {3,3,1},
     ["fpw"]          = {6,6,2},
-    ["ru556"]          = {7,7,2},
+    ["ru556"]          = {7,7,3},
     ["adar"]          = {8,8,2},
 }
 -- Structure: 20in appearance, 14/11in appearance, gas block mode
--- Gas block modes: 0 standard, 1 always at 20" position, 2 at ADAR position when short, 3 always LP
+-- Gas block modes: 0 standard, 1 always at 20" position, 2 at ADAR position when short, 3 at ADAR position when short and not flat
 
 local barrLookup = {
     ["sd"] = -1,
@@ -1223,8 +1223,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
         local gbPos = hgLookup[hg][3]
         local lwr = atts[6].Installed
         local flat = (
-            gbPos == 3
-            or wep:GetBuff_Override("FrontSight")
+            wep:GetBuff_Override("FrontSight")
             or atts[6].Installed == "ud_m16_receiver_fpw"
             or (optic and fs ~= "ud_m16_charm_fs" and !(wep:GetBuff_Override("IronSight") or wep:GetBuff_Override("TopMount")))
         ) and 1 or 0
@@ -1233,6 +1232,8 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
             vm:SetBodygroup(6, 0 + flat)
         elseif gbPos == 2 then
             vm:SetBodygroup(6, 4 + flat * 2)
+        elseif gbPos == 3 then
+            vm:SetBodygroup(6, 4 - flat)
         else
             vm:SetBodygroup(6, 2 + flat)
         end

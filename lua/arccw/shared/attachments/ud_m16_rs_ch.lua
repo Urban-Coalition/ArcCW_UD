@@ -1,5 +1,5 @@
 att.PrintName = "Carry Handle"
-att.Icon = Material("entities/att/acwatt_ud_m16_rs.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_m16_rs_carryhandle.png", "mips smooth")
 att.Description = "Mountable carry handle that is independent from the receiver."
 att.Desc_Pros = {}
 att.Desc_Cons = {}

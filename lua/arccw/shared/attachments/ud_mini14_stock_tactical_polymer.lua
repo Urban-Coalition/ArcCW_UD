@@ -5,7 +5,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "Patriot 809 Tactical Stock"
 end
 
-att.Icon = Material("entities/att/acwatt_ud_mini14_stock_tactical_polymer.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_mini14_stock_tactical.png", "smooth mips")
 att.Description = "A lightweight body replacement that improves weapon handling by combining a polymer chassis and a side-folding stock. Prioritizes speed when aiming the sights at the cost of increased recoil."
 att.Desc_Pros = {
 }

@@ -1,7 +1,7 @@
 att.PrintName = "PMAG 30 AR/M4 GEN M2 MOE"
 att.AbbrevName = "30-Round PMAG"
 att.SortOrder = 40
-att.Icon = Material("entities/att/acwatt_ud_m16_mag_40.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_m16_mag_pmag.png", "smooth mips")
 att.Description = "American aftermarket magazine. The grooves give it a slightly better grip surface, but the difference in practice is negligible."
 att.Desc_Pros = {}
 att.Desc_Cons = {}

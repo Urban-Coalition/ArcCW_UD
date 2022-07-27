@@ -3,7 +3,7 @@ if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "M16A1 Triangular Handguard"
 end
 att.AbbrevName = "Triangular Handguard"
-
+att.Icon = Material("entities/att/acwatt_ud_m16_hg_triangle.png", "smooth mips")
 att.Description = "Classic handguard issued with the rifle's original models.\nIn comparison to the modern \"ribbed\" handguard, it is more comfortable to hold but prone to slipping."
 att.Slot = "ud_m16_hg"
 att.AutoStats = true

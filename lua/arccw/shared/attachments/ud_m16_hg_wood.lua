@@ -1,6 +1,7 @@
 att.PrintName = "\"Service Rifle\" Wooden Handguard"
 att.AbbrevName = "Wooden Handguard"
 
+att.Icon = Material("entities/att/acwatt_ud_m16_hg_triangle.png", "smooth mips")
 att.Description = "Custom wooden handguard created by independent gunsmiths from the state of California. Its heft gives it some extra stability."
 att.Slot = "ud_m16_hg"
 att.AutoStats = true

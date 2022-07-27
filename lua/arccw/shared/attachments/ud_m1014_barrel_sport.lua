@@ -1,6 +1,6 @@
 att.PrintName = "19\" M4 Super 90 Competition Barrel"
 att.AbbrevName = "19\" Competition Barrel"
-att.Icon = Material("entities/att/acwatt_ud_m1014_barrel.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_m1014_barrel_sport.png", "smooth mips")
 att.Description = "Hardened barrel with slightly increased length, designed for target shooting. Abiding by competition restrictions, it has a reduced rate of fire."
 att.Desc_Pros = {
 }

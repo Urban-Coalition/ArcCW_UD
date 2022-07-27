@@ -1,6 +1,6 @@
 att.PrintName = "RU556 Handguard"
 
-att.Icon = Material("entities/att/acwatt_ud_m16_barrel_ru556.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_m16_hg_ru556.png", "smooth mips")
 att.Description = "Short handguard from the RU556 line of RAYCAR accessories, featuring a unique barrel shroud. The thin aluminum frame has extremely low weight."
 
 if GetConVar("arccw_truenames"):GetBool() then

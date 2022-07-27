@@ -3,7 +3,7 @@ if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "KAC RAS Forend Assembly"
 end
 att.AbbrevName = "Tactical Handguard"
-
+att.Icon = Material("entities/att/acwatt_ud_m16_hg_ris.png", "smooth mips")
 att.Description = "Barrel shroud equipped with a quad-rail RIS interface, allowing the rifle to accept the attachment of tactical devices or foregrips without any additional modification.\n\nFunctionally identical to the stock handguard."
 att.Desc_Neutrals = {
     "uc.cosmetic"

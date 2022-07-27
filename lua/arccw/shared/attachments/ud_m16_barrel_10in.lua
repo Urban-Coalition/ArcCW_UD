@@ -3,6 +3,7 @@ if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "10.5\" Colt Commando Barrel"
 end
 
+att.Icon = Material("entities/att/acwatt_ud_m16_barrel_10_5.png", "smooth mips")
 att.AbbrevName = "10.5\" Commando Barrel"
 att.Description = "Short barrel, technically classified as a submachine gun barrel. Offers high fire rates at the cost of range."
 att.Slot = "ud_m16_blen"

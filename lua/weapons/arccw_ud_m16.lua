@@ -1495,7 +1495,7 @@ SWEP.Attachments = {
     {
         PrintName = "Barrel",
         DefaultAttName = "20\" Standard Barrel",
-        DefaultAttIcon = Material("entities/att/acwatt_ud_m16_barrel_default.png", "smooth mips"),
+        DefaultAttIcon = Material("entities/att/acwatt_ud_m16_barrel_20.png", "smooth mips"),
         Slot = "ud_m16_blen",
         Bone = "m16_parent",
         Offset = {
@@ -1506,7 +1506,7 @@ SWEP.Attachments = {
     {
         PrintName = "Handguard",
         DefaultAttName = "Ribbed Handguard",
-        DefaultAttIcon = Material("entities/att/acwatt_ud_m16_barrel_default.png", "smooth mips"),
+        DefaultAttIcon = Material("entities/att/acwatt_ud_m16_hg_ribbed.png", "smooth mips"),
         Slot = "ud_m16_hg",
         Bone = "m16_parent",
         Offset = {

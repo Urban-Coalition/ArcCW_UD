@@ -1,6 +1,6 @@
 att.PrintName = "RUCAR 225 Short Wooden Handguard"
 
-att.Icon = Material("entities/att/acwatt_ud_m16_barrel_adar.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_m16_hg_adar.png", "smooth mips")
 att.Description = "Wooden handguard used on Russian sporting variants. The heavier material allows for lower recoil than handguards of similar length."
 
 if GetConVar("arccw_truenames"):GetBool() then

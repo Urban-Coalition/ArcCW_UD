@@ -1,5 +1,5 @@
 att.PrintName = "Sporting Stock"
-att.Icon = Material("entities/att/acwatt_ud_m1014_stock_in.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_ud_m1014_stock_sport.png", "smooth mips")
 att.Description = "Solid, non-adjustable polymer stock. Provides a better brace at the cost of combat mobility."
 att.Desc_Pros = {
 }

@@ -3,6 +3,7 @@ if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "14.5\" M4 Carbine Barrel"
 end
 
+att.Icon = Material("entities/att/acwatt_ud_m16_barrel_14_5.png", "smooth mips")
 att.AbbrevName = "14.5\" Carbine Barrel"
 att.Description = "Carbine length barrel. Provides a small increase in firerate while maintaining respectable accuracy and range."
 att.Slot = "ud_m16_blen"

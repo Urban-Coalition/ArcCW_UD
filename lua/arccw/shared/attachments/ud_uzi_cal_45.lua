@@ -38,8 +38,11 @@ att.Hook_GetShootSound = function(wep, sound) -- Temporary
     end
 end
 
+att.Override_DistantShootSoundSilenced = nil
+
 att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
     if wep:GetBuff_Override("Silencer") then
+        return nil
         -- fallback to script
     else
         return {path .. "fire-45-dist-01.ogg", path .. "fire-45-dist-02.ogg", path .. "fire-45-dist-03.ogg", path .. "fire-45-dist-04.ogg", path .. "fire-45-dist-05.ogg", path .. "fire-45-dist-06.ogg"}
@@ -51,3 +54,5 @@ att.Hook_GetDefaultAttName = function(wep, slot)
         return "16-Round Mag"
     end
 end
+
+att.GivesFlags = {"uzi_45","cal_subsonic"}

@@ -13,7 +13,7 @@ att.Slot = "uc_ubgl"
 
 att.LHIK = true
 
-att.ModelOffset = Vector(0, 0, 0)
+att.ModelOffset = Vector(0.5, 0, -1.5)
 att.Model = "models/weapons/arccw/atts/uc_ubgl_masterkey.mdl"
 
 att.SelectUBGLSound =  ""

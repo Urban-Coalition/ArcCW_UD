@@ -1,6 +1,6 @@
 att.PrintName = "Masterkey Underslung Shotgun"
 att.AbbrevName = "Masterkey Underslung Shotgun"
-att.Icon = Material("entities/att/acwatt_uc_ubgl_m203.png", "mips smooth")
+att.Icon = Material("entities/att/acwatt_uc_ubgl_masterkey.png", "mips smooth")
 att.Description = "Underslung shotgun primarily used to breach doors, but loaded with #00 Buckshot for your pleasure. Negatively impacts the weapon's handling."
 
 att.SortOrder = -100000
@@ -49,22 +49,29 @@ att.Hook_LHIK_TranslateAnimation = function(wep, key)
     end
 end
 
+att.Hook_ShouldNotSight = function(wep)
+    if wep:GetInUBGL() then
+        return true
+    end
+end
+
+
 att.Hook_OnSelectUBGL = function(wep)
-    wep:SetNextSecondaryFire(CurTime() + 0.6)
-    wep:DoLHIKAnimation("to_armed", 0.6)
+    wep:SetNextSecondaryFire(CurTime() + 0.4)
+    wep:DoLHIKAnimation("to_armed", 0.4)
     wep:PlaySoundTable({
         {s = "arccw_uc/common/rattle_b2i_rifle.ogg", t = 0},
-        {s = "arccw_uc/common/raise.ogg", t = 0.2},
-        {s = "arccw_uc/common/grab.ogg", t = 0.5},
+        {s = "arccw_uc/common/raise.ogg", t = 0.15},
+        {s = "arccw_uc/common/grab.ogg", t = 0.3},
     })
 end
 
 att.Hook_OnDeselectUBGL = function(wep)
-    wep:SetNextSecondaryFire(CurTime() + 0.6)
-    wep:DoLHIKAnimation("to_idle", 0.6)
+    wep:SetNextSecondaryFire(CurTime() + 0.4)
+    wep:DoLHIKAnimation("to_idle", 0.4)
     wep:PlaySoundTable({
         {s = "arccw_uc/common/rattle_b2i_rifle.ogg", t = 0},
-        {s = "arccw_uc/common/shoulder.ogg", t = 0.4},
+        {s = "arccw_uc/common/shoulder.ogg", t = 0.3},
     })
 end
 
@@ -76,8 +83,8 @@ att.UBGL_Fire = function(wep, ubgl)
 	local dir = (owner:EyeAngles() + wep:GetFreeAimOffset()):Forward()
 
 	local bullet = {
-		DamageMax = 18,
-		DamageMin = 6,
+		DamageMax = 18, -- 6 pellets to kill
+		DamageMin = 13, -- 8 pelllets to kill
 		Range = 50,
 		RangeMin = 5,
 		DamageType = DMG_BUCKSHOT + DMG_BULLET,
@@ -94,7 +101,7 @@ att.UBGL_Fire = function(wep, ubgl)
 		Src        = wep:GetShootSrc(),
 		Spread     = Vector(0, 0, 0),
 		Damage     = 0,
-		Num        = 20,
+		Num        = 8,
 		Force      = 120,
 		HullSize   = 4,
 		Weapon     = wep,
@@ -106,7 +113,7 @@ att.UBGL_Fire = function(wep, ubgl)
 	}
 
 	if wep:GetOwner():IsPlayer() then
-		for n = 1, 20 do
+		for n = 1, 8 do
 			local dirry = Vector(dir.x, dir.y, dir.z)
 			math.randomseed(math.Round(util.SharedRandom(n, -1337, 1337, !game.SinglePlayer() and wep:GetOwner():GetCurrentCommand():CommandNumber() or CurTime()) * (wep:EntIndex() % 30241)))
 			wep:ApplyRandomSpread(dirry, ArcCW.MOAToAcc * 50)
@@ -123,7 +130,12 @@ att.UBGL_Fire = function(wep, ubgl)
 	end
 	wep:MyEmitSound(")^/weapons/arccw_ud/870/fire.ogg", 100, 100, 1, CHAN_WEAPON )
 	wep:MyEmitSound(")^/weapons/arccw_ud/870/fire_dist.ogg", 149, 100, 0.5, CHAN_WEAPON + 1)
-	wep:MyEmitSound(")^/weapons/arccw_ud/870/eject.ogg", nil, nil, nil, CHAN_AUTO)
+
+    wep:PlaySoundTable({
+        {s = ")^/weapons/arccw_ud/870/rack_1.ogg", t = 0.15},
+        {s = ")^/weapons/arccw_ud/870/eject.ogg", t = 0.22},
+        {s = ")^/weapons/arccw_ud/870/rack_2.ogg", t = 0.3},
+    })
 
     wep:DoLHIKAnimation("fire")
     wep:SetClip2(wep:Clip2() - 1)
@@ -138,12 +150,18 @@ att.UBGL_Reload = function(wep, ubgl)
 
     wep:DoLHIKAnimation("reload", 2.75)
     wep:PlaySoundTable({
-        {s = { "arccw_uc/common/rattle1.ogg", "arccw_uc/common/rattle2.ogg", "arccw_uc/common/rattle3.ogg" }, t = 0},
-        {s = "arccw_uc/common/40mm/203open.ogg", t = 0.35},
-        {s = "arccw_uc/common/magpouch_replace_small.ogg", t = 0.9},
-        {s = "arccw_uc/common/40mm/203insert.ogg", t = 1.2},
-        {s = "arccw_uc/common/40mm/203close.ogg", t = 1.85},
-        {s = "arccw_uc/common/shoulder.ogg", t = 2.3},
+		{s = "arccw_uc/common/raise.ogg", t = 0.15},
+        {s = "arccw_uc/common/grab.ogg", t = 0.3},
+
+        {s = ")^/arccw_uc/common/shotgun-insert-alt-01.ogg", t = 0.5},
+        {s = ")^/arccw_uc/common/shotgun-insert-alt-02.ogg", t = 1.0},
+        {s = ")^/arccw_uc/common/shotgun-insert-alt-03.ogg", t = 1.5},
+
+        {s = "arccw_uc/common/rattle_b2i_rifle.ogg", t = 2.0},
+
+        {s = ")^/weapons/arccw_ud/870/rack_1.ogg", t = 2.3},
+        {s = ")^/weapons/arccw_ud/870/rack_2.ogg", t = 2.5},
+        {s = "arccw_uc/common/shoulder.ogg", t = 2.6},
     })
 
     local reserve = Ammo(wep)

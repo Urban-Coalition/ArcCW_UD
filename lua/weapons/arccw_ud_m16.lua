@@ -1651,7 +1651,7 @@ SWEP.Attachments = {
     },
     {
         PrintName = "M203 slot",
-        Slot = "ubgl",
+        Slot = "uc_ubgl",
         Bone = "m16_parent",
         Offset = {
             vpos = Vector(0, -0.4, 7.2),

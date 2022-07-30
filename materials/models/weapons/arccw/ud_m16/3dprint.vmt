@@ -1,0 +1,16 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/arccw/ud_m16/3dprint_d"
+	"$bumpmap" "models/weapons/arccw/ud_m16/3dprint_n"
+	// "$normalmapalphaenvmapmask" 	1
+	
+	"$phong" 		"1"
+	"$phongexponent" "10"
+	"$phongboost" "0.6"
+	"$phongfresnelranges" "[0.2 0.5 1]"
+	
+	// "$envmap" "env_cubemap"
+	// "$envmapfresnel" 			"1"
+	// "$envmapFresnelMinMaxExp" "[0 5 .4]"
+	// "$envmaptint" "[.05 .05  .05]"
+}

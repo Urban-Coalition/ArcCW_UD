@@ -1,7 +1,7 @@
 att.PrintName = "3D Low Profile Front Sight"
 att.AbbrevName = "3D Front Sight"
 att.Icon = Material("entities/att/acwatt_ud_m16_fs_3d.png", "mips smooth")
-att.Description = [[A2 style rail-mounted front sight for picatinny rails.]]
+att.Description = [[A 3d-printed front sight for picatinny rails. You probably want the matching rear sight as well.]]
 att.Desc_Neutrals = {"uc.cosmetic"}
 att.SortOrder = 1
 att.IgnorePickX = true

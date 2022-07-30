@@ -1,6 +1,6 @@
 att.PrintName = "3D Rear Sight"
 att.Icon = Material("entities/att/acwatt_ud_m16_rs_3d.png", "smooth mips")
-att.Description = "A rail-mounted rear sight for flat top receivers.\nLooks more modern, but that's it."
+att.Description = "A 3D-printed rear sight for flat top receivers. You probably want a top rail to mount the matching front sight as well."
 att.Desc_Pros = {}
 att.Desc_Cons = {}
 att.Desc_Neutrals = {

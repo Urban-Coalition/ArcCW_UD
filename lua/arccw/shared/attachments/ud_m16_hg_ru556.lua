@@ -8,6 +8,10 @@ if GetConVar("arccw_truenames"):GetBool() then
     att.Description = "Short handguard from the M-LOK line of AR-15 accessories, featuring a unique barrel shroud. The thin aluminum frame has extremely low weight."
 end
 
+att.Desc_Neutrals = {
+    "ud.m16.allowfs",
+}
+
 att.Slot = "ud_m16_hg"
 att.AutoStats = true
 

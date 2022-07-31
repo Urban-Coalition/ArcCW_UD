@@ -26,6 +26,7 @@ L["ud.m16_fs.2"] = "Certain optics will become obstructed by the front sight."
 L["ud.m16.fpw1"] = "No semi-automatic mode"
 L["ud.m16.fpw2"] = "+0.1s Trigger delay"
 L["ud.m16.50beo"] = "Disables Lower Receiver attachments"
+L["ud.m16.allowfs"] = "Allows Front Sight attachments"
 
 -- Deprecated
 L["ud.darkrp.cantremove"] = "You can't remove this without a gun license!"

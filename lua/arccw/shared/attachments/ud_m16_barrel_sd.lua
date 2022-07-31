@@ -13,7 +13,8 @@ att.Desc_Cons = {
     "uc.overheat"
 }
 att.Desc_Neutrals = {
-    "uc.supptail"
+    "uc.supptail",
+    "ud.m16.allowfs",
 }
 att.Slot = "ud_m16_blen"
 

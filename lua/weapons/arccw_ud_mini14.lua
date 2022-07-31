@@ -358,12 +358,12 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "draw",
-        SoundTable = ArcCW.UD.DrawSounds,
+        SoundTable = ArcCW.UC.DrawSounds,
     },
     ["draw_empty"] = {
         Source = "draw_empty",
         Time = 12 / 30,
-        SoundTable = ArcCW.UD.DrawSounds,
+        SoundTable = ArcCW.UC.DrawSounds,
     },
     ["holster"] = {
         Source = "holster",
@@ -372,7 +372,7 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0,
         LHIKOut = 0,
-        SoundTable = ArcCW.UD.HolsterSounds,
+        SoundTable = ArcCW.UC.HolsterSounds,
     },
     ["holster_empty"] = {
         Source = "holster_empty",
@@ -382,7 +382,7 @@ SWEP.Animations = {
         LHIKEaseIn = 0.4,
         LHIKEaseOut = 0,
         LHIKOut = 0,
-        SoundTable = ArcCW.UD.HolsterSounds,
+        SoundTable = ArcCW.UC.HolsterSounds,
     },
     ["fire"] = {
         Source = "fire",

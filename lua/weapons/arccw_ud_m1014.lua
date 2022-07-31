@@ -239,32 +239,32 @@ SWEP.Animations = {
     ["draw"] = {
         Source = "draw",
         Time = 20 / 30,
-        SoundTable = ArcCW.UD.DrawSounds,
+        SoundTable = ArcCW.UC.DrawSounds,
     },
     ["draw_empty"] = {
         Source = "draw_empty",
         Time = 20 / 30,
-        SoundTable = ArcCW.UD.DrawSounds,
+        SoundTable = ArcCW.UC.DrawSounds,
     },
     ["draw_jammed"] = {
         Source = "draw_jammed",
         Time = 20 / 30,
-        SoundTable = ArcCW.UD.DrawSounds,
+        SoundTable = ArcCW.UC.DrawSounds,
     },
     ["holster"] = {
         Source = "holster",
         Time = 20 / 30,
-        SoundTable = ArcCW.UD.HolsterSounds,
+        SoundTable = ArcCW.UC.HolsterSounds,
     },
     ["holster_empty"] = {
         Source = "holster_empty",
         Time = 20 / 30,
-        SoundTable = ArcCW.UD.HolsterSounds,
+        SoundTable = ArcCW.UC.HolsterSounds,
     },
     ["holster_jammed"] = {
         Source = "holster_jammed",
         Time = 20 / 30,
-        SoundTable = ArcCW.UD.HolsterSounds,
+        SoundTable = ArcCW.UC.HolsterSounds,
     },
     ["fire"] = {
         Source = "fire",
@@ -374,7 +374,7 @@ SWEP.Animations = {
         },
     },
 
-    -- stock animla below 
+    -- stock animla below
 
     ["idle_stock"] = {
         Source = "idle_stock",
@@ -388,32 +388,32 @@ SWEP.Animations = {
     ["draw_stock"] = {
         Source = "draw_stock",
         Time = 20 / 30,
-        SoundTable = ArcCW.UD.DrawSounds,
+        SoundTable = ArcCW.UC.DrawSounds,
     },
     ["draw_empty_stock"] = {
         Source = "draw_empty_stock",
         Time = 20 / 30,
-        SoundTable = ArcCW.UD.DrawSounds,
+        SoundTable = ArcCW.UC.DrawSounds,
     },
     ["draw_jammed_stock"] = {
         Source = "draw_jammed_stock",
         Time = 20 / 30,
-        SoundTable = ArcCW.UD.DrawSounds,
+        SoundTable = ArcCW.UC.DrawSounds,
     },
     ["holster_stock"] = {
         Source = "holster_stock",
         Time = 20 / 30,
-        SoundTable = ArcCW.UD.HolsterSounds,
+        SoundTable = ArcCW.UC.HolsterSounds,
     },
     ["holster_empty_stock"] = {
         Source = "holster_empty_stock",
         Time = 20 / 30,
-        SoundTable = ArcCW.UD.HolsterSounds,
+        SoundTable = ArcCW.UC.HolsterSounds,
     },
     ["holster_jammed_stock"] = {
         Source = "holster_jammed_stock",
         Time = 20 / 30,
-        SoundTable = ArcCW.UD.HolsterSounds,
+        SoundTable = ArcCW.UC.HolsterSounds,
     },
     ["fire_stock"] = {
         Source = "fire_stock",

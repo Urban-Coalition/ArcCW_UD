@@ -25,7 +25,7 @@ att.Override_ClipSize = 7
 att.Override_ClipSize_Priority = 0.5
 att.BaseClipSize = 7
 
-att.Mult_Damage = 2.2
+att.Mult_Damage = 80 / 34
 att.Mult_Recoil = 3
 att.Mult_RecoilSide = 2
 att.Mult_VisualRecoilMult = 2

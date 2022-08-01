@@ -1658,5 +1658,6 @@ SWEP.Attachments = {
             vang = Angle(90, 0, -90),
         },
         Hidden = true,
+        ExcludeFlags = {"m16_lmg", "m16_stub"},
     }
 }

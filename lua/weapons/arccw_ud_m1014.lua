@@ -354,7 +354,7 @@ SWEP.Animations = {
         SoundTable = {
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
             {s = path .. "breechload.ogg",  t = 0.05},
-            {s = path .. "breechclose.ogg",  t = 0.7},
+            {s = path .. "breechclose.ogg",  t = 0.75},
         },
         ForceEmpty = true,
     },
@@ -450,7 +450,7 @@ SWEP.Animations = {
         Time = 23 / 25,--30,
         ShellEjectAt = false,
         SoundTable = {
-            {s = path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg", t = 0}, -- Not temporary
+            {s = path .. "mech_last.ogg", t = 0}, -- Not temporary
             --{s = path1 .. "eject.ogg", t = 0}, -- Not temporary
         },
     },
@@ -503,7 +503,7 @@ SWEP.Animations = {
         SoundTable = {
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
             {s = path .. "breechload.ogg",  t = 0.05},
-            {s = path .. "breechclose.ogg",  t = 0.7},
+            {s = path .. "breechclose.ogg",  t = 0.75},
         },
         ForceEmpty = true,
     },

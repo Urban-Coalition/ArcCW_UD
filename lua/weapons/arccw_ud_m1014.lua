@@ -25,7 +25,7 @@ SWEP.PrintName = "FC1040"
 
 -- True name --
 
-SWEP.TrueName = "M4 Super 90"
+SWEP.TrueName = "Benelli M4"
 
 -- Trivia --
 

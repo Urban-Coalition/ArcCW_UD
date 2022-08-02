@@ -193,13 +193,25 @@ local path2 = ")^weapons/arccw_ud/m16/"
 local path1 = ")^weapons/arccw_ud/870/"
 local path = ")^weapons/arccw_ud/m1014/"
 local common = ")^/arccw_uc/common/"
-SWEP.ShootSound = path .. "fire.ogg"
+SWEP.ShootSound = {
+    path1 .. "fire-01.ogg",
+    path1 .. "fire-02.ogg",
+    path1 .. "fire-03.ogg",
+    path1 .. "fire-04.ogg",
+    path1 .. "fire-05.ogg",
+    path1 .. "fire-06.ogg"
+}
 SWEP.ShootSoundSilenced = path .. "fire_supp.ogg"
 --[[SWEP.DistantShootSound = path .. "fire_dist.ogg"
 SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"]]
 SWEP.ShootDrySound = path .. "dryfire.ogg"
 SWEP.DistantShootSoundOutdoors = {
-    path .. "fire_dist.ogg",
+    path1 .. "fire-dist-01.ogg",
+    path1 .. "fire-dist-02.ogg",
+    path1 .. "fire-dist-03.ogg",
+    path1 .. "fire-dist-04.ogg",
+    path1 .. "fire-dist-05.ogg",
+    path1 .. "fire-dist-06.ogg"
 }
 SWEP.DistantShootSoundIndoors = {
     common .. "fire-dist-int-shotgun-01.ogg",
@@ -271,7 +283,7 @@ SWEP.Animations = {
         Time = 23 / 25,--30,
         ShellEjectAt = 0.01,
         SoundTable = {
-            {s = path .. "mech.ogg", t = 0}, -- Not temporary
+            {s = path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg", t = 0}, -- Not temporary
             {s = path1 .. "eject.ogg", t = 0.01}, -- Not temporary
         },
     },
@@ -289,7 +301,7 @@ SWEP.Animations = {
         Time = 23 / 25,--30,
         ShellEjectAt = false,
         SoundTable = {
-            {s = path .. "mech.ogg", t = 0}, -- Not temporary
+            {s = path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg", t = 0}, -- Not temporary
             --{s = path1 .. "eject.ogg", t = 0}, -- Not temporary
         },
     },
@@ -420,7 +432,7 @@ SWEP.Animations = {
         Time = 23 / 25,--30,
         ShellEjectAt = 0.01,
         SoundTable = {
-            {s = path .. "mech.ogg", t = 0}, -- Not temporary
+            {s = path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg", t = 0}, -- Not temporary
             {s = path1 .. "eject.ogg", t = 0.01}, -- Not temporary
         },
     },
@@ -438,7 +450,7 @@ SWEP.Animations = {
         Time = 23 / 25,--30,
         ShellEjectAt = false,
         SoundTable = {
-            {s = path .. "mech.ogg", t = 0}, -- Not temporary
+            {s = path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg", t = 0}, -- Not temporary
             --{s = path1 .. "eject.ogg", t = 0}, -- Not temporary
         },
     },

@@ -20,6 +20,7 @@ $bodygroup "3" {
 	studio "autoshotgun_stock_retracted.smd"
 	studio "autoshotgun_stock_buffer.smd"
 	studio "autoshotgun_stock_sport.smd"
+	blank
 }
 
 $bodygroup "4" {

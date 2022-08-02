@@ -571,6 +571,13 @@ SWEP.AttachmentElements = {
         },
         VMPoseParams = {["grip"] = 1}
     },
+    ["ud_autoshotgun_stock_gripstock"] = {
+        VMBodygroups = {
+            {ind = 3, bg = 4},
+            {ind = 6, bg = 1},
+        },
+        VMPoseParams = {["grip"] = 0}
+    },
 
     ["ud_m1014_handguard_sport"] = {
         VMBodygroups = {{ind = 5, bg = 2}},
@@ -634,6 +641,11 @@ SWEP.Attachments = {
     {
         PrintName = "Stock",
         Slot = {"ud_1014_stock"},
+        Bone = "1014_parent",
+        Offset = {
+            vpos = Vector(-0.02, 1.9, -2.07),
+            vang = Angle(90, 0, -90),
+        },
         DefaultAttName = "Extended Stock",
         DefaultAttIcon = Material("entities/att/acwatt_ud_m1014_stock.png", "smooth mips"),
     },

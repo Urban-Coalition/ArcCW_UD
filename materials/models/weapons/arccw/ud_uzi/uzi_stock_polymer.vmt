@@ -9,9 +9,9 @@ VertexLitGeneric
 	
 	"$phong" 			"1"
 	"$phongtint"			"[.9 .9 .9]"
-	"$phongexponent"		"30"
-	"$phongboost" 			"1"
-	"$phongfresnelranges"		"[0.5 2 4]"
+	"$phongexponent"		"25"
+	"$phongboost" 			"0.7"
+	"$phongfresnelranges"		"[0.5 0.5 3.0]"
 	
 	"$PhongAlbedoTint" "1"
 }

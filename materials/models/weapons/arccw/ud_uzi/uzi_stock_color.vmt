@@ -1,23 +1,20 @@
+// don't worry about the minor differences between this and uzi_color.vmt, they still match color, specular and phong-wise
 VertexlitGeneric
 {
 	"$basetexture" 	"models/weapons/arccw/ud_uzi/uzi_stock_color"
-	
+
 	"$phong" 1
-	"$phongexponenttexture"     "models/weapons/arccw/ud_uzi/uzi_stock_color"
+                "$phongexponenttexture" "models/weapons/arccw/ud_uzi/uzi_stock_color"
 	"$phongwarptexture"			"models/weapons/arccw/ud_stalol\phongwarp_metal"
-	"$phongboost"               "1"
-	"$phongfresnelranges"       "[1 3 8]"
-	"$phongexponent"            "15"
+	"$phongboost"               "15"
+	"$phongfresnelranges"       "[0.5 1.5 3.0]"
+	"$phongexponent"            "25"
 	"$phongalbedotint"		    "1"
 	"$phongalbedoboost" 	    "14"
 
 	"$color2"					"[.85 .85 .85]"
 	"$blendTintByBaseAlpha"		"1" 
 
-	"$rimlight"					"1"
-	"$rimmask"					"1"
-	"$rimlightboost"			"0.3"
-	"$rimlightexponent"			"5"
 	
 	"$envmap" "env_cubemap"
 	"$normalmapalphaenvmapmask" "1"

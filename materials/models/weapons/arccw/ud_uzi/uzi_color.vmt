@@ -3,25 +3,20 @@ VertexlitGeneric
 	"$basetexture" 	"models/weapons/arccw/ud_uzi/uzi_color"
 	
 	"$phong" 1
-	"$phongexponenttexture"     "models/weapons/arccw/ud_uzi/uzi_rough"
+                "$phongexponenttexture" "models\weapons\arccw\ud_uzi\uzi_rough.vtf" // hahaha what the fuck? this was deep fried and somehow adding a bumpmap and then removing it fixed it altogther. thanks source!
 	"$phongwarptexture"			"models/weapons/arccw/ud_stalol\phongwarp_metal"
-	"$phongboost"               "13"
-	"$phongfresnelranges"       "[1 3 8]"
+	"$phongboost"               "15"
+	"$phongfresnelranges"       "[0.5 1.5 1.5]"
 	"$phongexponent"            "15"
 	"$phongalbedotint"		    "1"
 	"$phongalbedoboost" 	    "14"
 
 	"$color2"					"[.8 .8 .8]"
 	"$blendTintByBaseAlpha"		"1" 
-
-	"$rimlight"					"1"
-	"$rimmask"					"1"
-	"$rimlightboost"			"0.3"
-	"$rimlightexponent"			"5"
 	
 	"$envmap" "env_cubemap"
 	"$normalmapalphaenvmapmask" "1"
-	"$envmaptint"               "[ 0.03 0.03 0.03 ]"
+	"$envmaptint"               "[ .025 .025 .025 ]"
 				
 	"$bumpmap"                  "models/weapons/arccw/ud_uzi/uzi_normal"
 }

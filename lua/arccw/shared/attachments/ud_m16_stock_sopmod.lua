@@ -6,7 +6,7 @@ if GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.Icon = Material("entities/att/acwatt_ud_m16_stock_sopmod.png", "smooth mips")
-att.Description = "Rebalance me!!!"
+att.Description = "Rebalance me!!! An aftermarket collapsible stock with a bold figure and bulky nature. Provides some of the recoil damping capabilities of a solid stock, with some of the concealability and handling improvements of other collapsible stocks."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

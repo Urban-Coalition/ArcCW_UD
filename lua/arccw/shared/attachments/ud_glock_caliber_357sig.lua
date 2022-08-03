@@ -20,11 +20,14 @@ att.AutoStats = true
 
 att.Override_Trivia_Calibre = ".357 SIG"
 
-att.Mult_Damage = 1.1
+att.Mult_Damage = ArcCW.UC.CalConv("9mm", "357sig", "max")
+att.Mult_DamageMin = ArcCW.UC.CalConv("9mm", "357sig", "min")
+att.Mult_Penetration = ArcCW.UC.CalConv("9mm", "357sig", "pen")
+
 att.Mult_AccuracyMOA = 0.5
 att.Mult_Recoil = 1.15
 
-att.Mult_PhysBulletMuzzleVelocity = 410 / 375
+att.Override_PhysBulletMuzzleVelocity = 410
 
 att.Mult_ClipSize = 0.9
 att.Override_ShellModel = "models/weapons/arccw/uc_shells/357sig.mdl"

@@ -20,16 +20,16 @@ att.AutoStats = true
 
 att.Override_Trivia_Calibre = ".45 ACP"
 
-att.Mult_Damage = 1.5
-att.Mult_DamageMin = 0.88
-att.Mult_Penetration = 9 / 6
+att.Mult_Damage = ArcCW.UC.CalConv("9mm", "45acp", "max")
+att.Mult_DamageMin = ArcCW.UC.CalConv("9mm", "45acp", "min")
+att.Mult_Penetration = ArcCW.UC.CalConv("9mm", "45acp", "pen")
 
 att.Mult_RangeMin = 0.5
 att.Mult_Recoil = 1.5
 att.Mult_RecoilSide = 1.5
 att.Mult_MalfunctionMean = 0.6
 
-att.Mult_PhysBulletMuzzleVelocity = 320 / 375
+att.Override_PhysBulletMuzzleVelocity = 320
 
 att.Mult_ClipSize = 0.76
 

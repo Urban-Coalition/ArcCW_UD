@@ -27,10 +27,10 @@ att.Mult_Recoil = 1.25
 att.Mult_RecoilSide = 1.5
 att.Mult_HipDispersion = 1.5
 
-att.Mult_Damage = 1.5
-att.Mult_DamageMin = 1.5
+att.Mult_Damage = ArcCW.UC.CalConv("556", "762_39", "max")
+att.Mult_DamageMin = ArcCW.UC.CalConv("556", "762_39", "min")
+att.Mult_Penetration = ArcCW.UC.CalConv("556", "762_39", "pen")
 att.Mult_Range = 2
-att.Mult_Penetration = 16 / 14
 
 att.Override_Malfunction = true
 att.Mult_MalfunctionVariance = 1.5

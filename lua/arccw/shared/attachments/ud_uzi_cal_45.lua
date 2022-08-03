@@ -16,9 +16,10 @@ att.Override_Trivia_Calibre = ".45 ACP"
 
 att.AutoStats = true
 
-att.Mult_Damage = 45 / 30
-att.Mult_DamageMin = 15 / 17
-att.Mult_Penetration = 9 / 6
+att.Mult_Damage = ArcCW.UC.CalConv("9mm", "45acp", "max")
+att.Mult_DamageMin = ArcCW.UC.CalConv("9mm", "45acp", "min")
+att.Mult_Penetration = ArcCW.UC.CalConv("9mm", "45acp", "pen")
+
 att.Override_PhysBulletMuzzleVelocity = 320
 
 att.Mult_RangeMin = 0.5

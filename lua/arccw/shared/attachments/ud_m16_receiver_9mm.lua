@@ -23,8 +23,10 @@ att.SortOrder = 3
 att.Mult_Penetration = 6 / 14
 att.Mult_RPM = 1 / .85
 
-att.Mult_Damage = 30 / 34
-att.Mult_DamageMin = 17 / 20
+att.Mult_Damage = ArcCW.UC.CalConv("556", "9mm", "max")
+att.Mult_DamageMin = ArcCW.UC.CalConv("556", "9mm", "min")
+att.Mult_Penetration = ArcCW.UC.CalConv("556", "9mm", "pen")
+
 att.Mult_Range = 0.4
 att.Mult_ShootSpeedMult = 1.1
 att.Mult_Recoil = 0.5
@@ -37,19 +39,6 @@ att.Override_ClipSize_Priority = -1
 att.Override_ClipSize = 20
 
 att.Mult_HeatCapacity = 1.5
-
-att.Override_Firemodes_Priority = 0.5
--- att.Override_Firemodes = {
---     {
---         Mode = 2,
---     },
---     {
---         Mode = 1,
---     },
---     {
---         Mode = 0
---     }
--- }
 
 att.GivesFlags = {"m16_auto", "m16_9mm"}
 att.ExcludeFlags = {"m16_noauto"}

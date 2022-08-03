@@ -22,9 +22,9 @@ att.SortOrder = 3
 
 att.Mult_RPM = 1 / .85
 
-att.Mult_Damage = ArcCW.UC.StdDmg["22lr"].max / ArcCW.UC.StdDmg["9mm"].max
-att.Mult_DamageMin = ArcCW.UC.StdDmg["22lr"].min / ArcCW.UC.StdDmg["9mm"].min
-att.Mult_Penetration =  ArcCW.UC.StdDmg["22lr"].pen / ArcCW.UC.StdDmg["9mm"].pen
+att.Mult_Damage = ArcCW.UC.CalConv("556", "22lr", "max")
+att.Mult_DamageMin = ArcCW.UC.CalConv("556", "22lr", "min")
+att.Mult_Penetration = ArcCW.UC.CalConv("556", "22lr", "pen")
 
 att.Mult_Range = 0.5
 att.Mult_ShootSpeedMult = 1.2

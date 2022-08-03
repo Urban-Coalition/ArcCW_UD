@@ -68,12 +68,14 @@ SWEP.DefaultPoseParams = {["grip"] = 0}
 
 -- Damage parameters --
 
-SWEP.Damage = 18 -- 6 pellets to kill
-SWEP.DamageMin = 10 -- 10 pellets to kill
+
+SWEP.Damage = ArcCW.UC.StdDmg["12g_s"].max
+SWEP.DamageMin = ArcCW.UC.StdDmg["12g_s"].min
+SWEP.Penetration = ArcCW.UC.StdDmg["12g_s"].pen
+SWEP.Num = ArcCW.UC.StdDmg["12g_s"].num
+
 SWEP.Range = 40
 SWEP.RangeMin = 4
-SWEP.Num = 8
-SWEP.Penetration = 2
 SWEP.DamageType = DMG_BUCKSHOT
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 200

@@ -25,14 +25,16 @@ att.Override_ClipSize = 7
 att.Override_ClipSize_Priority = 0.5
 att.BaseClipSize = 7
 
-att.Mult_Damage = 80 / 34
+att.Mult_Damage = ArcCW.UC.CalConv("556", "50beo", "max")
+att.Mult_DamageMin = ArcCW.UC.CalConv("556", "50beo", "min")
+att.Mult_Penetration = ArcCW.UC.CalConv("556", "50beo", "pen")
+
 att.Mult_Recoil = 3
 att.Mult_RecoilSide = 2
 att.Mult_VisualRecoilMult = 2
 att.Mult_RPM = 0.5
 att.Mult_Range = 0.25
 att.Mult_ShootVol = 1.2
-att.Mult_Penetration = 12 / 14
 
 att.Mult_SightTime = 0.91
 att.Mult_ReloadTime = 0.87
@@ -42,8 +44,8 @@ att.Mult_SpeedMult = 1.025
 
 att.Override_PhysBulletMuzzleVelocity = 550
 
-att.Mult_HeatCapacity = 0.25
-att.Mult_HeatDissipation = 0.25
+-- att.Mult_HeatCapacity = 0.25
+-- att.Mult_HeatDissipation = 0.25
 
 -- yes, .50 beowulf is more of an huge magnum bullet than it is a rifle bullet
 att.Override_Ammo = "357"
@@ -83,6 +85,7 @@ att.Hook_SelectReloadAnimation = function(wep, anim)
 end
 
 local slotinfo = {
+    [6] = {".50 Beowulf Lower", ".50 Beowulf Lower", Material("entities/att/acwatt_ud_m16_receiver_semi.png", "smooth mips")},
     [11] = {"7-Round Mag", "7-Round Mag", Material("entities/att/acwatt_ud_m16_mag_15.png", "smooth mips")},
 }
 att.Hook_GetDefaultAttName = function(wep, slot)
@@ -96,4 +99,4 @@ att.Hook_GetDefaultAttIcon = function(wep, slot)
     end
 end
 
-att.GivesFlags = {"m16_50beo","m16_nolower"}
+att.GivesFlags = {"m16_50beo", "m16_nolower"}

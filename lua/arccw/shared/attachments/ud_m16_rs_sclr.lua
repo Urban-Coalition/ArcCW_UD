@@ -27,3 +27,5 @@ att.Override_IronSightStruct = {
 att.Model = "models/weapons/arccw/atts/scalerworks_rs.mdl"
 att.ModelOffset = Vector(-3, 0, -0.1)
 att.ModelScale = Vector(1.17, 1.17, 1.17)
+
+att.HideIfBlocked = true

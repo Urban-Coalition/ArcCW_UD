@@ -12,4 +12,4 @@ att.Free = true
 att.IgnorePickX = true
 
 att.SortOrder = 999
-att.ExcludeFlags = {"ud_m16_a1","sight_magpul"}
+att.ExcludeFlags = {"ud_m16_a1", "sight_magpul", "ud_m16_sd"}

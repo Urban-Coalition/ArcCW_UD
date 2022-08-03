@@ -880,7 +880,7 @@ SWEP.Animations = {
     ["reload_empty"] = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Time = 79 / 30,
+        Time = 87 / 30,
         MinProgress = 2,
         LastClip1OutTime = 0.7,
         LHIK = true,
@@ -936,7 +936,7 @@ SWEP.Animations = {
     ["reload_empty_20"] = {
         Source = "reload_empty_20",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Time = 79 / 30,
+        Time = 86 / 30,
         MinProgress = 2,
         LastClip1OutTime = 0.7,
         LHIK = true,
@@ -991,7 +991,7 @@ SWEP.Animations = {
     ["reload_empty_40"] = {
         Source = "reload_empty_40",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Time = 79 / 30,
+        Time = 85 / 30,
         MinProgress = 2,
         LastClip1OutTime = 0.7,
         LHIK = true,
@@ -1038,7 +1038,7 @@ SWEP.Animations = {
     ["reload_empty_60"] = {
         Source = "reload_empty_60",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Time = 79 / 30,
+        Time = 85 / 30,
         MinProgress = 2,
         LastClip1OutTime = 0.7,
         LHIK = true,
@@ -1054,7 +1054,7 @@ SWEP.Animations = {
             {s = common .. "rifle_magdrop.ogg",  t = 0.8},
             {s = path .. "magin.ogg",    t = 1.1},
             {s = rottle, t = 1.475},
-            {s = path .. "boltdrop.ogg", t = 1.9},
+            {s = path .. "boltdrop.ogg", t = 1.75},
             {s = common .. "shoulder.ogg", t = 2.2},
         },
     },

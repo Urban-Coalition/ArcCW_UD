@@ -27,3 +27,5 @@ att.Override_IronSightStruct = {
 att.Model = "models/weapons/arccw/atts/kac_rs.mdl"
 att.ModelOffset = Vector(-2.5, -0.01, -0.09)
 att.ModelScale = Vector(0.9, 0.9, 0.9)
+
+att.HideIfBlocked = true

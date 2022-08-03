@@ -5,7 +5,7 @@ if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "AR-15 .22 LR Upper Receiver"
 end
 
-att.Icon = Material("entities/att/acwatt_ud_m16_receiver_9mm.png", "smooth mips")
+att.Icon = Material("entities/att/acwatt_uc_cal_22lr.png", "smooth mips")
 att.Description = "Civilian model firing a low power cartridge.\nVery controllable recoil, but not much lethality."
 att.Desc_Pros = {
     --"uc.auto",

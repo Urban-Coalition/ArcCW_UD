@@ -21,9 +21,9 @@ att.AutoStats = true
 att.Override_Trivia_Calibre = ".22 Long Rifle"
 att.Override_Ammo = "plinking"
 
-att.Mult_Damage = ArcCW.UC.StdDmg["22lr"].max / ArcCW.UC.StdDmg["9mm"].max
-att.Mult_DamageMin = ArcCW.UC.StdDmg["22lr"].min / ArcCW.UC.StdDmg["9mm"].min
-att.Mult_Penetration =  ArcCW.UC.StdDmg["22lr"].pen / ArcCW.UC.StdDmg["9mm"].pen
+att.Mult_Damage = ArcCW.UC.CalConv("9mm", "22lr", "max")
+att.Mult_DamageMin = ArcCW.UC.CalConv("9mm", "22lr", "min")
+att.Mult_Penetration = ArcCW.UC.CalConv("9mm", "22lr", "pen")
 
 att.Mult_Recoil = 0.25
 att.Mult_VisualRecoilMult = 0.25

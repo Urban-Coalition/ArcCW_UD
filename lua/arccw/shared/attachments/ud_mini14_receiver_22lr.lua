@@ -21,9 +21,9 @@ att.Mult_SightTime = 0.8
 att.Mult_ReloadTime = 0.85
 att.Mult_Sway = 0.75
 
-att.Mult_Damage = 0.35 --ArcCW.UC.StdDmg["22lr"].max / ArcCW.UC.StdDmg["556"].max
-att.Mult_DamageMin = 0.35 --ArcCW.UC.StdDmg["22lr"].min / ArcCW.UC.StdDmg["556"].min
-att.Mult_Penetration =  0.15 --ArcCW.UC.StdDmg["22lr"].pen / ArcCW.UC.StdDmg["556"].pen
+att.Mult_Damage = ArcCW.UC.CalConv("556", "22lr", "max")
+att.Mult_DamageMin = ArcCW.UC.CalConv("556", "22lr", "min")
+att.Mult_Penetration = ArcCW.UC.CalConv("556", "22lr", "pen")
 
 att.Mult_Range = 0.5
 att.Mult_Recoil = 0.25

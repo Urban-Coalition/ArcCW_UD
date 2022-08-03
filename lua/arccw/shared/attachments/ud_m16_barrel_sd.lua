@@ -20,12 +20,14 @@ att.Slot = "ud_m16_blen"
 
 att.AutoStats = true
 
-att.Mult_SightTime = 1.15
+att.Mult_SightTime = 1.05
 
 att.Mult_Range = 0.65
-att.Mult_Recoil = 1.25
-att.Mult_AccuracyMOA = 1.25
+att.Mult_Recoil = 1.15
+att.Mult_AccuracyMOA = 1.5
 att.Mult_RPM = 1.111
+att.Mult_HipDispersion = 0.75
+
 
 att.Add_BarrelLength = -10
 att.Mult_PhysBulletMuzzleVelocity = 0.78

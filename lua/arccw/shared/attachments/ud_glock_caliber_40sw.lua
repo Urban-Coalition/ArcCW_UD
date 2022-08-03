@@ -20,12 +20,13 @@ att.AutoStats = true
 
 att.Override_Trivia_Calibre = ".40 S&W"
 
-att.Mult_DamageMin = 1.35
-att.Mult_RangeMin = 0.5
-att.Mult_Recoil = 1.15
-att.Mult_Penetration = 8 / 6
+att.Mult_Damage = ArcCW.UC.CalConv("9mm", "40sw", "max")
+att.Mult_DamageMin = ArcCW.UC.CalConv("9mm", "40sw", "min")
+att.Mult_Penetration = ArcCW.UC.CalConv("9mm", "40sw", "pen")
 
-att.Mult_PhysBulletMuzzleVelocity = 300 / 375
+att.Mult_Recoil = 1.15
+
+att.Override_PhysBulletMuzzleVelocity = 300
 
 att.Mult_ClipSize = .9
 att.Override_ShellModel = "models/weapons/arccw/uc_shells/40sw.mdl"

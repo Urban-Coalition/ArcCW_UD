@@ -66,12 +66,13 @@ SWEP.WorldModelOffset = {
 
 -- Damage parameters --
 
-SWEP.Damage = 20 -- 5 pellets to kill
-SWEP.DamageMin = 13 -- 8 pellets to kill
+SWEP.Damage = ArcCW.UC.StdDmg["12g_p"].max
+SWEP.DamageMin = ArcCW.UC.StdDmg["12g_p"].min
+SWEP.Penetration = ArcCW.UC.StdDmg["12g_p"].pen
+SWEP.Num = ArcCW.UC.StdDmg["12g_p"].num
+
 SWEP.Range = 50
 SWEP.RangeMin = 5
-SWEP.Num = 8
-SWEP.Penetration = 2
 SWEP.DamageType = DMG_BUCKSHOT
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 200

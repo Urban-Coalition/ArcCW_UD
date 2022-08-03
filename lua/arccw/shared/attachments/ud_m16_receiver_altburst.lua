@@ -28,7 +28,7 @@ att.Override_Firemodes = {
     {
         Mode = -3,
         PostBurstDelay = 0.08,
-        Mult_Recoil = 0.95,
+        Mult_Recoil = 0.9,
         RunawayBurst = true, -- https://en.wikipedia.org/wiki/Burst_mode_(weapons)
     },
     {

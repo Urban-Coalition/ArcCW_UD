@@ -5,7 +5,7 @@ if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "AR-15 .300 Blackout Upper Receiver"
 end
 
-att.Description = "Aftermarket receiver that fires .300 Blackout cartridges, identical to 5.56x45mm in diameter but with a much larger projectile.\nIts subsonic muzzle velocity makes it well suited for suppressor use."
+att.Description = "Aftermarket receiver that fires .300 Blackout cartridges, identical to 5.56x45mm in diameter but with a much larger projectile.\nIts low muzzle velocity makes it well suited for subsonic loads."
 
 att.Icon = Material("entities/att/acwatt_ud_m16_receiver_auto.png", "smooth mips")
 att.Desc_Pros = {
@@ -19,17 +19,17 @@ att.Slot = "ud_m16_receiver"
 att.AutoStats = true
 att.SortOrder = 4
 
-att.Mult_Damage = 1.17
-att.Mult_DamageMin = 0.75
-att.Mult_Penetration = 10 / 14
+att.Mult_Damage = ArcCW.UC.CalConv("556", "300blk", "max")
+att.Mult_DamageMin = ArcCW.UC.CalConv("556", "300blk", "min")
+att.Mult_Penetration = ArcCW.UC.CalConv("556", "300blk", "pen")
+
 att.Mult_ShootVol = 105 / 120
+
+att.Mult_Range = 0.9
 
 att.Mult_HeatDissipation = 1.5
 
-att.Override_PhysBulletMuzzleVelocity = 310
-
-att.Override_PhysTracerProfile = 7
-att.Override_TracerNum = 0
+att.Override_PhysBulletMuzzleVelocity = 410
 
 att.Override_ShellModel = "models/weapons/arccw/uc_shells/300blk.mdl"
 att.Override_ShellScale = 1

@@ -569,6 +569,7 @@ SWEP.AttachmentElements = {
                 }
             }
         },
+        UC_UseClassicM203Mount = true,
     },
     ["hg_m605"] = {
         VMBodygroups = {

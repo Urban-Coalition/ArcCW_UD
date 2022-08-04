@@ -137,7 +137,7 @@ SWEP.ShootSpeedMult = 0.75
 -- Length --
 
 SWEP.BarrelLength = 48
-SWEP.ExtraSightDist = 10
+SWEP.ExtraSightDist = 4
 
 -- Ironsights / Customization / Poses --
 
@@ -361,7 +361,6 @@ SWEP.Attachments = {
         },
         InstalledEles = {"m79_rail"},
         ExcludeFlags = {"m79_pirategun"},
-        ExtraSightDist = 5,
     },
     {
         PrintName = "Tube",

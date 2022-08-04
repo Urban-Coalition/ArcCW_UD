@@ -1,5 +1,5 @@
 att.PrintName = "Scalarworks Rear Sight"
-att.Icon = Material("entities/att/acwatt_ud_m16_rs_scalarworks.png", "mips smooth")
+att.Icon = Material("entities/att/acwatt_ud_m16_rs_sclr.png", "mips smooth")
 att.Description = "Aftermarket rear sight for flat top receivers. Functionally identical to other iron sights, but may look more tactical (or mall-ninja, depending on your taste)."
 att.Desc_Pros = {}
 att.Desc_Cons = {}

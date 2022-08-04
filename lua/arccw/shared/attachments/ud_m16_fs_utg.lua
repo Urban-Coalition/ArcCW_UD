@@ -1,6 +1,6 @@
 att.PrintName = "UTG Low Profile Front Sight"
 att.AbbrevName = "UTG Front Sight"
-att.Icon = Material("entities/att/acwatt_ud_m16_fs_colta2.png", "mips smooth")
+att.Icon = Material("entities/att/acwatt_ud_m16_fs_colt.png", "mips smooth")
 att.Description = [[A2 style rail-mounted front sight for picatinny rails.]]
 att.Desc_Neutrals = {"uc.cosmetic"}
 att.SortOrder = 1

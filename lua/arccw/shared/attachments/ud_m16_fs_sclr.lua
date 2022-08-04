@@ -1,6 +1,6 @@
 att.PrintName = "Scalarworks Front Sight"
 att.AbbrevName = "Scalarworks Front Sight"
-att.Icon = Material("entities/att/acwatt_ud_m16_fs_scalarworks.png", "mips smooth")
+att.Icon = Material("entities/att/acwatt_ud_m16_fs_sclr.png", "mips smooth")
 att.Description = [[Removable front sight made by Knight's Armament Company. Designed to be mounted on forend rails.]]
 att.Desc_Neutrals = {"uc.cosmetic"}
 att.SortOrder = 1

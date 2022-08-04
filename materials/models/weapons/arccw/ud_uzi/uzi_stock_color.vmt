@@ -5,7 +5,7 @@ VertexlitGeneric
 	"$phong" 1
                 "$phongexponenttexture" "models/weapons/arccw/ud_uzi/uzi_stock_color"
 	"$phongwarptexture"			"models/weapons/arccw/ud_stalol\phongwarp_metal"
-	"$phongboost"               "1.5"
+	"$phongboost"               "1"
 	"$phongfresnelranges"       "[0.5 1.5 3.0]"
 	"$phongexponent"            "25"
 	"$phongalbedotint"		    "1"

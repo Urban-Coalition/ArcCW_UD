@@ -5,8 +5,8 @@ VertexlitGeneric
 	"$phong" 1
 	"$phongexponenttexture"     "models\weapons\arccw\ud_m16/ris/m16_ris_rail_r"
 	"$phongwarptexture"			"models/weapons/arccw/ud_stalol\phongwarp_metal"
-	"$phongboost"               "9"
-	"$phongfresnelranges"       "[.6 1 2]"
+	"$phongboost"               "19"
+	"$phongfresnelranges"       "[0.5 1.5 3.0]"
 	"$phongexponent"            "15"
 	"$phongalbedotint"		    "1"
 

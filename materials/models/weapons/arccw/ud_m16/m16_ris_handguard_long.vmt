@@ -5,9 +5,9 @@ VertexlitGeneric
 	"$phong" 1
 	"$phongexponenttexture"     "models\weapons\arccw\ud_m16/ris/m16_ris_handguard_long_r"
 	"$phongwarptexture"			"models/weapons/arccw/ud_stalol\phongwarp_metal"
-	"$phongboost"               "50"
-	"$phongfresnelranges"       "[.6 1 2]"
-	"$phongexponent"            "100"
+	"$phongboost"               "2"
+	"$phongfresnelranges"       "[0.5 1.5 3.0]"
+	"$phongexponent"            "15"
 	"$phongalbedotint"		    "1"
 
 	"$color2"					"[.9 .9 .9]"
@@ -15,7 +15,7 @@ VertexlitGeneric
 	
 	"$envmap" "env_cubemap"
 	"$normalmapalphaenvmapmask" "1"
-	"$envmaptint"               "[.01 .01 .01]"
+	"$envmaptint"               "[.007 .007 .007]"
 				
 	"$bumpmap"                  "models\weapons\arccw\ud_m16/ris/m16_ris_handguard_long_n"
 }

@@ -4,13 +4,12 @@
 	"$bumpmap"					"models/weapons/arccw/ud_m16/m16_rail_colt_n"
 
 	"$phong"	"1"
-	"$phongexponent"	"3"
+	"$phongexponent"	"15"
 	"$phongalbedotint"	"1"
-	"$phongboost"	"0.3"
-	"$phongfresnelranges"	"[1 1 1]"
-        "$phongdisablehalflambert"  "1"
+	"$phongboost"	"0.7"
+	"$phongfresnelranges"	"[0.5 1.5 3.0]"
 
-        "$halflambert"                 "0"
+        "$halflambert"                 "1"
         "$nodecal"                     "0"
         "$ambientocclusion"         "1"
 }

@@ -8,9 +8,8 @@
 	"$phongalbedotint"	"1"
 	"$phongboost"	"0.5"
 	"$phongfresnelranges"	"[1 1 1]"
-        "$phongdisablehalflambert"  "1"
 
-        "$halflambert"                 "0"
+        "$halflambert"                 "1" // so many of these vmts have halflambert disabled. why?
         "$nodecal"                     "0"
         "$ambientocclusion"         "1"
 }

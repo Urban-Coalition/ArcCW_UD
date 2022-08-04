@@ -6,7 +6,7 @@ VertexlitGeneric
 	"$phongexponenttexture"     "models\weapons\arccw\uc_shared/RU556/m16_ru556_s"
 	"$phongwarptexture"			"models/weapons/arccw/ud_stalol\phongwarp_metal"
 	"$phongboost"               "3"
-	"$phongfresnelranges"       "[.6 1 2]"
+	"$phongfresnelranges"       "[0.5 1.5 3.0]"
 	"$phongexponent"            "18"
 
 	"$color2"					"[1 1 1]"

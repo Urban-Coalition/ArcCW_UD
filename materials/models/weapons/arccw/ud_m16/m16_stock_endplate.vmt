@@ -13,4 +13,6 @@
         "$halflambert"                 "0"
         "$nodecal"                     "0"
         "$ambientocclusion"         "1"
+
+		$color2 "[0.6 0.6 0.6]"
 }

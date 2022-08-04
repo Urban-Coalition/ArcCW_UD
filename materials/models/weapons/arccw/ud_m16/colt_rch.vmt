@@ -6,8 +6,8 @@
 	"$phongexponenttexture" "models/weapons/arccw/ud_m16/sight_rear_ar15_colt_carry_hande_std_LOD0_gloss"
 	"$phongwarptexture"			"models\weapons\arccw\ud_stalol\phongwarp_metal"
 	"$phong" "1"
-	"$phongboost" "19"
-	"$phongexponent" "15"
+	"$phongboost" "100"
+	"$phongexponent" "8"
 	"$phongalbedotint" "1"
 	"$phongfresnelranges" "[0.5 1.5 3.0]"
     "$envmap" "env_cubemap"
@@ -15,5 +15,5 @@
     "$envmapfresnel" "0.1"
     "$normalmapalphaenvmapmask" "0"
     "$basemapalphaenvmapmask" "1"
-	"$color2" "[0.50 0.50 0.50]"
+	"$color2" "[1 1 1]"
 }

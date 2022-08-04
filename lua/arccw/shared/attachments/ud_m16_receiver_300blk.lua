@@ -7,7 +7,7 @@ end
 
 att.Description = "Aftermarket receiver that fires .300 Blackout cartridges, identical to 5.56x45mm in diameter but with a much larger projectile.\nIts low muzzle velocity makes it well suited for subsonic loads."
 
-att.Icon = Material("entities/att/acwatt_ud_m16_receiver_auto.png", "smooth mips")
+att.Icon = Material("entities/att/uc_bullets/300blackout.png", "smooth mips")
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

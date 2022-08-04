@@ -6,7 +6,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.SortOrder = 30
-att.Icon = Material("entities/att/acwatt_ud_mini14_receiver_762.png", "smooth mips")
+att.Icon = Material("entities/att/uc_bullets/762x39.png", "smooth mips")
 att.Description = "A curious yet offically produced receiver variant made to circumvent caliber restrictions in deer hunting. The high pressure of this round makes this model liable to feeding failures."
 att.Desc_Pros = {
 }

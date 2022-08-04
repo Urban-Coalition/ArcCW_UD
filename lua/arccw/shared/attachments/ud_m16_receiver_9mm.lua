@@ -5,7 +5,7 @@ if GetConVar("arccw_truenames"):GetBool() then
     att.PrintName = "R0635 9x19mm Upper Receiver"
 end
 
-att.Icon = Material("entities/att/acwatt_uc_cal_9mm.png", "smooth mips")
+att.Icon = Material("entities/att/uc_bullets/9x19.png", "smooth mips")
 att.Description = "A converted receiver that fires 9x19mm Parabellum rounds. The smaller caliber drastically reduces recoil, but has much less range and is less accurate."
 att.Desc_Pros = {
     --"uc.auto",

@@ -6,7 +6,7 @@ if !GetConVar("arccw_truenames"):GetBool() then
 end
 att.Slot = "ud_uzi_caliber"
 
-att.Icon = Material("entities/att/acwatt_uc_cal_22lr.png", "smooth mips")
+att.Icon = Material("entities/att/uc_bullets/22lr.png", "smooth mips")
 att.Description = "A smaller cartridge that increases the fire rate and magazine capacity, as well as reduced recoil at the cost of greatly reduced damage and range."
 att.Desc_Pros = {
 }

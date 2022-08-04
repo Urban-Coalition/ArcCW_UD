@@ -1536,7 +1536,7 @@ SWEP.Attachments = {
     {
         PrintName = "Upper Receiver",
         DefaultAttName = "5.56x45mm Upper",
-        DefaultAttIcon = Material("entities/att/acwatt_ud_m16_receiver_default.png", "smooth mips"),
+        DefaultAttIcon = Material("entities/att/uc_bullets/556x45.png", "smooth mips"),
         Slot = {"ud_m16_receiver"},
         Bone = "m16_parent",
         Offset = {

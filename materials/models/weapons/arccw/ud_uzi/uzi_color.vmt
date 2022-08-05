@@ -3,11 +3,11 @@ VertexlitGeneric
 	"$basetexture" 	"models/weapons/arccw/ud_uzi/uzi_color"
 	
 	"$phong" 1
-                "$phongexponenttexture" "models\weapons\arccw\ud_uzi\uzi_rough.vtf" // hahaha what the fuck? this was deep fried and somehow adding a bumpmap and then removing it fixed it altogther. thanks source!
+                "$phongexponenttexture" "models\weapons\arccw\ud_uzi\uzi_rough.vtf"
 	"$phongwarptexture"			"models/weapons/arccw/ud_stalol\phongwarp_metal"
 	"$phongboost"               "15"
 	"$phongfresnelranges"       "[0.5 1.5 1.5]"
-	"$phongexponent"            "15"
+	"$phongexponent"            "19"
 	"$phongalbedotint"		    "1"
 	"$phongalbedoboost" 	    "14"
 

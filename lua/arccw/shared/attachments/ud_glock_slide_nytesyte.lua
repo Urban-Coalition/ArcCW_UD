@@ -19,5 +19,7 @@ att.AutoStats = true
 
 att.Mult_SightTime = 1.25
 att.Mult_HipDispersion = 0.9
+att.Mult_Recoil = .5
+att.Mult_RecoilSide = 6
 
 att.ActivateElements = {"ud_glock_slide_nytesyte"}

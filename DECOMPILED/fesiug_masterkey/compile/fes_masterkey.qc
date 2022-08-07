@@ -3,8 +3,13 @@ $modelname "weapons\arccw\atts\uc_ubgl_masterkey.mdl"
 $bodygroup "studio" {
 	studio "shotgun.smd"
 }
+$bodygroup "mode" {
+	studio "m203_ris.smd"
+	studio "m203_grenadier.smd"
+}
 $origin -2.86272 -19.5794 -5.1228
 $cdmaterials "models\weapons\arccw\ud_870"
+$cdmaterials "models\weapons\arccw\ud_m16"
 $cdmaterials "models\weapons\arccw\ud_common"
 $surfaceprop "weapon"
 $contents "solid"

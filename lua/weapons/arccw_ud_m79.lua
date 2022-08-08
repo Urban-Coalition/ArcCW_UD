@@ -383,6 +383,7 @@ SWEP.Attachments = {
         },
         InstalledEles = {"m79_rail"},
         ExcludeFlags = {"m79_pirategun"},
+        MergeSlots = {10},
     },
     {
         PrintName = "Tactical",
@@ -426,4 +427,16 @@ SWEP.Attachments = {
             vang = Angle(90, 0, -90),
         },
     },
+    {
+        PrintName = "M203 slot",
+        Slot = "uc_ubgl",
+        Bone = "m79_front",
+        Offset = {
+            vpos = Vector(0, -1.1, 0.9),
+            vang = Angle(90, 0, -90),
+        },
+        InstalledEles = {"m79_rail"},
+        ExcludeFlags = {"m79_pirategun"},
+        Hidden = true,
+    }
 }

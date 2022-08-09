@@ -1272,7 +1272,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     end
 
     -- Disable tac rail element with tac hg
-    if hg == "tactical" and atts[7].Installed then
+    if hg == "tactical" and (atts[7].Installed or atts[18].Installed) then
         vm:SetBodygroup(9,0)
     end
 
@@ -1663,6 +1663,7 @@ SWEP.Attachments = {
             vang = Angle(90, 0, -90),
         },
         Hidden = true,
+        InstalledEles = {"rail_fg"},
         ExcludeFlags = {"m16_lmg", "m16_stub"},
     }
 }

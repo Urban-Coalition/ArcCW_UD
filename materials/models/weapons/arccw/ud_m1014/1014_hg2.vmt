@@ -8,7 +8,6 @@
 	"$phongalbedotint"	"1"
 	"$phongboost"	"0.5"
 	"$phongfresnelranges"	"[1 1 1]"
-        "$phongdisablehalflambert"  "1"
 
         "$halflambert"                 "0"
         "$nodecal"                     "0"

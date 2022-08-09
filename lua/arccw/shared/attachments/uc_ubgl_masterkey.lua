@@ -13,7 +13,7 @@ att.Slot = "uc_ubgl"
 
 att.LHIK = true
 
-att.ModelOffset = Vector(0.5, 0, -1.5)
+att.ModelOffset = Vector(1.0, 0, -1.3)
 att.Model = "models/weapons/arccw/atts/uc_ubgl_masterkey.mdl"
 
 att.SelectUBGLSound =  ""
@@ -34,6 +34,12 @@ att.UBGL_ClipSize = 3
 
 att.LHIK_GunDriver = 2
 att.LHIK_CamDriver = 3
+
+att.Hook_ModifyAttBodygroups = function(wep, data)
+    if wep:GetBuff_Override("UC_UseClassicM203Mount") then
+        data.element.Model:SetBodygroup(1, 1)
+    end
+end
 
 local function Ammo(wep)
     return wep:GetOwner():GetAmmoCount("buckshot")

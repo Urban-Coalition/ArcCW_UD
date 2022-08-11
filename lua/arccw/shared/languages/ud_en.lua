@@ -10,8 +10,6 @@ L["ud.hushpuppy"] = "Switch to slide-lock firemode for manual action, reducing v
 L["fcg.slidelock"] = "Slide-lock"
 L["fcg.slidelock.abbrev"] = "S-LOCK"
 
-L["ud.glock.altanim"] = "Replaces the empty reload animation with a longer, flashier alternative."
-
 -- M16
 L["ud.flattop"] = "Lower optic position"
 L["ud.m16_ch.1"] = "Mount optics on top of the carry handle instead of having a flat top."

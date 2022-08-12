@@ -23,5 +23,5 @@ VertexLitGeneric
 	"$rimmask" 	"1"
 
 	"$blendTintByBaseAlpha"		"1" 
-	$color2 "[0.300 0.320 0.22"
+	$color2 "[0.300 0.320 0.22]"
 }

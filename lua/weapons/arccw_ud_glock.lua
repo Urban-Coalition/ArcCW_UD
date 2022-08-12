@@ -1110,10 +1110,10 @@ SWEP.Attachments = {
         FreeSlot = true,
         Bone = "glock_slide",
         Offset = {
-            vpos = Vector(0.4, 0, 4),
+            vpos = Vector(0.45, 0.1, 4),
             vang = Angle(90, 0, -90),
         },
-        VMScale = Vector(0.7, 0.7, 0.7),
+        VMScale = Vector(0.8, 0.8, 0.8),
     },
     {
         PrintName = "Material",

@@ -203,7 +203,14 @@ SWEP.ShootSound = {
     path1 .. "fire-05.ogg",
     path1 .. "fire-06.ogg"
 }
-SWEP.ShootSoundSilenced = path .. "fire_supp.ogg"
+SWEP.ShootSoundSilenced = {
+    path1 .. "fire-sup-01.ogg",
+    path1 .. "fire-sup-02.ogg",
+    path1 .. "fire-sup-03.ogg",
+    path1 .. "fire-sup-04.ogg",
+    path1 .. "fire-sup-05.ogg",
+    path1 .. "fire-sup-06.ogg"
+}
 --[[SWEP.DistantShootSound = path .. "fire_dist.ogg"
 SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"]]
 SWEP.ShootDrySound = path .. "dryfire.ogg"

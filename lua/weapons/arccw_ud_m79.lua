@@ -423,7 +423,7 @@ SWEP.Attachments = {
         FreeSlot = true,
         Bone = "m79_front",
         Offset = {
-            vpos = Vector(0.6, -0.5, 4),
+            vpos = Vector(0.8, -1, 0),
             vang = Angle(90, 0, -90),
         },
     },

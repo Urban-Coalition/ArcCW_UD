@@ -1649,7 +1649,7 @@ SWEP.Attachments = {
         FreeSlot = true,
         Bone = "m16_parent",
         Offset = {
-            vpos = Vector(0.6, 1, 5),
+            vpos = Vector(0.48, 0.5, 3.9),
             vang = Angle(90, 0, -90),
         },
         -- MergeSlots = {17}

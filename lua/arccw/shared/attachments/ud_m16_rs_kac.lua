@@ -20,12 +20,12 @@ att.IgnorePickX = true
 att.MountPositionOverride = 0.5
 att.IronSight = true
 att.Override_IronSightStruct = {
-    Pos = Vector(-2.80, 0, 0.85),
-    Ang = Angle(1.05, 0, 0),
+    Pos = Vector(-2.798, 0, 0.9),
+    Ang = Angle(0.9, 0, 0),
     Magnification = 1.1
 }
 att.Model = "models/weapons/arccw/atts/kac_rs.mdl"
-att.ModelOffset = Vector(-2.5, -0.01, -0.09)
+att.ModelOffset = Vector(-1.5, -0.01, -0.09)
 att.ModelScale = Vector(0.9, 0.9, 0.9)
 
 att.HideIfBlocked = true

@@ -20,7 +20,7 @@ att.IgnorePickX = true
 att.MountPositionOverride = 0.64
 att.IronSight = true
 att.Override_IronSightStruct = {
-    Pos = Vector(-2.80, 0, 1.11),
+    Pos = Vector(-2.80, 6, 1.11),
     Ang = Angle(0.4, 0, 0),
     Magnification = 1.1
 }

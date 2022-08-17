@@ -1,12 +1,8 @@
-att.PrintName = "AMCAR MOE Stock"
+att.PrintName = "Magpul MOE Stock"
 att.AbbrevName = "MOE Stock"
 
-if GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "M16 MOE Stock"
-end
-
 att.Icon = Material("entities/att/acwatt_ud_m16_stock_moe.png", "smooth mips")
-att.Description = "Rebalance me!!!"
+att.Description = "Aftermarket sliding polymer stock from Magpul's MOE line of AR-15 accessories. Provides marginally better recoil control and a bit easier to handle, but awkward to fire from the hip. Probably needs rebalancing."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
@@ -24,6 +20,9 @@ att.AutoStats = true
 att.SortOrder = 6
 
 att.Mult_Sway = 1.25
-att.Mult_SightedSpeedMult = 1.15
+att.Mult_SightedSpeedMult = 1.10
+att.Mult_RecoilSide = .9
+att.Mult_Recoil = 0.95
+att.Mult_HipDispersion = 1.15
 
 att.ActivateElements = {"stock_231_tube"}

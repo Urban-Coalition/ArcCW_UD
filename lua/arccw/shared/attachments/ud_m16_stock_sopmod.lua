@@ -6,7 +6,7 @@ if GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.Icon = Material("entities/att/acwatt_ud_m16_stock_sopmod.png", "smooth mips")
-att.Description = "Rebalance me!!! An aftermarket collapsible stock with a bold figure and bulky nature. Provides some of the recoil damping capabilities of a solid stock, with some of the concealability and handling improvements of other collapsible stocks."
+att.Description = "An aftermarket collapsible stock with a bold figure and bulky nature. Provides some of the recoil damping capabilities of a solid stock, with some of the concealability and handling improvements of other collapsible stocks, although sacrifices are made to draw time due to the size. Probably needs rebalancing."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
@@ -23,7 +23,11 @@ att.OffsetAng = Angle(0, 0, 0)
 att.AutoStats = true
 att.SortOrder = 6
 
-att.Mult_Sway = 1.25
+att.Mult_Sway = 1.15
 att.Mult_SightedSpeedMult = 1.15
+att.Mult_RecoilSide = 0.85
+
+att.Mult_DrawTime = 0.85
+att.Mult_HolsterTime = 0.85
 
 att.ActivateElements = {"stock_231_tube"}

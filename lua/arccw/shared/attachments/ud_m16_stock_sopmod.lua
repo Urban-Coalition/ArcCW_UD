@@ -27,7 +27,7 @@ att.Mult_Sway = 1.15
 att.Mult_SightedSpeedMult = 1.15
 att.Mult_RecoilSide = 0.85
 
-att.Mult_DrawTime = 0.85
-att.Mult_HolsterTime = 0.85
+att.Mult_DrawTime = 1.15
+att.Mult_HolsterTime = 1.15
 
 att.ActivateElements = {"stock_231_tube"}

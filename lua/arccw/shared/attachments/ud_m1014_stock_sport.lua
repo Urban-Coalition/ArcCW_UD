@@ -1,6 +1,7 @@
-att.PrintName = "Sporting Stock"
+att.PrintName = "M4 Semi-Grip Fixed Stock"
+att.AbbrevName = "Sporting Stock"
 att.Icon = Material("entities/att/acwatt_ud_m1014_stock_sport.png", "smooth mips")
-att.Description = "Solid, non-adjustable polymer stock. Provides a better brace at the cost of combat mobility."
+att.Description = "Solid, non-adjustable polymer stock common in civilian markets. Provides a better brace at the cost of combat mobility."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

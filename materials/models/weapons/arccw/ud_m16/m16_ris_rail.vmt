@@ -15,7 +15,7 @@ VertexlitGeneric
 	
 	"$envmap" "env_cubemap"
 	"$normalmapalphaenvmapmask" "1"
-	"$envmaptint"               "[.03 .03 .03]"
+	"$envmaptint"               "[.01 .01 .01]"
 				
 	"$bumpmap"                  "models\weapons\arccw\ud_m16/ris/m16_ris_rail_n"
 }

@@ -274,7 +274,7 @@ SWEP.BulletBones = {
     [2] = "m16_bullets1",    [3] = "m16_bullets2"
 }
 
-SWEP.DefaultBodygroups = "000000000000100"
+SWEP.DefaultBodygroups = "00000000000000000000000"
 
 SWEP.AttachmentElements = {
 
@@ -376,6 +376,9 @@ SWEP.AttachmentElements = {
     ["fs_adar"] = {
         VMBodygroups = {{ind = 6, bg = 4}},
     },
+    ["remove_lug"] = {
+        VMBodygroups = {{ind = 12, bg = 1}},
+    },
 
     ["mount_14"] = {
         AttPosMods = {
@@ -410,7 +413,7 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [4] = {
-                vpos = Vector(0, -0.4, 18.75),
+                vpos = Vector(0, -0.33, 19.23),
                 vang = Angle(90, 0, -90),
             },
             [16] = {
@@ -426,7 +429,7 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [4] = {
-                vpos = Vector(0, -0.4, 17),
+                vpos = Vector(0, -0.33, 16.0),
                 vang = Angle(90, 0, -90),
             },
             [16] = {
@@ -1174,6 +1177,8 @@ local hgLookup = {
     ["fpw"]          = {6,6,2},
     ["ru556"]          = {7,7,3},
     ["adar"]          = {8,8,2},
+    ["hk416"]          = {9,9,3},
+    ["607"]          = {9,9,0},
 }
 -- Structure: 20in appearance, 14/11in appearance, gas block mode
 -- Gas block modes: 0 standard, 1 always at 20" position, 2 at ADAR position when short, 3 at ADAR position when short and not flat
@@ -1194,6 +1199,7 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     local barrel = string.Replace(atts[2].Installed or "20in","ud_m16_barrel_","")
     local barr = barrLookup[barrel]
     local hg = string.Replace(atts[3].Installed or "default","ud_m16_hg_","")
+    hg = string.Replace(hg,"uf_m16_hg_","")
 
     local optic = atts[1].Installed
     local muzz = atts[4].Installed or barrel == "sd"
@@ -1216,17 +1222,19 @@ SWEP.Hook_ModifyBodygroups = function(wep, data)
     -- Dynamic handguard
     if barr == -1 then
         vm:SetBodygroup(5,9)
-    elseif barr == 0 then
+    elseif barr == 0 and hgLookup[hg] then
         vm:SetBodygroup(5,hgLookup[hg][1])
-    else
+    elseif hgLookup[hg] then
         vm:SetBodygroup(5,hgLookup[hg][2])
+    else
+        vm:SetBodygroup(5,9)
     end
 
     -- Gas block
     if barrel == "sd" or (atts[6].Installed == "ud_m16_receiver_fpw" and barr > 0) then
         vm:SetBodygroup(6,5)
     else
-        local gbPos = hgLookup[hg][3]
+        local gbPos = hgLookup[hg] and hgLookup[hg][3] or 0
         local lwr = atts[6].Installed
         local flat = (
             wep:GetBuff_Override("FrontSight")
@@ -1515,7 +1523,7 @@ SWEP.Attachments = {
         Slot = "ud_m16_hg",
         Bone = "m16_parent",
         Offset = {
-            vpos = Vector(2.8, -4.2, -11.5),
+            vpos = Vector(0, -1.63, -0.41),
             vang = Angle(90, 0, -90),
         },
         ExcludeFlags = {"sd"}
@@ -1523,12 +1531,12 @@ SWEP.Attachments = {
     {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
-        Slot = {"muzzle"},
+        Slot = {"muzzle", "ud_m16_muzzle"},
         Bone = "m16_parent",
         VMScale = Vector(1, 1, 1),
         WMScale = VMScale,
         Offset = {
-            vpos = Vector(0.025, -.4, 24),
+            vpos = Vector(0, -.33, 23.57),
             vang = Angle(90, 0, -90),
         },
         ExcludeFlags = {"sd", "m16_stub"},

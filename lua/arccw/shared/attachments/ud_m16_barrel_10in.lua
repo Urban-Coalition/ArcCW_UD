@@ -24,8 +24,8 @@ att.Mult_Sway = 0.75
 att.Add_BarrelLength = -10
 att.Mult_PhysBulletMuzzleVelocity = 0.729167
 
-att.LHIK = true
-att.Model = "models/weapons/arccw/atts/tactical_lhik.mdl"
+--att.LHIK = true
+--att.Model = "models/weapons/arccw/atts/tactical_lhik.mdl"
 att.DroppedModel = "models/items/boxsrounds.mdl"
 
 att.ActivateElements = {"barrel_11","mount_11"}

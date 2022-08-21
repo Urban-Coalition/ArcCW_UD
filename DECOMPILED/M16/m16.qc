@@ -108,6 +108,11 @@ $bodygroup "11" {
 	studio "barrels_new/flashhider_11.smd" //2
 }
 
+$bodygroup "lug" {
+	studio "barrels_new/lug.smd"
+	blank
+}
+
 $cdmaterials "models\weapons\arccw\ud_m16"
 $cdmaterials "models\weapons\arccw\ud_m1014"
 $cdmaterials "models\weapons\arccw\ud_common"

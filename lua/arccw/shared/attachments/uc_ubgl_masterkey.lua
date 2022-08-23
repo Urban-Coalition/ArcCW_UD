@@ -100,6 +100,7 @@ att.UBGL_Fire = function(wep, ubgl)
         Num = 1,
         Damaged = {},
         Weapon = wep,
+        BodyDamageMults = ArcCW.UC.BodyDamageMults_Shotgun,
     }
 
     local data = {
@@ -108,8 +109,8 @@ att.UBGL_Fire = function(wep, ubgl)
         Src        = wep:GetShootSrc(),
         Spread     = Vector(0, 0, 0),
         Damage     = 0,
-        Num        = 8,
-        Force      = 120,
+        Num        = 1,
+        Force      = 10,
         HullSize   = 4,
         Weapon     = wep,
         Callback = function(attacker, tr, dmg)
@@ -133,6 +134,7 @@ att.UBGL_Fire = function(wep, ubgl)
         end
     else
         data.Spread = Vector(ArcCW.MOAToAcc * 50, ArcCW.MOAToAcc * 50, 0)
+        data.Num = 8
         owner:FireBullets(data, true)
     end
 

@@ -18,7 +18,7 @@ att.Mult_Recoil = 0.95
 att.Mult_SightedSpeedMult = 0.95
 att.Mult_ShootSpeedMult = 0.95
 
-
 att.LHIK = true
 att.Model = "models/weapons/arccw/atts/adar_lhik.mdl"
 att.DroppedModel = "models/items/boxsrounds.mdl"
+att.ModelOffset = (Vector(0.41, 0, -1.63) - Vector(11.5, 2.8, -4.2))

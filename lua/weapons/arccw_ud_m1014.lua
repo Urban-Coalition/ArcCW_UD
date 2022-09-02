@@ -247,6 +247,8 @@ local ratel = {common .. "rattle1.ogg", common .. "rattle2.ogg", common .. "ratt
 
 SWEP.Hook_Think = ArcCW.UC.ADSReload
 
+local shellin = {path .. "shell-insert-01.ogg", path .. "shell-insert-02.ogg", path .. "shell-insert-03.ogg", path .. "shell-insert-04.ogg", path .. "shell-insert-05.ogg"}
+
 SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
@@ -377,7 +379,7 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 0,
         SoundTable = {
-            {s = {common .. "shotgun_insert_1.ogg", common .. "shotgun_insert_2.ogg", common .. "shotgun_insert_3.ogg"},  t = 0},
+            {s = shellin, t = 0},
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.05},
         },
     },
@@ -391,7 +393,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         TPAnimStartTime = 0.8,
         SoundTable = {
-            {s = common .. "shoulder.ogg",  t = 0.4},
+            {s = common .. "shoulder.ogg",  t = 0.3},
         },
     },
 

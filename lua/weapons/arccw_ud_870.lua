@@ -231,6 +231,8 @@ SWEP.Hook_AddShootSound = ArcCW.UC.InnyOuty
 
 SWEP.Hook_Think = ArcCW.UC.ADSReload
 
+local shellin = {path .. "shell-insert-01.ogg", path .. "shell-insert-02.ogg", path .. "shell-insert-03.ogg"}
+
 SWEP.Animations = {
     ["ready"] = {
         Source = "sgreload_finish_empty",
@@ -295,7 +297,7 @@ SWEP.Animations = {
     ["fix"] = {
         Source = "fix",
         Time = 77 / 30,
-        ShellEjectAt = 1.9, // zenit pls sound this :DDD
+        ShellEjectAt = 1.9, -- zenit pls sound this :DDD
         SoundTable = {
             {s = path .. "eject.ogg", t = 0, v = 25},
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.5},
@@ -330,7 +332,7 @@ SWEP.Animations = {
         LHIKIn = 0,
         LHIKOut = 0,
         SoundTable = {
-            {s = {common .. "shotgun_insert_1.ogg", common .. "shotgun_insert_2.ogg", common .. "shotgun_insert_3.ogg"},  t = 0.1},
+            {s = shellin, t = 0},
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
         },
     },

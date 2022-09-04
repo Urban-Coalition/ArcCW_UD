@@ -702,7 +702,7 @@ SWEP.AttachmentElements = {
 SWEP.Hook_Think = ArcCW.UC.ADSReload
 
 local sr_pmag = {
-	[path .. "magout_empty.ogg"] = path .. "pmagout_empty.ogg",
+	[path .. "magout_empty.ogg"] = path .. "pmagout.ogg",
 	[path .. "magin.ogg"] = path .. "pmagin.ogg",
 }
 

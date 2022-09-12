@@ -34,6 +34,6 @@ att.Mult_Sway = 3
 
 att.ActivateElements = {"ud_870_stock_sawnoff"}
 
-att.Override_ActivePos = Vector(0.5, 5, 0.5)
+att.Override_ActivePos = Vector(0, 2.5, -0.5)
 att.Override_HoldtypeActive = "shotgun"
 att.Override_HoldtypeSights = "ar2"

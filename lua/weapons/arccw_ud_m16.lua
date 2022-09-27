@@ -807,6 +807,14 @@ SWEP.Animations = {
             {s = path .. "mech_last.ogg", t = 0}, -- Temporary
         },
     },
+    ["fire_iron_empty"] = {
+        Source = "fire_empty",
+        Time = 13 / 30,
+        ShellEjectAt = 0.01,
+        SoundTable = {
+            {s = path .. "mech_last.ogg", t = 0}, -- Temporary
+        },
+    },
 
     ["fire_cycle"] = {
         Source = "fire",

@@ -7,7 +7,6 @@ VertexlitGeneric
 	"$phongwarptexture"			"models/weapons/arccw/ud_stalol\phongwarp_metal"
 	"$phongboost"               "15"
 	"$phongfresnelranges"       "[0.5 1.5 1.5]"
-	"$phongexponent"            "19"
 	"$phongalbedotint"		    "1"
 	"$phongalbedoboost" 	    "14"
 

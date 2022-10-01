@@ -1,6 +1,6 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models\weapons\arccw\ud_m16/stalol/m16a2_basecolor"
+	"$basetexture" "models\weapons\arccw\ud_m16/stalol/m16a2_basecolor_desatur"
 	"$bumpmap" "models\weapons\arccw\ud_m16/stalol/m16a2_normal"
 	"$normalmapalphaenvmapmask" 	1
 	"$color2"					"[0.35 0.35 0.35]"

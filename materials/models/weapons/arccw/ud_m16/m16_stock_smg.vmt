@@ -4,7 +4,6 @@
 	"$bumpmap"					"models/weapons/arccw/ud_m16/m16_stock_smg_n"
 
 	"$phong"	"1"
-	"$phongexponent"	"3"
 	"$phongalbedotint"	"1"
 	"$phongboost"	"0.3"
 	"$phongfresnelranges"	"[1 1 1]"

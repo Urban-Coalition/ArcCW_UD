@@ -15,7 +15,6 @@
 	"$phongfresnelranges"      "[0.5 1.5 3.0]"
 	"$phongtint"                   "[0.2 0.2 0.2]" 
 	"$phongexponenttexture" 	"models\weapons\arccw\ud_m79\m79_new\m79_rough"
-	"$phongexponent"      "75"
 	"$phongalbedotint"		"1"
 	"$phongalbedoboost" 	"14"
 	"$halflambert" 		"1"

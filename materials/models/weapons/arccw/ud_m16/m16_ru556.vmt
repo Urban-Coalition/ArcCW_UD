@@ -3,11 +3,10 @@ VertexlitGeneric
 	"$basetexture" 	"models\weapons\arccw\uc_shared/RU556/m16_ru556_d"
 	
 	"$phong" 1
-	"$phongexponenttexture"     "models\weapons\arccw\uc_shared/RU556/m16_ru556_s"
-	"$phongwarptexture"			"models/weapons/arccw/ud_stalol\phongwarp_metal"
+	"$phongexponenttexture"     "models/weapons/arccw/uc_shared/RU556/m16_ru556_exp"
+	"$phongwarptexture"			"models/weapons/arccw/ud_stalol/phongwarp_metal"
 	"$phongboost"               "3"
 	"$phongfresnelranges"       "[0.5 1.5 3.0]"
-	"$phongexponent"            "18"
 
 	"$color2"					"[1 1 1]"
 	"$blendTintByBaseAlpha"		"1" 

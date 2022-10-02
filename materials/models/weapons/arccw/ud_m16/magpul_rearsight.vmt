@@ -11,7 +11,6 @@
 	"$phong" 		"1"
 	"$phongexponenttexture"	"models\weapons\arccw\ud_m16\magpul_rearsight_exp"
 	"$phongboost" "19"
-	"$phongexponent"	        "1"
 	"$phongalbedotint" 			"1"
 	"$phongfresnelranges" "[0.5 1.5 3.0]"
 	"$envmap" "env_cubemap"

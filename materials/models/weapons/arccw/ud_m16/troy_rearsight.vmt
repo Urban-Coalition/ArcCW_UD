@@ -4,7 +4,6 @@
 	"$bumpmap"					"models/weapons/arccw/ud_m16/troy_rearsight_n"
 
 	"$phong"	"1"
-	"$phongexponent"	"3"
 	"$phongalbedotint"	"1"
 	"$phongboost"	"1"
 	"$phongfresnelranges"	"[1 1 1]"

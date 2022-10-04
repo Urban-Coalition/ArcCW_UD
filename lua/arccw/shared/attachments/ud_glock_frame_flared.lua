@@ -25,8 +25,8 @@ att.Mult_HolsterTime = 1.25
 
 att.ActivateElements = {"ud_glock_frame_flared"}
 
-att.Hook_SelectReloadAnimation = function(wep, anim)
-    if anim == "reload_empty" then
-        return "reload_empty_flared"
-    end
-end
+-- att.Hook_SelectReloadAnimation = function(wep, anim)
+--     if anim == "reload_empty" then
+--         return "reload_empty_flared"
+--     end
+-- end

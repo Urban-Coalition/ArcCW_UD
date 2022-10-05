@@ -26,3 +26,19 @@ att.Mult_Recoil = 0.95
 att.Mult_HipDispersion = 1.15
 
 att.ActivateElements = {"stock_231_tube"}
+
+att.ToggleStats = {
+    {
+        PrintName = "Extended",
+        AutoStats = true,
+    },
+    {
+        PrintName = "Collapsed",
+        AutoStats = true,
+        Mult_RecoilSide = 1.5,
+        Add_BarrelLength = -4,
+        Mult_ShootSpeedMult = 1.1,
+        Mult_SightTime = 0.9,
+        Override_ActivePos = Vector(0.33, -3, 1.33),
+    },
+}

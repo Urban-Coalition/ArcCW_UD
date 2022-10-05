@@ -11,6 +11,7 @@ att.Slot = "ud_1014_stock"
 
 att.AutoStats = true
 att.Free = true
+att.SortOrder = -1
 
 att.Mult_SpeedMult = 1.05
 

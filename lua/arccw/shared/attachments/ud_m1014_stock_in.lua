@@ -13,6 +13,7 @@ att.AttachSound = "arccw_uc/common/stockslide.ogg"
 att.AutoStats = true
 att.Free = true
 att.IgnorePickX = true
+att.SortOrder = 999
 
 att.Mult_Recoil = 1.1
 att.Mult_RecoilSide = 1.25

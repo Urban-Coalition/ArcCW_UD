@@ -25,4 +25,6 @@ att.SortOrder = 998
 att.TacLaserPos = true
 att.RequireFlags = {"tac"}
 
+att.FrontSight = 1
+
 --att.Ignore = true

@@ -320,6 +320,39 @@ $sequence "reload_empty_9mm" {
 	snap
 }
 
+
+
+$sequence "inspect_enter" {
+	"anims\m16inspect_enter"
+	fps 37
+	// snap
+}
+$sequence "inspect_loop" {
+	"anims\m16inspect_loop"
+	fps 24
+	// snap
+}
+$sequence "inspect_exit" {
+	"anims\m16inspect_exit"
+	fps 37
+	// snap
+}
+$sequence "inspect_enter_empty" {
+	"anims\m16inspect_enter_empty"
+	fps 37
+	// snap
+}
+$sequence "inspect_loop_empty" {
+	"anims\m16inspect_loop_empty"
+	fps 24
+	// snap
+}
+$sequence "inspect_exit_empty" {
+	"anims\m16inspect_exit_empty"
+	fps 37
+	// snap
+}
+
 $definebone "ValveBiped.Bip01_Spine4" "" 0.000006 0.000000 0.000000 -79.749939 -90.000153 -89.999809 0.000000 0.000000 0.000000 -0.000000 -0.000000 -0.000000
 $definebone "ValveBiped.Bip01_L_Clavicle" "ValveBiped.Bip01_Spine4" 2.033347 1.000767 1.937663 -73.711861 168.619293 91.480484 -0.000000 0.000000 0.000000 -0.000000 0.000003 0.000001
 $definebone "ValveBiped.Bip01_L_UpperArm" "ValveBiped.Bip01_L_Clavicle" 6.027917 -0.000100 0.000096 2.712554 -33.531780 -90.715607 0.000000 0.000000 0.000000 -0.000000 0.000000 -0.000001

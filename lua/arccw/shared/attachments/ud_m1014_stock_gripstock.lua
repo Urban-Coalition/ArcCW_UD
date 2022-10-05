@@ -1,7 +1,7 @@
-att.PrintName = "M4 Pistol Grip Fixed Stock"
-att.AbbrevName = "Grip Stock"
+att.PrintName = "Benelli M4 Gripstock"
+att.AbbrevName = "M4 Gripstock"
 att.Icon = Material("entities/att/acwatt_ud_m1014_stock_buffer.png", "smooth mips")
-att.Description = "Fixed pistol grip style stock for the M4. Provides better stability and recoil control, but is marginally more cumbersome than the collapsible stock."
+att.Description = "Solid stock with a pistol grip. Reduces recoil with minimal side effects."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
@@ -17,14 +17,8 @@ att.OffsetAng = Angle(0, 0, 0)
 
 att.AutoStats = true
 
-att.Mult_DrawTime = 1.15
-
-att.Mult_Recoil = .9
-att.Mult_RecoilSide = .8
-
-att.Mult_SightedSpeedMult = .90
-
-att.Add_BarrelLength = -12
-att.Mult_Sway = .85
+att.Mult_Recoil = .85
+att.Mult_SightedSpeedMult = .9
+att.Mult_SightTime = 1.1
 
 att.ActivateElements = {"ud_autoshotgun_stock_gripstock"}

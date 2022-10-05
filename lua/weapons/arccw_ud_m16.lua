@@ -194,8 +194,10 @@ SWEP.IronSightStruct = {
 SWEP.ActivePos = Vector(0.33, -2, 1.33)
 SWEP.ActiveAng = Angle(0, 0, -3)
 
-SWEP.CustomizePos = Vector(5, -2, -2)
-SWEP.CustomizeAng = Angle(15, 25, 0)
+-- SWEP.CustomizePos = Vector(5, -2, -2)
+-- SWEP.CustomizeAng = Angle(15, 25, 0)
+SWEP.CustomizePos = Vector(0, 0, 0)
+SWEP.CustomizeAng = Angle(0, 0, 0)
 
 SWEP.CrouchPos = Vector(-2.5, -2, -0.6)
 SWEP.CrouchAng = Angle(0, 0, -14)
@@ -1195,6 +1197,50 @@ SWEP.Animations = {
             {s = rottle, t = 1.39},
             {s = common .. "shoulder.ogg", t = 2.15},
         },
+    },
+
+
+    ["enter_inspect"] = {
+        Source = "inspect_enter",
+        -- time = 35 / 60,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 2.5,
+    },
+    ["idle_inspect"] = {
+        Source = "inspect_loop",
+        -- time = 72 / 60,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 999,
+    },
+    ["exit_inspect"] = {
+        Source = "inspect_exit",
+        -- time = 66 / 60,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 999,
+    },
+    ["enter_inspect_empty"] = {
+        Source = "inspect_enter_empty",
+        -- time = 35 / 60,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 2.5,
+    },
+    ["idle_inspect_empty"] = {
+        Source = "inspect_loop_empty",
+        -- time = 72 / 60,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 999,
+    },
+    ["exit_inspect_empty"] = {
+        Source = "inspect_exit_empty",
+        -- time = 66 / 60,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 999,
     },
 }
 

@@ -24,5 +24,7 @@ att.Mult_Recoil = 1.175
 att.LHIK = true
 att.Model = "models/weapons/arccw/atts/ru556_lhik.mdl"
 att.DroppedModel = "models/items/boxsrounds.mdl"
+att.ModelOffset = (Vector(0.41, 0, -1.63) - Vector(11.5, 2.8, -4.2))
+
 att.GivesFlags = {"ud_m16_rscompatible"}
 att.ActivateElements = {"hg_ru556"}

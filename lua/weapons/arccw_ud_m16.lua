@@ -405,8 +405,20 @@ SWEP.AttachmentElements = {
                 vang = Angle(-90, 180, 0),
                 wang = Angle(90, 0, 0),
             },
-        }
+        },
+        ExcludeFlags = {}
     },
+    -- ["mount_tactical_short"] = {
+    --     AttPosMods = {
+    --         [8] = {
+    --             vpos = Vector(-1, -.35, 11.5),
+    --             vang = Angle(-90, 180, 0),
+    --             wang = Angle(90, 0, 0),
+    --         },
+    --     },
+    --     AttPosMods_Priority = 2,
+    --     RequireFlags = {"barrel_short"}
+    -- },
 
     ["barrel_14"] = {
         VMBodygroups = {
@@ -621,10 +633,10 @@ SWEP.AttachmentElements = {
             {ind = 6, bg = 5}
         },
         AttPosMods = { -- no rail, just pretend it's mounted to something
-            [8] = {
-                vpos = Vector(0, 0.7, 17.5),
-                vang = Angle(90, 0, -90),
-            },
+            -- [8] = {
+            --     vpos = Vector(0, 0.7, 17.5),
+            --     vang = Angle(90, 0, -90),
+            -- },
             [16] = {
                 vpos = Vector(0, -1.65, 11.5), -- 21.75 or 15.75
                 vang = Angle(90, 0, -90),
@@ -1167,8 +1179,8 @@ SWEP.Animations = {
         LHIKOut = 0.5,
         SoundTable = {
             {s = rottle, t = 0.0},
-            {s = common .. "magpouch_gear.ogg", t = 0.15},
-            {s = "weapons/arccw_ud/uzi/" .. "magout_empty.ogg", 	 t = 16 / 30},
+            {s = common .. "magpouch.ogg", t = 0.15},
+            {s = "weapons/arccw_ud/uzi/" .. "magout.ogg", 	 t = 16 / 30},
             {s = rottle, t = 0.75},
             {s = "weapons/arccw_ud/uzi/" .. "magin.ogg",    t = 27 / 30},
             {s = rottle, t = 1.1},
@@ -1189,8 +1201,8 @@ SWEP.Animations = {
         LHIKOut = 0.9,
         SoundTable = {
             {s = rottle, t = 0.0},
-            {s = "weapons/arccw_ud/uzi/" .. "magout_empty.ogg", 	 t = 0.1},
-            {s = common .. "magpouch_gear.ogg", t = 0.65},
+            {s = "weapons/arccw_ud/uzi/" .. "magout.ogg", 	 t = 0.1},
+            {s = common .. "magpouch.ogg", t = 0.45},
             {s = rottle, t = 0.75},
             {s = "weapons/arccw_ud/uzi/" .. "magin.ogg",    t = 0.8},
             {s = path .. "chamber_press.ogg", t = 1.7},
@@ -1206,6 +1218,9 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 2.5,
+        SoundTable = {
+            {s = rottle, t = 0},
+        },
     },
     ["idle_inspect"] = {
         Source = "inspect_loop",
@@ -1220,6 +1235,10 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 999,
+        SoundTable = {
+            {s = rottle, t = 0.25},
+            {s = rottle, t = 1.25},
+        },
     },
     ["enter_inspect_empty"] = {
         Source = "inspect_enter_empty",
@@ -1227,6 +1246,9 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 2.5,
+        SoundTable = {
+            {s = rottle, t = 0},
+        },
     },
     ["idle_inspect_empty"] = {
         Source = "inspect_loop_empty",
@@ -1241,6 +1263,10 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0,
         LHIKOut = 999,
+        SoundTable = {
+            {s = rottle, t = 0.25},
+            {s = rottle, t = 1.25},
+        },
     },
 }
 

@@ -1,8 +1,8 @@
-att.PrintName = "Mini-14 Tactical Stock"
+att.PrintName = "Mini-14 GB Tactical Stock"
 att.AbbrevName = "Tactical Stock"
 
 if !GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "Patriot 809 Tactical Stock"
+    att.PrintName = "Patriot 812 Tactical Stock"
 end
 
 att.Icon = Material("entities/att/acwatt_ud_mini14_stock_tactical.png", "smooth mips")

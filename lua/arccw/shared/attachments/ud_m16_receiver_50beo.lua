@@ -65,14 +65,36 @@ att.Override_Firemodes = {
     }
 }
 
+local path = "weapons/arccw_ud/m16/"
 
-att.Hook_GetShootSound = function(wep, fsound)
-    if fsound == wep.ShootSound or fsound == wep.FirstShootSound then return "weapons/arccw_ud/m16/fire_beo.ogg" end
-    if fsound == wep.ShootSoundSilenced then return "weapons/arccw_ud/mini14/fire_762_supp.ogg" end
+att.Hook_GetShootSound = function(wep, sound) -- Temporary
+    if wep:GetBuff_Override("Silencer") then
+        -- fallback to script
+    else
+        return {
+            path .. "fire-50-01.ogg",
+            path .. "fire-50-02.ogg",
+            path .. "fire-50-03.ogg",
+            path .. "fire-50-04.ogg",
+            path .. "fire-50-05.ogg",
+            path .. "fire-50-06.ogg"
+        }
+    end
 end
 
-att.Hook_GetDistantShootSound = function(wep, distancesound)
-    if distancesound == wep.DistantShootSound then return "weapons/arccw_ud/mini14/fire_dist.ogg" end
+att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
+    if wep:GetBuff_Override("Silencer") then
+        -- fallback to script
+    else
+        return { 
+            path .. "fire-50-dist-01.ogg",
+            path .. "fire-50-dist-02.ogg",
+            path .. "fire-50-dist-03.ogg",
+            path .. "fire-50-dist-04.ogg",
+            path .. "fire-50-dist-05.ogg",
+            path .. "fire-50-dist-06.ogg"
+        }
+    end
 end
 
 -- can't be handled here

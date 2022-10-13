@@ -25,6 +25,15 @@ $sequence "idle" {
 	fps 30
 }
 
+$sequence "idle_armed" {
+	"anims/idle_armed.smd"
+	fps 30
+}
+
+$sequence "fire" {
+	"anims/fire.smd"
+}
+
 $bonemerge "ValveBiped.Bip01_Spine4"
 $bonemerge "ValveBiped.Bip01_L_Clavicle"
 $bonemerge "ValveBiped.Bip01_L_UpperArm"

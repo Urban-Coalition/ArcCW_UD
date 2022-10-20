@@ -114,24 +114,24 @@ $sequence "draw" "anims\draw.smd" {
 	fps 30
 	"ACT_VM_DRAW" 1
 	snap
-	{ event 5004 0 "Starts" }
-	{ event 5004 15 "StockHitsShoulder" }
+	// { event 5004 0 "Starts" }
+	// { event 5004 15 "StockHitsShoulder" }
 }
 
 $sequence "draw_empty" "anims\draw_empty.smd" {
 	fps 30
 	"ACT_VM_DRAW" 1
 	snap
-	{ event 5004 0 "Starts" }
-	{ event 5004 15 "StockHitsShoulder" }
+	// { event 5004 0 "Starts" }
+	// { event 5004 15 "StockHitsShoulder" }
 }
 
 $sequence "draw_jammed" "anims\draw_jammed.smd" {
 	fps 30
 	"ACT_VM_DRAW" 1
 	snap
-	{ event 5004 0 "Starts" }
-	{ event 5004 15 "StockHitsShoulder" }
+	// { event 5004 0 "Starts" }
+	// { event 5004 15 "StockHitsShoulder" }
 }
 
 $sequence "holster" "anims\holster.smd" {
@@ -182,9 +182,9 @@ $sequence "sgreload_start_empty" {
 	"ACT_VM_RELOAD" 1
 	blend "sights" 0 1
 	snap
-	{ event 5004 0 "Starts" }
-	{ event 5004 17 "ShellGoesInChamber" }
-	{ event 5004 27 "BoltReleases" }
+	// { event 5004 0 "Starts" }
+	// { event 5004 17 "ShellGoesInChamber" }
+	// { event 5004 27 "BoltReleases" }
 }
 
 $sequence "sgreload_insert" {
@@ -194,8 +194,8 @@ $sequence "sgreload_insert" {
 	"ACT_VM_RELOAD" 1
 	blend "sights" 0 1
 	snap
-	{ event 5004 7 "ShellBeginsInserting" }
-	{ event 5004 10 "ShellInserted" }
+	// { event 5004 7 "ShellBeginsInserting" }
+	// { event 5004 10 "ShellInserted" }
 }
 
 $sequence "sgreload_finish" {
@@ -205,8 +205,8 @@ $sequence "sgreload_finish" {
 	"ACT_VM_RELOAD" 1
 	blend "sights" 0 1
 	snap
-	{ event 5004 6 "HandGrabsGrip" }
-	{ event 5004 17 "StockHitsShoulder" }
+	// { event 5004 6 "HandGrabsGrip" }
+	// { event 5004 17 "StockHitsShoulder" }
 }
 
 // stock animations start
@@ -269,24 +269,24 @@ $sequence "draw_stock" "anims\draw_stock.smd" {
 	fps 30
 	"ACT_VM_DRAW" 1
 	snap
-	{ event 5004 0 "Starts" }
-	{ event 5004 15 "StockHitsShoulder" }
+	// { event 5004 0 "Starts" }
+	// { event 5004 15 "StockHitsShoulder" }
 }
 
 $sequence "draw_empty_stock" "anims\draw_empty_stock.smd" {
 	fps 30
 	"ACT_VM_DRAW" 1
 	snap
-	{ event 5004 0 "Starts" }
-	{ event 5004 15 "StockHitsShoulder" }
+	// { event 5004 0 "Starts" }
+	// { event 5004 15 "StockHitsShoulder" }
 }
 
 $sequence "draw_jammed_stock" "anims\draw_jammed_stock.smd" {
 	fps 30
 	"ACT_VM_DRAW" 1
 	snap
-	{ event 5004 0 "Starts" }
-	{ event 5004 15 "StockHitsShoulder" }
+	// { event 5004 0 "Starts" }
+	// { event 5004 15 "StockHitsShoulder" }
 }
 
 $sequence "holster_stock" "anims\holster_stock.smd" {
@@ -326,8 +326,8 @@ $sequence "sgreload_start_stock" {
 	"ACT_VM_RELOAD" 1
 	blend "sights" 0 1
 	snap
-	{ event 5004 0 "Starts" }
-	{ event 5004 10 "ReadjustsGun" }
+	// { event 5004 0 "Starts" }
+	// { event 5004 10 "ReadjustsGun" }
 }
 
 $sequence "sgreload_start_empty_stock" {
@@ -337,9 +337,9 @@ $sequence "sgreload_start_empty_stock" {
 	"ACT_VM_RELOAD" 1
 	blend "sights" 0 1
 	snap
-	{ event 5004 0 "Starts" }
-	{ event 5004 17 "ShellGoesInChamber" }
-	{ event 5004 27 "BoltReleases" }
+	// { event 5004 0 "Starts" }
+	// { event 5004 17 "ShellGoesInChamber" }
+	// { event 5004 27 "BoltReleases" }
 }
 
 $sequence "sgreload_finish_stock" {
@@ -349,8 +349,8 @@ $sequence "sgreload_finish_stock" {
 	"ACT_VM_RELOAD" 1
 	blend "sights" 0 1
 	snap
-	{ event 5004 6 "HandGrabsGrip" }
-	{ event 5004 17 "StockHitsShoulder" }
+	// { event 5004 6 "HandGrabsGrip" }
+	// { event 5004 17 "StockHitsShoulder" }
 }
 
 // stock animations end

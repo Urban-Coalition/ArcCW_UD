@@ -247,7 +247,7 @@ local ratel = {common .. "rattle1.ogg", common .. "rattle2.ogg", common .. "ratt
 
 SWEP.Hook_Think = ArcCW.UC.ADSReload
 
-local shellin = {path .. "shell-insert-01.ogg", path .. "shell-insert-02.ogg", path .. "shell-insert-03.ogg", path .. "shell-insert-04.ogg", path .. "shell-insert-05.ogg"}
+local shellin = {path .. "shell-insert-01.ogg", path .. "shell-insert-02.ogg", path .. "shell-insert-03.ogg"}
 
 SWEP.Animations = {
     ["idle"] = {
@@ -342,9 +342,9 @@ SWEP.Animations = {
         SoundTable = {
             {s = rottle, t = 0},
             {s = path2 .. "grab.ogg", t = .4},
-            {s = path2 .. "usas_chback.ogg", t = 0.8},
+            {s = path .. "chback.ogg", t = 0.8},
             {s = path1 .. "eject.ogg", t = 1.1},
-            {s = path .. "breechclose.ogg", t = 0.9},
+            {s = path .. "chamber.ogg", t = 0.9},
             {s = rottle, t = 1.2},
         },
     },
@@ -356,9 +356,8 @@ SWEP.Animations = {
         SoundTable = {
             {s = rottle, t = 0},
             {s = path2 .. "grab.ogg", t = .4},
-            {s = path2 .. "usas_chback.ogg", t = 0.8},
+            {s = path .. "chback.ogg", t = 0.8},
             {s = path1 .. "eject.ogg", t = 1.1},
-            --{s = path .. "breechclose.ogg", t = 1.2},
             {s = rottle, t = 1.2},
         },
     },
@@ -382,8 +381,8 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         SoundTable = {
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
-            {s = path .. "breechload.ogg",  t = 0.05},
-            {s = path .. "breechclose.ogg",  t = 0.75},
+            {s = path .. "breechload.ogg",  t = 0.25},
+            {s = path .. "breechclose.ogg",  t = 0.9},
         },
         ForceEmpty = true,
     },
@@ -491,7 +490,7 @@ SWEP.Animations = {
         SoundTable = {
             {s = rottle, t = 0},
             {s = path2 .. "grab.ogg", t = .4},
-            {s = path2 .. "usas_chback.ogg", t = 0.8},
+            {s = path .. "chback.ogg", t = 0.8},
             {s = path1 .. "eject.ogg", t = 1.1},
             {s = path .. "breechclose.ogg", t = 0.9},
             {s = rottle, t = 1.2},
@@ -505,7 +504,7 @@ SWEP.Animations = {
         SoundTable = {
             {s = rottle, t = 0},
             {s = path2 .. "grab.ogg", t = .4},
-            {s = path2 .. "usas_chback.ogg", t = 0.8},
+            {s = path .. "chback.ogg", t = 0.8},
             {s = path1 .. "eject.ogg", t = 1.1},
             --{s = path .. "breechclose.ogg", t = 1.2},
             {s = rottle, t = 1.2},

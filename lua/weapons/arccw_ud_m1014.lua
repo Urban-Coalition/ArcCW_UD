@@ -261,17 +261,17 @@ SWEP.Animations = {
     },
     ["draw"] = {
         Source = "draw",
-        Time = 20 / 30,
+        Time = 30 / 30,
         SoundTable = ArcCW.UC.DrawSounds,
     },
     ["draw_empty"] = {
         Source = "draw_empty",
-        Time = 20 / 30,
+        Time = 30 / 30,
         SoundTable = ArcCW.UC.DrawSounds,
     },
     ["draw_jammed"] = {
         Source = "draw_jammed",
-        Time = 20 / 30,
+        Time = 30 / 30,
         SoundTable = ArcCW.UC.DrawSounds,
     },
     ["holster"] = {
@@ -291,7 +291,7 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = "fire",
-        Time = 23 / 25,--30,
+        Time = 16 / 25,--30,
         ShellEjectAt = 0.01,
         SoundTable = {
             {s = path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg", t = 0, v = 0.45}, -- Not temporary
@@ -300,7 +300,7 @@ SWEP.Animations = {
     },
     ["fire_iron"] = {
         Source = "fire",
-        Time = 23 / 25,--30,
+        Time = 16 / 25,--30,
         ShellEjectAt = 0.01,
         SoundTable = {
             {s = path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg", t = 0}, -- Not temporary
@@ -309,7 +309,7 @@ SWEP.Animations = {
     },
     ["fire_empty"] = {
         Source = "fire_empty",
-        Time = 23 / 25,--30,
+        Time = 18 / 25,--30,
         ShellEjectAt = 0.01,
         SoundTable = {
             {s = path .. "mech_last.ogg", t = 0}, -- Not temporary
@@ -318,7 +318,7 @@ SWEP.Animations = {
     },
     ["fire_iron_empty"] = {
         Source = "fire_empty",
-        Time = 23 / 25,--30,
+        Time = 18 / 25,--30,
         ShellEjectAt = 0.01,
         SoundTable = {
             {s = path .. "mech_last.ogg", t = 0}, -- Not temporary
@@ -337,14 +337,14 @@ SWEP.Animations = {
     ["unjam"] = {
         Source = "jam_fix",
         Time = 60 / 30,
-        ShellEjectAt = 1.1,
+        ShellEjectAt = 0.8,
         LHIK = true,
         SoundTable = {
             {s = rottle, t = 0},
-            {s = path2 .. "grab.ogg", t = .4},
-            {s = path .. "chback.ogg", t = 0.8},
-            {s = path1 .. "eject.ogg", t = 1.1},
-            {s = path .. "chamber.ogg", t = 0.9},
+            {s = path2 .. "grab.ogg", t = 0.1},
+            {s = path .. "chback.ogg", t = 0.7},
+            {s = path1 .. "eject.ogg", t = 0.8, v = 0.4},
+            {s = path .. "chamber.ogg", t = 1.0},
             {s = rottle, t = 1.2},
         },
     },

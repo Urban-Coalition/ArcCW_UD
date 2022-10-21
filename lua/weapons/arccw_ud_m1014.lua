@@ -402,7 +402,7 @@ SWEP.Animations = {
     },
     ["sgreload_finish"] = {
         Source = "sgreload_finish",
-        Time = 22 / 30,
+        Time = 30 / 30,
         LHIK = true,
         LHIKIn = 0,
         LHIKEaseOut = 0.3,

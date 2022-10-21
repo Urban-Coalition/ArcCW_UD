@@ -121,4 +121,7 @@ att.Hook_GetDefaultAttIcon = function(wep, slot)
     end
 end
 
+att.Override_Trivia_Class = "Semi-Automatic Rifle"
+
+
 att.GivesFlags = {"m16_50beo", "m16_nolower"}

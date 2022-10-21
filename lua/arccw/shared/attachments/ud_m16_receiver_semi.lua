@@ -37,3 +37,5 @@ att.Override_Firemodes = {
         Mode = 0
     }
 }
+
+att.Override_Trivia_Class = "Semi-Automatic Rifle"

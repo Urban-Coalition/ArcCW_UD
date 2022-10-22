@@ -8,7 +8,7 @@ att.Desc_Neutrals = {
     "ud.m16_ch.2",
     "ud.m16_nors"
 }
-att.Slot = "ud_m16_fs"
+att.Slot = "ud_m16_charm"
 
 att.ActivateElements = {"ud_m16_upper_charm2"}
 att.GivesFlags = {"ud_m16_retro"}

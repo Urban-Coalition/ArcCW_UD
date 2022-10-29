@@ -427,6 +427,11 @@ SWEP.Animations = {
             {s = path .. "prefire.ogg",         t = 0, c = ci},
         },
     },
+    ["trigger_empty"] = {
+        Source = "idle",
+        Time = 0,
+        SoundTable = nil,
+    },
 
     ["fix"] = {
         Source = "fix",

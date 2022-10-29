@@ -83,7 +83,6 @@ att.Hook_OnDeselectUBGL = function(wep)
 end
 
 att.UBGL_Fire = function(wep, ubgl)
-    print(wep:GetNextSecondaryFire() - CurTime())
     if wep:Clip2() <= 0 or wep:GetNextPrimaryFire() > CurTime() then return end
 
     local owner = wep:GetOwner()

@@ -1,5 +1,5 @@
 att.PrintName = "Masterkey Underslung Shotgun"
-att.AbbrevName = "Masterkey Underslung Shotgun"
+att.AbbrevName = "Masterkey Shotgun"
 att.Icon = Material("entities/att/acwatt_uc_ubgl_masterkey.png", "mips smooth")
 att.Description = "Underslung shotgun primarily used to breach doors, but loaded with #00 Buckshot for your pleasure. Negatively impacts the weapon's handling."
 
@@ -83,7 +83,8 @@ att.Hook_OnDeselectUBGL = function(wep)
 end
 
 att.UBGL_Fire = function(wep, ubgl)
-    if wep:Clip2() <= 0 then return end
+    print(wep:GetNextSecondaryFire() - CurTime())
+    if wep:Clip2() <= 0 or wep:GetNextPrimaryFire() > CurTime() then return end
 
     local owner = wep:GetOwner()
 
@@ -142,12 +143,13 @@ att.UBGL_Fire = function(wep, ubgl)
     wep:MyEmitSound(")^/weapons/arccw_ud/870/fire_dist.ogg", 149, 100, 0.5, CHAN_WEAPON + 1)
 
     wep:PlaySoundTable({
-        {s = ")^/weapons/arccw_ud/870/rack_1.ogg", t = 0.15},
-        {s = ")^/weapons/arccw_ud/870/eject.ogg", t = 0.22},
-        {s = ")^/weapons/arccw_ud/870/rack_2.ogg", t = 0.3},
+        {s = ")^/weapons/arccw_ud/870/rack_1.ogg", t = 0.15 + 0.2},
+        {s = ")^/weapons/arccw_ud/870/eject.ogg", t = 0.22 + 0.2},
+        {s = ")^/weapons/arccw_ud/870/rack_2.ogg", t = 0.3 + 0.2},
     })
 
     wep:DoLHIKAnimation("fire")
+    wep:SetNextPrimaryFire(CurTime() + 1)
     wep:SetClip2(wep:Clip2() - 1)
     wep:DoEffects()
 end

@@ -1217,9 +1217,10 @@ SWEP.Animations = {
         -- time = 35 / 60,
         LHIK = false,
         LHIKIn = 0,
-        LHIKOut = 0,
+        LHIKOut = 2.5,
         SoundTable = {
             {s = rottle, t = 0},
+            {s = common .. "movement-rifle-02.ogg", t = 0.1},
         },
     },
     ["idle_inspect"] = {
@@ -1227,45 +1228,50 @@ SWEP.Animations = {
         -- time = 72 / 60,
         LHIK = false,
         LHIKIn = 0,
-        LHIKOut = 999,
+        LHIKOut = 999, -- maybe im dumb
     },
     ["exit_inspect"] = {
         Source = "inspect_exit",
         -- time = 66 / 60,
         LHIK = false,
         LHIKIn = 0,
-        LHIKOut = 999,
+        LHIKOut = 999, -- maybe im dumb
         SoundTable = {
+            {s = common .. "movement-rifle-04.ogg", t = 0.2},
             {s = rottle, t = 0.25},
-            {s = rottle, t = 1.25},
+            {s = rottle, t = 1.2},
+            {s = common .. "movement-rifle-03.ogg", t = 1.25},
         },
     },
     ["enter_inspect_empty"] = {
         Source = "inspect_enter_empty",
         -- time = 35 / 60,
-        LHIK = true,
+        LHIK = false,
         LHIKIn = 0,
         LHIKOut = 2.5,
         SoundTable = {
             {s = rottle, t = 0},
+            {s = common .. "movement-rifle-02.ogg", t = 0.1},
         },
     },
     ["idle_inspect_empty"] = {
         Source = "inspect_loop_empty",
         -- time = 72 / 60,
-        LHIK = true,
+        LHIK = false,
         LHIKIn = 0,
         LHIKOut = 999,
     },
     ["exit_inspect_empty"] = {
         Source = "inspect_exit_empty",
         -- time = 66 / 60,
-        LHIK = true,
+        LHIK = false,
         LHIKIn = 0,
         LHIKOut = 999,
         SoundTable = {
+            {s = common .. "movement-rifle-04.ogg", t = 0.2},
             {s = rottle, t = 0.25},
-            {s = rottle, t = 1.25},
+            {s = rottle, t = 1.2},
+            {s = common .. "movement-rifle-03.ogg", t = 1.25},
         },
     },
 }

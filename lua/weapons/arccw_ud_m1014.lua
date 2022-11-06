@@ -259,6 +259,16 @@ SWEP.Animations = {
     ["idle_jammed"] = {
         Source = "idle_jammed",
     },
+    ["ready"] = {
+        Source = "equip",
+        Time = 60 / 30,
+        SoundTable = {
+            {s = rottle, t = 0.4},
+            {s = path .. "chback.ogg", t = 0.4},
+            {s = path .. "chamber.ogg", t = 0.7},
+            {s = rottle, t = 0.75},
+        },
+    },
     ["draw"] = {
         Source = "draw",
         Time = 30 / 30,

@@ -110,6 +110,18 @@ $sequence "fire_jam" {
 	fadeout 0.007
 }
 
+$sequence "equip" "anims\equip.smd" {
+	fps 30
+	"ACT_VM_DRAW" 1
+	snap
+}
+
+$sequence "equip_stock" "anims\equip_stock.smd" {
+	fps 30
+	"ACT_VM_DRAW" 1
+	snap
+}
+
 $sequence "draw" "anims\draw.smd" {
 	fps 30
 	"ACT_VM_DRAW" 1

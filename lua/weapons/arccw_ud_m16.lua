@@ -225,19 +225,13 @@ SWEP.ShootSound = {
     path .. "fire-05.ogg",
     path .. "fire-06.ogg"
 }
-SWEP.FirstShootSoundSilenced = {
-    path .. "fire-first-sup-01.ogg",
-    path .. "fire-first-sup-02.ogg",
-    path .. "fire-first-sup-03.ogg",
-    path .. "fire-first-sup-04.ogg",
-    path .. "fire-first-sup-05.ogg"
-}
 SWEP.ShootSoundSilenced = {
     path .. "fire-sup-01.ogg",
     path .. "fire-sup-02.ogg",
     path .. "fire-sup-03.ogg",
     path .. "fire-sup-04.ogg",
-    path .. "fire-sup-05.ogg"
+    path .. "fire-sup-05.ogg",
+    path .. "fire-sup-06.ogg"
 }
 
 SWEP.DistantShootSound = nil
@@ -261,10 +255,24 @@ SWEP.DistantShootSoundIndoors = {
     common .. "fire-dist-int-rifle-06.ogg"
 }
 SWEP.DistantShootSoundOutdoorsSilenced = {
-    common .. "sup_tail.ogg"
+    common .. "sup-tail-01.ogg",
+    common .. "sup-tail-02.ogg",
+    common .. "sup-tail-03.ogg",
+    common .. "sup-tail-04.ogg",
+    common .. "sup-tail-05.ogg",
+    common .. "sup-tail-06.ogg",
+    common .. "sup-tail-07.ogg",
+    common .. "sup-tail-08.ogg",
+    common .. "sup-tail-09.ogg",
+    common .. "sup-tail-10.ogg"
 }
 SWEP.DistantShootSoundIndoorsSilenced = {
-    common .. "sup_tail.ogg"
+    common .. "fire-dist-int-pistol-light-01.ogg",
+    common .. "fire-dist-int-pistol-light-02.ogg",
+    common .. "fire-dist-int-pistol-light-03.ogg",
+    common .. "fire-dist-int-pistol-light-04.ogg",
+    common .. "fire-dist-int-pistol-light-05.ogg",
+    common .. "fire-dist-int-pistol-light-06.ogg"
 }
 SWEP.DistantShootSoundOutdoorsVolume = 1
 SWEP.DistantShootSoundIndoorsVolume = 1
@@ -1217,9 +1225,10 @@ SWEP.Animations = {
         -- time = 35 / 60,
         LHIK = false,
         LHIKIn = 0,
-        LHIKOut = 0,
+        LHIKOut = 2.5,
         SoundTable = {
             {s = rottle, t = 0},
+            {s = common .. "movement-rifle-02.ogg", t = 0.1},
         },
     },
     ["idle_inspect"] = {
@@ -1227,45 +1236,50 @@ SWEP.Animations = {
         -- time = 72 / 60,
         LHIK = false,
         LHIKIn = 0,
-        LHIKOut = 999,
+        LHIKOut = 999, -- maybe im dumb
     },
     ["exit_inspect"] = {
         Source = "inspect_exit",
         -- time = 66 / 60,
         LHIK = false,
         LHIKIn = 0,
-        LHIKOut = 999,
+        LHIKOut = 999, -- maybe im dumb
         SoundTable = {
+            {s = common .. "movement-rifle-04.ogg", t = 0.2},
             {s = rottle, t = 0.25},
-            {s = rottle, t = 1.25},
+            {s = rottle, t = 1.2},
+            {s = common .. "movement-rifle-03.ogg", t = 1.25},
         },
     },
     ["enter_inspect_empty"] = {
         Source = "inspect_enter_empty",
         -- time = 35 / 60,
-        LHIK = true,
+        LHIK = false,
         LHIKIn = 0,
         LHIKOut = 2.5,
         SoundTable = {
             {s = rottle, t = 0},
+            {s = common .. "movement-rifle-02.ogg", t = 0.1},
         },
     },
     ["idle_inspect_empty"] = {
         Source = "inspect_loop_empty",
         -- time = 72 / 60,
-        LHIK = true,
+        LHIK = false,
         LHIKIn = 0,
         LHIKOut = 999,
     },
     ["exit_inspect_empty"] = {
         Source = "inspect_exit_empty",
         -- time = 66 / 60,
-        LHIK = true,
+        LHIK = false,
         LHIKIn = 0,
         LHIKOut = 999,
         SoundTable = {
+            {s = common .. "movement-rifle-04.ogg", t = 0.2},
             {s = rottle, t = 0.25},
-            {s = rottle, t = 1.25},
+            {s = rottle, t = 1.2},
+            {s = common .. "movement-rifle-03.ogg", t = 1.25},
         },
     },
 }

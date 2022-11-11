@@ -242,7 +242,7 @@ SWEP.Animations = {
         LHIKEaseOut = 1.2,
         LHIKOut = 1.4,
         SoundTable = {
-            {s = common .. "raise.ogg", t = 0},
+            {s = common .. "raise.ogg", t = 0.2},
             {s = common .. "rattle.ogg", t = 0.2},
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.5},
             {s = path .. "rack_1.ogg",  t = 0.4},

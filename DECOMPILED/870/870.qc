@@ -79,7 +79,10 @@ $cbox 0 0 0 0 0 0
 
 $poseparameter "sights" 0 1 loop 0
 
-$sequence "idle" "anims\idle.smd" {
+$sequence "idle" {
+	"anims\idle.smd"
+	"anims\idleADS.smd" 
+	blend "sights" 0 1
 	fps 30
 	"ACT_VM_IDLE" 1
 	loop

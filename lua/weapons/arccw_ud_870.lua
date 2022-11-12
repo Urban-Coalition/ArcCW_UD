@@ -158,7 +158,7 @@ SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-3.04, 7, 2.08),
+     Pos = Vector(0, -3, 0.15),
      Ang = Angle(0, 0, 0),
      Magnification = 1.1,
      SwitchToSound = "",
@@ -170,7 +170,7 @@ SWEP.HolsterAng = Angle(-5.5, 20, -20)
 SWEP.SprintPos = Vector(-0.5, -4, -2)
 SWEP.SprintAng = Angle(3.5, 7, -20)
 
-SWEP.ActivePos = Vector(0, -2, 1)
+SWEP.ActivePos = Vector(-0.75, -2, 1)
 SWEP.ActiveAng = Angle(0, 0, -3)
 
 SWEP.CrouchPos = Vector(-3.8, -2, 0)
@@ -269,24 +269,24 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = "fire",
-        Time = 23 / 30,
+        --Time = 23 / 30,
         SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0, v = 0.25 }},
     },
     ["fire_iron"] = {
         Source = "fire",
-        Time = 23 / 30,
+        --Time = 23 / 30,
         SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }},
     },
     ["cycle"] = {
         Source = "cycle",
-        Time = 20 / 30,
+        --Time = 20 / 30,
         ShellEjectAt = 0.1,
         MinProgress = 12 / 30,
         SoundTable = {
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
             {s = path .. "rack_1.ogg",  t = 0},
             {s = path .. "eject.ogg",  t = 0.1},
-            {s = path .. "rack_2.ogg",  t = 0.15},
+            {s = path .. "rack_2.ogg",  t = 0.11},
         },
     },
     ["fix"] = {
@@ -310,7 +310,7 @@ SWEP.Animations = {
         Time = 16 / 30,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         LHIK = true,
-        LHIKIn = 0.5,
+        LHIKIn = 0.2,
         LHIKOut = 0,
         SoundTable = {
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
@@ -336,8 +336,8 @@ SWEP.Animations = {
         Time = 20 / 30,
         LHIK = true,
         LHIKIn = 0,
-        LHIKEaseOut = 0.6,
-        LHIKOut = 0.7,
+        LHIKEaseOut = 0.3,
+        LHIKOut = 0.4,
         TPAnimStartTime = 0.8,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         SoundTable = {
@@ -350,8 +350,8 @@ SWEP.Animations = {
         Time = 37 / 30,
         LHIK = true,
         LHIKIn = 0,
-        LHIKEaseOut = 1.2,
-        LHIKOut = 1.4,
+        LHIKEaseOut = 0.6,
+        LHIKOut = 0.8,
         TPAnimStartTime = 0.5,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         ShellEjectAt = 0.5,
@@ -397,8 +397,8 @@ SWEP.AttachmentElements = {
             {ind = 8, bg = 1},
         },
         Override_IronSightStruct = {
-            Pos = Vector(-3.04, -3, 1.95),
-            Ang = Angle(0.1, 0, 0),
+            Pos = Vector(0, -1, 0.07),
+            Ang = Angle(0.15, 0, 0),
             Magnification = 1.1,
             CrosshairInSights = false
         },

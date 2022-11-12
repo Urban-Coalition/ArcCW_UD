@@ -88,8 +88,8 @@ $sequence "idle" "anims\idle.smd" {
 }
 
 $sequence "fire" {
-	"anims\fire.smd"
-	"anims\fire_iron.smd"
+	"anims\fireIndependent.smd"
+	"anims\fireADS.smd"
 	blend "sights" 0 1
 	fps 30
 	"ACT_VM_PRIMARYATTACK" 1
@@ -99,7 +99,7 @@ $sequence "fire" {
 
 $sequence "cycle" {
 	"anims\cycle.smd"
-	"anims\cycle_iron.smd"
+	"anims\cycleADS.smd"
 	blend "sights" 0 1
 	fps 30
 	"ACT_VM_IDLE" 1
@@ -107,7 +107,7 @@ $sequence "cycle" {
 	fadeout 0
 }
 
-$sequence "fix" "anims\newJam.smd" {
+$sequence "fix" "anims\Jam.smd" {
 	blend "sights" 0 1
 	fps 30
 	"ACT_VM_IDLE" 1
@@ -123,15 +123,15 @@ $sequence "draw" "anims\draw.smd" {
 	{ event 5004 15 "StockHitsShoulder" }
 }
 
-$sequence "holster" "anims\holster.smd" {
+$sequence "Holster" "anims\holster.smd" {
 	fps 30
 	"ACT_VM_HOLSTER" 1
 	snap
 }
 
 $sequence "sgreload_start" {
-	"anims\sgreload_start.smd"
-	"anims\sgreload_start_iron.smd"
+	"anims\reloadstart.smd"
+	"anims\reloadstartADS.smd"
 	fps 30
 	"ACT_VM_RELOAD" 1
 	blend "sights" 0 1
@@ -141,8 +141,8 @@ $sequence "sgreload_start" {
 }
 
 $sequence "sgreload_insert" {
-	"anims\sgreload_insert.smd"
-	"anims\sgreload_insert_iron.smd"
+	"anims\reloadinsert.smd"
+	"anims\reloadinsertADS.smd"
 	fps 30
 	"ACT_VM_RELOAD" 1
 	blend "sights" 0 1
@@ -152,8 +152,8 @@ $sequence "sgreload_insert" {
 }
 
 $sequence "sgreload_finish" {
-	"anims\sgreload_end.smd"
-	"anims\sgreload_end_iron.smd"
+	"anims\reloadend.smd"
+	"anims\reloadendADS.smd"
 	fps 30
 	"ACT_VM_RELOAD" 1
 	blend "sights" 0 1
@@ -163,8 +163,8 @@ $sequence "sgreload_finish" {
 }
 
 $sequence "sgreload_finish_empty" {
-	"anims\sgreload_end_empty.smd"
-	"anims\sgreload_end_empty_iron.smd"
+	"anims\reloadendCycle.smd"
+	"anims\reloadendCycleADS.smd"
 	fps 30
 	"ACT_VM_RELOAD" 1
 	blend "sights" 0 1

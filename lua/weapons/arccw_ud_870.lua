@@ -179,6 +179,12 @@ SWEP.CrouchAng = Angle(0, 0, -30)
 SWEP.BarrelOffsetSighted = Vector(0, 0, -1)
 SWEP.BarrelOffsetHip = Vector(3, 0, -4)
 
+
+
+SWEP.Malfunction = true
+SWEP.MalfunctionTakeRound = false
+SWEP.MalfunctionMean = 1
+SWEP.MalfunctionVariance = 0.99
 -- Firing sounds --
 
 local path = ")^weapons/arccw_ud/870/"
@@ -254,6 +260,9 @@ SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
     },
+    ["idle"] = {
+        Source = "idle",
+    },
     ["idle_empty"] = {
         Source = "idle",
     },
@@ -291,6 +300,20 @@ SWEP.Animations = {
             {s = path .. "rack_2.ogg",  t = 0.11},
         },
     },
+
+    ["cycle_jammed"] = {
+        Source = "jamcycle",
+        --Time = 20 / 30,
+        ShellEjectAt = 0.1,
+        MinProgress = 12 / 30,
+        SoundTable = {
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
+            {s = path .. "rack_1.ogg",  t = 0},
+            {s = path .. "eject.ogg",  t = 0.1},
+            {s = path .. "rack_2.ogg",  t = 0.11},
+        },
+    },
+
     ["fix"] = {
         Source = "fix",
         Time = 77 / 30,

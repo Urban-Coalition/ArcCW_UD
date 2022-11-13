@@ -80,9 +80,7 @@ $cbox 0 0 0 0 0 0
 $poseparameter "sights" 0 1 loop 0
 
 $sequence "idle"{
-	"anims\idle.smd" 
-	"anims\idleADS.smd"
- 	blend "sights" 0 1
+	"anims\idle.smd"
 	fps 30
 	"ACT_VM_IDLE" 1
 	loop
@@ -110,14 +108,6 @@ $sequence "cycle" {
 	// snap
 }
 
-$sequence "jamcycle" {
-	"anims\Jam cycle.smd"
-	"anims\JamCycleADS.smd"
-	blend "sights" 0 1
-	fps 30
-	snap
-}
-
 $sequence "fix" {
 	"anims\Jam.smd"
 	"anims\JamADS.smd"
@@ -127,7 +117,7 @@ $sequence "fix" {
 }
 
 $sequence "draw" {
-	"anims\draw.smd"
+	"anims\Draw.smd"
 	fps 30
 	snap
 }

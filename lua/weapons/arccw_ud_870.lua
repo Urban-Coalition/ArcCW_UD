@@ -158,8 +158,8 @@ SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(0, -3, 0.15),
-     Ang = Angle(0, 0, 0),
+     Pos = Vector(-3.66, -3, 2.2),
+     Ang = Angle(-0.75, 0, 2.8),
      Magnification = 1.1,
      SwitchToSound = "",
 }
@@ -182,8 +182,8 @@ SWEP.BarrelOffsetHip = Vector(3, 0, -4)
 
 
 SWEP.Malfunction = true
-SWEP.MalfunctionTakeRound = false
-SWEP.MalfunctionMean = 1
+SWEP.MalfunctionTakeRound = true
+SWEP.MalfunctionMean = 500
 SWEP.MalfunctionVariance = 0.99
 -- Firing sounds --
 
@@ -316,18 +316,15 @@ SWEP.Animations = {
 
     ["fix"] = {
         Source = "fix",
-        Time = 77 / 30,
-        ShellEjectAt = 1.9, -- zenit pls sound this :DDD
+        Time = 50 / 30,
+        ShellEjectAt = 0.7, -- should make the shell eject offscreen cuz the anim already has it
         SoundTable = {
-            {s = path .. "eject.ogg", t = 0, v = 25},
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.5},
-            {s = common .. "pistol_rattle_2.ogg",  t = .8},
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 1},
-            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 1.5},
-            {s = path .. "eject.ogg",  t = 1.7},
-            {s = path .. "rack_1.ogg",  t = 1.825},
-            {s = path .. "eject.ogg",  t = 1.9},
-            {s = path .. "rack_2.ogg",  t = 2.025},
+            {s = path .. "rack_1.ogg",  t = 0.6},
+            {s = path .. "eject.ogg",  t = 0.7},
+            {s = path .. "rack_2.ogg",  t = 0.9},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 1.7},
         }
     },
     ["sgreload_start"] = {
@@ -422,10 +419,10 @@ SWEP.AttachmentElements = {
             {ind = 8, bg = 1},
         },
         Override_IronSightStruct = {
-            Pos = Vector(0, -1, 0.07),
-            Ang = Angle(0.15, 0, 0),
+            Pos = Vector(-3.665, -2.75, 2.1),
+            Ang = Angle(-0.6, 0, 1),
             Magnification = 1.1,
-            CrosshairInSights = false
+            SwitchToSound = "",
         },
     },
     ["optic_rail"] = {

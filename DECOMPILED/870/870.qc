@@ -82,16 +82,16 @@ $poseparameter "sights" 0 1 loop 0
 $sequence "idle"{
 	"anims\idle.smd" 
 	"anims\idleADS.smd"
-	fps 60
-	"ACT_VM_IDLE" 1
  	blend "sights" 0 1
+	fps 30
+	"ACT_VM_IDLE" 1
 	loop
-	snap
+	// snap
 	node "Ready"
 }
 
 $sequence "fire" {
-	"anims\fireIndependent.smd"
+	"anims\fire.smd"
 	"anims\fireADS.smd"
 	blend "sights" 0 1
 	fps 30
@@ -105,75 +105,72 @@ $sequence "cycle" {
 	"anims\cycleADS.smd"
 	blend "sights" 0 1
 	fps 30
-	"ACT_VM_IDLE" 1
 	fadein 0.2
 	fadeout 0
+	// snap
 }
 
-$sequence "fix" "anims\Jam.smd" {
+$sequence "jamcycle" {
+	"anims\Jam cycle.smd"
+	"anims\JamCycleADS.smd"
 	blend "sights" 0 1
 	fps 30
-	"ACT_VM_IDLE" 1
-	fadein 0.2
-	fadeout 0.5
-}
-
-$sequence "draw" "anims\draw.smd" {
-	fps 30
-	"ACT_VM_DRAW" 1
 	snap
-	{ event 5004 0 "Starts" }
-	{ event 5004 15 "StockHitsShoulder" }
 }
 
-$sequence "Holster" "anims\holster.smd" {
+$sequence "fix" {
+	"anims\Jam.smd"
+	"anims\JamADS.smd"
+	blend "sights" 0 1
 	fps 30
-	"ACT_VM_HOLSTER" 1
+	snap
+}
+
+$sequence "draw" {
+	"anims\draw.smd"
+	fps 30
+	snap
+}
+$sequence "holster" {
+	"anims\Holster.smd"
+	fps 30
 	snap
 }
 
 $sequence "sgreload_start" {
 	"anims\reloadstart.smd"
 	"anims\reloadstartADS.smd"
+	blend "sights" 0 1
 	fps 30
 	"ACT_VM_RELOAD" 1
-	blend "sights" 0 1
 	snap
-	{ event 5004 0 "Starts" }
-	{ event 5004 10 "ReadjustsGun" }
 }
 
 $sequence "sgreload_insert" {
 	"anims\reloadinsert.smd"
 	"anims\reloadinsertADS.smd"
+	blend "sights" 0 1
 	fps 30
 	"ACT_VM_RELOAD" 1
-	blend "sights" 0 1
 	snap
-	{ event 5004 7 "ShellBeginsInserting" }
-	{ event 5004 10 "ShellInserted" }
 }
 
 $sequence "sgreload_finish" {
 	"anims\reloadend.smd"
 	"anims\reloadendADS.smd"
+	blend "sights" 0 1
 	fps 30
 	"ACT_VM_RELOAD" 1
-	blend "sights" 0 1
 	snap
-	{ event 5004 6 "HandGrabsGrip" }
-	{ event 5004 17 "StockHitsShoulder" }
 }
 
 $sequence "sgreload_finish_empty" {
 	"anims\reloadendCycle.smd"
 	"anims\reloadendCycleADS.smd"
+	blend "sights" 0 1
 	fps 30
 	"ACT_VM_RELOAD" 1
-	blend "sights" 0 1
 	snap
-	{ event 5004 6 "HandGrabsGrip" }
-	{ event 5004 17 "StockHitsShoulder" }
 }
 
 

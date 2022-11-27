@@ -57,7 +57,7 @@ local path = ")^weapons/arccw_ud/glock/"
 
 att.Hook_GetShootSound = function(wep, fsound)
     if fsound == wep.ShootSound or fsound == wep.FirstShootSound then return "weapons/arccw_ud/m16/fire_9.ogg" end
-    if fsound == wep.ShootSoundSilenced then return path .. "fire_supp.ogg" end
+    if fsound == wep.ShootSoundSilenced then return {path .. "fire-sup-01.ogg", path .. "fire-sup-02.ogg", path .. "fire-sup-03.ogg", path .. "fire-sup-04.ogg", path .. "fire-sup-05.ogg", path .. "fire-sup-06.ogg"} end
 end
 
 att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)

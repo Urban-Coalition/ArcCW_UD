@@ -30,6 +30,9 @@ L["ud.m16.fpw2"] = "+0.1s Trigger delay"
 L["ud.m16.50beo"] = "Disables Lower Receiver attachments"
 L["ud.m16.allowfs"] = "Allows Front Sight attachments"
 
+-- 870
+L["ud.870.ringsight"] = "Reduced field of vision"
+
 -- Deprecated
 L["ud.darkrp.cantremove"] = "You can't remove this without a gun license!"
 L["ud.darkrp.cantattach"] = "You need a gun license to use this attachment!"

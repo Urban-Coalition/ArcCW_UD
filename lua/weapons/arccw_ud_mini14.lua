@@ -836,6 +836,7 @@ SWEP.Attachments = {
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"ud_mini14_rail_fg"},
+        MergeSlots = {14}
     },
     {
         PrintName = "Tactical",
@@ -890,4 +891,16 @@ SWEP.Attachments = {
             vang = Angle(90, 0, -90),
         },
     },
+    {
+        PrintName = "M203 slot",
+        Slot = "uc_ubgl",
+        Bone = "mini14_parent",
+        Offset = {
+            vpos = Vector(0, -1.2, 10),
+            vang = Angle(90, 0, -90),
+        },
+        InstalledEles = {"ud_mini14_rail_fg"},
+        ExcludeFlags = {"ak_noubs","barrel_rpk"},
+        Hidden = true,
+    }
 }

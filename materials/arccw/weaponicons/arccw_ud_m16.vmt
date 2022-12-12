@@ -1,5 +1,5 @@
-"UnlitGeneric" 
-{ 
-    "$basetexture" "arccw/weaponicons/arccw_ud_m16" 
-    "$translucent" 1 
-} 
+"UnlitGeneric"
+{
+    "$basetexture" "arccw/weaponicons/arccw_ud_m16"
+    "$translucent" 1
+}

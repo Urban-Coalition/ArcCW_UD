@@ -7,20 +7,20 @@
 	"$envmap" "env_cubemap"
 	"$envmaptint" "[ 0.01 0.01 0.01 ]"
 	"$nocull" "1"
-	
+
 	"$color2" "[ 0.8 0.8 0.8 ]"
 
 	"$phong"     "1"
 	"$phongboost"   "5"
 	"$phongfresnelranges"      "[0.5 1.5 3.0]"
-	"$phongtint"                   "[0.2 0.2 0.2]" 
+	"$phongtint"                   "[0.2 0.2 0.2]"
 	"$phongexponenttexture" 	"models\weapons\arccw\ud_m79\m79_new\m79_rough"
 	"$phongalbedotint"		"1"
 	"$phongalbedoboost" 	"14"
 	"$halflambert" 		"1"
 
 	"$rimlight" 	"1"
-	"$rimlightexponent" 	"66"	
+	"$rimlightexponent" 	"66"
 	"$rimlightboost"	"0.6"
 	"$rimmask" 	"1"
 }

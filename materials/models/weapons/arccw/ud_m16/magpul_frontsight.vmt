@@ -3,7 +3,7 @@
 	"$basetexture" "models\weapons\arccw\ud_m16\magpul_frontsight_d"
 	"$bumpmap" "models\weapons\arccw\ud_m16\magpul_frontsight_n"
 	"$normalmapalphaenvmapmask" 	1
-    
+
 	"$phongwarptexture"			"models/weapons/arccw/ud_stalol\phongwarp_metal"
 
 
@@ -17,8 +17,8 @@
 	"$envmaptint" "[.01 .01 .01]"
 	"$color2" "[0.8 0.8 0.8]"
 
-	"$rimlight"					"1" 
-	"$rimmask"					"1" 
+	"$rimlight"					"1"
+	"$rimmask"					"1"
 	"$rimlightboost"			"0.1"
 	"$rimlightexponent"         "100"
 }

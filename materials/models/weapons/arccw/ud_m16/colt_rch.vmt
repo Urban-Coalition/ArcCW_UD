@@ -1,9 +1,9 @@
  // ESCAPE FROM TARKOV TACTICAL REALISM WITH HARDCORE GAMEPLAY auto converter  by darcu   mal0 mode
 "VertexLitGeneric"
 {
-	"$basetexture" "models/weapons/arccw/ud_m16/sight_rear_ar15_colt_carry_hande_std_LOD0_diff"
-	"$bumpmap" "models/weapons/arccw/ud_m16/sight_rear_ar15_colt_carry_hande_std_LOD0_nrm"
-	"$phongexponenttexture" "models/weapons/arccw/ud_m16/sight_rear_ar15_colt_carry_hande_std_LOD0_gloss"
+	"$basetexture" "models/weapons/arccw/ud_m16/sight_rear_ar15_colt_carry_hande_std_lod0_diff"
+	"$bumpmap" "models/weapons/arccw/ud_m16/sight_rear_ar15_colt_carry_hande_std_lod0_nrm"
+	"$phongexponenttexture" "models/weapons/arccw/ud_m16/sight_rear_ar15_colt_carry_hande_std_lod0_gloss"
 	"$phongwarptexture"			"models\weapons\arccw\ud_stalol\phongwarp_metal"
 	"$phong" "1"
 	"$phongboost" "100"

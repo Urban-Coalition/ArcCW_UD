@@ -1,17 +1,17 @@
 VertexLitGeneric
 {
 	"$basetexture" "models/weapons/arccw/ud_uzi/uzi_stock_polymer"
-	
-	"$bumpmap" "models/weapons/arccw/ud_uzi/uzi_stock_polymer_n"
-	"$halflambert" "1"				
-	"$nocull" "1"	
 
-	
+	"$bumpmap" "models/weapons/arccw/ud_uzi/uzi_stock_polymer_n"
+	"$halflambert" "1"
+	"$nocull" "1"
+
+
 	"$phong" 			"1"
 	"$phongtint"			"[.9 .9 .9]"
 	"$phongexponent"		"25"
 	"$phongboost" 			"0.7"
 	"$phongfresnelranges"		"[0.5 0.5 3.0]"
-	
+
 	"$PhongAlbedoTint" "1"
 }

@@ -1,7 +1,7 @@
 "VertexLitGeneric"
 {
 	"$baseTexture" "models/weapons/arccw/ud_mini14/Flashlight_D"
-	"$bumpmap" "models/weapons/arccw/ud_mini14/Flashlight_N"
+	"$bumpmap" "models/weapons/arccw/ud_mini14/flashlight_n"
 
 	"$phong"                        "1"
 	"$phongalbedotint"              "1"

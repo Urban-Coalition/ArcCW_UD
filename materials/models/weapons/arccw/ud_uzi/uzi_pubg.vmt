@@ -3,19 +3,19 @@
 	"$basetexture" "models/weapons/arccw/ud_uzi/uzi_pubg"
 	"$bumpmap" "models/weapons/arccw/ud_uzi/uzi_pubg_n"
 	"$normalmapalphaenvmapmask" 	1
-	
+
 	"$phong" 		"1"
 	"$phongexponent" "15"
 	"$phongboost" "1"
 	"$phongalbedotint" 			"1"
 	"$phongfresnelranges" "[0.5 1.0 1.5]"
 	"$halflambert" "1"
-	
+
 	"$envmap" "env_cubemap"
 	"$envmapfresnel" 			"1"
     "$envmapFresnelMinMaxExp" "[0 5 .4]"
 	"$envmaptint" "[.02 .02  .02]"
-	
+
 	"$ambientocclusion" "1"
 	"$nocull" "1"
 }

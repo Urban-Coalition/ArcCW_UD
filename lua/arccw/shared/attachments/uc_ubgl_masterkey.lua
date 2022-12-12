@@ -1,7 +1,8 @@
 att.PrintName = "Masterkey Underslung Shotgun"
 att.AbbrevName = "Masterkey Shotgun"
---att.Icon = Material("entities/att/acwatt_uc_ubgl_masterkey.png", "mips smooth")
+att.Icon = Material("entities/att/acwatt_uc_ubgl_masterkey.png", "mips smooth")
 att.Description = "Underslung shotgun primarily used to breach doors, but loaded with #00 Buckshot for your pleasure. Negatively impacts the weapon's handling."
+att.Ignore = true
 
 att.SortOrder = -100000
 
@@ -186,6 +187,3 @@ end
 att.Mult_SightTime = 1.25
 att.Mult_SpeedMult = 0.85
 att.Mult_SightedSpeedMult = 0.8
-
-att.Ignore = true -- TODO: Do animations and add back
-att.Icon = Material("entities/att/obsolete.png", "mips smooth")

@@ -1,7 +1,7 @@
 VertexLitGeneric
 {
-	$basetexture "models/weapons/arccw/ud_mini14/Mini14_stock_poly_D"
-	$bumpmap "models/weapons/arccw/ud_mini14/Mini14_stock_poly_N"
+	$basetexture "models/weapons/arccw/ud_mini14/mini14_stock_poly_d"
+	$bumpmap "models/weapons/arccw/ud_mini14/mini14_stock_poly_n"
 	"$nocull"	"1"
 	"$halflambert" 		"1"
 
@@ -11,7 +11,7 @@ VertexLitGeneric
 	"$phongboost"	 "0.7"
 	"$phongfresnelranges"		"[0.5 0.5 3.0]"
 
-	"$phongtint"         "[0.6 0.8 1.0]" 
+	"$phongtint"         "[0.6 0.8 1.0]"
 	//"$phongalbedoboost" 	"10"
 
 }

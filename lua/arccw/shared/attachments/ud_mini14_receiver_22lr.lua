@@ -31,6 +31,8 @@ att.Mult_VisualRecoilMult = 0.25
 att.Mult_RPM = 1000 / 540
 att.Mult_ShootSpeedMult = 1.2
 
+att.Mult_HipDispersion = 0.6
+
 att.Override_ClipSize = 15
 
 att.ActivateElements = {"ud_mini14_mag_15_22lr", "ud_mini14_receiver_22lr"}

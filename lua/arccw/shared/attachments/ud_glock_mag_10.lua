@@ -22,6 +22,8 @@ att.Override_ClipSize = 10
 att.Mult_SpeedMult = 1.05
 att.Mult_Sway = 0.5
 
+att.Mult_HipDispersion = 0.75
+
 att.ActivateElements = {"ud_glock_10_mag"}
 att.RequireFlags = {"ud_glock_frame_subcompact"}
 

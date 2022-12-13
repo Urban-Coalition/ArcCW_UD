@@ -25,6 +25,8 @@ att.Override_ClipSize_Priority = 2
 att.Mult_Sway = 0.75
 att.Mult_ShootSpeedMult = 1.1
 
+att.Mult_HipDispersion = 0.75
+
 att.ActivateElements = {"ud_uzi_mag_20"}
 
 att.Hook_SelectReloadAnimation = function(wep, anim)

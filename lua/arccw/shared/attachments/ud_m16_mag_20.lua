@@ -23,6 +23,8 @@ att.Mult_ShootSpeedMult = 1.05
 
 att.Mult_MalfunctionMean = 1.5
 
+att.Mult_HipDispersion = 0.75
+
 att.ActivateElements = {"ud_m16_mag_20"}
 
 att.Hook_SelectReloadAnimation = function(wep, anim)

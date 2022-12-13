@@ -31,6 +31,8 @@ att.Mult_ShootSpeedMult = 0.9
 att.Mult_DrawTime = 1.25
 att.Mult_HolsterTime = 1.25
 
+att.Mult_HipDispersion = 1.5
+
 att.Override_Malfunction = true
 
 att.ActivateElements = {"ud_mini14_mag_60"}

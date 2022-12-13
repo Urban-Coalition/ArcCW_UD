@@ -25,6 +25,8 @@ att.Mult_ShootSpeedMult = 0.9
 att.Mult_DrawTime = 1.15
 att.Mult_HolsterTime = 1.15
 
+att.Mult_HipDispersion = 1.25
+
 att.ActivateElements = {"ud_m16_mag_60"}
 
 --[[]

@@ -23,6 +23,8 @@ att.Mult_ReloadTime = 0.9
 att.Override_ClipSize = 10
 att.Mult_Sway = 0.75
 
+att.Mult_HipDispersion = 0.7
+
 att.ActivateElements = {"ud_mini14_mag_10"}
 
 att.Hook_SelectReloadAnimation = function(wep, anim)

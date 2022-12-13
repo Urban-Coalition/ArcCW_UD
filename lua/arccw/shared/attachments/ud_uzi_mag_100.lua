@@ -29,6 +29,8 @@ att.Override_ClipSize = 100
 att.Mult_Sway = 2
 att.Mult_ShootSpeedMult = 0.85
 
+att.Mult_HipDispersion = 1.5
+
 att.ActivateElements = {"ud_uzi_100_mag"}
 
 --att.Override_Jamming = true

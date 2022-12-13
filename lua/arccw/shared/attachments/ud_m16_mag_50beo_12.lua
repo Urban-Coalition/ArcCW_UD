@@ -20,4 +20,6 @@ att.Mult_Sway = 1.5
 
 att.Mult_SpeedMult = 0.975
 
+att.Mult_HipDispersion = 1.15
+
 att.RequireFlags = {"m16_50beo"}

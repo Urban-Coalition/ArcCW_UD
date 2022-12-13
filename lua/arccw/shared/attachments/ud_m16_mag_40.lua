@@ -20,6 +20,8 @@ att.Mult_Sway = 1.5
 att.Mult_SpeedMult = 0.975
 att.Mult_ShootSpeedMult = 0.95
 
+att.Mult_HipDispersion = 1.15
+
 att.ActivateElements = {"ud_m16_mag_40"}
 
 att.Hook_SelectReloadAnimation = function(wep, anim)

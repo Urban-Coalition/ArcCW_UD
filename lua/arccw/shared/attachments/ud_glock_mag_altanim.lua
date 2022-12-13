@@ -11,7 +11,7 @@ att.Desc_Neutrals = {
 
 att.Slot = "ud_glock_mag"
 att.SortOrder = 999
-att.Free = true 
+att.Free = true
 att.IgnorePickX = true
 
 

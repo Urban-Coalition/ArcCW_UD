@@ -27,9 +27,10 @@ att.Mult_Sway = 1.75
 att.Mult_SpeedMult = 0.975
 att.Mult_ShootSpeedMult = 0.925
 
-
 att.Mult_DrawTime = 1.15
 att.Mult_HolsterTime = 1.15
+
+att.Mult_HipDispersion = 1.25
 
 att.ActivateElements = {"ud_mini14_mag_42"}
 

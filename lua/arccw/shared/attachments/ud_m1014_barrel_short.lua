@@ -1,5 +1,10 @@
 att.PrintName = "14\" M4 Super 90 Entry Barrel"
 att.AbbrevName = "14\" Entry Barrel"
+
+if !GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "14\" FC1040 Entry Barrel"
+end
+
 att.Icon = Material("entities/att/acwatt_ud_m1014_barrel_short.png", "smooth mips")
 att.Description = "Short barrel intended for breaching and close quarters use. Noticeably increases pellet spread, but is easier to manuver."
 att.Desc_Pros = {

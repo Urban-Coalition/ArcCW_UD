@@ -1,5 +1,11 @@
-att.PrintName = "Benelli M4 Gripstock"
-att.AbbrevName = "M4 Gripstock"
+att.PrintName = "FC1040 Gripstock"
+att.AbbrevName = "Gripstock"
+
+if GetConVar("arccw_truenames"):GetBool() then
+    att.PrintName = "M4 Super 90 Gripstock"
+end
+
+
 att.Icon = Material("entities/att/acwatt_ud_m1014_stock_buffer.png", "smooth mips")
 att.Description = "Solid stock with a pistol grip. Reduces recoil with minimal side effects."
 att.Desc_Pros = {

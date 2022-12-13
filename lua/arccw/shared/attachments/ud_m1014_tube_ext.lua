@@ -1,4 +1,4 @@
-att.PrintName = "Skeletonkey 7 Shell Tube"
+att.PrintName = "FC1040 7 Shell Tube"
 att.AbbrevName = "7 Shell Tube"
 
 if GetConVar("arccw_truenames"):GetBool() then

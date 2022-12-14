@@ -30,7 +30,7 @@ att.Add_BarrelLength = -4
 
 att.Mult_TriggerDelayTime = 0.75
 
-att.LHIK = true
+att.LHIK = false
 
 att.Override_HoldtypeActive = "pistol"
 att.Override_HoldtypeSights = "revolver"

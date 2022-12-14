@@ -371,7 +371,7 @@ SWEP.AttachmentElements = {
         TrueNameChange = "Glock 17 NyteSyte",
         AttPosMods = {
             [1] = {
-                vpos = Vector(-0.5, 0.1, -0.5),
+                vpos = Vector(-0.5, 0.05, -0.5),
                 vang = Angle(90, 0, 0),
             }
         },

@@ -369,13 +369,19 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 3, bg = 7}},
         NameChange = "GEN3 Homeboy",
         TrueNameChange = "Glock 17 NyteSyte",
+        AttPosMods = {
+            [1] = {
+                vpos = Vector(-0.5, 0.1, -0.5),
+                vang = Angle(90, 0, 0),
+            }
+        },
         Override_IronSightStruct = {
             Pos = Vector(-3.057, 0, 3.397),
             Ang = Angle(0, 0, -90),
             Magnification = 1,
-            }
         }
-    }
+    },
+}
 
 local desg_barr = {
     ["ud_glock_slide_auto"] = 1,

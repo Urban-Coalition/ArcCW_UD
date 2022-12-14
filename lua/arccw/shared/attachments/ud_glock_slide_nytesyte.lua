@@ -12,14 +12,12 @@ att.Desc_Pros = {
 att.Desc_Cons = {
 }
 att.Desc_Neutrals = {
-    "ud.glock.nytesyte"
+    "ud.glock.nytesyte.1",
+    "ud.glock.nytesyte.2",
 }
 att.Slot = "ud_glock_slide"
 
 att.AutoStats = true
-
-att.Mult_SightTime = 0.75
-att.Mult_RecoilSide = 1.5
 
 att.ActivateElements = {"ud_glock_slide_nytesyte"}
 

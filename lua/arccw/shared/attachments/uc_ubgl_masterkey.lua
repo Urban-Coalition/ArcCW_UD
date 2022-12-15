@@ -8,7 +8,6 @@ att.SortOrder = -100000
 
 att.AutoStats = true
 att.Desc_Pros = {
-    "uc.ubgl"
 }
 att.Slot = "uc_ubgl"
 att.ExcludeFlags = {"uc_noubgl"}
@@ -184,6 +183,6 @@ att.UBGL_Reload = function(wep, ubgl)
     wep:SetClip2(load)
 end
 
-att.Mult_SightTime = 1.25
-att.Mult_SpeedMult = 0.85
-att.Mult_SightedSpeedMult = 0.8
+att.Mult_SightTime = 1.2
+att.Mult_SpeedMult = 0.9
+att.Mult_SightedSpeedMult = 0.85

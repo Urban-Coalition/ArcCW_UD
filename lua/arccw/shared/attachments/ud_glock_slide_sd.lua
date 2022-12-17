@@ -56,7 +56,8 @@ att.Override_Firemodes = {
         PrintName = "fcg.slidelock",
         Override_ManualAction = true,
         Mult_ShootVol = 0.8,
-        Mult_AccuracyMOA = 0.75
+        Mult_AccuracyMOA = 0.75,
+        Mult_HipDispersion = 0.75,
     },
     {
         PrintName = "fcg.safe2",

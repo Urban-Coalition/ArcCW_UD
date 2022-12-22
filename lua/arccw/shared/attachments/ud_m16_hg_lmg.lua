@@ -28,7 +28,6 @@ att.Mult_RecoilSide = 0.5
 att.Mult_MalfunctionMean = 2
 
 att.Bipod = true
-att.Override_InBipodPos = Vector(-10, 0, -4)
 att.Mult_BipodDispersion = 0.2
 att.Mult_BipodRecoil = 0.15
 

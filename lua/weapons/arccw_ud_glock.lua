@@ -1059,8 +1059,8 @@ SWEP.Attachments = {
         Slot = "ud_glock_slide",
         Bone = "glock_flash",
         Offset = {
-            vpos = Vector(2.3, -1.5, -31.5), -- Op. CS slide
-            vang = Angle(90, 0, -90),
+            vpos = Vector(2.4, -0.2, -29.2), -- Op. CS slide
+            vang = Angle(90, 3, -90),
         },
     },
     {

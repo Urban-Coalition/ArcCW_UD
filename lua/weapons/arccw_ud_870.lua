@@ -448,7 +448,7 @@ SWEP.AttachmentElements = {
     ["ud_870_barrel_long"] = {
         AttPosMods = {
             [3] = {
-                vpos = Vector(-0.03, -0.65, 42.5),
+                vpos = Vector(-0.03, -0.65, 39.5),
             }
         },
         VMBodygroups = {
@@ -462,7 +462,7 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [3] = {
-                vpos = Vector(-0.03, -0.9, 22),
+                vpos = Vector(-0.03, -0.9, 19),
             }
         },
     },
@@ -521,7 +521,7 @@ SWEP.Attachments = {
         Slot = {"choke", "muzzle_shotgun"},
         Bone = "870_parent",
         Offset = {
-            vpos = Vector(-0.03, -0.75, 29),
+            vpos = Vector(-0.03, -0.75, 26),
             vang = Angle(90, 0, -90),
         },
     },

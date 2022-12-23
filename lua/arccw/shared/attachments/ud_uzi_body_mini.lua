@@ -30,11 +30,13 @@ att.Add_BarrelLength = -4
 
 att.Mult_TriggerDelayTime = 0.75
 
-att.LHIK = false
+att.LHIK = true
 
 att.Override_HoldtypeActive = "pistol"
 att.Override_HoldtypeSights = "revolver"
 
-att.Model = "models/weapons/arccw/atts/mini_lhik.mdl"
+att.Model = "models/weapons/arccw/atts/tactical_lhik.mdl"
+att.ModelOffset = Vector(2, -4.1, -1.9)
+att.OffsetAng = Angle(10, 5, 0)
 
 att.ActivateElements = {"ud_uzi_body_mini"}

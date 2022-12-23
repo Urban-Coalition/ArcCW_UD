@@ -435,7 +435,7 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [4] = {
-                vpos = Vector(0, -0.33, 19.23),
+                vpos = Vector(0, -0.33, 18.85),
                 vang = Angle(90, 0, -90),
             },
             [16] = {
@@ -451,7 +451,7 @@ SWEP.AttachmentElements = {
         },
         AttPosMods = {
             [4] = {
-                vpos = Vector(0, -0.33, 16.0),
+                vpos = Vector(0, -0.33, 15.7),
                 vang = Angle(90, 0, -90),
             },
             [16] = {
@@ -1654,7 +1654,7 @@ SWEP.Attachments = {
         VMScale = Vector(1, 1, 1),
         WMScale = VMScale,
         Offset = {
-            vpos = Vector(0, -.33, 23.57),
+            vpos = Vector(0, -.33, 23.27),
             vang = Angle(90, 0, -90),
         },
         ExcludeFlags = {"sd", "m16_stub"},

@@ -504,9 +504,10 @@ SWEP.Attachments = {
         Bone = "870_parent",
         Offset = {
             vpos = Vector(0, -1.75, -2),
-            vang = Angle(90, 2, -90),
+            vang = Angle(90, 0, -90),
         },
-        VMScale = Vector(1.18,1.18,1.18),
+        VMScale = Vector(1, 1, 1),
+        CorrectiveAng = Angle(1.8, 0.1, 0),
         InstalledEles = {"optic_rail"}
     },
     {

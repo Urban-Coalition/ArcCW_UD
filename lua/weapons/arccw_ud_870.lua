@@ -541,7 +541,7 @@ SWEP.Attachments = {
         Slot = {"foregrip"},
         Bone = "870_slide",
         Offset = {
-            vpos = Vector(0, 1.3, 0),
+            vpos = Vector(0, 1.1, 0),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"ud_shotgun_rail_fg"}

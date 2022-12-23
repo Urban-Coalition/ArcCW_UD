@@ -700,7 +700,6 @@ SWEP.Attachments = {
             vpos = Vector(-0.2, -1.55, -0.5),
             vang = Angle(90, 0, -90),
         },
-        VMScale = Vector(1, 1, 1),
         InstalledEles = {"ud_uzi_rail_optic"}
     },
     {

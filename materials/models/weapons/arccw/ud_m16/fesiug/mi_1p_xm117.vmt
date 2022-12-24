@@ -1,0 +1,19 @@
+VertexLitGeneric
+{
+	$basetexture					"models/weapons/arccw/ud_m16/fesiug/aus_xm117_diff"
+	$bumpmap						"models/weapons/arccw/ud_m16/fesiug/aus_xm117_norm"
+	$phongexponenttexture			"models/weapons/arccw/ud_m16/fesiug/aus_xm117_spec"
+	$color2							"[2 2 2]"
+	$basemapalphaphongmask			0
+	$normalmapalphaenvmapmask		1
+
+	$envmap							env_cubemap
+	$envmaptint						"[0.001 0.001 0.001]"
+	$envmapfresnel					1
+	$phongfresnelranges				"[0.01 0.01 2]"
+
+	$phong							1
+	$phongboost						2
+	$phongexponentfactor			15
+	$phongalbedotint				1
+}

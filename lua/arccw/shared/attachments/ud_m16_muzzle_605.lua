@@ -12,7 +12,7 @@ att.Slot = "ud_m16_muzzle"
 
 att.SortOrder = -101
 
-att.Model = "models/weapons/arccw/atts/fesiug/threeprong_605.mdl"
+att.Model = "models/weapons/arccw/atts/fesiug_threeprong_605.mdl"
 att.ModelOffset = Vector(0.4, 0, 0)
 att.ModelScale = Vector(1, 1, 1)
 att.OffsetAng = Angle(0, 0, 0)

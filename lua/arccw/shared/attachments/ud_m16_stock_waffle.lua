@@ -15,7 +15,7 @@ att.Desc_Neutrals = {
 }
 att.Slot = "ud_m16_stock"
 
-att.Model = "models/weapons/arccw/atts/fesiug/stock_waffle.mdl"
+att.Model = "models/weapons/arccw/atts/fesiug_stock_waffle.mdl"
 att.ModelOffset = Vector(4, 0, 1.7)
 
 att.AutoStats = true

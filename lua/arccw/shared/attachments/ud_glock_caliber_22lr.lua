@@ -42,7 +42,7 @@ att.Override_ShellSounds = ArcCW.TinyShellSoundsTable
 
 att.Hook_GetShootSound = function(wep, sound)
     if wep:GetBuff_Override("Silencer") then
-        return "weapons/arccw_ud/glock/fire_supp_22.ogg" -- Not Placeholder
+        return "arccw_uc/common/fire-22-supp.ogg" -- Not Placeholder
     else
         return "weapons/arccw_ud/glock/fire_22.ogg" -- Not Placeholder
     end

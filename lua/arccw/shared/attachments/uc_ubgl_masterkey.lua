@@ -30,8 +30,8 @@ att.UBGL_RPM = 120
 att.UBGL_Recoil = 2
 
 -- ??
-att.UBGL_Capacity = 3
-att.UBGL_ClipSize = 3
+att.UBGL_Capacity = 4
+att.UBGL_ClipSize = 4
 
 att.LHIK_GunDriver = 2
 att.LHIK_CamDriver = 3
@@ -154,7 +154,7 @@ att.UBGL_Fire = function(wep, ubgl)
 end
 
 att.UBGL_Reload = function(wep, ubgl)
-    if wep:Clip2() >= 3 then return end
+    if wep:Clip2() >= 4 then return end
     if Ammo(wep) <= 0 then return end
 
     wep:SetNextSecondaryFire(CurTime() + 2.75)
@@ -177,7 +177,7 @@ att.UBGL_Reload = function(wep, ubgl)
 
     local reserve = Ammo(wep)
     reserve = reserve + wep:Clip2()
-    local clip = 3
+    local clip = 4
     local load = math.Clamp(clip, 0, reserve)
     wep:GetOwner():SetAmmo(reserve - load, "smg1_grenade")
     wep:SetClip2(load)

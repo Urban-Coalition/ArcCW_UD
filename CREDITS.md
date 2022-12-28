@@ -17,4 +17,4 @@ Additional models from:
 - Thanks to Katka for the following assets:
   - Model 607 Flash Hider: https://steamcommunity.com/sharedfiles/filedetails/?id=2847230030
   - XM177 Flash Hider: https://steamcommunity.com/sharedfiles/filedetails/?id=2843849517
-  - Three-prong Flash Hider: https://steamcommunity.com/sharedfiles/filedetails/?id=2555922033
+  - Three-prong Flash Hider: https://steamcommunity.com/sharedfiles/filedetails/?id=2555919936

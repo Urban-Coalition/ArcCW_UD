@@ -132,7 +132,7 @@ SWEP.Primary.Ammo = "smg1_grenade"
 
 SWEP.SpeedMult = 0.92
 SWEP.SightedSpeedMult = 0.5
-SWEP.SightTime = 0.5
+SWEP.SightTime = 0.35
 SWEP.ShootSpeedMult = 0.75
 
 -- Length --

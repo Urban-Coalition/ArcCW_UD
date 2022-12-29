@@ -142,7 +142,7 @@ SWEP.MalfunctionTakeRound = false
 
 SWEP.SpeedMult = 0.975
 SWEP.SightedSpeedMult = 0.9
-SWEP.SightTime = 0.35
+SWEP.SightTime = 0.25
 SWEP.ShootSpeedMult = 1
 
 -- Length --

@@ -206,8 +206,8 @@ SWEP.BarrelOffsetHip = Vector(2, 0, -5)
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-8.1, 4, -6.5),
-    ang        =    Angle(-6, 0, 180),
+    pos        =    Vector(-8.5, 4, -5),
+    ang        =    Angle(-12, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
     --scale = .85
 }

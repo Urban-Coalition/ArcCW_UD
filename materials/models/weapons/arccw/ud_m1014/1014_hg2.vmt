@@ -7,9 +7,7 @@
 	"$phongexponent"	"3"
 	"$phongalbedotint"	"1"
 	"$phongboost"	"0.5"
-	"$phongfresnelranges"	"[1 1 1]"
-
-        "$halflambert"                 "0"
-        "$nodecal"                     "0"
-        "$ambientocclusion"         "1"
+	"$phongfresnelranges"	"[0 1 7]"
+	
+	$color2 "[1.3 1.3 1.3]"
 }

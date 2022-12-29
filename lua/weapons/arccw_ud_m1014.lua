@@ -180,7 +180,7 @@ SWEP.HolsterAng = Angle(-5.5, 20, -20)
 SWEP.SprintPos = Vector(-0.5, -4, -3)
 SWEP.SprintAng = Angle(3.5, 7, -20)
 
-SWEP.ActivePos = Vector(-0.3, -1, 1)
+SWEP.ActivePos = Vector(-0.1, -0.5, 0.75)
 SWEP.ActiveAng = Angle(0, 0, -0)
 
 SWEP.CrouchPos = Vector(-4, -2, 0)
@@ -571,7 +571,7 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 1, bg = 1}},
         AttPosMods = {
             [3] = {
-                vpos = Vector(-0.02, -0.785, 23.8),
+                vpos = Vector(0, -0.40, 19.6),
             }
         },
     },
@@ -587,12 +587,12 @@ SWEP.AttachmentElements = {
         VMBodygroups = {{ind = 1, bg = 2}},
         AttPosMods = {
             [3] = {
-                vpos = Vector(-0.02, -0.785, 32.5),
+                vpos = Vector(0, -0.40, 26.3),
             }
         },
         Override_IronSightStruct = {
-            Pos = Vector(-2.73, -2, 0.27),
-            Ang = Angle(1.0, 0.01, 0),
+            Pos = Vector(-2.73, -2, 1.01),
+            Ang = Angle(0.95, 0.01, 0),
             Magnification = 1.1
         },
     },
@@ -660,7 +660,7 @@ SWEP.Attachments = {
         Slot = {"choke", "muzzle_shotgun"},
         Bone = "1014_parent",
         Offset = {
-            vpos = Vector(-0.02, -0.785, 30.2),
+            vpos = Vector(0, -0.40, 24.5),
             vang = Angle(90, 0, -90),
         },
         ExcludeFlags = {"nomuzzle"}

@@ -59,10 +59,10 @@ SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN
 
 SWEP.MirrorVMWM = true
 SWEP.WorldModelOffset = {
-    pos        =    Vector(-3.8, 4, -5),
+    pos        =    Vector(-4, 4, -4.5),
     ang        =    Angle(-12, 0, 180),
     bone    =    "ValveBiped.Bip01_R_Hand",
-    scale = 1 - ( 0.35 * 0.75 )
+    scale = 1
 }
 SWEP.DefaultPoseParams = {["grip"] = 0}
 
@@ -168,8 +168,8 @@ SWEP.HoldtypeActive = "ar2"
 SWEP.HoldtypeSights = "rpg"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.73, -2, 0.4),
-     Ang = Angle(.345, 0.01, 0),
+     Pos = Vector(-2.73, -2, 1.1),
+     Ang = Angle(.25, 0.01, 0),
      Magnification = 1.1,
      SwitchToSound = "",
 }
@@ -180,7 +180,7 @@ SWEP.HolsterAng = Angle(-5.5, 20, -20)
 SWEP.SprintPos = Vector(-0.5, -4, -3)
 SWEP.SprintAng = Angle(3.5, 7, -20)
 
-SWEP.ActivePos = Vector(-0.25, 0, 0.1)
+SWEP.ActivePos = Vector(-0.3, -1, 1)
 SWEP.ActiveAng = Angle(0, 0, -0)
 
 SWEP.CrouchPos = Vector(-4, -2, 0)
@@ -644,12 +644,8 @@ SWEP.Attachments = {
         Slot = {"optic_lp", "optic", "optic_sniper"},
         Bone = "1014_parent",
         Offset = {
-            vpos = Vector(-0.025, -2, 3.5),
-            vang = Angle(90, 2, -90),
-        },
-        SlideAmount = {
-            vmin = Vector(-0.025, -2, 2),
-            vmax = Vector(-0.025, -2, 5)
+            vpos = Vector(-0.025, -1.35, 2.5),
+            vang = Angle(90, 0, -90),
         },
     },
     {
@@ -674,7 +670,7 @@ SWEP.Attachments = {
         Slot = {"foregrip","ud_1014_handguard"},
         Bone = "1014_parent",
         Offset = {
-            vpos = Vector(0, 2, 12),
+            vpos = Vector(0, 1.7, 9),
             vang = Angle(90, 0, -90),
         },
         InstalledEles = {"ud_autoshotgun_rail_fg"},
@@ -684,9 +680,10 @@ SWEP.Attachments = {
         Slot = {"tac_pistol"},
         Bone = "1014_parent",
         Offset = {
-            vpos = Vector(0, 1, 19.5),
-            vang = Angle(90, 0, -90),
+            vpos = Vector(0.8, 0.8, 13),
+            vang = Angle(90, 0, 0),
         },
+        InstalledEles = {"ud_autoshotgun_rail_fg"},
     },
     {
         PrintName = "Stock",

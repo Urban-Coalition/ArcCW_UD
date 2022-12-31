@@ -16,11 +16,6 @@ att.Desc_Neutrals = {
 }
 att.Slot = "ud_1014_stock"
 
-att.Model = "models/weapons/arccw/atts/autoshotgun_stock_gripstock.mdl"
-att.ModelOffset = Vector(-0.5, 0, 0.40)
-att.ModelScale = Vector(0.85, 0.97, 0.9)
-att.OffsetAng = Angle(0, 0, 0)
-
 att.AutoStats = true
 
 att.Mult_Recoil = .85

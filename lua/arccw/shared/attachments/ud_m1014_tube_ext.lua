@@ -18,7 +18,7 @@ att.AutoStats = true
 
 att.Override_ClipSize = 7
 att.Mult_Sway = 1.5
-att.Mult_SightTime = 1.1
+att.Mult_SightTime = 1.15
 att.Mult_ReloadTime = 1.15
 att.Mult_SightedSpeedMult = 0.75
 

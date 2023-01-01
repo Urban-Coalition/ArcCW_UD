@@ -7,7 +7,7 @@ if GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.Icon = Material("entities/att/acwatt_ud_870_barrel_long.png", "smooth mips")
-att.Description = "Extended barrel with ring sight. Reduces pellet spread and improves range."
+att.Description = "Extended, unwieldy barrel. Reduces pellet spread and improves range."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
@@ -29,7 +29,5 @@ att.Mult_SpeedMult = 0.95
 att.Mult_HipDispersion = 1.25
 
 att.Add_BarrelLength = 4
-
---att.Override_HoldtypeSights = "rpg"
 
 att.ActivateElements = {"ud_870_barrel_long"}

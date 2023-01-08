@@ -33,7 +33,7 @@ SWEP.TrueName = "Uzi"
 -- Trivia --
 
 SWEP.Trivia_Class = "Submachine Gun"
-SWEP.Trivia_Desc = "Revolutionary submachine gun developed to arm a young State of Israel following the Second World War. Its ergonomic design, low cost, reliability, and great handling made it popular among militaries, police forces, and private security firms worldwide.\n\nIts low recoil and limited range make the weapon good at hip firing in close quarters."
+SWEP.Trivia_Desc = "Revolutionary submachine gun developed to arm a young State of Israel following the Second World War. Its ergonomic design, low cost, reliability, and great handling made it popular among militaries, police forces, and private security firms worldwide.\n\nBoasts excellent recoil control partially due to a below average cyclic rate. Good for hip firing in close quarters."
 SWEP.Trivia_Manufacturer = "IAL Metal Industries"
 SWEP.Trivia_Calibre = "9x19mm Parabellum"
 SWEP.Trivia_Mechanism = "Open Bolt"

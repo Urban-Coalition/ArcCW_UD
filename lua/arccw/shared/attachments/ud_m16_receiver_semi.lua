@@ -1,4 +1,4 @@
-att.PrintName = "AMCAR-NG Automatic Receiver"
+att.PrintName = "AMCAR-NG Sporter Receiver"
 att.AbbrevName = "Sporter Lower"
 
 if GetConVar("arccw_truenames"):GetBool() then

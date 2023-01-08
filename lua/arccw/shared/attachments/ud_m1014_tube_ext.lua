@@ -6,7 +6,7 @@ if GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.Icon = Material("entities/att/acwatt_ud_m1014_tube_ext.png", "smooth mips")
-att.Description = "Extended shell tube that adds weight to the weapon."
+att.Description = "Military-grade extended shell tube that adds weight to the weapon."
 att.Desc_Pros = {}
 att.Desc_Cons = {}
 att.Desc_Neutrals = {}

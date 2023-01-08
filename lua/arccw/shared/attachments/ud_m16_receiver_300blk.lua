@@ -68,3 +68,5 @@ att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
         }
     end
 end
+
+att.GivesFlags = {"cal_subsonic"}

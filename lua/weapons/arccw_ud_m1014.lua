@@ -47,7 +47,7 @@ SWEP.Slot = 3
 
 if GetConVar("arccw_truenames"):GetBool() then
     SWEP.PrintName = SWEP.TrueName
-    SWEP.Trivia_Manufacturer = "Benelli Armi SPA"
+    SWEP.Trivia_Manufacturer = "Benelli Armi SpA"
 end
 
 -- Viewmodel / Worldmodel / FOV --

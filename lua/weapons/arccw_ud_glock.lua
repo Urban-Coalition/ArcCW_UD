@@ -999,7 +999,7 @@ SWEP.Animations = {
             {s = path .. "magrelease.ogg",    t = 0.3, c = ci},
             {s = path .. "magout.ogg",        t = 0.3, c = ci},
             {s = rattel, t = 0.7},
-            {s = path .. "magin.ogg",         t = 0.7, c = ci},
+            {s = path .. "magin.ogg",         t = 1.0, c = ci},
             {s = rottle, t = 1.1},
         },
     },

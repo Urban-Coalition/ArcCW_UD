@@ -44,11 +44,21 @@ att.Override_ShellModel = "models/weapons/arccw/uc_shells/22lr.mdl"
 att.Override_ShellScale = 1
 att.Override_ShellSounds = ArcCW.TinyShellSoundsTable
 
-att.Hook_GetShootSound = function(wep, fsound)
-    if fsound == wep.ShootSound or fsound == wep.FirstShootSound then return "weapons/arccw_ud/mini14/fire_22.ogg" end
-    if fsound == wep.ShootSoundSilenced then return "weapons/arccw_ud/mini14/fire_22_supp.ogg" end
+local path = "arccw_uc/common/"
+
+att.Hook_GetShootSound = function(wep, sound)
+    if wep:GetBuff_Override("Silencer") then
+        return {path .. "fire-22-sup-01.ogg",path .. "fire-22-sup-02.ogg",path .. "fire-22-sup-03.ogg",path .. "fire-22-sup-04.ogg",path .. "fire-22-sup-05.ogg",path .. "fire-22-sup-06.ogg"} -- Placeholder
+    else
+        return {path .. "fire-22-01.ogg",path .. "fire-22-02.ogg",path .. "fire-22-03.ogg",path .. "fire-22-04.ogg",path .. "fire-22-05.ogg",path .. "fire-22-06.ogg"}
+    end
 end
 
-att.Hook_GetDistantShootSound = function(wep, distancesound)
-    if distancesound == wep.DistantShootSound then return "weapons/arccw_ud/mini14/fire_22_dist.ogg" end
+att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
+    if wep:GetBuff_Override("Silencer") then
+        -- fallback to script
+        return
+    else
+        return {path .. "fire-22-dist-01.ogg",path .. "fire-22-dist-02.ogg",path .. "fire-22-dist-03.ogg",path .. "fire-22-dist-04.ogg",path .. "fire-22-dist-05.ogg",path .. "fire-22-dist-06.ogg"}
+    end
 end

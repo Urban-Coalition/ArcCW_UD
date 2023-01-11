@@ -730,8 +730,8 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0.3,
         LHIKEaseIn = 0.4,
-        LHIKEaseOut = 0.15,
-        LHIKOut = 0.4,
+        LHIKEaseOut = 0.45,
+        LHIKOut = 0.7,
         SoundTable = {
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.0},
             {s = path .. "magout.ogg", 	t = 0.15},
@@ -750,8 +750,8 @@ SWEP.Animations = {
         LHIK = true,
         LHIKIn = 0.4,
         LHIKEaseIn = 0.4,
-        LHIKEaseOut = 0.15,
-        LHIKOut = 0.4,
+        LHIKEaseOut = 0.45,
+        LHIKOut = 0.6,
         SoundTable = {
             {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.0},
             {s = path .. "magout.ogg", 	t = 0.15},

@@ -30,6 +30,6 @@ att.Mult_Sway = 3
 
 att.ActivateElements = {"ud_autoshotgun_stock_buffer"}
 
-att.Override_ActivePos = Vector(0.5, 4, 1.5)
+att.Override_ActivePos = Vector(-0.3, 1, 0.6)
 att.Override_HoldtypeActive = "shotgun"
 att.Override_HoldtypeSights = "ar2"

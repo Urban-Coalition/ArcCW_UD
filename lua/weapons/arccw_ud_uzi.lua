@@ -99,7 +99,7 @@ SWEP.Sway = 0.3
 
 SWEP.TriggerDelay = true
 
-SWEP.Delay = 60 / 700
+SWEP.Delay = 60 / 600
 SWEP.Num = 1
 SWEP.Firemodes = {
     {

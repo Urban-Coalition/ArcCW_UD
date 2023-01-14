@@ -32,23 +32,25 @@ att.Mult_ClipSize = .9
 att.Override_ShellModel = "models/weapons/arccw/uc_shells/40sw.mdl"
 att.Override_ShellScale = 1
 
+local path = ")^weapons/arccw_ud/glock/"
+
 att.Hook_GetShootSound = function(wep, sound)
     if wep:GetBuff_Override("Silencer") then
-        return "weapons/arccw_ud/glock/fire_supp_40.ogg" -- Placeholder
+        return {path .. "fire-40-sup-01.ogg",path .. "fire-40-sup-02.ogg",path .. "fire-40-sup-03.ogg",path .. "fire-40-sup-04.ogg",path .. "fire-40-sup-05.ogg",path .. "fire-40-sup-06.ogg"} -- Placeholder
     else
-        return "weapons/arccw_ud/glock/fire_40.ogg" -- Not Placeholder
+        return {path .. "fire-40-01.ogg",path .. "fire-40-02.ogg",path .. "fire-40-03.ogg",path .. "fire-40-04.ogg",path .. "fire-40-05.ogg",path .. "fire-40-06.ogg"}
     end
 end
 
 att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
     if wep:GetBuff_Override("Silencer") then
         -- fallback to script
+        return
     else
-        return { "weapons/arccw_ud/glock/fire_dist_40.ogg" }
+        return {path .. "fire-40-dist-01.ogg",path .. "fire-40-dist-02.ogg",path .. "fire-40-dist-03.ogg",path .. "fire-40-dist-04.ogg",path .. "fire-40-dist-05.ogg",path .. "fire-40-dist-06.ogg"}
     end
 end
 
-local path = ")^weapons/arccw_ud/glock/"
 att.Hook_GetDistantShootSoundIndoors = function(wep, distancesound)
     if wep:GetBuff_Override("Silencer") then
         -- fallback to script

@@ -55,7 +55,7 @@ att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
         -- fallback to script
         return
     else
-        return { "weapons/arccw_ud/glock/fire_dist_22.ogg" }
+        return {path .. "fire-22-dist-01.ogg",path .. "fire-22-dist-02.ogg",path .. "fire-22-dist-03.ogg",path .. "fire-22-dist-04.ogg",path .. "fire-22-dist-05.ogg",path .. "fire-22-dist-06.ogg"}
     end
 end
 

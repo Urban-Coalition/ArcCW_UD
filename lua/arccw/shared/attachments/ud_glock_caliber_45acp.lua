@@ -35,20 +35,22 @@ att.Mult_ClipSize = 0.76
 
 att.Mult_RPM = 0.7619
 
+local path = ")^weapons/arccw_ud/glock/"
 
 att.Hook_GetShootSound = function(wep, sound)
     if wep:GetBuff_Override("Silencer") then
-        return "weapons/arccw_ud/glock/fire_supp_45.ogg" -- Placeholder
+        return {path .. "fire-45-sup-01.ogg",path .. "fire-45-sup-02.ogg",path .. "fire-45-sup-03.ogg",path .. "fire-45-sup-04.ogg",path .. "fire-45-sup-05.ogg",path .. "fire-45-sup-06.ogg"} -- Placeholder
     else
-        return "weapons/arccw_ud/glock/fire_45.ogg" -- Not Placeholder
+        return {path .. "fire-45-01.ogg",path .. "fire-45-02.ogg",path .. "fire-45-03.ogg",path .. "fire-45-04.ogg",path .. "fire-45-05.ogg",path .. "fire-45-06.ogg"}
     end
 end
 
 att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
     if wep:GetBuff_Override("Silencer") then
         -- fallback to script
+        return
     else
-        return { "weapons/arccw_ud/glock/fire_dist_45.ogg" }
+        return {path .. "fire-45-dist-01.ogg",path .. "fire-45-dist-02.ogg",path .. "fire-45-dist-03.ogg",path .. "fire-45-dist-04.ogg",path .. "fire-45-dist-05.ogg",path .. "fire-45-dist-06.ogg"}
     end
 end
 

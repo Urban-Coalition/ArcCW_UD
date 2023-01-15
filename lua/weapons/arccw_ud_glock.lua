@@ -57,7 +57,7 @@ end
 
 SWEP.ViewModel = "models/weapons/arccw/c_ud_glock.mdl"
 SWEP.WorldModel = "models/weapons/arccw/c_ud_glock.mdl"
-SWEP.ViewModelFOV = 70
+SWEP.ViewModelFOV = 60
 SWEP.AnimShoot = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 
 -- Damage --
@@ -171,7 +171,7 @@ SWEP.IronSightStruct = {
      SwitchFromSound = ratel
 }
 
-SWEP.ActivePos = Vector(0.2, -1, 2)
+SWEP.ActivePos = Vector(-0.2, -2, 2)
 SWEP.ActiveAng = Angle(0, 0, -5)
 
 SWEP.CustomizePos = Vector(7, -2, -2)

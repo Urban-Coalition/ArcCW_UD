@@ -13,7 +13,7 @@ att.Slot = "ud_m16_charm"
 att.ActivateElements = {"bravo_dicks_going_fart"}
 att.AdditionalSights = {
     {
-        Pos = Vector(0, 20, -6),
+        Pos = Vector(0, 20, -3),
         Ang = Angle(0, 0, -25),
         GlobalPos = false,
         GlobalAng = true,

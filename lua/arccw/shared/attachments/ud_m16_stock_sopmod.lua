@@ -13,7 +13,7 @@ att.Desc_Cons = {
 }
 att.Desc_Neutrals = {
 }
-att.Slot = "ud_m16_stock"
+att.Slot = {"go_stock", "ud_m16_stock"}
 
 att.Model = "models/weapons/arccw/atts/stock_sopmod.mdl"
 att.ModelOffset = Vector(-0.5, 0, 0.40)

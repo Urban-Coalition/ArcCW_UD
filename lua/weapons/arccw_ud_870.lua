@@ -260,9 +260,6 @@ SWEP.Animations = {
     ["idle"] = {
         Source = "idle",
     },
-    ["idle"] = {
-        Source = "idle",
-    },
     ["idle_empty"] = {
         Source = "idle",
     },
@@ -522,7 +519,7 @@ SWEP.Attachments = {
         Slot = {"choke", "muzzle_shotgun"},
         Bone = "870_parent",
         Offset = {
-            vpos = Vector(-0.03, -0.75, 26),
+            vpos = Vector(-0.03, -0.75, 26.3),
             vang = Angle(90, 0, -90),
         },
     },

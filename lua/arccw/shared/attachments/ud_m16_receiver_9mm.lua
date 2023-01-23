@@ -60,32 +60,36 @@ att.Hook_GetShootSound = function(wep, fsound)
     if fsound == wep.ShootSoundSilenced then return {path .. "fire-sup-01.ogg", path .. "fire-sup-02.ogg", path .. "fire-sup-03.ogg", path .. "fire-sup-04.ogg", path .. "fire-sup-05.ogg", path .. "fire-sup-06.ogg"} end
 end
 
+local tail = ")^/arccw_uc/common/9x19/"
+
 att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
     if wep:GetBuff_Override("Silencer") then
         -- fallback to script
     else
-        return { 
-            path .. "fire-dist-01.ogg",
-            path .. "fire-dist-02.ogg",
-            path .. "fire-dist-03.ogg",
-            path .. "fire-dist-04.ogg",
-            path .. "fire-dist-05.ogg",
-            path .. "fire-dist-06.ogg" 
+        return {
+            tail .. "fire-dist-9x19-pistol-ext-01.ogg",
+            tail .. "fire-dist-9x19-pistol-ext-02.ogg",
+            tail .. "fire-dist-9x19-pistol-ext-03.ogg",
+            tail .. "fire-dist-9x19-pistol-ext-04.ogg",
+            tail .. "fire-dist-9x19-pistol-ext-05.ogg",
+            tail .. "fire-dist-9x19-pistol-ext-06.ogg"
         }
     end
 end
 
-att.Hook_GetDistantShootSoundIndoors = function(wep, distancesound)
+local tail = ")^/arccw_uc/common/9x19/"
+
+att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
     if wep:GetBuff_Override("Silencer") then
         -- fallback to script
     else
         return {
-            path .. "fire-dist-int-01.ogg",
-            path .. "fire-dist-int-02.ogg",
-            path .. "fire-dist-int-03.ogg",
-            path .. "fire-dist-int-04.ogg",
-            path .. "fire-dist-int-05.ogg",
-            path .. "fire-dist-int-06.ogg"
+            tail .. "fire-dist-9x19-pistol-ext-01.ogg",
+            tail .. "fire-dist-9x19-pistol-ext-02.ogg",
+            tail .. "fire-dist-9x19-pistol-ext-03.ogg",
+            tail .. "fire-dist-9x19-pistol-ext-04.ogg",
+            tail .. "fire-dist-9x19-pistol-ext-05.ogg",
+            tail .. "fire-dist-9x19-pistol-ext-06.ogg"
         }
     end
 end

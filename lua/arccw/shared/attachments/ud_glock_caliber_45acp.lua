@@ -45,27 +45,36 @@ att.Hook_GetShootSound = function(wep, sound)
     end
 end
 
+local tail = ")^/arccw_uc/common/45acp/"
+
 att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
     if wep:GetBuff_Override("Silencer") then
         -- fallback to script
-        return
     else
-        return {path .. "fire-45-dist-01.ogg",path .. "fire-45-dist-02.ogg",path .. "fire-45-dist-03.ogg",path .. "fire-45-dist-04.ogg",path .. "fire-45-dist-05.ogg",path .. "fire-45-dist-06.ogg"}
+        return {
+            tail .. "fire-dist-45acp-pistol-ext-01.ogg",
+            tail .. "fire-dist-45acp-pistol-ext-02.ogg",
+            tail .. "fire-dist-45acp-pistol-ext-03.ogg",
+            tail .. "fire-dist-45acp-pistol-ext-04.ogg",
+            tail .. "fire-dist-45acp-pistol-ext-05.ogg",
+            tail .. "fire-dist-45acp-pistol-ext-06.ogg"
+        }
     end
 end
 
-local path = ")^weapons/arccw_ud/glock/"
+local common = ")^/arccw_uc/common/"
+
 att.Hook_GetDistantShootSoundIndoors = function(wep, distancesound)
     if wep:GetBuff_Override("Silencer") then
         -- fallback to script
     else
         return {
-            path .. "fire-dist-int-heavy-01.ogg",
-            path .. "fire-dist-int-heavy-02.ogg",
-            path .. "fire-dist-int-heavy-03.ogg",
-            path .. "fire-dist-int-heavy-04.ogg",
-            path .. "fire-dist-int-heavy-05.ogg",
-            path .. "fire-dist-int-heavy-06.ogg"
+            common .. "fire-dist-int-pistol-heavy-01.ogg",
+            common .. "fire-dist-int-pistol-heavy-02.ogg",
+            common .. "fire-dist-int-pistol-heavy-03.ogg",
+            common .. "fire-dist-int-pistol-heavy-04.ogg",
+            common .. "fire-dist-int-pistol-heavy-05.ogg",
+            common .. "fire-dist-int-pistol-heavy-06.ogg"
         }
     end
 end

@@ -41,12 +41,20 @@ end
 
 att.Override_DistantShootSoundSilenced = nil
 
+local tail = ")^/arccw_uc/common/45acp/"
+
 att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
     if wep:GetBuff_Override("Silencer") then
-        return nil
         -- fallback to script
     else
-        return {path .. "fire-45-dist-01.ogg", path .. "fire-45-dist-02.ogg", path .. "fire-45-dist-03.ogg", path .. "fire-45-dist-04.ogg", path .. "fire-45-dist-05.ogg", path .. "fire-45-dist-06.ogg"}
+        return {
+            tail .. "fire-dist-45acp-pistol-ext-01.ogg",
+            tail .. "fire-dist-45acp-pistol-ext-02.ogg",
+            tail .. "fire-dist-45acp-pistol-ext-03.ogg",
+            tail .. "fire-dist-45acp-pistol-ext-04.ogg",
+            tail .. "fire-dist-45acp-pistol-ext-05.ogg",
+            tail .. "fire-dist-45acp-pistol-ext-06.ogg"
+        }
     end
 end
 

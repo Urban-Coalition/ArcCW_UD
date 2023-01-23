@@ -214,13 +214,16 @@ SWEP.ShootSoundSilenced = {
 --[[SWEP.DistantShootSound = path .. "fire_dist.ogg"
 SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"]]
 SWEP.ShootDrySound = path .. "dryfire.ogg"
+
+local tail = ")^/arccw_uc/common/12ga/"
+
 SWEP.DistantShootSoundOutdoors = {
-    path1 .. "fire-dist-01.ogg",
-    path1 .. "fire-dist-02.ogg",
-    path1 .. "fire-dist-03.ogg",
-    path1 .. "fire-dist-04.ogg",
-    path1 .. "fire-dist-05.ogg",
-    path1 .. "fire-dist-06.ogg"
+    tail .. "fire-dist-12ga-pasg-ext-01.ogg",
+    tail .. "fire-dist-12ga-pasg-ext-02.ogg",
+    tail .. "fire-dist-12ga-pasg-ext-03.ogg",
+    tail .. "fire-dist-12ga-pasg-ext-04.ogg",
+    tail .. "fire-dist-12ga-pasg-ext-05.ogg",
+    tail .. "fire-dist-12ga-pasg-ext-06.ogg"
 }
 SWEP.DistantShootSoundIndoors = {
     common .. "fire-dist-int-shotgun-01.ogg",

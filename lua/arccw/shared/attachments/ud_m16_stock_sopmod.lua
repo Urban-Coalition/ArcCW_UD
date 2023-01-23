@@ -33,12 +33,12 @@ att.ToggleStats = {
     {
         PrintName = "Extended",
         AutoStats = true,
-        ModelOffset = Vector(-0.5, 0, 0.40),
+        ModelOffset = Vector(-1.5, 0, 0.40),
     },
     {
         PrintName = "Collapsed",
         AutoStats = true,
-        ModelOffset = Vector(-1.5, 0, 0.40),
+        ModelOffset = Vector(0, 0, 0.40),
         Mult_RecoilSide = 1.25,
         Add_BarrelLength = -10,
         Mult_ShootSpeedMult = 1.1,

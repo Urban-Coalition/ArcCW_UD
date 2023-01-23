@@ -6,7 +6,7 @@ if GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.Icon = Material("entities/att/acwatt_ud_m16_stock_sopmod.png", "smooth mips")
-att.Description = "Military-grade carbine stock with sophisticated ergonomics. Functions almost identically to a full stock while extended, but can be collapsed to shorten weapon profile."
+att.Description = "Military-grade carbine stock with sophisticated ergonomics. Handles faster compared to a standard carbine stock, but is less stable.\n\nToggling this stock modifies performance accordingly."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
@@ -23,7 +23,8 @@ att.OffsetAng = Angle(0, 0, 0)
 att.AutoStats = true
 att.SortOrder = 6
 
-att.Mult_Sway = 1.05
+att.Mult_Sway = 1.25
+att.Mult_SightedSpeedMult = 1.15
 
 att.ToggleSound = "arccw_uc/common/stockslide.ogg"
 
@@ -39,11 +40,11 @@ att.ToggleStats = {
         PrintName = "Collapsed",
         AutoStats = true,
         ModelOffset = Vector(0, 0, 0.40),
-        Mult_RecoilSide = 1.25,
-        Add_BarrelLength = -10,
+        Mult_RecoilSide = 1.5,
+        Add_BarrelLength = -4,
         Mult_ShootSpeedMult = 1.1,
-        Mult_Sway = 1.2,
-        --Mult_SightTime = 0.9,
+        Mult_SightTime = 0.85,
+        Mult_MoveDispersion = 1.15,
         Override_ActivePos = Vector(0.33, -3, 1.33),
     },
 }

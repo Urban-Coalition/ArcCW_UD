@@ -1,12 +1,12 @@
-att.PrintName = "AMCAR MOE Stock"
+att.PrintName = "MOE Carbine Stock"
 att.AbbrevName = "MOE Stock"
 
 if GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "M16 MOE Stock"
+    att.PrintName = "MOE Carbine Stock"
 end
 
 att.Icon = Material("entities/att/acwatt_ud_m16_stock_moe.png", "smooth mips")
-att.Description = "Rebalance me!!!"
+att.Description = "Aftermarket adjustable carbine stock with anti-slip buttpads. Reduces sway compared to a standard carbine stock, but is not as agile.\n\nToggling this stock modifies performance accordingly."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
@@ -23,8 +23,8 @@ att.OffsetAng = Angle(0, 0, 0)
 att.AutoStats = true
 att.SortOrder = 6
 
-att.Mult_Sway = 1.25
-att.Mult_SightedSpeedMult = 1.15
+att.Mult_Sway = 1.1
+att.Mult_SightedSpeedMult = 1.075
 
 att.ActivateElements = {"stock_231_tube"}
 
@@ -40,8 +40,8 @@ att.ToggleStats = {
         AutoStats = true,
         Mult_RecoilSide = 1.5,
         Add_BarrelLength = -4,
-        Mult_ShootSpeedMult = 1.1,
         Mult_SightTime = 0.9,
+        Mult_ShootSpeedMult = 1.05,
         Override_ActivePos = Vector(0.33, -3, 1.33),
     },
 }

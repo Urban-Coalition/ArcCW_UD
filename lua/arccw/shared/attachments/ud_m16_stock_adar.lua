@@ -17,6 +17,7 @@ att.Desc_Cons = {
 att.Desc_Neutrals = {
 }
 att.Slot = "ud_m16_stock"
+att.SortOrder = 10
 
 att.AutoStats = true
 

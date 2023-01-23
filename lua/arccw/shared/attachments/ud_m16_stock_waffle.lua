@@ -6,7 +6,7 @@ if GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.Icon = Material("entities/att/acwatt_ud_m16_stock_waffle.png", "smooth mips")
-att.Description = "Multi-position adjustable combat stock used on the M4 carbine. "
+att.Description = "Multi-position adjustable combat stock used on the M4 carbine. Has lower recoil than a standard carbine stock, but isn't as agile.\n\nToggling this stock modifies performance accordingly."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
@@ -23,7 +23,7 @@ att.AutoStats = true
 att.SortOrder = 6
 
 att.Mult_Sway = 1.25
-att.Mult_SightedSpeedMult = 1.15
+att.Mult_SightedSpeedMult = 1.1
 
 att.ActivateElements = {"stock_231_tube"}
 
@@ -37,6 +37,9 @@ att.ToggleStats = {
         PrintName = "Collapsed",
         AutoStats = true,
         ModelOffset = Vector(5.0, 0, 1.7),
+        Mult_RecoilSide = 1.25,
+        Add_BarrelLength = -4,
+        Mult_SightTime = 0.9,
     },
 }
 

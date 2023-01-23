@@ -6,7 +6,7 @@ if GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.Icon = Material("entities/att/acwatt_ud_m16_stock_moe.png", "smooth mips")
-att.Description = "Aftermarket adjustable carbine stock with anti-slip buttpads. Reduces sway compared to a standard carbine stock, but is not as agile.\n\nToggling this stock modifies performance accordingly."
+att.Description = "Aftermarket adjustable carbine stock with anti-slip buttpads. Reduces sway compared to a standard carbine stock, but is slightly less agile.\n\nToggling this stock modifies performance accordingly."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {

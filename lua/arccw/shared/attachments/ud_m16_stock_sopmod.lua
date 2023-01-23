@@ -45,6 +45,5 @@ att.ToggleStats = {
         Mult_ShootSpeedMult = 1.1,
         Mult_SightTime = 0.85,
         Mult_MoveDispersion = 1.15,
-        Override_ActivePos = Vector(0.33, -3, 1.33),
     },
 }

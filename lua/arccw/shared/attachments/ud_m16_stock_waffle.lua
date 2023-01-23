@@ -16,7 +16,8 @@ att.Desc_Neutrals = {
 att.Slot = {"go_stock", "ud_m16_stock"}
 
 att.Model = "models/weapons/arccw/atts/fesiug_stock_waffle.mdl"
-att.ModelOffset = Vector(4, 0, 1.7)
+att.ModelOffset = Vector(4.25, 0, 1.7)
+att.ModelScale = Vector(1.14, 1.14, 1.14)
 
 att.AutoStats = true
 att.SortOrder = 6

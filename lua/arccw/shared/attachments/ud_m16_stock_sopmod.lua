@@ -16,8 +16,8 @@ att.Desc_Neutrals = {
 att.Slot = {"go_stock", "ud_m16_stock"}
 
 att.Model = "models/weapons/arccw/atts/stock_sopmod.mdl"
-att.ModelOffset = Vector(-0.5, 0, 0.40)
-att.ModelScale = Vector(0.6, 0.6, 0.6)
+att.ModelOffset = Vector(-0.57, 0, 0.40)
+att.ModelScale = Vector(0.74, 0.74, 0.74)
 att.OffsetAng = Angle(0, 0, 0)
 
 att.AutoStats = true

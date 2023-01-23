@@ -1727,10 +1727,9 @@ SWEP.Attachments = {
         InstalledEles = {"stock_231_tube"},
         Bone = "m16_parent",
         Offset = {
-            vpos = Vector(-0.02, 0, -3.25),
+            vpos = Vector(-0.02, 0, -3.75),
             vang = Angle(90, 0, -90),
         },
-        VMScale = Vector(1.16, 1.16, 1.16),
     },
     {
         PrintName = "Magazine",

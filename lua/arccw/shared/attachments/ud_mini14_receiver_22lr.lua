@@ -73,6 +73,23 @@ att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
     end
 end
 
+att.Hook_GetDistantShootSoundIndoors = function(wep, distancesound)
+    if wep:GetBuff_Override("Silencer") then
+        -- fallback to script
+        return
+    else
+        return {
+            path .. "fire-dist-int-pistol-light-01.ogg",
+            path .. "fire-dist-int-pistol-light-02.ogg",
+            path .. "fire-dist-int-pistol-light-03.ogg",
+            path .. "fire-dist-int-pistol-light-04.ogg",
+            path .. "fire-dist-int-pistol-light-05.ogg",
+            path .. "fire-dist-int-pistol-light-06.ogg"
+        }
+    end
+end
+
+
 local slotinfo = {
     [7] = {"15-Round Mag", "15-Round Mag", Material("entities/att/acwatt_ud_mini14_mag_15_22lr.png", "smooth mips")},
 }

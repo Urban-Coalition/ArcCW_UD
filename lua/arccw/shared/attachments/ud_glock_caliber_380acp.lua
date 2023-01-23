@@ -54,12 +54,12 @@ att.Hook_GetDistantShootSoundIndoors = function(wep, distancesound)
         -- fallback to script
     else
         return {
-            common .. "fire-dist-int-pistol-heavy-01.ogg",
-            common .. "fire-dist-int-pistol-heavy-02.ogg",
-            common .. "fire-dist-int-pistol-heavy-03.ogg",
-            common .. "fire-dist-int-pistol-heavy-04.ogg",
-            common .. "fire-dist-int-pistol-heavy-05.ogg",
-            common .. "fire-dist-int-pistol-heavy-06.ogg"
+            common .. "fire-dist-int-pistol-light-01.ogg",
+            common .. "fire-dist-int-pistol-light-02.ogg",
+            common .. "fire-dist-int-pistol-light-03.ogg",
+            common .. "fire-dist-int-pistol-light-04.ogg",
+            common .. "fire-dist-int-pistol-light-05.ogg",
+            common .. "fire-dist-int-pistol-light-06.ogg"
         }
     end
 end

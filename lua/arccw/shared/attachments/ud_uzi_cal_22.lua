@@ -52,3 +52,20 @@ att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
         return {path .. "fire-22-dist-01.ogg",path .. "fire-22-dist-02.ogg",path .. "fire-22-dist-03.ogg",path .. "fire-22-dist-04.ogg",path .. "fire-22-dist-05.ogg",path .. "fire-22-dist-06.ogg"}
     end
 end
+
+att.Hook_GetDistantShootSoundIndoors = function(wep, distancesound)
+    if wep:GetBuff_Override("Silencer") then
+        -- fallback to script
+        return
+    else
+        return {
+            path .. "fire-dist-int-pistol-light-01.ogg",
+            path .. "fire-dist-int-pistol-light-02.ogg",
+            path .. "fire-dist-int-pistol-light-03.ogg",
+            path .. "fire-dist-int-pistol-light-04.ogg",
+            path .. "fire-dist-int-pistol-light-05.ogg",
+            path .. "fire-dist-int-pistol-light-06.ogg"
+        }
+    end
+end
+

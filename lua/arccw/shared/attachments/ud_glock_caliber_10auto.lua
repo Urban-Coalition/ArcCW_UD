@@ -33,19 +33,30 @@ att.Mult_PhysBulletMuzzleVelocity = 400 / 375
 att.Mult_ClipSize = 0.9
 att.Override_ShellScale = 1
 
+local path = ")^weapons/arccw_ud/glock/"
+
 att.Hook_GetShootSound = function(wep, sound)
     if wep:GetBuff_Override("Silencer") then
-        return "weapons/arccw_ud/glock/fire_supp_10.ogg" -- Placeholder
+        return {path .. "fire-40-sup-01.ogg",path .. "fire-40-sup-02.ogg",path .. "fire-40-sup-03.ogg",path .. "fire-40-sup-04.ogg",path .. "fire-40-sup-05.ogg",path .. "fire-40-sup-06.ogg"} -- Placeholder
     else
-        return "weapons/arccw_ud/glock/fire_10.ogg" -- Not Placeholder
+        return {path .. "fire-10-01.ogg",path .. "fire-10-02.ogg",path .. "fire-10-03.ogg",path .. "fire-10-04.ogg",path .. "fire-10-05.ogg",path .. "fire-10-06.ogg"}
     end
 end
+
+local tail = ")^/arccw_uc/common/10x25/"
 
 att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
     if wep:GetBuff_Override("Silencer") then
         -- fallback to script
     else
-        return { "weapons/arccw_ud/glock/fire_dist_10.ogg" }
+        return {
+            tail .. "fire-dist-10x25-pistol-ext-01.ogg",
+            tail .. "fire-dist-10x25-pistol-ext-02.ogg",
+            tail .. "fire-dist-10x25-pistol-ext-03.ogg",
+            tail .. "fire-dist-10x25-pistol-ext-04.ogg",
+            tail .. "fire-dist-10x25-pistol-ext-05.ogg",
+            tail .. "fire-dist-10x25-pistol-ext-06.ogg"
+        }
     end
 end
 

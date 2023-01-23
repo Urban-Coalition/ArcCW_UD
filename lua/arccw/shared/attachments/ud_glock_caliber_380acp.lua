@@ -47,7 +47,7 @@ att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
     end
 end
 
-local common = ")^/arccw_uc/common/"
+local common = ")/arccw_uc/common/"
 
 att.Hook_GetDistantShootSoundIndoors = function(wep, distancesound)
     if wep:GetBuff_Override("Silencer") then

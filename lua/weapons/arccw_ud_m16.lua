@@ -213,8 +213,8 @@ SWEP.WorldModelOffset = {
 
 -- Firing sounds --
 
-local path = ")^weapons/arccw_ud/m16/"
-local common = ")^/arccw_uc/common/"
+local path = ")weapons/arccw_ud/m16/"
+local common = ")/arccw_uc/common/"
 
 SWEP.ShootSound = {
     path .. "fire-01.ogg",
@@ -237,7 +237,7 @@ SWEP.DistantShootSound = nil
 SWEP.DistantShootSoundSilenced = nil
 SWEP.ShootDrySound = path .. "dryfire.ogg"
 
-local tail = ")^/arccw_uc/common/556x45/"
+local tail = ")/arccw_uc/common/556x45/"
 
 SWEP.DistantShootSoundOutdoors = {
     tail .. "fire-dist-556x45-rif-ext-01.ogg",
@@ -807,7 +807,7 @@ SWEP.Animations = {
         Source = "idle",
         MinProgress = .1,
         SoundTable = {
-            {s = ")^weapons/arccw_ud/uzi/prefire.ogg",         t = 0, c = ci},
+            {s = ")weapons/arccw_ud/uzi/prefire.ogg",         t = 0, c = ci},
         },
     },
     ["fire"] = {

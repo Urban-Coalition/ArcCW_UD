@@ -172,8 +172,8 @@ SWEP.BarrelOffsetHip = Vector(6, 0, -8)
 
 -- Firing sounds --
 
-local common = ")^/arccw_uc/common/"
-local path = ")^/arccw_uc/common/40mm/"
+local common = ")/arccw_uc/common/"
+local path = ")/arccw_uc/common/40mm/"
 local rottle = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
 
 --SWEP.Hook_AddShootSound = ArcCW.UC.InnyOuty

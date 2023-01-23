@@ -191,9 +191,9 @@ SWEP.WorldModelOffset = {
 
 -- Firing sounds --
 
-local path = ")^weapons/arccw_ud/glock/"
-local path1 = ")^weapons/arccw_ud/uzi/"
-local common = ")^/arccw_uc/common/"
+local path = ")weapons/arccw_ud/glock/"
+local path1 = ")weapons/arccw_ud/uzi/"
+local common = ")/arccw_uc/common/"
 SWEP.ShootSound = {
     path .. "fire-01.ogg",
     path .. "fire-02.ogg",
@@ -215,7 +215,7 @@ SWEP.DistantShootSound = nil
 SWEP.DistantShootSoundSilenced = nil
 SWEP.ShootDrySound = path .. "dryfire.ogg"
 
-local tail = ")^/arccw_uc/common/9x19/"
+local tail = ")/arccw_uc/common/9x19/"
 
 SWEP.DistantShootSoundOutdoors = {
     tail .. "fire-dist-9x19-pistol-ext-01.ogg",

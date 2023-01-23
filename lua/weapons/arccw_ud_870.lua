@@ -187,8 +187,8 @@ SWEP.MalfunctionMean = 500
 SWEP.MalfunctionVariance = 0.99
 -- Firing sounds --
 
-local path = ")^weapons/arccw_ud/870/"
-local common = ")^/arccw_uc/common/"
+local path = ")weapons/arccw_ud/870/"
+local common = ")/arccw_uc/common/"
 SWEP.ShootSound = {
     path .. "fire-01.ogg",
     path .. "fire-02.ogg",
@@ -209,7 +209,7 @@ SWEP.ShootSoundSilenced = {
 SWEP.DistantShootSoundSilenced = common .. "sup_tail.ogg"]]
 SWEP.ShootDrySound = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}
 
-local tail = ")^/arccw_uc/common/12ga/"
+local tail = ")/arccw_uc/common/12ga/"
 
 SWEP.DistantShootSoundOutdoors = {
     tail .. "fire-dist-12ga-pasg-ext-01.ogg",

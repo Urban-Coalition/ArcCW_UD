@@ -33,7 +33,7 @@ att.Mult_ClipSize = 0.9
 att.Override_ShellModel = "models/weapons/arccw/uc_shells/357sig.mdl"
 att.Override_ShellScale = 1
 
-local path = ")^weapons/arccw_ud/glock/"
+local path = ")weapons/arccw_ud/glock/"
 
 att.Hook_GetShootSound = function(wep, sound)
     if wep:GetBuff_Override("Silencer") then
@@ -43,7 +43,7 @@ att.Hook_GetShootSound = function(wep, sound)
     end
 end
 
-local tail = ")^/arccw_uc/common/357sig/"
+local tail = ")/arccw_uc/common/357sig/"
 
 att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
     if wep:GetBuff_Override("Silencer") then

@@ -35,7 +35,7 @@ att.Mult_ClipSize = 0.76
 
 att.Mult_RPM = 0.7619
 
-local path = ")^weapons/arccw_ud/glock/"
+local path = ")weapons/arccw_ud/glock/"
 
 att.Hook_GetShootSound = function(wep, sound)
     if wep:GetBuff_Override("Silencer") then
@@ -45,7 +45,7 @@ att.Hook_GetShootSound = function(wep, sound)
     end
 end
 
-local tail = ")^/arccw_uc/common/45acp/"
+local tail = ")/arccw_uc/common/45acp/"
 
 att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
     if wep:GetBuff_Override("Silencer") then
@@ -62,7 +62,7 @@ att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
     end
 end
 
-local common = ")^/arccw_uc/common/"
+local common = ")/arccw_uc/common/"
 
 att.Hook_GetDistantShootSoundIndoors = function(wep, distancesound)
     if wep:GetBuff_Override("Silencer") then

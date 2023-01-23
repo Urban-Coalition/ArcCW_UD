@@ -26,3 +26,17 @@ att.Mult_Sway = 1.25
 att.Mult_SightedSpeedMult = 1.15
 
 att.ActivateElements = {"stock_231_tube"}
+
+att.ToggleStats = {
+    {
+        PrintName = "Extended",
+        AutoStats = true,
+        ModelOffset = Vector(3.0, 0, 1.7),
+    },
+    {
+        PrintName = "Collapsed",
+        AutoStats = true,
+        ModelOffset = Vector(5.0, 0, 1.7),
+    },
+}
+

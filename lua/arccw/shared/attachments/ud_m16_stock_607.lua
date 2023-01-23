@@ -37,6 +37,5 @@ att.ToggleStats = {
         Mult_SightTime = 0.8,
         Mult_Recoil = 1.15,
         Add_BarrelLength = -4,
-        Override_ActivePos = Vector(0.33, -3, 1.33),
     },
 }

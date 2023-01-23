@@ -34,29 +34,26 @@ att.Override_ShellModel = "models/weapons/arccw/uc_shells/357sig.mdl"
 att.Override_ShellScale = 1
 
 local path = ")weapons/arccw_ud/glock/"
+local common = ")/arccw_uc/common/"
+local tail = common .. "357sig/"
+local fire357 = {path .. "fire-357-01.ogg",path .. "fire-357-02.ogg",path .. "fire-357-03.ogg",path .. "fire-357-04.ogg",path .. "fire-357-05.ogg",path .. "fire-357-06.ogg"}
+local fire357sup = {path .. "fire-sup-01.ogg",path .. "fire-sup-02.ogg",path .. "fire-sup-03.ogg",path .. "fire-sup-04.ogg",path .. "fire-sup-05.ogg",path .. "fire-sup-06.ogg"} -- Placeholder
+local fire357dist = {tail .. "fire-dist-357sig-pistol-ext-01.ogg",tail .. "fire-dist-357sig-pistol-ext-02.ogg",tail .. "fire-dist-357sig-pistol-ext-03.ogg",tail .. "fire-dist-357sig-pistol-ext-04.ogg",tail .. "fire-dist-357sig-pistol-ext-05.ogg",tail .. "fire-dist-357sig-pistol-ext-06.ogg"}
 
 att.Hook_GetShootSound = function(wep, sound)
     if wep:GetBuff_Override("Silencer") then
-        return {path .. "fire-sup-01.ogg",path .. "fire-sup-02.ogg",path .. "fire-sup-03.ogg",path .. "fire-sup-04.ogg",path .. "fire-sup-05.ogg",path .. "fire-sup-06.ogg"} -- Placeholder
+        return fire357sup
     else
-        return {path .. "fire-357-01.ogg",path .. "fire-357-02.ogg",path .. "fire-357-03.ogg",path .. "fire-357-04.ogg",path .. "fire-357-05.ogg",path .. "fire-357-06.ogg"}
+        return fire357
     end
 end
 
-local tail = ")/arccw_uc/common/357sig/"
 
 att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
     if wep:GetBuff_Override("Silencer") then
         -- fallback to script
     else
-        return {
-            tail .. "fire-dist-357sig-pistol-ext-01.ogg",
-            tail .. "fire-dist-357sig-pistol-ext-02.ogg",
-            tail .. "fire-dist-357sig-pistol-ext-03.ogg",
-            tail .. "fire-dist-357sig-pistol-ext-04.ogg",
-            tail .. "fire-dist-357sig-pistol-ext-05.ogg",
-            tail .. "fire-dist-357sig-pistol-ext-06.ogg"
-        }
+        return fire357dist
     end
 end
 

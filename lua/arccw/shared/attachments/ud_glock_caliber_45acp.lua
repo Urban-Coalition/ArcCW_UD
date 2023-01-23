@@ -36,46 +36,36 @@ att.Mult_ClipSize = 0.76
 att.Mult_RPM = 0.7619
 
 local path = ")weapons/arccw_ud/glock/"
+local common = ")/arccw_uc/common/"
+local tail = common .. "45acp/"
+local fire45 = {path .. "fire-45-01.ogg",path .. "fire-45-02.ogg",path .. "fire-45-03.ogg",path .. "fire-45-04.ogg",path .. "fire-45-05.ogg",path .. "fire-45-06.ogg"}
+local fire45sup =  {path .. "fire-45-sup-01.ogg",path .. "fire-45-sup-02.ogg",path .. "fire-45-sup-03.ogg",path .. "fire-45-sup-04.ogg",path .. "fire-45-sup-05.ogg",path .. "fire-45-sup-06.ogg"}
+local fire45dist = {tail .. "fire-dist-45acp-pistol-ext-01.ogg",tail .. "fire-dist-45acp-pistol-ext-02.ogg",tail .. "fire-dist-45acp-pistol-ext-03.ogg",tail .. "fire-dist-45acp-pistol-ext-04.ogg",tail .. "fire-dist-45acp-pistol-ext-05.ogg",tail .. "fire-dist-45acp-pistol-ext-06.ogg"}
+local fire45distint = {common .. "fire-dist-int-pistol-heavy-01.ogg", common .. "fire-dist-int-pistol-heavy-02.ogg", common .. "fire-dist-int-pistol-heavy-03.ogg", common .. "fire-dist-int-pistol-heavy-04.ogg", common .. "fire-dist-int-pistol-heavy-05.ogg", common .. "fire-dist-int-pistol-heavy-06.ogg"}
 
 att.Hook_GetShootSound = function(wep, sound)
     if wep:GetBuff_Override("Silencer") then
-        return {path .. "fire-45-sup-01.ogg",path .. "fire-45-sup-02.ogg",path .. "fire-45-sup-03.ogg",path .. "fire-45-sup-04.ogg",path .. "fire-45-sup-05.ogg",path .. "fire-45-sup-06.ogg"} -- Placeholder
+        return fire45sup
     else
-        return {path .. "fire-45-01.ogg",path .. "fire-45-02.ogg",path .. "fire-45-03.ogg",path .. "fire-45-04.ogg",path .. "fire-45-05.ogg",path .. "fire-45-06.ogg"}
+        return fire45
     end
 end
 
-local tail = ")/arccw_uc/common/45acp/"
 
 att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
     if wep:GetBuff_Override("Silencer") then
         -- fallback to script
     else
-        return {
-            tail .. "fire-dist-45acp-pistol-ext-01.ogg",
-            tail .. "fire-dist-45acp-pistol-ext-02.ogg",
-            tail .. "fire-dist-45acp-pistol-ext-03.ogg",
-            tail .. "fire-dist-45acp-pistol-ext-04.ogg",
-            tail .. "fire-dist-45acp-pistol-ext-05.ogg",
-            tail .. "fire-dist-45acp-pistol-ext-06.ogg"
-        }
+        return fire45dist
     end
 end
 
-local common = ")/arccw_uc/common/"
 
 att.Hook_GetDistantShootSoundIndoors = function(wep, distancesound)
     if wep:GetBuff_Override("Silencer") then
         -- fallback to script
     else
-        return {
-            common .. "fire-dist-int-pistol-heavy-01.ogg",
-            common .. "fire-dist-int-pistol-heavy-02.ogg",
-            common .. "fire-dist-int-pistol-heavy-03.ogg",
-            common .. "fire-dist-int-pistol-heavy-04.ogg",
-            common .. "fire-dist-int-pistol-heavy-05.ogg",
-            common .. "fire-dist-int-pistol-heavy-06.ogg"
-        }
+        return fire45distint
     end
 end
 

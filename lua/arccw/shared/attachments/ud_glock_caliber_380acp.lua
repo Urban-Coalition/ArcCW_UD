@@ -31,11 +31,19 @@ att.Override_PhysBulletMuzzleVelocity = 310
 att.Override_ShellModel = "models/weapons/arccw/uc_shells/357sig.mdl"
 att.Override_ShellScale = 1
 
+local path = ")weapons/arccw_ud/glock/"
+local common = ")/arccw_uc/common/"
+local tail = common .. "357sig/"
+local fire380 = "weapons/arccw_ud/glock/fire_380.ogg"
+local fire380sup = { "weapons/arccw_ud/glock/fire_supp_380.ogg" }
+local fire380dist = { "weapons/arccw_ud/glock/fire_dist_380.ogg" }
+local fire380distint = {common .. "fire-dist-int-pistol-light-01.ogg",common .. "fire-dist-int-pistol-light-02.ogg",common .. "fire-dist-int-pistol-light-03.ogg",common .. "fire-dist-int-pistol-light-04.ogg",common .. "fire-dist-int-pistol-light-05.ogg",common .. "fire-dist-int-pistol-light-06.ogg"}
+
 att.Hook_GetShootSound = function(wep, sound)
     if wep:GetBuff_Override("Silencer") then
-        return "weapons/arccw_ud/glock/fire_supp_380.ogg"
+        return fire380sup
     else
-        return "weapons/arccw_ud/glock/fire_380.ogg"
+        return fire380
     end
 end
 
@@ -43,24 +51,16 @@ att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
     if wep:GetBuff_Override("Silencer") then
         -- fallback to script
     else
-        return { "weapons/arccw_ud/glock/fire_dist_380.ogg" }
+        return fire380dist
     end
 end
 
-local common = ")/arccw_uc/common/"
 
 att.Hook_GetDistantShootSoundIndoors = function(wep, distancesound)
     if wep:GetBuff_Override("Silencer") then
         -- fallback to script
     else
-        return {
-            common .. "fire-dist-int-pistol-light-01.ogg",
-            common .. "fire-dist-int-pistol-light-02.ogg",
-            common .. "fire-dist-int-pistol-light-03.ogg",
-            common .. "fire-dist-int-pistol-light-04.ogg",
-            common .. "fire-dist-int-pistol-light-05.ogg",
-            common .. "fire-dist-int-pistol-light-06.ogg"
-        }
+        return fire380distint
     end
 end
 

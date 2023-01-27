@@ -1,0 +1,9 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/arccw/ud_glock/trit_glow"
+
+	 $selfillum "0"
+  	 $selfillummask "models/weapons/arccw/ud_glock/trit_glow"
+
+	$color2 "[100 10 10]"
+}

@@ -7,7 +7,7 @@ end
 
 att.SortOrder = 10
 att.Icon = Material("entities/att/acwatt_ud_glock_mag_10.png", "smooth mips")
-att.Description = "Low-capacity magazine for the Glock, mostly used on subcompact variants like the Glock 26. The lighter load makes the weapon even more ergonomic."
+att.Description = "Low-capacity magazine for the Glock, available on subcompact variants like the Glock 26. The lighter load makes the weapon even more ergonomic."
 att.Desc_Pros = {}
 att.Desc_Cons = {}
 att.Desc_Neutrals = {}

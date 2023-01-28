@@ -9,7 +9,9 @@ att.SortOrder = 33
 att.Icon = Material("entities/att/acwatt_ud_glock_mag_33.png", "smooth mips")
 att.Description = "Extended stick magazine. Heavier and throws off weapon balance, but does allow you to fire for longer."
 att.Desc_Pros = {}
-att.Desc_Cons = {}
+att.Desc_Cons = {
+    "uc.jam"
+}
 att.Desc_Neutrals = {}
 att.Slot = "ud_glock_mag"
 
@@ -24,6 +26,10 @@ att.Mult_Sway = 1.5
 att.Mult_ShootSpeedMult = 0.95
 
 att.Mult_HipDispersion = 1.25
+
+att.Override_Malfunction = true
+att.Mult_MalfunctionMean = 0.25
+att.Mult_MalfunctionVariance = 1.5
 
 att.ActivateElements = {"ud_glock_33_mag"}
 

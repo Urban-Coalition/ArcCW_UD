@@ -27,7 +27,7 @@ att.Mult_Sway = 3
 att.Mult_ShootSpeedMult = 0.9
 
 att.Override_Malfunction = true
-att.Mult_MalfunctionMean = 0.75
+att.Mult_MalfunctionMean = 0.6
 att.Mult_MalfunctionVariance = 1.5
 
 att.ActivateElements = {"ud_glock_100_mag"}

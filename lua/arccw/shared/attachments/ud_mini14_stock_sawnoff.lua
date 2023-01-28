@@ -32,5 +32,3 @@ att.Mult_ShootSpeedMult = 1.2
 att.Add_BarrelLength = -4
 
 att.ActivateElements = {"ud_mini14_stock_sawnoff"}
-
-att.Override_ActivePos = Vector(0.5, 2, 1.5)

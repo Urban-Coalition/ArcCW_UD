@@ -6,7 +6,7 @@
 	"$phongexponenttexture" "models/weapons/arccw/ud_glock/glock_exp"
 	"$phongalbedotint"	"1"
 
-	"$color2"			"[0 0 0]"
+	"$color2"			"[3 3 3]"
 	"$translucent"		"1"
 
 	"$phong" "1"

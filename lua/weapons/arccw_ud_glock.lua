@@ -107,6 +107,7 @@ SWEP.Firemodes = {
         Mode = 0,
     }
 }
+SWEP.FiremodeSound = false
 
 SWEP.ShootPitch = 100
 SWEP.ShootVol = 120

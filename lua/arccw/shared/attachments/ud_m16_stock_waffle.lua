@@ -25,6 +25,8 @@ att.SortOrder = 6
 att.Mult_Sway = 1.25
 att.Mult_SightedSpeedMult = 1.1
 
+att.ToggleSound = "arccw_uc/common/stockslide.ogg"
+
 att.ActivateElements = {"stock_231_tube"}
 
 att.ToggleStats = {

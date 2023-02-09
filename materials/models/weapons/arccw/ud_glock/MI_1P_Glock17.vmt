@@ -3,8 +3,7 @@
 	"$basetexture" "models\weapons\arccw\ud_glock\glock"
 	"$bumpmap" "models\weapons\arccw\ud_glock\glock_normals"
 	
-	"$color2" "[0.65 0.65 0.65]" // important, slide color
-	"$color1" "[23.65 0.65 0.65]" // important, slide color
+	"$color2" "[0.45 0.45 0.45]" // important, slide color
 
 
 	"$phong" 		"1"

@@ -102,6 +102,7 @@ SWEP.Delay = 60 / 220
 SWEP.Firemodes = {
     {
         Mode = 1,
+        PrintName = "fcg.break",
     },
     {
         Mode = 0

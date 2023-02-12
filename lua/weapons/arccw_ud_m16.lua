@@ -1543,7 +1543,7 @@ SWEP.Hook_NameChange = function(wep, name)
                     return "M605"
                 end
                 wep.Trivia_Desc = carDesc
-                return "CAR-15"
+                return "M609"
             end
             if barr == 0 then
                 wep.Trivia_Desc = a3Desc

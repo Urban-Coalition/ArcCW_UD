@@ -1,4 +1,4 @@
-att.PrintName = "Mini-30 7.62x39mm Receiver"
+att.PrintName = "Mini Thirty 7.62x39mm Receiver"
 att.AbbrevName = "7.62x39mm Receiver"
 
 if !GetConVar("arccw_truenames"):GetBool() then

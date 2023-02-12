@@ -1,4 +1,4 @@
-att.PrintName = "Mini-30 7.62x39mm 30-Round Extended Mag"
+att.PrintName = "Mini Thirty 7.62x39mm 30-Round Extended Mag"
 att.AbbrevName = "30-Round Extended Mag"
 
 if !GetConVar("arccw_truenames"):GetBool() then

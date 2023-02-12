@@ -308,7 +308,7 @@ SWEP.AttachmentElements = {
     },
 
     ["ud_mini14_receiver_762"] = {
-        TrueNameChange = "Mini-30",
+        TrueNameChange = "Mini Thirty",
         NameChange = "Patriot 816"
     },
     ["ud_mini14_receiver_auto"] = {

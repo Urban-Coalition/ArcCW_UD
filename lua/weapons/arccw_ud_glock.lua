@@ -107,7 +107,6 @@ SWEP.Firemodes = {
         Mode = 0,
     }
 }
-SWEP.FiremodeSound = false
 
 SWEP.ShootPitch = 100
 SWEP.ShootVol = 120
@@ -164,7 +163,7 @@ SWEP.HoldtypeActive = "pistol"
 SWEP.HoldtypeSights = "revolver"
 
 SWEP.IronSightStruct = {
-     Pos = Vector(-2.3, 1, 2.52),
+     Pos = Vector(-1.8, 1, 2.3),
      Ang = Angle(0.3, 0, 0),
      Magnification = 1,
      ViewModelFOV = 55,
@@ -625,10 +624,7 @@ SWEP.Animations = {
         Source = "fire",
         Time = 16 / 30,
         ShellEjectAt = 0.03,
-        SoundTable = {
-            {s = common .. "common_mech_light.ogg", t = 0},
-            { s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }
-        },
+        SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }},
     },
     ["fire_empty"] = {
         Source = "fire_empty",

@@ -171,13 +171,13 @@ SWEP.IronSightStruct = {
      SwitchFromSound = ratel
 }
 
-SWEP.ActivePos = Vector(-0.2, -2, 2)
-SWEP.ActiveAng = Angle(0, 0, -5)
+SWEP.ActivePos = Vector(0, 1, 2)
+SWEP.ActiveAng = Angle(0, 0, -6)
 
 SWEP.CustomizePos = Vector(7, -2, -2)
 SWEP.CustomizeAng = Angle(15, 25, 0)
 
-SWEP.CrouchPos = Vector(-2, -6, 1)
+SWEP.CrouchPos = Vector(-2, -2, 1)
 SWEP.CrouchAng = Angle(0, 0, -20)
 
 SWEP.BarrelOffsetHip = Vector(3.5, 0, -3)
@@ -823,7 +823,7 @@ SWEP.Animations = {
     ["reload"] = {
         Source = "reload",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
-        Time = 56 / 30,
+        Time = 66 / 30,
         MinProgress = 1.1,
         LastClip1OutTime = 0.9,
         LHIK = true,
@@ -833,19 +833,21 @@ SWEP.Animations = {
         LHIKOut = 0.3,
         SoundTable = {
             {s = rottle, t = 0},
-            {s = common .. "magpouch_pull_small.ogg", t = 0.075},
-            {s = ratel, t = 0.3},
-            {s = path .. "magout_partial.ogg",        t = 0.35, c = ci},
+            {s = common .. "magpouch_pull_small.ogg", t = 0.1},
+            {s = ratel, t = 0.37},
+            {s = path .. "magout_partial.ogg",        t = 0.5, c = ci},
             {s = ratel, t = 0.4},
-            {s = path .. "magin_new.ogg",         t = 0.45, c = ci},
+            {s = path .. "magin_new.ogg",         t = 0.65, c = ci},
             {s = rottle, t = 0.6},
-            {s = common .. "magpouch_replace_small.ogg", t = 1.25},
+            {s = common .. "magpouch_replace_small.ogg", t = 1.375},
+            {s = ratel, t = 1.6},
+            {s = path .. "grab.ogg",         t = 1.8, c = ci},
         },
     },
     ["reload_empty"] = {
         Source = "reload_empty",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_PISTOL,
-        Time = 65 / 30,
+        Time = 75 / 30,
         MinProgress = 1.5,
         LastClip1OutTime = 0.7,
         LHIK = true,
@@ -857,11 +859,14 @@ SWEP.Animations = {
             {s = ratel, t = 0},
             {s = path .. "magout_empty.ogg",        t = 0.13, c = ci},
             {s = common .. "magpouch_pull_small.ogg", t = 0.35},
-            {s = path .. "magin_new.ogg",         t = 0.5, v = 1.5},
+            {s = path .. "magin_new.ogg",         t = 0.6, v = 1.5},
             {s = ratel, t = 0.5},
             {s = common .. "pistol_magdrop.ogg",  t = 0.65},
             {s = rottle, t = 1.15},
-            {s = path .. "chamber.ogg",      t = 1.39},
+            {s = ratel, t = 1.55},
+            {s = path .. "chamber.ogg",      t = 1.55},
+            {s = ratel, t = 1.7},
+            {s = path .. "grab.ogg",         t = 1.95, c = ci},
         },
     },
     ["reload_empty_fesiug"] = {

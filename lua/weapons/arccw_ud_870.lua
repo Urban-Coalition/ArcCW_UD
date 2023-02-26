@@ -267,7 +267,7 @@ SWEP.Animations = {
         SoundTable = {
             {s = common .. "raise.ogg", t = 0.2},
             {s = common .. "rattle.ogg", t = 0.2},
-            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.5},
+            {s = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_5.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.5},
             {s = path .. "rack_1.ogg",  t = 0.4},
             {s = path .. "rack_2.ogg",  t = 0.6},
             {s = common .. "shoulder.ogg",  t = 0.9},
@@ -313,7 +313,7 @@ SWEP.Animations = {
         ShellEjectAt = 0.1,
         MinProgress = 0.26,
         SoundTable = {
-            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
+            {s = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_5.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
             {s = path .. "rack_1.ogg",  t = 0},
             {s = path .. "eject.ogg",  t = 0.1},
             {s = path .. "rack_2.ogg",  t = 0.11},
@@ -326,7 +326,7 @@ SWEP.Animations = {
         ShellEjectAt = 0.1,
         MinProgress = 0.26,
         SoundTable = {
-            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
+            {s = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_5.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
             {s = path .. "rack_1.ogg",  t = 0},
             {s = path .. "eject.ogg",  t = 0.1},
             {s = path .. "rack_2.ogg",  t = 0.11},
@@ -338,12 +338,12 @@ SWEP.Animations = {
         Time = 50 / 30,
         ShellEjectAt = 0.7, -- should make the shell eject offscreen cuz the anim already has it
         SoundTable = {
-            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.5},
-            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 1},
+            {s = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_5.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.5},
+            {s = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_5.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 1},
             {s = path .. "rack_1.ogg",  t = 0.6},
             {s = path .. "eject.ogg",  t = 0.7},
             {s = path .. "rack_2.ogg",  t = 0.9},
-            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 1.7},
+            {s = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_5.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 1.7},
         }
     },
     ["sgreload_start"] = {
@@ -354,7 +354,7 @@ SWEP.Animations = {
         LHIKIn = 0.2,
         LHIKOut = 0,
         SoundTable = {
-            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
+            {s = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_5.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
             {s = common .. "shoulder.ogg",  t = 0.1},
         },
     },
@@ -369,7 +369,7 @@ SWEP.Animations = {
         LHIKOut = 0,
         SoundTable = {
             {s = shellin, t = 0},
-            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
+            {s = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_5.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
         },
     },
     ["sgreload_finish"] = {
@@ -382,7 +382,7 @@ SWEP.Animations = {
         TPAnimStartTime = 0.8,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         SoundTable = {
-            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
+            {s = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_5.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
             {s = common .. "shoulder.ogg",  t = 0.27},
         },
     },
@@ -397,7 +397,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         ShellEjectAt = 0.5,
         SoundTable = {
-            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.5},
+            {s = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_5.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.5},
             {s = path .. "rack_1.ogg",  t = 0.4},
             {s = path .. "eject.ogg",  t = 0.5},
             {s = path .. "rack_2.ogg",  t = 0.525},

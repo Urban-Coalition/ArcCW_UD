@@ -743,7 +743,7 @@ SWEP.Hook_TranslateSound = function(wep, data)
 	if wep:CheckFlags(pmag1, pmag2) and sr_pmag[data] then return sr_pmag[data] end
 end
 
-local rottle = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
+local rottle = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_5.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
 local ratel = {common .. "rattle1.ogg", common .. "rattle2.ogg", common .. "rattle3.ogg"}
 
 SWEP.Animations = {
@@ -921,6 +921,7 @@ SWEP.Animations = {
             {s = ratel, t = 0.25},
             {s = path .. "magout_empty.ogg", 	 t = 0.23},
             {s = ratel, t = 0.5},
+            {s = rottle,  t = 0.6},
             {s = path .. "struggle.ogg",    t = 1, v = 0.4},
             {s = path .. "magin.ogg",    t = 0.97},
             {s = ratel, t = 1.1},

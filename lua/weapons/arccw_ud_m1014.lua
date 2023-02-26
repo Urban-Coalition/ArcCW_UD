@@ -258,7 +258,7 @@ SWEP.DistantShootSoundOutdoorsVolume = 1
 SWEP.DistantShootSoundIndoorsVolume = 1
 SWEP.Hook_AddShootSound = ArcCW.UC.InnyOuty
 
-local rottle = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
+local rottle = {common .. "cloth_1.ogg", common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_5.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
 local ratel = {common .. "rattle1.ogg", common .. "rattle2.ogg", common .. "rattle3.ogg"}
 
 -- Animations --
@@ -409,7 +409,7 @@ SWEP.Animations = {
         TPAnimStartTime = 0.5,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         SoundTable = {
-            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
+            {s = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_5.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
             {s = path .. "breechload.ogg",  t = 0.25},
             {s = path .. "breechclose.ogg",  t = 0.9},
         },
@@ -426,7 +426,7 @@ SWEP.Animations = {
         //LHIKOut = 0,
         SoundTable = {
             {s = shellin, t = 0},
-            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.05},
+            {s = rottle, t = 0.05, v = 0.5},
         },
     },
     ["sgreload_finish"] = {
@@ -439,6 +439,7 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         TPAnimStartTime = 0.8,
         SoundTable = {
+            {s = rottle,  t = 0, v = 0.5},
             {s = common .. "shoulder.ogg",  t = 0.3},
         },
     },
@@ -558,7 +559,7 @@ SWEP.Animations = {
         TPAnimStartTime = 0.5,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         SoundTable = {
-            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
+            {s = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_5.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
             {s = path .. "breechload.ogg",  t = 0.05},
             {s = path .. "breechclose.ogg",  t = 0.75},
         },

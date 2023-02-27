@@ -227,12 +227,12 @@ SWEP.DistantShootSoundOutdoors = {
     tail .. "fire-dist-12ga-pasg-ext-06.ogg"
 }
 SWEP.DistantShootSoundIndoors = {
-    common .. "fire-dist-int-shotgun-01.ogg",
-    common .. "fire-dist-int-shotgun-02.ogg",
-    common .. "fire-dist-int-shotgun-03.ogg",
-    common .. "fire-dist-int-shotgun-04.ogg",
-    common .. "fire-dist-int-shotgun-05.ogg",
-    common .. "fire-dist-int-shotgun-06.ogg"
+    tail .. "fire-dist-12ga-pasg-int-01.ogg",
+    tail .. "fire-dist-12ga-pasg-int-02.ogg",
+    tail .. "fire-dist-12ga-pasg-int-03.ogg",
+    tail .. "fire-dist-12ga-pasg-int-04.ogg",
+    tail .. "fire-dist-12ga-pasg-int-05.ogg",
+    tail .. "fire-dist-12ga-pasg-int-06.ogg"
 }
 SWEP.DistantShootSoundOutdoorsSilenced = {
     common .. "sup-tail-01.ogg",
@@ -255,7 +255,7 @@ SWEP.DistantShootSoundIndoorsSilenced = {
     common .. "fire-dist-int-pistol-light-06.ogg"
 }
 SWEP.DistantShootSoundOutdoorsVolume = 1
-SWEP.DistantShootSoundIndoorsVolume = 1
+SWEP.DistantShootSoundIndoorsVolume = 2.0
 SWEP.Hook_AddShootSound = ArcCW.UC.InnyOuty
 
 local rottle = {common .. "cloth_1.ogg", common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_5.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}

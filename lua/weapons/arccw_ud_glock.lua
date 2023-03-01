@@ -1055,8 +1055,8 @@ SWEP.Attachments = {
         Slot = {"optic_lp"},
         Bone = "glock_slide",
         Offset = {
-            vpos = Vector(-0.025, -0.4, -0.2),
-            vang = Angle(90, 0, -90),
+            vpos = Vector(-0.0125, -0.4, -0.2),
+            vang = Angle(90, 0, -88),
         },
         CorrectivePos = Vector(0, 0, 0.02),
         VMScale = Vector(.9, .9, .9),
@@ -1093,7 +1093,7 @@ SWEP.Attachments = {
         Slot = {"muzzle", "ud_glock_muzzle"},
         Bone = "glock_flash",
         Offset = {
-            vpos = Vector(0, 0, 0.0),
+            vpos = Vector(0, 0, -0.5),
             vang = Angle(90, 0, -90),
         },
         ExcludeFlags = {"sd"},

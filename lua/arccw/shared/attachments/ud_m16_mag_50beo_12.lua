@@ -22,4 +22,8 @@ att.Mult_SpeedMult = 0.975
 
 att.Mult_HipDispersion = 1.15
 
+att.Hook_SelectReloadAnimation = function(wep, anim)
+    return anim .. "_40"
+end
+
 att.RequireFlags = {"m16_50beo"}

@@ -28,7 +28,7 @@ att.Mult_ShootSpeedMult = 0.95
 att.Mult_HipDispersion = 1.25
 
 att.Override_Malfunction = true
-att.Mult_MalfunctionMean = 0.25
+att.Mult_MalfunctionMean = 0.85
 att.Mult_MalfunctionVariance = 1.5
 
 att.ActivateElements = {"ud_glock_33_mag"}

@@ -550,8 +550,8 @@ local rottle = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "clo
 
 SWEP.Animations = {
     ["ready"] = {
-        Source = "fix_100",
-        Time = 40 / 30,
+        Source = "fix",
+        Time = 53 / 30,
         ShellEjectAt = false,
         SoundTable = {
             {s = path .. "draw.ogg", t = 0}, -- Not Temporary
@@ -663,7 +663,7 @@ SWEP.Animations = {
 
     ["fix"] = {
         Source = "fix",
-        Time = 50 / 30,
+        Time = 53 / 30,
         ShellEjectAt = false,
         SoundTable = {
             {s = rottle,    t = 0, c = ci},

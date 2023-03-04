@@ -557,9 +557,9 @@ SWEP.Animations = {
             {s = path .. "draw.ogg", t = 0}, -- Not Temporary
             {s = common .. "raise.ogg", t = 0.05},
             {s = ratel, t = 0},
-            {s = path .. "slide_pull_new.ogg",  t = 0.4, c = ci},
-            {s = path .. "sliderel_deact.ogg",  t = 0.4, c = ci},
-            {s = path .. "slide_rel_new.ogg",        t = 0.6, c = ci},
+            {s = path .. "slide_pull_new.ogg",  t = 0.7, c = ci},
+            {s = path .. "sliderel_deact.ogg",  t = 0.7, c = ci},
+            {s = path .. "slide_rel_new.ogg",        t = 0.9, c = ci},
         },
         LHIK = true,
         LHIKIn = 0.2,

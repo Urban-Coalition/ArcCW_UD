@@ -12,7 +12,7 @@ SWEP.ShellEffect = "arccw_uc_shelleffect"
 SWEP.ShellModel = "models/weapons/arccw/uc_shells/12g.mdl"
 SWEP.ShellPitch = 100
 SWEP.ShellSounds = ArcCW.ShotgunShellSoundsTable
-SWEP.ShellScale = 0.5
+SWEP.ShellScale = 1
 SWEP.UC_ShellColor = Color(0.7*255, 0.2*255, 0.2*255)
 
 SWEP.MuzzleEffectAttachment = 1
@@ -227,12 +227,12 @@ SWEP.DistantShootSoundOutdoors = {
     tail .. "fire-dist-12ga-pasg-ext-06.ogg"
 }
 SWEP.DistantShootSoundIndoors = {
-    tail .. "fire-dist-12ga-pasg-int-01.ogg",
-    tail .. "fire-dist-12ga-pasg-int-02.ogg",
-    tail .. "fire-dist-12ga-pasg-int-03.ogg",
-    tail .. "fire-dist-12ga-pasg-int-04.ogg",
-    tail .. "fire-dist-12ga-pasg-int-05.ogg",
-    tail .. "fire-dist-12ga-pasg-int-06.ogg"
+    common .. "fire-dist-int-shotgun-01.ogg",
+    common .. "fire-dist-int-shotgun-02.ogg",
+    common .. "fire-dist-int-shotgun-03.ogg",
+    common .. "fire-dist-int-shotgun-04.ogg",
+    common .. "fire-dist-int-shotgun-05.ogg",
+    common .. "fire-dist-int-shotgun-06.ogg"
 }
 SWEP.DistantShootSoundOutdoorsSilenced = {
     common .. "sup-tail-01.ogg",
@@ -255,10 +255,10 @@ SWEP.DistantShootSoundIndoorsSilenced = {
     common .. "fire-dist-int-pistol-light-06.ogg"
 }
 SWEP.DistantShootSoundOutdoorsVolume = 1
-SWEP.DistantShootSoundIndoorsVolume = 2.0
+SWEP.DistantShootSoundIndoorsVolume = 1
 SWEP.Hook_AddShootSound = ArcCW.UC.InnyOuty
 
-local rottle = {common .. "cloth_1.ogg", common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_5.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
+local rottle = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
 local ratel = {common .. "rattle1.ogg", common .. "rattle2.ogg", common .. "rattle3.ogg"}
 
 -- Animations --
@@ -409,7 +409,7 @@ SWEP.Animations = {
         TPAnimStartTime = 0.5,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         SoundTable = {
-            {s = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_5.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
             {s = path .. "breechload.ogg",  t = 0.25},
             {s = path .. "breechclose.ogg",  t = 0.9},
         },
@@ -426,7 +426,7 @@ SWEP.Animations = {
         //LHIKOut = 0,
         SoundTable = {
             {s = shellin, t = 0},
-            {s = rottle, t = 0.05, v = 0.5},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.05},
         },
     },
     ["sgreload_finish"] = {
@@ -439,7 +439,6 @@ SWEP.Animations = {
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         TPAnimStartTime = 0.8,
         SoundTable = {
-            {s = rottle,  t = 0, v = 0.5},
             {s = common .. "shoulder.ogg",  t = 0.3},
         },
     },
@@ -559,7 +558,7 @@ SWEP.Animations = {
         TPAnimStartTime = 0.5,
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_SHOTGUN,
         SoundTable = {
-            {s = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_5.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
+            {s = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
             {s = path .. "breechload.ogg",  t = 0.05},
             {s = path .. "breechclose.ogg",  t = 0.75},
         },

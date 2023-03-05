@@ -31,6 +31,7 @@ att.Mult_CycleTime = 0.9
 
 att.LHIK = true
 
+att.ModelOffset = Vector(-0, 0.1, 0.2)
 att.Model = "models/weapons/arccw/atts/moe_lhik.mdl"
 
 att.ActivateElements = {"ud_870_slide_moe"}

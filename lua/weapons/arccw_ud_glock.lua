@@ -1043,6 +1043,7 @@ SWEP.Animations = {
             {s = path .. "magin.ogg",           t = 0.5, c = ci},
             {s = common .. "magdrop.ogg",  t = 0.55},
             {s = ratel, t = 0.7},
+            {s = path .. "magtap.ogg",        t = 1.1, c = ci},
             {s = path .. "sliderel_deact.ogg",  t = 1.33, c = ci},
             {s = path .. "chamber.ogg",        t = 1.525, c = ci},
             {s = rottle, t = 1.6},

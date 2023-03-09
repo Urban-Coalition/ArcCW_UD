@@ -564,7 +564,8 @@ SWEP.Attachments = {
             vpos = Vector(0, 1.1, 0),
             vang = Angle(90, 0, -90),
         },
-        InstalledEles = {"ud_shotgun_rail_fg"}
+        InstalledEles = {"ud_shotgun_rail_fg"},
+        MergeSlots = {14},
     },
     {
         PrintName = "Tactical",
@@ -618,6 +619,18 @@ SWEP.Attachments = {
         Slot = "ud_870_skin",
         DefaultAttName = "Polished Steel",
         FreeSlot = true
+    },
+    {
+        PrintName = "M203 slot",
+        Slot = "uc_ubgl",
+        Bone = "870_slide",
+        Offset = {
+            vpos = Vector(0, -0.4, -3.7),
+            vang = Angle(90, 0, -90),
+        },
+        InstalledEles = {"rail_fg"},
+        ExcludeFlags = {"ak_noubs","barrel_rpk"},
+        Hidden = true,
     }
 }
 

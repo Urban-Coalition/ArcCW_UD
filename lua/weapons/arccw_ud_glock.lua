@@ -614,6 +614,16 @@ SWEP.Animations = {
             {s = path .. "holster.ogg", t = 0.2}, -- Not Temporary
         },
     },
+    ["bash"] = {
+        Source = "melee",
+        Time = 35 / 30,
+        --SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0, v = 0.5 }},
+    },
+    ["bash_empty"] = {
+        Source = "melee_empty",
+        Time = 35 / 30,
+        --SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }},
+    },
     ["fire"] = {
         Source = "fire",
         Time = 16 / 30,

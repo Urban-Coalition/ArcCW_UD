@@ -982,7 +982,7 @@ SWEP.Animations = {
             {s = rottle,  t = 0.75},
             {s = ratel, t = 0.85},
             {s = path .. "struggle_20.ogg",    t = 0.9, v = 0.4},
-            {s = path .. "magin_20.ogg",    t = 0.95},
+            {s = path .. "magin_20.ogg",    t = 0.9},
             {s = rottle,  t = 1.1},
             {s = ratel, t = 1.125},
             {s = common .. "rattle_b2i_rifle.ogg", t = 1.65},

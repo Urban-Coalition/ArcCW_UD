@@ -257,9 +257,9 @@ SWEP.DistantShootSoundOutdoorsVolume = 1
 SWEP.DistantShootSoundIndoorsVolume = 1
 SWEP.Hook_AddShootSound = ArcCW.UC.InnyOuty
 
-local miss = {common .. "punch-miss-01.ogg", common .. "punch-miss-02.ogg", common .. "punch-miss-03.ogg", common .. "punch-miss-04.ogg", common .. "punch-miss-05.ogg", common .. "punch-miss-06.ogg"}
-local hitwall = {common .. "punch-wall-01.ogg", common .. "punch-wall-02.ogg", common .. "punch-wall-03.ogg", common .. "punch-wall-04.ogg", common .. "punch-wall-05.ogg", common .. "punch-wall-06.ogg"}
-local hitplayer = {common .. "punch-player-01.ogg", common .. "punch-player-02.ogg", common .. "punch-player-03.ogg", common .. "punch-player-04.ogg", common .. "punch-player-05.ogg", common .. "punch-player-06.ogg"}
+local miss = {common .. "punch-gun-miss-01.ogg", common .. "punch-gun-miss-02.ogg", common .. "punch-gun-miss-03.ogg", common .. "punch-gun-miss-04.ogg", common .. "punch-gun-miss-05.ogg", common .. "punch-gun-miss-06.ogg"}
+local hitwall = {common .. "punch-gun-wall-01.ogg", common .. "punch-gun-wall-02.ogg", common .. "punch-gun-wall-03.ogg", common .. "punch-gun-wall-04.ogg", common .. "punch-gun-wall-05.ogg", common .. "punch-gun-wall-06.ogg"}
+local hitplayer = {common .. "punch-gun-player-01.ogg", common .. "punch-gun-player-02.ogg", common .. "punch-gun-player-03.ogg", common .. "punch-gun-player-04.ogg", common .. "punch-gun-player-05.ogg", common .. "punch-gun-player-06.ogg"}
 SWEP.MeleeMissSound = miss
 SWEP.MeleeHitSound = hitwall
 SWEP.MeleeHitNPCSound = hitplayer

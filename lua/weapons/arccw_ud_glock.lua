@@ -660,13 +660,13 @@ SWEP.Animations = {
         },
     },
     ["fire_stock"] = {
-        Source = "fire",
+        Source = "fire_stock",
         Time = 16 / 30,
         ShellEjectAt = 0.03,
         SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0.03 }},
     },
     ["fire_empty_stock"] = {
-        Source = "fire_empty",
+        Source = "fire_empty_stock",
         Time = 16 / 30,
         ShellEjectAt = 0.03,
         SoundTable = {

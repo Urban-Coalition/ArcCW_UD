@@ -257,6 +257,13 @@ SWEP.DistantShootSoundOutdoorsVolume = 1
 SWEP.DistantShootSoundIndoorsVolume = 1
 SWEP.Hook_AddShootSound = ArcCW.UC.InnyOuty
 
+local miss = {common .. "punch-miss-01", common .. "punch-miss-02", common .. "punch-miss-03", common .. "punch-miss-04", common .. "punch-miss-05", common .. "punch-miss-06"}
+local hitwall = {common .. "punch-wall-01", common .. "punch-wall-02", common .. "punch-wall-03", common .. "punch-wall-04", common .. "punch-wall-05", common .. "punch-wall-06"}
+local hitplayer = {common .. "punch-player-01", common .. "punch-player-02", common .. "punch-player-03", common .. "punch-player-04", common .. "punch-player-05", common .. "punch-player-06"}
+SWEP.MeleeMissSound = miss
+SWEP.MeleeHitSound = hitwall
+SWEP.MeleeHitNPCSound = hitplayer
+
 -- Bodygroups --
 
 SWEP.BulletBones = {

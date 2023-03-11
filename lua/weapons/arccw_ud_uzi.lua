@@ -447,7 +447,7 @@ SWEP.Animations = {
         Source = "idle",
         Time = 0.025,
         SoundTable = {
-            { s = {path .. "prefire-01.ogg", path .. "prefire-02.ogg", path .. "prefire-03.ogg", t = 0 },
+            { s = {path .. "prefire-01.ogg", path .. "prefire-02.ogg", path .. "prefire-03.ogg"}, t = 0 },
         },
     },
     ["trigger_empty"] = {

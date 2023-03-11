@@ -553,7 +553,7 @@ SWEP.Hook_Think = ArcCW.UC.ADSReload
 -- CHAN_ITEM doesn't sound too right
 local ci = CHAN_AUTO
 local ratel = {path .. "pistol_rattle_1.ogg", path .. "pistol_rattle_2.ogg", path .. "pistol_rattle_3.ogg"}
-local rottle = {common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
+local rottle = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_5.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
 
 SWEP.Animations = {
     ["ready"] = {

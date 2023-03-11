@@ -104,7 +104,7 @@ SWEP.Num = 1
 SWEP.Firemodes = {
     {
         Mode = 2,
-        Mult_TriggerDelayTime = 2,
+        Mult_TriggerDelayTime = 1,
     },
     {
         Mode = 1,

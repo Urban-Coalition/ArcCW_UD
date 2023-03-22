@@ -554,6 +554,7 @@ SWEP.Hook_Think = ArcCW.UC.ADSReload
 local ci = CHAN_AUTO
 local ratel = {path .. "pistol_rattle_1.ogg", path .. "pistol_rattle_2.ogg", path .. "pistol_rattle_3.ogg"}
 local rottle = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_5.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
+local mech = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}
 
 SWEP.Animations = {
     ["ready"] = {
@@ -635,13 +636,18 @@ SWEP.Animations = {
         Source = "fire",
         Time = 16 / 30,
         ShellEjectAt = 0.03,
-        SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0, v = 0.5 }},
+        SoundTable = {
+            { s = mech, t = 0, v = 0.5 }
+        },
     },
     ["fire_iron"] = {
         Source = "fire",
         Time = 16 / 30,
         ShellEjectAt = 0.03,
-        SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }},
+        SoundTable = {
+            { s = common .. "common_mech_light.ogg", t = 0, v = 0.5 },
+            { s = mech, t = 0 }
+        },
     },
     ["fire_empty"] = {
         Source = "fire_empty",
@@ -663,7 +669,9 @@ SWEP.Animations = {
         Source = "fire_stock",
         Time = 16 / 30,
         ShellEjectAt = 0.03,
-        SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0.03 }},
+        SoundTable = {
+            { s = mech, t = 0, v = 0.5 }
+        },
     },
     ["fire_empty_stock"] = {
         Source = "fire_empty_stock",

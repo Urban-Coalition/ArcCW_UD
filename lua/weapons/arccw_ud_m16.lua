@@ -830,6 +830,7 @@ SWEP.Animations = {
         Time = 13 / 30,
         ShellEjectAt = 0.01,
         SoundTable = {
+            { s = common .. "common_mech_light.ogg", t = 0, v = 0.25 },
             { s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }
         },
     },

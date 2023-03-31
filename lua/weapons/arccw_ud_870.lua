@@ -314,9 +314,9 @@ SWEP.Animations = {
         MinProgress = 0.26,
         SoundTable = {
             {s = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_5.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
-            {s = path .. "rack_1.ogg",  t = 0},
-            {s = path .. "eject.ogg",  t = 0.1},
-            {s = path .. "rack_2.ogg",  t = 0.11},
+            {s = path .. "rack_1.ogg",  t = 0, v = 0.5},
+            {s = path .. "eject.ogg",  t = 0.1, v = 0.5},
+            {s = path .. "rack_2.ogg",  t = 0.11, v = 0.5},
         },
     },
 
@@ -398,7 +398,7 @@ SWEP.Animations = {
         ShellEjectAt = 0.5,
         SoundTable = {
             {s = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_5.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.5},
-            {s = path .. "rack_1.ogg",  t = 0.4},
+            {s = path .. "rack_1.ogg",  t = 0.35},
             {s = path .. "eject.ogg",  t = 0.5},
             {s = path .. "rack_2.ogg",  t = 0.525},
             {s = common .. "shoulder.ogg",  t = 0.9},

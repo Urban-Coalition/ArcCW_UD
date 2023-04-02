@@ -293,7 +293,7 @@ SWEP.Animations = {
     ["fire"] = {
         Source = "fire",
         --Time = 23 / 30,
-        MinProgress = 8 / 30,
+        MinProgress = .3,
         SoundTable = {
             { s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0, v = 0.25 }
         },
@@ -301,7 +301,7 @@ SWEP.Animations = {
     ["fire_iron"] = {
         Source = "fire",
         --Time = 23 / 30,
-        MinProgress = 8 / 30,
+        MinProgress = .3,
         SoundTable = {
             {s = common .. "common_mech_heavy.ogg", t = 0},
             { s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0 }
@@ -309,14 +309,14 @@ SWEP.Animations = {
     },
     ["cycle"] = {
         Source = "cycle",
-        Time = 26 / 30,
+        Time = 0.85,
         ShellEjectAt = 0.1,
-        MinProgress = 0.26,
+        MinProgress = 0.4,
         SoundTable = {
             {s = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_5.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
-            {s = path .. "rack_1.ogg",  t = 0, v = 0.5},
+            {s = path .. "rack_1.ogg",  t = 0.05, v = 1},
             {s = path .. "eject.ogg",  t = 0.1, v = 0.5},
-            {s = path .. "rack_2.ogg",  t = 0.13, v = 0.5},
+            {s = path .. "rack_2.ogg",  t = 0.18, v = 1},
         },
     },
 

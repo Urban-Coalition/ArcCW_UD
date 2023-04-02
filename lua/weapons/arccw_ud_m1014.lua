@@ -366,7 +366,7 @@ SWEP.Animations = {
     ["unjam"] = {
         Source = "jam_fix",
         Time = 60 / 30,
-        ShellEjectAt = 0.8,
+        ShellEjectAt = 0.9,
         LHIK = false,
         SoundTable = {
             {s = rottle, t = 0},

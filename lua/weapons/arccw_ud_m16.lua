@@ -160,7 +160,7 @@ SWEP.HeatDissipation = 10
 SWEP.HeatDelayTime = 3
 
 SWEP.MalfunctionMean = 200
-SWEP.MalfunctionTakeRound = false
+SWEP.MalfunctionTakeRound = true
 
 -- Speed multipliers --
 
@@ -875,7 +875,7 @@ SWEP.Animations = {
     ["fix"] = {
         Source = "fix",
         Time = 45 / 30,
-        ShellEjectAt = false,
+        ShellEjectAt = 0.3,
         LHIK = true,
         LHIKIn = 0.3,
         LHIKEaseIn = 0.4,

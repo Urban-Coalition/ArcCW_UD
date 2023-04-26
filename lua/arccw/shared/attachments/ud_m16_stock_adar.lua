@@ -35,6 +35,12 @@ local slotinfo = {
     [9] = {"Intergral Grip", "Integral Grip", att.Icon},
 }
 att.Hook_GetDefaultAttName = function(wep, slot)
+    if wep:GetClass() == "arccw_uc_ar57" then
+        slotinfo = {
+            [6] = {"Intergral Grip", "Integral Grip", att.Icon},
+        }
+    end
+
     if slotinfo[slot] then
         return GetConVar("arccw_truenames"):GetBool() and slotinfo[slot][2] or slotinfo[slot][1]
     end

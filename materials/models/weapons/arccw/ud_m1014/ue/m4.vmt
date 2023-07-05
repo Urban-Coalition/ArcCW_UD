@@ -15,7 +15,7 @@
     "$rimlight" "1"
     "$rimlightexponent" "100"
     "$rimmask" "1"
-    "$rimlightboost" ".4"
+    "$rimlightboost" ".2"
 
     "$normalmapalphaenvmapmask" "1"
     "$envmapfresnel" "1"

@@ -66,34 +66,37 @@ att.Override_Firemodes = {
 }
 
 local path = "weapons/arccw_ud/m16/"
+local common = ")/arccw_uc/common/"
+local tail = common .. "50beo/"
+local tail1 = common .. "308/"
 
-att.Hook_GetShootSound = function(wep, sound) -- Temporary
+local fire50 = {path .. "fire-50-01.ogg",path .. "fire-50-02.ogg",path .. "fire-50-03.ogg",path .. "fire-50-04.ogg",path .. "fire-50-05.ogg",path .. "fire-50-06.ogg"}
+local fire50dist = {tail .. "fire-dist-50beo-rif-ext-01.ogg", tail .. "fire-dist-50beo-rif-ext-02.ogg", tail .. "fire-dist-50beo-rif-ext-03.ogg", tail .. "fire-dist-50beo-rif-ext-04.ogg", tail .. "fire-dist-50beo-rif-ext-05.ogg", tail .. "fire-dist-50beo-rif-ext-06.ogg"}
+local fire50distint = {tail1 .. "fire-dist-308-rif-int-01.ogg", tail1 .. "fire-dist-308-rif-int-02.ogg", tail1 .. "fire-dist-308-rif-int-03.ogg", tail1 .. "fire-dist-308-rif-int-04.ogg", tail1 .. "fire-dist-308-rif-int-05.ogg",tail .. "fire-dist-308-rif-int-06.ogg"}
+
+att.Hook_GetShootSound = function(wep, sound)
     if wep:GetBuff_Override("Silencer") then
-        -- fallback to script
+        return fire50sup
     else
-        return {
-            path .. "fire-50-01.ogg",
-            path .. "fire-50-02.ogg",
-            path .. "fire-50-03.ogg",
-            path .. "fire-50-04.ogg",
-            path .. "fire-50-05.ogg",
-            path .. "fire-50-06.ogg"
-        }
+        return fire50
     end
 end
+
 
 att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
     if wep:GetBuff_Override("Silencer") then
         -- fallback to script
     else
-        return { 
-            path .. "fire-50-dist-01.ogg",
-            path .. "fire-50-dist-02.ogg",
-            path .. "fire-50-dist-03.ogg",
-            path .. "fire-50-dist-04.ogg",
-            path .. "fire-50-dist-05.ogg",
-            path .. "fire-50-dist-06.ogg"
-        }
+        return fire50dist
+    end
+end
+
+
+att.Hook_GetDistantShootSoundIndoors = function(wep, distancesound)
+    if wep:GetBuff_Override("Silencer") then
+        -- fallback to script
+    else
+        return fire50distint
     end
 end
 

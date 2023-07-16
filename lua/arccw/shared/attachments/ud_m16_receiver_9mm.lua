@@ -77,23 +77,6 @@ att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
     end
 end
 
-local tail = ")^/arccw_uc/common/9x19/"
-
-att.Hook_GetDistantShootSoundOutdoors = function(wep, distancesound)
-    if wep:GetBuff_Override("Silencer") then
-        -- fallback to script
-    else
-        return {
-            tail .. "fire-dist-9x19-pistol-ext-01.ogg",
-            tail .. "fire-dist-9x19-pistol-ext-02.ogg",
-            tail .. "fire-dist-9x19-pistol-ext-03.ogg",
-            tail .. "fire-dist-9x19-pistol-ext-04.ogg",
-            tail .. "fire-dist-9x19-pistol-ext-05.ogg",
-            tail .. "fire-dist-9x19-pistol-ext-06.ogg"
-        }
-    end
-end
-
 local slotinfo = {
     [11] = {"20-Round Mag", "20-Round Mag", Material("entities/att/acwatt_ud_m16_9mm_20.png", "smooth mips")},
 }

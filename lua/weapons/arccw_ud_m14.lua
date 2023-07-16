@@ -190,7 +190,7 @@ SWEP.WorldModelOffset = {
 
 -- Firing sounds --
 
-local path = ")weapons/arccw_ud/mini14/"
+local path = ")weapons/arccw_ud/m14/"
 local common = ")/arccw_uc/common/"
 SWEP.ShootSound = {
     path .. "fire-01.ogg",
@@ -778,6 +778,35 @@ SWEP.Animations = {
             {s = path .. "chback.ogg",  t = 1.9},
             {s = path .. "chamber.ogg", t = 2.0},
             {s = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_5.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 2.3},
+        },
+    },
+
+    -- Inspect --
+
+    ["enter_inspect"] = {
+        Source = "inspect_enter",
+        -- time = 30 / 60,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 2.5,
+        SoundTable = {
+        },
+    },
+    ["idle_inspect"] = {
+        Source = "inspect_loop",
+        -- time = 72 / 60,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 999, -- maybe im dumb
+    },
+    ["exit_inspect"] = {
+        Source = "inspect_exit",
+        -- time = 30 / 60,
+        LHIK = true,
+        LHIKIn = 0,
+        LHIKOut = 999, -- maybe im dumb
+        SoundTable = {
+ 
         },
     },
 }

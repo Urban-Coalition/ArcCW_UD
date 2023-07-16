@@ -4,12 +4,12 @@
     "$bumpmap" "models\weapons\arccw\ud_m14\UD_M14_n"
     "$phongexponenttexture" "models\weapons\arccw\ud_m14\UD_M14_e"
 
-    "$color2" "[0.55 0.55 0.55]"
+    "$color2" "[.65 .65 .65]"
     "$blendtintbybasealpha" "1"
 
     "$phong" "1"
-    "$phongboost" "1"
-    "$phongfresnelranges" "[1 0.5 0]"
+    "$phongboost" "1.5"
+    "$phongfresnelranges" "[1 1.5 0]"
     "$phongalbedotint" "0"
 
 
@@ -29,7 +29,7 @@
         {
             "specularity" "0.5"             //0.25, 0.5, 0.75, 1
             "min" "0"
-            "max" "0.3"                       
+            "max" ".1"                       
         }
     }
 }

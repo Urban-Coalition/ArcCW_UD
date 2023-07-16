@@ -1,0 +1,35 @@
+"VertexLitGeneric"
+{
+    "$basetexture" "models\weapons\arccw\ud_m14\UD_M14_rgb"
+    "$bumpmap" "models\weapons\arccw\ud_m14\UD_M14_n"
+    "$phongexponenttexture" "models\weapons\arccw\ud_m14\UD_M14_e"
+
+    "$color2" "[0.55 0.55 0.55]"
+    "$blendtintbybasealpha" "1"
+
+    "$phong" "1"
+    "$phongboost" "1"
+    "$phongfresnelranges" "[1 0.5 0]"
+    "$phongalbedotint" "0"
+
+
+    "$rimlight" "1"
+    "$rimlightexponent" "100"
+    "$rimmask" "1"
+    "$rimlightboost" "1"
+
+    "$normalmapalphaenvmapmask" "1"
+    "$envmapfresnel" "1"
+    "$envmap" "env_cubemap"
+    "$envmaptint" "[0.2 0.2 0.2]"
+
+    "Proxies"
+    {
+        "MwEnvMapTint"
+        {
+            "specularity" "0.5"             //0.25, 0.5, 0.75, 1
+            "min" "0"
+            "max" "0.3"                       
+        }
+    }
+}

@@ -1,26 +1,34 @@
-"VertexlitGeneric"
+"VertexLitGeneric"
 {
-	"$basetexture" "models\weapons\arccw\ud_glock\glock"
-	"$bumpmap" "models\weapons\arccw\ud_glock\glock_normals"
-	
-	"$color2" "[0.37 0.37 0.37]" // important, slide color
+    "$basetexture" "models\weapons\arccw\ud_glock\Glock_rgb"
+    "$bumpmap" "models\weapons\arccw\ud_glock\Glock_n"
+    "$phongexponenttexture" "models\weapons\arccw\ud_glock\Glock_e"
 
+    "$color2" "[1 1 1]"
+    "$blendtintbybasealpha" "1"
 
-	"$phong" 		"1"
-	"$phongexponenttexture" "models\weapons\arccw\ud_glock\glock_newexp"
-	"$phongboost" "7"
-	"$phongalbedotint" 			"1"
-	"$phongfresnelranges" "[0.5 1.5 3.0]"
+    "$phong" "1"
+    "$phongboost" "1"
+    "$phongfresnelranges" "[1 0.5 0]"
+    "$phongalbedotint" "0"
 
-	"$envmap" "env_cubemap"
-	"$envmaptint" "[.035 .015 .015]"
+    "$rimlight" "1"
+    "$rimlightexponent" "100"
+    "$rimmask" "1"
+    "$rimlightboost" "0.1"
 
-	"$normalmapalphaenvmapmask" 	"1"
-	"$blendTintByBaseAlpha" "1"
-	"$nocull" "1"
+    "$normalmapalphaenvmapmask" "1"
+    "$envmapfresnel" "1"
+    "$envmap" "env_cubemap"
+    "$envmaptint" "[0.2 0.2 0.2]"
 
-	// idk about this
-
-	// "$rimlight" 	"1"
-	// "$rimlightboost"	"0.1"
+    "Proxies"
+    {
+        "MwEnvMapTint"
+        {
+            "specularity" "0.5"             //0.25, 0.5, 0.75, 1
+            "min" "0"
+            "max" "0.2"                       
+        }
+    }
 }

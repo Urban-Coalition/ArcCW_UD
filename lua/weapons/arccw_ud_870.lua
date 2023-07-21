@@ -316,7 +316,7 @@ SWEP.Animations = {
             {s = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_5.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0},
             {s = path .. "rack_1.ogg",  t = 0.0, v = 1},
             {s = path .. "eject.ogg",  t = 0.1, v = 0.5},
-            {s = path .. "rack_2.ogg",  t = 0.18, v = 1},
+            {s = path .. "rack_2.ogg",  t = 0.13, v = 1},
         },
     },
 

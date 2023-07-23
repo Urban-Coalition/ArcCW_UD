@@ -1,0 +1,35 @@
+"VertexLitGeneric"
+{
+    "$basetexture" "models\weapons\arccw\ud_glock\Zev_Slide_rgb"
+    "$bumpmap" "models\weapons\arccw\ud_glock\Zev_Slide_n"
+    "$phongexponenttexture" "models\weapons\arccw\ud_glock\Zev_Slide_e"
+
+    "$color2" "[0.75 0.75 0.75]"
+    "$blendtintbybasealpha" "1"
+
+    "$phong" "1"
+    "$phongboost" "1"
+    "$phongfresnelranges" "[1 0.5 0]"
+    "$phongalbedotint" "0"
+
+    "$rimlight" "1"
+    "$rimlightexponent" "100"
+    "$rimmask" "1"
+    "$rimlightboost" "0.2"
+
+    "$normalmapalphaenvmapmask" "1"
+    "$envmapfresnel" "1"
+    "$envmap" "env_cubemap"
+    "$envmaptint" "[0.1 0.1 0.1]"
+
+    //remove this if viewing outside of MWB
+    "Proxies"
+    {
+        "MwEnvMapTint"
+        {
+            "specularity" "0.5"             //0.25, 0.5, 0.75, 1
+            "min" "0"
+            "max" "0.1"                      
+        }
+    }
+}

@@ -1,0 +1,38 @@
+//if you don't know what a parameter does, visit:
+//https://developer.valvesoftware.com/wiki/$phong
+"VertexLitGeneric"
+{
+    "$basetexture" "models\weapons\arccw\ud_glock\Zev_Slide_Sight_Rear_rgb"
+    "$bumpmap" "models\weapons\arccw\ud_glock\Zev_Slide_Sight_Rear_n"
+    "$phongexponenttexture" "models\weapons\arccw\ud_glock\Zev_Slide_Sight_Rear_e"
+
+    "$color2" "[.5 .5 .5]"
+    "$blendtintbybasealpha" "1"
+
+    "$phong" "0"
+    "$phongboost" "1"
+    "$phongfresnelranges" "[1 0.5 0]"
+    "$phongalbedotint" "0"
+
+    //rimlight doesn't properly show in hlmv, make sure you're changing these values in game
+    "$rimlight" "1"
+    "$rimlightexponent" "100"
+    "$rimmask" "1"
+    "$rimlightboost" "1"
+
+    "$normalmapalphaenvmapmask" "1"
+    "$envmapfresnel" "1"
+    "$envmap" "env_cubemap"
+    "$envmaptint" "[0.2 0.2 0.2]"
+
+    //remove this if viewing outside of MWB
+    "Proxies"
+    {
+        "MwEnvMapTint"
+        {
+            "specularity" "0.5"             //0.25, 0.5, 0.75, 1
+            "min" "0"
+            "max" "0.1"                       //change this if too bright in game
+        }
+    }
+}

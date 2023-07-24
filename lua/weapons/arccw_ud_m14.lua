@@ -253,7 +253,7 @@ SWEP.BulletBones = {
 
 SWEP.AttachmentElements = {
     ["ud_mini14_mag_10"] = {
-        VMBodygroups = {{ind = 4, bg = 2}},
+        VMBodygroups = {{ind = 3, bg = 1}},
     },
     ["ud_mini14_mag_30"] = {
         VMBodygroups = {{ind = 4, bg = 1}},
@@ -343,9 +343,20 @@ SWEP.AttachmentElements = {
 
 SWEP.Hook_Think = ArcCW.UC.ADSReload
 
+SWEP.Hook_SelectReloadAnimation = function(wep,curanim) -- numero random, uno per cento
+    local rng = math.Truncate(util.SharedRandom("volcarona shouldnt be banned to ubers, tera is broken please hes my favourite .v.", 1,100))
+	
+    if rng <= 10 then
+		if	wep.Attachments[7].Installed and curanim == "reload" 	then	return "reload_10_rare" 	end --- should be = something
+		if	!wep.Attachments[7].Installed and curanim == "reload" 	then	return "reload_rare" 		end	
+
+	end
+end
+
+
 SWEP.Animations = {
     ["ready"] = {
-        Source = "unjam",
+        Source = "deploy",
         Time = 40 / 30,
         SoundTable = {
             {s = common .. "raise.ogg", t = 0},
@@ -360,7 +371,7 @@ SWEP.Animations = {
         LHIKEaseIn = 0.5,
         LHIKEaseOut = 0.15,
         LHIKOut = 0.5,
-        ProcDraw = true,
+        ProcDraw = false,
     },
     ["idle"] = {
         Source = "idle",
@@ -398,7 +409,7 @@ SWEP.Animations = {
     },
     ["fire"] = {
         Source = "fire",
-        Time = 20 / 30,
+--      Time = 20 / 30,
         ShellEjectAt = 0.01,
         LastClip1OutTime = 0,
         SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0, v = 0.25 }},
@@ -449,9 +460,9 @@ SWEP.Animations = {
     -- 20 Round Reloads --
 
     ["reload"] = {
-        Source = "reload",
+        Source = "wet",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Time = 66 / 30,
+        --Time = 66 / 30,
         MinProgress = 1.4,
         LastClip1OutTime = 0.9,
         LHIK = true,
@@ -470,9 +481,9 @@ SWEP.Animations = {
         },
     },
     ["reload_empty"] = {
-        Source = "reload_empty",
+        Source = "dry",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Time = 86 / 30,
+        --Time = 86 / 30,
         MinProgress = 2.1,
         LastClip1OutTime = 1,
         LHIK = true,
@@ -494,12 +505,58 @@ SWEP.Animations = {
         },
     },
 
-    -- 10 Round Reloads --
+    -- Rare Reloads -- 
+	
+    ["reload_rare"] = {
+        Source = "garand",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        --Time = 66 / 30,
+        MinProgress = 1.4,
+        LastClip1OutTime = 0.9,
+        LHIK = true,
+        LHIKIn = 0.3,
+        LHIKEaseIn = 0.4,
+        LHIKEaseOut = 0.15,
+        LHIKOut = 0.4,
+        SoundTable = {
+            {s = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_5.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.0},
+            {s = path .. "magout.ogg", 	t = 0.25},
+            {s = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_5.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.4},
+            {s = common .. "magpouch.ogg", t = 0.6},
+            {s = path .. "magin.ogg",   t = 1.05},
+            {s = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_5.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 1.3},
+            {s = common .. "shoulder.ogg",  t = 1.75},
+        },
+    },
+
+    ["reload_10_rare"] = {
+        Source = "garand_10",
+        TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
+        --Time = 66 / 30,
+        MinProgress = 1.4,
+        LastClip1OutTime = 0.9,
+        LHIK = true,
+        LHIKIn = 0.3,
+        LHIKEaseIn = 0.4,
+        LHIKEaseOut = 0.15,
+        LHIKOut = 0.4,
+        SoundTable = {
+            {s = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_5.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.0},
+            {s = path .. "magout.ogg", 	t = 0.25},
+            {s = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_5.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.4},
+            {s = common .. "magpouch.ogg", t = 0.6},
+            {s = path .. "magin.ogg",   t = 1.05},
+            {s = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_5.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 1.3},
+            {s = common .. "shoulder.ogg",  t = 1.75},
+        },
+    },	
+
+	-- 10 Round Reloads --
 
     ["reload_10"] = {
-        Source = "reload_10",
+        Source = "wet_10",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Time = 67 / 30,
+        --Time = 67 / 30,
         MinProgress = 1.6,
         LastClip1OutTime = 0.9,
         LHIK = true,
@@ -517,9 +574,9 @@ SWEP.Animations = {
         },
     },
     ["reload_empty_10"] = {
-        Source = "reload_empty_10",
+        Source = "dry_10",
         TPAnim = ACT_HL2MP_GESTURE_RELOAD_AR2,
-        Time = 86 / 30,
+        --Time = 86 / 30,
         MinProgress = 2.1,
         LastClip1OutTime = 0.7,
         LHIK = true,

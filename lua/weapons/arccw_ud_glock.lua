@@ -588,6 +588,7 @@ SWEP.Animations = {
             {s = path .. "draw.ogg", t = 0}, -- Not Temporary
             {s = common .. "raise.ogg", t = 0.05},
         },
+        MinProgress = 0.4
     },
     ["draw_empty"] = {
         Source = "draw_empty",
@@ -596,6 +597,7 @@ SWEP.Animations = {
             {s = path .. "draw.ogg", t = 0}, -- Not Temporary
             {s = common .. "raise.ogg", t = 0.05},
         },
+        MinProgress = 0.4
     },
     ["holster"] = {
         Source = "holster",

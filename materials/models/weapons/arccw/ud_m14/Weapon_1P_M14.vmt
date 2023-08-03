@@ -8,7 +8,7 @@
     "$blendtintbybasealpha" "1"
 
     "$phong" "1"
-    "$phongboost" "1.5"
+    "$phongboost" "0.75"
     "$phongfresnelranges" "[1 1.5 0]"
     "$phongalbedotint" "0"
 
@@ -16,12 +16,12 @@
     "$rimlight" "1"
     "$rimlightexponent" "100"
     "$rimmask" "1"
-    "$rimlightboost" "1"
+    "$rimlightboost" "0.2"
 
     "$normalmapalphaenvmapmask" "1"
     "$envmapfresnel" "1"
     "$envmap" "env_cubemap"
-    "$envmaptint" "[0.2 0.2 0.2]"
+    "$envmaptint" "[0.005 0.005 0.005]"
 
     "Proxies"
     {
@@ -29,7 +29,7 @@
         {
             "specularity" "0.5"             //0.25, 0.5, 0.75, 1
             "min" "0"
-            "max" ".1"                       
+            "max" "0.2"                       
         }
     }
 }

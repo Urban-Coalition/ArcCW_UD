@@ -132,7 +132,7 @@ SWEP.MoveDispersion = 150
 SWEP.JumpDispersion = 1000
 
 SWEP.Primary.Ammo = "smg1"
-SWEP.MagID = "mini14"
+SWEP.MagID = "m14"
 
 SWEP.HeatCapacity = 75
 SWEP.HeatDissipation = 5
@@ -248,53 +248,38 @@ SWEP.Hook_AddShootSound = ArcCW.UC.InnyOuty
 -- Bodygroups --
 
 SWEP.BulletBones = {
-    [2] = "mini14_bullet1", [3] = "mini14_bullet2"
+    [2] = "m14_bullet1", [3] = "m14_bullet2"
 }
 
 SWEP.AttachmentElements = {
-    ["ud_mini14_mag_10"] = {
+    ["ud_m14_mag_10"] = {
         VMBodygroups = {{ind = 3, bg = 1}},
     },
-    ["ud_mini14_mag_30"] = {
-        VMBodygroups = {{ind = 4, bg = 1}},
-    },
-    ["ud_mini14_mag_42"] = {
-        VMBodygroups = {{ind = 4, bg = 4}},
-    },
-    ["ud_mini14_mag_60"] = {
-        VMBodygroups = {{ind = 4, bg = 5}},
-    },
-    ["ud_mini14_mag_15_22lr"] = {
-        VMBodygroups = {{ind = 4, bg = 3}},
-    },
-    ["ud_mini14_mag_30_762"] = {
-        VMBodygroups = {{ind = 4, bg = 6}},
-    },
-    ["ud_mini14_rail_optic"] = {
-        VMBodygroups = {{ind = 2, bg = 1}},
+    ["ud_m14_rail_optic"] = {
+        VMBodygroups = {{ind = 0, bg = 0}},
     },
 
-    ["ud_mini14_rail_fg"] = {
+    ["ud_m14_rail_fg"] = {
         VMBodygroups = {{ind = 5, bg = 1}},
     },
 
-    ["ud_mini14_barrel_long"] = {
-        VMBodygroups = {{ind = 3, bg = 1}},
+    ["ud_m14_barrel_long"] = {
+        VMBodygroups = {{ind = 2, bg = 2}},
         AttPosMods = {
             [3] = {
                 vpos = Vector(0, -2.15, 34.5),
             },
         },
     },
-    ["ud_mini14_barrel_short"] = {
-        VMBodygroups = {{ind = 3, bg = 2}},
+    ["ud_m14_barrel_short"] = {
+        VMBodygroups = {{ind = 2, bg = 1}},
         AttPosMods = {
             [3] = {
                 vpos = Vector(0, -2.15, 27.5),
             },
         },
     },
-    ["ud_mini14_barrel_stub"] = {
+    ["ud_m14_barrel_stub"] = {
         VMBodygroups = {{ind = 3, bg = 3}},
         AttPosMods = {
             [3] = {
@@ -303,38 +288,34 @@ SWEP.AttachmentElements = {
         },
     },
 
-    ["ud_mini14_receiver_762"] = {
+    ["ud_m14_receiver_762"] = {
         TrueNameChange = "Mini Thirty",
         NameChange = "Patriot 816"
     },
-    ["ud_mini14_receiver_auto"] = {
+    ["ud_m14_receiver_auto"] = {
         TrueNameChange = "AC-556",
         NameChange = "Patriot ACC"
     },
-    ["ud_mini14_receiver_22lr"] = {
-        TrueNameChange = "Mini-14 .22 LR",
+    ["ud_m14_receiver_22lr"] = {
+        TrueNameChange = "M14 .22 LR",
         NameChange = "Patriot 822"
     },
 
-    ["ud_mini14_stock_polymer"] = {
+    ["ud_m14_stock_polymer"] = {
         VMBodygroups = {{ind = 1, bg = 1}},
         VMPoseParams = {["grip"] = 0}
     },
-    ["ud_mini14_stock_sawnoff"] = {
-        VMBodygroups = {{ind = 1, bg = 2}},
-        VMPoseParams = {["grip"] = 0}
-    },
-    ["ud_mini14_stock_tactical"] = {
+    ["ud_m14_stock_tactical"] = {
         VMBodygroups = {{ind = 1, bg = 4}},
         VMPoseParams = {["grip"] = 1}
     },
-    ["ud_mini14_stock_tactical_polymer"] = {
+    ["ud_m14_stock_tactical_polymer"] = {
         VMBodygroups = {{ind = 1, bg = 3}},
         VMSkin = 1,
         VMPoseParams = {["grip"] = 1}
     },
 
-    ["ud_mini14_clamp"] = {
+    ["ud_m14_clamp"] = {
         VMBodygroups = {{ind = 6, bg = 1}},
     },
 }
@@ -415,7 +396,7 @@ SWEP.Animations = {
         SoundTable = {{ s = {path .. "mech-01.ogg", path .. "mech-02.ogg", path .. "mech-03.ogg", path .. "mech-04.ogg", path .. "mech-05.ogg", path .. "mech-06.ogg"}, t = 0, v = 0.25 }},
     },
     ["fire_iron"] = {
-        Source = "fire",
+        Source = "fire_ads",
         Time = 20 / 30,
         ShellEjectAt = 0.01,
         LastClip1OutTime = 0,
@@ -472,10 +453,10 @@ SWEP.Animations = {
         LHIKOut = 0.4,
         SoundTable = {
             {s = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_5.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.0},
-            {s = path .. "magout.ogg", 	t = 0.25},
+            {s = path .. "magout.ogg", 	t = 0.3},
             {s = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_5.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.4},
-            {s = common .. "magpouch.ogg", t = 0.6},
-            {s = path .. "magin.ogg",   t = 1.05},
+            {s = common .. "magpouch.ogg", t = 0.8},
+            {s = path .. "magin.ogg",   t = 1.85},
             {s = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_5.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 1.3},
             {s = common .. "shoulder.ogg",  t = 1.75},
         },
@@ -496,10 +477,10 @@ SWEP.Animations = {
             {s = path .. "magout.ogg", 	t = 0.15},
             {s = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_5.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.4},
             {s = common .. "magpouch.ogg", t = 0.6},
-            {s = common .. "rifle_magdrop.ogg",  t = 0.9},
-            {s = path .. "magin.ogg",   t = 1.10},
-            {s = path .. "chback.ogg",  t = 1.85},
-            {s = path .. "chforward.ogg", t = 1.95},
+            {s = common .. "rifle_magdrop.ogg",  t = 1},
+            {s = path .. "magin.ogg",   t = 1.9},
+            {s = path .. "chback.ogg",  t = 2.75},
+            {s = path .. "chforward.ogg", t = 2.75},
             {s = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_5.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 2.2},
             {s = common .. "shoulder.ogg",  t = 2.4},
         },
@@ -520,10 +501,12 @@ SWEP.Animations = {
         LHIKOut = 0.4,
         SoundTable = {
             {s = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_5.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.0},
+            {s = path .. "chback.ogg",  t = 0.1},
             {s = path .. "magout.ogg", 	t = 0.25},
             {s = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_5.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.4},
             {s = common .. "magpouch.ogg", t = 0.6},
-            {s = path .. "magin.ogg",   t = 1.05},
+            {s = path .. "magin.ogg",   t = 1.8},
+            {s = path .. "chforward.ogg", t = 2.4},
             {s = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_5.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 1.3},
             {s = common .. "shoulder.ogg",  t = 1.75},
         },
@@ -542,12 +525,14 @@ SWEP.Animations = {
         LHIKOut = 0.4,
         SoundTable = {
             {s = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_5.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.0},
+            {s = path .. "chback.ogg",  t = 0.1},
             {s = path .. "magout.ogg", 	t = 0.25},
             {s = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_5.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 0.4},
             {s = common .. "magpouch.ogg", t = 0.6},
-            {s = path .. "magin.ogg",   t = 1.05},
+            {s = path .. "magin.ogg",   t = 1.8},
+            {s = path .. "chforward.ogg", t = 2.4},
             {s = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_5.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}, t = 1.3},
-            {s = common .. "shoulder.ogg",  t = 1.75},
+            {s = common .. "shoulder.ogg",  t = 2},
         },
     },	
 
@@ -872,7 +857,7 @@ SWEP.Hook_ModifyBodygroups = function(wep,data)
     if !IsValid(vm) then return end
 
     local atts = wep.Attachments
-    local barr = string.Replace(atts[2].Installed or "default","ud_mini14_barrel_","")
+    local barr = string.Replace(atts[2].Installed or "default","ud_m14_barrel_","")
     local muzz = atts[3].Installed
     local tac = atts[6].Installed
 
@@ -894,26 +879,27 @@ SWEP.Attachments = {
         PrintName = "Optic",
         DefaultAttName = "Iron Sights",
         Slot = {"optic_lp","optic","optic_sniper"},
-        Bone = "mini14_parent",
+        Bone = "m14_parent",
         Offset = {
             vpos = Vector(0, -3.6, 6),
             vang = Angle(90, 2, -90),
         },
         VMScale = Vector(1.2,1.2,1.2),
         WMScale = VMScale,
-        InstalledEles = {"ud_mini14_rail_optic"},
+        InstalledEles = {"ud_m14_rail_optic"},
     },
     {
         PrintName = "Barrel",
         DefaultAttName = "20\" Standard Barrel",
-        DefaultAttIcon = Material("entities/att/acwatt_ud_mini14_barrel.png", "smooth mips"),
-        Slot = "ud_mini14_barrel",
+        Bone = "m14_parent",
+        DefaultAttIcon = Material("entities/att/acwatt_ud_m14_barrel.png", "smooth mips"),
+        Slot = "ud_m14_barrel",
     },
     {
         PrintName = "Muzzle",
         DefaultAttName = "Standard Muzzle",
         Slot = {"muzzle"},
-        Bone = "mini14_parent",
+        Bone = "m14_parent",
         Offset = {
             vpos = Vector(0, -2.15, 30),
             vang = Angle(90, 0, -90),
@@ -925,42 +911,42 @@ SWEP.Attachments = {
     },
     {
         PrintName = "Receiver",
-        DefaultAttName = "Mini-14 Receiver",
-        DefaultAttIcon = Material("entities/att/acwatt_ud_mini14_receiver.png", "smooth mips"),
-        Slot = "ud_mini14_receiver",
+        DefaultAttName = "M14 Receiver",
+        DefaultAttIcon = Material("entities/att/acwatt_ud_m14_receiver.png", "smooth mips"),
+        Slot = "ud_m14_receiver",
     },
     {
         PrintName = "Underbarrel",
         Slot = {"foregrip"},
-        Bone = "mini14_parent",
+        Bone = "m14_parent",
         Offset = {
             vpos = Vector(0, 0, 14),
             vang = Angle(90, 0, -90),
         },
-        InstalledEles = {"ud_mini14_rail_fg"},
+        InstalledEles = {"ud_m14_rail_fg"},
         MergeSlots = {14}
     },
     {
         PrintName = "Tactical",
         Slot = {"tac"},
-        Bone = "mini14_parent",
+        Bone = "m14_parent",
         Offset = {
             vpos = Vector(0, -1.5, 22.3),
             vang = Angle(90, 0, -90),
         },
-        InstalledEles = {"ud_mini14_clamp"},
+        InstalledEles = {"ud_m14_clamp"},
     },
     {
         PrintName = "Magazine",
-        Slot = {"ud_mini14_mag"},
+        Slot = {"ud_m14_mag"},
         DefaultAttName = "20-Round Mag",
-        DefaultAttIcon = Material("entities/att/acwatt_ud_mini14_mag_20.png", "smooth mips"),
+        DefaultAttIcon = Material("entities/att/acwatt_ud_m14_mag_20.png", "smooth mips"),
     },
     {
         PrintName = "Stock",
-        Slot = {"ud_mini14_stock"},
+        Slot = {"ud_m14_stock"},
         DefaultAttName = "Wooden Stock",
-        DefaultAttIcon = Material("entities/att/acwatt_ud_mini14_stock.png", "smooth mips"),
+        DefaultAttIcon = Material("entities/att/acwatt_ud_m14_stock.png", "smooth mips"),
     },
     {
         PrintName = "Ammo Type",
@@ -987,7 +973,7 @@ SWEP.Attachments = {
         PrintName = "Charm",
         Slot = {"charm", "fml_charm"},
         FreeSlot = true,
-        Bone = "mini14_parent",
+        Bone = "m14_parent",
         Offset = {
             vpos = Vector(1.1, -0.5, 6),
             vang = Angle(90, 0, -90),
@@ -996,12 +982,12 @@ SWEP.Attachments = {
     {
         PrintName = "M203 slot",
         Slot = "uc_ubgl",
-        Bone = "mini14_parent",
+        Bone = "m14_parent",
         Offset = {
             vpos = Vector(0, -1.2, 10),
             vang = Angle(90, 0, -90),
         },
-        InstalledEles = {"ud_mini14_rail_fg"},
+        InstalledEles = {"ud_m14_rail_fg"},
         ExcludeFlags = {"ak_noubs","barrel_rpk"},
         Hidden = true,
     }

@@ -176,6 +176,7 @@ SWEP.BarrelOffsetHip = Vector(6, 0, -8)
 local common = ")/arccw_uc/common/"
 local path = ")/arccw_uc/common/40mm/"
 local rottle = {common .. "cloth_1.ogg", common .. "cloth_2.ogg", common .. "cloth_3.ogg", common .. "cloth_4.ogg", common .. "cloth_5.ogg", common .. "cloth_6.ogg", common .. "rattle.ogg"}
+local casing = {"arccw_uc/common/40mm/casing-40mm-01.ogg", "arccw_uc/common/40mm/casing-40mm-02.ogg", "arccw_uc/common/40mm/casing-40mm-03.ogg", "arccw_uc/common/40mm/casing-40mm-04.ogg", "arccw_uc/common/40mm/casing-40mm-05.ogg", "arccw_uc/common/40mm/casing-40mm-06.ogg"}
 
 --SWEP.Hook_AddShootSound = ArcCW.UC.InnyOuty
 
@@ -254,14 +255,14 @@ SWEP.Animations = {
         MinProgress = 2.2,
         SoundTable = {
             {s = rottle, t = 0},
-            {s = common .. "breaker_open.ogg",  t = 0.3},
+            {s = common .. "breaker_open.ogg",  t = 0.2},
             {s = common .. "gl_remove.ogg",  t = 0.9},
             {s = rottle, t = 1.0},
             {s = common .. "magpouch.ogg", t = 1.4},
-            {s = common .. "40mm_casing_1.ogg",  t = 1.6},
-            {s = common .. "gl_insert.ogg",  t = 2.0},
+            {s = casing, t = 1.45, v = 0.25},
+            {s = common .. "gl_insert.ogg",  t = 1.5},
             {s = rottle, t = 2.25},
-            {s = common .. "breaker_close.ogg",  t = 2.5},
+            {s = common .. "breaker_close.ogg",  t = 2.2},
             -- {
             --     t = 0.6,
             --     e = "RagdollImpact",  -- Please add some kind of smoke particle after opening the chamber

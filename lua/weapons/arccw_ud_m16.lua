@@ -1264,7 +1264,6 @@ SWEP.Animations = {
             {s = rottle, t = 1.2},
             {s = common .. "movement-rifle-03.ogg", t = 1.25},
         },
-        NoCamReset = true,
     },
     ["enter_inspect_empty"] = {
         Source = "inspect_enter_empty",
@@ -1296,7 +1295,6 @@ SWEP.Animations = {
             {s = rottle, t = 1.2},
             {s = common .. "movement-rifle-03.ogg", t = 1.25},
         },
-        NoCamReset = true,
     },
 }
 

@@ -70,7 +70,7 @@ att.Override_PhysTracerProfile = 7
 
 att.Hook_TranslateAnimation = function(wep, anim)
     if not wep:GetBuff_Override("Override_ManualAction") then return end
-    if (anim == "fire" || anim == "fire_empty") then
+    if (anim == "fire" || anim == "fire_empty" || anim == "fire_iron" || anim == "fire_iron_empty") then
         return "fire_cycle"
     elseif (anim == "idle" || anim == "idle_empty") then
         if wep:GetNeedCycle() then

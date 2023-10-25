@@ -820,8 +820,8 @@ SWEP.Animations = {
         ShellEjectAt = 0.4,
         SoundTable = {
             {s = rottle, t = 0, v = 50},
-            {s = path .. "slide_pull_new.ogg",  t = 0.12, c = ci, v = 50},
-            {s = path .. "sliderel_deact.ogg",  t = 0.12, c = ci, v = 50},
+            {s = path .. "slide_pull_new.ogg",  t = 0.18, c = ci, v = 50},
+            {s = path .. "sliderel_deact.ogg",  t = 0.18, c = ci, v = 50},
             {s = path .. "slide_rel_new.ogg",        t = 0.3, c = ci, v = 50},
         },
         LHIK = true,
@@ -836,8 +836,8 @@ SWEP.Animations = {
         ShellEjectAt = 0.4,
         SoundTable = {
             {s = rottle, t = 0, v = 50},
-            {s = path .. "slide_pull_new.ogg",  t = 0.12, c = ci, v = 50},
-            {s = path .. "sliderel_deact.ogg",  t = 0.12, c = ci, v = 50},
+            {s = path .. "slide_pull_new.ogg",  t = 0.18, c = ci, v = 50},
+            {s = path .. "slide_lock.ogg",  t = 0.4, c = ci, v = 50},
         },
         LHIK = true,
         LHIKIn = 0.2,

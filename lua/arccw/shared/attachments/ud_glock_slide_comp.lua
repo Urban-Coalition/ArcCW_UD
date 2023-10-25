@@ -6,7 +6,7 @@ if GetConVar("arccw_truenames"):GetBool() then
 end
 
 att.Icon = Material("entities/att/acwatt_ud_glock_slide_comp.png", "smooth mips")
-att.Description = "Custom slide with side vents and ring sight. Improves sighting time and straightens recoil."
+att.Description = "Custom slide with side vents and tall iron sights. Improves sighting time and straightens recoil."
 att.Desc_Pros = {
 }
 att.Desc_Cons = {
@@ -20,5 +20,11 @@ att.AutoStats = true
 att.Mult_SightTime = 0.8
 att.Mult_RecoilSide = 0.75
 att.Mult_Recoil = 1.1
+
+att.Override_IronSightStruct = {
+    Pos = Vector(-1.74, 0, 2.3),
+    Ang = Angle(-.05, 0, 0),
+    Magnification = 1
+}
 
 att.ActivateElements = {"ud_glock_slide_comp"}

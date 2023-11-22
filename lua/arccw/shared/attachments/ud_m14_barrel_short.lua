@@ -1,8 +1,8 @@
-att.PrintName = "M14 18\" Short Barrel"
-att.AbbrevName = "18\" Short Barrel"
+att.PrintName = "M14 16\" Short Barrel"
+att.AbbrevName = "16\" Short Barrel"
 
 if !GetConVar("arccw_truenames"):GetBool() then
-    att.PrintName = "Patriot 809 18\" Short Barrel"
+    att.PrintName = "Patriot 14 16\" Short Barrel"
 end
 
 att.Icon = Material("entities/att/acwatt_ud_m14_barrel_short.png", "smooth mips")

@@ -61,12 +61,12 @@ SWEP.DefaultPoseParams = {["grip"] = 0}
 
 -- Damage --
 
-SWEP.Damage = ArcCW.UC.StdDmg["556"].max
-SWEP.DamageMin = ArcCW.UC.StdDmg["556"].min
+SWEP.Damage = ArcCW.UC.StdDmg["762_51"].max
+SWEP.DamageMin = ArcCW.UC.StdDmg["762_51"].min
 SWEP.RangeMin = 50
 SWEP.Range = 400 -- 4 shot until ~275m
 
-SWEP.Penetration = ArcCW.UC.StdDmg["556"].pen
+SWEP.Penetration = ArcCW.UC.StdDmg["762_51"].pen
 SWEP.DamageType = DMG_BULLET
 SWEP.ShootEntity = nil
 SWEP.MuzzleVelocity = 990
@@ -86,8 +86,8 @@ SWEP.ReducedClipSize = 10
 SWEP.Recoil = 1.75
 SWEP.RecoilSide = 0.4
 
-SWEP.RecoilRise = 0.2
-SWEP.RecoilPunch = 1.2
+SWEP.RecoilRise = 2
+SWEP.RecoilPunch = 2.5
 SWEP.VisualRecoilMult = 1.2
 SWEP.MaxRecoilBlowback = 1.2
 SWEP.MaxRecoilPunch = 1.2
@@ -131,14 +131,14 @@ SWEP.HipDispersion = 800
 SWEP.MoveDispersion = 150
 SWEP.JumpDispersion = 1000
 
-SWEP.Primary.Ammo = "smg1"
+SWEP.Primary.Ammo = "ar2"
 SWEP.MagID = "m14"
 
 SWEP.HeatCapacity = 75
 SWEP.HeatDissipation = 5
 SWEP.HeatDelayTime = 3
 
-SWEP.MalfunctionMean = 100
+SWEP.MalfunctionMean = 200
 
 -- Speed multipliers --
 
@@ -945,7 +945,7 @@ SWEP.Attachments = {
     {
         PrintName = "Stock",
         Slot = {"ud_m14_stock"},
-        DefaultAttName = "Wooden Stock",
+        DefaultAttName = "Synthetic Stock",
         DefaultAttIcon = Material("entities/att/acwatt_ud_m14_stock.png", "smooth mips"),
     },
     {

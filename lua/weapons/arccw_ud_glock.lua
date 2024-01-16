@@ -1147,7 +1147,7 @@ SWEP.Attachments = {
             vang = Angle(90, 0, -90),
         },
         MergeSlots = {7},
-        ExcludeFlags = {"ud_glock_slide_subcompact"}
+        ExcludeFlags = {"ud_glock_frame_subcompact"}
     },
     {
         Hidden = true,

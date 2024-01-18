@@ -1171,7 +1171,7 @@ SWEP.Attachments = {
         DefaultAttName = "No Stock",
         Bone = "glock_parent",
         Offset = {
-            vpos = Vector(0.1, 2, -1.4),
+            vpos = Vector(0.1, 2.9, -2.1),
             vang = Angle(90, 0, -90),
         },
         ExcludeFlags = {"ud_glock_frame_subcompact"}

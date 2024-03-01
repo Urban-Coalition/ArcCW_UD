@@ -348,7 +348,7 @@ SWEP.AttachmentElements = {
         TrueNameChange = "Glock 18CS",
     },
     ["ud_glock_slide_carbine"] = {
-        VMBodygroups = {{ind = 3, bg = 4}},
+        VMBodygroups = {{ind = 3, bg = 4}, {ind=4,bg=1}},
         NameChange = "GEN3 Euro Carbine",
         TrueNameChange = "Glock 17XXXL",
         AttPosMods = {

@@ -14,7 +14,7 @@ att.Slot = {"ud_glock_muzzle"}
 att.SortOrder = 500
 
 att.Model = "models/weapons/arccw/atts/uc_kkm_brake.mdl"
-att.ModelOffset = Vector(0.07, 0, 0.165)
+att.ModelOffset = Vector(0.59, 0, 0.165)
 att.ModelScale = Vector(1.25, 1.25, 1.25)
 att.OffsetAng = Angle(0, 0, 0)
 
